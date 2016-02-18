@@ -21,6 +21,14 @@ namespace mp4boxTests
 
 
         [TestMethod]
+        public void Default()
+        {
+            var preset = Preset.LoadDefault();
+            preset.Save<Preset>("d:\\preset.xml");
+        }
+
+
+        [TestMethod]
         public void Load()
         {
             Preset.Load<Preset>("d:\\notExist.xml");

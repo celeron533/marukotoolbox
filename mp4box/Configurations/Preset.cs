@@ -8,14 +8,13 @@ namespace mp4box.Configurations
 {
     [Serializable]
     [XmlRoot("root")]
-    public class Preset : PersistableObject
+    public partial class Preset : PersistableObject
     {
         [XmlElement("Video")]
         public Video video = new Video();
 
         [XmlElement("Audio")]
         public Audio audio = new Audio();
-
     }
 
     //root/Video
@@ -36,11 +35,11 @@ namespace mp4box.Configurations
     //root/Video/VideoEncoder
     public class VideoEncoder
     {
-        [XmlArray("X264")]
+        [XmlArray("x264")]
         [XmlArrayItem("Parameter")]
         public List<Parameter> x264 = new List<Parameter>();
 
-        [XmlArray("X265")]
+        [XmlArray("x265")]
         [XmlArrayItem("Parameter")]
         public List<Parameter> x265 = new List<Parameter>();
     }
