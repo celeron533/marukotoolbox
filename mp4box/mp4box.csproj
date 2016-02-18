@@ -114,6 +114,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\PersistableObject.cs" />
     <Compile Include="FeedbackForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +134,7 @@
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
     <Compile Include="OSInfo.cs" />
+    <Compile Include="Configurations\Preset.cs" />
     <Compile Include="ProgressTaskbar.cs" />
     <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
