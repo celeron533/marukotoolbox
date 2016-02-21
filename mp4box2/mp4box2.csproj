@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +50,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Core\Audio\AudioCriteria.Options.cs" />
+    <Compile Include="Core\Audio\AudioCriteriaBase.cs" />
+    <Compile Include="Core\IBuildCommand.cs" />
+    <Compile Include="Core\Video\VideoCriteria.Options.cs" />
+    <Compile Include="Core\Video\VideoCriteriaBase.cs" />
+    <Compile Include="Core\Video\X264Criteria.cs" />
     <Compile Include="Utility\MediaInfoDLL.cs" />
     <Compile Include="Utility\OSInfo.cs" />
     <Page Include="MainWindow.xaml">
@@ -91,7 +98,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\" />
     <Folder Include="Resource\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

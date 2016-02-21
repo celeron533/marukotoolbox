@@ -677,7 +677,7 @@ namespace mp4box2.Utility
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                //MessageBox.Show(ex.ToString());
             }
             return res;
         }
