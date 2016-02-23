@@ -50,8 +50,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Core\Audio\AC3Criteria.cs" />
+    <Compile Include="Core\Audio\ALACCriteria.cs" />
     <Compile Include="Core\Audio\AudioCriteria.Options.cs" />
     <Compile Include="Core\Audio\AudioCriteriaBase.cs" />
+    <Compile Include="Core\Audio\FDKAACCriteria.cs" />
+    <Compile Include="Core\Audio\FLACCriteria.cs" />
+    <Compile Include="Core\Audio\NeroAACCriteria.cs" />
+    <Compile Include="Core\Audio\QAACCriteria.cs" />
+    <Compile Include="Core\Audio\WAVCriteria.cs" />
     <Compile Include="Core\IBuildCommand.cs" />
     <Compile Include="Core\Video\VideoCriteria.Options.cs" />
     <Compile Include="Core\Video\VideoCriteriaBase.cs" />
