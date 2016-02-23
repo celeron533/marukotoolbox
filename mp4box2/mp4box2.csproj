@@ -60,6 +60,7 @@
     <Compile Include="Core\Audio\QAACCriteria.cs" />
     <Compile Include="Core\Audio\WAVCriteria.cs" />
     <Compile Include="Core\IBuildCommand.cs" />
+    <Compile Include="Core\MediaInfo.cs" />
     <Compile Include="Core\Video\VideoCriteria.Options.cs" />
     <Compile Include="Core\Video\VideoCriteriaBase.cs" />
     <Compile Include="Core\Video\X264Criteria.cs" />
