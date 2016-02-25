@@ -59,6 +59,8 @@
     <Compile Include="Core\Audio\NeroAACCriteria.cs" />
     <Compile Include="Core\Audio\QAACCriteria.cs" />
     <Compile Include="Core\Audio\WAVCriteria.cs" />
+    <Compile Include="Core\AVS\AVSCriteria.cs" />
+    <Compile Include="Core\AVS\AVSCriteria.Functions.cs" />
     <Compile Include="Core\IBuildCommand.cs" />
     <Compile Include="Core\MediaInfo\Audio.cs" />
     <Compile Include="Core\MediaInfo\MediaInfo.cs" />
