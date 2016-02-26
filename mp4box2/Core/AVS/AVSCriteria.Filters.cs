@@ -66,7 +66,7 @@ namespace mp4box2.Core.AVS
     }
 
     //http://avisynth.nl/index.php/Trim
-    public class Trim:EnableStatus
+    public class Trim : EnableStatus
     {
         public int startFrame;
         public int endFrame;
