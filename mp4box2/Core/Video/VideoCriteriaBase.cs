@@ -11,6 +11,8 @@ namespace mp4box2.Core.Video
         public string outputFile;
         public string subtitleFile;
 
+        public MediaInfo.MediaInfo mediaInfo;
+
         public AudioOption audioOption;
 
         public Splitter splitter;
@@ -25,5 +27,10 @@ namespace mp4box2.Core.Video
         public bool useOriginalResolution;
         public int width, hight;
 
+        public void LoadMediaInfo()
+        {
+            mediaInfo = new MediaInfo.MediaInfo();
+            mediaInfo.LoadMediaInfo(inputFile);
+        }
     }
 }
