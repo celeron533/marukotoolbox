@@ -34,19 +34,22 @@ namespace mp4box2.Utility
 
         //Everything is public, so you could remove the item by yourself.
         //Here just provide a shortcut to add new parameter.
-        public void Add(ParameterItem item)
+        public ParameterBuilder Add(ParameterItem item)
         {
             parameterItemList.Add(item);
+            return this;
         }
 
-        public void Add(string name)
+        public ParameterBuilder Add(string name)
         {
             parameterItemList.Add(new ParameterItem(name));
+            return this;
         }
 
-        public void Add(string name, string value, bool valueQuation = false)
+        public ParameterBuilder Add(string name, string value, bool valueQuation = false)
         {
             parameterItemList.Add(new ParameterItem(name, value, valueQuation));
+            return this;
         }
 
 
@@ -54,7 +57,7 @@ namespace mp4box2.Utility
         /// Generate the paramater string
         /// </summary>
         /// <returns></returns>
-        public string Build()
+        public StringBuilder Build()
         {
             StringBuilder sb = new StringBuilder();
             if (!string.IsNullOrEmpty(header))
@@ -67,7 +70,7 @@ namespace mp4box2.Utility
                     sb.Append(space);
                 sb.Append(parameterItemList[i].Build());
             }
-            return sb.ToString();
+            return sb;
         }
 
         /// <summary>
