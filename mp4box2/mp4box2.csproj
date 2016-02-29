@@ -71,6 +71,8 @@
     <Compile Include="Core\Video\X264Criteria.cs" />
     <Compile Include="Utility\MediaInfoDLL.cs" />
     <Compile Include="Utility\OSInfo.cs" />
+    <Compile Include="Utility\ParameterBuilder.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
