@@ -12,7 +12,7 @@ namespace mp4box2.Core.Video
         CopyAudio
     }
 
-    public enum Splitter
+    public enum Demuxer
     {
         auto,
         ffms,

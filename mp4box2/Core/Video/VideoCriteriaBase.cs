@@ -15,17 +15,17 @@ namespace mp4box2.Core.Video
 
         public AudioOption audioOption;
 
-        public Splitter splitter;
+        public Demuxer demuxer;
         public int seek;
         public int frames;
 
         public EncoderOption encoderOptions;
         public float CRFValue;    //used when encoderOption = CRF
         public int bitRate; //used when encoderOption = TwoPass
-        public string custom;   //used when encoderOption = Custom
+        public string customStr;   //used when encoderOption = Custom
 
         public bool useOriginalResolution;
-        public int width, hight;
+        public int width, height;
 
         public void LoadMediaInfo()
         {
