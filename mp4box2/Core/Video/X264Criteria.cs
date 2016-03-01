@@ -20,10 +20,11 @@ namespace mp4box2.Core.Video
             if (mediaInfo == null)
                 return string.Empty;
 
-            //todo: if input file is avs
-
+            //if input file is avs
             //Append("\"" + workPath + "\\avs4x26x.exe\"" + " -L ");
-            //sAppend("\"" + Path.Combine(workPath, x264ExeComboBox.SelectedItem.ToString()) + "\"");
+
+
+            //Append("\"" + Path.Combine(workPath, x264ExeComboBox.SelectedItem.ToString()) + "\"");
 
 
             //set keyint as 10 times as fps
@@ -37,11 +38,9 @@ namespace mp4box2.Core.Video
             switch (encoderOptions)
             {
                 case EncoderOption.Custom:
-                    //Append(" " + x264CustomParameterTextBox.Text);
                     command.Add(customStr);
                     break;
                 case EncoderOption.CRF:
-                    //Append(" --crf " + x264CRFNum.Value);
                     command.Add("--crf", CRFValue.ToString("0.0"));
                     break;
                 case EncoderOption.TwoPass:
@@ -88,10 +87,10 @@ namespace mp4box2.Core.Video
 
             //general
 
-            //if (x264SeekNumericUpDown.Value != 0)
-            //    sb.Append(" --seek " + x264SeekNumericUpDown.Value.ToString());
-            //if (x264FramesNumericUpDown.Value != 0)
-            //    sb.Append(" --frames " + x264FramesNumericUpDown.Value.ToString());
+            if (seek > 0)
+                command.Add("--seek", seek.ToString());
+            if (frames > 0)
+                command.Add("--frames", frames.ToString());
             //if (x264mode == 2 && pass == 1)
             //    sb.Append(" -o NUL");
             //else if (!string.IsNullOrEmpty(output))
