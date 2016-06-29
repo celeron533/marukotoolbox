@@ -468,6 +468,17 @@ namespace mp4box
                     ffmpeg = "\"" + workPath + "\\ffmpeg.exe\" -i \"" + input + "\" -c:a ac3 -b:a " + AudioBitrateComboBox.Text.ToString() + "k \"" + output + "\"";
                     break;
 
+                case 7:
+                    if (AudioBitrateRadioButton.Checked)
+                    {
+                        ffmpeg += "\"" + workPath + "\\lame.exe\" -q 3 -b " + AudioBitrateComboBox.Text + " - \"" + output + "\"";
+                    }
+                    if (AudioCustomizeRadioButton.Checked)
+                    {
+                        ffmpeg += "\"" + workPath + "\\lame.exe\" " + AudioCustomParameterTextBox.Text.ToString() + " - \"" + output + "\"";
+                    }
+                    break;
+
                 default:
                     break;
             }
@@ -487,6 +498,7 @@ namespace mp4box
                 case 4: ext = ".flac"; break;
                 case 5: ext = ".m4a"; break;
                 case 6: ext = ".ac3"; break;
+                case 7: ext = ".mp3"; break;
                 default: ext = ".aac"; break;
             }
             return ext;
@@ -1192,6 +1204,12 @@ namespace mp4box
                                     new XElement("Parameter", "-v 256 -q 2 --no-optimize", new XAttribute("Name", "QAAC_LC-CVBR256Kbps")),
                                     new XElement("Parameter", "-V 90 -q 2 --no-optimize", new XAttribute("Name", "QAAC_TVBR_V90")),
                                     new XElement("Parameter", "-V 127 -q 2 --no-optimize", new XAttribute("Name", "QAAC_TVBR_V127"))
+                                    ),
+                                new XElement("mp3",
+                                    new XElement("Parameter", "--alt-preset extreme", new XAttribute("Name", "extreme")),
+                                    new XElement("Parameter", "--preset insane", new XAttribute("Name", "insane")),
+                                    new XElement("Parameter", "--preset standard", new XAttribute("Name", "standard")),
+                                    new XElement("Parameter", "--preset medium ", new XAttribute("Name", "medium"))
                                     )
                                 )
                             )
@@ -3041,6 +3059,16 @@ namespace mp4box
                     audioAddBt.Visible = false;
                     break;
 
+                case 7:
+                    if (File.Exists(txtaudio2.Text))
+                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_mp3.mp3");
+                    AudioBitrateComboBox.Enabled = true;
+                    AudioBitrateRadioButton.Enabled = true;
+                    AudioCustomizeRadioButton.Enabled = true;
+                    audioDeleteBt.Visible = false;
+                    audioAddBt.Visible = false;
+                    break;
+
                 default:
                     break;
             }
@@ -3124,6 +3152,7 @@ namespace mp4box
                     case 4: outputExt = "flac"; codec = "FLAC"; break;
                     case 5: outputExt = "m4a"; codec = "AAC"; break;
                     case 6: outputExt = "ac3"; codec = "AC3"; break;
+                    case 7: outputExt = "mp3"; codec = "mp3"; break;
                     default: outputExt = "aac"; codec = "AAC"; break;
                 }
                 for (int i = 0; i < this.AudioListBox.Items.Count; i++)
@@ -3199,6 +3228,7 @@ namespace mp4box
                     case 4: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_FLAC.flac"); break;
                     case 5: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.m4a"); break;
                     case 6: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AC3.ac3"); break;
+                    case 7: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_mp3.mp3"); break;
                     default: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.aac"); break;
                 }
             }

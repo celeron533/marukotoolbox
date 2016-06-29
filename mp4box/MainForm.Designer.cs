@@ -189,6 +189,9 @@
             this.AudioClearButton = new ControlExs.QQButton();
             this.AudioDeleteButton = new ControlExs.QQButton();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.OnePicAudioSecondTxt = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
             this.OnePicCRFNum = new System.Windows.Forms.NumericUpDown();
             this.label33 = new System.Windows.Forms.Label();
             this.AudioCopyCheckBox = new ControlExs.QQCheckBox();
@@ -310,9 +313,6 @@
             this.DeleteLogButton = new ControlExs.QQButton();
             this.SetDefaultButton = new ControlExs.QQButton();
             this.ViewLogButton = new ControlExs.QQButton();
-            this.label45 = new System.Windows.Forms.Label();
-            this.OnePicAudioSecondTxt = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
             this.groupBox10.SuspendLayout();
             this.MediaInfoTab.SuspendLayout();
             this.AVSTab.SuspendLayout();
@@ -1676,7 +1676,8 @@
             resources.GetString("AudioEncoderComboBox.Items3"),
             resources.GetString("AudioEncoderComboBox.Items4"),
             resources.GetString("AudioEncoderComboBox.Items5"),
-            resources.GetString("AudioEncoderComboBox.Items6")});
+            resources.GetString("AudioEncoderComboBox.Items6"),
+            resources.GetString("AudioEncoderComboBox.Items7")});
             resources.ApplyResources(this.AudioEncoderComboBox, "AudioEncoderComboBox");
             this.AudioEncoderComboBox.Name = "AudioEncoderComboBox";
             this.AudioEncoderComboBox.SelectedIndexChanged += new System.EventHandler(this.AudioEncoderComboBox_SelectedIndexChanged);
@@ -1855,6 +1856,21 @@
             resources.ApplyResources(this.groupBox9, "groupBox9");
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.TabStop = false;
+            // 
+            // label46
+            // 
+            resources.ApplyResources(this.label46, "label46");
+            this.label46.Name = "label46";
+            // 
+            // OnePicAudioSecondTxt
+            // 
+            resources.ApplyResources(this.OnePicAudioSecondTxt, "OnePicAudioSecondTxt");
+            this.OnePicAudioSecondTxt.Name = "OnePicAudioSecondTxt";
+            // 
+            // label45
+            // 
+            resources.ApplyResources(this.label45, "label45");
+            this.label45.Name = "label45";
             // 
             // OnePicCRFNum
             // 
@@ -2987,21 +3003,6 @@
             this.ViewLogButton.Name = "ViewLogButton";
             this.ViewLogButton.UseVisualStyleBackColor = true;
             this.ViewLogButton.Click += new System.EventHandler(this.ViewLogButton_Click);
-            // 
-            // label45
-            // 
-            resources.ApplyResources(this.label45, "label45");
-            this.label45.Name = "label45";
-            // 
-            // OnePicAudioSecondTxt
-            // 
-            resources.ApplyResources(this.OnePicAudioSecondTxt, "OnePicAudioSecondTxt");
-            this.OnePicAudioSecondTxt.Name = "OnePicAudioSecondTxt";
-            // 
-            // label46
-            // 
-            resources.ApplyResources(this.label46, "label46");
-            this.label46.Name = "label46";
             // 
             // MainForm
             // 
