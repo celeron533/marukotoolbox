@@ -207,7 +207,14 @@ namespace mp4box
                 if (!string.IsNullOrEmpty(v_bitDepth))
                     info.Append("位深度：" + v_bitDepth + "\r\n");
                 if (!string.IsNullOrEmpty(v_scanType))
-                    info.Append("扫描方式：" + v_scanType + "\r\n");
+                {
+                    if (v_scanType.ToLower() == "progressive")
+                        info.Append("扫描方式：逐行扫描\r\n");
+                    else if (v_scanType.ToLower() == "interlaced")
+                        info.Append("扫描方式：隔行扫描\r\n");
+                    else
+                        info.Append("扫描方式：" + v_scanType + "\r\n");
+                }
                 if (!string.IsNullOrEmpty(v_encodedTime))
                     info.Append("编码时间：" + v_encodedTime + "\r\n");
                 if (!string.IsNullOrEmpty(v_frameCount))
@@ -2760,7 +2767,10 @@ namespace mp4box
                     foreach (var item in xls)
                     {
                         if (item.Attribute("Name").Value == VideoPresetComboBox.Text)
+                        {
                             item.Remove();
+                            break;
+                        }
                     }
                     xdoc.Save("preset.xml");
                     LoadVideoPreset();
@@ -4710,7 +4720,10 @@ namespace mp4box
                     foreach (var item in xls)
                     {
                         if (item.Attribute("Name").Value == AudioPresetComboBox.Text)
+                        {
                             item.Remove();
+                            break;
+                        }
                     }
                     xdoc.Save("preset.xml");
                     LoadAudioPreset();
