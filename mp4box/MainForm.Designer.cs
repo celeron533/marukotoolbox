@@ -2837,6 +2837,8 @@
             // 
             resources.ApplyResources(this.x265CheckBox, "x265CheckBox");
             this.x265CheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.x265CheckBox.Checked = true;
+            this.x265CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.x265CheckBox.Name = "x265CheckBox";
             this.x265CheckBox.UseVisualStyleBackColor = false;
             this.x265CheckBox.Click += new System.EventHandler(this.x265CheckBox_Click);

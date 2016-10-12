@@ -2637,9 +2637,11 @@ namespace mp4box
             int audioMode = x264AudioModeComboBox.SelectedIndex;
             if (!hasAudio && x264AudioModeComboBox.SelectedIndex != 1)
             {
-                DialogResult r = ShowQuestion("原视频不包含音频流，音频模式是否改为无音频流？", "提示");
+                DialogResult r = ShowQuestionWithCancel("原视频不包含音频流，音频模式是否改为无音频流？", "提示");
                 if (r == DialogResult.Yes)
                     audioMode = 1;
+                else if (r == DialogResult.Cancel)
+                    return;
             }
             switch (audioMode)
             {
@@ -2999,11 +3001,11 @@ namespace mp4box
                     break;
 
                 case 1:
-                    if (!isAppleAppSupportInstalled())
-                    {
-                        if (ShowQuestion("Apple Application Support未安装.\r\n音频编码器QAAC可能无法使用.\r\n\r\n是否前往QuickTime下载页面?", "Apple Application Support未安装") == DialogResult.Yes)
-                            Process.Start("http://www.apple.com/cn/quicktime/download");
-                    }
+                    //if (!isAppleAppSupportInstalled())
+                    //{
+                    //    if (ShowQuestion("Apple Application Support未安装.\r\n音频编码器QAAC可能无法使用.\r\n\r\n是否前往QuickTime下载页面?", "Apple Application Support未安装") == DialogResult.Yes)
+                    //        Process.Start("http://www.apple.com/cn/quicktime/download");
+                    //}
                     if (File.Exists(txtaudio2.Text))
                         AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.m4a");
                     AudioBitrateComboBox.Enabled = true;
@@ -4706,6 +4708,11 @@ namespace mp4box
         public static DialogResult ShowQuestion(String argQuestion, String argTitle)
         {
             return MessageBox.Show(argQuestion, argTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
+        public static DialogResult ShowQuestionWithCancel(String argQuestion, String argTitle)
+        {
+            return MessageBox.Show(argQuestion, argTitle, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
         }
 
         #endregion
