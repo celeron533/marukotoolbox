@@ -319,7 +319,10 @@ namespace mp4box
                     return;
                 }
                 else
-                    buttonAbort.PerformClick();
+                {
+                    bgworker.CancelAsync();
+                    ProcAbort();
+                }
             }
             // clean up temp batch file
             System.IO.File.Delete(batPath);

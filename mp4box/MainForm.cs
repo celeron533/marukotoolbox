@@ -1759,7 +1759,9 @@ namespace mp4box
 
             if (AudioEncoderComboBox.SelectedIndex != 0 && AudioEncoderComboBox.SelectedIndex != 1 && AudioEncoderComboBox.SelectedIndex != 5)
             {
-                ShowWarningMessage("音频页面中的编码器未采用AAC将可能导致压制失败，建议将编码器改为QAAC、NeroAAC或FDKAAC。");
+                DialogResult r = ShowQuestion("音频页面中的编码器未采用AAC将可能导致压制失败，建议将编码器改为QAAC、NeroAAC或FDKAAC。是否继续压制？", "提示");
+                if (r == DialogResult.No)
+                    return;
             }
 
             Util.ensureDirectoryExists(tempfilepath);
@@ -2586,7 +2588,9 @@ namespace mp4box
 
             if (AudioEncoderComboBox.SelectedIndex != 0 && AudioEncoderComboBox.SelectedIndex != 1 && AudioEncoderComboBox.SelectedIndex != 5)
             {
-                ShowWarningMessage("音频页面中的编码器未采用AAC将可能导致压制失败，建议将编码器改为QAAC、NeroAAC或FDKAAC。");
+                DialogResult r = ShowQuestion("音频页面中的编码器未采用AAC将可能导致压制失败，建议将编码器改为QAAC、NeroAAC或FDKAAC。是否继续压制？", "提示");
+                if (r == DialogResult.No)
+                    return;
             }
 
             //防止未选择 x264 thread
@@ -2888,7 +2892,9 @@ namespace mp4box
             {
                 namevideo2 = path;
                 int num = 1;
-                string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                string encType = "x264";
+                if (x264ExeComboBox.SelectedItem != null)
+                    encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
                 x264OutTextBox.Text = Util.ChangeExt(namevideo2, string.Format("_{0}.mp4", encType));
                 while (namevideo2.Equals(x264OutTextBox.Text) || File.Exists(x264OutTextBox.Text))
                 {
