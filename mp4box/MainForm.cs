@@ -94,7 +94,7 @@ namespace mp4box
         private string tempPic = "";
         private string logFileName, logPath;
         private string tempfilepath;
-        private DateTime ReleaseDate = DateTime.Parse("2016-6-6 8:0:0");
+        private DateTime ReleaseDate = Util.GetAssemblyVersionTime();
 
         #endregion Private Members Declaration
 
@@ -2327,17 +2327,14 @@ namespace mp4box
             }
             else
             {
-                //int h1 = int.Parse(maskb.Text.ToString().Substring(0, 2));
-                //int m1 = int.Parse(maskb.Text.ToString().Substring(3, 2));
-                //int s1 = int.Parse(maskb.Text.ToString().Substring(6, 2));
-                //int h2 = int.Parse(maske.Text.ToString().Substring(0, 2));
-                //int m2 = int.Parse(maske.Text.ToString().Substring(3, 2));
-                //int s2 = int.Parse(maske.Text.ToString().Substring(6, 2));
-                //clip = "\"" + workPath + "\\ffmpeg.exe\" -ss " + maskb.Text + " -to " + maske.Text + " -i  \"" + namevideo4 + "\" -acodec copy -vcodec copy \"" + nameout5 + "\" \r\ncmd";
-
-                // "<workPath>\ffmpeg.exe" -i "<namevideo4>" -ss <maskb.Text> -to <maske.Text> -c copy "<nameout5>"
-                clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{1}"" -ss {2} -to {3} -y -c copy ""{4}""",
-                    workPath, namevideo4, maskb.Text, maske.Text, nameout5) + Environment.NewLine + "cmd";
+                int h1 = int.Parse(maskb.Text.ToString().Substring(0, 2));
+                int m1 = int.Parse(maskb.Text.ToString().Substring(3, 2));
+                int s1 = int.Parse(maskb.Text.ToString().Substring(6, 2));
+                int h2 = int.Parse(maske.Text.ToString().Substring(0, 2));
+                int m2 = int.Parse(maske.Text.ToString().Substring(3, 2));
+                int s2 = int.Parse(maske.Text.ToString().Substring(6, 2));
+                clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""", workPath, maskb.Text, timeminus(h1, m1, s1, h2, m2, s2), namevideo4, nameout5) + Environment.NewLine + "cmd";
+                //clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{3}"" -ss {1} -to {2} -y  -c copy ""{4}""", workPath, maskb.Text, maske.Text, namevideo4, nameout5) + Environment.NewLine + "cmd";
                 batpath = workPath + "\\clip.bat";
                 LogRecord(clip);
                 File.WriteAllText(batpath, clip, Encoding.Default);
@@ -3644,7 +3641,8 @@ namespace mp4box
             {
                 case 0:
                     SetLang("zh-CN", this, typeof(MainForm));
-                    this.Text = string.Format("小丸工具箱 {0}", Assembly.GetExecutingAssembly().GetName().Version.Build);
+                    //this.Text = string.Format("小丸工具箱 {0}", Assembly.GetExecutingAssembly().GetName().Version.Build);
+                    this.Text = string.Format("小丸工具箱 {0}", Util.GetAssemblyFileVersion());
                     x264PriorityComboBox.Items.Clear();
                     x264PriorityComboBox.Items.AddRange(new string[] { "低", "低于标准", "普通", "高于标准", "高", "实时" });
                     x264PriorityComboBox.SelectedIndex = 2;
@@ -4654,6 +4652,9 @@ namespace mp4box
 
             if (x264ExeComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
             {
+                if (x264OutTextBox.Text.Contains("_x264."))
+                    x264OutTextBox.Text = x264OutTextBox.Text.Replace("_x264.", "_x265.");
+
                 x264SubTextBox.Text = string.Empty;
                 x264SubTextBox.Enabled = false;
                 x264SubBtn.Enabled = false;
@@ -4665,6 +4666,9 @@ namespace mp4box
             }
             else
             {
+                if (x264OutTextBox.Text.Contains("_x265."))
+                    x264OutTextBox.Text = x264OutTextBox.Text.Replace("_x265.", "_x264.");
+
                 x264SubTextBox.Enabled = true;
                 x264SubBtn.Enabled = true;
                 x264BatchSubCheckBox.Enabled = true;
