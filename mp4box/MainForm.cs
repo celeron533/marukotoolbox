@@ -328,8 +328,12 @@ namespace mp4box
             StringBuilder sb = new StringBuilder();
             sb.Append("\"" + workPath + "\\ffmpeg.exe\"" + " -i \"" + input + "\"");
             if (x264HeightNum.Value != 0 && x264WidthNum.Value != 0 && !MaintainResolutionCheckBox.Checked)
-                sb.Append(" -s " + x264WidthNum.Value + "x" + x264HeightNum.Value);
+                sb.Append(string.Format(" -vf zscale={0}x{1}:filter=lanczos", x264WidthNum.Value, x264HeightNum.Value));
+#if DEBUG
+            sb.Append(" -strict -1 -f yuv4mpegpipe -an - | ");
+#else
             sb.Append(" -strict -1 -f yuv4mpegpipe -an -v 0 - | ");
+#endif
             sb.Append(Util.FormatPath(Path.Combine(workPath, x264ExeComboBox.SelectedItem.ToString())) + " --y4m");
             // 编码模式
             switch (x264mode)
