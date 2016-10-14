@@ -42,7 +42,7 @@ namespace mp4box
         {
             string version4 = OSInfo.GetDotNetVersion("4.0");
             string version = OSInfo.GetDotNetVersion();
-            MessageTextBox.AppendText(string.Format("小丸工具箱 版本: {0}", new Version(ProductVersion)));
+            MessageTextBox.AppendText(string.Format("小丸工具箱 版本: {0}", Util.GetAssemblyFileVersion()));
             MessageTextBox.AppendText(string.Format("\r\n操作系统: {0}{1} ({2}.{3}.{4}.{5})",
                 OSInfo.GetOSName(), OSInfo.GetOSServicePack(), OSInfo.OSMajorVersion, OSInfo.OSMinorVersion, OSInfo.OSRevisionVersion, OSInfo.OSBuildVersion));
             if (string.IsNullOrEmpty(version4))

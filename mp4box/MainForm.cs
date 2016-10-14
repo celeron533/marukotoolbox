@@ -329,7 +329,7 @@ namespace mp4box
             sb.Append("\"" + workPath + "\\ffmpeg.exe\"" + " -i \"" + input + "\"");
             if (x264HeightNum.Value != 0 && x264WidthNum.Value != 0 && !MaintainResolutionCheckBox.Checked)
                 sb.Append(" -s " + x264WidthNum.Value + "x" + x264HeightNum.Value);
-            sb.Append(" -f yuv4mpegpipe -an -v 0 - | ");
+            sb.Append(" -strict -1 -f yuv4mpegpipe -an -v 0 - | ");
             sb.Append(Util.FormatPath(Path.Combine(workPath, x264ExeComboBox.SelectedItem.ToString())) + " --y4m");
             // 编码模式
             switch (x264mode)
@@ -2505,7 +2505,7 @@ namespace mp4box
             DateTime CompileDate = File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
             QQMessageBox.Show(
                 this,
-                "小丸工具箱 七七版\r\n主页：http://www.maruko.in/ \r\n编译日期：" + CompileDate.ToString(),
+                "小丸工具箱\r\n主页：http://www.maruko.in/ \r\n编译日期：" + ReleaseDate.ToString(),
                 "关于",
                 QQMessageBoxIcon.Information,
                 QQMessageBoxButtons.OK);
@@ -3669,7 +3669,7 @@ namespace mp4box
 
                 case 1:
                     SetLang("zh-TW", this, typeof(MainForm));
-                    this.Text = string.Format("小丸工具箱 {0}", Assembly.GetExecutingAssembly().GetName().Version.Build);
+                    this.Text = string.Format("小丸工具箱 {0}", Util.GetAssemblyFileVersion());
                     x264PriorityComboBox.Items.Clear();
                     x264PriorityComboBox.Items.AddRange(new string[] { "低", "在標準以下", "標準", "在標準以上", "高", "即時" });
                     x264PriorityComboBox.SelectedIndex = 2;
@@ -3696,7 +3696,7 @@ namespace mp4box
 
                 case 2:
                     SetLang("en-US", this, typeof(MainForm));
-                    this.Text = string.Format("Maruko Toolbox {0}", Assembly.GetExecutingAssembly().GetName().Version.Build);
+                    this.Text = string.Format("Maruko Toolbox {0}", Util.GetAssemblyFileVersion());
                     x264PriorityComboBox.Items.Clear();
                     x264PriorityComboBox.Items.AddRange(new string[] { "Idle", "BelowNormal", "Normal", "AboveNormal", "High", "RealTime" });
                     x264PriorityComboBox.SelectedIndex = 2;
@@ -3723,7 +3723,7 @@ namespace mp4box
 
                 case 3:
                     SetLang("ja-JP", this, typeof(MainForm));
-                    this.Text = string.Format("Maruko Toolbox {0}", Assembly.GetExecutingAssembly().GetName().Version.Build);
+                    this.Text = string.Format("Maruko Toolbox {0}", Util.GetAssemblyFileVersion());
                     x264PriorityComboBox.Items.Clear();
                     x264PriorityComboBox.Items.AddRange(new string[] { "低", "通常以下", "通常", "通常以上", "高", "リアルタイム" });
                     x264PriorityComboBox.SelectedIndex = 2;

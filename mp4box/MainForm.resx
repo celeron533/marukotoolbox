@@ -2797,7 +2797,7 @@
     <value>21</value>
   </data>
   <data name="MuxAacEncoderComboBox.Text" xml:space="preserve">
-    <value>libfdk_aac</value>
+    <value>aac</value>
   </data>
   <data name="&gt;&gt;MuxAacEncoderComboBox.Name" xml:space="preserve">
     <value>MuxAacEncoderComboBox</value>
