@@ -2779,13 +2779,10 @@
     <value>0</value>
   </data>
   <data name="MuxAacEncoderComboBox.Items" xml:space="preserve">
-    <value>libfdk_aac</value>
+    <value>aac</value>
   </data>
   <data name="MuxAacEncoderComboBox.Items1" xml:space="preserve">
-    <value>libfaac</value>
-  </data>
-  <data name="MuxAacEncoderComboBox.Items2" xml:space="preserve">
-    <value>aac</value>
+    <value>libfdk_aac</value>
   </data>
   <data name="MuxAacEncoderComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 241</value>
