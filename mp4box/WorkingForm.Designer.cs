@@ -33,12 +33,12 @@
             this.buttonAbort = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.richTextBoxOutput = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.CopyTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelworkCount = new System.Windows.Forms.Label();
             this.progressBarX264 = new System.Windows.Forms.ProgressBar();
             this.labelProgress = new System.Windows.Forms.Label();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.CopyTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,19 @@
             this.richTextBoxOutput.VScroll += new System.EventHandler(this.richTextBoxOutput_VScroll);
             this.richTextBoxOutput.Enter += new System.EventHandler(this.richTextBoxOutput_Enter);
             // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CopyTextToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
+            // 
+            // CopyTextToolStripMenuItem
+            // 
+            this.CopyTextToolStripMenuItem.Name = "CopyTextToolStripMenuItem";
+            resources.ApplyResources(this.CopyTextToolStripMenuItem, "CopyTextToolStripMenuItem");
+            this.CopyTextToolStripMenuItem.Click += new System.EventHandler(this.CopyTextToolStripMenuItem_Click);
+            // 
             // labelworkCount
             // 
             resources.ApplyResources(this.labelworkCount, "labelworkCount");
@@ -87,19 +100,6 @@
             // 
             resources.ApplyResources(this.notifyIcon, "notifyIcon");
             this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
-            // 
-            // contextMenuStrip
-            // 
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CopyTextToolStripMenuItem});
-            this.contextMenuStrip.Name = "contextMenuStrip";
-            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
-            // 
-            // CopyTextToolStripMenuItem
-            // 
-            this.CopyTextToolStripMenuItem.Name = "CopyTextToolStripMenuItem";
-            resources.ApplyResources(this.CopyTextToolStripMenuItem, "CopyTextToolStripMenuItem");
-            this.CopyTextToolStripMenuItem.Click += new System.EventHandler(this.CopyTextToolStripMenuItem_Click);
             // 
             // WorkingForm
             // 

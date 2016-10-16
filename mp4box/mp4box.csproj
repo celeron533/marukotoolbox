@@ -53,7 +53,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Res\wan.ico</ApplicationIcon>
+    <ApplicationIcon>Res\wan2.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>D94B72CA453F9119160A155B1EBE49C339601C98</ManifestCertificateThumbprint>

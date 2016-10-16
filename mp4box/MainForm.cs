@@ -2509,7 +2509,7 @@ namespace mp4box
             DateTime CompileDate = File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
             QQMessageBox.Show(
                 this,
-                "小丸工具箱\r\n主页：http://www.maruko.in/ \r\n编译日期：" + ReleaseDate.ToString(),
+                "小丸工具箱\r\n主页：http://maruko.appinn.me/ \r\n编译日期：" + ReleaseDate.ToString(),
                 "关于",
                 QQMessageBoxIcon.Information,
                 QQMessageBoxButtons.OK);
@@ -2517,7 +2517,7 @@ namespace mp4box
 
         private void HomePageBtn_Click(object sender, EventArgs e)
         {
-            Process.Start("http://www.maruko.in/");
+            Process.Start("http://maruko.appinn.me/");
         }
 
         #endregion 帮助页面
@@ -4249,7 +4249,7 @@ namespace mp4box
                         DialogResult dr = ShowQuestion(string.Format("新版已于{0}发布，是否前往官网下载？", NewDate.ToString("yyyy-M-d")), "喜大普奔");
                         if (dr == DialogResult.Yes)
                         {
-                            Process.Start("http://www.maruko.in/");
+                            Process.Start("http://maruko.appinn.me/");
                         }
                     }
                     else
@@ -4372,7 +4372,7 @@ namespace mp4box
                         DialogResult dr = ShowQuestion(string.Format("新版已于{0}发布，是否前往官网下载？", NewDate.ToString("yyyy-M-d")), "喜大普奔");
                         if (dr == DialogResult.Yes)
                         {
-                            Process.Start("http://www.maruko.in/");
+                            Process.Start("http://maruko.appinn.me/");
                         }
                     }
                     else
