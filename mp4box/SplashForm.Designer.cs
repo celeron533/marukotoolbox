@@ -44,11 +44,12 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
             this.pictureBox.Location = new System.Drawing.Point(0, 0);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(499, 281);
+            this.pictureBox.Size = new System.Drawing.Size(721, 480);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
@@ -57,19 +58,20 @@
             // 
             this.LuneartTextLabel.AutoSize = true;
             this.LuneartTextLabel.BackColor = System.Drawing.Color.Transparent;
-            this.LuneartTextLabel.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LuneartTextLabel.ForeColor = System.Drawing.Color.Red;
-            this.LuneartTextLabel.Location = new System.Drawing.Point(350, 176);
+            this.LuneartTextLabel.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LuneartTextLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(52)))), ((int)(((byte)(142)))));
+            this.LuneartTextLabel.Location = new System.Drawing.Point(168, 405);
             this.LuneartTextLabel.Name = "LuneartTextLabel";
-            this.LuneartTextLabel.Size = new System.Drawing.Size(100, 29);
+            this.LuneartTextLabel.Size = new System.Drawing.Size(72, 27);
             this.LuneartTextLabel.TabIndex = 1;
-            this.LuneartTextLabel.Text = "七七版";
+            this.LuneartTextLabel.Text = "酱油版";
+            this.LuneartTextLabel.Visible = false;
             // 
             // SplashForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 281);
+            this.ClientSize = new System.Drawing.Size(721, 480);
             this.Controls.Add(this.LuneartTextLabel);
             this.Controls.Add(this.pictureBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
