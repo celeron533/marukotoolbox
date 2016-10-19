@@ -174,6 +174,11 @@ namespace mp4box
                 Directory.Delete(path, recursive);
         }
 
+        /// <summary>
+        /// 确保目录存在
+        /// </summary>
+        /// <param name="path">目录路径</param>
+        /// <returns></returns>
         public static DirectoryInfo ensureDirectoryExists(string path)
         {
             if (Directory.Exists(path))

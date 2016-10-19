@@ -1689,6 +1689,9 @@ namespace mp4box
             string inputName = Path.GetFileNameWithoutExtension(input);
             string tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.mp4");
             string tempAudio = Path.Combine(tempfilepath, inputName + "_atemp" + getAudioExt());
+            // 避免编码失败最后混流使用上次的同名临时文件造成编码成功的假象
+            if (File.Exists(tempVideo)) File.Delete(tempVideo);
+            if (File.Exists(tempAudio)) File.Delete(tempAudio);
 
             //检测是否含有音频
             MediaInfo MI = new MediaInfo();
@@ -2119,6 +2122,9 @@ namespace mp4box
             string tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.mp4");
             string tempAudio = Path.Combine(tempfilepath, inputName + "_atemp" + getAudioExt());
             Util.ensureDirectoryExists(tempfilepath);
+            // 避免编码失败最后混流使用上次的同名临时文件造成编码成功的假象
+            if (File.Exists(tempVideo)) File.Delete(tempVideo);
+            if (File.Exists(tempAudio)) File.Delete(tempAudio);
 
             string filepath = tempavspath;
             //string filepath = workpath + "\\temp.avs";
@@ -2641,6 +2647,9 @@ namespace mp4box
             string tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.mp4");
             string tempAudio = Path.Combine(tempfilepath, inputName + "_atemp" + getAudioExt());
             Util.ensureDirectoryExists(tempfilepath);
+            // 避免编码失败最后混流使用上次的同名临时文件造成编码成功的假象
+            if (File.Exists(tempVideo)) File.Delete(tempVideo);
+            if (File.Exists(tempAudio)) File.Delete(tempAudio);
 
             #region Audio
 
