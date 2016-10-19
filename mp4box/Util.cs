@@ -412,7 +412,7 @@ namespace mp4box
         {
             return GetAssembly(typeof(System.Reflection.AssemblyInformationalVersionAttribute));
         }
-        
+
         /// <summary>
         /// 获取程序集项目属性内容
         /// </summary>
@@ -543,6 +543,11 @@ namespace mp4box
         }
 
         #endregion
+
+        public static string getlibassformatpath(string path)
+        {
+            return path.Replace("\\", "\\\\\\\\").Replace(":", "\\\\:");
+        }
 
     }
 }

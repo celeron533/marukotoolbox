@@ -323,12 +323,23 @@ namespace mp4box
             return sb.ToString();
         }
 
-        public string x265bat(string input, string output, int pass = 1)
+        public string x265bat(string input, string output, int pass = 1, string sub = "")
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("\"" + workPath + "\\ffmpeg.exe\"" + " -i \"" + input + "\"");
             if (x264HeightNum.Value != 0 && x264WidthNum.Value != 0 && !MaintainResolutionCheckBox.Checked)
                 sb.Append(string.Format(" -vf zscale={0}x{1}:filter=lanczos", x264WidthNum.Value, x264HeightNum.Value));
+            if (!string.IsNullOrEmpty(sub))
+            {
+                string x264tmpline = sb.ToString();
+                if (x264tmpline.IndexOf("-vf") == -1)
+                    sb.Append(" -vf subtitles=\"" + Util.getlibassformatpath(sub) + "\"");
+                else
+                {
+                    int index = x264tmpline.IndexOf("lanczos");
+                    sb.Insert(index + 7, ",subtitles=\"" + Util.getlibassformatpath(sub) + "\"");
+                }
+            }
 #if DEBUG
             sb.Append(" -strict -1 -f yuv4mpegpipe -an - | ");
 #else
@@ -1723,9 +1734,9 @@ namespace mp4box
             {
                 tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.hevc");
                 if (x264mode == 2)
-                    x264 = x265bat(input, tempVideo, 1) + "\r\n" +
-                           x265bat(input, tempVideo, 2);
-                else x264 = x265bat(input, tempVideo);
+                    x264 = x265bat(input, tempVideo, 1, sub) + "\r\n" +
+                           x265bat(input, tempVideo, 2, sub);
+                else x264 = x265bat(input, tempVideo, 0, sub);
                 if (audioMode == 1 || !hasAudio)
                     x264 += "\r\n\"" + workPath + "\\mp4box.exe\"  -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + output + "\" \r\n";
             }
@@ -2693,9 +2704,9 @@ namespace mp4box
                     return;
                 }
                 if (x264mode == 2)
-                    x264 = x265bat(namevideo2, tempVideo, 1) + "\r\n" +
-                           x265bat(namevideo2, tempVideo, 2);
-                else x264 = x265bat(namevideo2, tempVideo);
+                    x264 = x265bat(namevideo2, tempVideo, 1, namesub2) + "\r\n" +
+                           x265bat(namevideo2, tempVideo, 2, namesub2);
+                else x264 = x265bat(namevideo2, tempVideo, 0, namesub2);
                 if (audioMode == 1)
                 {
                     x264 += "\r\n\"" + workPath + "\\mp4box.exe\" -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + Util.ChangeExt(nameout2, ".mp4") + "\" \r\n";
@@ -4659,11 +4670,11 @@ namespace mp4box
                 if (x264OutTextBox.Text.Contains("_x264."))
                     x264OutTextBox.Text = x264OutTextBox.Text.Replace("_x264.", "_x265.");
 
-                x264SubTextBox.Text = string.Empty;
-                x264SubTextBox.Enabled = false;
-                x264SubBtn.Enabled = false;
-                x264BatchSubCheckBox.Enabled = false;
-                x264BatchSubSpecialLanguage.Enabled = false;
+                //x264SubTextBox.Text = string.Empty;
+                //x264SubTextBox.Enabled = false;
+                //x264SubBtn.Enabled = false;
+                //x264BatchSubCheckBox.Enabled = false;
+                //x264BatchSubSpecialLanguage.Enabled = false;
                 x264DemuxerComboBox.Enabled = false;
                 VideoBatchFormatComboBox.Text = "mp4";
                 VideoBatchFormatComboBox.Enabled = false;
