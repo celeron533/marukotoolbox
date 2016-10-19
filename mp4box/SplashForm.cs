@@ -67,22 +67,22 @@ namespace mp4box
             this.FormBorderStyle = FormBorderStyle.None;
             //屏幕中央
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Opacity = 0.1;
+            //this.Opacity = 0.1;
         }
 
         private void SplashForm_Load(object sender, EventArgs e)
         {
-            ArtTextLabel TitleLabel = new ArtTextLabel();
-            TitleLabel.AutoSize = true;
-            TitleLabel.Font = new Font("微软雅黑", 21.75F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(134)));
-            TitleLabel.ForeColor = Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(191)))));
-            TitleLabel.BackColor = Color.Transparent;
-            TitleLabel.Location = new Point(300, 110);
-            TitleLabel.Name = "TitleLabel";
-            TitleLabel.Size = new Size(208, 29);
-            TitleLabel.TabIndex = 2;
-            TitleLabel.Text = "小丸工具箱";
-            TitleLabel.Parent = pictureBox;
+            //ArtTextLabel TitleLabel = new ArtTextLabel();
+            //TitleLabel.AutoSize = true;
+            //TitleLabel.Font = new Font("微软雅黑", 21.75F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(134)));
+            //TitleLabel.ForeColor = Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(191)))));
+            //TitleLabel.BackColor = Color.Transparent;
+            //TitleLabel.Location = new Point(300, 110);
+            //TitleLabel.Name = "TitleLabel";
+            //TitleLabel.Size = new Size(208, 29);
+            //TitleLabel.TabIndex = 2;
+            //TitleLabel.Text = "小丸工具箱";
+            //TitleLabel.Parent = pictureBox;
 
             LuneartTextLabel.Parent = pictureBox;
         }

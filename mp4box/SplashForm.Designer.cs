@@ -38,7 +38,6 @@
             // 
             // timer
             // 
-            this.timer.Enabled = true;
             this.timer.Interval = 50;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
@@ -78,7 +77,6 @@
             this.Name = "SplashForm";
             this.Text = "小丸工具箱";
             this.Load += new System.EventHandler(this.SplashForm_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.SplashForm_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
