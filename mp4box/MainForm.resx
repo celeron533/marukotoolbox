@@ -4003,7 +4003,7 @@
     <value>AC3</value>
   </data>
   <data name="AudioEncoderComboBox.Items7" xml:space="preserve">
-    <value>mp3</value>
+    <value>MP3</value>
   </data>
   <data name="AudioEncoderComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 78</value>

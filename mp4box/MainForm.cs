@@ -1227,7 +1227,7 @@ namespace mp4box
                                     new XElement("Parameter", "-V 90 -q 2 --no-optimize", new XAttribute("Name", "QAAC_TVBR_V90")),
                                     new XElement("Parameter", "-V 127 -q 2 --no-optimize", new XAttribute("Name", "QAAC_TVBR_V127"))
                                     ),
-                                new XElement("mp3",
+                                new XElement("MP3",
                                     new XElement("Parameter", "--alt-preset extreme", new XAttribute("Name", "extreme")),
                                     new XElement("Parameter", "--preset insane", new XAttribute("Name", "insane")),
                                     new XElement("Parameter", "--preset standard", new XAttribute("Name", "standard")),
@@ -1246,7 +1246,8 @@ namespace mp4box
         private void LoadVideoPreset()
         {
             VideoPresetComboBox.Items.Clear();
-            var xlsv = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element("x264").Elements();
+            string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+            var xlsv = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element(encType).Elements();
             foreach (var item in xlsv)
             {
                 VideoPresetComboBox.Items.Add(item.Attribute("Name").Value);
@@ -1367,7 +1368,6 @@ namespace mp4box
             }
 
             PresetXml();
-            LoadVideoPreset();
             LoadSettings();
         }
 
@@ -2365,9 +2365,14 @@ namespace mp4box
 
         private void cbX264_SelectedIndexChanged(object sender, EventArgs e)
         {
-            XElement xel = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element("x264").Elements()
-                              .Where(x => x.Attribute("Name").Value == VideoPresetComboBox.Text).First();
-            x264CustomParameterTextBox.Text = xel.Value;
+            if (x264ExeComboBox.Items != null)
+            {
+                string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                XElement xel = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element(encType).Elements()
+                                  .Where(x => x.Attribute("Name").Value == VideoPresetComboBox.Text).First();
+                x264CustomParameterTextBox.Text = xel.Value;
+            }
+
         }
 
         private void cbFPS_SelectedIndexChanged(object sender, EventArgs e)
@@ -2761,7 +2766,8 @@ namespace mp4box
                 string vPresetName = InputBox.Show("请输入这个预设名称", "请为预置配置命名", "新预置名称");
                 if (!string.IsNullOrEmpty(vPresetName))
                 {
-                    var xl = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element("x264");
+                    string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                    var xl = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element(encType);
                     XElement xelnew = new XElement("Parameter", x264CustomParameterTextBox.Text,
                                           new XAttribute("Name", vPresetName));
                     foreach (var item in xl.Elements())
@@ -2790,7 +2796,8 @@ namespace mp4box
             {
                 try
                 {
-                    var xls = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element("x264").Elements();
+                    string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                    var xls = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element(encType).Elements();
                     foreach (var item in xls)
                     {
                         if (item.Attribute("Name").Value == VideoPresetComboBox.Text)
@@ -2849,8 +2856,28 @@ namespace mp4box
             label12.Visible = false;
             lbcrf.Visible = false;
             x264CRFNum.Visible = false;
-            //x264FpsComboBox.Visible = false;
-            //lbFPS2.Visible = false;
+
+            VideoPresetComboBox.Items.Clear();
+            x264CustomParameterTextBox.Text = string.Empty;
+            if (x264ExeComboBox.SelectedItem != null)
+            {
+                string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                XElement xVideos = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element(encType);
+                if (xVideos != null)
+                {
+                    foreach (XElement item in xVideos.Elements())
+                    {
+                        VideoPresetComboBox.Items.Add(item.Attribute("Name").Value);
+                        VideoPresetComboBox.SelectedIndex = 0;
+                    }
+                }
+                else
+                {
+                    VideoPresetComboBox.Items.Clear();
+                    x264CustomParameterTextBox.Text = string.Empty;
+                }
+            }
+
         }
 
         private void x264Mode1RadioButton_CheckedChanged(object sender, EventArgs e)
@@ -3100,7 +3127,7 @@ namespace mp4box
 
                 case 7:
                     if (File.Exists(txtaudio2.Text))
-                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_mp3.mp3");
+                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_MP3.mp3");
                     AudioBitrateComboBox.Enabled = true;
                     AudioBitrateRadioButton.Enabled = true;
                     AudioCustomizeRadioButton.Enabled = true;
@@ -3112,11 +3139,11 @@ namespace mp4box
                     break;
             }
 
+            AudioPresetComboBox.Items.Clear();
+            AudioCustomParameterTextBox.Text = string.Empty;
             XElement xAudios = xdoc.Element("root").Element("Audio").Element("AudioEncoder").Element(AudioEncoderComboBox.Text);
             if (xAudios != null)
             {
-                AudioPresetComboBox.Items.Clear();
-                AudioCustomParameterTextBox.Text = string.Empty;
                 foreach (XElement item in xAudios.Elements())
                 {
                     AudioPresetComboBox.Items.Add(item.Attribute("Name").Value);
@@ -3191,7 +3218,7 @@ namespace mp4box
                     case 4: outputExt = "flac"; codec = "FLAC"; break;
                     case 5: outputExt = "m4a"; codec = "AAC"; break;
                     case 6: outputExt = "ac3"; codec = "AC3"; break;
-                    case 7: outputExt = "mp3"; codec = "mp3"; break;
+                    case 7: outputExt = "mp3"; codec = "MP3"; break;
                     default: outputExt = "aac"; codec = "AAC"; break;
                 }
                 for (int i = 0; i < this.AudioListBox.Items.Count; i++)
@@ -3267,7 +3294,7 @@ namespace mp4box
                     case 4: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_FLAC.flac"); break;
                     case 5: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.m4a"); break;
                     case 6: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AC3.ac3"); break;
-                    case 7: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_mp3.mp3"); break;
+                    case 7: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_MP3.mp3"); break;
                     default: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.aac"); break;
                 }
             }
@@ -3353,14 +3380,6 @@ namespace mp4box
 
         private void GenerateAVS()
         {
-            //if (Directory.Exists("avsfilter"))
-            //{
-            //    DirectoryInfo TheFolder = new DirectoryInfo("avsfilter");
-            //    foreach (FileInfo FileName in TheFolder.GetFiles())
-            //    {
-            //        avs += "LoadPlugin(\"" + workpath + "\\avsfilter\\" + FileName + "\")\r\n";
-            //    }
-            //}
             avsBuilder.Remove(0, avsBuilder.Length);
             string vsfilterDLLPath = Path.Combine(workPath, @"avs\plugins\VSFilter.DLL");
             string SupTitleDLLPath = Path.Combine(workPath, @"avs\plugins\SupTitle.dll");
@@ -4687,6 +4706,23 @@ namespace mp4box
                 x264DemuxerComboBox.Enabled = false;
                 VideoBatchFormatComboBox.Text = "mp4";
                 VideoBatchFormatComboBox.Enabled = false;
+
+                VideoPresetComboBox.Items.Clear();
+                x264CustomParameterTextBox.Text = string.Empty;
+                XElement xVideos = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element("x265");
+                if (xVideos != null)
+                {
+                    foreach (XElement item in xVideos.Elements())
+                    {
+                        VideoPresetComboBox.Items.Add(item.Attribute("Name").Value);
+                        VideoPresetComboBox.SelectedIndex = 0;
+                    }
+                }
+                else
+                {
+                    VideoPresetComboBox.Items.Clear();
+                    x264CustomParameterTextBox.Text = string.Empty;
+                }
             }
             else
             {
@@ -4699,6 +4735,23 @@ namespace mp4box
                 x264BatchSubSpecialLanguage.Enabled = true;
                 x264DemuxerComboBox.Enabled = true;
                 VideoBatchFormatComboBox.Enabled = true;
+
+                VideoPresetComboBox.Items.Clear();
+                x264CustomParameterTextBox.Text = string.Empty;
+                XElement xVideos = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element("x264");
+                if (xVideos != null)
+                {
+                    foreach (XElement item in xVideos.Elements())
+                    {
+                        VideoPresetComboBox.Items.Add(item.Attribute("Name").Value);
+                        VideoPresetComboBox.SelectedIndex = 0;
+                    }
+                }
+                else
+                {
+                    VideoPresetComboBox.Items.Clear();
+                    x264CustomParameterTextBox.Text = string.Empty;
+                }
             }
         }
 

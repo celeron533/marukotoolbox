@@ -551,7 +551,7 @@ namespace mp4box
 
         public static string getlibassformatpath(string path)
         {
-            return path.Replace("\\", "\\\\\\\\").Replace(":", "\\\\:");
+            return path.Replace("\\", "\\\\\\\\").Replace(":", "\\\\:").Replace("[", "\\[").Replace("]", "\\]");
         }
 
     }
