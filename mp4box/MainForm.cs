@@ -127,6 +127,55 @@ namespace mp4box
             InitializeComponent();
         }
 
+        #region Form
+
+        public string GetCurrentDirectory()
+        {
+            return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        }
+
+        public static void ShowErrorMessage(string argMessage)
+        {
+            MessageBox.Show(argMessage, "错误!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        public static void ShowErrorMessage(string argMessage, string argTitle)
+        {
+            MessageBox.Show(argMessage, argTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        public static void ShowWarningMessage(string argMessage)
+        {
+            MessageBox.Show(argMessage, "警告!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        public static void ShowWarningMessage(string argMessage, string argTitle)
+        {
+            MessageBox.Show(argMessage, argTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        public static void ShowInfoMessage(string argMessage)
+        {
+            MessageBox.Show(argMessage, "提示!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public static void ShowInfoMessage(string argMessage, string argTitle)
+        {
+            MessageBox.Show(argMessage, argTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public static DialogResult ShowQuestion(string argQuestion, string argTitle)
+        {
+            return MessageBox.Show(argQuestion, argTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
+        public static DialogResult ShowQuestionWithCancel(string argQuestion, string argTitle)
+        {
+            return MessageBox.Show(argQuestion, argTitle, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+        }
+
+        #endregion
+
         public string GetMediaInfoString(string VideoName)
         {
             StringBuilder info = new StringBuilder();
@@ -2372,7 +2421,6 @@ namespace mp4box
                                   .Where(x => x.Attribute("Name").Value == VideoPresetComboBox.Text).First();
                 x264CustomParameterTextBox.Text = xel.Value;
             }
-
         }
 
         private void cbFPS_SelectedIndexChanged(object sender, EventArgs e)
@@ -2822,8 +2870,6 @@ namespace mp4box
             lbrate.Visible = true;
             x264BitrateNum.Visible = true;
             label12.Visible = true;
-            //x264FpsComboBox.Visible = true;
-            //lbFPS2.Visible = true;
             lbwidth.Visible = true;
             lbheight.Visible = true;
             x264WidthNum.Visible = true;
@@ -2871,11 +2917,6 @@ namespace mp4box
                         VideoPresetComboBox.SelectedIndex = 0;
                     }
                 }
-                else
-                {
-                    VideoPresetComboBox.Items.Clear();
-                    x264CustomParameterTextBox.Text = string.Empty;
-                }
             }
 
         }
@@ -2885,8 +2926,6 @@ namespace mp4box
             x264mode = 1;
             lbcrf.Visible = true;
             x264CRFNum.Visible = true;
-            //x264FpsComboBox.Visible = true;
-            //lbFPS2.Visible = true;
             lbwidth.Visible = true;
             lbheight.Visible = true;
             x264WidthNum.Visible = true;
@@ -3150,12 +3189,6 @@ namespace mp4box
                     AudioPresetComboBox.SelectedIndex = 0;
                 }
             }
-            else
-            {
-                AudioPresetComboBox.Items.Clear();
-                AudioCustomParameterTextBox.Text = string.Empty;
-            }
-
         }
 
         private void AudioListBox_DragDrop(object sender, DragEventArgs e)
@@ -4718,11 +4751,6 @@ namespace mp4box
                         VideoPresetComboBox.SelectedIndex = 0;
                     }
                 }
-                else
-                {
-                    VideoPresetComboBox.Items.Clear();
-                    x264CustomParameterTextBox.Text = string.Empty;
-                }
             }
             else
             {
@@ -4747,62 +4775,8 @@ namespace mp4box
                         VideoPresetComboBox.SelectedIndex = 0;
                     }
                 }
-                else
-                {
-                    VideoPresetComboBox.Items.Clear();
-                    x264CustomParameterTextBox.Text = string.Empty;
-                }
             }
         }
-
-        #region Form
-
-        public String GetCurrentDirectory()
-        {
-            return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        }
-
-        public static void ShowErrorMessage(String argMessage)
-        {
-            MessageBox.Show(argMessage, "错误!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        public static void ShowErrorMessage(String argMessage, String argTitle)
-        {
-            MessageBox.Show(argMessage, argTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        public static void ShowWarningMessage(String argMessage)
-        {
-            MessageBox.Show(argMessage, "警告!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        public static void ShowWarningMessage(String argMessage, String argTitle)
-        {
-            MessageBox.Show(argMessage, argTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        public static void ShowInfoMessage(String argMessage)
-        {
-            MessageBox.Show(argMessage, "提示!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        public static void ShowInfoMessage(String argMessage, String argTitle)
-        {
-            MessageBox.Show(argMessage, argTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        public static DialogResult ShowQuestion(String argQuestion, String argTitle)
-        {
-            return MessageBox.Show(argQuestion, argTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        }
-
-        public static DialogResult ShowQuestionWithCancel(String argQuestion, String argTitle)
-        {
-            return MessageBox.Show(argQuestion, argTitle, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-        }
-
-        #endregion
 
         private void audioDeleteBt_Click(object sender, EventArgs e)
         {
