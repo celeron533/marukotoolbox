@@ -697,9 +697,6 @@
   <data name="label6.Text" xml:space="preserve">
     <value>Splitter</value>
   </data>
-  <data name="PresetNameTextBox.Text" xml:space="preserve">
-    <value>New_Preset</value>
-  </data>
   <data name="x264AddPresetBtn.Text" xml:space="preserve">
     <value>Add</value>
   </data>
@@ -719,10 +716,10 @@
     <value>Video</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>47, 12</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
-    <value>x264</value>
+    <value>Encoder</value>
   </data>
   <data name="x264AudioModeComboBox.Items" xml:space="preserve">
     <value>None</value>
@@ -834,6 +831,12 @@
   </data>
   <data name="MiscTab.Text" xml:space="preserve">
     <value>General</value>
+  </data>
+  <data name="x265CheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 19</value>
+  </data>
+  <data name="x265CheckBox.Text" xml:space="preserve">
+    <value>Enable x265</value>
   </data>
   <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 12</value>

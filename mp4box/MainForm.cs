@@ -2579,7 +2579,7 @@ namespace mp4box
             DateTime CompileDate = File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
             QQMessageBox.Show(
                 this,
-                "小丸工具箱\r\n主页：http://maruko.appinn.me/ \r\n编译日期：" + ReleaseDate.ToString(),
+                "主页：http://maruko.appinn.me/ \r\n编译日期：" + ReleaseDate.ToString()+ "\r\n作者：小七、月儿、小丸",
                 "关于",
                 QQMessageBoxIcon.Information,
                 QQMessageBoxButtons.OK);
@@ -3755,7 +3755,7 @@ namespace mp4box
                     x264AudioModeComboBox.Items.Add("無音頻流");
                     x264AudioModeComboBox.Items.Add("拷貝音頻流");
                     x264AudioModeComboBox.SelectedIndex = x264AudioModeComboBoxIndex;
-                    x264VideoTextBox.EmptyTextTip = "可以把文件拖拽到這裡";
+                    x264VideoTextBox.EmptyTextTip = "可以把档案拖拽到這裡";
                     x264SubTextBox.EmptyTextTip = "雙擊清空字幕檔案文本框";
                     //x264OutTextBox.EmptyTextTip = "寬度和高度全為0即不改變解析度";
                     x264PathTextBox.EmptyTextTip = "字幕和視頻在同一資料夾下且同名，不同名僅有語言後綴時請在右方選擇或輸入";
@@ -3799,7 +3799,7 @@ namespace mp4box
 
                 case 3:
                     SetLang("ja-JP", this, typeof(MainForm));
-                    this.Text = string.Format("Maruko Toolbox {0}", Util.GetAssemblyFileVersion());
+                    this.Text = string.Format("小丸道具箱 {0}", Util.GetAssemblyFileVersion());
                     x264PriorityComboBox.Items.Clear();
                     x264PriorityComboBox.Items.AddRange(new string[] { "低", "通常以下", "通常", "通常以上", "高", "リアルタイム" });
                     x264PriorityComboBox.SelectedIndex = 2;

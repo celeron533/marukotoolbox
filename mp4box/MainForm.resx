@@ -610,7 +610,7 @@
     <value>17</value>
   </data>
   <data name="MediaInfoTextBox.Text" xml:space="preserve">
-    <value>把视频文件拖到这里……</value>
+    <value>请把多媒体文件拖到这里</value>
   </data>
   <data name="&gt;&gt;MediaInfoTextBox.Name" xml:space="preserve">
     <value>MediaInfoTextBox</value>
@@ -3790,7 +3790,7 @@
     <value>NoControl</value>
   </data>
   <data name="audioAddBt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 104</value>
+    <value>387, 104</value>
   </data>
   <data name="audioAddBt.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -3823,7 +3823,7 @@
     <value>NoControl</value>
   </data>
   <data name="audioDeleteBt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 104</value>
+    <value>296, 104</value>
   </data>
   <data name="audioDeleteBt.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -3850,7 +3850,7 @@
     <value>1</value>
   </data>
   <data name="AudioPresetComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 104</value>
+    <value>103, 104</value>
   </data>
   <data name="AudioPresetComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 20</value>
@@ -3880,7 +3880,7 @@
     <value>NoControl</value>
   </data>
   <data name="AudioPresetLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 110</value>
+    <value>18, 108</value>
   </data>
   <data name="AudioPresetLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
@@ -3928,10 +3928,10 @@
     <value>320</value>
   </data>
   <data name="AudioBitrateComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 104</value>
+    <value>103, 104</value>
   </data>
   <data name="AudioBitrateComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
+    <value>122, 20</value>
   </data>
   <data name="AudioBitrateComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -4006,7 +4006,7 @@
     <value>MP3</value>
   </data>
   <data name="AudioEncoderComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 78</value>
+    <value>103, 78</value>
   </data>
   <data name="AudioEncoderComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 20</value>
@@ -4111,7 +4111,7 @@
     <value>1</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 74</value>
+    <value>286, 74</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 29</value>
@@ -4192,7 +4192,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbaackbps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 110</value>
+    <value>251, 110</value>
   </data>
   <data name="lbaackbps.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
@@ -4252,7 +4252,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbaacrate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 110</value>
+    <value>18, 108</value>
   </data>
   <data name="lbaacrate.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
@@ -4673,6 +4673,9 @@
   </data>
   <data name="label45.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label45.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 137</value>

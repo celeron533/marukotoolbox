@@ -52,7 +52,7 @@ namespace ControlExs
 
         //绘制窗体标题的字体、标题的颜色
         private Font _textFont = new Font("微软雅黑", 10.0f, FontStyle.Bold);
-        private Color _textForeColor = Color.FromArgb(250, Color.White);
+        private Color _textForeColor = Color.FromArgb(250, Color.Pink);
 
         //是否绘制带有阴影的窗体标题
         private bool _isTextWithShadow = false;   
