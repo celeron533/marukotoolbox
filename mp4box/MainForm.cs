@@ -2902,23 +2902,6 @@ namespace mp4box
             label12.Visible = false;
             lbcrf.Visible = false;
             x264CRFNum.Visible = false;
-
-            VideoPresetComboBox.Items.Clear();
-            x264CustomParameterTextBox.Text = string.Empty;
-            if (x264ExeComboBox.SelectedItem != null)
-            {
-                string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
-                XElement xVideos = xdoc.Element("root").Element("Video").Element("VideoEncoder").Element(encType);
-                if (xVideos != null)
-                {
-                    foreach (XElement item in xVideos.Elements())
-                    {
-                        VideoPresetComboBox.Items.Add(item.Attribute("Name").Value);
-                        VideoPresetComboBox.SelectedIndex = 0;
-                    }
-                }
-            }
-
         }
 
         private void x264Mode1RadioButton_CheckedChanged(object sender, EventArgs e)
