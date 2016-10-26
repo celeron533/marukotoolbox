@@ -1,6 +1,6 @@
 ﻿// ------------------------------------------------------------------
 // Copyright (C) 2011-2016 Maruko Toolbox Project
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -43,7 +43,7 @@ using System.Runtime.InteropServices;
 // 程序集的版本信息由下面四个值组成:
 //
 //      主版本
-//      次版本 
+//      次版本
 //      内部版本号
 //      修订号
 //
@@ -52,4 +52,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyInformationalVersion("240")]
+[assembly: AssemblyInformationalVersion("238")]

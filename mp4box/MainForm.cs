@@ -4000,7 +4000,7 @@ namespace mp4box
                     return;
                 }
                 string ffPath = Path.Combine(workPath, "ffmpeg.exe");
-                string neroPath = Path.Combine(workPath, "neroaacenc.exe");
+                string neroPath = Util.FormatPath(Path.Combine(workPath, "neroaacenc.exe"));
                 if (AudioCopyCheckBox.Checked)
                 {
                     mux = "\"" + ffPath + "\" -loop 1 -r " + OnePicFPSNum.Value.ToString() + " -t " + seconds.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + OnePicCRFNum.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
