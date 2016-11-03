@@ -2036,9 +2036,15 @@ namespace mp4box
                 }
                 else
                 {
-                    PreviewForm pf = new PreviewForm();
-                    pf.Show();
-                    pf.axWindowsMediaPlayer1.URL = filepath;
+                    string ffplayer = Path.Combine(workPath, "ffplay.exe");
+                    if (File.Exists(ffplayer))
+                        Process.Start(Util.FormatPath(ffplayer), " -i " + Util.FormatPath(filepath));
+                    else
+                    {
+                        PreviewForm pf = new PreviewForm();
+                        pf.Show();
+                        pf.axWindowsMediaPlayer1.URL = filepath;
+                    }
                 }
             }
             else
