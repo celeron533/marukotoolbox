@@ -3420,9 +3420,9 @@ namespace mp4box
                    || extInput == ".qt"
                    || extInput == ".3gp"
                    || extInput == ".3g2")
-                avsBuilder.AppendLine("LSMASHVideoSource(\"" + namevideo9 + "\")");
+                avsBuilder.AppendLine("LSMASHVideoSource(\"" + namevideo9 + "\",format=\"YUV420P8\")");
             else
-                avsBuilder.AppendLine("LWLibavVideoSource(\"" + namevideo9 + "\")");
+                avsBuilder.AppendLine("LWLibavVideoSource(\"" + namevideo9 + "\",format=\"YUV420P8\")");
             avsBuilder.AppendLine("ConvertToYV12()");
             if (UndotCheckBox.Checked)
                 avsBuilder.AppendLine("Undot()");
