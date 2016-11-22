@@ -945,9 +945,21 @@ namespace mp4box
                 string[] deletedfiles = { "concat.txt", tempPic, tempavspath };
                 deleteFileList.AddRange(deletedfiles);
                 deleteFileList.AddRange(batFiles);
-                foreach (string file in deleteFileList)
+
+                Process currentpro = Process.GetCurrentProcess();
+                Process[] processes = Process.GetProcessesByName(currentpro.ProcessName);
+                List<Process> listpro = new List<Process>();
+                foreach (Process ps in processes)
                 {
-                    File.Delete(file);
+                    if (Assembly.GetExecutingAssembly().Location == ps.MainModule.FileName)
+                        listpro.Add(ps);
+                }
+                if (listpro.Count() == 1)
+                {
+                    foreach (string file in deleteFileList)
+                    {
+                        File.Delete(file);
+                    }
                 }
             }
 
@@ -2585,7 +2597,7 @@ namespace mp4box
             DateTime CompileDate = File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
             QQMessageBox.Show(
                 this,
-                "主页：http://maruko.appinn.me/ \r\n编译日期：" + ReleaseDate.ToString()+ "\r\n作者：小七、月儿、小丸",
+                "主页：http://maruko.appinn.me/ \r\n编译日期：" + ReleaseDate.ToString() + "\r\n作者：小七、月儿、小丸",
                 "关于",
                 QQMessageBoxIcon.Information,
                 QQMessageBoxButtons.OK);
