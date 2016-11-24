@@ -1,9 +1,9 @@
 ﻿// ------------------------------------------------------------------
 // Copyright (C) 2011-2016 Maruko Toolbox Project
-// 
+//
 //  Authors: komaruchan <sandy_0308@hotmail.com>
 //           LunarShaddow <aflyhorse@hotmail.com>
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -299,8 +299,7 @@ namespace mp4box
                 this.Close();
             }
             notifyIcon.Visible = true;
-            MainForm main = (MainForm)this.Owner;
-            workPath = main.workPath;
+            workPath = MainForm.Instance.workPath;
             autoscroll = true;
         }
 
@@ -454,10 +453,9 @@ namespace mp4box
             BalloonTip(@"完成了喵~ (= ω =)");
 
             // save log
-            MainForm main = (MainForm)this.Owner;
-            main.LogRecord(internellog.ToString());
+            MainForm.Instance.LogRecord(internellog.ToString());
             // shutdown the system if required
-            if (main.shutdownState)
+            if (MainForm.Instance.shutdownState)
             {
                 System.Diagnostics.Process.Start("shutdown", "-s");
                 // wait a bit to ensure synchronization
@@ -676,8 +674,7 @@ namespace mp4box
         /// <param name="timeout">Tip timeout.</param>
         private void BalloonTip(string notes, int timeout = 500)
         {
-            MainForm main = (MainForm)this.Owner;
-            if (main.trayMode)
+            if (MainForm.Instance.trayMode)
             {
                 notifyIcon.Visible = true;
                 notifyIcon.ShowBalloonTip(timeout, "小丸工具箱", notes, ToolTipIcon.Info);

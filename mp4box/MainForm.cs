@@ -45,6 +45,7 @@ namespace mp4box
 {
     public partial class MainForm : Form
     {
+        public static MainForm Instance;
         public string workPath = "!undefined";
         public bool shutdownState = false;
         public bool trayMode = false;
@@ -122,6 +123,7 @@ namespace mp4box
 
         public MainForm()
         {
+            Instance = this;
             logPath = Application.StartupPath + "\\logs";
             logFileName = logPath + "\\LogFile-" + DateTime.Now.ToString("yyyy'-'MM'-'dd'_'HH'-'mm'-'ss") + ".log";
             InitializeComponent();
@@ -1393,9 +1395,13 @@ namespace mp4box
                 string sourceDevILdll = Path.Combine(workPath, @"avs\DevIL.dll");
                 if (File.Exists(sourceAviSynthdll) && File.Exists(sourceDevILdll))
                 {
-                    File.Copy(sourceAviSynthdll, Path.Combine(workPath, "AviSynth.dll"), true);
-                    File.Copy(sourceDevILdll, Path.Combine(workPath, "DevIL.dll"), true);
-                    LogRecord("未安装avisynth,使用本地内置avs.");
+                    try
+                    {
+                        File.Copy(sourceAviSynthdll, Path.Combine(workPath, "AviSynth.dll"), true);
+                        File.Copy(sourceDevILdll, Path.Combine(workPath, "DevIL.dll"), true);
+                        LogRecord("未安装avisynth,使用本地内置avs.");
+                    }
+                    catch (IOException) { }
                 }
             }
             else
