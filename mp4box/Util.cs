@@ -549,7 +549,7 @@ namespace mp4box
 
         #endregion
 
-        public static string getlibassformatpath(string path)
+        public static string GetLibassFormatPath(string path)
         {
             return path.Replace("\\", "\\\\\\\\").Replace(":", "\\\\:").Replace("[", "\\[").Replace("]", "\\]");
         }

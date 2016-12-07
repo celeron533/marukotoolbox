@@ -172,6 +172,7 @@
     <Compile Include="WorkingForm.Designer.cs">
       <DependentUpon>WorkingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="XvSettings.cs" />
     <EmbeddedResource Include="FeedbackForm.resx">
       <DependentUpon>FeedbackForm.cs</DependentUpon>
     </EmbeddedResource>

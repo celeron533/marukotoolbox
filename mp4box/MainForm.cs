@@ -303,9 +303,28 @@ namespace mp4box
             return "\"" + workPath + "\\mp4box.exe\" -add \"" + input1 + "#trackID=1:name=\" -add \"" + input2 + "#trackID=1:name=\" -new \"" + output + "\"\r\n";
         }
 
+        public XvSettings GetXvSettings()
+        {
+            var xvs = new XvSettings();
+            xvs.CrfValue = x264CRFNum.Value;
+            xvs.ExtParameter = x264extraLine.Text;
+            xvs.CustomParameter = x264CustomParameterTextBox.Text;
+            xvs.V_width = (int)x264WidthNum.Value;
+            xvs.V_high = (int)x264HeightNum.Value;
+            xvs.X26xThreads = x264ThreadsComboBox.SelectedItem.ToString();
+            xvs.X26xDemuxer = x264DemuxerComboBox.Text;
+            xvs.X26xBitrate = (int)x264BitrateNum.Value;
+            xvs.X26xSeek = (int)x264SeekNumericUpDown.Value;
+            xvs.X26xFrames = (int)x264FramesNumericUpDown.Value;
+            xvs.IsResizeChecked = MaintainResolutionCheckBox.Checked;
+            return xvs;
+        }
+
         public string x264bat(string input, string output, int pass = 1, string sub = "")
         {
             StringBuilder sb = new StringBuilder();
+            XvSettings xvs = GetXvSettings();
+
             //keyint设为fps的10倍
             MediaInfo MI = new MediaInfo();
             MI.Open(input);
@@ -318,36 +337,44 @@ namespace mp4box
                 keyint = (fps * 10).ToString();
             }
 
-            if (Path.GetExtension(input) == ".avs")
+            if (Path.GetExtension(input).ToLower().Equals(".avs"))
+            {
+                /*
+                 * AVS文件建议在avs脚本中修改分辨率和添加字幕
+                 */
+                xvs.V_width = 0;
+                xvs.V_high = 0;
+                sub = string.Empty;
                 sb.Append("\"" + workPath + "\\avs4x26x.exe\"" + " -L ");
+            }
             sb.Append("\"" + Path.Combine(workPath, x264ExeComboBox.SelectedItem.ToString()) + "\"");
             // 编码模式
             switch (x264mode)
             {
                 case 0: // 自定义
-                    sb.Append(" " + x264CustomParameterTextBox.Text);
+                    sb.Append(" " + xvs.CustomParameter);
                     break;
 
                 case 1: // crf
-                    sb.Append(" --crf " + x264CRFNum.Value);
+                    sb.Append(" --crf " + xvs.CrfValue);
                     break;
 
                 case 2: // 2pass
-                    sb.Append(" --pass " + pass + " --bitrate " + x264BitrateNum.Value + " --stats \"" + Path.Combine(tempfilepath, Path.GetFileNameWithoutExtension(output)) + ".stats\"");
+                    sb.Append(" --pass " + pass + " --bitrate " + xvs.X26xBitrate + " --stats \"" + Path.Combine(tempfilepath, Path.GetFileNameWithoutExtension(output)) + ".stats\"");
                     break;
             }
             if (x264mode != 0)
             {
-                if (x264DemuxerComboBox.Text != "auto" && x264DemuxerComboBox.Text != string.Empty)
-                    sb.Append(" --demuxer " + x264DemuxerComboBox.Text);
-                if (x264ThreadsComboBox.SelectedItem.ToString() != "auto" && x264ThreadsComboBox.SelectedItem.ToString() != string.Empty)
-                    sb.Append(" --threads " + x264ThreadsComboBox.SelectedItem.ToString());
-                if (x264extraLine.Text != string.Empty)
-                    sb.Append(" " + x264extraLine.Text);
+                if (xvs.X26xDemuxer != "auto" && xvs.X26xDemuxer != string.Empty)
+                    sb.Append(" --demuxer " + xvs.X26xDemuxer);
+                if (xvs.X26xThreads != "auto" && xvs.X26xThreads != string.Empty)
+                    sb.Append(" --threads " + xvs.X26xThreads);
+                if (xvs.ExtParameter != string.Empty)
+                    sb.Append(" " + xvs.ExtParameter);
                 else
                     sb.Append(" --preset 8 " + " -I " + keyint + " -r 4 -b 3 --me umh -i 1 --scenecut 60 -f 1:1 --qcomp 0.5 --psy-rd 0.3:0 --aq-mode 2 --aq-strength 0.8");
-                if (x264HeightNum.Value != 0 && x264WidthNum.Value != 0 && !MaintainResolutionCheckBox.Checked)
-                    sb.Append(" --vf resize:" + x264WidthNum.Value + "," + x264HeightNum.Value + ",,,,lanczos");
+                if (xvs.V_high != 0 && xvs.V_high != 0 && !xvs.IsResizeChecked)
+                    sb.Append(" --vf resize:" + xvs.V_width + "," + xvs.V_high + ",,,,lanczos");
             }
             if (!string.IsNullOrEmpty(sub))
             {
@@ -361,10 +388,10 @@ namespace mp4box
                     sb.Insert(m.Index + 5, "subtitles/").Append(" --sub \"" + sub + "\"");
                 }
             }
-            if (x264SeekNumericUpDown.Value != 0)
-                sb.Append(" --seek " + x264SeekNumericUpDown.Value.ToString());
-            if (x264FramesNumericUpDown.Value != 0)
-                sb.Append(" --frames " + x264FramesNumericUpDown.Value.ToString());
+            if (xvs.X26xSeek != 0)
+                sb.Append(" --seek " + xvs.X26xSeek);
+            if (xvs.X26xFrames != 0)
+                sb.Append(" --frames " + xvs.X26xFrames);
             if (x264mode == 2 && pass == 1)
                 sb.Append(" -o NUL");
             else if (!string.IsNullOrEmpty(output))
@@ -377,58 +404,70 @@ namespace mp4box
         public string x265bat(string input, string output, int pass = 1, string sub = "")
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("\"" + workPath + "\\ffmpeg.exe\"" + " -i \"" + input + "\"");
-            if (x264HeightNum.Value != 0 && x264WidthNum.Value != 0 && !MaintainResolutionCheckBox.Checked)
-                sb.Append(string.Format(" -vf zscale={0}x{1}:filter=lanczos", x264WidthNum.Value, x264HeightNum.Value));
-            if (!string.IsNullOrEmpty(sub))
+            XvSettings xvs = GetXvSettings();
+
+            bool isAvs = Path.GetExtension(input).ToLower().Equals(".avs");
+            if (isAvs)
             {
-                string x264tmpline = sb.ToString();
-                if (x264tmpline.IndexOf("-vf") == -1)
-                    sb.Append(" -vf subtitles=\"" + Util.getlibassformatpath(sub) + "\"");
-                else
-                {
-                    int index = x264tmpline.IndexOf("lanczos");
-                    sb.Insert(index + 7, ",subtitles=\"" + Util.getlibassformatpath(sub) + "\"");
-                }
+                sb.Append("\"" + workPath + "\\avs4x26x.exe\"" + " -L ");
             }
-#if DEBUG
-            sb.Append(" -strict -1 -f yuv4mpegpipe -an - | ");
-#else
-            sb.Append(" -strict -1 -f yuv4mpegpipe -an -v 0 - | ");
-#endif
-            sb.Append(Util.FormatPath(Path.Combine(workPath, x264ExeComboBox.SelectedItem.ToString())) + " --y4m");
+            else
+            {
+                sb.Append("\"" + workPath + "\\ffmpeg.exe\"" + " -i \"" + input + "\"");
+                if (xvs.V_high != 0 && xvs.V_high != 0 && !xvs.IsResizeChecked)
+                    sb.Append(string.Format(" -vf zscale={0}x{1}:filter=lanczos", xvs.V_width, xvs.V_high));
+                if (!string.IsNullOrEmpty(sub))
+                {
+                    string x264tmpline = sb.ToString();
+                    if (x264tmpline.IndexOf("-vf") == -1)
+                        sb.Append(" -vf subtitles=\"" + Util.GetLibassFormatPath(sub) + "\"");
+                    else
+                    {
+                        int index = x264tmpline.IndexOf("lanczos");
+                        sb.Insert(index + 7, ",subtitles=\"" + Util.GetLibassFormatPath(sub) + "\"");
+                    }
+                }
+                sb.Append(" -strict -1 -f yuv4mpegpipe -an - | ");
+            }
+
+            sb.Append(Util.FormatPath(Path.Combine(workPath, x264ExeComboBox.SelectedItem.ToString())) + (isAvs ? string.Empty : " --y4m"));
             // 编码模式
             switch (x264mode)
             {
                 case 0: // 自定义
-                    sb.Append(" " + x264CustomParameterTextBox.Text);
+                    sb.Append(" " + xvs.CustomParameter);
                     break;
 
                 case 1: // crf
-                    sb.Append(" --crf " + x264CRFNum.Value);
+                    sb.Append(" --crf " + xvs.CrfValue);
                     break;
 
                 case 2: // 2pass
-                    sb.Append(" --pass " + pass + " --bitrate " + x264BitrateNum.Value + " --stats \"" + Path.Combine(tempfilepath, Path.GetFileNameWithoutExtension(output)) + ".stats\"");
+                    sb.Append(" --pass " + pass + " --bitrate " + xvs.X26xBitrate + " --stats \"" + Path.Combine(tempfilepath, Path.GetFileNameWithoutExtension(output)) + ".stats\"");
                     break;
             }
             if (x264mode != 0)
             {
-                if (x264extraLine.Text != string.Empty)
-                    sb.Append(" " + x264extraLine.Text);
+                if (xvs.ExtParameter != string.Empty)
+                    sb.Append(" " + xvs.ExtParameter);
                 else
                     sb.Append(" --preset slower --tu-intra-depth 3 --tu-inter-depth 3 --rdpenalty 2 --me 3 --subme 5 --merange 44 --b-intra --no-rect --no-amp --ref 5 --weightb --bframes 8 --aq-mode 1 --aq-strength 1.0 --rd 5 --psy-rd 0.7 --psy-rdoq 5.0 --rdoq-level 1 --no-sao --no-open-gop --rc-lookahead 80 --scenecut 40 --max-merge 4 --qcomp 0.7 --no-strong-intra-smoothing --deblock -1:-1 --qg-size 16");
             }
-            if (x264SeekNumericUpDown.Value != 0)
-                sb.Append(" --seek " + x264SeekNumericUpDown.Value.ToString());
-            if (x264FramesNumericUpDown.Value != 0)
-                sb.Append(" --frames " + x264FramesNumericUpDown.Value.ToString());
+            if (xvs.X26xSeek != 0)
+                sb.Append(" --seek " + xvs.X26xSeek);
+            if (xvs.X26xFrames != 0)
+                sb.Append(" --frames " + xvs.X26xFrames);
             if (x264mode == 2 && pass == 1)
                 sb.Append(" -o NUL");
             else if (!string.IsNullOrEmpty(output))
                 sb.Append(" -o " + "\"" + output + "\"");
             if (!string.IsNullOrEmpty(input))
-                sb.Append(" -");
+            {
+                if (isAvs)
+                    sb.Append(" \"" + input + "\"");
+                else
+                    sb.Append(" -");
+            }
             return sb.ToString();
         }
 
