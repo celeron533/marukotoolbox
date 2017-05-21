@@ -129,39 +129,24 @@ namespace mp4box
             InitializeComponent();
         }
 
-        #region Form
-
         public string GetCurrentDirectory()
         {
             return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         }
 
-        public static void ShowErrorMessage(string argMessage)
+        #region MessageBox
+
+        public static void ShowErrorMessage(string argMessage, string argTitle = "错误!")
         {
-            MessageBox.Show(argMessage, "错误!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(argMessage, argTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public static void ShowErrorMessage(string argMessage, string argTitle)
-        {
-            MessageBox.Show(argMessage, argTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        public static void ShowWarningMessage(string argMessage)
-        {
-            MessageBox.Show(argMessage, "警告!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        public static void ShowWarningMessage(string argMessage, string argTitle)
+        public static void ShowWarningMessage(string argMessage, string argTitle = "警告!")
         {
             MessageBox.Show(argMessage, argTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        public static void ShowInfoMessage(string argMessage)
-        {
-            MessageBox.Show(argMessage, "提示!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        public static void ShowInfoMessage(string argMessage, string argTitle)
+        public static void ShowInfoMessage(string argMessage, string argTitle = "提示!")
         {
             MessageBox.Show(argMessage, argTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -295,12 +280,12 @@ namespace mp4box
 
         public string ffmuxbat(string input1, string input2, string output)
         {
-            return "\"" + workPath + "\\ffmpeg.exe\" -i \"" + input1 + "\" -i \"" + input2 + "\" -sn -c copy -y \"" + output + "\"\r\n";
+            return $"\"{workPath}\\ffmpeg.exe\" -i \"{input1}\" -i \"{input2}\" -sn -c copy -y \"{output}\"{Environment.NewLine}";
         }
 
         public string boxmuxbat(string input1, string input2, string output)
         {
-            return "\"" + workPath + "\\mp4box.exe\" -add \"" + input1 + "#trackID=1:name=\" -add \"" + input2 + "#trackID=1:name=\" -new \"" + output + "\"\r\n";
+            return $"\"{workPath}\\mp4box.exe\" -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new \"{output}\"{Environment.NewLine}";
         }
 
         public XvSettings GetXvSettings()
