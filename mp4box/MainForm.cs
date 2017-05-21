@@ -183,68 +183,74 @@ namespace mp4box
                     + MI.Get(StreamKind.Audio, 3, "Inform");
                 string videoInfo = MI.Get(StreamKind.Video, 0, "Inform");
 
-                info = info.Append(Path.GetFileName(VideoName) + "\r\n");
-                if (!string.IsNullOrEmpty(container))
-                    info.Append("容器：" + container + "\r\n");
-                if (!string.IsNullOrEmpty(bitRate))
-                    info.Append("总码率：" + bitRate + "\r\n");
-                if (!string.IsNullOrEmpty(fileSize))
-                    info.Append("大小：" + fileSize + "\r\n");
-                if (!string.IsNullOrEmpty(duration))
-                    info.Append("时长：" + duration + "\r\n");
+                MI.Close();
 
+                info = info.AppendLine(Path.GetFileName(VideoName));
+                if (!string.IsNullOrEmpty(container))
+                    info.AppendLine("容器：" + container);
+                if (!string.IsNullOrEmpty(bitRate))
+                    info.AppendLine("总码率：" + bitRate);
+                if (!string.IsNullOrEmpty(fileSize))
+                    info.AppendLine("大小：" + fileSize);
+                if (!string.IsNullOrEmpty(duration))
+                    info.AppendLine("时长：" + duration);
+
+                info.AppendLine();
                 if (!string.IsNullOrEmpty(v_format))
-                    info.Append("\r\n" + "视频(" + v_id + ")：" + v_format + "\r\n");
+                    info.AppendLine("视频(" + v_id + ")：" + v_format);
                 if (!string.IsNullOrEmpty(v_codecProfile))
-                    info.Append("Profile：" + v_codecProfile + "\r\n");
+                    info.AppendLine("Profile：" + v_codecProfile);
                 if (!string.IsNullOrEmpty(v_bitRate))
-                    info.Append("码率：" + v_bitRate + "\r\n");
+                    info.AppendLine("码率：" + v_bitRate);
                 if (!string.IsNullOrEmpty(v_size))
-                    info.Append("文件大小：" + v_size + "\r\n");
+                    info.AppendLine("文件大小：" + v_size);
                 if (!string.IsNullOrEmpty(v_width) && !string.IsNullOrEmpty(v_height))
-                    info.Append("分辨率：" + v_width + "x" + v_height + "\r\n");
+                    info.AppendLine("分辨率：" + v_width + "x" + v_height);
                 if (!string.IsNullOrEmpty(v_displayAspectRatio) && !string.IsNullOrEmpty(v_displayAspectRatio2))
-                    info.Append("画面比例：" + v_displayAspectRatio + "(" + v_displayAspectRatio2 + ")" + "\r\n");
+                    info.AppendLine("画面比例：" + v_displayAspectRatio + "(" + v_displayAspectRatio2 + ")");
                 if (!string.IsNullOrEmpty(v_pixelAspectRatio))
-                    info.Append("像素宽高比：" + v_pixelAspectRatio + "\r\n");
+                    info.AppendLine("像素宽高比：" + v_pixelAspectRatio);
                 if (!string.IsNullOrEmpty(v_frameRate))
-                    info.Append("帧率：" + v_frameRate + "\r\n");
+                    info.AppendLine("帧率：" + v_frameRate);
                 if (!string.IsNullOrEmpty(v_colorSpace))
-                    info.Append("色彩空间：" + v_colorSpace + "\r\n");
+                    info.AppendLine("色彩空间：" + v_colorSpace);
                 if (!string.IsNullOrEmpty(v_chromaSubsampling))
-                    info.Append("色度抽样：" + v_chromaSubsampling + "\r\n");
+                    info.AppendLine("色度抽样：" + v_chromaSubsampling);
                 if (!string.IsNullOrEmpty(v_bitDepth))
-                    info.Append("位深度：" + v_bitDepth + "\r\n");
+                    info.AppendLine("位深度：" + v_bitDepth);
                 if (!string.IsNullOrEmpty(v_scanType))
                 {
                     if (v_scanType.ToLower() == "progressive")
-                        info.Append("扫描方式：逐行扫描\r\n");
+                        info.AppendLine("扫描方式：逐行扫描");
                     else if (v_scanType.ToLower() == "interlaced")
-                        info.Append("扫描方式：隔行扫描\r\n");
+                        info.AppendLine("扫描方式：隔行扫描");
                     else
-                        info.Append("扫描方式：" + v_scanType + "\r\n");
+                        info.AppendLine("扫描方式：" + v_scanType);
                 }
                 if (!string.IsNullOrEmpty(v_encodedTime))
-                    info.Append("编码时间：" + v_encodedTime + "\r\n");
+                    info.AppendLine("编码时间：" + v_encodedTime);
                 if (!string.IsNullOrEmpty(v_frameCount))
-                    info.Append("总帧数：" + v_frameCount + "\r\n");
+                    info.AppendLine("总帧数：" + v_frameCount);
                 if (!string.IsNullOrEmpty(v_encodedLibrary))
-                    info.Append("编码库：" + v_encodedLibrary + "\r\n");
+                    info.AppendLine("编码库：" + v_encodedLibrary);
                 if (!string.IsNullOrEmpty(v_encodingSettings))
-                    info.Append("编码设置：" + v_encodingSettings + "\r\n");
+                    info.AppendLine("编码设置：" + v_encodingSettings);
 
+                info.AppendLine();
                 if (!string.IsNullOrEmpty(a_format))
-                    info.Append("\r\n" + "音频(" + a_id + ")：" + a_format + "\r\n");
+                    info.AppendLine("音频(" + a_id + ")：" + a_format);
                 if (!string.IsNullOrEmpty(a_size))
-                    info.Append("大小：" + a_size + "\r\n");
+                    info.AppendLine("大小：" + a_size);
                 if (!string.IsNullOrEmpty(a_bitRate))
-                    info.Append("码率：" + a_bitRate + "\r\n");
+                    info.AppendLine("码率：" + a_bitRate);
                 if (!string.IsNullOrEmpty(a_samplingRate))
-                    info.Append("采样率：" + a_samplingRate + "\r\n");
+                    info.AppendLine("采样率：" + a_samplingRate);
                 if (!string.IsNullOrEmpty(a_channel))
-                    info.Append("声道数：" + a_channel + "\r\n");
-                info.Append("\r\n====详细信息====\r\n" + videoInfo + "\r\n" + audioInfo + "\r\n");
-                MI.Close();
+                    info.AppendLine("声道数：" + a_channel);
+                info.AppendLine();
+                info.AppendLine("====详细信息====");
+                info.AppendLine(videoInfo);
+                info.AppendLine(audioInfo);
             }
             else
                 info.Append("文件不存在、非有效文件或者文件夹 无视频信息");
