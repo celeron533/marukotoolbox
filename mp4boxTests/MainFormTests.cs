@@ -47,11 +47,41 @@ namespace mp4box.Tests
         [TestMethod()]
         public void timeminusTest()
         {
+            // normal
             MainForm m = new MainForm();
             string expResult = timeminus_old(0, 2, 30, 1, 1, 1);
 
-            string begin = "00:02:30";
-            string end = "01:01:01";
+            int[] begin = new int[] { 0, 2, 30 };
+            int[] end = new int[] { 1, 1, 1 };
+            string result = m.timeSubtract(begin, end);
+
+            Assert.AreEqual(expResult, result);
+        }
+
+        [TestMethod()]
+        public void timeminusTest2()
+        {
+            // parse more than 24 hours
+            MainForm m = new MainForm();
+            string expResult = timeminus_old(0, 2, 30, 25, 1, 1);
+
+            int[] begin = new int[] { 0, 2, 30 };
+            int[] end = new int[] { 25, 1, 1 };
+            string result = m.timeSubtract(begin, end);
+
+            Assert.AreEqual(expResult, result);
+        }
+
+        [TestMethod()]
+        public void timeminusTest3()
+        {
+            // parse more than 24 hours
+            // result more than 24 hours
+            MainForm m = new MainForm();
+            string expResult = timeminus_old(0, 2, 30, 50, 1, 1);
+
+            int[] begin = new int[] { 0, 2, 30 };
+            int[] end = new int[] { 50, 1, 1 };
             string result = m.timeSubtract(begin, end);
 
             Assert.AreEqual(expResult, result);

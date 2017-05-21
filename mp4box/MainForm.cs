@@ -333,10 +333,12 @@ namespace mp4box
             return string.IsNullOrEmpty(str);
         }
 
-        public string timeSubtract(string beginTimeStr, string endTimeStr)
+        public string timeSubtract(int[] beginTimeInt, int[] endTimeInt)
         {
-            TimeSpan beginTime = TimeSpan.Parse(beginTimeStr);
-            TimeSpan endTime = TimeSpan.Parse(endTimeStr);
+            // endTimeInt must later than beginTimeInt
+            // TimeSpan not able to direct parse greater than 24 hours without day specified
+            TimeSpan beginTime = new TimeSpan(beginTimeInt[0], beginTimeInt[1], beginTimeInt[2]);
+            TimeSpan endTime = new TimeSpan(endTimeInt[0], endTimeInt[1], endTimeInt[2]);
             TimeSpan result = endTime.Subtract(beginTime);
             // Do not use TimeSpan.ToString(), which converts hours to day when it is greater than 24h
             return $"{(int)result.TotalHours}:{result.Minutes}:{result.Seconds}";
@@ -2249,13 +2251,15 @@ namespace mp4box
             }
             else
             {
-                int h1 = int.Parse(maskb.Text.ToString().Substring(0, 2));
-                int m1 = int.Parse(maskb.Text.ToString().Substring(3, 2));
-                int s1 = int.Parse(maskb.Text.ToString().Substring(6, 2));
-                int h2 = int.Parse(maske.Text.ToString().Substring(0, 2));
-                int m2 = int.Parse(maske.Text.ToString().Substring(3, 2));
-                int s2 = int.Parse(maske.Text.ToString().Substring(6, 2));
-                clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""", workPath, maskb.Text, timeSubtract(maskb.Text, maske.Text), namevideo4, nameout5) + Environment.NewLine + "cmd";
+                int[] begin = new int[] { int.Parse(maskb.Text.ToString().Substring(0, 2)),
+                                          int.Parse(maskb.Text.ToString().Substring(3, 2)),
+                                          int.Parse(maskb.Text.ToString().Substring(6, 2))
+                                        };
+                int[] end = new int[] { int.Parse(maske.Text.ToString().Substring(0, 2)),
+                                        int.Parse(maske.Text.ToString().Substring(3, 2)),
+                                        int.Parse(maske.Text.ToString().Substring(6, 2))
+                                      };
+                clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""", workPath, maskb.Text, timeSubtract(begin, end), namevideo4, nameout5) + Environment.NewLine + "cmd";
                 //clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{3}"" -ss {1} -to {2} -y  -c copy ""{4}""", workPath, maskb.Text, maske.Text, namevideo4, nameout5) + Environment.NewLine + "cmd";
                 batpath = workPath + "\\clip.bat";
                 LogRecord(clip);
