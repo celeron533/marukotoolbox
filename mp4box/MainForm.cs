@@ -438,46 +438,13 @@ namespace mp4box
             return string.IsNullOrEmpty(str);
         }
 
-        public string timeminus(int h1, int m1, int s1, int h2, int m2, int s2)
+        public string timeSubtract(string beginTimeStr, string endTimeStr)
         {
-            int h = 0;
-            int m = 0;
-            int s = 0;
-            s = s2 - s1;
-            if (s < 0)
-            {
-                m = -1;
-                s = s + 60;
-            }
-            m = m + m2 - m1;
-            if (m < 0)
-            {
-                h = -1;
-                m = m + 60;
-            }
-            h = h + h2 - h1;
-            return h.ToString() + ":" + m.ToString() + ":" + s.ToString();
-        }
-
-        public string timeplus(int h1, int m1, int s1, int h2, int m2, int s2)
-        {
-            int h = 0;
-            int m = 0;
-            int s = 0;
-            s = s1 + s2;
-            if (s >= 60)
-            {
-                m = 1;
-                s = s - 60;
-            }
-            m = m + m1 + m2;
-            if (m >= 60)
-            {
-                h = 1;
-                m = m - 60;
-            }
-            h = h + h1 + h2;
-            return h.ToString() + ":" + m.ToString() + ":" + s.ToString();
+            TimeSpan beginTime = TimeSpan.Parse(beginTimeStr);
+            TimeSpan endTime = TimeSpan.Parse(endTimeStr);
+            TimeSpan result = endTime.Subtract(beginTime);
+            // Do not use TimeSpan.ToString(), which converts hours to day when it is greater than 24h
+            return $"{(int)result.TotalHours}:{result.Minutes}:{result.Seconds}";
         }
 
         public string audiobat(string input, string output)
@@ -2400,7 +2367,7 @@ namespace mp4box
                 int h2 = int.Parse(maske.Text.ToString().Substring(0, 2));
                 int m2 = int.Parse(maske.Text.ToString().Substring(3, 2));
                 int s2 = int.Parse(maske.Text.ToString().Substring(6, 2));
-                clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""", workPath, maskb.Text, timeminus(h1, m1, s1, h2, m2, s2), namevideo4, nameout5) + Environment.NewLine + "cmd";
+                clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""", workPath, maskb.Text, timeSubtract(maskb.Text, maske.Text), namevideo4, nameout5) + Environment.NewLine + "cmd";
                 //clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{3}"" -ss {1} -to {2} -y  -c copy ""{4}""", workPath, maskb.Text, maske.Text, namevideo4, nameout5) + Environment.NewLine + "cmd";
                 batpath = workPath + "\\clip.bat";
                 LogRecord(clip);
