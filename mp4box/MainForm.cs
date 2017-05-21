@@ -136,125 +136,16 @@ namespace mp4box
 
         #endregion
 
-        public string GetMediaInfoString(string VideoName)
+        public string GetMediaInfoString(string mediaFileName)
         {
-            StringBuilder info = new StringBuilder();
-            if (File.Exists(VideoName))
+            try
             {
-                MediaInfo MI = new MediaInfo();
-                MI.Open(VideoName);
-                //全局
-                string container = MI.Get(StreamKind.General, 0, "Format");
-                string bitRate = MI.Get(StreamKind.General, 0, "BitRate/String");
-                string duration = MI.Get(StreamKind.General, 0, "Duration/String1");
-                string fileSize = MI.Get(StreamKind.General, 0, "FileSize/String");
-                //视频
-                string v_id = MI.Get(StreamKind.Video, 0, "ID");
-                string v_format = MI.Get(StreamKind.Video, 0, "Format");
-                string v_bitRate = MI.Get(StreamKind.Video, 0, "BitRate/String");
-                string v_size = MI.Get(StreamKind.Video, 0, "StreamSize/String");
-                string v_width = MI.Get(StreamKind.Video, 0, "Width");
-                string v_height = MI.Get(StreamKind.Video, 0, "Height");
-                string v_displayAspectRatio = MI.Get(StreamKind.Video, 0, "DisplayAspectRatio/String");
-                string v_displayAspectRatio2 = MI.Get(StreamKind.Video, 0, "DisplayAspectRatio");
-                string v_frameRate = MI.Get(StreamKind.Video, 0, "FrameRate/String");
-                string v_colorSpace = MI.Get(StreamKind.Video, 0, "ColorSpace");
-                string v_chromaSubsampling = MI.Get(StreamKind.Video, 0, "ChromaSubsampling");
-                string v_bitDepth = MI.Get(StreamKind.Video, 0, "BitDepth/String");
-                string v_scanType = MI.Get(StreamKind.Video, 0, "ScanType/String");
-                string v_pixelAspectRatio = MI.Get(StreamKind.Video, 0, "PixelAspectRatio");
-                string v_encodedLibrary = MI.Get(StreamKind.Video, 0, "Encoded_Library/String");
-                string v_encodingSettings = MI.Get(StreamKind.Video, 0, "Encoded_Library_Settings");
-                string v_encodedTime = MI.Get(StreamKind.Video, 0, "Encoded_Date");
-                string v_codecProfile = MI.Get(StreamKind.Video, 0, "Codec_Profile");
-                string v_frameCount = MI.Get(StreamKind.Video, 0, "FrameCount");
-
-                //音频
-                string a_id = MI.Get(StreamKind.Audio, 0, "ID");
-                string a_format = MI.Get(StreamKind.Audio, 0, "Format");
-                string a_bitRate = MI.Get(StreamKind.Audio, 0, "BitRate/String");
-                string a_samplingRate = MI.Get(StreamKind.Audio, 0, "SamplingRate/String");
-                string a_channel = MI.Get(StreamKind.Audio, 0, "Channel(s)");
-                string a_size = MI.Get(StreamKind.Audio, 0, "StreamSize/String");
-
-                string audioInfo = MI.Get(StreamKind.Audio, 0, "Inform")
-                    + MI.Get(StreamKind.Audio, 1, "Inform")
-                    + MI.Get(StreamKind.Audio, 2, "Inform")
-                    + MI.Get(StreamKind.Audio, 3, "Inform");
-                string videoInfo = MI.Get(StreamKind.Video, 0, "Inform");
-
-                MI.Close();
-
-                info = info.AppendLine(Path.GetFileName(VideoName));
-                if (!string.IsNullOrEmpty(container))
-                    info.AppendLine("容器：" + container);
-                if (!string.IsNullOrEmpty(bitRate))
-                    info.AppendLine("总码率：" + bitRate);
-                if (!string.IsNullOrEmpty(fileSize))
-                    info.AppendLine("大小：" + fileSize);
-                if (!string.IsNullOrEmpty(duration))
-                    info.AppendLine("时长：" + duration);
-
-                info.AppendLine();
-                if (!string.IsNullOrEmpty(v_format))
-                    info.AppendLine("视频(" + v_id + ")：" + v_format);
-                if (!string.IsNullOrEmpty(v_codecProfile))
-                    info.AppendLine("Profile：" + v_codecProfile);
-                if (!string.IsNullOrEmpty(v_bitRate))
-                    info.AppendLine("码率：" + v_bitRate);
-                if (!string.IsNullOrEmpty(v_size))
-                    info.AppendLine("文件大小：" + v_size);
-                if (!string.IsNullOrEmpty(v_width) && !string.IsNullOrEmpty(v_height))
-                    info.AppendLine("分辨率：" + v_width + "x" + v_height);
-                if (!string.IsNullOrEmpty(v_displayAspectRatio) && !string.IsNullOrEmpty(v_displayAspectRatio2))
-                    info.AppendLine("画面比例：" + v_displayAspectRatio + "(" + v_displayAspectRatio2 + ")");
-                if (!string.IsNullOrEmpty(v_pixelAspectRatio))
-                    info.AppendLine("像素宽高比：" + v_pixelAspectRatio);
-                if (!string.IsNullOrEmpty(v_frameRate))
-                    info.AppendLine("帧率：" + v_frameRate);
-                if (!string.IsNullOrEmpty(v_colorSpace))
-                    info.AppendLine("色彩空间：" + v_colorSpace);
-                if (!string.IsNullOrEmpty(v_chromaSubsampling))
-                    info.AppendLine("色度抽样：" + v_chromaSubsampling);
-                if (!string.IsNullOrEmpty(v_bitDepth))
-                    info.AppendLine("位深度：" + v_bitDepth);
-                if (!string.IsNullOrEmpty(v_scanType))
-                {
-                    if (v_scanType.ToLower() == "progressive")
-                        info.AppendLine("扫描方式：逐行扫描");
-                    else if (v_scanType.ToLower() == "interlaced")
-                        info.AppendLine("扫描方式：隔行扫描");
-                    else
-                        info.AppendLine("扫描方式：" + v_scanType);
-                }
-                if (!string.IsNullOrEmpty(v_encodedTime))
-                    info.AppendLine("编码时间：" + v_encodedTime);
-                if (!string.IsNullOrEmpty(v_frameCount))
-                    info.AppendLine("总帧数：" + v_frameCount);
-                if (!string.IsNullOrEmpty(v_encodedLibrary))
-                    info.AppendLine("编码库：" + v_encodedLibrary);
-                if (!string.IsNullOrEmpty(v_encodingSettings))
-                    info.AppendLine("编码设置：" + v_encodingSettings);
-
-                info.AppendLine();
-                if (!string.IsNullOrEmpty(a_format))
-                    info.AppendLine("音频(" + a_id + ")：" + a_format);
-                if (!string.IsNullOrEmpty(a_size))
-                    info.AppendLine("大小：" + a_size);
-                if (!string.IsNullOrEmpty(a_bitRate))
-                    info.AppendLine("码率：" + a_bitRate);
-                if (!string.IsNullOrEmpty(a_samplingRate))
-                    info.AppendLine("采样率：" + a_samplingRate);
-                if (!string.IsNullOrEmpty(a_channel))
-                    info.AppendLine("声道数：" + a_channel);
-                info.AppendLine();
-                info.AppendLine("====详细信息====");
-                info.AppendLine(videoInfo);
-                info.AppendLine(audioInfo);
+                return new MediaInfoWrapper(mediaFileName).ToString();
             }
-            else
-                info.Append("文件不存在、非有效文件或者文件夹 无视频信息");
-            return info.ToString();
+            catch (FileNotFoundException ex)
+            {
+                return "文件不存在、非有效文件或者文件夹 无视频信息";
+            }
         }
 
         public string ffmuxbat(string input1, string input2, string output)
@@ -290,12 +181,10 @@ namespace mp4box
             XvSettings xvs = GetXvSettings();
 
             //keyint设为fps的10倍
-            MediaInfo MI = new MediaInfo();
-            MI.Open(input);
-            string frameRate = MI.Get(StreamKind.Video, 0, "FrameRate");
             double fps;
             string keyint = "-1";
-            if (double.TryParse(frameRate, out fps))
+            MediaInfoWrapper MIW = new MediaInfoWrapper(input);
+            if (double.TryParse(MIW.v_frameRate2, out fps))
             {
                 fps = Math.Round(fps);
                 keyint = (fps * 10).ToString();
@@ -666,10 +555,9 @@ namespace mp4box
             {
                 aextract += " -vn -sn -c:a copy -y -map 0:a:" + streamIndex + " ";
 
-                MediaInfo MI = new MediaInfo();
-                MI.Open(namevideo);
-                string audioFormat = MI.Get(StreamKind.Audio, streamIndex, "Format");
-                string audioProfile = MI.Get(StreamKind.Audio, streamIndex, "Format_Profile");
+                MediaInfoWrapper MIW = new MediaInfoWrapper(namevideo);
+                string audioFormat = MIW.a_format;
+                string audioProfile = MIW.a_formatProfile;
                 if (!string.IsNullOrEmpty(audioFormat))
                 {
                     if (audioFormat.Contains("MPEG") && audioProfile == "Layer 3")
@@ -728,10 +616,10 @@ namespace mp4box
             aextract += Util.FormatPath(workPath + "\\ffmpeg.exe");
             aextract += " -i " + Util.FormatPath(namevideo);
             aextract += " -vn -sn -c:a copy -y -map 0:a:" + streamIndex + " ";
-            MediaInfo MI = new MediaInfo();
-            MI.Open(namevideo);
-            string audioFormat = MI.Get(StreamKind.Audio, streamIndex, "Format");
-            string audioProfile = MI.Get(StreamKind.Audio, streamIndex, "Format_Profile");
+
+            MediaInfoWrapper MIW = new MediaInfoWrapper(namevideo);
+            string audioFormat = MIW.a_format;
+            string audioProfile = MIW.a_formatProfile;
             if (!string.IsNullOrEmpty(audioFormat))
             {
                 if (audioFormat.Contains("MPEG") && audioProfile == "Layer 3")
@@ -1711,9 +1599,7 @@ namespace mp4box
             if (File.Exists(tempAudio)) File.Delete(tempAudio);
 
             //检测是否含有音频
-            MediaInfo MI = new MediaInfo();
-            MI.Open(input);
-            string audio = MI.Get(StreamKind.Audio, 0, "Format");
+            string audio = new MediaInfoWrapper(input).a_format;
             if (!string.IsNullOrEmpty(audio)) { hasAudio = true; }
             string sub = (x264BatchSubCheckBox.Checked) ? GetSubtitlePath(input) : string.Empty;
 
@@ -1919,9 +1805,7 @@ namespace mp4box
                     aextract = "";
 
                     //检测音频是否需要转换为AAC
-                    MediaInfo MI = new MediaInfo();
-                    MI.Open(filePath);
-                    string audio = MI.Get(StreamKind.Audio, 0, "Format");
+                    string audio = new MediaInfoWrapper(filePath).a_format;
                     if (audio.ToLower() != "aac" && MuxFormatComboBox.Text != "mkv")
                     {
                         mux += "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + lbffmpeg.Items[i].ToString() + "\" -c:v copy -c:a " + MuxAacEncoderComboBox.Text + " -strict -2 \"" + finish + "\" \r\n";
@@ -2155,9 +2039,7 @@ namespace mp4box
 
             //检测是否含有音频
             bool hasAudio = false;
-            MediaInfo MI = new MediaInfo();
-            MI.Open(namevideo9);
-            string audio = MI.Get(StreamKind.Audio, 0, "Format");
+            string audio = new MediaInfoWrapper(namevideo9).a_format;
             if (!string.IsNullOrEmpty(audio)) { hasAudio = true; }
 
             //audio
@@ -2677,9 +2559,7 @@ namespace mp4box
             #region Audio
 
             //检测是否含有音频
-            MediaInfo MI = new MediaInfo();
-            MI.Open(namevideo2);
-            string audio = MI.Get(StreamKind.Audio, 0, "Format");
+            string audio = new MediaInfoWrapper(namevideo2).a_format;
             if (!string.IsNullOrEmpty(audio))
                 hasAudio = true;
             int audioMode = x264AudioModeComboBox.SelectedIndex;
@@ -3957,9 +3837,7 @@ namespace mp4box
                     //img.Save(tempPic, ImageFormat.Jpeg);
                 }
                 //获得音频时长
-                MediaInfo MI = new MediaInfo();
-                MI.Open(AudioPicAudioTextBox.Text);
-                string timeStr = MI.Get(StreamKind.General, 0, "Duration/String3");
+                string timeStr = new MediaInfoWrapper(AudioPicAudioTextBox.Text).duration3;
                 if (!string.IsNullOrEmpty(timeStr))
                     OnePicAudioSecondTxt.Text = SecondsFromHHMMSS(timeStr).ToString();
                 int seconds = 0;
@@ -4092,9 +3970,8 @@ namespace mp4box
                 return;
             }
 
-            MediaInfo MI = new MediaInfo();
-            MI.Open(BlackVideoTextBox.Text);
-            double videobitrate = double.Parse(MI.Get(StreamKind.General, 0, "BitRate"));
+            MediaInfoWrapper MIW = new MediaInfoWrapper(BlackVideoTextBox.Text);
+            double videobitrate = double.Parse(MIW.bitRate1);
             double targetBitrate = (double)BlackBitrateNum.Value;
 
             if (!File.Exists(BlackPicTextBox.Text) && BlackNoPicCheckBox.Checked == false)
@@ -4120,8 +3997,8 @@ namespace mp4box
             }
 
             //处理图片
-            int videoWidth = int.Parse(MI.Get(StreamKind.Video, 0, "Width"));
-            int videoHeight = int.Parse(MI.Get(StreamKind.Video, 0, "Height"));
+            int videoWidth = int.Parse(MIW.v_width);
+            int videoHeight = int.Parse(MIW.v_height);
             if (BlackNoPicCheckBox.Checked)
             {
                 Bitmap bm = new Bitmap(videoWidth, videoHeight);
@@ -4168,7 +4045,7 @@ namespace mp4box
             //计算后黑时长
             if (BlackSecondComboBox.Text == "auto")
             {
-                int seconds = SecondsFromHHMMSS(MI.Get(StreamKind.General, 0, "Duration/String3"));
+                int seconds = SecondsFromHHMMSS(MIW.duration3);
                 double s = videobitrate / 1000.0 * (double)seconds / targetBitrate - (double)seconds;
                 blackSecond = (int)s;
                 BlackSecondComboBox.Text = blackSecond.ToString();
