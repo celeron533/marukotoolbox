@@ -2498,7 +2498,6 @@
             this.x264CustomParameterTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.x264CustomParameterTextBox, "x264CustomParameterTextBox");
             this.x264CustomParameterTextBox.Name = "x264CustomParameterTextBox";
-            this.x264CustomParameterTextBox.TextChanged += new System.EventHandler(this.txth264_TextChanged);
             this.x264CustomParameterTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.x264CustomParameterTextBox_KeyDown);
             // 
             // label4

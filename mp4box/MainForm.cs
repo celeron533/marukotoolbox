@@ -107,11 +107,6 @@ namespace mp4box
             InitializeComponent();
         }
 
-        public string GetCurrentDirectory()
-        {
-            return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        }
-
         #region MessageBox
 
         public static void ShowErrorMessage(string argMessage, string argTitle = "错误!")
@@ -601,10 +596,6 @@ namespace mp4box
             }
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-        }
-
         private void btnout_Click(object sender, EventArgs e)
         {
             SaveFileDialog savefile = new SaveFileDialog();
@@ -1017,11 +1008,6 @@ namespace mp4box
             }
         }
 
-        public static bool IsWindowsVistaOrNewer
-        {
-            get { return (Environment.OSVersion.Platform == PlatformID.Win32NT) && (Environment.OSVersion.Version.Major >= 6); }
-        }
-
         #region Settings
 
         /// <summary>
@@ -1150,21 +1136,12 @@ namespace mp4box
                     switch (culture)
                     {
                         case "zh-CN":
-                            languageComboBox.SelectedIndex = 0;
-                            break;
-
                         case "zh-SG":
                             languageComboBox.SelectedIndex = 0;
                             break;
 
                         case "zh-TW":
-                            languageComboBox.SelectedIndex = 1;
-                            break;
-
-                        case "zh-HK ":
-                            languageComboBox.SelectedIndex = 1;
-                            break;
-
+                        case "zh-HK":
                         case "zh-MO":
                             languageComboBox.SelectedIndex = 1;
                             break;
@@ -2291,10 +2268,6 @@ namespace mp4box
             //avs += "\r\nDirectShowSource(\"" + namevideo9 + "\",23.976,convertFPS=True)\r\nConvertToYV12()\r\nCrop(0,0,0,0)\r\nAddBorders(0,0,0,0)\r\n" + "TextSub(\"" + namesub9 + "\")\r\n#LanczosResize(1280,960)\r\n";
             AVSScriptTextBox.Text = avs;
             avs = "";
-        }
-
-        private void txth264_TextChanged(object sender, EventArgs e)
-        {
         }
 
         private void txtvideo_MouseDoubleClick(object sender, MouseEventArgs e)
