@@ -37,5 +37,11 @@ namespace mp4box.Tests
             string result = mf.boxmuxbat(input1, input2, output);
             Assert.AreEqual(resultBeforeRefactor, result);
         }
+
+        [TestMethod()]
+        public void processorCount()
+        {
+            Console.WriteLine($"You have {Environment.ProcessorCount} core(s).");
+        }
     }
 }

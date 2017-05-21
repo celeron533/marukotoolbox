@@ -99,28 +99,6 @@ namespace mp4box
 
         #endregion Private Members Declaration
 
-        #region CPU Porocessors Number
-
-        [StructLayout(LayoutKind.Sequential)]
-        public struct SYSTEM_INFO
-        {
-            public uint dwOemId;
-            public uint dwPageSize;
-            public uint lpMinimumApplicationAddress;
-            public uint lpMaximumApplicationAddress;
-            public uint dwActiveProcessorMask;
-            public uint dwNumberOfProcessors;
-            public uint dwProcessorType;
-            public uint dwAllocationGranularity;
-            public uint dwProcessorLevel;
-            public uint dwProcessorRevision;
-        }
-
-        [DllImport("kernel32")]
-        private static extern void GetSystemInfo(ref SYSTEM_INFO pSI);
-
-        #endregion CPU Porocessors Number
-
         public MainForm()
         {
             Instance = this;
@@ -1357,9 +1335,7 @@ namespace mp4box
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SYSTEM_INFO pSI = new SYSTEM_INFO();
-            GetSystemInfo(ref pSI);
-            int processorNumber = (int)pSI.dwNumberOfProcessors;
+            int processorNumber = Environment.ProcessorCount;
 
             x264ThreadsComboBox.Items.Add("auto");
             for (int i = 1; i <= 16; i++)
