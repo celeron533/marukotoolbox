@@ -4529,7 +4529,7 @@ namespace mp4box
 
                 VideoPresetComboBox.Items.Clear();
                 x264CustomParameterTextBox.Text = string.Empty;
-                var xVideos = preset.GetVideoPreset("x265");
+                var xVideos = preset.GetVideoPreset("x264");
                 if (xVideos != null)
                 {
                     foreach (XElement item in xVideos.Elements())
