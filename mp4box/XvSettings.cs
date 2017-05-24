@@ -4,7 +4,7 @@
     {
         public int V_width { get; set; }
 
-        public int V_high { get; set; }
+        public int V_height { get; set; }
 
         public string Subtitle { get; set; }
 

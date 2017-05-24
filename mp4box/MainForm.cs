@@ -166,7 +166,7 @@ namespace mp4box
             xvs.ExtParameter = x264extraLine.Text;
             xvs.CustomParameter = x264CustomParameterTextBox.Text;
             xvs.V_width = (int)x264WidthNum.Value;
-            xvs.V_high = (int)x264HeightNum.Value;
+            xvs.V_height = (int)x264HeightNum.Value;
             xvs.X26xThreads = x264ThreadsComboBox.SelectedItem.ToString();
             xvs.X26xDemuxer = x264DemuxerComboBox.Text;
             xvs.X26xBitrate = (int)x264BitrateNum.Value;
@@ -197,7 +197,7 @@ namespace mp4box
                  * AVS文件建议在avs脚本中修改分辨率和添加字幕
                  */
                 xvs.V_width = 0;
-                xvs.V_high = 0;
+                xvs.V_height = 0;
                 sub = string.Empty;
                 sb.Append("\"" + workPath + "\\avs4x26x.exe\"" + " -L ");
             }
@@ -227,8 +227,8 @@ namespace mp4box
                     sb.Append(" " + xvs.ExtParameter);
                 else
                     sb.Append(" --preset 8 " + " -I " + keyint + " -r 4 -b 3 --me umh -i 1 --scenecut 60 -f 1:1 --qcomp 0.5 --psy-rd 0.3:0 --aq-mode 2 --aq-strength 0.8");
-                if (xvs.V_high != 0 && xvs.V_high != 0 && !xvs.IsResizeChecked)
-                    sb.Append(" --vf resize:" + xvs.V_width + "," + xvs.V_high + ",,,,lanczos");
+                if (xvs.V_height != 0 && xvs.V_height != 0 && !xvs.IsResizeChecked)
+                    sb.Append(" --vf resize:" + xvs.V_width + "," + xvs.V_height + ",,,,lanczos");
             }
             if (!string.IsNullOrEmpty(sub))
             {
@@ -268,8 +268,8 @@ namespace mp4box
             else
             {
                 sb.Append("\"" + workPath + "\\ffmpeg.exe\"" + " -i \"" + input + "\"");
-                if (xvs.V_high != 0 && xvs.V_high != 0 && !xvs.IsResizeChecked)
-                    sb.Append(string.Format(" -vf zscale={0}x{1}:filter=lanczos", xvs.V_width, xvs.V_high));
+                if (xvs.V_height != 0 && xvs.V_height != 0 && !xvs.IsResizeChecked)
+                    sb.Append(string.Format(" -vf zscale={0}x{1}:filter=lanczos", xvs.V_width, xvs.V_height));
                 if (!string.IsNullOrEmpty(sub))
                 {
                     string x264tmpline = sb.ToString();
