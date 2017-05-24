@@ -134,6 +134,7 @@
     </Compile>
     <Compile Include="MediaInfo\MediaInfoWrapper.cs" />
     <Compile Include="OSInfo.cs" />
+    <Compile Include="Preset.cs" />
     <Compile Include="ProgressTaskbar.cs" />
     <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
