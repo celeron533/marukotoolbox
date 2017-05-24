@@ -1159,6 +1159,7 @@
             this.txtvideo6.Name = "txtvideo6";
             this.txtvideo6.ReadOnly = true;
             this.txtvideo6.TextChanged += new System.EventHandler(this.txtvideo6_TextChanged_1);
+            this.txtvideo6.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo6_MouseDoubleClick);
             // 
             // groupBox6
             // 
