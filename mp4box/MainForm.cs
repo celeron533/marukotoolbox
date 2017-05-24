@@ -4041,26 +4041,23 @@ namespace mp4box
         //Ctrl+A 可以全选文本
         private void MediaInfoTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.A)
-            {
-                ((TextBox)sender).SelectAll();
-            }
+            TextBoxSelectAll(sender, e);
         }
 
         private void AVSScriptTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.A)
-            {
-                ((TextBox)sender).SelectAll();
-            }
+            TextBoxSelectAll(sender, e);
         }
 
         private void x264CustomParameterTextBox_KeyDown(object sender, KeyEventArgs e)
         {
+            TextBoxSelectAll(sender, e);
+        }
+
+        private void TextBoxSelectAll(object sender, KeyEventArgs e)
+        {
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.A)
-            {
                 ((TextBox)sender).SelectAll();
-            }
         }
 
         #region CheckUpdate
