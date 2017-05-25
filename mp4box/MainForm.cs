@@ -4057,7 +4057,7 @@ namespace mp4box
         private void TextBoxSelectAll(object sender, KeyEventArgs e)
         {
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.A)
-                ((TextBox)sender).SelectAll();
+                ((TextBoxBase)sender).SelectAll();  // using TextBoxBase to include TextBox, RichTextBox and MaskedTextBox
         }
 
         #region CheckUpdate
