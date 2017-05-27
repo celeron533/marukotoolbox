@@ -124,381 +124,381 @@
     <value>207, 16</value>
   </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TransposeLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscMiscTransposeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TransposeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscMiscTransposeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="TransposeLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscTransposeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 108</value>
   </data>
-  <data name="TransposeLabel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscTransposeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 12</value>
   </data>
-  <data name="TransposeLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscTransposeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
-  <data name="TransposeLabel.Text" xml:space="preserve">
+  <data name="MiscMiscTransposeLabel.Text" xml:space="preserve">
     <value>Transpose</value>
   </data>
-  <data name="&gt;&gt;TransposeLabel.Name" xml:space="preserve">
-    <value>TransposeLabel</value>
+  <data name="&gt;&gt;MiscMiscTransposeLabel.Name" xml:space="preserve">
+    <value>MiscMiscTransposeLabel</value>
   </data>
-  <data name="&gt;&gt;TransposeLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscTransposeLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TransposeLabel.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscTransposeLabel.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;TransposeLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscTransposeLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="TransposeComboBox.Items" xml:space="preserve">
+  <data name="MiscMiscTransposeComboBox.Items" xml:space="preserve">
     <value>0: 逆时针旋转90°然后垂直翻转</value>
   </data>
-  <data name="TransposeComboBox.Items1" xml:space="preserve">
+  <data name="MiscMiscTransposeComboBox.Items1" xml:space="preserve">
     <value>1: 顺时针旋转90°</value>
   </data>
-  <data name="TransposeComboBox.Items2" xml:space="preserve">
+  <data name="MiscMiscTransposeComboBox.Items2" xml:space="preserve">
     <value>2: 逆时针旋转90°</value>
   </data>
-  <data name="TransposeComboBox.Items3" xml:space="preserve">
+  <data name="MiscMiscTransposeComboBox.Items3" xml:space="preserve">
     <value>3: 顺时针旋转90°然后水平翻转</value>
   </data>
-  <data name="TransposeComboBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscTransposeComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 105</value>
   </data>
-  <data name="TransposeComboBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscTransposeComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 20</value>
   </data>
-  <data name="TransposeComboBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscTransposeComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
-  <data name="&gt;&gt;TransposeComboBox.Name" xml:space="preserve">
-    <value>TransposeComboBox</value>
+  <data name="&gt;&gt;MiscMiscTransposeComboBox.Name" xml:space="preserve">
+    <value>MiscMiscTransposeComboBox</value>
   </data>
-  <data name="&gt;&gt;TransposeComboBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscTransposeComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TransposeComboBox.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscTransposeComboBox.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;TransposeComboBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscTransposeComboBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RotateButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscMiscRotateButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="RotateButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscMiscRotateButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="RotateButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscRotateButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 105</value>
   </data>
-  <data name="RotateButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscRotateButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="RotateButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscRotateButton.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="RotateButton.Text" xml:space="preserve">
+  <data name="MiscMiscRotateButton.Text" xml:space="preserve">
     <value>旋转</value>
   </data>
-  <data name="&gt;&gt;RotateButton.Name" xml:space="preserve">
-    <value>RotateButton</value>
+  <data name="&gt;&gt;MiscMiscRotateButton.Name" xml:space="preserve">
+    <value>MiscMiscRotateButton</value>
   </data>
-  <data name="&gt;&gt;RotateButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscRotateButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;RotateButton.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscRotateButton.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;RotateButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscRotateButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="txtvideo4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscMiscVideoInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtvideo4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscVideoInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 18</value>
   </data>
-  <data name="txtvideo4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscVideoInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>469, 21</value>
   </data>
-  <data name="txtvideo4.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscVideoInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;txtvideo4.Name" xml:space="preserve">
-    <value>txtvideo4</value>
+  <data name="&gt;&gt;MiscMiscVideoInputTextBox.Name" xml:space="preserve">
+    <value>MiscMiscVideoInputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtvideo4.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscVideoInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtvideo4.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscVideoInputTextBox.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;txtvideo4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscVideoInputTextBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="btnvideo4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscMiscVideoInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnvideo4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscMiscVideoInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnvideo4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscVideoInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 17</value>
   </data>
-  <data name="btnvideo4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscVideoInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnvideo4.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscVideoInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="btnvideo4.Text" xml:space="preserve">
+  <data name="MiscMiscVideoInputButton.Text" xml:space="preserve">
     <value>视频</value>
   </data>
-  <data name="&gt;&gt;btnvideo4.Name" xml:space="preserve">
-    <value>btnvideo4</value>
+  <data name="&gt;&gt;MiscMiscVideoInputButton.Name" xml:space="preserve">
+    <value>MiscMiscVideoInputButton</value>
   </data>
-  <data name="&gt;&gt;btnvideo4.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscVideoInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnvideo4.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscVideoInputButton.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;btnvideo4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscVideoInputButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="btnout5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscMiscVideoOutputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnout5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscMiscVideoOutputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnout5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscVideoOutputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 47</value>
   </data>
-  <data name="btnout5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscVideoOutputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnout5.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscVideoOutputButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="btnout5.Text" xml:space="preserve">
+  <data name="MiscMiscVideoOutputButton.Text" xml:space="preserve">
     <value>输出</value>
   </data>
-  <data name="&gt;&gt;btnout5.Name" xml:space="preserve">
-    <value>btnout5</value>
+  <data name="&gt;&gt;MiscMiscVideoOutputButton.Name" xml:space="preserve">
+    <value>MiscMiscVideoOutputButton</value>
   </data>
-  <data name="&gt;&gt;btnout5.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscVideoOutputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnout5.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscVideoOutputButton.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;btnout5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscVideoOutputButton.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="btnClip.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscMiscClipButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnClip.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscMiscClipButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnClip.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscClipButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 76</value>
   </data>
-  <data name="btnClip.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscClipButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnClip.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscClipButton.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="btnClip.Text" xml:space="preserve">
+  <data name="MiscMiscClipButton.Text" xml:space="preserve">
     <value>截取</value>
   </data>
-  <data name="&gt;&gt;btnClip.Name" xml:space="preserve">
-    <value>btnClip</value>
+  <data name="&gt;&gt;MiscMiscClipButton.Name" xml:space="preserve">
+    <value>MiscMiscClipButton</value>
   </data>
-  <data name="&gt;&gt;btnClip.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscClipButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnClip.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscClipButton.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;btnClip.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscClipButton.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="txtout5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscMiscVideoOutputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtout5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscVideoOutputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 47</value>
   </data>
-  <data name="txtout5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscVideoOutputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>469, 21</value>
   </data>
-  <data name="txtout5.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscVideoOutputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;txtout5.Name" xml:space="preserve">
-    <value>txtout5</value>
+  <data name="&gt;&gt;MiscMiscVideoOutputTextBox.Name" xml:space="preserve">
+    <value>MiscMiscVideoOutputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtout5.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscVideoOutputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtout5.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscVideoOutputTextBox.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;txtout5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscVideoOutputTextBox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="maske.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscEndTimeMaskedTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>407, 76</value>
   </data>
-  <data name="maske.Mask" xml:space="preserve">
+  <data name="MiscMiscEndTimeMaskedTextBox.Mask" xml:space="preserve">
     <value>90:00:00</value>
   </data>
-  <data name="maske.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscEndTimeMaskedTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 21</value>
   </data>
-  <data name="maske.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscEndTimeMaskedTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="maske.Text" xml:space="preserve">
+  <data name="MiscMiscEndTimeMaskedTextBox.Text" xml:space="preserve">
     <value>000020</value>
   </data>
-  <data name="maske.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="MiscMiscEndTimeMaskedTextBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;maske.Name" xml:space="preserve">
-    <value>maske</value>
+  <data name="&gt;&gt;MiscMiscEndTimeMaskedTextBox.Name" xml:space="preserve">
+    <value>MiscMiscEndTimeMaskedTextBox</value>
   </data>
-  <data name="&gt;&gt;maske.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscEndTimeMaskedTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;maske.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscEndTimeMaskedTextBox.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;maske.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscEndTimeMaskedTextBox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscMiscBeginTimeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscMiscBeginTimeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscBeginTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 80</value>
   </data>
-  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscBeginTimeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 12</value>
   </data>
-  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscBeginTimeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="label13.Text" xml:space="preserve">
+  <data name="MiscMiscBeginTimeLabel.Text" xml:space="preserve">
     <value>起始时刻</value>
   </data>
-  <data name="&gt;&gt;label13.Name" xml:space="preserve">
-    <value>label13</value>
+  <data name="&gt;&gt;MiscMiscBeginTimeLabel.Name" xml:space="preserve">
+    <value>MiscMiscBeginTimeLabel</value>
   </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscBeginTimeLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscBeginTimeLabel.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscBeginTimeLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscMiscEndTimeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscMiscEndTimeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscEndTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 79</value>
   </data>
-  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscEndTimeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 12</value>
   </data>
-  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscEndTimeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="label15.Text" xml:space="preserve">
+  <data name="MiscMiscEndTimeLabel.Text" xml:space="preserve">
     <value>结束时刻</value>
   </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
+  <data name="&gt;&gt;MiscMiscEndTimeLabel.Name" xml:space="preserve">
+    <value>MiscMiscEndTimeLabel</value>
   </data>
-  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscEndTimeLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscEndTimeLabel.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscEndTimeLabel.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="maskb.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscBeginTimeMaskedTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 76</value>
   </data>
-  <data name="maskb.Mask" xml:space="preserve">
+  <data name="MiscMiscBeginTimeMaskedTextBox.Mask" xml:space="preserve">
     <value>90:00:00</value>
   </data>
-  <data name="maskb.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscBeginTimeMaskedTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 21</value>
   </data>
-  <data name="maskb.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscBeginTimeMaskedTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="maskb.Text" xml:space="preserve">
+  <data name="MiscMiscBeginTimeMaskedTextBox.Text" xml:space="preserve">
     <value>000000</value>
   </data>
-  <data name="maskb.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="MiscMiscBeginTimeMaskedTextBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;maskb.Name" xml:space="preserve">
-    <value>maskb</value>
+  <data name="&gt;&gt;MiscMiscBeginTimeMaskedTextBox.Name" xml:space="preserve">
+    <value>MiscMiscBeginTimeMaskedTextBox</value>
   </data>
-  <data name="&gt;&gt;maskb.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscBeginTimeMaskedTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;maskb.Parent" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscBeginTimeMaskedTextBox.Parent" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;maskb.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscBeginTimeMaskedTextBox.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="groupBox10.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscMiscGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 175</value>
   </data>
-  <data name="groupBox10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscMiscGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>566, 135</value>
   </data>
-  <data name="groupBox10.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscMiscGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="groupBox10.Text" xml:space="preserve">
+  <data name="MiscMiscGroupBox.Text" xml:space="preserve">
     <value>其他</value>
   </data>
-  <data name="&gt;&gt;groupBox10.Name" xml:space="preserve">
-    <value>groupBox10</value>
+  <data name="&gt;&gt;MiscMiscGroupBox.Name" xml:space="preserve">
+    <value>MiscMiscGroupBox</value>
   </data>
-  <data name="&gt;&gt;groupBox10.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox10.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscGroupBox.Parent" xml:space="preserve">
     <value>MiscTab</value>
   </data>
-  <data name="&gt;&gt;groupBox10.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscMiscGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnMIopen.Font" type="System.Drawing.Font, System.Drawing">
@@ -4617,343 +4617,343 @@
   <data name="&gt;&gt;AudioTab.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label46.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscOnePicDurationSecondsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label46.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscOnePicDurationSecondsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label46.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicDurationSecondsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>226, 137</value>
   </data>
-  <data name="label46.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicDurationSecondsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 12</value>
   </data>
-  <data name="label46.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicDurationSecondsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
-  <data name="label46.Text" xml:space="preserve">
+  <data name="MiscOnePicDurationSecondsLabel.Text" xml:space="preserve">
     <value>秒</value>
   </data>
-  <data name="&gt;&gt;label46.Name" xml:space="preserve">
-    <value>label46</value>
+  <data name="&gt;&gt;MiscOnePicDurationSecondsLabel.Name" xml:space="preserve">
+    <value>MiscOnePicDurationSecondsLabel</value>
   </data>
-  <data name="&gt;&gt;label46.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicDurationSecondsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label46.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicDurationSecondsLabel.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;label46.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicDurationSecondsLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="OnePicAudioSecondTxt.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicDurationSecondsTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>158, 134</value>
   </data>
-  <data name="OnePicAudioSecondTxt.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicDurationSecondsTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 21</value>
   </data>
-  <data name="OnePicAudioSecondTxt.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicDurationSecondsTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
-  <data name="OnePicAudioSecondTxt.Text" xml:space="preserve">
+  <data name="MiscOnePicDurationSecondsTextBox.Text" xml:space="preserve">
     <value>120</value>
   </data>
-  <data name="&gt;&gt;OnePicAudioSecondTxt.Name" xml:space="preserve">
-    <value>OnePicAudioSecondTxt</value>
+  <data name="&gt;&gt;MiscOnePicDurationSecondsTextBox.Name" xml:space="preserve">
+    <value>MiscOnePicDurationSecondsTextBox</value>
   </data>
-  <data name="&gt;&gt;OnePicAudioSecondTxt.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicDurationSecondsTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;OnePicAudioSecondTxt.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicDurationSecondsTextBox.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;OnePicAudioSecondTxt.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicDurationSecondsTextBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label45.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscOnePicDurationLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label45.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscOnePicDurationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicDurationLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 137</value>
   </data>
-  <data name="label45.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicDurationLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
   </data>
-  <data name="label45.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicDurationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
-  <data name="label45.Text" xml:space="preserve">
+  <data name="MiscOnePicDurationLabel.Text" xml:space="preserve">
     <value>时间</value>
   </data>
-  <data name="&gt;&gt;label45.Name" xml:space="preserve">
-    <value>label45</value>
+  <data name="&gt;&gt;MiscOnePicDurationLabel.Name" xml:space="preserve">
+    <value>MiscOnePicDurationLabel</value>
   </data>
-  <data name="&gt;&gt;label45.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicDurationLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label45.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicDurationLabel.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;label45.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicDurationLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="OnePicCRFNum.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicCrfNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>391, 107</value>
   </data>
-  <data name="OnePicCRFNum.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicCrfNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 21</value>
   </data>
-  <data name="OnePicCRFNum.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicCrfNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
   </data>
-  <data name="OnePicCRFNum.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="MiscOnePicCrfNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;OnePicCRFNum.Name" xml:space="preserve">
-    <value>OnePicCRFNum</value>
+  <data name="&gt;&gt;MiscOnePicCrfNumericUpDown.Name" xml:space="preserve">
+    <value>MiscOnePicCrfNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;OnePicCRFNum.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicCrfNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;OnePicCRFNum.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicCrfNumericUpDown.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;OnePicCRFNum.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicCrfNumericUpDown.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label33.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscOnePicCrfLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscOnePicCrfLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label33.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicCrfLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>362, 109</value>
   </data>
-  <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicCrfLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 12</value>
   </data>
-  <data name="label33.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicCrfLabel.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="label33.Text" xml:space="preserve">
+  <data name="MiscOnePicCrfLabel.Text" xml:space="preserve">
     <value>CRF</value>
   </data>
-  <data name="&gt;&gt;label33.Name" xml:space="preserve">
-    <value>label33</value>
+  <data name="&gt;&gt;MiscOnePicCrfLabel.Name" xml:space="preserve">
+    <value>MiscOnePicCrfLabel</value>
   </data>
-  <data name="&gt;&gt;label33.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicCrfLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label33.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicCrfLabel.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicCrfLabel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="AudioCopyCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscOnePicCopyAudioCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="AudioCopyCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscOnePicCopyAudioCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="AudioCopyCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscOnePicCopyAudioCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioCopyCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicCopyAudioCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 136</value>
   </data>
-  <data name="AudioCopyCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicCopyAudioCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 19</value>
   </data>
-  <data name="AudioCopyCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicCopyAudioCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="AudioCopyCheckBox.Text" xml:space="preserve">
+  <data name="MiscOnePicCopyAudioCheckBox.Text" xml:space="preserve">
     <value>复制音频</value>
   </data>
-  <data name="&gt;&gt;AudioCopyCheckBox.Name" xml:space="preserve">
-    <value>AudioCopyCheckBox</value>
+  <data name="&gt;&gt;MiscOnePicCopyAudioCheckBox.Name" xml:space="preserve">
+    <value>MiscOnePicCopyAudioCheckBox</value>
   </data>
-  <data name="&gt;&gt;AudioCopyCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicCopyAudioCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioCopyCheckBox.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicCopyAudioCheckBox.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioCopyCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicCopyAudioCheckBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label28.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscOnePicFpsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscOnePicFpsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicFpsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>275, 109</value>
   </data>
-  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicFpsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 12</value>
   </data>
-  <data name="label28.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicFpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="label28.Text" xml:space="preserve">
+  <data name="MiscOnePicFpsLabel.Text" xml:space="preserve">
     <value>FPS</value>
   </data>
-  <data name="&gt;&gt;label28.Name" xml:space="preserve">
-    <value>label28</value>
+  <data name="&gt;&gt;MiscOnePicFpsLabel.Name" xml:space="preserve">
+    <value>MiscOnePicFpsLabel</value>
   </data>
-  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicFpsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicFpsLabel.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicFpsLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="OnePicFPSNum.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicFpsNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>307, 107</value>
   </data>
-  <data name="OnePicFPSNum.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicFpsNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 21</value>
   </data>
-  <data name="OnePicFPSNum.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicFpsNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="OnePicFPSNum.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="MiscOnePicFpsNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;OnePicFPSNum.Name" xml:space="preserve">
-    <value>OnePicFPSNum</value>
+  <data name="&gt;&gt;MiscOnePicFpsNumericUpDown.Name" xml:space="preserve">
+    <value>MiscOnePicFpsNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;OnePicFPSNum.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicFpsNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;OnePicFPSNum.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicFpsNumericUpDown.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;OnePicFPSNum.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicFpsNumericUpDown.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscOnePicKbpsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscOnePicKbpsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicKbpsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>226, 109</value>
   </data>
-  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicKbpsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
   </data>
-  <data name="label17.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicKbpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="label17.Text" xml:space="preserve">
+  <data name="MiscOnePicKbpsLabel.Text" xml:space="preserve">
     <value>Kbps</value>
   </data>
-  <data name="&gt;&gt;label17.Name" xml:space="preserve">
-    <value>label17</value>
+  <data name="&gt;&gt;MiscOnePicKbpsLabel.Name" xml:space="preserve">
+    <value>MiscOnePicKbpsLabel</value>
   </data>
-  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicKbpsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicKbpsLabel.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicKbpsLabel.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="label27.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscOnePicBitrateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscOnePicBitrateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicBitrateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 109</value>
   </data>
-  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicBitrateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 12</value>
   </data>
-  <data name="label27.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicBitrateLabel.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="label27.Text" xml:space="preserve">
+  <data name="MiscOnePicBitrateLabel.Text" xml:space="preserve">
     <value>音频码率</value>
   </data>
-  <data name="&gt;&gt;label27.Name" xml:space="preserve">
-    <value>label27</value>
+  <data name="&gt;&gt;MiscOnePicBitrateLabel.Name" xml:space="preserve">
+    <value>MiscOnePicBitrateLabel</value>
   </data>
-  <data name="&gt;&gt;label27.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicBitrateLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label27.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicBitrateLabel.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicBitrateLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="OnePicAudioBitrateNum.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicBitrateLabelNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>158, 107</value>
   </data>
-  <data name="OnePicAudioBitrateNum.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicBitrateLabelNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 21</value>
   </data>
-  <data name="OnePicAudioBitrateNum.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicBitrateLabelNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="OnePicAudioBitrateNum.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="MiscOnePicBitrateLabelNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;OnePicAudioBitrateNum.Name" xml:space="preserve">
-    <value>OnePicAudioBitrateNum</value>
+  <data name="&gt;&gt;MiscOnePicBitrateLabelNumericUpDown.Name" xml:space="preserve">
+    <value>MiscOnePicBitrateLabelNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;OnePicAudioBitrateNum.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicBitrateLabelNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;OnePicAudioBitrateNum.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicBitrateLabelNumericUpDown.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;OnePicAudioBitrateNum.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicBitrateLabelNumericUpDown.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="AudioOnePicOutputButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscOnePicOutputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AudioOnePicOutputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscOnePicOutputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioOnePicOutputButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicOutputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 78</value>
   </data>
-  <data name="AudioOnePicOutputButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicOutputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="AudioOnePicOutputButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicOutputButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="AudioOnePicOutputButton.Text" xml:space="preserve">
+  <data name="MiscOnePicOutputButton.Text" xml:space="preserve">
     <value>输出</value>
   </data>
-  <data name="&gt;&gt;AudioOnePicOutputButton.Name" xml:space="preserve">
-    <value>AudioOnePicOutputButton</value>
+  <data name="&gt;&gt;MiscOnePicOutputButton.Name" xml:space="preserve">
+    <value>MiscOnePicOutputButton</value>
   </data>
-  <data name="&gt;&gt;AudioOnePicOutputButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicOutputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioOnePicOutputButton.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicOutputButton.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioOnePicOutputButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicOutputButton.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
   <data name="AudioOnePicButton.Font" type="System.Drawing.Font, System.Drawing">
@@ -4981,165 +4981,165 @@
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;AudioOnePicButton.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+    <value>MiscOnePicGroupBox</value>
   </data>
   <data name="&gt;&gt;AudioOnePicButton.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="AudioPicAudioButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscOnePicAudioInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AudioPicAudioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscOnePicAudioInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioPicAudioButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicAudioInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 49</value>
   </data>
-  <data name="AudioPicAudioButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicAudioInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="AudioPicAudioButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicAudioInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="AudioPicAudioButton.Text" xml:space="preserve">
+  <data name="MiscOnePicAudioInputButton.Text" xml:space="preserve">
     <value>音频</value>
   </data>
-  <data name="&gt;&gt;AudioPicAudioButton.Name" xml:space="preserve">
-    <value>AudioPicAudioButton</value>
+  <data name="&gt;&gt;MiscOnePicAudioInputButton.Name" xml:space="preserve">
+    <value>MiscOnePicAudioInputButton</value>
   </data>
-  <data name="&gt;&gt;AudioPicAudioButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicAudioInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioPicAudioButton.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicAudioInputButton.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioPicAudioButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicAudioInputButton.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="AudioPicButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscOnePicInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AudioPicButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscOnePicInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioPicButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 20</value>
   </data>
-  <data name="AudioPicButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="AudioPicButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="AudioPicButton.Text" xml:space="preserve">
+  <data name="MiscOnePicInputButton.Text" xml:space="preserve">
     <value>图片</value>
   </data>
-  <data name="&gt;&gt;AudioPicButton.Name" xml:space="preserve">
-    <value>AudioPicButton</value>
+  <data name="&gt;&gt;MiscOnePicInputButton.Name" xml:space="preserve">
+    <value>MiscOnePicInputButton</value>
   </data>
-  <data name="&gt;&gt;AudioPicButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioPicButton.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicInputButton.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioPicButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicInputButton.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="AudioOnePicOutputTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscOnePicOutputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="AudioOnePicOutputTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicOutputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 78</value>
   </data>
-  <data name="AudioOnePicOutputTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicOutputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>469, 21</value>
   </data>
-  <data name="AudioOnePicOutputTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicOutputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;AudioOnePicOutputTextBox.Name" xml:space="preserve">
-    <value>AudioOnePicOutputTextBox</value>
+  <data name="&gt;&gt;MiscOnePicOutputTextBox.Name" xml:space="preserve">
+    <value>MiscOnePicOutputTextBox</value>
   </data>
-  <data name="&gt;&gt;AudioOnePicOutputTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicOutputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioOnePicOutputTextBox.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicOutputTextBox.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioOnePicOutputTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicOutputTextBox.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="AudioPicAudioTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscOnePicAudioInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="AudioPicAudioTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicAudioInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 49</value>
   </data>
-  <data name="AudioPicAudioTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicAudioInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>469, 21</value>
   </data>
-  <data name="AudioPicAudioTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicAudioInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;AudioPicAudioTextBox.Name" xml:space="preserve">
-    <value>AudioPicAudioTextBox</value>
+  <data name="&gt;&gt;MiscOnePicAudioInputTextBox.Name" xml:space="preserve">
+    <value>MiscOnePicAudioInputTextBox</value>
   </data>
-  <data name="&gt;&gt;AudioPicAudioTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicAudioInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioPicAudioTextBox.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicAudioInputTextBox.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioPicAudioTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicAudioInputTextBox.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="AudioPicTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscOnePicInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="AudioPicTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 20</value>
   </data>
-  <data name="AudioPicTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>469, 21</value>
   </data>
-  <data name="AudioPicTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;AudioPicTextBox.Name" xml:space="preserve">
-    <value>AudioPicTextBox</value>
+  <data name="&gt;&gt;MiscOnePicInputTextBox.Name" xml:space="preserve">
+    <value>MiscOnePicInputTextBox</value>
   </data>
-  <data name="&gt;&gt;AudioPicTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioPicTextBox.Parent" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicInputTextBox.Parent" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioPicTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicInputTextBox.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="groupBox9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscOnePicGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 6</value>
   </data>
-  <data name="groupBox9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscOnePicGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>566, 163</value>
   </data>
-  <data name="groupBox9.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscOnePicGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="groupBox9.Text" xml:space="preserve">
+  <data name="MiscOnePicGroupBox.Text" xml:space="preserve">
     <value>一图流</value>
   </data>
-  <data name="&gt;&gt;groupBox9.Name" xml:space="preserve">
-    <value>groupBox9</value>
+  <data name="&gt;&gt;MiscOnePicGroupBox.Name" xml:space="preserve">
+    <value>MiscOnePicGroupBox</value>
   </data>
-  <data name="&gt;&gt;groupBox9.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox9.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicGroupBox.Parent" xml:space="preserve">
     <value>MiscTab</value>
   </data>
-  <data name="&gt;&gt;groupBox9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscOnePicGroupBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="VideoFramesLabel.AutoSize" type="System.Boolean, mscorlib">
@@ -6972,553 +6972,553 @@
   <data name="&gt;&gt;HelpTab.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="label37.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscBlackKbpsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label37.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackKbpsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label37.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackKbpsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>211, 140</value>
   </data>
-  <data name="label37.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackKbpsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
   </data>
-  <data name="label37.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackKbpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
-  <data name="label37.Text" xml:space="preserve">
+  <data name="MiscBlackKbpsLabel.Text" xml:space="preserve">
     <value>Kbps</value>
   </data>
-  <data name="&gt;&gt;label37.Name" xml:space="preserve">
-    <value>label37</value>
+  <data name="&gt;&gt;MiscBlackKbpsLabel.Name" xml:space="preserve">
+    <value>MiscBlackKbpsLabel</value>
   </data>
-  <data name="&gt;&gt;label37.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackKbpsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label37.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackKbpsLabel.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;label37.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackKbpsLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label36.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscBlackBitrateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label36.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackBitrateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label36.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackBitrateLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 140</value>
   </data>
-  <data name="label36.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackBitrateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 12</value>
   </data>
-  <data name="label36.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackBitrateLabel.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
-  <data name="label36.Text" xml:space="preserve">
+  <data name="MiscBlackBitrateLabel.Text" xml:space="preserve">
     <value>目标码率</value>
   </data>
-  <data name="&gt;&gt;label36.Name" xml:space="preserve">
-    <value>label36</value>
+  <data name="&gt;&gt;MiscBlackBitrateLabel.Name" xml:space="preserve">
+    <value>MiscBlackBitrateLabel</value>
   </data>
-  <data name="&gt;&gt;label36.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackBitrateLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label36.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackBitrateLabel.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;label36.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackBitrateLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="BlackBitrateNum.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackBitrateNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>106, 138</value>
   </data>
-  <data name="BlackBitrateNum.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackBitrateNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 21</value>
   </data>
-  <data name="BlackBitrateNum.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackBitrateNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
-  <data name="BlackBitrateNum.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="MiscBlackBitrateNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;BlackBitrateNum.Name" xml:space="preserve">
-    <value>BlackBitrateNum</value>
+  <data name="&gt;&gt;MiscBlackBitrateNumericUpDown.Name" xml:space="preserve">
+    <value>MiscBlackBitrateNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;BlackBitrateNum.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackBitrateNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BlackBitrateNum.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackBitrateNumericUpDown.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackBitrateNum.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackBitrateNumericUpDown.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label35.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscBlackDurationSecondsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label35.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackDurationSecondsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label35.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackDurationSecondsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>211, 109</value>
   </data>
-  <data name="label35.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackDurationSecondsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 12</value>
   </data>
-  <data name="label35.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackDurationSecondsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
-  <data name="label35.Text" xml:space="preserve">
+  <data name="MiscBlackDurationSecondsLabel.Text" xml:space="preserve">
     <value>秒</value>
   </data>
-  <data name="&gt;&gt;label35.Name" xml:space="preserve">
-    <value>label35</value>
+  <data name="&gt;&gt;MiscBlackDurationSecondsLabel.Name" xml:space="preserve">
+    <value>MiscBlackDurationSecondsLabel</value>
   </data>
-  <data name="&gt;&gt;label35.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackDurationSecondsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label35.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackDurationSecondsLabel.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackDurationSecondsLabel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="BlackSecondComboBox.Items" xml:space="preserve">
+  <data name="MiscBlackDurationSecondsComboBox.Items" xml:space="preserve">
     <value>auto</value>
   </data>
-  <data name="BlackSecondComboBox.Items1" xml:space="preserve">
+  <data name="MiscBlackDurationSecondsComboBox.Items1" xml:space="preserve">
     <value>60</value>
   </data>
-  <data name="BlackSecondComboBox.Items2" xml:space="preserve">
+  <data name="MiscBlackDurationSecondsComboBox.Items2" xml:space="preserve">
     <value>300</value>
   </data>
-  <data name="BlackSecondComboBox.Items3" xml:space="preserve">
+  <data name="MiscBlackDurationSecondsComboBox.Items3" xml:space="preserve">
     <value>900</value>
   </data>
-  <data name="BlackSecondComboBox.Items4" xml:space="preserve">
+  <data name="MiscBlackDurationSecondsComboBox.Items4" xml:space="preserve">
     <value>3600</value>
   </data>
-  <data name="BlackSecondComboBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackDurationSecondsComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>107, 108</value>
   </data>
-  <data name="BlackSecondComboBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackDurationSecondsComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 20</value>
   </data>
-  <data name="BlackSecondComboBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackDurationSecondsComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
   </data>
-  <data name="BlackSecondComboBox.Text" xml:space="preserve">
+  <data name="MiscBlackDurationSecondsComboBox.Text" xml:space="preserve">
     <value>auto</value>
   </data>
-  <data name="&gt;&gt;BlackSecondComboBox.Name" xml:space="preserve">
-    <value>BlackSecondComboBox</value>
+  <data name="&gt;&gt;MiscBlackDurationSecondsComboBox.Name" xml:space="preserve">
+    <value>MiscBlackDurationSecondsComboBox</value>
   </data>
-  <data name="&gt;&gt;BlackSecondComboBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackDurationSecondsComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BlackSecondComboBox.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackDurationSecondsComboBox.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackSecondComboBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackDurationSecondsComboBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label34.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscBlackDurationLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label34.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackDurationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label34.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackDurationLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 109</value>
   </data>
-  <data name="label34.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackDurationLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 12</value>
   </data>
-  <data name="label34.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackDurationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="label34.Text" xml:space="preserve">
+  <data name="MiscBlackDurationLabel.Text" xml:space="preserve">
     <value>后黑时长</value>
   </data>
-  <data name="&gt;&gt;label34.Name" xml:space="preserve">
-    <value>label34</value>
+  <data name="&gt;&gt;MiscBlackDurationLabel.Name" xml:space="preserve">
+    <value>MiscBlackDurationLabel</value>
   </data>
-  <data name="&gt;&gt;label34.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackDurationLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label34.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackDurationLabel.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;label34.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackDurationLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="BlackCRFNum.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackCrfNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 107</value>
   </data>
-  <data name="BlackCRFNum.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackCrfNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 21</value>
   </data>
-  <data name="BlackCRFNum.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackCrfNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="BlackCRFNum.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="MiscBlackCrfNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;BlackCRFNum.Name" xml:space="preserve">
-    <value>BlackCRFNum</value>
+  <data name="&gt;&gt;MiscBlackCrfNumericUpDown.Name" xml:space="preserve">
+    <value>MiscBlackCrfNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;BlackCRFNum.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackCrfNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BlackCRFNum.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackCrfNumericUpDown.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackCRFNum.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackCrfNumericUpDown.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="label32.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscBlackCrfLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label32.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackCrfLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label32.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackCrfLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>361, 109</value>
   </data>
-  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackCrfLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 12</value>
   </data>
-  <data name="label32.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackCrfLabel.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
   </data>
-  <data name="label32.Text" xml:space="preserve">
+  <data name="MiscBlackCrfLabel.Text" xml:space="preserve">
     <value>CRF</value>
   </data>
-  <data name="&gt;&gt;label32.Name" xml:space="preserve">
-    <value>label32</value>
+  <data name="&gt;&gt;MiscBlackCrfLabel.Name" xml:space="preserve">
+    <value>MiscBlackCrfLabel</value>
   </data>
-  <data name="&gt;&gt;label32.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackCrfLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label32.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackCrfLabel.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackCrfLabel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="BlackNoPicCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscBlackNoPicCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="BlackNoPicCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscBlackNoPicCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="BlackNoPicCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackNoPicCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="BlackNoPicCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackNoPicCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 136</value>
   </data>
-  <data name="BlackNoPicCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackNoPicCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 19</value>
   </data>
-  <data name="BlackNoPicCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackNoPicCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
-  <data name="BlackNoPicCheckBox.Text" xml:space="preserve">
+  <data name="MiscBlackNoPicCheckBox.Text" xml:space="preserve">
     <value>使用黑屏</value>
   </data>
-  <data name="&gt;&gt;BlackNoPicCheckBox.Name" xml:space="preserve">
-    <value>BlackNoPicCheckBox</value>
+  <data name="&gt;&gt;MiscBlackNoPicCheckBox.Name" xml:space="preserve">
+    <value>MiscBlackNoPicCheckBox</value>
   </data>
-  <data name="&gt;&gt;BlackNoPicCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackNoPicCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;BlackNoPicCheckBox.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackNoPicCheckBox.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackNoPicCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackNoPicCheckBox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="label31.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscBlackFpsComboBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label31.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackFpsComboBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label31.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackFpsComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>259, 109</value>
   </data>
-  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackFpsComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 12</value>
   </data>
-  <data name="label31.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackFpsComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="label31.Text" xml:space="preserve">
+  <data name="MiscBlackFpsComboBox.Text" xml:space="preserve">
     <value>FPS</value>
   </data>
-  <data name="&gt;&gt;label31.Name" xml:space="preserve">
-    <value>label31</value>
+  <data name="&gt;&gt;MiscBlackFpsComboBox.Name" xml:space="preserve">
+    <value>MiscBlackFpsComboBox</value>
   </data>
-  <data name="&gt;&gt;label31.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackFpsComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label31.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackFpsComboBox.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackFpsComboBox.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="BlackFPSNum.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackFpsNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 107</value>
   </data>
-  <data name="BlackFPSNum.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackFpsNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 21</value>
   </data>
-  <data name="BlackFPSNum.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackFpsNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="BlackFPSNum.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="MiscBlackFpsNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;BlackFPSNum.Name" xml:space="preserve">
-    <value>BlackFPSNum</value>
+  <data name="&gt;&gt;MiscBlackFpsNumericUpDown.Name" xml:space="preserve">
+    <value>MiscBlackFpsNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;BlackFPSNum.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackFpsNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BlackFPSNum.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackFpsNumericUpDown.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackFPSNum.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackFpsNumericUpDown.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="BlackPicButton.Enabled" type="System.Boolean, mscorlib">
+  <data name="MiscBlackPicInputButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="BlackPicButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscBlackPicInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="BlackPicButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackPicInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="BlackPicButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackPicInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 78</value>
   </data>
-  <data name="BlackPicButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackPicInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="BlackPicButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackPicInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="BlackPicButton.Text" xml:space="preserve">
+  <data name="MiscBlackPicInputButton.Text" xml:space="preserve">
     <value>图片</value>
   </data>
-  <data name="&gt;&gt;BlackPicButton.Name" xml:space="preserve">
-    <value>BlackPicButton</value>
+  <data name="&gt;&gt;MiscBlackPicInputButton.Name" xml:space="preserve">
+    <value>MiscBlackPicInputButton</value>
   </data>
-  <data name="&gt;&gt;BlackPicButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackPicInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;BlackPicButton.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackPicInputButton.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackPicButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackPicInputButton.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="BlackPicTextBox.Enabled" type="System.Boolean, mscorlib">
+  <data name="MiscBlackPicInputTextBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="BlackPicTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscBlackPicInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="BlackPicTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackPicInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 78</value>
   </data>
-  <data name="BlackPicTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackPicInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>469, 21</value>
   </data>
-  <data name="BlackPicTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackPicInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="&gt;&gt;BlackPicTextBox.Name" xml:space="preserve">
-    <value>BlackPicTextBox</value>
+  <data name="&gt;&gt;MiscBlackPicInputTextBox.Name" xml:space="preserve">
+    <value>MiscBlackPicInputTextBox</value>
   </data>
-  <data name="&gt;&gt;BlackPicTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackPicInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;BlackPicTextBox.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackPicInputTextBox.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackPicTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackPicInputTextBox.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="BlackStartButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscBlackStartButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="BlackStartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackStartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="BlackStartButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackStartButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 107</value>
   </data>
-  <data name="BlackStartButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackStartButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="BlackStartButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackStartButton.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="BlackStartButton.Text" xml:space="preserve">
+  <data name="MiscBlackStartButton.Text" xml:space="preserve">
     <value>后黑</value>
   </data>
-  <data name="&gt;&gt;BlackStartButton.Name" xml:space="preserve">
-    <value>BlackStartButton</value>
+  <data name="&gt;&gt;MiscBlackStartButton.Name" xml:space="preserve">
+    <value>MiscBlackStartButton</value>
   </data>
-  <data name="&gt;&gt;BlackStartButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackStartButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;BlackStartButton.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackStartButton.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackStartButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackStartButton.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="BlackOutputButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscBlackOutputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="BlackOutputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackOutputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="BlackOutputButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackOutputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 49</value>
   </data>
-  <data name="BlackOutputButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackOutputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="BlackOutputButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackOutputButton.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="BlackOutputButton.Text" xml:space="preserve">
+  <data name="MiscBlackOutputButton.Text" xml:space="preserve">
     <value>输出</value>
   </data>
-  <data name="&gt;&gt;BlackOutputButton.Name" xml:space="preserve">
-    <value>BlackOutputButton</value>
+  <data name="&gt;&gt;MiscBlackOutputButton.Name" xml:space="preserve">
+    <value>MiscBlackOutputButton</value>
   </data>
-  <data name="&gt;&gt;BlackOutputButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackOutputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;BlackOutputButton.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackOutputButton.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackOutputButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackOutputButton.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="BlackVideoButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscBlackVideoInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="BlackVideoButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackVideoInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="BlackVideoButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackVideoInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 20</value>
   </data>
-  <data name="BlackVideoButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackVideoInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="BlackVideoButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackVideoInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="BlackVideoButton.Text" xml:space="preserve">
+  <data name="MiscBlackVideoInputButton.Text" xml:space="preserve">
     <value>视频</value>
   </data>
-  <data name="&gt;&gt;BlackVideoButton.Name" xml:space="preserve">
-    <value>BlackVideoButton</value>
+  <data name="&gt;&gt;MiscBlackVideoInputButton.Name" xml:space="preserve">
+    <value>MiscBlackVideoInputButton</value>
   </data>
-  <data name="&gt;&gt;BlackVideoButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackVideoInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;BlackVideoButton.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackVideoInputButton.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackVideoButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackVideoInputButton.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="BlackOutputTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscBlackOutputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="BlackOutputTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackOutputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 49</value>
   </data>
-  <data name="BlackOutputTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackOutputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>469, 21</value>
   </data>
-  <data name="BlackOutputTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackOutputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="&gt;&gt;BlackOutputTextBox.Name" xml:space="preserve">
-    <value>BlackOutputTextBox</value>
+  <data name="&gt;&gt;MiscBlackOutputTextBox.Name" xml:space="preserve">
+    <value>MiscBlackOutputTextBox</value>
   </data>
-  <data name="&gt;&gt;BlackOutputTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackOutputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;BlackOutputTextBox.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackOutputTextBox.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackOutputTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackOutputTextBox.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="BlackVideoTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MiscBlackVideoInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="BlackVideoTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackVideoInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 20</value>
   </data>
-  <data name="BlackVideoTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackVideoInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>469, 21</value>
   </data>
-  <data name="BlackVideoTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackVideoInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="&gt;&gt;BlackVideoTextBox.Name" xml:space="preserve">
-    <value>BlackVideoTextBox</value>
+  <data name="&gt;&gt;MiscBlackVideoInputTextBox.Name" xml:space="preserve">
+    <value>MiscBlackVideoInputTextBox</value>
   </data>
-  <data name="&gt;&gt;BlackVideoTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackVideoInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;BlackVideoTextBox.Parent" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackVideoInputTextBox.Parent" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;BlackVideoTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackVideoInputTextBox.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="groupBox11.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 416</value>
   </data>
-  <data name="groupBox11.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>566, 164</value>
   </data>
-  <data name="groupBox11.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <data name="groupBox11.Text" xml:space="preserve">
+  <data name="MiscBlackGroupBox.Text" xml:space="preserve">
     <value>后黑</value>
   </data>
-  <data name="groupBox11.Visible" type="System.Boolean, mscorlib">
+  <data name="MiscBlackGroupBox.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;groupBox11.Name" xml:space="preserve">
-    <value>groupBox11</value>
+  <data name="&gt;&gt;MiscBlackGroupBox.Name" xml:space="preserve">
+    <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;groupBox11.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox11.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackGroupBox.Parent" xml:space="preserve">
     <value>MiscTab</value>
   </data>
-  <data name="&gt;&gt;groupBox11.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="MiscTab.Location" type="System.Drawing.Point, System.Drawing">

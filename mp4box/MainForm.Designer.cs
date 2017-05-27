@@ -32,19 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.TransposeLabel = new System.Windows.Forms.Label();
-            this.TransposeComboBox = new System.Windows.Forms.ComboBox();
-            this.RotateButton = new ControlExs.QQButton();
-            this.txtvideo4 = new ControlExs.QQTextBox();
-            this.btnvideo4 = new ControlExs.QQButton();
-            this.btnout5 = new ControlExs.QQButton();
-            this.btnClip = new ControlExs.QQButton();
-            this.txtout5 = new ControlExs.QQTextBox();
-            this.maske = new System.Windows.Forms.MaskedTextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.maskb = new System.Windows.Forms.MaskedTextBox();
+            this.MiscMiscGroupBox = new System.Windows.Forms.GroupBox();
+            this.MiscMiscTransposeLabel = new System.Windows.Forms.Label();
+            this.MiscMiscTransposeComboBox = new System.Windows.Forms.ComboBox();
+            this.MiscMiscRotateButton = new ControlExs.QQButton();
+            this.MiscMiscVideoInputTextBox = new ControlExs.QQTextBox();
+            this.MiscMiscVideoInputButton = new ControlExs.QQButton();
+            this.MiscMiscVideoOutputButton = new ControlExs.QQButton();
+            this.MiscMiscClipButton = new ControlExs.QQButton();
+            this.MiscMiscVideoOutputTextBox = new ControlExs.QQTextBox();
+            this.MiscMiscEndTimeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.MiscMiscBeginTimeLabel = new System.Windows.Forms.Label();
+            this.MiscMiscEndTimeLabel = new System.Windows.Forms.Label();
+            this.MiscMiscBeginTimeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.MediaInfoTab = new System.Windows.Forms.TabPage();
             this.btnMIopen = new ControlExs.QQButton();
             this.btnMIplay = new ControlExs.QQButton();
@@ -188,25 +188,25 @@
             this.AudioBatchAddButton = new ControlExs.QQButton();
             this.AudioBatchClearButton = new ControlExs.QQButton();
             this.AudioBatchDeleteButton = new ControlExs.QQButton();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.OnePicAudioSecondTxt = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.OnePicCRFNum = new System.Windows.Forms.NumericUpDown();
-            this.label33 = new System.Windows.Forms.Label();
-            this.AudioCopyCheckBox = new ControlExs.QQCheckBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.OnePicFPSNum = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.OnePicAudioBitrateNum = new System.Windows.Forms.NumericUpDown();
-            this.AudioOnePicOutputButton = new ControlExs.QQButton();
+            this.MiscOnePicGroupBox = new System.Windows.Forms.GroupBox();
+            this.MiscOnePicDurationSecondsLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicDurationSecondsTextBox = new System.Windows.Forms.TextBox();
+            this.MiscOnePicDurationLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiscOnePicCrfLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicCopyAudioCheckBox = new ControlExs.QQCheckBox();
+            this.MiscOnePicFpsLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicFpsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiscOnePicKbpsLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicBitrateLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicBitrateLabelNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiscOnePicOutputButton = new ControlExs.QQButton();
             this.AudioOnePicButton = new ControlExs.QQButton();
-            this.AudioPicAudioButton = new ControlExs.QQButton();
-            this.AudioPicButton = new ControlExs.QQButton();
-            this.AudioOnePicOutputTextBox = new ControlExs.QQTextBox();
-            this.AudioPicAudioTextBox = new ControlExs.QQTextBox();
-            this.AudioPicTextBox = new ControlExs.QQTextBox();
+            this.MiscOnePicAudioInputButton = new ControlExs.QQButton();
+            this.MiscOnePicInputButton = new ControlExs.QQButton();
+            this.MiscOnePicOutputTextBox = new ControlExs.QQTextBox();
+            this.MiscOnePicAudioInputTextBox = new ControlExs.QQTextBox();
+            this.MiscOnePicInputTextBox = new ControlExs.QQTextBox();
             this.VideoTab = new System.Windows.Forms.TabPage();
             this.VideoFramesLabel = new System.Windows.Forms.Label();
             this.VideoSeekLabel = new System.Windows.Forms.Label();
@@ -271,25 +271,25 @@
             this.AboutBtn = new ControlExs.QQButton();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.MiscTab = new System.Windows.Forms.TabPage();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.BlackBitrateNum = new System.Windows.Forms.NumericUpDown();
-            this.label35 = new System.Windows.Forms.Label();
-            this.BlackSecondComboBox = new System.Windows.Forms.ComboBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.BlackCRFNum = new System.Windows.Forms.NumericUpDown();
-            this.label32 = new System.Windows.Forms.Label();
-            this.BlackNoPicCheckBox = new ControlExs.QQCheckBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.BlackFPSNum = new System.Windows.Forms.NumericUpDown();
-            this.BlackPicButton = new ControlExs.QQButton();
-            this.BlackPicTextBox = new ControlExs.QQTextBox();
-            this.BlackStartButton = new ControlExs.QQButton();
-            this.BlackOutputButton = new ControlExs.QQButton();
-            this.BlackVideoButton = new ControlExs.QQButton();
-            this.BlackOutputTextBox = new ControlExs.QQTextBox();
-            this.BlackVideoTextBox = new ControlExs.QQTextBox();
+            this.MiscBlackGroupBox = new System.Windows.Forms.GroupBox();
+            this.MiscBlackKbpsLabel = new System.Windows.Forms.Label();
+            this.MiscBlackBitrateLabel = new System.Windows.Forms.Label();
+            this.MiscBlackBitrateNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiscBlackDurationSecondsLabel = new System.Windows.Forms.Label();
+            this.MiscBlackDurationSecondsComboBox = new System.Windows.Forms.ComboBox();
+            this.MiscBlackDurationLabel = new System.Windows.Forms.Label();
+            this.MiscBlackCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiscBlackCrfLabel = new System.Windows.Forms.Label();
+            this.MiscBlackNoPicCheckBox = new ControlExs.QQCheckBox();
+            this.MiscBlackFpsComboBox = new System.Windows.Forms.Label();
+            this.MiscBlackFpsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiscBlackPicInputButton = new ControlExs.QQButton();
+            this.MiscBlackPicInputTextBox = new ControlExs.QQTextBox();
+            this.MiscBlackStartButton = new ControlExs.QQButton();
+            this.MiscBlackOutputButton = new ControlExs.QQButton();
+            this.MiscBlackVideoInputButton = new ControlExs.QQButton();
+            this.MiscBlackOutputTextBox = new ControlExs.QQTextBox();
+            this.MiscBlackVideoInputTextBox = new ControlExs.QQTextBox();
             this.SetupTabPage = new System.Windows.Forms.TabPage();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.x265CheckBox = new ControlExs.QQCheckBox();
@@ -313,7 +313,7 @@
             this.DeleteLogButton = new ControlExs.QQButton();
             this.SetDefaultButton = new ControlExs.QQButton();
             this.ViewLogButton = new ControlExs.QQButton();
-            this.groupBox10.SuspendLayout();
+            this.MiscMiscGroupBox.SuspendLayout();
             this.MediaInfoTab.SuspendLayout();
             this.AVSTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TrimEndNumericUpDown)).BeginInit();
@@ -342,10 +342,10 @@
             this.AudioGroupBox.SuspendLayout();
             this.AudioAudioModePanel.SuspendLayout();
             this.AudioBatchGroupBox.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OnePicCRFNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OnePicFPSNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OnePicAudioBitrateNum)).BeginInit();
+            this.MiscOnePicGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscOnePicCrfNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscOnePicFpsNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscOnePicBitrateLabelNumericUpDown)).BeginInit();
             this.VideoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VideoFramesNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VideoSeekNumericUpDown)).BeginInit();
@@ -358,10 +358,10 @@
             this.HelpTab.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.MiscTab.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BlackBitrateNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BlackCRFNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BlackFPSNum)).BeginInit();
+            this.MiscBlackGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackBitrateNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackCrfNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackFpsNumericUpDown)).BeginInit();
             this.SetupTabPage.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -374,111 +374,111 @@
             this.timer1.Interval = 9000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // groupBox10
+            // MiscMiscGroupBox
             // 
-            this.groupBox10.Controls.Add(this.TransposeLabel);
-            this.groupBox10.Controls.Add(this.TransposeComboBox);
-            this.groupBox10.Controls.Add(this.RotateButton);
-            this.groupBox10.Controls.Add(this.txtvideo4);
-            this.groupBox10.Controls.Add(this.btnvideo4);
-            this.groupBox10.Controls.Add(this.btnout5);
-            this.groupBox10.Controls.Add(this.btnClip);
-            this.groupBox10.Controls.Add(this.txtout5);
-            this.groupBox10.Controls.Add(this.maske);
-            this.groupBox10.Controls.Add(this.label13);
-            this.groupBox10.Controls.Add(this.label15);
-            this.groupBox10.Controls.Add(this.maskb);
-            resources.ApplyResources(this.groupBox10, "groupBox10");
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.TabStop = false;
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscTransposeLabel);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscTransposeComboBox);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscRotateButton);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscVideoInputTextBox);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscVideoInputButton);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscVideoOutputButton);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscClipButton);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscVideoOutputTextBox);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscEndTimeMaskedTextBox);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscBeginTimeLabel);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscEndTimeLabel);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscBeginTimeMaskedTextBox);
+            resources.ApplyResources(this.MiscMiscGroupBox, "MiscMiscGroupBox");
+            this.MiscMiscGroupBox.Name = "MiscMiscGroupBox";
+            this.MiscMiscGroupBox.TabStop = false;
             // 
-            // TransposeLabel
+            // MiscMiscTransposeLabel
             // 
-            resources.ApplyResources(this.TransposeLabel, "TransposeLabel");
-            this.TransposeLabel.Name = "TransposeLabel";
+            resources.ApplyResources(this.MiscMiscTransposeLabel, "MiscMiscTransposeLabel");
+            this.MiscMiscTransposeLabel.Name = "MiscMiscTransposeLabel";
             // 
-            // TransposeComboBox
+            // MiscMiscTransposeComboBox
             // 
-            this.TransposeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TransposeComboBox.FormattingEnabled = true;
-            this.TransposeComboBox.Items.AddRange(new object[] {
-            resources.GetString("TransposeComboBox.Items"),
-            resources.GetString("TransposeComboBox.Items1"),
-            resources.GetString("TransposeComboBox.Items2"),
-            resources.GetString("TransposeComboBox.Items3")});
-            resources.ApplyResources(this.TransposeComboBox, "TransposeComboBox");
-            this.TransposeComboBox.Name = "TransposeComboBox";
+            this.MiscMiscTransposeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MiscMiscTransposeComboBox.FormattingEnabled = true;
+            this.MiscMiscTransposeComboBox.Items.AddRange(new object[] {
+            resources.GetString("MiscMiscTransposeComboBox.Items"),
+            resources.GetString("MiscMiscTransposeComboBox.Items1"),
+            resources.GetString("MiscMiscTransposeComboBox.Items2"),
+            resources.GetString("MiscMiscTransposeComboBox.Items3")});
+            resources.ApplyResources(this.MiscMiscTransposeComboBox, "MiscMiscTransposeComboBox");
+            this.MiscMiscTransposeComboBox.Name = "MiscMiscTransposeComboBox";
             // 
-            // RotateButton
+            // MiscMiscRotateButton
             // 
-            resources.ApplyResources(this.RotateButton, "RotateButton");
-            this.RotateButton.Name = "RotateButton";
-            this.RotateButton.UseVisualStyleBackColor = true;
-            this.RotateButton.Click += new System.EventHandler(this.RotateButton_Click);
+            resources.ApplyResources(this.MiscMiscRotateButton, "MiscMiscRotateButton");
+            this.MiscMiscRotateButton.Name = "MiscMiscRotateButton";
+            this.MiscMiscRotateButton.UseVisualStyleBackColor = true;
+            this.MiscMiscRotateButton.Click += new System.EventHandler(this.RotateButton_Click);
             // 
-            // txtvideo4
+            // MiscMiscVideoInputTextBox
             // 
-            this.txtvideo4.AllowDrop = true;
-            this.txtvideo4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtvideo4.EmptyTextTip = null;
-            this.txtvideo4.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtvideo4, "txtvideo4");
-            this.txtvideo4.Name = "txtvideo4";
-            this.txtvideo4.ReadOnly = true;
-            this.txtvideo4.TextChanged += new System.EventHandler(this.txtvideo4_TextChanged);
-            this.txtvideo4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo4_MouseDoubleClick);
+            this.MiscMiscVideoInputTextBox.AllowDrop = true;
+            this.MiscMiscVideoInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiscMiscVideoInputTextBox.EmptyTextTip = null;
+            this.MiscMiscVideoInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MiscMiscVideoInputTextBox, "MiscMiscVideoInputTextBox");
+            this.MiscMiscVideoInputTextBox.Name = "MiscMiscVideoInputTextBox";
+            this.MiscMiscVideoInputTextBox.ReadOnly = true;
+            this.MiscMiscVideoInputTextBox.TextChanged += new System.EventHandler(this.txtvideo4_TextChanged);
+            this.MiscMiscVideoInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo4_MouseDoubleClick);
             // 
-            // btnvideo4
+            // MiscMiscVideoInputButton
             // 
-            resources.ApplyResources(this.btnvideo4, "btnvideo4");
-            this.btnvideo4.Name = "btnvideo4";
-            this.btnvideo4.UseVisualStyleBackColor = true;
-            this.btnvideo4.Click += new System.EventHandler(this.btnvideo4_Click);
+            resources.ApplyResources(this.MiscMiscVideoInputButton, "MiscMiscVideoInputButton");
+            this.MiscMiscVideoInputButton.Name = "MiscMiscVideoInputButton";
+            this.MiscMiscVideoInputButton.UseVisualStyleBackColor = true;
+            this.MiscMiscVideoInputButton.Click += new System.EventHandler(this.btnvideo4_Click);
             // 
-            // btnout5
+            // MiscMiscVideoOutputButton
             // 
-            resources.ApplyResources(this.btnout5, "btnout5");
-            this.btnout5.Name = "btnout5";
-            this.btnout5.UseVisualStyleBackColor = true;
-            this.btnout5.Click += new System.EventHandler(this.btnout5_Click);
+            resources.ApplyResources(this.MiscMiscVideoOutputButton, "MiscMiscVideoOutputButton");
+            this.MiscMiscVideoOutputButton.Name = "MiscMiscVideoOutputButton";
+            this.MiscMiscVideoOutputButton.UseVisualStyleBackColor = true;
+            this.MiscMiscVideoOutputButton.Click += new System.EventHandler(this.btnout5_Click);
             // 
-            // btnClip
+            // MiscMiscClipButton
             // 
-            resources.ApplyResources(this.btnClip, "btnClip");
-            this.btnClip.Name = "btnClip";
-            this.btnClip.UseVisualStyleBackColor = true;
-            this.btnClip.Click += new System.EventHandler(this.btnClip_Click);
+            resources.ApplyResources(this.MiscMiscClipButton, "MiscMiscClipButton");
+            this.MiscMiscClipButton.Name = "MiscMiscClipButton";
+            this.MiscMiscClipButton.UseVisualStyleBackColor = true;
+            this.MiscMiscClipButton.Click += new System.EventHandler(this.btnClip_Click);
             // 
-            // txtout5
+            // MiscMiscVideoOutputTextBox
             // 
-            this.txtout5.AllowDrop = true;
-            this.txtout5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtout5.EmptyTextTip = null;
-            this.txtout5.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtout5, "txtout5");
-            this.txtout5.Name = "txtout5";
-            this.txtout5.TextChanged += new System.EventHandler(this.txtout5_TextChanged);
-            this.txtout5.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout5_MouseDoubleClick);
+            this.MiscMiscVideoOutputTextBox.AllowDrop = true;
+            this.MiscMiscVideoOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiscMiscVideoOutputTextBox.EmptyTextTip = null;
+            this.MiscMiscVideoOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MiscMiscVideoOutputTextBox, "MiscMiscVideoOutputTextBox");
+            this.MiscMiscVideoOutputTextBox.Name = "MiscMiscVideoOutputTextBox";
+            this.MiscMiscVideoOutputTextBox.TextChanged += new System.EventHandler(this.txtout5_TextChanged);
+            this.MiscMiscVideoOutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout5_MouseDoubleClick);
             // 
-            // maske
+            // MiscMiscEndTimeMaskedTextBox
             // 
-            resources.ApplyResources(this.maske, "maske");
-            this.maske.Name = "maske";
+            resources.ApplyResources(this.MiscMiscEndTimeMaskedTextBox, "MiscMiscEndTimeMaskedTextBox");
+            this.MiscMiscEndTimeMaskedTextBox.Name = "MiscMiscEndTimeMaskedTextBox";
             // 
-            // label13
+            // MiscMiscBeginTimeLabel
             // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.MiscMiscBeginTimeLabel, "MiscMiscBeginTimeLabel");
+            this.MiscMiscBeginTimeLabel.Name = "MiscMiscBeginTimeLabel";
             // 
-            // label15
+            // MiscMiscEndTimeLabel
             // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
+            resources.ApplyResources(this.MiscMiscEndTimeLabel, "MiscMiscEndTimeLabel");
+            this.MiscMiscEndTimeLabel.Name = "MiscMiscEndTimeLabel";
             // 
-            // maskb
+            // MiscMiscBeginTimeMaskedTextBox
             // 
-            resources.ApplyResources(this.maskb, "maskb");
-            this.maskb.Name = "maskb";
+            resources.ApplyResources(this.MiscMiscBeginTimeMaskedTextBox, "MiscMiscBeginTimeMaskedTextBox");
+            this.MiscMiscBeginTimeMaskedTextBox.Name = "MiscMiscBeginTimeMaskedTextBox";
             // 
             // MediaInfoTab
             // 
@@ -1833,140 +1833,140 @@
             this.AudioBatchDeleteButton.UseVisualStyleBackColor = true;
             this.AudioBatchDeleteButton.Click += new System.EventHandler(this.AudioDeleteButton_Click);
             // 
-            // groupBox9
+            // MiscOnePicGroupBox
             // 
-            this.groupBox9.Controls.Add(this.label46);
-            this.groupBox9.Controls.Add(this.OnePicAudioSecondTxt);
-            this.groupBox9.Controls.Add(this.label45);
-            this.groupBox9.Controls.Add(this.OnePicCRFNum);
-            this.groupBox9.Controls.Add(this.label33);
-            this.groupBox9.Controls.Add(this.AudioCopyCheckBox);
-            this.groupBox9.Controls.Add(this.label28);
-            this.groupBox9.Controls.Add(this.OnePicFPSNum);
-            this.groupBox9.Controls.Add(this.label17);
-            this.groupBox9.Controls.Add(this.label27);
-            this.groupBox9.Controls.Add(this.OnePicAudioBitrateNum);
-            this.groupBox9.Controls.Add(this.AudioOnePicOutputButton);
-            this.groupBox9.Controls.Add(this.AudioOnePicButton);
-            this.groupBox9.Controls.Add(this.AudioPicAudioButton);
-            this.groupBox9.Controls.Add(this.AudioPicButton);
-            this.groupBox9.Controls.Add(this.AudioOnePicOutputTextBox);
-            this.groupBox9.Controls.Add(this.AudioPicAudioTextBox);
-            this.groupBox9.Controls.Add(this.AudioPicTextBox);
-            resources.ApplyResources(this.groupBox9, "groupBox9");
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.TabStop = false;
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicDurationSecondsLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicDurationSecondsTextBox);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicDurationLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicCrfNumericUpDown);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicCrfLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicCopyAudioCheckBox);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicFpsLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicFpsNumericUpDown);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicKbpsLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicBitrateLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicBitrateLabelNumericUpDown);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicOutputButton);
+            this.MiscOnePicGroupBox.Controls.Add(this.AudioOnePicButton);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicAudioInputButton);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicInputButton);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicOutputTextBox);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicAudioInputTextBox);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicInputTextBox);
+            resources.ApplyResources(this.MiscOnePicGroupBox, "MiscOnePicGroupBox");
+            this.MiscOnePicGroupBox.Name = "MiscOnePicGroupBox";
+            this.MiscOnePicGroupBox.TabStop = false;
             // 
-            // label46
+            // MiscOnePicDurationSecondsLabel
             // 
-            resources.ApplyResources(this.label46, "label46");
-            this.label46.Name = "label46";
+            resources.ApplyResources(this.MiscOnePicDurationSecondsLabel, "MiscOnePicDurationSecondsLabel");
+            this.MiscOnePicDurationSecondsLabel.Name = "MiscOnePicDurationSecondsLabel";
             // 
-            // OnePicAudioSecondTxt
+            // MiscOnePicDurationSecondsTextBox
             // 
-            resources.ApplyResources(this.OnePicAudioSecondTxt, "OnePicAudioSecondTxt");
-            this.OnePicAudioSecondTxt.Name = "OnePicAudioSecondTxt";
+            resources.ApplyResources(this.MiscOnePicDurationSecondsTextBox, "MiscOnePicDurationSecondsTextBox");
+            this.MiscOnePicDurationSecondsTextBox.Name = "MiscOnePicDurationSecondsTextBox";
             // 
-            // label45
+            // MiscOnePicDurationLabel
             // 
-            resources.ApplyResources(this.label45, "label45");
-            this.label45.Name = "label45";
+            resources.ApplyResources(this.MiscOnePicDurationLabel, "MiscOnePicDurationLabel");
+            this.MiscOnePicDurationLabel.Name = "MiscOnePicDurationLabel";
             // 
-            // OnePicCRFNum
+            // MiscOnePicCrfNumericUpDown
             // 
-            this.OnePicCRFNum.DecimalPlaces = 1;
-            this.OnePicCRFNum.Increment = new decimal(new int[] {
+            this.MiscOnePicCrfNumericUpDown.DecimalPlaces = 1;
+            this.MiscOnePicCrfNumericUpDown.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            resources.ApplyResources(this.OnePicCRFNum, "OnePicCRFNum");
-            this.OnePicCRFNum.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.MiscOnePicCrfNumericUpDown, "MiscOnePicCrfNumericUpDown");
+            this.MiscOnePicCrfNumericUpDown.Maximum = new decimal(new int[] {
             51,
             0,
             0,
             0});
-            this.OnePicCRFNum.Minimum = new decimal(new int[] {
+            this.MiscOnePicCrfNumericUpDown.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.OnePicCRFNum.Name = "OnePicCRFNum";
-            this.OnePicCRFNum.Value = new decimal(new int[] {
+            this.MiscOnePicCrfNumericUpDown.Name = "MiscOnePicCrfNumericUpDown";
+            this.MiscOnePicCrfNumericUpDown.Value = new decimal(new int[] {
             25,
             0,
             0,
             0});
             // 
-            // label33
+            // MiscOnePicCrfLabel
             // 
-            resources.ApplyResources(this.label33, "label33");
-            this.label33.Name = "label33";
+            resources.ApplyResources(this.MiscOnePicCrfLabel, "MiscOnePicCrfLabel");
+            this.MiscOnePicCrfLabel.Name = "MiscOnePicCrfLabel";
             // 
-            // AudioCopyCheckBox
+            // MiscOnePicCopyAudioCheckBox
             // 
-            resources.ApplyResources(this.AudioCopyCheckBox, "AudioCopyCheckBox");
-            this.AudioCopyCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.AudioCopyCheckBox.Name = "AudioCopyCheckBox";
-            this.AudioCopyCheckBox.UseVisualStyleBackColor = false;
-            this.AudioCopyCheckBox.CheckedChanged += new System.EventHandler(this.AudioCopyCheckBox_CheckedChanged);
+            resources.ApplyResources(this.MiscOnePicCopyAudioCheckBox, "MiscOnePicCopyAudioCheckBox");
+            this.MiscOnePicCopyAudioCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.MiscOnePicCopyAudioCheckBox.Name = "MiscOnePicCopyAudioCheckBox";
+            this.MiscOnePicCopyAudioCheckBox.UseVisualStyleBackColor = false;
+            this.MiscOnePicCopyAudioCheckBox.CheckedChanged += new System.EventHandler(this.AudioCopyCheckBox_CheckedChanged);
             // 
-            // label28
+            // MiscOnePicFpsLabel
             // 
-            resources.ApplyResources(this.label28, "label28");
-            this.label28.Name = "label28";
+            resources.ApplyResources(this.MiscOnePicFpsLabel, "MiscOnePicFpsLabel");
+            this.MiscOnePicFpsLabel.Name = "MiscOnePicFpsLabel";
             // 
-            // OnePicFPSNum
+            // MiscOnePicFpsNumericUpDown
             // 
-            resources.ApplyResources(this.OnePicFPSNum, "OnePicFPSNum");
-            this.OnePicFPSNum.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.MiscOnePicFpsNumericUpDown, "MiscOnePicFpsNumericUpDown");
+            this.MiscOnePicFpsNumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.OnePicFPSNum.Minimum = new decimal(new int[] {
+            this.MiscOnePicFpsNumericUpDown.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.OnePicFPSNum.Name = "OnePicFPSNum";
-            this.OnePicFPSNum.Value = new decimal(new int[] {
+            this.MiscOnePicFpsNumericUpDown.Name = "MiscOnePicFpsNumericUpDown";
+            this.MiscOnePicFpsNumericUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // label17
+            // MiscOnePicKbpsLabel
             // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
+            resources.ApplyResources(this.MiscOnePicKbpsLabel, "MiscOnePicKbpsLabel");
+            this.MiscOnePicKbpsLabel.Name = "MiscOnePicKbpsLabel";
             // 
-            // label27
+            // MiscOnePicBitrateLabel
             // 
-            resources.ApplyResources(this.label27, "label27");
-            this.label27.Name = "label27";
+            resources.ApplyResources(this.MiscOnePicBitrateLabel, "MiscOnePicBitrateLabel");
+            this.MiscOnePicBitrateLabel.Name = "MiscOnePicBitrateLabel";
             // 
-            // OnePicAudioBitrateNum
+            // MiscOnePicBitrateLabelNumericUpDown
             // 
-            resources.ApplyResources(this.OnePicAudioBitrateNum, "OnePicAudioBitrateNum");
-            this.OnePicAudioBitrateNum.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.MiscOnePicBitrateLabelNumericUpDown, "MiscOnePicBitrateLabelNumericUpDown");
+            this.MiscOnePicBitrateLabelNumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.OnePicAudioBitrateNum.Name = "OnePicAudioBitrateNum";
-            this.OnePicAudioBitrateNum.Value = new decimal(new int[] {
+            this.MiscOnePicBitrateLabelNumericUpDown.Name = "MiscOnePicBitrateLabelNumericUpDown";
+            this.MiscOnePicBitrateLabelNumericUpDown.Value = new decimal(new int[] {
             128,
             0,
             0,
             0});
             // 
-            // AudioOnePicOutputButton
+            // MiscOnePicOutputButton
             // 
-            resources.ApplyResources(this.AudioOnePicOutputButton, "AudioOnePicOutputButton");
-            this.AudioOnePicOutputButton.Name = "AudioOnePicOutputButton";
-            this.AudioOnePicOutputButton.UseVisualStyleBackColor = true;
-            this.AudioOnePicOutputButton.Click += new System.EventHandler(this.AudioOnePicOutputButton_Click);
+            resources.ApplyResources(this.MiscOnePicOutputButton, "MiscOnePicOutputButton");
+            this.MiscOnePicOutputButton.Name = "MiscOnePicOutputButton";
+            this.MiscOnePicOutputButton.UseVisualStyleBackColor = true;
+            this.MiscOnePicOutputButton.Click += new System.EventHandler(this.AudioOnePicOutputButton_Click);
             // 
             // AudioOnePicButton
             // 
@@ -1975,49 +1975,49 @@
             this.AudioOnePicButton.UseVisualStyleBackColor = true;
             this.AudioOnePicButton.Click += new System.EventHandler(this.AudioOnePicButton_Click);
             // 
-            // AudioPicAudioButton
+            // MiscOnePicAudioInputButton
             // 
-            resources.ApplyResources(this.AudioPicAudioButton, "AudioPicAudioButton");
-            this.AudioPicAudioButton.Name = "AudioPicAudioButton";
-            this.AudioPicAudioButton.UseVisualStyleBackColor = true;
-            this.AudioPicAudioButton.Click += new System.EventHandler(this.AudioPicAudioButton_Click);
+            resources.ApplyResources(this.MiscOnePicAudioInputButton, "MiscOnePicAudioInputButton");
+            this.MiscOnePicAudioInputButton.Name = "MiscOnePicAudioInputButton";
+            this.MiscOnePicAudioInputButton.UseVisualStyleBackColor = true;
+            this.MiscOnePicAudioInputButton.Click += new System.EventHandler(this.AudioPicAudioButton_Click);
             // 
-            // AudioPicButton
+            // MiscOnePicInputButton
             // 
-            resources.ApplyResources(this.AudioPicButton, "AudioPicButton");
-            this.AudioPicButton.Name = "AudioPicButton";
-            this.AudioPicButton.UseVisualStyleBackColor = true;
-            this.AudioPicButton.Click += new System.EventHandler(this.AudioPicButton_Click);
+            resources.ApplyResources(this.MiscOnePicInputButton, "MiscOnePicInputButton");
+            this.MiscOnePicInputButton.Name = "MiscOnePicInputButton";
+            this.MiscOnePicInputButton.UseVisualStyleBackColor = true;
+            this.MiscOnePicInputButton.Click += new System.EventHandler(this.AudioPicButton_Click);
             // 
-            // AudioOnePicOutputTextBox
+            // MiscOnePicOutputTextBox
             // 
-            this.AudioOnePicOutputTextBox.AllowDrop = true;
-            this.AudioOnePicOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AudioOnePicOutputTextBox.EmptyTextTip = null;
-            this.AudioOnePicOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.AudioOnePicOutputTextBox, "AudioOnePicOutputTextBox");
-            this.AudioOnePicOutputTextBox.Name = "AudioOnePicOutputTextBox";
+            this.MiscOnePicOutputTextBox.AllowDrop = true;
+            this.MiscOnePicOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiscOnePicOutputTextBox.EmptyTextTip = null;
+            this.MiscOnePicOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MiscOnePicOutputTextBox, "MiscOnePicOutputTextBox");
+            this.MiscOnePicOutputTextBox.Name = "MiscOnePicOutputTextBox";
             // 
-            // AudioPicAudioTextBox
+            // MiscOnePicAudioInputTextBox
             // 
-            this.AudioPicAudioTextBox.AllowDrop = true;
-            this.AudioPicAudioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AudioPicAudioTextBox.EmptyTextTip = null;
-            this.AudioPicAudioTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.AudioPicAudioTextBox, "AudioPicAudioTextBox");
-            this.AudioPicAudioTextBox.Name = "AudioPicAudioTextBox";
-            this.AudioPicAudioTextBox.ReadOnly = true;
-            this.AudioPicAudioTextBox.TextChanged += new System.EventHandler(this.AudioPicAudioTextBox_TextChanged);
+            this.MiscOnePicAudioInputTextBox.AllowDrop = true;
+            this.MiscOnePicAudioInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiscOnePicAudioInputTextBox.EmptyTextTip = null;
+            this.MiscOnePicAudioInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MiscOnePicAudioInputTextBox, "MiscOnePicAudioInputTextBox");
+            this.MiscOnePicAudioInputTextBox.Name = "MiscOnePicAudioInputTextBox";
+            this.MiscOnePicAudioInputTextBox.ReadOnly = true;
+            this.MiscOnePicAudioInputTextBox.TextChanged += new System.EventHandler(this.AudioPicAudioTextBox_TextChanged);
             // 
-            // AudioPicTextBox
+            // MiscOnePicInputTextBox
             // 
-            this.AudioPicTextBox.AllowDrop = true;
-            this.AudioPicTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AudioPicTextBox.EmptyTextTip = null;
-            this.AudioPicTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.AudioPicTextBox, "AudioPicTextBox");
-            this.AudioPicTextBox.Name = "AudioPicTextBox";
-            this.AudioPicTextBox.ReadOnly = true;
+            this.MiscOnePicInputTextBox.AllowDrop = true;
+            this.MiscOnePicInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiscOnePicInputTextBox.EmptyTextTip = null;
+            this.MiscOnePicInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MiscOnePicInputTextBox, "MiscOnePicInputTextBox");
+            this.MiscOnePicInputTextBox.Name = "MiscOnePicInputTextBox";
+            this.MiscOnePicInputTextBox.ReadOnly = true;
             // 
             // VideoTab
             // 
@@ -2606,207 +2606,207 @@
             // 
             // MiscTab
             // 
-            this.MiscTab.Controls.Add(this.groupBox11);
-            this.MiscTab.Controls.Add(this.groupBox10);
-            this.MiscTab.Controls.Add(this.groupBox9);
+            this.MiscTab.Controls.Add(this.MiscBlackGroupBox);
+            this.MiscTab.Controls.Add(this.MiscMiscGroupBox);
+            this.MiscTab.Controls.Add(this.MiscOnePicGroupBox);
             resources.ApplyResources(this.MiscTab, "MiscTab");
             this.MiscTab.Name = "MiscTab";
             this.MiscTab.UseVisualStyleBackColor = true;
             // 
-            // groupBox11
+            // MiscBlackGroupBox
             // 
-            this.groupBox11.Controls.Add(this.label37);
-            this.groupBox11.Controls.Add(this.label36);
-            this.groupBox11.Controls.Add(this.BlackBitrateNum);
-            this.groupBox11.Controls.Add(this.label35);
-            this.groupBox11.Controls.Add(this.BlackSecondComboBox);
-            this.groupBox11.Controls.Add(this.label34);
-            this.groupBox11.Controls.Add(this.BlackCRFNum);
-            this.groupBox11.Controls.Add(this.label32);
-            this.groupBox11.Controls.Add(this.BlackNoPicCheckBox);
-            this.groupBox11.Controls.Add(this.label31);
-            this.groupBox11.Controls.Add(this.BlackFPSNum);
-            this.groupBox11.Controls.Add(this.BlackPicButton);
-            this.groupBox11.Controls.Add(this.BlackPicTextBox);
-            this.groupBox11.Controls.Add(this.BlackStartButton);
-            this.groupBox11.Controls.Add(this.BlackOutputButton);
-            this.groupBox11.Controls.Add(this.BlackVideoButton);
-            this.groupBox11.Controls.Add(this.BlackOutputTextBox);
-            this.groupBox11.Controls.Add(this.BlackVideoTextBox);
-            resources.ApplyResources(this.groupBox11, "groupBox11");
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.TabStop = false;
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackKbpsLabel);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackBitrateLabel);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackBitrateNumericUpDown);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationSecondsLabel);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationSecondsComboBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationLabel);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackCrfNumericUpDown);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackCrfLabel);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackNoPicCheckBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsComboBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsNumericUpDown);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackPicInputButton);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackPicInputTextBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackStartButton);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackOutputButton);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackVideoInputButton);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackOutputTextBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackVideoInputTextBox);
+            resources.ApplyResources(this.MiscBlackGroupBox, "MiscBlackGroupBox");
+            this.MiscBlackGroupBox.Name = "MiscBlackGroupBox";
+            this.MiscBlackGroupBox.TabStop = false;
             // 
-            // label37
+            // MiscBlackKbpsLabel
             // 
-            resources.ApplyResources(this.label37, "label37");
-            this.label37.Name = "label37";
+            resources.ApplyResources(this.MiscBlackKbpsLabel, "MiscBlackKbpsLabel");
+            this.MiscBlackKbpsLabel.Name = "MiscBlackKbpsLabel";
             // 
-            // label36
+            // MiscBlackBitrateLabel
             // 
-            resources.ApplyResources(this.label36, "label36");
-            this.label36.Name = "label36";
+            resources.ApplyResources(this.MiscBlackBitrateLabel, "MiscBlackBitrateLabel");
+            this.MiscBlackBitrateLabel.Name = "MiscBlackBitrateLabel";
             // 
-            // BlackBitrateNum
+            // MiscBlackBitrateNumericUpDown
             // 
-            resources.ApplyResources(this.BlackBitrateNum, "BlackBitrateNum");
-            this.BlackBitrateNum.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.MiscBlackBitrateNumericUpDown, "MiscBlackBitrateNumericUpDown");
+            this.MiscBlackBitrateNumericUpDown.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.BlackBitrateNum.Name = "BlackBitrateNum";
-            this.BlackBitrateNum.Value = new decimal(new int[] {
+            this.MiscBlackBitrateNumericUpDown.Name = "MiscBlackBitrateNumericUpDown";
+            this.MiscBlackBitrateNumericUpDown.Value = new decimal(new int[] {
             900,
             0,
             0,
             0});
             // 
-            // label35
+            // MiscBlackDurationSecondsLabel
             // 
-            resources.ApplyResources(this.label35, "label35");
-            this.label35.Name = "label35";
+            resources.ApplyResources(this.MiscBlackDurationSecondsLabel, "MiscBlackDurationSecondsLabel");
+            this.MiscBlackDurationSecondsLabel.Name = "MiscBlackDurationSecondsLabel";
             // 
-            // BlackSecondComboBox
+            // MiscBlackDurationSecondsComboBox
             // 
-            this.BlackSecondComboBox.FormattingEnabled = true;
-            this.BlackSecondComboBox.Items.AddRange(new object[] {
-            resources.GetString("BlackSecondComboBox.Items"),
-            resources.GetString("BlackSecondComboBox.Items1"),
-            resources.GetString("BlackSecondComboBox.Items2"),
-            resources.GetString("BlackSecondComboBox.Items3"),
-            resources.GetString("BlackSecondComboBox.Items4")});
-            resources.ApplyResources(this.BlackSecondComboBox, "BlackSecondComboBox");
-            this.BlackSecondComboBox.Name = "BlackSecondComboBox";
-            this.BlackSecondComboBox.SelectedIndexChanged += new System.EventHandler(this.BlackSecondComboBox_SelectedIndexChanged);
+            this.MiscBlackDurationSecondsComboBox.FormattingEnabled = true;
+            this.MiscBlackDurationSecondsComboBox.Items.AddRange(new object[] {
+            resources.GetString("MiscBlackDurationSecondsComboBox.Items"),
+            resources.GetString("MiscBlackDurationSecondsComboBox.Items1"),
+            resources.GetString("MiscBlackDurationSecondsComboBox.Items2"),
+            resources.GetString("MiscBlackDurationSecondsComboBox.Items3"),
+            resources.GetString("MiscBlackDurationSecondsComboBox.Items4")});
+            resources.ApplyResources(this.MiscBlackDurationSecondsComboBox, "MiscBlackDurationSecondsComboBox");
+            this.MiscBlackDurationSecondsComboBox.Name = "MiscBlackDurationSecondsComboBox";
+            this.MiscBlackDurationSecondsComboBox.SelectedIndexChanged += new System.EventHandler(this.BlackSecondComboBox_SelectedIndexChanged);
             // 
-            // label34
+            // MiscBlackDurationLabel
             // 
-            resources.ApplyResources(this.label34, "label34");
-            this.label34.Name = "label34";
+            resources.ApplyResources(this.MiscBlackDurationLabel, "MiscBlackDurationLabel");
+            this.MiscBlackDurationLabel.Name = "MiscBlackDurationLabel";
             // 
-            // BlackCRFNum
+            // MiscBlackCrfNumericUpDown
             // 
-            this.BlackCRFNum.DecimalPlaces = 1;
-            this.BlackCRFNum.Increment = new decimal(new int[] {
+            this.MiscBlackCrfNumericUpDown.DecimalPlaces = 1;
+            this.MiscBlackCrfNumericUpDown.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            resources.ApplyResources(this.BlackCRFNum, "BlackCRFNum");
-            this.BlackCRFNum.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.MiscBlackCrfNumericUpDown, "MiscBlackCrfNumericUpDown");
+            this.MiscBlackCrfNumericUpDown.Maximum = new decimal(new int[] {
             63,
             0,
             0,
             0});
-            this.BlackCRFNum.Minimum = new decimal(new int[] {
+            this.MiscBlackCrfNumericUpDown.Minimum = new decimal(new int[] {
             12,
             0,
             0,
             -2147483648});
-            this.BlackCRFNum.Name = "BlackCRFNum";
-            this.BlackCRFNum.Value = new decimal(new int[] {
+            this.MiscBlackCrfNumericUpDown.Name = "MiscBlackCrfNumericUpDown";
+            this.MiscBlackCrfNumericUpDown.Value = new decimal(new int[] {
             51,
             0,
             0,
             0});
             // 
-            // label32
+            // MiscBlackCrfLabel
             // 
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.Name = "label32";
+            resources.ApplyResources(this.MiscBlackCrfLabel, "MiscBlackCrfLabel");
+            this.MiscBlackCrfLabel.Name = "MiscBlackCrfLabel";
             // 
-            // BlackNoPicCheckBox
+            // MiscBlackNoPicCheckBox
             // 
-            resources.ApplyResources(this.BlackNoPicCheckBox, "BlackNoPicCheckBox");
-            this.BlackNoPicCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.BlackNoPicCheckBox.Checked = true;
-            this.BlackNoPicCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.BlackNoPicCheckBox.Name = "BlackNoPicCheckBox";
-            this.BlackNoPicCheckBox.UseVisualStyleBackColor = false;
-            this.BlackNoPicCheckBox.CheckedChanged += new System.EventHandler(this.BlackNoPicCheckBox_CheckedChanged);
+            resources.ApplyResources(this.MiscBlackNoPicCheckBox, "MiscBlackNoPicCheckBox");
+            this.MiscBlackNoPicCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.MiscBlackNoPicCheckBox.Checked = true;
+            this.MiscBlackNoPicCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.MiscBlackNoPicCheckBox.Name = "MiscBlackNoPicCheckBox";
+            this.MiscBlackNoPicCheckBox.UseVisualStyleBackColor = false;
+            this.MiscBlackNoPicCheckBox.CheckedChanged += new System.EventHandler(this.BlackNoPicCheckBox_CheckedChanged);
             // 
-            // label31
+            // MiscBlackFpsComboBox
             // 
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.Name = "label31";
+            resources.ApplyResources(this.MiscBlackFpsComboBox, "MiscBlackFpsComboBox");
+            this.MiscBlackFpsComboBox.Name = "MiscBlackFpsComboBox";
             // 
-            // BlackFPSNum
+            // MiscBlackFpsNumericUpDown
             // 
-            resources.ApplyResources(this.BlackFPSNum, "BlackFPSNum");
-            this.BlackFPSNum.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.MiscBlackFpsNumericUpDown, "MiscBlackFpsNumericUpDown");
+            this.MiscBlackFpsNumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.BlackFPSNum.Minimum = new decimal(new int[] {
+            this.MiscBlackFpsNumericUpDown.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.BlackFPSNum.Name = "BlackFPSNum";
-            this.BlackFPSNum.Value = new decimal(new int[] {
+            this.MiscBlackFpsNumericUpDown.Name = "MiscBlackFpsNumericUpDown";
+            this.MiscBlackFpsNumericUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // BlackPicButton
+            // MiscBlackPicInputButton
             // 
-            resources.ApplyResources(this.BlackPicButton, "BlackPicButton");
-            this.BlackPicButton.Name = "BlackPicButton";
-            this.BlackPicButton.UseVisualStyleBackColor = true;
-            this.BlackPicButton.Click += new System.EventHandler(this.BlackPicButton_Click);
+            resources.ApplyResources(this.MiscBlackPicInputButton, "MiscBlackPicInputButton");
+            this.MiscBlackPicInputButton.Name = "MiscBlackPicInputButton";
+            this.MiscBlackPicInputButton.UseVisualStyleBackColor = true;
+            this.MiscBlackPicInputButton.Click += new System.EventHandler(this.BlackPicButton_Click);
             // 
-            // BlackPicTextBox
+            // MiscBlackPicInputTextBox
             // 
-            this.BlackPicTextBox.AllowDrop = true;
-            this.BlackPicTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BlackPicTextBox.EmptyTextTip = null;
-            this.BlackPicTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.BlackPicTextBox, "BlackPicTextBox");
-            this.BlackPicTextBox.Name = "BlackPicTextBox";
+            this.MiscBlackPicInputTextBox.AllowDrop = true;
+            this.MiscBlackPicInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiscBlackPicInputTextBox.EmptyTextTip = null;
+            this.MiscBlackPicInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MiscBlackPicInputTextBox, "MiscBlackPicInputTextBox");
+            this.MiscBlackPicInputTextBox.Name = "MiscBlackPicInputTextBox";
             // 
-            // BlackStartButton
+            // MiscBlackStartButton
             // 
-            resources.ApplyResources(this.BlackStartButton, "BlackStartButton");
-            this.BlackStartButton.Name = "BlackStartButton";
-            this.BlackStartButton.UseVisualStyleBackColor = true;
-            this.BlackStartButton.Click += new System.EventHandler(this.BlackStartButton_Click);
+            resources.ApplyResources(this.MiscBlackStartButton, "MiscBlackStartButton");
+            this.MiscBlackStartButton.Name = "MiscBlackStartButton";
+            this.MiscBlackStartButton.UseVisualStyleBackColor = true;
+            this.MiscBlackStartButton.Click += new System.EventHandler(this.BlackStartButton_Click);
             // 
-            // BlackOutputButton
+            // MiscBlackOutputButton
             // 
-            resources.ApplyResources(this.BlackOutputButton, "BlackOutputButton");
-            this.BlackOutputButton.Name = "BlackOutputButton";
-            this.BlackOutputButton.UseVisualStyleBackColor = true;
-            this.BlackOutputButton.Click += new System.EventHandler(this.BlackOutputButton_Click);
+            resources.ApplyResources(this.MiscBlackOutputButton, "MiscBlackOutputButton");
+            this.MiscBlackOutputButton.Name = "MiscBlackOutputButton";
+            this.MiscBlackOutputButton.UseVisualStyleBackColor = true;
+            this.MiscBlackOutputButton.Click += new System.EventHandler(this.BlackOutputButton_Click);
             // 
-            // BlackVideoButton
+            // MiscBlackVideoInputButton
             // 
-            resources.ApplyResources(this.BlackVideoButton, "BlackVideoButton");
-            this.BlackVideoButton.Name = "BlackVideoButton";
-            this.BlackVideoButton.UseVisualStyleBackColor = true;
-            this.BlackVideoButton.Click += new System.EventHandler(this.BlackVideoButton_Click);
+            resources.ApplyResources(this.MiscBlackVideoInputButton, "MiscBlackVideoInputButton");
+            this.MiscBlackVideoInputButton.Name = "MiscBlackVideoInputButton";
+            this.MiscBlackVideoInputButton.UseVisualStyleBackColor = true;
+            this.MiscBlackVideoInputButton.Click += new System.EventHandler(this.BlackVideoButton_Click);
             // 
-            // BlackOutputTextBox
+            // MiscBlackOutputTextBox
             // 
-            this.BlackOutputTextBox.AllowDrop = true;
-            this.BlackOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BlackOutputTextBox.EmptyTextTip = null;
-            this.BlackOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.BlackOutputTextBox, "BlackOutputTextBox");
-            this.BlackOutputTextBox.Name = "BlackOutputTextBox";
+            this.MiscBlackOutputTextBox.AllowDrop = true;
+            this.MiscBlackOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiscBlackOutputTextBox.EmptyTextTip = null;
+            this.MiscBlackOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MiscBlackOutputTextBox, "MiscBlackOutputTextBox");
+            this.MiscBlackOutputTextBox.Name = "MiscBlackOutputTextBox";
             // 
-            // BlackVideoTextBox
+            // MiscBlackVideoInputTextBox
             // 
-            this.BlackVideoTextBox.AllowDrop = true;
-            this.BlackVideoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BlackVideoTextBox.EmptyTextTip = null;
-            this.BlackVideoTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.BlackVideoTextBox, "BlackVideoTextBox");
-            this.BlackVideoTextBox.Name = "BlackVideoTextBox";
-            this.BlackVideoTextBox.ReadOnly = true;
-            this.BlackVideoTextBox.TextChanged += new System.EventHandler(this.BlackVideoTextBox_TextChanged);
+            this.MiscBlackVideoInputTextBox.AllowDrop = true;
+            this.MiscBlackVideoInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiscBlackVideoInputTextBox.EmptyTextTip = null;
+            this.MiscBlackVideoInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MiscBlackVideoInputTextBox, "MiscBlackVideoInputTextBox");
+            this.MiscBlackVideoInputTextBox.Name = "MiscBlackVideoInputTextBox";
+            this.MiscBlackVideoInputTextBox.ReadOnly = true;
+            this.MiscBlackVideoInputTextBox.TextChanged += new System.EventHandler(this.BlackVideoTextBox_TextChanged);
             // 
             // SetupTabPage
             // 
@@ -3018,8 +3018,8 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
+            this.MiscMiscGroupBox.ResumeLayout(false);
+            this.MiscMiscGroupBox.PerformLayout();
             this.MediaInfoTab.ResumeLayout(false);
             this.MediaInfoTab.PerformLayout();
             this.AVSTab.ResumeLayout(false);
@@ -3058,11 +3058,11 @@
             this.AudioAudioModePanel.ResumeLayout(false);
             this.AudioBatchGroupBox.ResumeLayout(false);
             this.AudioBatchGroupBox.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OnePicCRFNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OnePicFPSNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OnePicAudioBitrateNum)).EndInit();
+            this.MiscOnePicGroupBox.ResumeLayout(false);
+            this.MiscOnePicGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscOnePicCrfNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscOnePicFpsNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscOnePicBitrateLabelNumericUpDown)).EndInit();
             this.VideoTab.ResumeLayout(false);
             this.VideoTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VideoFramesNumericUpDown)).EndInit();
@@ -3079,11 +3079,11 @@
             this.HelpTab.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.MiscTab.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BlackBitrateNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BlackCRFNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BlackFPSNum)).EndInit();
+            this.MiscBlackGroupBox.ResumeLayout(false);
+            this.MiscBlackGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackBitrateNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackCrfNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackFpsNumericUpDown)).EndInit();
             this.SetupTabPage.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
@@ -3099,15 +3099,15 @@
 
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private ControlExs.QQButton btnClip;
-        private System.Windows.Forms.MaskedTextBox maske;
-        private System.Windows.Forms.MaskedTextBox maskb;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label13;
-        private ControlExs.QQTextBox txtout5;
-        private ControlExs.QQTextBox txtvideo4;
-        private ControlExs.QQButton btnout5;
-        private ControlExs.QQButton btnvideo4;
+        private ControlExs.QQButton MiscMiscClipButton;
+        private System.Windows.Forms.MaskedTextBox MiscMiscEndTimeMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox MiscMiscBeginTimeMaskedTextBox;
+        private System.Windows.Forms.Label MiscMiscEndTimeLabel;
+        private System.Windows.Forms.Label MiscMiscBeginTimeLabel;
+        private ControlExs.QQTextBox MiscMiscVideoOutputTextBox;
+        private ControlExs.QQTextBox MiscMiscVideoInputTextBox;
+        private ControlExs.QQButton MiscMiscVideoOutputButton;
+        private ControlExs.QQButton MiscMiscVideoInputButton;
         private System.Windows.Forms.TabPage MediaInfoTab;
         private ControlExs.QQButton btnMIopen;
         private ControlExs.QQButton btnMIplay;
@@ -3230,7 +3230,7 @@
         private System.Windows.Forms.TabControl tabControl;
         private ControlExs.QQRadioButton AudioAudioModeBitrateRadioButton;
         private ControlExs.QQRadioButton AudioAudioModeCustomRadioButton;
-        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox MiscMiscGroupBox;
         private System.Windows.Forms.ListBox AudioBatchItemListBox;
         private ControlExs.QQButton AudioBatchAddButton;
         private ControlExs.QQButton AudioBatchClearButton;
@@ -3297,42 +3297,42 @@
         private ControlExs.QQButton MkvExtract3Button;
         private ControlExs.QQButton MkvExtract2Button;
         private ControlExs.QQButton MkvExtract1Button;
-        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox MiscOnePicGroupBox;
         private ControlExs.QQButton AudioOnePicButton;
-        private ControlExs.QQButton AudioPicAudioButton;
-        private ControlExs.QQButton AudioPicButton;
-        private ControlExs.QQTextBox AudioPicAudioTextBox;
-        private ControlExs.QQTextBox AudioPicTextBox;
-        private ControlExs.QQButton AudioOnePicOutputButton;
-        private ControlExs.QQTextBox AudioOnePicOutputTextBox;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.NumericUpDown OnePicAudioBitrateNum;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.NumericUpDown OnePicFPSNum;
-        private ControlExs.QQCheckBox AudioCopyCheckBox;
+        private ControlExs.QQButton MiscOnePicAudioInputButton;
+        private ControlExs.QQButton MiscOnePicInputButton;
+        private ControlExs.QQTextBox MiscOnePicAudioInputTextBox;
+        private ControlExs.QQTextBox MiscOnePicInputTextBox;
+        private ControlExs.QQButton MiscOnePicOutputButton;
+        private ControlExs.QQTextBox MiscOnePicOutputTextBox;
+        private System.Windows.Forms.Label MiscOnePicKbpsLabel;
+        private System.Windows.Forms.Label MiscOnePicBitrateLabel;
+        private System.Windows.Forms.NumericUpDown MiscOnePicBitrateLabelNumericUpDown;
+        private System.Windows.Forms.Label MiscOnePicFpsLabel;
+        private System.Windows.Forms.NumericUpDown MiscOnePicFpsNumericUpDown;
+        private ControlExs.QQCheckBox MiscOnePicCopyAudioCheckBox;
         private System.Windows.Forms.TabPage MiscTab;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private ControlExs.QQButton BlackStartButton;
-        private ControlExs.QQButton BlackOutputButton;
-        private ControlExs.QQButton BlackVideoButton;
-        private ControlExs.QQTextBox BlackOutputTextBox;
-        private ControlExs.QQTextBox BlackVideoTextBox;
-        private ControlExs.QQButton BlackPicButton;
-        private ControlExs.QQTextBox BlackPicTextBox;
-        private System.Windows.Forms.NumericUpDown OnePicCRFNum;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.NumericUpDown BlackCRFNum;
-        private System.Windows.Forms.Label label32;
-        private ControlExs.QQCheckBox BlackNoPicCheckBox;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.NumericUpDown BlackFPSNum;
-        private System.Windows.Forms.ComboBox BlackSecondComboBox;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.NumericUpDown BlackBitrateNum;
+        private System.Windows.Forms.GroupBox MiscBlackGroupBox;
+        private ControlExs.QQButton MiscBlackStartButton;
+        private ControlExs.QQButton MiscBlackOutputButton;
+        private ControlExs.QQButton MiscBlackVideoInputButton;
+        private ControlExs.QQTextBox MiscBlackOutputTextBox;
+        private ControlExs.QQTextBox MiscBlackVideoInputTextBox;
+        private ControlExs.QQButton MiscBlackPicInputButton;
+        private ControlExs.QQTextBox MiscBlackPicInputTextBox;
+        private System.Windows.Forms.NumericUpDown MiscOnePicCrfNumericUpDown;
+        private System.Windows.Forms.Label MiscOnePicCrfLabel;
+        private System.Windows.Forms.NumericUpDown MiscBlackCrfNumericUpDown;
+        private System.Windows.Forms.Label MiscBlackCrfLabel;
+        private ControlExs.QQCheckBox MiscBlackNoPicCheckBox;
+        private System.Windows.Forms.Label MiscBlackFpsComboBox;
+        private System.Windows.Forms.NumericUpDown MiscBlackFpsNumericUpDown;
+        private System.Windows.Forms.ComboBox MiscBlackDurationSecondsComboBox;
+        private System.Windows.Forms.Label MiscBlackDurationLabel;
+        private System.Windows.Forms.Label MiscBlackDurationSecondsLabel;
+        private System.Windows.Forms.Label MiscBlackKbpsLabel;
+        private System.Windows.Forms.Label MiscBlackBitrateLabel;
+        private System.Windows.Forms.NumericUpDown MiscBlackBitrateNumericUpDown;
         private ControlExs.QQCheckBox SetupDeleteTempFileCheckBox;
         private System.Windows.Forms.ComboBox AudioBitrateComboBox;
         private ControlExs.QQButton CheckUpdateButton;
@@ -3360,9 +3360,9 @@
         private ControlExs.QQButton MuxReplaceAudioButton;
         private ControlExs.QQButton FeedbackButton;
         private ControlExs.QQCheckBox CheckUpdateCheckBox;
-        private System.Windows.Forms.ComboBox TransposeComboBox;
-        private ControlExs.QQButton RotateButton;
-        private System.Windows.Forms.Label TransposeLabel;
+        private System.Windows.Forms.ComboBox MiscMiscTransposeComboBox;
+        private ControlExs.QQButton MiscMiscRotateButton;
+        private System.Windows.Forms.Label MiscMiscTransposeLabel;
         private System.Windows.Forms.Label VideoBatchFormatLabel;
         private System.Windows.Forms.ComboBox VideoBatchFormatComboBox;
         private System.Windows.Forms.ComboBox AudioPresetComboBox;
@@ -3377,9 +3377,9 @@
         private ControlExs.QQCheckBox x265CheckBox;
         private ControlExs.QQButton AudioPresetDeleteButton;
         private ControlExs.QQButton AudioPresetAddButton;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox OnePicAudioSecondTxt;
-        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label MiscOnePicDurationSecondsLabel;
+        private System.Windows.Forms.TextBox MiscOnePicDurationSecondsTextBox;
+        private System.Windows.Forms.Label MiscOnePicDurationLabel;
     }
 }
 

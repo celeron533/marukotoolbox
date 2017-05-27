@@ -833,20 +833,20 @@ namespace mp4box
 
         private void txtvideo4_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(txtvideo4.Text.ToString()))
+            if (File.Exists(MiscMiscVideoInputTextBox.Text.ToString()))
             {
-                namevideo4 = txtvideo4.Text;
+                namevideo4 = MiscMiscVideoInputTextBox.Text;
                 //string finish = namevideo4.Insert(namevideo4.LastIndexOf(".")-1,"");
                 //string ext = namevideo4.Substring(namevideo4.LastIndexOf(".") + 1, 3);
                 //finish += "_clip." + ext;
                 string finish = namevideo4.Insert(namevideo4.LastIndexOf("."), "_output");
-                txtout5.Text = finish;
+                MiscMiscVideoOutputTextBox.Text = finish;
             }
         }
 
         private void txtout5_TextChanged(object sender, EventArgs e)
         {
-            nameout5 = txtout5.Text;
+            nameout5 = MiscMiscVideoOutputTextBox.Text;
         }
 
         private void btnvideo4_Click(object sender, EventArgs e)
@@ -856,7 +856,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 namevideo4 = openFileDialog1.FileName;
-                txtvideo4.Text = namevideo4;
+                MiscMiscVideoInputTextBox.Text = namevideo4;
             }
         }
 
@@ -868,7 +868,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 nameout5 = savefile.FileName;
-                txtout5.Text = nameout5;
+                MiscMiscVideoOutputTextBox.Text = nameout5;
             }
         }
 
@@ -908,18 +908,18 @@ namespace mp4box
 
             #region General Tab
 
-            OnePicAudioBitrateNum.Value = 128;
-            OnePicFPSNum.Value = 1;
-            OnePicCRFNum.Value = 24;
+            MiscOnePicBitrateLabelNumericUpDown.Value = 128;
+            MiscOnePicFpsNumericUpDown.Value = 1;
+            MiscOnePicCrfNumericUpDown.Value = 24;
 
-            BlackFPSNum.Value = 1;
-            BlackCRFNum.Value = 51;
-            BlackBitrateNum.Value = 900;
+            MiscBlackFpsNumericUpDown.Value = 1;
+            MiscBlackCrfNumericUpDown.Value = 51;
+            MiscBlackBitrateNumericUpDown.Value = 900;
 
-            maskb.Text = "000000";
-            maske.Text = "000020";
+            MiscMiscBeginTimeMaskedTextBox.Text = "000000";
+            MiscMiscEndTimeMaskedTextBox.Text = "000020";
 
-            TransposeComboBox.SelectedIndex = 1;
+            MiscMiscTransposeComboBox.SelectedIndex = 1;
 
             #endregion General Tab
 
@@ -973,12 +973,12 @@ namespace mp4box
                 AVSScriptTextBox.Text = ConfigurationManager.AppSettings["AVSScript"];
                 AudioEncoderComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["AudioEncoder"]);
                 AudioBitrateComboBox.Text = ConfigurationManager.AppSettings["AudioBitrate"];
-                OnePicAudioBitrateNum.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicAudioBitrate"]);
-                OnePicFPSNum.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicFPS"]);
-                OnePicCRFNum.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicCRF"]);
-                BlackFPSNum.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackFPS"]);
-                BlackCRFNum.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackCRF"]);
-                BlackBitrateNum.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackBitrate"]);
+                MiscOnePicBitrateLabelNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicAudioBitrate"]);
+                MiscOnePicFpsNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicFPS"]);
+                MiscOnePicCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicCRF"]);
+                MiscBlackFpsNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackFPS"]);
+                MiscBlackCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackCRF"]);
+                MiscBlackBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackBitrate"]);
                 SetupDeleteTempFileCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["SetupDeleteTempFile"]);
                 CheckUpdateCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["CheckUpdate"]);
                 x264ThreadsComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Threads"]);
@@ -1057,12 +1057,12 @@ namespace mp4box
             cfa.AppSettings.Settings["AVSScript"].Value = AVSScriptTextBox.Text;
             cfa.AppSettings.Settings["AudioEncoder"].Value = AudioEncoderComboBox.SelectedIndex.ToString();
             cfa.AppSettings.Settings["AudioParameter"].Value = AudioBitrateComboBox.Text;
-            cfa.AppSettings.Settings["OnePicAudioBitrate"].Value = OnePicAudioBitrateNum.Value.ToString();
-            cfa.AppSettings.Settings["OnePicFPS"].Value = OnePicFPSNum.Value.ToString();
-            cfa.AppSettings.Settings["OnePicCRF"].Value = OnePicCRFNum.Value.ToString();
-            cfa.AppSettings.Settings["BlackFPS"].Value = BlackFPSNum.Value.ToString();
-            cfa.AppSettings.Settings["BlackCRF"].Value = BlackCRFNum.Value.ToString();
-            cfa.AppSettings.Settings["BlackBitrate"].Value = BlackBitrateNum.Value.ToString();
+            cfa.AppSettings.Settings["OnePicAudioBitrate"].Value = MiscOnePicBitrateLabelNumericUpDown.Value.ToString();
+            cfa.AppSettings.Settings["OnePicFPS"].Value = MiscOnePicFpsNumericUpDown.Value.ToString();
+            cfa.AppSettings.Settings["OnePicCRF"].Value = MiscOnePicCrfNumericUpDown.Value.ToString();
+            cfa.AppSettings.Settings["BlackFPS"].Value = MiscBlackFpsNumericUpDown.Value.ToString();
+            cfa.AppSettings.Settings["BlackCRF"].Value = MiscBlackCrfNumericUpDown.Value.ToString();
+            cfa.AppSettings.Settings["BlackBitrate"].Value = MiscBlackBitrateNumericUpDown.Value.ToString();
             cfa.AppSettings.Settings["SetupDeleteTempFile"].Value = SetupDeleteTempFileCheckBox.Checked.ToString();
             cfa.AppSettings.Settings["CheckUpdate"].Value = CheckUpdateCheckBox.Checked.ToString();
             cfa.AppSettings.Settings["TrayMode"].Value = TrayModeCheckBox.Checked.ToString();
@@ -2066,17 +2066,17 @@ namespace mp4box
 
         private void txtvideo4_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(txtvideo4.Text.ToString()))
+            if (File.Exists(MiscMiscVideoInputTextBox.Text.ToString()))
             {
-                Process.Start(txtvideo4.Text.ToString());
+                Process.Start(MiscMiscVideoInputTextBox.Text.ToString());
             }
         }
 
         private void txtout5_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(txtout5.Text.ToString()))
+            if (File.Exists(MiscMiscVideoOutputTextBox.Text.ToString()))
             {
-                Process.Start(txtout5.Text.ToString());
+                Process.Start(MiscMiscVideoOutputTextBox.Text.ToString());
             }
         }
 
@@ -2180,15 +2180,15 @@ namespace mp4box
             }
             else
             {
-                int[] begin = new int[] { int.Parse(maskb.Text.ToString().Substring(0, 2)),
-                                          int.Parse(maskb.Text.ToString().Substring(3, 2)),
-                                          int.Parse(maskb.Text.ToString().Substring(6, 2))
+                int[] begin = new int[] { int.Parse(MiscMiscBeginTimeMaskedTextBox.Text.ToString().Substring(0, 2)),
+                                          int.Parse(MiscMiscBeginTimeMaskedTextBox.Text.ToString().Substring(3, 2)),
+                                          int.Parse(MiscMiscBeginTimeMaskedTextBox.Text.ToString().Substring(6, 2))
                                         };
-                int[] end = new int[] { int.Parse(maske.Text.ToString().Substring(0, 2)),
-                                        int.Parse(maske.Text.ToString().Substring(3, 2)),
-                                        int.Parse(maske.Text.ToString().Substring(6, 2))
+                int[] end = new int[] { int.Parse(MiscMiscEndTimeMaskedTextBox.Text.ToString().Substring(0, 2)),
+                                        int.Parse(MiscMiscEndTimeMaskedTextBox.Text.ToString().Substring(3, 2)),
+                                        int.Parse(MiscMiscEndTimeMaskedTextBox.Text.ToString().Substring(6, 2))
                                       };
-                clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""", workPath, maskb.Text, timeSubtract(begin, end), namevideo4, nameout5) + Environment.NewLine + "cmd";
+                clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""", workPath, MiscMiscBeginTimeMaskedTextBox.Text, timeSubtract(begin, end), namevideo4, nameout5) + Environment.NewLine + "cmd";
                 //clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{3}"" -ss {1} -to {2} -y  -c copy ""{4}""", workPath, maskb.Text, maske.Text, namevideo4, nameout5) + Environment.NewLine + "cmd";
                 batpath = workPath + "\\clip.bat";
                 LogRecord(clip);
@@ -3687,7 +3687,7 @@ namespace mp4box
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                AudioPicTextBox.Text = openFileDialog1.FileName;
+                MiscOnePicInputTextBox.Text = openFileDialog1.FileName;
             }
         }
 
@@ -3697,7 +3697,7 @@ namespace mp4box
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                AudioPicAudioTextBox.Text = openFileDialog1.FileName;
+                MiscOnePicAudioInputTextBox.Text = openFileDialog1.FileName;
             }
         }
 
@@ -3709,7 +3709,7 @@ namespace mp4box
             DialogResult result = savefile.ShowDialog();
             if (result == DialogResult.OK)
             {
-                AudioOnePicOutputTextBox.Text = savefile.FileName;
+                MiscOnePicOutputTextBox.Text = savefile.FileName;
             }
         }
 
@@ -3723,21 +3723,21 @@ namespace mp4box
 
         private void AudioOnePicButton_Click(object sender, EventArgs e)
         {
-            if (!File.Exists(AudioPicTextBox.Text))
+            if (!File.Exists(MiscOnePicInputTextBox.Text))
             {
                 ShowErrorMessage("请选择图片文件");
             }
-            else if (!File.Exists(AudioPicAudioTextBox.Text))
+            else if (!File.Exists(MiscOnePicAudioInputTextBox.Text))
             {
                 ShowErrorMessage("请选择音频文件");
             }
-            else if (AudioOnePicOutputTextBox.Text == "")
+            else if (MiscOnePicOutputTextBox.Text == "")
             {
                 ShowErrorMessage("请选择输出文件");
             }
             else
             {
-                System.Drawing.Image img = System.Drawing.Image.FromFile(AudioPicTextBox.Text);
+                System.Drawing.Image img = System.Drawing.Image.FromFile(MiscOnePicInputTextBox.Text);
                 // if not even number, chop 1 pixel out
                 int newWidth = (img.Width % 2 == 0 ? img.Width : img.Width - 1);
                 int newHeight = (img.Height % 2 == 0 ? img.Height : img.Height - 1);
@@ -3770,11 +3770,11 @@ namespace mp4box
                     //img.Save(tempPic, ImageFormat.Jpeg);
                 }
                 //获得音频时长
-                string timeStr = new MediaInfoWrapper(AudioPicAudioTextBox.Text).duration3;
+                string timeStr = new MediaInfoWrapper(MiscOnePicAudioInputTextBox.Text).duration3;
                 if (!string.IsNullOrEmpty(timeStr))
-                    OnePicAudioSecondTxt.Text = SecondsFromHHMMSS(timeStr).ToString();
+                    MiscOnePicDurationSecondsTextBox.Text = SecondsFromHHMMSS(timeStr).ToString();
                 int seconds = 0;
-                bool SecondisInt = int.TryParse(OnePicAudioSecondTxt.Text, out seconds);
+                bool SecondisInt = int.TryParse(MiscOnePicDurationSecondsTextBox.Text, out seconds);
                 if (!SecondisInt)
                 {
                     ShowErrorMessage("未能获取正确时间，请手动输入秒数。");
@@ -3782,18 +3782,18 @@ namespace mp4box
                 }
                 string ffPath = Path.Combine(workPath, "ffmpeg.exe");
                 string neroPath = Util.FormatPath(Path.Combine(workPath, "neroaacenc.exe"));
-                if (AudioCopyCheckBox.Checked)
+                if (MiscOnePicCopyAudioCheckBox.Checked)
                 {
-                    mux = "\"" + ffPath + "\" -loop 1 -r " + OnePicFPSNum.Value.ToString() + " -t " + seconds.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + OnePicCRFNum.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
-                    mux += "\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i \"" + AudioPicAudioTextBox.Text + "\" -c:v copy -c:a copy -y \"" + AudioOnePicOutputTextBox.Text + "\"\r\n";
+                    mux = "\"" + ffPath + "\" -loop 1 -r " + MiscOnePicFpsNumericUpDown.Value.ToString() + " -t " + seconds.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscOnePicCrfNumericUpDown.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
+                    mux += "\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i \"" + MiscOnePicAudioInputTextBox.Text + "\" -c:v copy -c:a copy -y \"" + MiscOnePicOutputTextBox.Text + "\"\r\n";
                     mux += "del SinglePictureVideo.mp4\r\n";
                     mux += "cmd";
                 }
                 else
                 {
-                    mux = "\"" + ffPath + "\" -i \"" + AudioPicAudioTextBox.Text + "\" -f wav - |" + neroPath + " -br " + OnePicAudioBitrateNum.Value.ToString() + "000 -ignorelength -if - -of audio.mp4 -lc\r\n";
-                    mux += "\"" + ffPath + "\" -loop 1 -r " + OnePicFPSNum.Value.ToString() + " -t " + seconds.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + OnePicCRFNum.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
-                    mux += "\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i audio.mp4 -c:v copy -c:a copy -y \"" + AudioOnePicOutputTextBox.Text + "\"\r\n";
+                    mux = "\"" + ffPath + "\" -i \"" + MiscOnePicAudioInputTextBox.Text + "\" -f wav - |" + neroPath + " -br " + MiscOnePicBitrateLabelNumericUpDown.Value.ToString() + "000 -ignorelength -if - -of audio.mp4 -lc\r\n";
+                    mux += "\"" + ffPath + "\" -loop 1 -r " + MiscOnePicFpsNumericUpDown.Value.ToString() + " -t " + seconds.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscOnePicCrfNumericUpDown.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
+                    mux += "\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i audio.mp4 -c:v copy -c:a copy -y \"" + MiscOnePicOutputTextBox.Text + "\"\r\n";
                     mux += "del SinglePictureVideo.mp4\r\ndel audio.mp4\r\n";
                     mux += "cmd";
                 }
@@ -3837,9 +3837,9 @@ namespace mp4box
 
         private void AudioPicAudioTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(AudioPicAudioTextBox.Text.ToString()))
+            if (File.Exists(MiscOnePicAudioInputTextBox.Text.ToString()))
             {
-                AudioOnePicOutputTextBox.Text = Util.ChangeExt(AudioPicAudioTextBox.Text, "_SP.flv");
+                MiscOnePicOutputTextBox.Text = Util.ChangeExt(MiscOnePicAudioInputTextBox.Text, "_SP.flv");
             }
         }
 
@@ -3869,7 +3869,7 @@ namespace mp4box
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                BlackVideoTextBox.Text = openFileDialog1.FileName;
+                MiscBlackVideoInputTextBox.Text = openFileDialog1.FileName;
             }
         }
 
@@ -3880,7 +3880,7 @@ namespace mp4box
             DialogResult result = savefile.ShowDialog();
             if (result == DialogResult.OK)
             {
-                BlackOutputTextBox.Text = savefile.FileName;
+                MiscBlackOutputTextBox.Text = savefile.FileName;
             }
         }
 
@@ -3890,29 +3890,29 @@ namespace mp4box
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                BlackPicTextBox.Text = openFileDialog1.FileName;
+                MiscBlackPicInputTextBox.Text = openFileDialog1.FileName;
             }
         }
 
         private void BlackStartButton_Click(object sender, EventArgs e)
         {
             //验证
-            if (!File.Exists(BlackVideoTextBox.Text) || Path.GetExtension(BlackVideoTextBox.Text) != ".flv")
+            if (!File.Exists(MiscBlackVideoInputTextBox.Text) || Path.GetExtension(MiscBlackVideoInputTextBox.Text) != ".flv")
             {
                 ShowErrorMessage("请选择FLV视频文件");
                 return;
             }
 
-            MediaInfoWrapper MIW = new MediaInfoWrapper(BlackVideoTextBox.Text);
+            MediaInfoWrapper MIW = new MediaInfoWrapper(MiscBlackVideoInputTextBox.Text);
             double videobitrate = double.Parse(MIW.bitRate1);
-            double targetBitrate = (double)BlackBitrateNum.Value;
+            double targetBitrate = (double)MiscBlackBitrateNumericUpDown.Value;
 
-            if (!File.Exists(BlackPicTextBox.Text) && BlackNoPicCheckBox.Checked == false)
+            if (!File.Exists(MiscBlackPicInputTextBox.Text) && MiscBlackNoPicCheckBox.Checked == false)
             {
                 ShowErrorMessage("请选择图片文件或勾选使用黑屏");
                 return;
             }
-            if (BlackOutputTextBox.Text == "")
+            if (MiscBlackOutputTextBox.Text == "")
             {
                 ShowErrorMessage("请选择输出文件");
                 return;
@@ -3932,7 +3932,7 @@ namespace mp4box
             //处理图片
             int videoWidth = int.Parse(MIW.v_width);
             int videoHeight = int.Parse(MIW.v_height);
-            if (BlackNoPicCheckBox.Checked)
+            if (MiscBlackNoPicCheckBox.Checked)
             {
                 Bitmap bm = new Bitmap(videoWidth, videoHeight);
                 Graphics g = Graphics.FromImage(bm);
@@ -3944,7 +3944,7 @@ namespace mp4box
             }
             else
             {
-                System.Drawing.Image img = System.Drawing.Image.FromFile(BlackPicTextBox.Text);
+                System.Drawing.Image img = System.Drawing.Image.FromFile(MiscBlackPicInputTextBox.Text);
                 int sourceWidth = img.Width;
                 int sourceHeight = img.Height;
                 if (img.Width % 2 != 0 || img.Height % 2 != 0)
@@ -3961,7 +3961,7 @@ namespace mp4box
                 }
                 if (img.RawFormat.Equals(ImageFormat.Jpeg))
                 {
-                    File.Copy(BlackPicTextBox.Text, tempPic, true);
+                    File.Copy(MiscBlackPicInputTextBox.Text, tempPic, true);
                 }
                 else
                 {
@@ -3976,21 +3976,21 @@ namespace mp4box
             }
             int blackSecond = 300;
             //计算后黑时长
-            if (BlackSecondComboBox.Text == "auto")
+            if (MiscBlackDurationSecondsComboBox.Text == "auto")
             {
                 int seconds = SecondsFromHHMMSS(MIW.duration3);
                 double s = videobitrate / 1000.0 * (double)seconds / targetBitrate - (double)seconds;
                 blackSecond = (int)s;
-                BlackSecondComboBox.Text = blackSecond.ToString();
+                MiscBlackDurationSecondsComboBox.Text = blackSecond.ToString();
             }
             else
             {
-                blackSecond = int.Parse(Regex.Replace(BlackSecondComboBox.Text.ToString(), @"\D", "")); //排除除数字外的所有字符
+                blackSecond = int.Parse(Regex.Replace(MiscBlackDurationSecondsComboBox.Text.ToString(), @"\D", "")); //排除除数字外的所有字符
             }
 
             //批处理
-            mux = "\"" + workPath + "\\ffmpeg\" -loop 1 -r " + BlackFPSNum.Value.ToString() + " -t " + blackSecond.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + BlackCRFNum.Value.ToString() + " -y black.flv\r\n";
-            mux += string.Format("\"{0}\\flvbind\" \"{1}\"  \"{2}\"  black.flv\r\n", workPath, BlackOutputTextBox.Text, BlackVideoTextBox.Text);
+            mux = "\"" + workPath + "\\ffmpeg\" -loop 1 -r " + MiscBlackFpsNumericUpDown.Value.ToString() + " -t " + blackSecond.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscBlackCrfNumericUpDown.Value.ToString() + " -y black.flv\r\n";
+            mux += string.Format("\"{0}\\flvbind\" \"{1}\"  \"{2}\"  black.flv\r\n", workPath, MiscBlackOutputTextBox.Text, MiscBlackVideoInputTextBox.Text);
             mux += "del black.flv\r\n";
 
             batpath = Path.Combine(workPath, Path.GetRandomFileName() + ".bat");
@@ -4001,10 +4001,10 @@ namespace mp4box
 
         private void BlackVideoTextBox_TextChanged(object sender, EventArgs e)
         {
-            string path = BlackVideoTextBox.Text;
+            string path = MiscBlackVideoInputTextBox.Text;
             if (File.Exists(path))
             {
-                BlackOutputTextBox.Text = Util.ChangeExt(path, "_black.flv");
+                MiscBlackOutputTextBox.Text = Util.ChangeExt(path, "_black.flv");
             }
         }
 
@@ -4012,19 +4012,19 @@ namespace mp4box
 
         private void BlackNoPicCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            BlackPicTextBox.Enabled = !BlackNoPicCheckBox.Checked;
-            BlackPicButton.Enabled = !BlackNoPicCheckBox.Checked;
+            MiscBlackPicInputTextBox.Enabled = !MiscBlackNoPicCheckBox.Checked;
+            MiscBlackPicInputButton.Enabled = !MiscBlackNoPicCheckBox.Checked;
         }
 
         private void BlackSecondComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (BlackSecondComboBox.Text != "auto")
+            if (MiscBlackDurationSecondsComboBox.Text != "auto")
             {
-                BlackBitrateNum.Enabled = false;
+                MiscBlackBitrateNumericUpDown.Enabled = false;
             }
             else
             {
-                BlackBitrateNum.Enabled = true;
+                MiscBlackBitrateNumericUpDown.Enabled = true;
             }
         }
 
@@ -4249,7 +4249,7 @@ namespace mp4box
 
         private void AudioCopyCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            OnePicAudioBitrateNum.Enabled = !AudioCopyCheckBox.Checked;
+            MiscOnePicBitrateLabelNumericUpDown.Enabled = !MiscOnePicCopyAudioCheckBox.Checked;
         }
 
         private void HelpTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
@@ -4429,7 +4429,7 @@ namespace mp4box
             else
             {
                 clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{1}"" -vf ""transpose={2}"" -y ""{3}""",
-                    workPath, namevideo4, TransposeComboBox.SelectedIndex, nameout5) + Environment.NewLine + "cmd";
+                    workPath, namevideo4, MiscMiscTransposeComboBox.SelectedIndex, nameout5) + Environment.NewLine + "cmd";
                 batpath = workPath + "\\clip.bat";
                 File.WriteAllText(batpath, clip, Encoding.Default);
                 Process.Start(batpath);
