@@ -162,17 +162,17 @@ namespace mp4box
         public XvSettings GetXvSettings()
         {
             var xvs = new XvSettings();
-            xvs.CrfValue = x264CRFNum.Value;
+            xvs.CrfValue = VideoCrfNumericUpDown.Value;
             xvs.ExtParameter = x264extraLine.Text;
-            xvs.CustomParameter = x264CustomParameterTextBox.Text;
-            xvs.V_width = (int)x264WidthNum.Value;
-            xvs.V_height = (int)x264HeightNum.Value;
+            xvs.CustomParameter = VideoCustomParameterTextBox.Text;
+            xvs.V_width = (int)VideoWidthNumericUpDown.Value;
+            xvs.V_height = (int)VideoHeightNumericUpDown.Value;
             xvs.X26xThreads = x264ThreadsComboBox.SelectedItem.ToString();
-            xvs.X26xDemuxer = x264DemuxerComboBox.Text;
-            xvs.X26xBitrate = (int)x264BitrateNum.Value;
-            xvs.X26xSeek = (int)x264SeekNumericUpDown.Value;
-            xvs.X26xFrames = (int)x264FramesNumericUpDown.Value;
-            xvs.IsResizeChecked = MaintainResolutionCheckBox.Checked;
+            xvs.X26xDemuxer = VideoDemuxerComboBox.Text;
+            xvs.X26xBitrate = (int)VideoBitrateNumericUpDown.Value;
+            xvs.X26xSeek = (int)VideoSeekNumericUpDown.Value;
+            xvs.X26xFrames = (int)VideoFramesNumericUpDown.Value;
+            xvs.IsResizeChecked = VideoMaintainResolutionCheckBox.Checked;
             return xvs;
         }
 
@@ -201,7 +201,7 @@ namespace mp4box
                 sub = string.Empty;
                 sb.Append("\"" + workPath + "\\avs4x26x.exe\"" + " -L ");
             }
-            sb.Append("\"" + Path.Combine(workPath, x264ExeComboBox.SelectedItem.ToString()) + "\"");
+            sb.Append("\"" + Path.Combine(workPath, VideoEncoderComboBox.SelectedItem.ToString()) + "\"");
             // 编码模式
             switch (x264mode)
             {
@@ -284,7 +284,7 @@ namespace mp4box
                 sb.Append(" -strict -1 -f yuv4mpegpipe -an - | ");
             }
 
-            sb.Append(Util.FormatPath(Path.Combine(workPath, x264ExeComboBox.SelectedItem.ToString())) + (isAvs ? string.Empty : " --y4m"));
+            sb.Append(Util.FormatPath(Path.Combine(workPath, VideoEncoderComboBox.SelectedItem.ToString())) + (isAvs ? string.Empty : " --y4m"));
             // 编码模式
             switch (x264mode)
             {
@@ -881,19 +881,19 @@ namespace mp4box
         {
             #region Video Tab
 
-            x264CRFNum.Value = 23.5m;
-            x264BitrateNum.Value = 800;
-            x264AudioParameterTextBox.Text = "--abitrate 128";
-            x264AudioModeComboBox.SelectedIndex = 0;
-            x264DemuxerComboBox.SelectedIndex = 0;
-            x264WidthNum.Value = 0;
-            x264HeightNum.Value = 0;
-            x264CustomParameterTextBox.Text = "";
+            VideoCrfNumericUpDown.Value = 23.5m;
+            VideoBitrateNumericUpDown.Value = 800;
+            VideoAudioParameterTextBox.Text = "--abitrate 128";
+            VideoAudioModeComboBox.SelectedIndex = 0;
+            VideoDemuxerComboBox.SelectedIndex = 0;
+            VideoWidthNumericUpDown.Value = 0;
+            VideoHeightNumericUpDown.Value = 0;
+            VideoCustomParameterTextBox.Text = "";
             x264PriorityComboBox.SelectedIndex = 2;
-            x264FramesNumericUpDown.Value = 0;
-            x264SeekNumericUpDown.Value = 0;
-            x264Mode1RadioButton.Checked = true;
-            x264ShutdownCheckBox.Checked = false;
+            VideoFramesNumericUpDown.Value = 0;
+            VideoSeekNumericUpDown.Value = 0;
+            VideoModeCrfRadioButton.Checked = true;
+            VideoAutoShutdownCheckBox.Checked = false;
 
             #endregion Video Tab
 
@@ -956,18 +956,18 @@ namespace mp4box
             try
             {
                 //load settings
-                x264CRFNum.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264CRF"]);
-                x264BitrateNum.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Bitrate"]);
-                x264AudioParameterTextBox.Text = ConfigurationManager.AppSettings["x264AudioParameter"];
-                x264AudioModeComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264AudioMode"]);
-                if (int.Parse(ConfigurationManager.AppSettings["x264Exe"]) > x264ExeComboBox.Items.Count - 1)
-                    x264ExeComboBox.SelectedIndex = 0;
+                VideoCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264CRF"]);
+                VideoBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Bitrate"]);
+                VideoAudioParameterTextBox.Text = ConfigurationManager.AppSettings["x264AudioParameter"];
+                VideoAudioModeComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264AudioMode"]);
+                if (int.Parse(ConfigurationManager.AppSettings["x264Exe"]) > VideoEncoderComboBox.Items.Count - 1)
+                    VideoEncoderComboBox.SelectedIndex = 0;
                 else
-                    x264ExeComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Exe"]);
-                x264DemuxerComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Demuxer"]);
-                x264WidthNum.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Width"]);
-                x264HeightNum.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Height"]);
-                x264CustomParameterTextBox.Text = ConfigurationManager.AppSettings["x264CustomParameter"];
+                    VideoEncoderComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Exe"]);
+                VideoDemuxerComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Demuxer"]);
+                VideoWidthNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Width"]);
+                VideoHeightNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Height"]);
+                VideoCustomParameterTextBox.Text = ConfigurationManager.AppSettings["x264CustomParameter"];
                 x264PriorityComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Priority"]);
                 x264extraLine.Text = ConfigurationManager.AppSettings["x264ExtraParameter"];
                 AVSScriptTextBox.Text = ConfigurationManager.AppSettings["AVSScript"];
@@ -988,10 +988,10 @@ namespace mp4box
                 SetupPlayerTextBox.Text = ConfigurationManager.AppSettings["PreviewPlayer"];
                 string SubLangExt = Convert.ToString(ConfigurationManager.AppSettings["SubLanguageExtension"]);
                 MuxFormatComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["MuxFormat"]);
-                x264BatchSubSpecialLanguage.DataSource = SubLangExt.Split(',');
-                if (x264ExeComboBox.SelectedIndex == -1)
+                VideoBatchSubtitleLanguage.DataSource = SubLangExt.Split(',');
+                if (VideoEncoderComboBox.SelectedIndex == -1)
                 {
-                    x264ExeComboBox.SelectedIndex = x264ExeComboBox.Items.IndexOf("x264_32-8bit");
+                    VideoEncoderComboBox.SelectedIndex = VideoEncoderComboBox.Items.IndexOf("x264_32-8bit");
                 }
 
                 if (int.Parse(ConfigurationManager.AppSettings["LanguageIndex"]) == -1)  //First Startup
@@ -1043,15 +1043,15 @@ namespace mp4box
         private void SaveSettings()
         {
             Configuration cfa = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            cfa.AppSettings.Settings["x264CRF"].Value = x264CRFNum.Value.ToString();
-            cfa.AppSettings.Settings["x264Bitrate"].Value = x264BitrateNum.Value.ToString();
-            cfa.AppSettings.Settings["x264AudioParameter"].Value = x264AudioParameterTextBox.Text;
-            cfa.AppSettings.Settings["x264AudioMode"].Value = x264AudioModeComboBox.SelectedIndex.ToString();
-            cfa.AppSettings.Settings["x264Exe"].Value = x264ExeComboBox.SelectedIndex.ToString();
-            cfa.AppSettings.Settings["x264Demuxer"].Value = x264DemuxerComboBox.SelectedIndex.ToString();
-            cfa.AppSettings.Settings["x264Width"].Value = x264WidthNum.Value.ToString();
-            cfa.AppSettings.Settings["x264Height"].Value = x264HeightNum.Value.ToString();
-            cfa.AppSettings.Settings["x264CustomParameter"].Value = x264CustomParameterTextBox.Text;
+            cfa.AppSettings.Settings["x264CRF"].Value = VideoCrfNumericUpDown.Value.ToString();
+            cfa.AppSettings.Settings["x264Bitrate"].Value = VideoBitrateNumericUpDown.Value.ToString();
+            cfa.AppSettings.Settings["x264AudioParameter"].Value = VideoAudioParameterTextBox.Text;
+            cfa.AppSettings.Settings["x264AudioMode"].Value = VideoAudioModeComboBox.SelectedIndex.ToString();
+            cfa.AppSettings.Settings["x264Exe"].Value = VideoEncoderComboBox.SelectedIndex.ToString();
+            cfa.AppSettings.Settings["x264Demuxer"].Value = VideoDemuxerComboBox.SelectedIndex.ToString();
+            cfa.AppSettings.Settings["x264Width"].Value = VideoWidthNumericUpDown.Value.ToString();
+            cfa.AppSettings.Settings["x264Height"].Value = VideoHeightNumericUpDown.Value.ToString();
+            cfa.AppSettings.Settings["x264CustomParameter"].Value = VideoCustomParameterTextBox.Text;
             cfa.AppSettings.Settings["x264Priority"].Value = x264PriorityComboBox.SelectedIndex.ToString();
             cfa.AppSettings.Settings["x264ExtraParameter"].Value = x264extraLine.Text;
             cfa.AppSettings.Settings["AVSScript"].Value = AVSScriptTextBox.Text;
@@ -1081,7 +1081,7 @@ namespace mp4box
         private void LoadVideoPreset()
         {
             VideoPresetComboBox.Items.Clear();
-            string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+            string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
             var xlsv = preset.GetVideoPreset(encType).Elements();
             foreach (var item in xlsv)
             {
@@ -1154,7 +1154,7 @@ namespace mp4box
                     }
                 }
                 x264exe = x264exe.OrderByDescending(i => i.Substring(7)).ToList();
-                x264ExeComboBox.Items.AddRange(x264exe.ToArray());
+                VideoEncoderComboBox.Items.AddRange(x264exe.ToArray());
             }
             catch { }
 
@@ -1433,26 +1433,26 @@ namespace mp4box
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                lbAuto.Items.AddRange(openFileDialog1.FileNames);
+                VideoBatchItemListbox.Items.AddRange(openFileDialog1.FileNames);
             }
             openFileDialog1.Multiselect = false;
         }
 
         private void btnAutoDel_Click(object sender, EventArgs e)
         {
-            if (lbAuto.Items.Count > 0)
+            if (VideoBatchItemListbox.Items.Count > 0)
             {
-                if (lbAuto.SelectedItems.Count > 0)
+                if (VideoBatchItemListbox.SelectedItems.Count > 0)
                 {
-                    int index = lbAuto.SelectedIndex;
-                    lbAuto.Items.RemoveAt(lbAuto.SelectedIndex);
-                    if (index == lbAuto.Items.Count)
+                    int index = VideoBatchItemListbox.SelectedIndex;
+                    VideoBatchItemListbox.Items.RemoveAt(VideoBatchItemListbox.SelectedIndex);
+                    if (index == VideoBatchItemListbox.Items.Count)
                     {
-                        lbAuto.SelectedIndex = index - 1;
+                        VideoBatchItemListbox.SelectedIndex = index - 1;
                     }
-                    if (index >= 0 && index < lbAuto.Items.Count && lbAuto.Items.Count > 0)
+                    if (index >= 0 && index < VideoBatchItemListbox.Items.Count && VideoBatchItemListbox.Items.Count > 0)
                     {
-                        lbAuto.SelectedIndex = index;
+                        VideoBatchItemListbox.SelectedIndex = index;
                     }
                 }
             }
@@ -1460,7 +1460,7 @@ namespace mp4box
 
         private void btnAutoClear_Click(object sender, EventArgs e)
         {
-            lbAuto.Items.Clear();
+            VideoBatchItemListbox.Items.Clear();
         }
 
         private void lbAuto_DragDrop(object sender, DragEventArgs e)
@@ -1532,9 +1532,9 @@ namespace mp4box
             //检测是否含有音频
             string audio = new MediaInfoWrapper(input).a_format;
             if (!string.IsNullOrEmpty(audio)) { hasAudio = true; }
-            string sub = (x264BatchSubCheckBox.Checked) ? GetSubtitlePath(input) : string.Empty;
+            string sub = (VideoBatchSubtitleCheckBox.Checked) ? GetSubtitlePath(input) : string.Empty;
 
-            int audioMode = x264AudioModeComboBox.SelectedIndex;
+            int audioMode = VideoAudioModeComboBox.SelectedIndex;
             if (!hasAudio)
                 audioMode = 1;
             switch (audioMode)
@@ -1558,7 +1558,7 @@ namespace mp4box
                     break;
             }
 
-            if (x264ExeComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
+            if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
             {
                 if (x264mode == 2)
                     x264 = x264bat(input, tempVideo, 1, sub) + "\r\n" +
@@ -1567,7 +1567,7 @@ namespace mp4box
                 if (audioMode == 1 || !hasAudio)
                     x264 = x264.Replace(tempVideo, output);
             }
-            else if (x264ExeComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
+            else if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
             {
                 tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.hevc");
                 if (x264mode == 2)
@@ -1597,13 +1597,13 @@ namespace mp4box
 
         private void btnBatchAuto_Click(object sender, EventArgs e)
         {
-            if (lbAuto.Items.Count == 0)
+            if (VideoBatchItemListbox.Items.Count == 0)
             {
                 ShowErrorMessage("请输入视频！");
                 return;
             }
 
-            if (x264ExeComboBox.SelectedIndex == -1)
+            if (VideoEncoderComboBox.SelectedIndex == -1)
             {
                 ShowErrorMessage("请选择X264程序");
                 return;
@@ -1618,20 +1618,20 @@ namespace mp4box
 
             Util.ensureDirectoryExists(tempfilepath);
             string bat = string.Empty;
-            for (int i = 0; i < this.lbAuto.Items.Count; i++)
+            for (int i = 0; i < this.VideoBatchItemListbox.Items.Count; i++)
             {
-                string input = lbAuto.Items[i].ToString();
+                string input = VideoBatchItemListbox.Items[i].ToString();
                 string output;
-                if (Directory.Exists(x264PathTextBox.Text))
-                    output = x264PathTextBox.Text + "\\" + Path.GetFileNameWithoutExtension(input) + "_batch." + VideoBatchFormatComboBox.Text;
+                if (Directory.Exists(VideoBatchOutputFolderTextBox.Text))
+                    output = VideoBatchOutputFolderTextBox.Text + "\\" + Path.GetFileNameWithoutExtension(input) + "_batch." + VideoBatchFormatComboBox.Text;
                 else
                     output = Util.ChangeExt(input, "_batch." + VideoBatchFormatComboBox.Text);
-                bat += VideoBatch(lbAuto.Items[i].ToString(), output);
+                bat += VideoBatch(VideoBatchItemListbox.Items[i].ToString(), output);
             }
 
             LogRecord(bat);
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
-            WorkingForm wf = new WorkingForm(bat, lbAuto.Items.Count);
+            WorkingForm wf = new WorkingForm(bat, VideoBatchItemListbox.Items.Count);
             wf.Owner = this;
             wf.Show();
             //batpath = workPath + "\\auto.bat";
@@ -1929,7 +1929,7 @@ namespace mp4box
 
         private void btnAVS9_Click(object sender, EventArgs e)
         {
-            x264DemuxerComboBox.SelectedIndex = 0; //压制AVS始终使用分离器为auto
+            VideoDemuxerComboBox.SelectedIndex = 0; //压制AVS始终使用分离器为auto
 
             if (string.IsNullOrEmpty(nameout9))
             {
@@ -1987,7 +1987,7 @@ namespace mp4box
                 aextract = string.Empty;
 
             //video
-            if (x264ExeComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
+            if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
             {
                 if (x264mode == 2)
                     x264 = x264bat(filepath, tempVideo, 1) + "\r\n" +
@@ -1996,7 +1996,7 @@ namespace mp4box
                 if (!AVSwithAudioCheckBox.Checked || !hasAudio)
                     x264 = x264.Replace(tempVideo, nameout9);
             }
-            else if (x264ExeComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
+            else if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
             {
                 tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.hevc");
                 if (x264mode == 2)
@@ -2126,7 +2126,7 @@ namespace mp4box
             for (int i = 0; i < processes.GetLength(0); i++)
             {
                 //我是要找到我需要的YZT.exe的进程,可以根据ProcessName属性判断
-                if (processes[i].ProcessName.Equals(Path.GetFileNameWithoutExtension(x264ExeComboBox.Text)))
+                if (processes[i].ProcessName.Equals(Path.GetFileNameWithoutExtension(VideoEncoderComboBox.Text)))
                 {
                     switch (x264PriorityComboBox.SelectedIndex)
                     {
@@ -2199,12 +2199,12 @@ namespace mp4box
 
         private void cbX264_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (x264ExeComboBox.Items != null)
+            if (VideoEncoderComboBox.Items != null)
             {
-                string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
                 XElement xel = preset.GetVideoPreset(encType).Elements()
                                   .Where(x => x.Attribute("Name").Value == VideoPresetComboBox.Text).First();
-                x264CustomParameterTextBox.Text = xel.Value;
+                VideoCustomParameterTextBox.Text = xel.Value;
             }
         }
 
@@ -2386,7 +2386,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 namevideo2 = openFileDialog1.FileName;
-                x264VideoTextBox.Text = namevideo2;
+                VideoInputTextBox.Text = namevideo2;
             }
         }
 
@@ -2394,12 +2394,12 @@ namespace mp4box
         {
             SaveFileDialog savefile = new SaveFileDialog();
             savefile.Filter = Util.GetDialogFilter(Util.DialogFilterTypes.VIDEO_D_3); //"MPEG-4 视频(*.mp4)|*.mp4|Flash 视频(*.flv)|*.flv|Matroska 视频(*.mkv)|*.mkv|AVI 视频(*.avi)|*.avi|H.264 流(*.raw)|*.raw";
-            savefile.FileName = Path.GetFileName(x264OutTextBox.Text);
+            savefile.FileName = Path.GetFileName(VideoOutputTextBox.Text);
             DialogResult result = savefile.ShowDialog();
             if (result == DialogResult.OK)
             {
                 nameout2 = savefile.FileName;
-                x264OutTextBox.Text = nameout2;
+                VideoOutputTextBox.Text = nameout2;
             }
         }
 
@@ -2410,7 +2410,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 namesub2 = openFileDialog1.FileName;
-                x264SubTextBox.Text = namesub2;
+                VideoSubtitleTextBox.Text = namesub2;
             }
         }
 
@@ -2436,7 +2436,7 @@ namespace mp4box
                 return;
             }
 
-            if (x264ExeComboBox.SelectedIndex == -1)
+            if (VideoEncoderComboBox.SelectedIndex == -1)
             {
                 ShowErrorMessage("请选择X264程序");
                 return;
@@ -2456,14 +2456,14 @@ namespace mp4box
             }
 
             //目标文件已经存在提示是否覆盖
-            if (File.Exists(x264OutTextBox.Text.Trim()))
+            if (File.Exists(VideoOutputTextBox.Text.Trim()))
             {
-                DialogResult dgs = ShowQuestion("目标文件:\r\n\r\n" + x264OutTextBox.Text.Trim() + "\r\n\r\n已经存在,是否覆盖继续压制？", "目标文件已经存在");
+                DialogResult dgs = ShowQuestion("目标文件:\r\n\r\n" + VideoOutputTextBox.Text.Trim() + "\r\n\r\n已经存在,是否覆盖继续压制？", "目标文件已经存在");
                 if (dgs == DialogResult.No) return;
             }
 
             //如果是AVS复制到C盘根目录
-            if (Path.GetExtension(x264VideoTextBox.Text) == ".avs")
+            if (Path.GetExtension(VideoInputTextBox.Text) == ".avs")
             {
                 if (string.IsNullOrEmpty(Util.CheckAviSynth()) && string.IsNullOrEmpty(Util.CheckinternalAviSynth()))
                 {
@@ -2472,9 +2472,9 @@ namespace mp4box
                     return;
                 }
                 //if (File.Exists(tempavspath)) File.Delete(tempavspath);
-                File.Copy(x264VideoTextBox.Text, tempavspath, true);
+                File.Copy(VideoInputTextBox.Text, tempavspath, true);
                 namevideo2 = tempavspath;
-                x264DemuxerComboBox.SelectedIndex = 0; //压制AVS始终使用分离器为auto
+                VideoDemuxerComboBox.SelectedIndex = 0; //压制AVS始终使用分离器为auto
             }
 
             #endregion validation
@@ -2495,8 +2495,8 @@ namespace mp4box
             string audio = new MediaInfoWrapper(namevideo2).a_format;
             if (!string.IsNullOrEmpty(audio))
                 hasAudio = true;
-            int audioMode = x264AudioModeComboBox.SelectedIndex;
-            if (!hasAudio && x264AudioModeComboBox.SelectedIndex != 1)
+            int audioMode = VideoAudioModeComboBox.SelectedIndex;
+            if (!hasAudio && VideoAudioModeComboBox.SelectedIndex != 1)
             {
                 DialogResult r = ShowQuestionWithCancel("原视频不包含音频流，音频模式是否改为无音频流？", "提示");
                 if (r == DialogResult.Yes)
@@ -2531,7 +2531,7 @@ namespace mp4box
             #endregion
 
             #region Video
-            if (x264ExeComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
+            if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
             {
                 if (x264mode == 2)
                     x264 = x264bat(namevideo2, tempVideo, 1, namesub2) + "\r\n" +
@@ -2540,7 +2540,7 @@ namespace mp4box
                 if (audioMode == 1)
                     x264 = x264.Replace(tempVideo, nameout2);
             }
-            else if (x264ExeComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
+            else if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
             {
                 tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.hevc");
                 if (ext != ".mp4")
@@ -2597,9 +2597,9 @@ namespace mp4box
                 string vPresetName = InputBox.Show("请输入这个预设名称", "请为预置配置命名", "新预置名称");
                 if (!string.IsNullOrEmpty(vPresetName))
                 {
-                    string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                    string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
                     var xl = preset.GetVideoPreset(encType);
-                    XElement xelnew = new XElement("Parameter", x264CustomParameterTextBox.Text,
+                    XElement xelnew = new XElement("Parameter", VideoCustomParameterTextBox.Text,
                                           new XAttribute("Name", vPresetName));
                     foreach (var item in xl.Elements())
                     {
@@ -2627,7 +2627,7 @@ namespace mp4box
             {
                 try
                 {
-                    string encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                    string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
                     var xls = preset.GetVideoPreset(encType).Elements();
                     foreach (var item in xls)
                     {
@@ -2650,66 +2650,66 @@ namespace mp4box
         private void x264Mode2RadioButton_CheckedChanged(object sender, EventArgs e)
         {
             x264mode = 2;
-            lbrate.Visible = true;
-            x264BitrateNum.Visible = true;
-            label12.Visible = true;
-            lbwidth.Visible = true;
-            lbheight.Visible = true;
-            x264WidthNum.Visible = true;
-            x264HeightNum.Visible = true;
-            MaintainResolutionCheckBox.Visible = true;
-            lbcrf.Visible = false;
-            x264CRFNum.Visible = false;
-            label4.Visible = false;
-            x264CustomParameterTextBox.Visible = false;
+            VideoBitrateLabel.Visible = true;
+            VideoBitrateNumericUpDown.Visible = true;
+            VideoCrfKbpsLabel.Visible = true;
+            VideoWidthLabel.Visible = true;
+            labelx264Height.Visible = true;
+            VideoWidthNumericUpDown.Visible = true;
+            VideoHeightNumericUpDown.Visible = true;
+            VideoMaintainResolutionCheckBox.Visible = true;
+            VideoCrfLabel.Visible = false;
+            VideoCrfNumericUpDown.Visible = false;
+            VideoPresetLabel.Visible = false;
+            VideoCustomParameterTextBox.Visible = false;
             VideoPresetComboBox.Visible = false;
-            x264AddPresetBtn.Visible = false;
-            x264DeletePresetBtn.Visible = false;
+            VideoAddPresetBotton.Visible = false;
+            VideoDeletePresetBotton.Visible = false;
         }
 
         private void x264Mode3RadioButton_CheckedChanged(object sender, EventArgs e)
         {
             x264mode = 0;
-            label4.Visible = true;
-            x264CustomParameterTextBox.Visible = true;
+            VideoPresetLabel.Visible = true;
+            VideoCustomParameterTextBox.Visible = true;
             VideoPresetComboBox.Visible = true;
-            x264AddPresetBtn.Visible = true;
-            x264DeletePresetBtn.Visible = true;
-            lbwidth.Visible = false;
-            lbheight.Visible = false;
-            x264WidthNum.Visible = false;
-            x264HeightNum.Visible = false;
-            MaintainResolutionCheckBox.Visible = false;
-            lbrate.Visible = false;
-            x264BitrateNum.Visible = false;
-            label12.Visible = false;
-            lbcrf.Visible = false;
-            x264CRFNum.Visible = false;
+            VideoAddPresetBotton.Visible = true;
+            VideoDeletePresetBotton.Visible = true;
+            VideoWidthLabel.Visible = false;
+            labelx264Height.Visible = false;
+            VideoWidthNumericUpDown.Visible = false;
+            VideoHeightNumericUpDown.Visible = false;
+            VideoMaintainResolutionCheckBox.Visible = false;
+            VideoBitrateLabel.Visible = false;
+            VideoBitrateNumericUpDown.Visible = false;
+            VideoCrfKbpsLabel.Visible = false;
+            VideoCrfLabel.Visible = false;
+            VideoCrfNumericUpDown.Visible = false;
         }
 
         private void x264Mode1RadioButton_CheckedChanged(object sender, EventArgs e)
         {
             x264mode = 1;
-            lbcrf.Visible = true;
-            x264CRFNum.Visible = true;
-            lbwidth.Visible = true;
-            lbheight.Visible = true;
-            x264WidthNum.Visible = true;
-            x264HeightNum.Visible = true;
-            MaintainResolutionCheckBox.Visible = true;
-            lbrate.Visible = false;
-            x264BitrateNum.Visible = false;
-            label12.Visible = false;
-            label4.Visible = false;
-            x264CustomParameterTextBox.Visible = false;
+            VideoCrfLabel.Visible = true;
+            VideoCrfNumericUpDown.Visible = true;
+            VideoWidthLabel.Visible = true;
+            labelx264Height.Visible = true;
+            VideoWidthNumericUpDown.Visible = true;
+            VideoHeightNumericUpDown.Visible = true;
+            VideoMaintainResolutionCheckBox.Visible = true;
+            VideoBitrateLabel.Visible = false;
+            VideoBitrateNumericUpDown.Visible = false;
+            VideoCrfKbpsLabel.Visible = false;
+            VideoPresetLabel.Visible = false;
+            VideoCustomParameterTextBox.Visible = false;
             VideoPresetComboBox.Visible = false;
-            x264AddPresetBtn.Visible = false;
-            x264DeletePresetBtn.Visible = false;
+            VideoAddPresetBotton.Visible = false;
+            VideoDeletePresetBotton.Visible = false;
         }
 
         private void x264PriorityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string processName = x264ExeComboBox.Text;
+            string processName = VideoEncoderComboBox.Text;
             processName = processName.Replace(".exe", "");
             Process[] processes = Process.GetProcesses();
             //if (x264PriorityComboBox.SelectedIndex == 4 || x264PriorityComboBox.SelectedIndex == 5)
@@ -2740,18 +2740,18 @@ namespace mp4box
 
         private void x264VideoTextBox_TextChanged(object sender, EventArgs e)
         {
-            string path = x264VideoTextBox.Text;
+            string path = VideoInputTextBox.Text;
             if (File.Exists(path))
             {
                 namevideo2 = path;
                 int num = 1;
                 string encType = "x264";
-                if (x264ExeComboBox.SelectedItem != null)
-                    encType = x264ExeComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
-                x264OutTextBox.Text = Util.ChangeExt(namevideo2, string.Format("_{0}.mp4", encType));
-                while (namevideo2.Equals(x264OutTextBox.Text) || File.Exists(x264OutTextBox.Text))
+                if (VideoEncoderComboBox.SelectedItem != null)
+                    encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                VideoOutputTextBox.Text = Util.ChangeExt(namevideo2, string.Format("_{0}.mp4", encType));
+                while (namevideo2.Equals(VideoOutputTextBox.Text) || File.Exists(VideoOutputTextBox.Text))
                 {
-                    x264OutTextBox.Text = Util.ChangeExt(namevideo2, string.Format("_new_file({0})_{1}.mp4", num, encType));
+                    VideoOutputTextBox.Text = Util.ChangeExt(namevideo2, string.Format("_new_file({0})_{1}.mp4", num, encType));
                     num++;
                 }
 
@@ -2762,11 +2762,11 @@ namespace mp4box
                     {
                         if (File.Exists(Util.ChangeExt(namevideo2, ext)))
                         {
-                            x264SubTextBox.Text = Util.ChangeExt(namevideo2, ext);
+                            VideoSubtitleTextBox.Text = Util.ChangeExt(namevideo2, ext);
                             break;
                         }
                         else
-                            x264SubTextBox.Text = string.Empty;
+                            VideoSubtitleTextBox.Text = string.Empty;
                     }
                 }
 
@@ -2775,34 +2775,34 @@ namespace mp4box
 
         private void x264OutTextBox_TextChanged(object sender, EventArgs e)
         {
-            nameout2 = x264OutTextBox.Text;
+            nameout2 = VideoOutputTextBox.Text;
         }
 
         private void x264SubTextBox_TextChanged(object sender, EventArgs e)
         {
-            namesub2 = x264SubTextBox.Text;
+            namesub2 = VideoSubtitleTextBox.Text;
         }
 
         private void x264BatchClearBtn_Click(object sender, EventArgs e)
         {
-            lbAuto.Items.Clear();
+            VideoBatchItemListbox.Items.Clear();
         }
 
         private void x264BatchDeleteBtn_Click(object sender, EventArgs e)
         {
-            if (lbAuto.Items.Count > 0)
+            if (VideoBatchItemListbox.Items.Count > 0)
             {
-                if (lbAuto.SelectedItems.Count > 0)
+                if (VideoBatchItemListbox.SelectedItems.Count > 0)
                 {
-                    int index = lbAuto.SelectedIndex;
-                    lbAuto.Items.RemoveAt(lbAuto.SelectedIndex);
-                    if (index == lbAuto.Items.Count)
+                    int index = VideoBatchItemListbox.SelectedIndex;
+                    VideoBatchItemListbox.Items.RemoveAt(VideoBatchItemListbox.SelectedIndex);
+                    if (index == VideoBatchItemListbox.Items.Count)
                     {
-                        lbAuto.SelectedIndex = index - 1;
+                        VideoBatchItemListbox.SelectedIndex = index - 1;
                     }
-                    if (index >= 0 && index < lbAuto.Items.Count && lbAuto.Items.Count > 0)
+                    if (index >= 0 && index < VideoBatchItemListbox.Items.Count && VideoBatchItemListbox.Items.Count > 0)
                     {
-                        lbAuto.SelectedIndex = index;
+                        VideoBatchItemListbox.SelectedIndex = index;
                     }
                 }
             }
@@ -2815,7 +2815,7 @@ namespace mp4box
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                lbAuto.Items.AddRange(openFileDialog1.FileNames);
+                VideoBatchItemListbox.Items.AddRange(openFileDialog1.FileNames);
             }
             openFileDialog1.Multiselect = false;
         }
@@ -3427,7 +3427,7 @@ namespace mp4box
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             if (fbd.ShowDialog() == DialogResult.OK)
-                x264PathTextBox.Text = fbd.SelectedPath;
+                VideoBatchOutputFolderTextBox.Text = fbd.SelectedPath;
         }
 
         private void ExtractMP4TextBox_TextChanged(object sender, EventArgs e)
@@ -3437,17 +3437,17 @@ namespace mp4box
 
         private void MaintainResolutionCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (MaintainResolutionCheckBox.Checked)
+            if (VideoMaintainResolutionCheckBox.Checked)
             {
-                x264WidthNum.Value = 0;
-                x264HeightNum.Value = 0;
-                x264WidthNum.Enabled = false;
-                x264HeightNum.Enabled = false;
+                VideoWidthNumericUpDown.Value = 0;
+                VideoHeightNumericUpDown.Value = 0;
+                VideoWidthNumericUpDown.Enabled = false;
+                VideoHeightNumericUpDown.Enabled = false;
             }
             else
             {
-                x264WidthNum.Enabled = true;
-                x264HeightNum.Enabled = true;
+                VideoWidthNumericUpDown.Enabled = true;
+                VideoHeightNumericUpDown.Enabled = true;
             }
         }
 
@@ -3476,7 +3476,7 @@ namespace mp4box
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //StreamReader sr;
-            x264Mode1RadioButton.Checked = true;
+            VideoModeCrfRadioButton.Checked = true;
             AudioBitrateRadioButton.Checked = true;
             int x264AudioModeComboBoxIndex = 0;
             switch (languageComboBox.SelectedIndex)
@@ -3488,16 +3488,16 @@ namespace mp4box
                     x264PriorityComboBox.Items.Clear();
                     x264PriorityComboBox.Items.AddRange(new string[] { "低", "低于标准", "普通", "高于标准", "高", "实时" });
                     x264PriorityComboBox.SelectedIndex = 2;
-                    x264AudioModeComboBoxIndex = x264AudioModeComboBox.SelectedIndex;
-                    x264AudioModeComboBox.Items.Clear();
-                    x264AudioModeComboBox.Items.Add("压制音频");
-                    x264AudioModeComboBox.Items.Add("无音频流");
-                    x264AudioModeComboBox.Items.Add("复制音频流");
-                    x264AudioModeComboBox.SelectedIndex = x264AudioModeComboBoxIndex;
-                    x264VideoTextBox.EmptyTextTip = "可以把文件拖拽到这里";
-                    x264SubTextBox.EmptyTextTip = "双击清空字幕文件文本框";
+                    x264AudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
+                    VideoAudioModeComboBox.Items.Clear();
+                    VideoAudioModeComboBox.Items.Add("压制音频");
+                    VideoAudioModeComboBox.Items.Add("无音频流");
+                    VideoAudioModeComboBox.Items.Add("复制音频流");
+                    VideoAudioModeComboBox.SelectedIndex = x264AudioModeComboBoxIndex;
+                    VideoInputTextBox.EmptyTextTip = "可以把文件拖拽到这里";
+                    VideoSubtitleTextBox.EmptyTextTip = "双击清空字幕文件文本框";
                     //x264OutTextBox.EmptyTextTip = "宽度和高度全为0即不改变分辨率";
-                    x264PathTextBox.EmptyTextTip = "字幕文件和视频文件在同一目录下且同名，不同名仅有语言后缀时请在右方选择或输入";
+                    VideoBatchOutputFolderTextBox.EmptyTextTip = "字幕文件和视频文件在同一目录下且同名，不同名仅有语言后缀时请在右方选择或输入";
                     //txtvideo3.EmptyTextTip = "音频参数在音频选项卡设定";
                     ExtractMP4TextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
                     txtvideo8.EmptyTextTip = "抽取的视频或音频在原视频目录下";
@@ -3515,16 +3515,16 @@ namespace mp4box
                     x264PriorityComboBox.Items.Clear();
                     x264PriorityComboBox.Items.AddRange(new string[] { "低", "在標準以下", "標準", "在標準以上", "高", "即時" });
                     x264PriorityComboBox.SelectedIndex = 2;
-                    x264AudioModeComboBoxIndex = x264AudioModeComboBox.SelectedIndex;
-                    x264AudioModeComboBox.Items.Clear();
-                    x264AudioModeComboBox.Items.Add("壓制音頻");
-                    x264AudioModeComboBox.Items.Add("無音頻流");
-                    x264AudioModeComboBox.Items.Add("拷貝音頻流");
-                    x264AudioModeComboBox.SelectedIndex = x264AudioModeComboBoxIndex;
-                    x264VideoTextBox.EmptyTextTip = "可以把档案拖拽到這裡";
-                    x264SubTextBox.EmptyTextTip = "雙擊清空字幕檔案文本框";
+                    x264AudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
+                    VideoAudioModeComboBox.Items.Clear();
+                    VideoAudioModeComboBox.Items.Add("壓制音頻");
+                    VideoAudioModeComboBox.Items.Add("無音頻流");
+                    VideoAudioModeComboBox.Items.Add("拷貝音頻流");
+                    VideoAudioModeComboBox.SelectedIndex = x264AudioModeComboBoxIndex;
+                    VideoInputTextBox.EmptyTextTip = "可以把档案拖拽到這裡";
+                    VideoSubtitleTextBox.EmptyTextTip = "雙擊清空字幕檔案文本框";
                     //x264OutTextBox.EmptyTextTip = "寬度和高度全為0即不改變解析度";
-                    x264PathTextBox.EmptyTextTip = "字幕和視頻在同一資料夾下且同名，不同名僅有語言後綴時請在右方選擇或輸入";
+                    VideoBatchOutputFolderTextBox.EmptyTextTip = "字幕和視頻在同一資料夾下且同名，不同名僅有語言後綴時請在右方選擇或輸入";
                     //txtvideo3.EmptyTextTip = "音頻參數需在音頻選項卡设定";
                     ExtractMP4TextBox.EmptyTextTip = "新檔案生成在原資料夾";
                     txtvideo8.EmptyTextTip = "新檔案生成在原資料夾";
@@ -3542,16 +3542,16 @@ namespace mp4box
                     x264PriorityComboBox.Items.Clear();
                     x264PriorityComboBox.Items.AddRange(new string[] { "Idle", "BelowNormal", "Normal", "AboveNormal", "High", "RealTime" });
                     x264PriorityComboBox.SelectedIndex = 2;
-                    x264AudioModeComboBoxIndex = x264AudioModeComboBox.SelectedIndex;
-                    x264AudioModeComboBox.Items.Clear();
-                    x264AudioModeComboBox.Items.Add("with audio");
-                    x264AudioModeComboBox.Items.Add("no audio");
-                    x264AudioModeComboBox.Items.Add("copy audio");
-                    x264AudioModeComboBox.SelectedIndex = x264AudioModeComboBoxIndex;
-                    x264VideoTextBox.EmptyTextTip = "Drag file here";
-                    x264SubTextBox.EmptyTextTip = "Clear subtitle text box by double click";
+                    x264AudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
+                    VideoAudioModeComboBox.Items.Clear();
+                    VideoAudioModeComboBox.Items.Add("with audio");
+                    VideoAudioModeComboBox.Items.Add("no audio");
+                    VideoAudioModeComboBox.Items.Add("copy audio");
+                    VideoAudioModeComboBox.SelectedIndex = x264AudioModeComboBoxIndex;
+                    VideoInputTextBox.EmptyTextTip = "Drag file here";
+                    VideoSubtitleTextBox.EmptyTextTip = "Clear subtitle text box by double click";
                     //x264OutTextBox.EmptyTextTip = "Both the width and height equal zero means using original resolution";
-                    x264PathTextBox.EmptyTextTip = "Subtitle and Video must be of the same name and in the same folder";
+                    VideoBatchOutputFolderTextBox.EmptyTextTip = "Subtitle and Video must be of the same name and in the same folder";
                     //txtvideo3.EmptyTextTip = "It is necessary to set audio parameter in the Audio tab";
                     ExtractMP4TextBox.EmptyTextTip = "New file will be created in the original folder";
                     txtvideo8.EmptyTextTip = "New file will be created in the original folder";
@@ -3569,16 +3569,16 @@ namespace mp4box
                     x264PriorityComboBox.Items.Clear();
                     x264PriorityComboBox.Items.AddRange(new string[] { "低", "通常以下", "通常", "通常以上", "高", "リアルタイム" });
                     x264PriorityComboBox.SelectedIndex = 2;
-                    x264AudioModeComboBoxIndex = x264AudioModeComboBox.SelectedIndex;
-                    x264AudioModeComboBox.Items.Clear();
-                    x264AudioModeComboBox.Items.Add("オーディオ付き");
-                    x264AudioModeComboBox.Items.Add("オーディオなし");
-                    x264AudioModeComboBox.Items.Add("オーディオ コピー");
-                    x264AudioModeComboBox.SelectedIndex = x264AudioModeComboBoxIndex;
-                    x264VideoTextBox.EmptyTextTip = "ビデオファイルをここに引きずってください";
-                    x264SubTextBox.EmptyTextTip = "ダブルクリックで字幕を削除する";
+                    x264AudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
+                    VideoAudioModeComboBox.Items.Clear();
+                    VideoAudioModeComboBox.Items.Add("オーディオ付き");
+                    VideoAudioModeComboBox.Items.Add("オーディオなし");
+                    VideoAudioModeComboBox.Items.Add("オーディオ コピー");
+                    VideoAudioModeComboBox.SelectedIndex = x264AudioModeComboBoxIndex;
+                    VideoInputTextBox.EmptyTextTip = "ビデオファイルをここに引きずってください";
+                    VideoSubtitleTextBox.EmptyTextTip = "ダブルクリックで字幕を削除する";
                     //x264OutTextBox.EmptyTextTip = "Both the width and height equal zero means using original resolution";
-                    x264PathTextBox.EmptyTextTip = "字幕とビデオは同じ名前と同じフォルダにある必要があります";
+                    VideoBatchOutputFolderTextBox.EmptyTextTip = "字幕とビデオは同じ名前と同じフォルダにある必要があります";
                     //txtvideo3.EmptyTextTip = "It is necessary to set audio parameter in the Audio tab";
                     ExtractMP4TextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
                     txtvideo8.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
@@ -4232,7 +4232,7 @@ namespace mp4box
 
         private void x264ShutdownCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            shutdownState = x264ShutdownCheckBox.Checked;
+            shutdownState = VideoAutoShutdownCheckBox.Checked;
         }
 
         private void TrayModeCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -4413,7 +4413,7 @@ namespace mp4box
 
         private void x264SubTextBox_DoubleClick(object sender, EventArgs e)
         {
-            x264SubTextBox.Clear();
+            VideoSubtitleTextBox.Clear();
         }
 
         private void RotateButton_Click(object sender, EventArgs e)
@@ -4452,14 +4452,14 @@ namespace mp4box
             SolidBrush BlueBrush = new SolidBrush(Color.Blue);
             SolidBrush BlackBrush = new SolidBrush(Color.Black);
             Color vColor = Color.Black;
-            string input = lbAuto.Items[e.Index].ToString();
+            string input = VideoBatchItemListbox.Items[e.Index].ToString();
             if (!string.IsNullOrEmpty(GetSubtitlePath(input)))
             {
-                e.Graphics.DrawString(Convert.ToString(lbAuto.Items[e.Index]), e.Font, BlueBrush, e.Bounds);
+                e.Graphics.DrawString(Convert.ToString(VideoBatchItemListbox.Items[e.Index]), e.Font, BlueBrush, e.Bounds);
             }
             else
             {
-                e.Graphics.DrawString(Convert.ToString(lbAuto.Items[e.Index]), e.Font, BlackBrush, e.Bounds);
+                e.Graphics.DrawString(Convert.ToString(VideoBatchItemListbox.Items[e.Index]), e.Font, BlackBrush, e.Bounds);
             }
         }
 
@@ -4468,8 +4468,8 @@ namespace mp4box
             string sub = "";
             string splang = "";
             string[] subExt = { ".ass", ".ssa", ".srt" };
-            if (x264BatchSubSpecialLanguage.Text != "none")
-                splang = "." + x264BatchSubSpecialLanguage.Text;
+            if (VideoBatchSubtitleLanguage.Text != "none")
+                splang = "." + VideoBatchSubtitleLanguage.Text;
             foreach (string ext in subExt)
             {
                 if (File.Exists(videoPath.Remove(videoPath.LastIndexOf(".")) + splang + ext))
@@ -4483,25 +4483,25 @@ namespace mp4box
 
         private void x264ExeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (x264ExeComboBox.SelectedIndex == -1)
+            if (VideoEncoderComboBox.SelectedIndex == -1)
                 return;
 
-            if (x264ExeComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
+            if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
             {
-                if (x264OutTextBox.Text.Contains("_x264."))
-                    x264OutTextBox.Text = x264OutTextBox.Text.Replace("_x264.", "_x265.");
+                if (VideoOutputTextBox.Text.Contains("_x264."))
+                    VideoOutputTextBox.Text = VideoOutputTextBox.Text.Replace("_x264.", "_x265.");
 
                 //x264SubTextBox.Text = string.Empty;
                 //x264SubTextBox.Enabled = false;
                 //x264SubBtn.Enabled = false;
                 //x264BatchSubCheckBox.Enabled = false;
                 //x264BatchSubSpecialLanguage.Enabled = false;
-                x264DemuxerComboBox.Enabled = false;
+                VideoDemuxerComboBox.Enabled = false;
                 VideoBatchFormatComboBox.Text = "mp4";
                 VideoBatchFormatComboBox.Enabled = false;
 
                 VideoPresetComboBox.Items.Clear();
-                x264CustomParameterTextBox.Text = string.Empty;
+                VideoCustomParameterTextBox.Text = string.Empty;
                 var xVideos = preset.GetVideoPreset("x265");
                 if (xVideos != null)
                 {
@@ -4514,18 +4514,18 @@ namespace mp4box
             }
             else
             {
-                if (x264OutTextBox.Text.Contains("_x265."))
-                    x264OutTextBox.Text = x264OutTextBox.Text.Replace("_x265.", "_x264.");
+                if (VideoOutputTextBox.Text.Contains("_x265."))
+                    VideoOutputTextBox.Text = VideoOutputTextBox.Text.Replace("_x265.", "_x264.");
 
-                x264SubTextBox.Enabled = true;
-                x264SubBtn.Enabled = true;
-                x264BatchSubCheckBox.Enabled = true;
-                x264BatchSubSpecialLanguage.Enabled = true;
-                x264DemuxerComboBox.Enabled = true;
+                VideoSubtitleTextBox.Enabled = true;
+                VideoSubtitleBotton.Enabled = true;
+                VideoBatchSubtitleCheckBox.Enabled = true;
+                VideoBatchSubtitleLanguage.Enabled = true;
+                VideoDemuxerComboBox.Enabled = true;
                 VideoBatchFormatComboBox.Enabled = true;
 
                 VideoPresetComboBox.Items.Clear();
-                x264CustomParameterTextBox.Text = string.Empty;
+                VideoCustomParameterTextBox.Text = string.Empty;
                 var xVideos = preset.GetVideoPreset("x264");
                 if (xVideos != null)
                 {

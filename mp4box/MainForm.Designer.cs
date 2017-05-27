@@ -208,59 +208,59 @@
             this.AudioPicAudioTextBox = new ControlExs.QQTextBox();
             this.AudioPicTextBox = new ControlExs.QQTextBox();
             this.VideoTab = new System.Windows.Forms.TabPage();
-            this.x264FramesLabel = new System.Windows.Forms.Label();
-            this.x264SeekLabel = new System.Windows.Forms.Label();
-            this.x264FramesNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.x264SeekNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.MaintainResolutionCheckBox = new ControlExs.QQCheckBox();
-            this.x264DemuxerComboBox = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label42 = new System.Windows.Forms.Label();
+            this.VideoFramesLabel = new System.Windows.Forms.Label();
+            this.VideoSeekLabel = new System.Windows.Forms.Label();
+            this.VideoFramesNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoSeekNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoMaintainResolutionCheckBox = new ControlExs.QQCheckBox();
+            this.VideoDemuxerComboBox = new System.Windows.Forms.ComboBox();
+            this.VideoBatchGroupBox = new System.Windows.Forms.GroupBox();
+            this.VideoBatchFormatLabel = new System.Windows.Forms.Label();
             this.VideoBatchFormatComboBox = new System.Windows.Forms.ComboBox();
-            this.x264BatchSubSpecialLanguage = new System.Windows.Forms.ComboBox();
-            this.x264PathButton = new ControlExs.QQButton();
-            this.x264PathTextBox = new ControlExs.QQTextBox();
-            this.lbAuto = new System.Windows.Forms.ListBox();
-            this.x264BatchClearBtn = new ControlExs.QQButton();
-            this.x264BatchSubCheckBox = new ControlExs.QQCheckBox();
-            this.x264BatchDeleteBtn = new ControlExs.QQButton();
-            this.x264BatchAddBtn = new ControlExs.QQButton();
-            this.btnBatchAuto = new ControlExs.QQButton();
-            this.x264ShutdownCheckBox = new ControlExs.QQCheckBox();
-            this.x264AudioParameterTextBox = new ControlExs.QQTextBox();
-            this.x264SubTextBox = new ControlExs.QQTextBox();
-            this.x264OutTextBox = new ControlExs.QQTextBox();
-            this.x264VideoTextBox = new ControlExs.QQTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.x264Mode1RadioButton = new ControlExs.QQRadioButton();
-            this.x264Mode3RadioButton = new ControlExs.QQRadioButton();
-            this.x264Mode2RadioButton = new ControlExs.QQRadioButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.x264AddPresetBtn = new ControlExs.QQButton();
-            this.x264DeletePresetBtn = new ControlExs.QQButton();
-            this.x264StartBtn = new ControlExs.QQButton();
-            this.x264SubBtn = new ControlExs.QQButton();
-            this.x264OutBtn = new ControlExs.QQButton();
-            this.x264VideoBtn = new ControlExs.QQButton();
-            this.label16 = new System.Windows.Forms.Label();
-            this.x264ExeComboBox = new System.Windows.Forms.ComboBox();
-            this.x264FpsComboBox = new System.Windows.Forms.ComboBox();
-            this.lbFPS2 = new System.Windows.Forms.Label();
-            this.x264AudioModeComboBox = new System.Windows.Forms.ComboBox();
+            this.VideoBatchSubtitleLanguage = new System.Windows.Forms.ComboBox();
+            this.VideoBatchOutputFolderButton = new ControlExs.QQButton();
+            this.VideoBatchOutputFolderTextBox = new ControlExs.QQTextBox();
+            this.VideoBatchItemListbox = new System.Windows.Forms.ListBox();
+            this.VideoBatchClearBotton = new ControlExs.QQButton();
+            this.VideoBatchSubtitleCheckBox = new ControlExs.QQCheckBox();
+            this.VideoBatchDeleteBotton = new ControlExs.QQButton();
+            this.VideoBatchAddBotton = new ControlExs.QQButton();
+            this.VideoBatchStartBotton = new ControlExs.QQButton();
+            this.VideoAutoShutdownCheckBox = new ControlExs.QQCheckBox();
+            this.VideoAudioParameterTextBox = new ControlExs.QQTextBox();
+            this.VideoSubtitleTextBox = new ControlExs.QQTextBox();
+            this.VideoOutputTextBox = new ControlExs.QQTextBox();
+            this.VideoInputTextBox = new ControlExs.QQTextBox();
+            this.VideoX264ModePanel = new System.Windows.Forms.Panel();
+            this.VideoModeCrfRadioButton = new ControlExs.QQRadioButton();
+            this.VideoModeCustomRadioButton = new ControlExs.QQRadioButton();
+            this.VideoMode2PassRadioButton = new ControlExs.QQRadioButton();
+            this.VideoDemuxerLabel = new System.Windows.Forms.Label();
+            this.VideoAddPresetBotton = new ControlExs.QQButton();
+            this.VideoDeletePresetBotton = new ControlExs.QQButton();
+            this.VideoStartBotton = new ControlExs.QQButton();
+            this.VideoSubtitleBotton = new ControlExs.QQButton();
+            this.VideoOutputButton = new ControlExs.QQButton();
+            this.VideoInputBotton = new ControlExs.QQButton();
+            this.VideoEncoderLabel = new System.Windows.Forms.Label();
+            this.VideoEncoderComboBox = new System.Windows.Forms.ComboBox();
+            this.VideoFpsComboBox = new System.Windows.Forms.ComboBox();
+            this.VideoFpsLabel = new System.Windows.Forms.Label();
+            this.VideoAudioModeComboBox = new System.Windows.Forms.ComboBox();
             this.VideoPresetComboBox = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelAudio = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lbcrf = new System.Windows.Forms.Label();
-            this.lbheight = new System.Windows.Forms.Label();
-            this.lbwidth = new System.Windows.Forms.Label();
-            this.x264HeightNum = new System.Windows.Forms.NumericUpDown();
-            this.x264WidthNum = new System.Windows.Forms.NumericUpDown();
-            this.x264CRFNum = new System.Windows.Forms.NumericUpDown();
-            this.lbrate = new System.Windows.Forms.Label();
-            this.x264CustomParameterTextBox = new ControlExs.QQTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.x264BitrateNum = new System.Windows.Forms.NumericUpDown();
+            this.VideoAudioModeLabel = new System.Windows.Forms.Label();
+            this.VideoGoToAudioLabel = new System.Windows.Forms.Label();
+            this.VideoCrfKbpsLabel = new System.Windows.Forms.Label();
+            this.VideoCrfLabel = new System.Windows.Forms.Label();
+            this.labelx264Height = new System.Windows.Forms.Label();
+            this.VideoWidthLabel = new System.Windows.Forms.Label();
+            this.VideoHeightNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoWidthNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoBitrateLabel = new System.Windows.Forms.Label();
+            this.VideoCustomParameterTextBox = new ControlExs.QQTextBox();
+            this.VideoPresetLabel = new System.Windows.Forms.Label();
+            this.VideoBitrateNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.HelpTab = new System.Windows.Forms.TabPage();
             this.FeedbackButton = new ControlExs.QQButton();
             this.HelpTextBox = new System.Windows.Forms.RichTextBox();
@@ -347,14 +347,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.OnePicFPSNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OnePicAudioBitrateNum)).BeginInit();
             this.VideoTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.x264FramesNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.x264SeekNumericUpDown)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.x264HeightNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.x264WidthNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.x264CRFNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.x264BitrateNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoFramesNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoSeekNumericUpDown)).BeginInit();
+            this.VideoBatchGroupBox.SuspendLayout();
+            this.VideoX264ModePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoHeightNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoWidthNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoCrfNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoBitrateNumericUpDown)).BeginInit();
             this.HelpTab.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.MiscTab.SuspendLayout();
@@ -2022,124 +2022,124 @@
             // VideoTab
             // 
             this.VideoTab.AllowDrop = true;
-            this.VideoTab.Controls.Add(this.x264FramesLabel);
-            this.VideoTab.Controls.Add(this.x264SeekLabel);
-            this.VideoTab.Controls.Add(this.x264FramesNumericUpDown);
-            this.VideoTab.Controls.Add(this.x264SeekNumericUpDown);
-            this.VideoTab.Controls.Add(this.MaintainResolutionCheckBox);
-            this.VideoTab.Controls.Add(this.x264DemuxerComboBox);
-            this.VideoTab.Controls.Add(this.groupBox1);
-            this.VideoTab.Controls.Add(this.x264ShutdownCheckBox);
-            this.VideoTab.Controls.Add(this.x264AudioParameterTextBox);
-            this.VideoTab.Controls.Add(this.x264SubTextBox);
-            this.VideoTab.Controls.Add(this.x264OutTextBox);
-            this.VideoTab.Controls.Add(this.x264VideoTextBox);
-            this.VideoTab.Controls.Add(this.panel1);
-            this.VideoTab.Controls.Add(this.label6);
-            this.VideoTab.Controls.Add(this.x264AddPresetBtn);
-            this.VideoTab.Controls.Add(this.x264DeletePresetBtn);
-            this.VideoTab.Controls.Add(this.x264StartBtn);
-            this.VideoTab.Controls.Add(this.x264SubBtn);
-            this.VideoTab.Controls.Add(this.x264OutBtn);
-            this.VideoTab.Controls.Add(this.x264VideoBtn);
-            this.VideoTab.Controls.Add(this.label16);
-            this.VideoTab.Controls.Add(this.x264ExeComboBox);
-            this.VideoTab.Controls.Add(this.x264FpsComboBox);
-            this.VideoTab.Controls.Add(this.lbFPS2);
-            this.VideoTab.Controls.Add(this.x264AudioModeComboBox);
+            this.VideoTab.Controls.Add(this.VideoFramesLabel);
+            this.VideoTab.Controls.Add(this.VideoSeekLabel);
+            this.VideoTab.Controls.Add(this.VideoFramesNumericUpDown);
+            this.VideoTab.Controls.Add(this.VideoSeekNumericUpDown);
+            this.VideoTab.Controls.Add(this.VideoMaintainResolutionCheckBox);
+            this.VideoTab.Controls.Add(this.VideoDemuxerComboBox);
+            this.VideoTab.Controls.Add(this.VideoBatchGroupBox);
+            this.VideoTab.Controls.Add(this.VideoAutoShutdownCheckBox);
+            this.VideoTab.Controls.Add(this.VideoAudioParameterTextBox);
+            this.VideoTab.Controls.Add(this.VideoSubtitleTextBox);
+            this.VideoTab.Controls.Add(this.VideoOutputTextBox);
+            this.VideoTab.Controls.Add(this.VideoInputTextBox);
+            this.VideoTab.Controls.Add(this.VideoX264ModePanel);
+            this.VideoTab.Controls.Add(this.VideoDemuxerLabel);
+            this.VideoTab.Controls.Add(this.VideoAddPresetBotton);
+            this.VideoTab.Controls.Add(this.VideoDeletePresetBotton);
+            this.VideoTab.Controls.Add(this.VideoStartBotton);
+            this.VideoTab.Controls.Add(this.VideoSubtitleBotton);
+            this.VideoTab.Controls.Add(this.VideoOutputButton);
+            this.VideoTab.Controls.Add(this.VideoInputBotton);
+            this.VideoTab.Controls.Add(this.VideoEncoderLabel);
+            this.VideoTab.Controls.Add(this.VideoEncoderComboBox);
+            this.VideoTab.Controls.Add(this.VideoFpsComboBox);
+            this.VideoTab.Controls.Add(this.VideoFpsLabel);
+            this.VideoTab.Controls.Add(this.VideoAudioModeComboBox);
             this.VideoTab.Controls.Add(this.VideoPresetComboBox);
-            this.VideoTab.Controls.Add(this.label8);
-            this.VideoTab.Controls.Add(this.labelAudio);
-            this.VideoTab.Controls.Add(this.label12);
-            this.VideoTab.Controls.Add(this.lbcrf);
-            this.VideoTab.Controls.Add(this.lbheight);
-            this.VideoTab.Controls.Add(this.lbwidth);
-            this.VideoTab.Controls.Add(this.x264HeightNum);
-            this.VideoTab.Controls.Add(this.x264WidthNum);
-            this.VideoTab.Controls.Add(this.x264CRFNum);
-            this.VideoTab.Controls.Add(this.lbrate);
-            this.VideoTab.Controls.Add(this.x264CustomParameterTextBox);
-            this.VideoTab.Controls.Add(this.label4);
-            this.VideoTab.Controls.Add(this.x264BitrateNum);
+            this.VideoTab.Controls.Add(this.VideoAudioModeLabel);
+            this.VideoTab.Controls.Add(this.VideoGoToAudioLabel);
+            this.VideoTab.Controls.Add(this.VideoCrfKbpsLabel);
+            this.VideoTab.Controls.Add(this.VideoCrfLabel);
+            this.VideoTab.Controls.Add(this.labelx264Height);
+            this.VideoTab.Controls.Add(this.VideoWidthLabel);
+            this.VideoTab.Controls.Add(this.VideoHeightNumericUpDown);
+            this.VideoTab.Controls.Add(this.VideoWidthNumericUpDown);
+            this.VideoTab.Controls.Add(this.VideoCrfNumericUpDown);
+            this.VideoTab.Controls.Add(this.VideoBitrateLabel);
+            this.VideoTab.Controls.Add(this.VideoCustomParameterTextBox);
+            this.VideoTab.Controls.Add(this.VideoPresetLabel);
+            this.VideoTab.Controls.Add(this.VideoBitrateNumericUpDown);
             resources.ApplyResources(this.VideoTab, "VideoTab");
             this.VideoTab.Name = "VideoTab";
             this.VideoTab.UseVisualStyleBackColor = true;
             // 
-            // x264FramesLabel
+            // VideoFramesLabel
             // 
-            resources.ApplyResources(this.x264FramesLabel, "x264FramesLabel");
-            this.x264FramesLabel.Name = "x264FramesLabel";
+            resources.ApplyResources(this.VideoFramesLabel, "VideoFramesLabel");
+            this.VideoFramesLabel.Name = "VideoFramesLabel";
             // 
-            // x264SeekLabel
+            // VideoSeekLabel
             // 
-            resources.ApplyResources(this.x264SeekLabel, "x264SeekLabel");
-            this.x264SeekLabel.Name = "x264SeekLabel";
+            resources.ApplyResources(this.VideoSeekLabel, "VideoSeekLabel");
+            this.VideoSeekLabel.Name = "VideoSeekLabel";
             // 
-            // x264FramesNumericUpDown
+            // VideoFramesNumericUpDown
             // 
-            resources.ApplyResources(this.x264FramesNumericUpDown, "x264FramesNumericUpDown");
-            this.x264FramesNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.VideoFramesNumericUpDown, "VideoFramesNumericUpDown");
+            this.VideoFramesNumericUpDown.Maximum = new decimal(new int[] {
             99999999,
             0,
             0,
             0});
-            this.x264FramesNumericUpDown.Name = "x264FramesNumericUpDown";
+            this.VideoFramesNumericUpDown.Name = "VideoFramesNumericUpDown";
             // 
-            // x264SeekNumericUpDown
+            // VideoSeekNumericUpDown
             // 
-            resources.ApplyResources(this.x264SeekNumericUpDown, "x264SeekNumericUpDown");
-            this.x264SeekNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.VideoSeekNumericUpDown, "VideoSeekNumericUpDown");
+            this.VideoSeekNumericUpDown.Maximum = new decimal(new int[] {
             99999999,
             0,
             0,
             0});
-            this.x264SeekNumericUpDown.Name = "x264SeekNumericUpDown";
+            this.VideoSeekNumericUpDown.Name = "VideoSeekNumericUpDown";
             // 
-            // MaintainResolutionCheckBox
+            // VideoMaintainResolutionCheckBox
             // 
-            resources.ApplyResources(this.MaintainResolutionCheckBox, "MaintainResolutionCheckBox");
-            this.MaintainResolutionCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.MaintainResolutionCheckBox.Checked = true;
-            this.MaintainResolutionCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.MaintainResolutionCheckBox.Name = "MaintainResolutionCheckBox";
-            this.MaintainResolutionCheckBox.UseVisualStyleBackColor = true;
-            this.MaintainResolutionCheckBox.CheckedChanged += new System.EventHandler(this.MaintainResolutionCheckBox_CheckedChanged);
+            resources.ApplyResources(this.VideoMaintainResolutionCheckBox, "VideoMaintainResolutionCheckBox");
+            this.VideoMaintainResolutionCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.VideoMaintainResolutionCheckBox.Checked = true;
+            this.VideoMaintainResolutionCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.VideoMaintainResolutionCheckBox.Name = "VideoMaintainResolutionCheckBox";
+            this.VideoMaintainResolutionCheckBox.UseVisualStyleBackColor = true;
+            this.VideoMaintainResolutionCheckBox.CheckedChanged += new System.EventHandler(this.MaintainResolutionCheckBox_CheckedChanged);
             // 
-            // x264DemuxerComboBox
+            // VideoDemuxerComboBox
             // 
-            this.x264DemuxerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.x264DemuxerComboBox.FormattingEnabled = true;
-            this.x264DemuxerComboBox.Items.AddRange(new object[] {
-            resources.GetString("x264DemuxerComboBox.Items"),
-            resources.GetString("x264DemuxerComboBox.Items1"),
-            resources.GetString("x264DemuxerComboBox.Items2"),
-            resources.GetString("x264DemuxerComboBox.Items3"),
-            resources.GetString("x264DemuxerComboBox.Items4"),
-            resources.GetString("x264DemuxerComboBox.Items5")});
-            resources.ApplyResources(this.x264DemuxerComboBox, "x264DemuxerComboBox");
-            this.x264DemuxerComboBox.Name = "x264DemuxerComboBox";
+            this.VideoDemuxerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VideoDemuxerComboBox.FormattingEnabled = true;
+            this.VideoDemuxerComboBox.Items.AddRange(new object[] {
+            resources.GetString("VideoDemuxerComboBox.Items"),
+            resources.GetString("VideoDemuxerComboBox.Items1"),
+            resources.GetString("VideoDemuxerComboBox.Items2"),
+            resources.GetString("VideoDemuxerComboBox.Items3"),
+            resources.GetString("VideoDemuxerComboBox.Items4"),
+            resources.GetString("VideoDemuxerComboBox.Items5")});
+            resources.ApplyResources(this.VideoDemuxerComboBox, "VideoDemuxerComboBox");
+            this.VideoDemuxerComboBox.Name = "VideoDemuxerComboBox";
             // 
-            // groupBox1
+            // VideoBatchGroupBox
             // 
-            this.groupBox1.Controls.Add(this.label42);
-            this.groupBox1.Controls.Add(this.VideoBatchFormatComboBox);
-            this.groupBox1.Controls.Add(this.x264BatchSubSpecialLanguage);
-            this.groupBox1.Controls.Add(this.x264PathButton);
-            this.groupBox1.Controls.Add(this.x264PathTextBox);
-            this.groupBox1.Controls.Add(this.lbAuto);
-            this.groupBox1.Controls.Add(this.x264BatchClearBtn);
-            this.groupBox1.Controls.Add(this.x264BatchSubCheckBox);
-            this.groupBox1.Controls.Add(this.x264BatchDeleteBtn);
-            this.groupBox1.Controls.Add(this.x264BatchAddBtn);
-            this.groupBox1.Controls.Add(this.btnBatchAuto);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchFormatLabel);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchFormatComboBox);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchSubtitleLanguage);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchOutputFolderButton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchOutputFolderTextBox);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchItemListbox);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchClearBotton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchSubtitleCheckBox);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchDeleteBotton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchAddBotton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchStartBotton);
+            resources.ApplyResources(this.VideoBatchGroupBox, "VideoBatchGroupBox");
+            this.VideoBatchGroupBox.Name = "VideoBatchGroupBox";
+            this.VideoBatchGroupBox.TabStop = false;
             // 
-            // label42
+            // VideoBatchFormatLabel
             // 
-            resources.ApplyResources(this.label42, "label42");
-            this.label42.Name = "label42";
+            resources.ApplyResources(this.VideoBatchFormatLabel, "VideoBatchFormatLabel");
+            this.VideoBatchFormatLabel.Name = "VideoBatchFormatLabel";
             // 
             // VideoBatchFormatComboBox
             // 
@@ -2154,251 +2154,251 @@
             resources.ApplyResources(this.VideoBatchFormatComboBox, "VideoBatchFormatComboBox");
             this.VideoBatchFormatComboBox.Name = "VideoBatchFormatComboBox";
             // 
-            // x264BatchSubSpecialLanguage
+            // VideoBatchSubtitleLanguage
             // 
-            this.x264BatchSubSpecialLanguage.FormattingEnabled = true;
-            resources.ApplyResources(this.x264BatchSubSpecialLanguage, "x264BatchSubSpecialLanguage");
-            this.x264BatchSubSpecialLanguage.Name = "x264BatchSubSpecialLanguage";
+            this.VideoBatchSubtitleLanguage.FormattingEnabled = true;
+            resources.ApplyResources(this.VideoBatchSubtitleLanguage, "VideoBatchSubtitleLanguage");
+            this.VideoBatchSubtitleLanguage.Name = "VideoBatchSubtitleLanguage";
             // 
-            // x264PathButton
+            // VideoBatchOutputFolderButton
             // 
-            resources.ApplyResources(this.x264PathButton, "x264PathButton");
-            this.x264PathButton.Name = "x264PathButton";
-            this.x264PathButton.UseVisualStyleBackColor = true;
-            this.x264PathButton.Click += new System.EventHandler(this.x264PathButton_Click);
+            resources.ApplyResources(this.VideoBatchOutputFolderButton, "VideoBatchOutputFolderButton");
+            this.VideoBatchOutputFolderButton.Name = "VideoBatchOutputFolderButton";
+            this.VideoBatchOutputFolderButton.UseVisualStyleBackColor = true;
+            this.VideoBatchOutputFolderButton.Click += new System.EventHandler(this.x264PathButton_Click);
             // 
-            // x264PathTextBox
+            // VideoBatchOutputFolderTextBox
             // 
-            this.x264PathTextBox.AllowDrop = true;
-            this.x264PathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.x264PathTextBox.EmptyTextTip = "";
-            this.x264PathTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.x264PathTextBox, "x264PathTextBox");
-            this.x264PathTextBox.Name = "x264PathTextBox";
+            this.VideoBatchOutputFolderTextBox.AllowDrop = true;
+            this.VideoBatchOutputFolderTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.VideoBatchOutputFolderTextBox.EmptyTextTip = "";
+            this.VideoBatchOutputFolderTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.VideoBatchOutputFolderTextBox, "VideoBatchOutputFolderTextBox");
+            this.VideoBatchOutputFolderTextBox.Name = "VideoBatchOutputFolderTextBox";
             // 
-            // lbAuto
+            // VideoBatchItemListbox
             // 
-            this.lbAuto.AllowDrop = true;
-            this.lbAuto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.lbAuto.FormattingEnabled = true;
-            resources.ApplyResources(this.lbAuto, "lbAuto");
-            this.lbAuto.Name = "lbAuto";
-            this.lbAuto.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lbAuto_DrawItem);
-            this.lbAuto.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragDrop);
-            this.lbAuto.DragEnter += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragEnter);
-            this.lbAuto.DragOver += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragOver);
-            this.lbAuto.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbAuto_MouseDown);
+            this.VideoBatchItemListbox.AllowDrop = true;
+            this.VideoBatchItemListbox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.VideoBatchItemListbox.FormattingEnabled = true;
+            resources.ApplyResources(this.VideoBatchItemListbox, "VideoBatchItemListbox");
+            this.VideoBatchItemListbox.Name = "VideoBatchItemListbox";
+            this.VideoBatchItemListbox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lbAuto_DrawItem);
+            this.VideoBatchItemListbox.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragDrop);
+            this.VideoBatchItemListbox.DragEnter += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragEnter);
+            this.VideoBatchItemListbox.DragOver += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragOver);
+            this.VideoBatchItemListbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbAuto_MouseDown);
             // 
-            // x264BatchClearBtn
+            // VideoBatchClearBotton
             // 
-            resources.ApplyResources(this.x264BatchClearBtn, "x264BatchClearBtn");
-            this.x264BatchClearBtn.Name = "x264BatchClearBtn";
-            this.x264BatchClearBtn.UseVisualStyleBackColor = true;
-            this.x264BatchClearBtn.Click += new System.EventHandler(this.x264BatchClearBtn_Click);
+            resources.ApplyResources(this.VideoBatchClearBotton, "VideoBatchClearBotton");
+            this.VideoBatchClearBotton.Name = "VideoBatchClearBotton";
+            this.VideoBatchClearBotton.UseVisualStyleBackColor = true;
+            this.VideoBatchClearBotton.Click += new System.EventHandler(this.x264BatchClearBtn_Click);
             // 
-            // x264BatchSubCheckBox
+            // VideoBatchSubtitleCheckBox
             // 
-            resources.ApplyResources(this.x264BatchSubCheckBox, "x264BatchSubCheckBox");
-            this.x264BatchSubCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.x264BatchSubCheckBox.Name = "x264BatchSubCheckBox";
-            this.x264BatchSubCheckBox.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.VideoBatchSubtitleCheckBox, "VideoBatchSubtitleCheckBox");
+            this.VideoBatchSubtitleCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.VideoBatchSubtitleCheckBox.Name = "VideoBatchSubtitleCheckBox";
+            this.VideoBatchSubtitleCheckBox.UseVisualStyleBackColor = false;
             // 
-            // x264BatchDeleteBtn
+            // VideoBatchDeleteBotton
             // 
-            resources.ApplyResources(this.x264BatchDeleteBtn, "x264BatchDeleteBtn");
-            this.x264BatchDeleteBtn.Name = "x264BatchDeleteBtn";
-            this.x264BatchDeleteBtn.UseVisualStyleBackColor = true;
-            this.x264BatchDeleteBtn.Click += new System.EventHandler(this.x264BatchDeleteBtn_Click);
+            resources.ApplyResources(this.VideoBatchDeleteBotton, "VideoBatchDeleteBotton");
+            this.VideoBatchDeleteBotton.Name = "VideoBatchDeleteBotton";
+            this.VideoBatchDeleteBotton.UseVisualStyleBackColor = true;
+            this.VideoBatchDeleteBotton.Click += new System.EventHandler(this.x264BatchDeleteBtn_Click);
             // 
-            // x264BatchAddBtn
+            // VideoBatchAddBotton
             // 
-            resources.ApplyResources(this.x264BatchAddBtn, "x264BatchAddBtn");
-            this.x264BatchAddBtn.Name = "x264BatchAddBtn";
-            this.x264BatchAddBtn.UseVisualStyleBackColor = true;
-            this.x264BatchAddBtn.Click += new System.EventHandler(this.x264BatchAddBtn_Click);
+            resources.ApplyResources(this.VideoBatchAddBotton, "VideoBatchAddBotton");
+            this.VideoBatchAddBotton.Name = "VideoBatchAddBotton";
+            this.VideoBatchAddBotton.UseVisualStyleBackColor = true;
+            this.VideoBatchAddBotton.Click += new System.EventHandler(this.x264BatchAddBtn_Click);
             // 
-            // btnBatchAuto
+            // VideoBatchStartBotton
             // 
-            resources.ApplyResources(this.btnBatchAuto, "btnBatchAuto");
-            this.btnBatchAuto.Name = "btnBatchAuto";
-            this.btnBatchAuto.UseVisualStyleBackColor = true;
-            this.btnBatchAuto.Click += new System.EventHandler(this.btnBatchAuto_Click);
+            resources.ApplyResources(this.VideoBatchStartBotton, "VideoBatchStartBotton");
+            this.VideoBatchStartBotton.Name = "VideoBatchStartBotton";
+            this.VideoBatchStartBotton.UseVisualStyleBackColor = true;
+            this.VideoBatchStartBotton.Click += new System.EventHandler(this.btnBatchAuto_Click);
             // 
-            // x264ShutdownCheckBox
+            // VideoAutoShutdownCheckBox
             // 
-            resources.ApplyResources(this.x264ShutdownCheckBox, "x264ShutdownCheckBox");
-            this.x264ShutdownCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.x264ShutdownCheckBox.Name = "x264ShutdownCheckBox";
-            this.x264ShutdownCheckBox.UseVisualStyleBackColor = false;
-            this.x264ShutdownCheckBox.CheckedChanged += new System.EventHandler(this.x264ShutdownCheckBox_CheckedChanged);
+            resources.ApplyResources(this.VideoAutoShutdownCheckBox, "VideoAutoShutdownCheckBox");
+            this.VideoAutoShutdownCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.VideoAutoShutdownCheckBox.Name = "VideoAutoShutdownCheckBox";
+            this.VideoAutoShutdownCheckBox.UseVisualStyleBackColor = false;
+            this.VideoAutoShutdownCheckBox.CheckedChanged += new System.EventHandler(this.x264ShutdownCheckBox_CheckedChanged);
             // 
-            // x264AudioParameterTextBox
+            // VideoAudioParameterTextBox
             // 
-            this.x264AudioParameterTextBox.AllowDrop = true;
-            this.x264AudioParameterTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.x264AudioParameterTextBox.EmptyTextTip = null;
-            this.x264AudioParameterTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.x264AudioParameterTextBox, "x264AudioParameterTextBox");
-            this.x264AudioParameterTextBox.Name = "x264AudioParameterTextBox";
+            this.VideoAudioParameterTextBox.AllowDrop = true;
+            this.VideoAudioParameterTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.VideoAudioParameterTextBox.EmptyTextTip = null;
+            this.VideoAudioParameterTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.VideoAudioParameterTextBox, "VideoAudioParameterTextBox");
+            this.VideoAudioParameterTextBox.Name = "VideoAudioParameterTextBox";
             // 
-            // x264SubTextBox
+            // VideoSubtitleTextBox
             // 
-            this.x264SubTextBox.AllowDrop = true;
-            this.x264SubTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.x264SubTextBox.EmptyTextTip = null;
-            this.x264SubTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.x264SubTextBox, "x264SubTextBox");
-            this.x264SubTextBox.Name = "x264SubTextBox";
-            this.x264SubTextBox.ReadOnly = true;
-            this.x264SubTextBox.TextChanged += new System.EventHandler(this.x264SubTextBox_TextChanged);
-            this.x264SubTextBox.DoubleClick += new System.EventHandler(this.x264SubTextBox_DoubleClick);
+            this.VideoSubtitleTextBox.AllowDrop = true;
+            this.VideoSubtitleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.VideoSubtitleTextBox.EmptyTextTip = null;
+            this.VideoSubtitleTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.VideoSubtitleTextBox, "VideoSubtitleTextBox");
+            this.VideoSubtitleTextBox.Name = "VideoSubtitleTextBox";
+            this.VideoSubtitleTextBox.ReadOnly = true;
+            this.VideoSubtitleTextBox.TextChanged += new System.EventHandler(this.x264SubTextBox_TextChanged);
+            this.VideoSubtitleTextBox.DoubleClick += new System.EventHandler(this.x264SubTextBox_DoubleClick);
             // 
-            // x264OutTextBox
+            // VideoOutputTextBox
             // 
-            this.x264OutTextBox.AllowDrop = true;
-            this.x264OutTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.x264OutTextBox.EmptyTextTip = "";
-            this.x264OutTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.x264OutTextBox, "x264OutTextBox");
-            this.x264OutTextBox.Name = "x264OutTextBox";
-            this.x264OutTextBox.TextChanged += new System.EventHandler(this.x264OutTextBox_TextChanged);
+            this.VideoOutputTextBox.AllowDrop = true;
+            this.VideoOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.VideoOutputTextBox.EmptyTextTip = "";
+            this.VideoOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.VideoOutputTextBox, "VideoOutputTextBox");
+            this.VideoOutputTextBox.Name = "VideoOutputTextBox";
+            this.VideoOutputTextBox.TextChanged += new System.EventHandler(this.x264OutTextBox_TextChanged);
             // 
-            // x264VideoTextBox
+            // VideoInputTextBox
             // 
-            this.x264VideoTextBox.AllowDrop = true;
-            this.x264VideoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.x264VideoTextBox.EmptyTextTip = "";
-            this.x264VideoTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.x264VideoTextBox, "x264VideoTextBox");
-            this.x264VideoTextBox.Name = "x264VideoTextBox";
-            this.x264VideoTextBox.ReadOnly = true;
-            this.x264VideoTextBox.TextChanged += new System.EventHandler(this.x264VideoTextBox_TextChanged);
+            this.VideoInputTextBox.AllowDrop = true;
+            this.VideoInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.VideoInputTextBox.EmptyTextTip = "";
+            this.VideoInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.VideoInputTextBox, "VideoInputTextBox");
+            this.VideoInputTextBox.Name = "VideoInputTextBox";
+            this.VideoInputTextBox.ReadOnly = true;
+            this.VideoInputTextBox.TextChanged += new System.EventHandler(this.x264VideoTextBox_TextChanged);
             // 
-            // panel1
+            // VideoX264ModePanel
             // 
-            this.panel1.Controls.Add(this.x264Mode1RadioButton);
-            this.panel1.Controls.Add(this.x264Mode3RadioButton);
-            this.panel1.Controls.Add(this.x264Mode2RadioButton);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
+            this.VideoX264ModePanel.Controls.Add(this.VideoModeCrfRadioButton);
+            this.VideoX264ModePanel.Controls.Add(this.VideoModeCustomRadioButton);
+            this.VideoX264ModePanel.Controls.Add(this.VideoMode2PassRadioButton);
+            resources.ApplyResources(this.VideoX264ModePanel, "VideoX264ModePanel");
+            this.VideoX264ModePanel.Name = "VideoX264ModePanel";
             // 
-            // x264Mode1RadioButton
+            // VideoModeCrfRadioButton
             // 
-            resources.ApplyResources(this.x264Mode1RadioButton, "x264Mode1RadioButton");
-            this.x264Mode1RadioButton.BackColor = System.Drawing.Color.Transparent;
-            this.x264Mode1RadioButton.Checked = true;
-            this.x264Mode1RadioButton.Name = "x264Mode1RadioButton";
-            this.x264Mode1RadioButton.TabStop = true;
-            this.x264Mode1RadioButton.UseVisualStyleBackColor = false;
-            this.x264Mode1RadioButton.CheckedChanged += new System.EventHandler(this.x264Mode1RadioButton_CheckedChanged);
+            resources.ApplyResources(this.VideoModeCrfRadioButton, "VideoModeCrfRadioButton");
+            this.VideoModeCrfRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.VideoModeCrfRadioButton.Checked = true;
+            this.VideoModeCrfRadioButton.Name = "VideoModeCrfRadioButton";
+            this.VideoModeCrfRadioButton.TabStop = true;
+            this.VideoModeCrfRadioButton.UseVisualStyleBackColor = false;
+            this.VideoModeCrfRadioButton.CheckedChanged += new System.EventHandler(this.x264Mode1RadioButton_CheckedChanged);
             // 
-            // x264Mode3RadioButton
+            // VideoModeCustomRadioButton
             // 
-            resources.ApplyResources(this.x264Mode3RadioButton, "x264Mode3RadioButton");
-            this.x264Mode3RadioButton.BackColor = System.Drawing.Color.Transparent;
-            this.x264Mode3RadioButton.Name = "x264Mode3RadioButton";
-            this.x264Mode3RadioButton.UseVisualStyleBackColor = false;
-            this.x264Mode3RadioButton.CheckedChanged += new System.EventHandler(this.x264Mode3RadioButton_CheckedChanged);
+            resources.ApplyResources(this.VideoModeCustomRadioButton, "VideoModeCustomRadioButton");
+            this.VideoModeCustomRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.VideoModeCustomRadioButton.Name = "VideoModeCustomRadioButton";
+            this.VideoModeCustomRadioButton.UseVisualStyleBackColor = false;
+            this.VideoModeCustomRadioButton.CheckedChanged += new System.EventHandler(this.x264Mode3RadioButton_CheckedChanged);
             // 
-            // x264Mode2RadioButton
+            // VideoMode2PassRadioButton
             // 
-            resources.ApplyResources(this.x264Mode2RadioButton, "x264Mode2RadioButton");
-            this.x264Mode2RadioButton.BackColor = System.Drawing.Color.Transparent;
-            this.x264Mode2RadioButton.Name = "x264Mode2RadioButton";
-            this.x264Mode2RadioButton.UseVisualStyleBackColor = false;
-            this.x264Mode2RadioButton.CheckedChanged += new System.EventHandler(this.x264Mode2RadioButton_CheckedChanged);
+            resources.ApplyResources(this.VideoMode2PassRadioButton, "VideoMode2PassRadioButton");
+            this.VideoMode2PassRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.VideoMode2PassRadioButton.Name = "VideoMode2PassRadioButton";
+            this.VideoMode2PassRadioButton.UseVisualStyleBackColor = false;
+            this.VideoMode2PassRadioButton.CheckedChanged += new System.EventHandler(this.x264Mode2RadioButton_CheckedChanged);
             // 
-            // label6
+            // VideoDemuxerLabel
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.VideoDemuxerLabel, "VideoDemuxerLabel");
+            this.VideoDemuxerLabel.Name = "VideoDemuxerLabel";
             // 
-            // x264AddPresetBtn
+            // VideoAddPresetBotton
             // 
-            resources.ApplyResources(this.x264AddPresetBtn, "x264AddPresetBtn");
-            this.x264AddPresetBtn.Name = "x264AddPresetBtn";
-            this.x264AddPresetBtn.UseVisualStyleBackColor = true;
-            this.x264AddPresetBtn.Click += new System.EventHandler(this.x264AddPresetBtn_Click);
+            resources.ApplyResources(this.VideoAddPresetBotton, "VideoAddPresetBotton");
+            this.VideoAddPresetBotton.Name = "VideoAddPresetBotton";
+            this.VideoAddPresetBotton.UseVisualStyleBackColor = true;
+            this.VideoAddPresetBotton.Click += new System.EventHandler(this.x264AddPresetBtn_Click);
             // 
-            // x264DeletePresetBtn
+            // VideoDeletePresetBotton
             // 
-            resources.ApplyResources(this.x264DeletePresetBtn, "x264DeletePresetBtn");
-            this.x264DeletePresetBtn.Name = "x264DeletePresetBtn";
-            this.x264DeletePresetBtn.UseVisualStyleBackColor = true;
-            this.x264DeletePresetBtn.Click += new System.EventHandler(this.x264DeletePresetBtn_Click);
+            resources.ApplyResources(this.VideoDeletePresetBotton, "VideoDeletePresetBotton");
+            this.VideoDeletePresetBotton.Name = "VideoDeletePresetBotton";
+            this.VideoDeletePresetBotton.UseVisualStyleBackColor = true;
+            this.VideoDeletePresetBotton.Click += new System.EventHandler(this.x264DeletePresetBtn_Click);
             // 
-            // x264StartBtn
+            // VideoStartBotton
             // 
-            resources.ApplyResources(this.x264StartBtn, "x264StartBtn");
-            this.x264StartBtn.Name = "x264StartBtn";
-            this.x264StartBtn.UseVisualStyleBackColor = true;
-            this.x264StartBtn.Click += new System.EventHandler(this.x264StartBtn_Click);
+            resources.ApplyResources(this.VideoStartBotton, "VideoStartBotton");
+            this.VideoStartBotton.Name = "VideoStartBotton";
+            this.VideoStartBotton.UseVisualStyleBackColor = true;
+            this.VideoStartBotton.Click += new System.EventHandler(this.x264StartBtn_Click);
             // 
-            // x264SubBtn
+            // VideoSubtitleBotton
             // 
-            resources.ApplyResources(this.x264SubBtn, "x264SubBtn");
-            this.x264SubBtn.Name = "x264SubBtn";
-            this.x264SubBtn.UseVisualStyleBackColor = true;
-            this.x264SubBtn.Click += new System.EventHandler(this.x264SubBtn_Click);
+            resources.ApplyResources(this.VideoSubtitleBotton, "VideoSubtitleBotton");
+            this.VideoSubtitleBotton.Name = "VideoSubtitleBotton";
+            this.VideoSubtitleBotton.UseVisualStyleBackColor = true;
+            this.VideoSubtitleBotton.Click += new System.EventHandler(this.x264SubBtn_Click);
             // 
-            // x264OutBtn
+            // VideoOutputButton
             // 
-            resources.ApplyResources(this.x264OutBtn, "x264OutBtn");
-            this.x264OutBtn.Name = "x264OutBtn";
-            this.x264OutBtn.UseVisualStyleBackColor = true;
-            this.x264OutBtn.Click += new System.EventHandler(this.x264OutBtn_Click);
+            resources.ApplyResources(this.VideoOutputButton, "VideoOutputButton");
+            this.VideoOutputButton.Name = "VideoOutputButton";
+            this.VideoOutputButton.UseVisualStyleBackColor = true;
+            this.VideoOutputButton.Click += new System.EventHandler(this.x264OutBtn_Click);
             // 
-            // x264VideoBtn
+            // VideoInputBotton
             // 
-            resources.ApplyResources(this.x264VideoBtn, "x264VideoBtn");
-            this.x264VideoBtn.Name = "x264VideoBtn";
-            this.x264VideoBtn.UseVisualStyleBackColor = true;
-            this.x264VideoBtn.Click += new System.EventHandler(this.x264VideoBtn_Click);
+            resources.ApplyResources(this.VideoInputBotton, "VideoInputBotton");
+            this.VideoInputBotton.Name = "VideoInputBotton";
+            this.VideoInputBotton.UseVisualStyleBackColor = true;
+            this.VideoInputBotton.Click += new System.EventHandler(this.x264VideoBtn_Click);
             // 
-            // label16
+            // VideoEncoderLabel
             // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
+            resources.ApplyResources(this.VideoEncoderLabel, "VideoEncoderLabel");
+            this.VideoEncoderLabel.Name = "VideoEncoderLabel";
             // 
-            // x264ExeComboBox
+            // VideoEncoderComboBox
             // 
-            this.x264ExeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.x264ExeComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.x264ExeComboBox, "x264ExeComboBox");
-            this.x264ExeComboBox.Name = "x264ExeComboBox";
-            this.x264ExeComboBox.SelectedIndexChanged += new System.EventHandler(this.x264ExeComboBox_SelectedIndexChanged);
+            this.VideoEncoderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VideoEncoderComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.VideoEncoderComboBox, "VideoEncoderComboBox");
+            this.VideoEncoderComboBox.Name = "VideoEncoderComboBox";
+            this.VideoEncoderComboBox.SelectedIndexChanged += new System.EventHandler(this.x264ExeComboBox_SelectedIndexChanged);
             // 
-            // x264FpsComboBox
+            // VideoFpsComboBox
             // 
-            this.x264FpsComboBox.FormattingEnabled = true;
-            this.x264FpsComboBox.Items.AddRange(new object[] {
-            resources.GetString("x264FpsComboBox.Items"),
-            resources.GetString("x264FpsComboBox.Items1"),
-            resources.GetString("x264FpsComboBox.Items2"),
-            resources.GetString("x264FpsComboBox.Items3"),
-            resources.GetString("x264FpsComboBox.Items4"),
-            resources.GetString("x264FpsComboBox.Items5"),
-            resources.GetString("x264FpsComboBox.Items6"),
-            resources.GetString("x264FpsComboBox.Items7"),
-            resources.GetString("x264FpsComboBox.Items8")});
-            resources.ApplyResources(this.x264FpsComboBox, "x264FpsComboBox");
-            this.x264FpsComboBox.Name = "x264FpsComboBox";
+            this.VideoFpsComboBox.FormattingEnabled = true;
+            this.VideoFpsComboBox.Items.AddRange(new object[] {
+            resources.GetString("VideoFpsComboBox.Items"),
+            resources.GetString("VideoFpsComboBox.Items1"),
+            resources.GetString("VideoFpsComboBox.Items2"),
+            resources.GetString("VideoFpsComboBox.Items3"),
+            resources.GetString("VideoFpsComboBox.Items4"),
+            resources.GetString("VideoFpsComboBox.Items5"),
+            resources.GetString("VideoFpsComboBox.Items6"),
+            resources.GetString("VideoFpsComboBox.Items7"),
+            resources.GetString("VideoFpsComboBox.Items8")});
+            resources.ApplyResources(this.VideoFpsComboBox, "VideoFpsComboBox");
+            this.VideoFpsComboBox.Name = "VideoFpsComboBox";
             // 
-            // lbFPS2
+            // VideoFpsLabel
             // 
-            resources.ApplyResources(this.lbFPS2, "lbFPS2");
-            this.lbFPS2.Name = "lbFPS2";
+            resources.ApplyResources(this.VideoFpsLabel, "VideoFpsLabel");
+            this.VideoFpsLabel.Name = "VideoFpsLabel";
             // 
-            // x264AudioModeComboBox
+            // VideoAudioModeComboBox
             // 
-            this.x264AudioModeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.x264AudioModeComboBox.FormattingEnabled = true;
-            this.x264AudioModeComboBox.Items.AddRange(new object[] {
-            resources.GetString("x264AudioModeComboBox.Items"),
-            resources.GetString("x264AudioModeComboBox.Items1"),
-            resources.GetString("x264AudioModeComboBox.Items2")});
-            resources.ApplyResources(this.x264AudioModeComboBox, "x264AudioModeComboBox");
-            this.x264AudioModeComboBox.Name = "x264AudioModeComboBox";
+            this.VideoAudioModeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VideoAudioModeComboBox.FormattingEnabled = true;
+            this.VideoAudioModeComboBox.Items.AddRange(new object[] {
+            resources.GetString("VideoAudioModeComboBox.Items"),
+            resources.GetString("VideoAudioModeComboBox.Items1"),
+            resources.GetString("VideoAudioModeComboBox.Items2")});
+            resources.ApplyResources(this.VideoAudioModeComboBox, "VideoAudioModeComboBox");
+            this.VideoAudioModeComboBox.Name = "VideoAudioModeComboBox";
             // 
             // VideoPresetComboBox
             // 
@@ -2408,119 +2408,119 @@
             this.VideoPresetComboBox.Name = "VideoPresetComboBox";
             this.VideoPresetComboBox.SelectedIndexChanged += new System.EventHandler(this.cbX264_SelectedIndexChanged);
             // 
-            // label8
+            // VideoAudioModeLabel
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            resources.ApplyResources(this.VideoAudioModeLabel, "VideoAudioModeLabel");
+            this.VideoAudioModeLabel.Name = "VideoAudioModeLabel";
             // 
-            // labelAudio
+            // VideoGoToAudioLabel
             // 
-            resources.ApplyResources(this.labelAudio, "labelAudio");
-            this.labelAudio.ForeColor = System.Drawing.Color.Blue;
-            this.labelAudio.Name = "labelAudio";
-            this.labelAudio.Click += new System.EventHandler(this.labelAudio_Click);
+            resources.ApplyResources(this.VideoGoToAudioLabel, "VideoGoToAudioLabel");
+            this.VideoGoToAudioLabel.ForeColor = System.Drawing.Color.Blue;
+            this.VideoGoToAudioLabel.Name = "VideoGoToAudioLabel";
+            this.VideoGoToAudioLabel.Click += new System.EventHandler(this.labelAudio_Click);
             // 
-            // label12
+            // VideoCrfKbpsLabel
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
+            resources.ApplyResources(this.VideoCrfKbpsLabel, "VideoCrfKbpsLabel");
+            this.VideoCrfKbpsLabel.Name = "VideoCrfKbpsLabel";
             // 
-            // lbcrf
+            // VideoCrfLabel
             // 
-            resources.ApplyResources(this.lbcrf, "lbcrf");
-            this.lbcrf.Name = "lbcrf";
+            resources.ApplyResources(this.VideoCrfLabel, "VideoCrfLabel");
+            this.VideoCrfLabel.Name = "VideoCrfLabel";
             // 
-            // lbheight
+            // labelx264Height
             // 
-            resources.ApplyResources(this.lbheight, "lbheight");
-            this.lbheight.Name = "lbheight";
+            resources.ApplyResources(this.labelx264Height, "labelx264Height");
+            this.labelx264Height.Name = "labelx264Height";
             // 
-            // lbwidth
+            // VideoWidthLabel
             // 
-            resources.ApplyResources(this.lbwidth, "lbwidth");
-            this.lbwidth.Name = "lbwidth";
+            resources.ApplyResources(this.VideoWidthLabel, "VideoWidthLabel");
+            this.VideoWidthLabel.Name = "VideoWidthLabel";
             // 
-            // x264HeightNum
+            // VideoHeightNumericUpDown
             // 
-            resources.ApplyResources(this.x264HeightNum, "x264HeightNum");
-            this.x264HeightNum.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.VideoHeightNumericUpDown, "VideoHeightNumericUpDown");
+            this.VideoHeightNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.x264HeightNum.Name = "x264HeightNum";
+            this.VideoHeightNumericUpDown.Name = "VideoHeightNumericUpDown";
             // 
-            // x264WidthNum
+            // VideoWidthNumericUpDown
             // 
-            resources.ApplyResources(this.x264WidthNum, "x264WidthNum");
-            this.x264WidthNum.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.VideoWidthNumericUpDown, "VideoWidthNumericUpDown");
+            this.VideoWidthNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.x264WidthNum.Name = "x264WidthNum";
+            this.VideoWidthNumericUpDown.Name = "VideoWidthNumericUpDown";
             // 
-            // x264CRFNum
+            // VideoCrfNumericUpDown
             // 
-            this.x264CRFNum.DecimalPlaces = 1;
-            this.x264CRFNum.Increment = new decimal(new int[] {
+            this.VideoCrfNumericUpDown.DecimalPlaces = 1;
+            this.VideoCrfNumericUpDown.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            resources.ApplyResources(this.x264CRFNum, "x264CRFNum");
-            this.x264CRFNum.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.VideoCrfNumericUpDown, "VideoCrfNumericUpDown");
+            this.VideoCrfNumericUpDown.Maximum = new decimal(new int[] {
             63,
             0,
             0,
             0});
-            this.x264CRFNum.Minimum = new decimal(new int[] {
+            this.VideoCrfNumericUpDown.Minimum = new decimal(new int[] {
             12,
             0,
             0,
             -2147483648});
-            this.x264CRFNum.Name = "x264CRFNum";
-            this.x264CRFNum.Value = new decimal(new int[] {
+            this.VideoCrfNumericUpDown.Name = "VideoCrfNumericUpDown";
+            this.VideoCrfNumericUpDown.Value = new decimal(new int[] {
             235,
             0,
             0,
             65536});
             // 
-            // lbrate
+            // VideoBitrateLabel
             // 
-            resources.ApplyResources(this.lbrate, "lbrate");
-            this.lbrate.Name = "lbrate";
+            resources.ApplyResources(this.VideoBitrateLabel, "VideoBitrateLabel");
+            this.VideoBitrateLabel.Name = "VideoBitrateLabel";
             // 
-            // x264CustomParameterTextBox
+            // VideoCustomParameterTextBox
             // 
-            this.x264CustomParameterTextBox.AllowDrop = true;
-            this.x264CustomParameterTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.x264CustomParameterTextBox.EmptyTextTip = null;
-            this.x264CustomParameterTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.x264CustomParameterTextBox, "x264CustomParameterTextBox");
-            this.x264CustomParameterTextBox.Name = "x264CustomParameterTextBox";
-            this.x264CustomParameterTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.x264CustomParameterTextBox_KeyDown);
+            this.VideoCustomParameterTextBox.AllowDrop = true;
+            this.VideoCustomParameterTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.VideoCustomParameterTextBox.EmptyTextTip = null;
+            this.VideoCustomParameterTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.VideoCustomParameterTextBox, "VideoCustomParameterTextBox");
+            this.VideoCustomParameterTextBox.Name = "VideoCustomParameterTextBox";
+            this.VideoCustomParameterTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.x264CustomParameterTextBox_KeyDown);
             // 
-            // label4
+            // VideoPresetLabel
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.VideoPresetLabel, "VideoPresetLabel");
+            this.VideoPresetLabel.Name = "VideoPresetLabel";
             // 
-            // x264BitrateNum
+            // VideoBitrateNumericUpDown
             // 
-            resources.ApplyResources(this.x264BitrateNum, "x264BitrateNum");
-            this.x264BitrateNum.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.VideoBitrateNumericUpDown, "VideoBitrateNumericUpDown");
+            this.VideoBitrateNumericUpDown.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.x264BitrateNum.Minimum = new decimal(new int[] {
+            this.VideoBitrateNumericUpDown.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.x264BitrateNum.Name = "x264BitrateNum";
-            this.x264BitrateNum.Value = new decimal(new int[] {
+            this.VideoBitrateNumericUpDown.Name = "VideoBitrateNumericUpDown";
+            this.VideoBitrateNumericUpDown.Value = new decimal(new int[] {
             800,
             0,
             0,
@@ -3065,16 +3065,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.OnePicAudioBitrateNum)).EndInit();
             this.VideoTab.ResumeLayout(false);
             this.VideoTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.x264FramesNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.x264SeekNumericUpDown)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.x264HeightNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.x264WidthNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.x264CRFNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.x264BitrateNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoFramesNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoSeekNumericUpDown)).EndInit();
+            this.VideoBatchGroupBox.ResumeLayout(false);
+            this.VideoBatchGroupBox.PerformLayout();
+            this.VideoX264ModePanel.ResumeLayout(false);
+            this.VideoX264ModePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoHeightNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoWidthNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoCrfNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VideoBitrateNumericUpDown)).EndInit();
             this.HelpTab.ResumeLayout(false);
             this.HelpTab.PerformLayout();
             this.tabControl.ResumeLayout(false);
@@ -3182,48 +3182,48 @@
         private ControlExs.QQTextBox txtaudio2;
         private ControlExs.QQTextBox AudioCustomParameterTextBox;
         private System.Windows.Forms.TabPage VideoTab;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox lbAuto;
-        private ControlExs.QQButton x264BatchClearBtn;
-        private ControlExs.QQCheckBox x264BatchSubCheckBox;
-        private ControlExs.QQButton x264BatchDeleteBtn;
-        private ControlExs.QQButton btnBatchAuto;
-        private ControlExs.QQButton x264BatchAddBtn;
-        private ControlExs.QQCheckBox x264ShutdownCheckBox;
-        private ControlExs.QQTextBox x264AudioParameterTextBox;
-        private ControlExs.QQTextBox x264SubTextBox;
-        private ControlExs.QQTextBox x264OutTextBox;
-        private ControlExs.QQTextBox x264VideoTextBox;
-        private ControlExs.QQTextBox x264CustomParameterTextBox;
-        private ControlExs.QQButton x264AddPresetBtn;
-        private ControlExs.QQButton x264DeletePresetBtn;
-        private ControlExs.QQButton x264StartBtn;
-        private ControlExs.QQButton x264SubBtn;
-        private ControlExs.QQButton x264OutBtn;
-        private ControlExs.QQButton x264VideoBtn;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox x264ExeComboBox;
-        private System.Windows.Forms.ComboBox x264FpsComboBox;
-        private System.Windows.Forms.Label lbFPS2;
-        private System.Windows.Forms.ComboBox x264AudioModeComboBox;
+        private System.Windows.Forms.GroupBox VideoBatchGroupBox;
+        private System.Windows.Forms.ListBox VideoBatchItemListbox;
+        private ControlExs.QQButton VideoBatchClearBotton;
+        private ControlExs.QQCheckBox VideoBatchSubtitleCheckBox;
+        private ControlExs.QQButton VideoBatchDeleteBotton;
+        private ControlExs.QQButton VideoBatchStartBotton;
+        private ControlExs.QQButton VideoBatchAddBotton;
+        private ControlExs.QQCheckBox VideoAutoShutdownCheckBox;
+        private ControlExs.QQTextBox VideoAudioParameterTextBox;
+        private ControlExs.QQTextBox VideoSubtitleTextBox;
+        private ControlExs.QQTextBox VideoOutputTextBox;
+        private ControlExs.QQTextBox VideoInputTextBox;
+        private ControlExs.QQTextBox VideoCustomParameterTextBox;
+        private ControlExs.QQButton VideoAddPresetBotton;
+        private ControlExs.QQButton VideoDeletePresetBotton;
+        private ControlExs.QQButton VideoStartBotton;
+        private ControlExs.QQButton VideoSubtitleBotton;
+        private ControlExs.QQButton VideoOutputButton;
+        private ControlExs.QQButton VideoInputBotton;
+        private System.Windows.Forms.Label VideoEncoderLabel;
+        private System.Windows.Forms.Label VideoPresetLabel;
+        private System.Windows.Forms.ComboBox VideoEncoderComboBox;
+        private System.Windows.Forms.ComboBox VideoFpsComboBox;
+        private System.Windows.Forms.Label VideoFpsLabel;
+        private System.Windows.Forms.ComboBox VideoAudioModeComboBox;
         private System.Windows.Forms.ComboBox VideoPresetComboBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label labelAudio;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel1;
-        private ControlExs.QQRadioButton x264Mode1RadioButton;
-        private ControlExs.QQRadioButton x264Mode3RadioButton;
-        private ControlExs.QQRadioButton x264Mode2RadioButton;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbcrf;
-        private System.Windows.Forms.Label lbheight;
-        private System.Windows.Forms.Label lbwidth;
-        private System.Windows.Forms.NumericUpDown x264HeightNum;
-        private System.Windows.Forms.NumericUpDown x264WidthNum;
-        private System.Windows.Forms.NumericUpDown x264BitrateNum;
-        private System.Windows.Forms.NumericUpDown x264CRFNum;
-        private System.Windows.Forms.Label lbrate;
+        private System.Windows.Forms.Label VideoAudioModeLabel;
+        private System.Windows.Forms.Label VideoGoToAudioLabel;
+        private System.Windows.Forms.Label VideoCrfKbpsLabel;
+        private System.Windows.Forms.Panel VideoX264ModePanel;
+        private ControlExs.QQRadioButton VideoModeCrfRadioButton;
+        private ControlExs.QQRadioButton VideoModeCustomRadioButton;
+        private ControlExs.QQRadioButton VideoMode2PassRadioButton;
+        private System.Windows.Forms.Label VideoDemuxerLabel;
+        private System.Windows.Forms.Label VideoCrfLabel;
+        private System.Windows.Forms.Label labelx264Height;
+        private System.Windows.Forms.Label VideoWidthLabel;
+        private System.Windows.Forms.NumericUpDown VideoHeightNumericUpDown;
+        private System.Windows.Forms.NumericUpDown VideoWidthNumericUpDown;
+        private System.Windows.Forms.NumericUpDown VideoBitrateNumericUpDown;
+        private System.Windows.Forms.NumericUpDown VideoCrfNumericUpDown;
+        private System.Windows.Forms.Label VideoBitrateLabel;
         private System.Windows.Forms.TabPage HelpTab;
         private ControlExs.QQButton HomePageBtn;
         private ControlExs.QQButton AboutBtn;
@@ -3273,11 +3273,11 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.NumericUpDown TrimEndNumericUpDown;
         private System.Windows.Forms.NumericUpDown TrimStartNumericUpDown;
-        private System.Windows.Forms.ComboBox x264DemuxerComboBox;
+        private System.Windows.Forms.ComboBox VideoDemuxerComboBox;
         private ControlExs.QQButton DeleteLogButton;
         private ControlExs.QQButton ViewLogButton;
-        private ControlExs.QQButton x264PathButton;
-        private ControlExs.QQTextBox x264PathTextBox;
+        private ControlExs.QQButton VideoBatchOutputFolderButton;
+        private ControlExs.QQTextBox VideoBatchOutputFolderTextBox;
         private System.Windows.Forms.GroupBox NeroAACGroupBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox AudioEncoderComboBox;
@@ -3286,13 +3286,13 @@
         private System.Windows.Forms.ComboBox languageComboBox;
         private System.Windows.Forms.Label label26;
         private ControlExs.QQButton AVSSaveButton;
-        private System.Windows.Forms.Label x264FramesLabel;
-        private System.Windows.Forms.Label x264SeekLabel;
-        private System.Windows.Forms.NumericUpDown x264FramesNumericUpDown;
-        private System.Windows.Forms.NumericUpDown x264SeekNumericUpDown;
+        private System.Windows.Forms.Label VideoFramesLabel;
+        private System.Windows.Forms.Label VideoSeekLabel;
+        private System.Windows.Forms.NumericUpDown VideoFramesNumericUpDown;
+        private System.Windows.Forms.NumericUpDown VideoSeekNumericUpDown;
         private System.Windows.Forms.ComboBox x264PriorityComboBox;
         private System.Windows.Forms.Label label11;
-        private ControlExs.QQCheckBox MaintainResolutionCheckBox;
+        private ControlExs.QQCheckBox VideoMaintainResolutionCheckBox;
         private ControlExs.QQButton MkvExtract4Button;
         private ControlExs.QQButton MkvExtract3Button;
         private ControlExs.QQButton MkvExtract2Button;
@@ -3350,7 +3350,7 @@
         private System.Windows.Forms.ComboBox AVSFilterComboBox;
         private ControlExs.QQButton AVSAddFilterButton;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.ComboBox x264BatchSubSpecialLanguage;
+        private System.Windows.Forms.ComboBox VideoBatchSubtitleLanguage;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.ComboBox MuxFormatComboBox;
         private ControlExs.QQButton AudioJoinButton;
@@ -3363,7 +3363,7 @@
         private System.Windows.Forms.ComboBox TransposeComboBox;
         private ControlExs.QQButton RotateButton;
         private System.Windows.Forms.Label TransposeLabel;
-        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label VideoBatchFormatLabel;
         private System.Windows.Forms.ComboBox VideoBatchFormatComboBox;
         private System.Windows.Forms.ComboBox AudioPresetComboBox;
         private System.Windows.Forms.Label AudioPresetLabel;
