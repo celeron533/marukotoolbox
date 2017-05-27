@@ -2663,8 +2663,8 @@ namespace mp4box
             VideoPresetLabel.Visible = false;
             VideoCustomParameterTextBox.Visible = false;
             VideoPresetComboBox.Visible = false;
-            VideoAddPresetBotton.Visible = false;
-            VideoDeletePresetBotton.Visible = false;
+            VideoAddPresetButton.Visible = false;
+            VideoDeletePresetButton.Visible = false;
         }
 
         private void x264Mode3RadioButton_CheckedChanged(object sender, EventArgs e)
@@ -2673,8 +2673,8 @@ namespace mp4box
             VideoPresetLabel.Visible = true;
             VideoCustomParameterTextBox.Visible = true;
             VideoPresetComboBox.Visible = true;
-            VideoAddPresetBotton.Visible = true;
-            VideoDeletePresetBotton.Visible = true;
+            VideoAddPresetButton.Visible = true;
+            VideoDeletePresetButton.Visible = true;
             VideoWidthLabel.Visible = false;
             labelx264Height.Visible = false;
             VideoWidthNumericUpDown.Visible = false;
@@ -2703,8 +2703,8 @@ namespace mp4box
             VideoPresetLabel.Visible = false;
             VideoCustomParameterTextBox.Visible = false;
             VideoPresetComboBox.Visible = false;
-            VideoAddPresetBotton.Visible = false;
-            VideoDeletePresetBotton.Visible = false;
+            VideoAddPresetButton.Visible = false;
+            VideoDeletePresetButton.Visible = false;
         }
 
         private void x264PriorityComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -4518,7 +4518,7 @@ namespace mp4box
                     VideoOutputTextBox.Text = VideoOutputTextBox.Text.Replace("_x265.", "_x264.");
 
                 VideoSubtitleTextBox.Enabled = true;
-                VideoSubtitleBotton.Enabled = true;
+                VideoSubtitleButton.Enabled = true;
                 VideoBatchSubtitleCheckBox.Enabled = true;
                 VideoBatchSubtitleLanguage.Enabled = true;
                 VideoDemuxerComboBox.Enabled = true;

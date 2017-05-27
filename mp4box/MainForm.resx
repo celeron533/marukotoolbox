@@ -5490,34 +5490,34 @@
   <data name="&gt;&gt;VideoBatchItemListbox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="VideoBatchClearBotton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="VideoBatchClearButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="VideoBatchClearBotton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="VideoBatchClearButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="VideoBatchClearBotton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="VideoBatchClearButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 102</value>
   </data>
-  <data name="VideoBatchClearBotton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="VideoBatchClearButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="VideoBatchClearBotton.TabIndex" type="System.Int32, mscorlib">
+  <data name="VideoBatchClearButton.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="VideoBatchClearBotton.Text" xml:space="preserve">
+  <data name="VideoBatchClearButton.Text" xml:space="preserve">
     <value>清空</value>
   </data>
-  <data name="&gt;&gt;VideoBatchClearBotton.Name" xml:space="preserve">
-    <value>VideoBatchClearBotton</value>
+  <data name="&gt;&gt;VideoBatchClearButton.Name" xml:space="preserve">
+    <value>VideoBatchClearButton</value>
   </data>
-  <data name="&gt;&gt;VideoBatchClearBotton.Type" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchClearButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;VideoBatchClearBotton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchClearButton.Parent" xml:space="preserve">
     <value>VideoBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;VideoBatchClearBotton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchClearButton.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="VideoBatchSubtitleCheckBox.AutoSize" type="System.Boolean, mscorlib">
@@ -5553,94 +5553,94 @@
   <data name="&gt;&gt;VideoBatchSubtitleCheckBox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="VideoBatchDeleteBotton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="VideoBatchDeleteButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="VideoBatchDeleteBotton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="VideoBatchDeleteButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="VideoBatchDeleteBotton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="VideoBatchDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 73</value>
   </data>
-  <data name="VideoBatchDeleteBotton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="VideoBatchDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="VideoBatchDeleteBotton.TabIndex" type="System.Int32, mscorlib">
+  <data name="VideoBatchDeleteButton.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="VideoBatchDeleteBotton.Text" xml:space="preserve">
+  <data name="VideoBatchDeleteButton.Text" xml:space="preserve">
     <value>删除</value>
   </data>
-  <data name="&gt;&gt;VideoBatchDeleteBotton.Name" xml:space="preserve">
-    <value>VideoBatchDeleteBotton</value>
+  <data name="&gt;&gt;VideoBatchDeleteButton.Name" xml:space="preserve">
+    <value>VideoBatchDeleteButton</value>
   </data>
-  <data name="&gt;&gt;VideoBatchDeleteBotton.Type" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchDeleteButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;VideoBatchDeleteBotton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchDeleteButton.Parent" xml:space="preserve">
     <value>VideoBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;VideoBatchDeleteBotton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchDeleteButton.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="VideoBatchAddBotton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="VideoBatchAddButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="VideoBatchAddBotton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="VideoBatchAddButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="VideoBatchAddBotton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="VideoBatchAddButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 44</value>
   </data>
-  <data name="VideoBatchAddBotton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="VideoBatchAddButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="VideoBatchAddBotton.TabIndex" type="System.Int32, mscorlib">
+  <data name="VideoBatchAddButton.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="VideoBatchAddBotton.Text" xml:space="preserve">
+  <data name="VideoBatchAddButton.Text" xml:space="preserve">
     <value>添加</value>
   </data>
-  <data name="&gt;&gt;VideoBatchAddBotton.Name" xml:space="preserve">
-    <value>VideoBatchAddBotton</value>
+  <data name="&gt;&gt;VideoBatchAddButton.Name" xml:space="preserve">
+    <value>VideoBatchAddButton</value>
   </data>
-  <data name="&gt;&gt;VideoBatchAddBotton.Type" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchAddButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;VideoBatchAddBotton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchAddButton.Parent" xml:space="preserve">
     <value>VideoBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;VideoBatchAddBotton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchAddButton.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="VideoBatchStartBotton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="VideoBatchStartButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="VideoBatchStartBotton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="VideoBatchStartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="VideoBatchStartBotton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="VideoBatchStartButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 265</value>
   </data>
-  <data name="VideoBatchStartBotton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="VideoBatchStartButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="VideoBatchStartBotton.TabIndex" type="System.Int32, mscorlib">
+  <data name="VideoBatchStartButton.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="VideoBatchStartBotton.Text" xml:space="preserve">
+  <data name="VideoBatchStartButton.Text" xml:space="preserve">
     <value>压制</value>
   </data>
-  <data name="&gt;&gt;VideoBatchStartBotton.Name" xml:space="preserve">
-    <value>VideoBatchStartBotton</value>
+  <data name="&gt;&gt;VideoBatchStartButton.Name" xml:space="preserve">
+    <value>VideoBatchStartButton</value>
   </data>
-  <data name="&gt;&gt;VideoBatchStartBotton.Type" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchStartButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;VideoBatchStartBotton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchStartButton.Parent" xml:space="preserve">
     <value>VideoBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;VideoBatchStartBotton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;VideoBatchStartButton.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="VideoBatchGroupBox.Location" type="System.Drawing.Point, System.Drawing">
@@ -5949,130 +5949,130 @@
   <data name="&gt;&gt;VideoDemuxerLabel.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="VideoAddPresetBotton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="VideoAddPresetButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="VideoAddPresetBotton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="VideoAddPresetButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="VideoAddPresetBotton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="VideoAddPresetButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>286, 196</value>
   </data>
-  <data name="VideoAddPresetBotton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="VideoAddPresetButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="VideoAddPresetBotton.TabIndex" type="System.Int32, mscorlib">
+  <data name="VideoAddPresetButton.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="VideoAddPresetBotton.Text" xml:space="preserve">
+  <data name="VideoAddPresetButton.Text" xml:space="preserve">
     <value>添加</value>
   </data>
-  <data name="VideoAddPresetBotton.Visible" type="System.Boolean, mscorlib">
+  <data name="VideoAddPresetButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;VideoAddPresetBotton.Name" xml:space="preserve">
-    <value>VideoAddPresetBotton</value>
+  <data name="&gt;&gt;VideoAddPresetButton.Name" xml:space="preserve">
+    <value>VideoAddPresetButton</value>
   </data>
-  <data name="&gt;&gt;VideoAddPresetBotton.Type" xml:space="preserve">
+  <data name="&gt;&gt;VideoAddPresetButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;VideoAddPresetBotton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;VideoAddPresetButton.Parent" xml:space="preserve">
     <value>VideoTab</value>
   </data>
-  <data name="&gt;&gt;VideoAddPresetBotton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;VideoAddPresetButton.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="VideoDeletePresetBotton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="VideoDeletePresetButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="VideoDeletePresetBotton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="VideoDeletePresetButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="VideoDeletePresetBotton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="VideoDeletePresetButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 196</value>
   </data>
-  <data name="VideoDeletePresetBotton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="VideoDeletePresetButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="VideoDeletePresetBotton.TabIndex" type="System.Int32, mscorlib">
+  <data name="VideoDeletePresetButton.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="VideoDeletePresetBotton.Text" xml:space="preserve">
+  <data name="VideoDeletePresetButton.Text" xml:space="preserve">
     <value>删除</value>
   </data>
-  <data name="VideoDeletePresetBotton.Visible" type="System.Boolean, mscorlib">
+  <data name="VideoDeletePresetButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;VideoDeletePresetBotton.Name" xml:space="preserve">
-    <value>VideoDeletePresetBotton</value>
+  <data name="&gt;&gt;VideoDeletePresetButton.Name" xml:space="preserve">
+    <value>VideoDeletePresetButton</value>
   </data>
-  <data name="&gt;&gt;VideoDeletePresetBotton.Type" xml:space="preserve">
+  <data name="&gt;&gt;VideoDeletePresetButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;VideoDeletePresetBotton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;VideoDeletePresetButton.Parent" xml:space="preserve">
     <value>VideoTab</value>
   </data>
-  <data name="&gt;&gt;VideoDeletePresetBotton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;VideoDeletePresetButton.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="VideoStartBotton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="VideoStartButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="VideoStartBotton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="VideoStartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="VideoStartBotton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="VideoStartButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 246</value>
   </data>
-  <data name="VideoStartBotton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="VideoStartButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="VideoStartBotton.TabIndex" type="System.Int32, mscorlib">
+  <data name="VideoStartButton.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="VideoStartBotton.Text" xml:space="preserve">
+  <data name="VideoStartButton.Text" xml:space="preserve">
     <value>压制</value>
   </data>
-  <data name="&gt;&gt;VideoStartBotton.Name" xml:space="preserve">
-    <value>VideoStartBotton</value>
+  <data name="&gt;&gt;VideoStartButton.Name" xml:space="preserve">
+    <value>VideoStartButton</value>
   </data>
-  <data name="&gt;&gt;VideoStartBotton.Type" xml:space="preserve">
+  <data name="&gt;&gt;VideoStartButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;VideoStartBotton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;VideoStartButton.Parent" xml:space="preserve">
     <value>VideoTab</value>
   </data>
-  <data name="&gt;&gt;VideoStartBotton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;VideoStartButton.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="VideoSubtitleBotton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="VideoSubtitleButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="VideoSubtitleBotton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="VideoSubtitleButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="VideoSubtitleBotton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="VideoSubtitleButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 64</value>
   </data>
-  <data name="VideoSubtitleBotton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="VideoSubtitleButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="VideoSubtitleBotton.TabIndex" type="System.Int32, mscorlib">
+  <data name="VideoSubtitleButton.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="VideoSubtitleBotton.Text" xml:space="preserve">
+  <data name="VideoSubtitleButton.Text" xml:space="preserve">
     <value>字幕</value>
   </data>
-  <data name="&gt;&gt;VideoSubtitleBotton.Name" xml:space="preserve">
-    <value>VideoSubtitleBotton</value>
+  <data name="&gt;&gt;VideoSubtitleButton.Name" xml:space="preserve">
+    <value>VideoSubtitleButton</value>
   </data>
-  <data name="&gt;&gt;VideoSubtitleBotton.Type" xml:space="preserve">
+  <data name="&gt;&gt;VideoSubtitleButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;VideoSubtitleBotton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;VideoSubtitleButton.Parent" xml:space="preserve">
     <value>VideoTab</value>
   </data>
-  <data name="&gt;&gt;VideoSubtitleBotton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;VideoSubtitleButton.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
   <data name="VideoOutputButton.Font" type="System.Drawing.Font, System.Drawing">
@@ -6105,34 +6105,34 @@
   <data name="&gt;&gt;VideoOutputButton.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="VideoInputBotton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="VideoInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="VideoInputBotton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="VideoInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="VideoInputBotton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="VideoInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 6</value>
   </data>
-  <data name="VideoInputBotton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="VideoInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="VideoInputBotton.TabIndex" type="System.Int32, mscorlib">
+  <data name="VideoInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="VideoInputBotton.Text" xml:space="preserve">
+  <data name="VideoInputButton.Text" xml:space="preserve">
     <value>视频</value>
   </data>
-  <data name="&gt;&gt;VideoInputBotton.Name" xml:space="preserve">
-    <value>VideoInputBotton</value>
+  <data name="&gt;&gt;VideoInputButton.Name" xml:space="preserve">
+    <value>VideoInputButton</value>
   </data>
-  <data name="&gt;&gt;VideoInputBotton.Type" xml:space="preserve">
+  <data name="&gt;&gt;VideoInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;VideoInputBotton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;VideoInputButton.Parent" xml:space="preserve">
     <value>VideoTab</value>
   </data>
-  <data name="&gt;&gt;VideoInputBotton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;VideoInputButton.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
   <data name="VideoEncoderLabel.AutoSize" type="System.Boolean, mscorlib">

@@ -221,11 +221,11 @@
             this.VideoBatchOutputFolderButton = new ControlExs.QQButton();
             this.VideoBatchOutputFolderTextBox = new ControlExs.QQTextBox();
             this.VideoBatchItemListbox = new System.Windows.Forms.ListBox();
-            this.VideoBatchClearBotton = new ControlExs.QQButton();
+            this.VideoBatchClearButton = new ControlExs.QQButton();
             this.VideoBatchSubtitleCheckBox = new ControlExs.QQCheckBox();
-            this.VideoBatchDeleteBotton = new ControlExs.QQButton();
-            this.VideoBatchAddBotton = new ControlExs.QQButton();
-            this.VideoBatchStartBotton = new ControlExs.QQButton();
+            this.VideoBatchDeleteButton = new ControlExs.QQButton();
+            this.VideoBatchAddButton = new ControlExs.QQButton();
+            this.VideoBatchStartButton = new ControlExs.QQButton();
             this.VideoAutoShutdownCheckBox = new ControlExs.QQCheckBox();
             this.VideoAudioParameterTextBox = new ControlExs.QQTextBox();
             this.VideoSubtitleTextBox = new ControlExs.QQTextBox();
@@ -236,12 +236,12 @@
             this.VideoModeCustomRadioButton = new ControlExs.QQRadioButton();
             this.VideoMode2PassRadioButton = new ControlExs.QQRadioButton();
             this.VideoDemuxerLabel = new System.Windows.Forms.Label();
-            this.VideoAddPresetBotton = new ControlExs.QQButton();
-            this.VideoDeletePresetBotton = new ControlExs.QQButton();
-            this.VideoStartBotton = new ControlExs.QQButton();
-            this.VideoSubtitleBotton = new ControlExs.QQButton();
+            this.VideoAddPresetButton = new ControlExs.QQButton();
+            this.VideoDeletePresetButton = new ControlExs.QQButton();
+            this.VideoStartButton = new ControlExs.QQButton();
+            this.VideoSubtitleButton = new ControlExs.QQButton();
             this.VideoOutputButton = new ControlExs.QQButton();
-            this.VideoInputBotton = new ControlExs.QQButton();
+            this.VideoInputButton = new ControlExs.QQButton();
             this.VideoEncoderLabel = new System.Windows.Forms.Label();
             this.VideoEncoderComboBox = new System.Windows.Forms.ComboBox();
             this.VideoFpsComboBox = new System.Windows.Forms.ComboBox();
@@ -2036,12 +2036,12 @@
             this.VideoTab.Controls.Add(this.VideoInputTextBox);
             this.VideoTab.Controls.Add(this.VideoX264ModePanel);
             this.VideoTab.Controls.Add(this.VideoDemuxerLabel);
-            this.VideoTab.Controls.Add(this.VideoAddPresetBotton);
-            this.VideoTab.Controls.Add(this.VideoDeletePresetBotton);
-            this.VideoTab.Controls.Add(this.VideoStartBotton);
-            this.VideoTab.Controls.Add(this.VideoSubtitleBotton);
+            this.VideoTab.Controls.Add(this.VideoAddPresetButton);
+            this.VideoTab.Controls.Add(this.VideoDeletePresetButton);
+            this.VideoTab.Controls.Add(this.VideoStartButton);
+            this.VideoTab.Controls.Add(this.VideoSubtitleButton);
             this.VideoTab.Controls.Add(this.VideoOutputButton);
-            this.VideoTab.Controls.Add(this.VideoInputBotton);
+            this.VideoTab.Controls.Add(this.VideoInputButton);
             this.VideoTab.Controls.Add(this.VideoEncoderLabel);
             this.VideoTab.Controls.Add(this.VideoEncoderComboBox);
             this.VideoTab.Controls.Add(this.VideoFpsComboBox);
@@ -2127,11 +2127,11 @@
             this.VideoBatchGroupBox.Controls.Add(this.VideoBatchOutputFolderButton);
             this.VideoBatchGroupBox.Controls.Add(this.VideoBatchOutputFolderTextBox);
             this.VideoBatchGroupBox.Controls.Add(this.VideoBatchItemListbox);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchClearBotton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchClearButton);
             this.VideoBatchGroupBox.Controls.Add(this.VideoBatchSubtitleCheckBox);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchDeleteBotton);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchAddBotton);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchStartBotton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchDeleteButton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchAddButton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchStartButton);
             resources.ApplyResources(this.VideoBatchGroupBox, "VideoBatchGroupBox");
             this.VideoBatchGroupBox.Name = "VideoBatchGroupBox";
             this.VideoBatchGroupBox.TabStop = false;
@@ -2189,12 +2189,12 @@
             this.VideoBatchItemListbox.DragOver += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragOver);
             this.VideoBatchItemListbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbAuto_MouseDown);
             // 
-            // VideoBatchClearBotton
+            // VideoBatchClearButton
             // 
-            resources.ApplyResources(this.VideoBatchClearBotton, "VideoBatchClearBotton");
-            this.VideoBatchClearBotton.Name = "VideoBatchClearBotton";
-            this.VideoBatchClearBotton.UseVisualStyleBackColor = true;
-            this.VideoBatchClearBotton.Click += new System.EventHandler(this.x264BatchClearBtn_Click);
+            resources.ApplyResources(this.VideoBatchClearButton, "VideoBatchClearButton");
+            this.VideoBatchClearButton.Name = "VideoBatchClearButton";
+            this.VideoBatchClearButton.UseVisualStyleBackColor = true;
+            this.VideoBatchClearButton.Click += new System.EventHandler(this.x264BatchClearBtn_Click);
             // 
             // VideoBatchSubtitleCheckBox
             // 
@@ -2203,26 +2203,26 @@
             this.VideoBatchSubtitleCheckBox.Name = "VideoBatchSubtitleCheckBox";
             this.VideoBatchSubtitleCheckBox.UseVisualStyleBackColor = false;
             // 
-            // VideoBatchDeleteBotton
+            // VideoBatchDeleteButton
             // 
-            resources.ApplyResources(this.VideoBatchDeleteBotton, "VideoBatchDeleteBotton");
-            this.VideoBatchDeleteBotton.Name = "VideoBatchDeleteBotton";
-            this.VideoBatchDeleteBotton.UseVisualStyleBackColor = true;
-            this.VideoBatchDeleteBotton.Click += new System.EventHandler(this.x264BatchDeleteBtn_Click);
+            resources.ApplyResources(this.VideoBatchDeleteButton, "VideoBatchDeleteButton");
+            this.VideoBatchDeleteButton.Name = "VideoBatchDeleteButton";
+            this.VideoBatchDeleteButton.UseVisualStyleBackColor = true;
+            this.VideoBatchDeleteButton.Click += new System.EventHandler(this.x264BatchDeleteBtn_Click);
             // 
-            // VideoBatchAddBotton
+            // VideoBatchAddButton
             // 
-            resources.ApplyResources(this.VideoBatchAddBotton, "VideoBatchAddBotton");
-            this.VideoBatchAddBotton.Name = "VideoBatchAddBotton";
-            this.VideoBatchAddBotton.UseVisualStyleBackColor = true;
-            this.VideoBatchAddBotton.Click += new System.EventHandler(this.x264BatchAddBtn_Click);
+            resources.ApplyResources(this.VideoBatchAddButton, "VideoBatchAddButton");
+            this.VideoBatchAddButton.Name = "VideoBatchAddButton";
+            this.VideoBatchAddButton.UseVisualStyleBackColor = true;
+            this.VideoBatchAddButton.Click += new System.EventHandler(this.x264BatchAddBtn_Click);
             // 
-            // VideoBatchStartBotton
+            // VideoBatchStartButton
             // 
-            resources.ApplyResources(this.VideoBatchStartBotton, "VideoBatchStartBotton");
-            this.VideoBatchStartBotton.Name = "VideoBatchStartBotton";
-            this.VideoBatchStartBotton.UseVisualStyleBackColor = true;
-            this.VideoBatchStartBotton.Click += new System.EventHandler(this.btnBatchAuto_Click);
+            resources.ApplyResources(this.VideoBatchStartButton, "VideoBatchStartButton");
+            this.VideoBatchStartButton.Name = "VideoBatchStartButton";
+            this.VideoBatchStartButton.UseVisualStyleBackColor = true;
+            this.VideoBatchStartButton.Click += new System.EventHandler(this.btnBatchAuto_Click);
             // 
             // VideoAutoShutdownCheckBox
             // 
@@ -2313,33 +2313,33 @@
             resources.ApplyResources(this.VideoDemuxerLabel, "VideoDemuxerLabel");
             this.VideoDemuxerLabel.Name = "VideoDemuxerLabel";
             // 
-            // VideoAddPresetBotton
+            // VideoAddPresetButton
             // 
-            resources.ApplyResources(this.VideoAddPresetBotton, "VideoAddPresetBotton");
-            this.VideoAddPresetBotton.Name = "VideoAddPresetBotton";
-            this.VideoAddPresetBotton.UseVisualStyleBackColor = true;
-            this.VideoAddPresetBotton.Click += new System.EventHandler(this.x264AddPresetBtn_Click);
+            resources.ApplyResources(this.VideoAddPresetButton, "VideoAddPresetButton");
+            this.VideoAddPresetButton.Name = "VideoAddPresetButton";
+            this.VideoAddPresetButton.UseVisualStyleBackColor = true;
+            this.VideoAddPresetButton.Click += new System.EventHandler(this.x264AddPresetBtn_Click);
             // 
-            // VideoDeletePresetBotton
+            // VideoDeletePresetButton
             // 
-            resources.ApplyResources(this.VideoDeletePresetBotton, "VideoDeletePresetBotton");
-            this.VideoDeletePresetBotton.Name = "VideoDeletePresetBotton";
-            this.VideoDeletePresetBotton.UseVisualStyleBackColor = true;
-            this.VideoDeletePresetBotton.Click += new System.EventHandler(this.x264DeletePresetBtn_Click);
+            resources.ApplyResources(this.VideoDeletePresetButton, "VideoDeletePresetButton");
+            this.VideoDeletePresetButton.Name = "VideoDeletePresetButton";
+            this.VideoDeletePresetButton.UseVisualStyleBackColor = true;
+            this.VideoDeletePresetButton.Click += new System.EventHandler(this.x264DeletePresetBtn_Click);
             // 
-            // VideoStartBotton
+            // VideoStartButton
             // 
-            resources.ApplyResources(this.VideoStartBotton, "VideoStartBotton");
-            this.VideoStartBotton.Name = "VideoStartBotton";
-            this.VideoStartBotton.UseVisualStyleBackColor = true;
-            this.VideoStartBotton.Click += new System.EventHandler(this.x264StartBtn_Click);
+            resources.ApplyResources(this.VideoStartButton, "VideoStartButton");
+            this.VideoStartButton.Name = "VideoStartButton";
+            this.VideoStartButton.UseVisualStyleBackColor = true;
+            this.VideoStartButton.Click += new System.EventHandler(this.x264StartBtn_Click);
             // 
-            // VideoSubtitleBotton
+            // VideoSubtitleButton
             // 
-            resources.ApplyResources(this.VideoSubtitleBotton, "VideoSubtitleBotton");
-            this.VideoSubtitleBotton.Name = "VideoSubtitleBotton";
-            this.VideoSubtitleBotton.UseVisualStyleBackColor = true;
-            this.VideoSubtitleBotton.Click += new System.EventHandler(this.x264SubBtn_Click);
+            resources.ApplyResources(this.VideoSubtitleButton, "VideoSubtitleButton");
+            this.VideoSubtitleButton.Name = "VideoSubtitleButton";
+            this.VideoSubtitleButton.UseVisualStyleBackColor = true;
+            this.VideoSubtitleButton.Click += new System.EventHandler(this.x264SubBtn_Click);
             // 
             // VideoOutputButton
             // 
@@ -2348,12 +2348,12 @@
             this.VideoOutputButton.UseVisualStyleBackColor = true;
             this.VideoOutputButton.Click += new System.EventHandler(this.x264OutBtn_Click);
             // 
-            // VideoInputBotton
+            // VideoInputButton
             // 
-            resources.ApplyResources(this.VideoInputBotton, "VideoInputBotton");
-            this.VideoInputBotton.Name = "VideoInputBotton";
-            this.VideoInputBotton.UseVisualStyleBackColor = true;
-            this.VideoInputBotton.Click += new System.EventHandler(this.x264VideoBtn_Click);
+            resources.ApplyResources(this.VideoInputButton, "VideoInputButton");
+            this.VideoInputButton.Name = "VideoInputButton";
+            this.VideoInputButton.UseVisualStyleBackColor = true;
+            this.VideoInputButton.Click += new System.EventHandler(this.x264VideoBtn_Click);
             // 
             // VideoEncoderLabel
             // 
@@ -3184,23 +3184,23 @@
         private System.Windows.Forms.TabPage VideoTab;
         private System.Windows.Forms.GroupBox VideoBatchGroupBox;
         private System.Windows.Forms.ListBox VideoBatchItemListbox;
-        private ControlExs.QQButton VideoBatchClearBotton;
+        private ControlExs.QQButton VideoBatchClearButton;
         private ControlExs.QQCheckBox VideoBatchSubtitleCheckBox;
-        private ControlExs.QQButton VideoBatchDeleteBotton;
-        private ControlExs.QQButton VideoBatchStartBotton;
-        private ControlExs.QQButton VideoBatchAddBotton;
+        private ControlExs.QQButton VideoBatchDeleteButton;
+        private ControlExs.QQButton VideoBatchStartButton;
+        private ControlExs.QQButton VideoBatchAddButton;
         private ControlExs.QQCheckBox VideoAutoShutdownCheckBox;
         private ControlExs.QQTextBox VideoAudioParameterTextBox;
         private ControlExs.QQTextBox VideoSubtitleTextBox;
         private ControlExs.QQTextBox VideoOutputTextBox;
         private ControlExs.QQTextBox VideoInputTextBox;
         private ControlExs.QQTextBox VideoCustomParameterTextBox;
-        private ControlExs.QQButton VideoAddPresetBotton;
-        private ControlExs.QQButton VideoDeletePresetBotton;
-        private ControlExs.QQButton VideoStartBotton;
-        private ControlExs.QQButton VideoSubtitleBotton;
+        private ControlExs.QQButton VideoAddPresetButton;
+        private ControlExs.QQButton VideoDeletePresetButton;
+        private ControlExs.QQButton VideoStartButton;
+        private ControlExs.QQButton VideoSubtitleButton;
         private ControlExs.QQButton VideoOutputButton;
-        private ControlExs.QQButton VideoInputBotton;
+        private ControlExs.QQButton VideoInputButton;
         private System.Windows.Forms.Label VideoEncoderLabel;
         private System.Windows.Forms.Label VideoPresetLabel;
         private System.Windows.Forms.ComboBox VideoEncoderComboBox;
