@@ -353,22 +353,22 @@ namespace mp4box
             switch (AudioEncoderComboBox.SelectedIndex)
             {
                 case 0:
-                    if (AudioBitrateRadioButton.Checked)
+                    if (AudioAudioModeBitrateRadioButton.Checked)
                     {
                         ffmpeg += "\"" + workPath + "\\neroAacEnc.exe\" -ignorelength -lc -br " + br + " -if - -of \"" + output + "\"";
                     }
-                    if (AudioCustomizeRadioButton.Checked)
+                    if (AudioAudioModeCustomRadioButton.Checked)
                     {
                         ffmpeg += "\"" + workPath + "\\neroAacEnc.exe\" -ignorelength " + AudioCustomParameterTextBox.Text.ToString() + " -if - -of \"" + output + "\"";
                     }
                     break;
 
                 case 1:
-                    if (AudioBitrateRadioButton.Checked)
+                    if (AudioAudioModeBitrateRadioButton.Checked)
                     {
                         ffmpeg += "\"" + workPath + "\\qaac.exe\" -q 2 --ignorelength -c " + AudioBitrateComboBox.Text + " - -o \"" + output + "\"";
                     }
-                    if (AudioCustomizeRadioButton.Checked)
+                    if (AudioAudioModeCustomRadioButton.Checked)
                     {
                         ffmpeg += "\"" + workPath + "\\qaac.exe\" --ignorelength " + AudioCustomParameterTextBox.Text.ToString() + " - -o \"" + output + "\"";
                     }
@@ -389,11 +389,11 @@ namespace mp4box
                     break;
 
                 case 5:
-                    if (AudioBitrateRadioButton.Checked)
+                    if (AudioAudioModeBitrateRadioButton.Checked)
                     {
                         ffmpeg += "\"" + workPath + "\\fdkaac.exe\" --ignorelength -b " + AudioBitrateComboBox.Text + " - -o \"" + output + "\"";
                     }
-                    if (AudioCustomizeRadioButton.Checked)
+                    if (AudioAudioModeCustomRadioButton.Checked)
                     {
                         ffmpeg += "\"" + workPath + "\\fdkaac.exe\" --ignorelength " + AudioCustomParameterTextBox.Text.ToString() + " - -o \"" + output + "\"";
                     }
@@ -404,11 +404,11 @@ namespace mp4box
                     break;
 
                 case 7:
-                    if (AudioBitrateRadioButton.Checked)
+                    if (AudioAudioModeBitrateRadioButton.Checked)
                     {
                         ffmpeg += "\"" + workPath + "\\lame.exe\" -q 3 -b " + AudioBitrateComboBox.Text + " - \"" + output + "\"";
                     }
-                    if (AudioCustomizeRadioButton.Checked)
+                    if (AudioAudioModeCustomRadioButton.Checked)
                     {
                         ffmpeg += "\"" + workPath + "\\lame.exe\" " + AudioCustomParameterTextBox.Text.ToString() + " - \"" + output + "\"";
                     }
@@ -902,7 +902,7 @@ namespace mp4box
             AudioEncoderComboBox.SelectedIndex = 0;
             AudioPresetComboBox.SelectedIndex = 0;
             AudioBitrateComboBox.Text = "128";
-            AudioBitrateRadioButton.Checked = true;
+            AudioAudioModeBitrateRadioButton.Checked = true;
 
             #endregion Audio Tab
 
@@ -2847,15 +2847,15 @@ namespace mp4box
             switch (AudioEncoderComboBox.SelectedIndex)
             {
                 case 0:
-                    if (File.Exists(txtaudio2.Text))
-                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.mp4");
+                    if (File.Exists(AudioInputTextBox.Text))
+                        AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_AAC.mp4");
                     AudioBitrateComboBox.Enabled = true;
-                    AudioBitrateRadioButton.Enabled = true;
-                    AudioCustomizeRadioButton.Enabled = true;
-                    if (AudioCustomizeRadioButton.Checked)
+                    AudioAudioModeBitrateRadioButton.Enabled = true;
+                    AudioAudioModeCustomRadioButton.Enabled = true;
+                    if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        audioDeleteBt.Visible = true;
-                        audioAddBt.Visible = true;
+                        AudioPresetDeleteButton.Visible = true;
+                        AudioPresetAddButton.Visible = true;
                     }
                     break;
 
@@ -2865,79 +2865,79 @@ namespace mp4box
                     //    if (ShowQuestion("Apple Application Support未安装.\r\n音频编码器QAAC可能无法使用.\r\n\r\n是否前往QuickTime下载页面?", "Apple Application Support未安装") == DialogResult.Yes)
                     //        Process.Start("http://www.apple.com/cn/quicktime/download");
                     //}
-                    if (File.Exists(txtaudio2.Text))
-                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.m4a");
+                    if (File.Exists(AudioInputTextBox.Text))
+                        AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_AAC.m4a");
                     AudioBitrateComboBox.Enabled = true;
-                    AudioBitrateRadioButton.Enabled = true;
-                    AudioCustomizeRadioButton.Enabled = true;
-                    if (AudioCustomizeRadioButton.Checked)
+                    AudioAudioModeBitrateRadioButton.Enabled = true;
+                    AudioAudioModeCustomRadioButton.Enabled = true;
+                    if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        audioDeleteBt.Visible = true;
-                        audioAddBt.Visible = true;
+                        AudioPresetDeleteButton.Visible = true;
+                        AudioPresetAddButton.Visible = true;
                     }
                     break;
 
                 case 2:
-                    if (File.Exists(txtaudio2.Text))
-                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_WAV.wav");
+                    if (File.Exists(AudioInputTextBox.Text))
+                        AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_WAV.wav");
                     AudioBitrateComboBox.Enabled = false;
-                    AudioBitrateRadioButton.Enabled = false;
-                    AudioCustomizeRadioButton.Enabled = false;
-                    audioDeleteBt.Visible = false;
-                    audioAddBt.Visible = false;
+                    AudioAudioModeBitrateRadioButton.Enabled = false;
+                    AudioAudioModeCustomRadioButton.Enabled = false;
+                    AudioPresetDeleteButton.Visible = false;
+                    AudioPresetAddButton.Visible = false;
                     break;
 
                 case 3:
-                    if (File.Exists(txtaudio2.Text))
-                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_ALAC.m4a");
+                    if (File.Exists(AudioInputTextBox.Text))
+                        AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_ALAC.m4a");
                     AudioBitrateComboBox.Enabled = false;
-                    AudioBitrateRadioButton.Enabled = false;
-                    AudioCustomizeRadioButton.Enabled = false;
-                    audioDeleteBt.Visible = false;
-                    audioAddBt.Visible = false;
+                    AudioAudioModeBitrateRadioButton.Enabled = false;
+                    AudioAudioModeCustomRadioButton.Enabled = false;
+                    AudioPresetDeleteButton.Visible = false;
+                    AudioPresetAddButton.Visible = false;
                     break;
 
                 case 4:
-                    if (File.Exists(txtaudio2.Text))
-                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_FLAC.flac");
+                    if (File.Exists(AudioInputTextBox.Text))
+                        AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_FLAC.flac");
                     AudioBitrateComboBox.Enabled = false;
-                    AudioBitrateRadioButton.Enabled = false;
-                    AudioCustomizeRadioButton.Enabled = false;
-                    audioDeleteBt.Visible = false;
-                    audioAddBt.Visible = false;
+                    AudioAudioModeBitrateRadioButton.Enabled = false;
+                    AudioAudioModeCustomRadioButton.Enabled = false;
+                    AudioPresetDeleteButton.Visible = false;
+                    AudioPresetAddButton.Visible = false;
                     break;
 
                 case 5:
-                    if (File.Exists(txtaudio2.Text))
-                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.m4a");
+                    if (File.Exists(AudioInputTextBox.Text))
+                        AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_AAC.m4a");
                     AudioBitrateComboBox.Enabled = true;
-                    AudioBitrateRadioButton.Enabled = true;
-                    AudioCustomizeRadioButton.Enabled = true;
-                    if (AudioCustomizeRadioButton.Checked)
+                    AudioAudioModeBitrateRadioButton.Enabled = true;
+                    AudioAudioModeCustomRadioButton.Enabled = true;
+                    if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        audioDeleteBt.Visible = true;
-                        audioAddBt.Visible = true;
+                        AudioPresetDeleteButton.Visible = true;
+                        AudioPresetAddButton.Visible = true;
                     }
                     break;
 
                 case 6:
-                    if (File.Exists(txtaudio2.Text))
-                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AC3.ac3");
+                    if (File.Exists(AudioInputTextBox.Text))
+                        AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_AC3.ac3");
                     AudioBitrateComboBox.Enabled = true;
-                    AudioBitrateRadioButton.Enabled = true;
-                    AudioCustomizeRadioButton.Enabled = false;
-                    audioDeleteBt.Visible = false;
-                    audioAddBt.Visible = false;
+                    AudioAudioModeBitrateRadioButton.Enabled = true;
+                    AudioAudioModeCustomRadioButton.Enabled = false;
+                    AudioPresetDeleteButton.Visible = false;
+                    AudioPresetAddButton.Visible = false;
                     break;
 
                 case 7:
-                    if (File.Exists(txtaudio2.Text))
-                        AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_MP3.mp3");
+                    if (File.Exists(AudioInputTextBox.Text))
+                        AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_MP3.mp3");
                     AudioBitrateComboBox.Enabled = true;
-                    AudioBitrateRadioButton.Enabled = true;
-                    AudioCustomizeRadioButton.Enabled = true;
-                    audioDeleteBt.Visible = false;
-                    audioAddBt.Visible = false;
+                    AudioAudioModeBitrateRadioButton.Enabled = true;
+                    AudioAudioModeCustomRadioButton.Enabled = true;
+                    AudioPresetDeleteButton.Visible = false;
+                    AudioPresetAddButton.Visible = false;
                     break;
 
                 default:
@@ -3004,7 +3004,7 @@ namespace mp4box
 
         private void AudioBatchButton_Click(object sender, EventArgs e)
         {
-            if (AudioListBox.Items.Count != 0)
+            if (AudioBatchItemListBox.Items.Count != 0)
             {
                 string finish, outputExt, codec;
                 aac = "";
@@ -3020,11 +3020,11 @@ namespace mp4box
                     case 7: outputExt = "mp3"; codec = "MP3"; break;
                     default: outputExt = "aac"; codec = "AAC"; break;
                 }
-                for (int i = 0; i < this.AudioListBox.Items.Count; i++)
+                for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
                 {
                     string outname = "_" + codec + "." + outputExt;
-                    finish = Util.ChangeExt(AudioListBox.Items[i].ToString(), outname);
-                    aac += audiobat(AudioListBox.Items[i].ToString(), finish);
+                    finish = Util.ChangeExt(AudioBatchItemListBox.Items[i].ToString(), outname);
+                    aac += audiobat(AudioBatchItemListBox.Items[i].ToString(), finish);
                     aac += "\r\n";
                 }
                 aac += "\r\ncmd";
@@ -3043,7 +3043,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 nameaudio2 = openFileDialog1.FileName;
-                txtaudio2.Text = nameaudio2;
+                AudioInputTextBox.Text = nameaudio2;
             }
         }
 
@@ -3081,20 +3081,20 @@ namespace mp4box
 
         private void txtaudio2_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(txtaudio2.Text.ToString()))
+            if (File.Exists(AudioInputTextBox.Text.ToString()))
             {
-                nameaudio2 = txtaudio2.Text;
+                nameaudio2 = AudioInputTextBox.Text;
                 switch (AudioEncoderComboBox.SelectedIndex)
                 {
-                    case 0: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.mp4"); break;
-                    case 1: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.m4a"); break;
-                    case 2: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_WAV.wav"); break;
-                    case 3: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_ALAC.m4a"); break;
-                    case 4: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_FLAC.flac"); break;
-                    case 5: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.m4a"); break;
-                    case 6: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AC3.ac3"); break;
-                    case 7: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_MP3.mp3"); break;
-                    default: AudioOutputTextBox.Text = Util.ChangeExt(txtaudio2.Text, "_AAC.aac"); break;
+                    case 0: AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_AAC.mp4"); break;
+                    case 1: AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_AAC.m4a"); break;
+                    case 2: AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_WAV.wav"); break;
+                    case 3: AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_ALAC.m4a"); break;
+                    case 4: AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_FLAC.flac"); break;
+                    case 5: AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_AAC.m4a"); break;
+                    case 6: AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_AC3.ac3"); break;
+                    case 7: AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_MP3.mp3"); break;
+                    default: AudioOutputTextBox.Text = Util.ChangeExt(AudioInputTextBox.Text, "_AAC.aac"); break;
                 }
             }
         }
@@ -3106,34 +3106,34 @@ namespace mp4box
 
         private void txtaudio2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(txtaudio2.Text.ToString()))
+            if (File.Exists(AudioInputTextBox.Text.ToString()))
             {
-                Process.Start(txtaudio2.Text.ToString());
+                Process.Start(AudioInputTextBox.Text.ToString());
             }
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             lbaacrate.Visible = false;
-            lbaackbps.Visible = false;
+            AudioKbpsLabel.Visible = false;
             AudioBitrateComboBox.Visible = false;
             AudioCustomParameterTextBox.Visible = true;
             AudioPresetLabel.Visible = true;
             AudioPresetComboBox.Visible = true;
-            audioDeleteBt.Visible = true;
-            audioAddBt.Visible = true;
+            AudioPresetDeleteButton.Visible = true;
+            AudioPresetAddButton.Visible = true;
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             lbaacrate.Visible = true;
-            lbaackbps.Visible = true;
+            AudioKbpsLabel.Visible = true;
             AudioBitrateComboBox.Visible = true;
             AudioCustomParameterTextBox.Visible = false;
             AudioPresetLabel.Visible = false;
             AudioPresetComboBox.Visible = false;
-            audioDeleteBt.Visible = false;
-            audioAddBt.Visible = false;
+            AudioPresetDeleteButton.Visible = false;
+            AudioPresetAddButton.Visible = false;
         }
 
         private void AudioAddButton_Click(object sender, EventArgs e)
@@ -3143,26 +3143,26 @@ namespace mp4box
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                AudioListBox.Items.AddRange(openFileDialog1.FileNames);
+                AudioBatchItemListBox.Items.AddRange(openFileDialog1.FileNames);
             }
             openFileDialog1.Multiselect = false;
         }
 
         private void AudioDeleteButton_Click(object sender, EventArgs e)
         {
-            if (AudioListBox.Items.Count > 0)
+            if (AudioBatchItemListBox.Items.Count > 0)
             {
-                if (AudioListBox.SelectedItems.Count > 0)
+                if (AudioBatchItemListBox.SelectedItems.Count > 0)
                 {
-                    int index = AudioListBox.SelectedIndex;
-                    AudioListBox.Items.RemoveAt(AudioListBox.SelectedIndex);
-                    if (index == AudioListBox.Items.Count)
+                    int index = AudioBatchItemListBox.SelectedIndex;
+                    AudioBatchItemListBox.Items.RemoveAt(AudioBatchItemListBox.SelectedIndex);
+                    if (index == AudioBatchItemListBox.Items.Count)
                     {
-                        AudioListBox.SelectedIndex = index - 1;
+                        AudioBatchItemListBox.SelectedIndex = index - 1;
                     }
-                    if (index >= 0 && index < AudioListBox.Items.Count && AudioListBox.Items.Count > 0)
+                    if (index >= 0 && index < AudioBatchItemListBox.Items.Count && AudioBatchItemListBox.Items.Count > 0)
                     {
-                        AudioListBox.SelectedIndex = index;
+                        AudioBatchItemListBox.SelectedIndex = index;
                     }
                 }
             }
@@ -3170,7 +3170,7 @@ namespace mp4box
 
         private void AudioClearButton_Click(object sender, EventArgs e)
         {
-            AudioListBox.Items.Clear();
+            AudioBatchItemListBox.Items.Clear();
         }
 
         #endregion 音频界面
@@ -3477,7 +3477,7 @@ namespace mp4box
         {
             //StreamReader sr;
             VideoModeCrfRadioButton.Checked = true;
-            AudioBitrateRadioButton.Checked = true;
+            AudioAudioModeBitrateRadioButton.Checked = true;
             int x264AudioModeComboBoxIndex = 0;
             switch (languageComboBox.SelectedIndex)
             {
@@ -4281,7 +4281,7 @@ namespace mp4box
 
         private void AudioJoinButton_Click(object sender, EventArgs e)
         {
-            if (AudioListBox.Items.Count == 0)
+            if (AudioBatchItemListBox.Items.Count == 0)
             {
                 ShowErrorMessage("请输入文件！");
                 return;
@@ -4293,16 +4293,16 @@ namespace mp4box
             }
             StringBuilder sb = new StringBuilder();
             ffmpeg = "";
-            string ext = Path.GetExtension(AudioListBox.Items[0].ToString());
+            string ext = Path.GetExtension(AudioBatchItemListBox.Items[0].ToString());
             string finish = Util.ChangeExt(AudioOutputTextBox.Text, ext);
-            for (int i = 0; i < this.AudioListBox.Items.Count; i++)
+            for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
             {
-                if (Path.GetExtension(AudioListBox.Items[i].ToString()) != ext)
+                if (Path.GetExtension(AudioBatchItemListBox.Items[i].ToString()) != ext)
                 {
                     ShowErrorMessage("只允许合并相同格式文件。");
                     return;
                 }
-                sb.AppendLine("file '" + AudioListBox.Items[i].ToString() + "'");
+                sb.AppendLine("file '" + AudioBatchItemListBox.Items[i].ToString() + "'");
                 File.WriteAllText("concat.txt", sb.ToString());
                 ffmpeg = "\"" + workPath + "\\ffmpeg.exe\" -f concat  -i concat.txt -y -c copy " + finish;
             }

@@ -3783,70 +3783,70 @@
   <data name="&gt;&gt;MuxTab.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="audioAddBt.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioPresetAddButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="audioAddBt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioPresetAddButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="audioAddBt.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioPresetAddButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>387, 104</value>
   </data>
-  <data name="audioAddBt.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioPresetAddButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="audioAddBt.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioPresetAddButton.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
   </data>
-  <data name="audioAddBt.Text" xml:space="preserve">
+  <data name="AudioPresetAddButton.Text" xml:space="preserve">
     <value>添加</value>
   </data>
-  <data name="audioAddBt.Visible" type="System.Boolean, mscorlib">
+  <data name="AudioPresetAddButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;audioAddBt.Name" xml:space="preserve">
-    <value>audioAddBt</value>
+  <data name="&gt;&gt;AudioPresetAddButton.Name" xml:space="preserve">
+    <value>AudioPresetAddButton</value>
   </data>
-  <data name="&gt;&gt;audioAddBt.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioPresetAddButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;audioAddBt.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+  <data name="&gt;&gt;AudioPresetAddButton.Parent" xml:space="preserve">
+    <value>AudioGroupBox</value>
   </data>
-  <data name="&gt;&gt;audioAddBt.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioPresetAddButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="audioDeleteBt.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioPresetDeleteButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="audioDeleteBt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioPresetDeleteButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="audioDeleteBt.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioPresetDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>296, 104</value>
   </data>
-  <data name="audioDeleteBt.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioPresetDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="audioDeleteBt.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioPresetDeleteButton.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="audioDeleteBt.Text" xml:space="preserve">
+  <data name="AudioPresetDeleteButton.Text" xml:space="preserve">
     <value>删除</value>
   </data>
-  <data name="audioDeleteBt.Visible" type="System.Boolean, mscorlib">
+  <data name="AudioPresetDeleteButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;audioDeleteBt.Name" xml:space="preserve">
-    <value>audioDeleteBt</value>
+  <data name="&gt;&gt;AudioPresetDeleteButton.Name" xml:space="preserve">
+    <value>AudioPresetDeleteButton</value>
   </data>
-  <data name="&gt;&gt;audioDeleteBt.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioPresetDeleteButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;audioDeleteBt.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+  <data name="&gt;&gt;AudioPresetDeleteButton.Parent" xml:space="preserve">
+    <value>AudioGroupBox</value>
   </data>
-  <data name="&gt;&gt;audioDeleteBt.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioPresetDeleteButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="AudioPresetComboBox.Location" type="System.Drawing.Point, System.Drawing">
@@ -3868,7 +3868,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AudioPresetComboBox.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+    <value>AudioGroupBox</value>
   </data>
   <data name="&gt;&gt;AudioPresetComboBox.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -3901,7 +3901,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AudioPresetLabel.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+    <value>AudioGroupBox</value>
   </data>
   <data name="&gt;&gt;AudioPresetLabel.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -3946,39 +3946,39 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AudioBitrateComboBox.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+    <value>AudioGroupBox</value>
   </data>
   <data name="&gt;&gt;AudioBitrateComboBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AudioEncoderLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioEncoderLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioEncoderLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 81</value>
   </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioEncoderLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 12</value>
   </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioEncoderLabel.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
+  <data name="AudioEncoderLabel.Text" xml:space="preserve">
     <value>编码器</value>
   </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
+  <data name="&gt;&gt;AudioEncoderLabel.Name" xml:space="preserve">
+    <value>AudioEncoderLabel</value>
   </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioEncoderLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+  <data name="&gt;&gt;AudioEncoderLabel.Parent" xml:space="preserve">
+    <value>AudioGroupBox</value>
   </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioEncoderLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="AudioEncoderComboBox.Items" xml:space="preserve">
@@ -4021,114 +4021,114 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AudioEncoderComboBox.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+    <value>AudioGroupBox</value>
   </data>
   <data name="&gt;&gt;AudioEncoderComboBox.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="txtaudio2.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtaudio2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 20</value>
   </data>
-  <data name="txtaudio2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>469, 21</value>
   </data>
-  <data name="txtaudio2.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;txtaudio2.Name" xml:space="preserve">
-    <value>txtaudio2</value>
+  <data name="&gt;&gt;AudioInputTextBox.Name" xml:space="preserve">
+    <value>AudioInputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtaudio2.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtaudio2.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+  <data name="&gt;&gt;AudioInputTextBox.Parent" xml:space="preserve">
+    <value>AudioGroupBox</value>
   </data>
-  <data name="&gt;&gt;txtaudio2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioInputTextBox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="AudioBitrateRadioButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioAudioModeBitrateRadioButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="AudioBitrateRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioAudioModeBitrateRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioBitrateRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioAudioModeBitrateRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 2</value>
   </data>
-  <data name="AudioBitrateRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioAudioModeBitrateRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 24</value>
   </data>
-  <data name="AudioBitrateRadioButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioAudioModeBitrateRadioButton.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="AudioBitrateRadioButton.Text" xml:space="preserve">
+  <data name="AudioAudioModeBitrateRadioButton.Text" xml:space="preserve">
     <value>码率</value>
   </data>
-  <data name="&gt;&gt;AudioBitrateRadioButton.Name" xml:space="preserve">
-    <value>AudioBitrateRadioButton</value>
+  <data name="&gt;&gt;AudioAudioModeBitrateRadioButton.Name" xml:space="preserve">
+    <value>AudioAudioModeBitrateRadioButton</value>
   </data>
-  <data name="&gt;&gt;AudioBitrateRadioButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioAudioModeBitrateRadioButton.Type" xml:space="preserve">
     <value>ControlExs.QQRadioButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioBitrateRadioButton.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;AudioAudioModeBitrateRadioButton.Parent" xml:space="preserve">
+    <value>AudioAudioModePanel</value>
   </data>
-  <data name="&gt;&gt;AudioBitrateRadioButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioAudioModeBitrateRadioButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="AudioCustomizeRadioButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioAudioModeCustomRadioButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="AudioCustomizeRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioAudioModeCustomRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioCustomizeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioAudioModeCustomRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 2</value>
   </data>
-  <data name="AudioCustomizeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioAudioModeCustomRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 24</value>
   </data>
-  <data name="AudioCustomizeRadioButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioAudioModeCustomRadioButton.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="AudioCustomizeRadioButton.Text" xml:space="preserve">
+  <data name="AudioAudioModeCustomRadioButton.Text" xml:space="preserve">
     <value>自定义</value>
   </data>
-  <data name="&gt;&gt;AudioCustomizeRadioButton.Name" xml:space="preserve">
-    <value>AudioCustomizeRadioButton</value>
+  <data name="&gt;&gt;AudioAudioModeCustomRadioButton.Name" xml:space="preserve">
+    <value>AudioAudioModeCustomRadioButton</value>
   </data>
-  <data name="&gt;&gt;AudioCustomizeRadioButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioAudioModeCustomRadioButton.Type" xml:space="preserve">
     <value>ControlExs.QQRadioButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioCustomizeRadioButton.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;AudioAudioModeCustomRadioButton.Parent" xml:space="preserve">
+    <value>AudioAudioModePanel</value>
   </data>
-  <data name="&gt;&gt;AudioCustomizeRadioButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioAudioModeCustomRadioButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioAudioModePanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>286, 74</value>
   </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioAudioModePanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 29</value>
   </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioAudioModePanel.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;AudioAudioModePanel.Name" xml:space="preserve">
+    <value>AudioAudioModePanel</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioAudioModePanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+  <data name="&gt;&gt;AudioAudioModePanel.Parent" xml:space="preserve">
+    <value>AudioGroupBox</value>
   </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioAudioModePanel.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="AudioOutputTextBox.Font" type="System.Drawing.Font, System.Drawing">
@@ -4150,99 +4150,99 @@
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;AudioOutputTextBox.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+    <value>AudioGroupBox</value>
   </data>
   <data name="&gt;&gt;AudioOutputTextBox.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="btnaudio2.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnaudio2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnaudio2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 20</value>
   </data>
-  <data name="btnaudio2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnaudio2.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="btnaudio2.Text" xml:space="preserve">
+  <data name="AudioInputButton.Text" xml:space="preserve">
     <value>输入</value>
   </data>
-  <data name="&gt;&gt;btnaudio2.Name" xml:space="preserve">
-    <value>btnaudio2</value>
+  <data name="&gt;&gt;AudioInputButton.Name" xml:space="preserve">
+    <value>AudioInputButton</value>
   </data>
-  <data name="&gt;&gt;btnaudio2.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnaudio2.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+  <data name="&gt;&gt;AudioInputButton.Parent" xml:space="preserve">
+    <value>AudioGroupBox</value>
   </data>
-  <data name="&gt;&gt;btnaudio2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioInputButton.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="lbaackbps.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AudioKbpsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbaackbps.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioKbpsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lbaackbps.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioKbpsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>251, 110</value>
   </data>
-  <data name="lbaackbps.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioKbpsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
   </data>
-  <data name="lbaackbps.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioKbpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="lbaackbps.Text" xml:space="preserve">
+  <data name="AudioKbpsLabel.Text" xml:space="preserve">
     <value>Kbps</value>
   </data>
-  <data name="&gt;&gt;lbaackbps.Name" xml:space="preserve">
-    <value>lbaackbps</value>
+  <data name="&gt;&gt;AudioKbpsLabel.Name" xml:space="preserve">
+    <value>AudioKbpsLabel</value>
   </data>
-  <data name="&gt;&gt;lbaackbps.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioKbpsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbaackbps.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+  <data name="&gt;&gt;AudioKbpsLabel.Parent" xml:space="preserve">
+    <value>AudioGroupBox</value>
   </data>
-  <data name="&gt;&gt;lbaackbps.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioKbpsLabel.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="btnout3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioOutputBotton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnout3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioOutputBotton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnout3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioOutputBotton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 49</value>
   </data>
-  <data name="btnout3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioOutputBotton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnout3.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioOutputBotton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="btnout3.Text" xml:space="preserve">
+  <data name="AudioOutputBotton.Text" xml:space="preserve">
     <value>输出</value>
   </data>
-  <data name="&gt;&gt;btnout3.Name" xml:space="preserve">
-    <value>btnout3</value>
+  <data name="&gt;&gt;AudioOutputBotton.Name" xml:space="preserve">
+    <value>AudioOutputBotton</value>
   </data>
-  <data name="&gt;&gt;btnout3.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioOutputBotton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnout3.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+  <data name="&gt;&gt;AudioOutputBotton.Parent" xml:space="preserve">
+    <value>AudioGroupBox</value>
   </data>
-  <data name="&gt;&gt;btnout3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioOutputBotton.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="lbaacrate.AutoSize" type="System.Boolean, mscorlib">
@@ -4270,39 +4270,39 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbaacrate.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+    <value>AudioGroupBox</value>
   </data>
   <data name="&gt;&gt;lbaacrate.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="btnaac.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioStartButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnaac.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioStartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnaac.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioStartButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 78</value>
   </data>
-  <data name="btnaac.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioStartButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnaac.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioStartButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="btnaac.Text" xml:space="preserve">
+  <data name="AudioStartButton.Text" xml:space="preserve">
     <value>压制</value>
   </data>
-  <data name="&gt;&gt;btnaac.Name" xml:space="preserve">
-    <value>btnaac</value>
+  <data name="&gt;&gt;AudioStartButton.Name" xml:space="preserve">
+    <value>AudioStartButton</value>
   </data>
-  <data name="&gt;&gt;btnaac.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioStartButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnaac.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+  <data name="&gt;&gt;AudioStartButton.Parent" xml:space="preserve">
+    <value>AudioGroupBox</value>
   </data>
-  <data name="&gt;&gt;btnaac.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioStartButton.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
   <data name="AudioCustomParameterTextBox.Font" type="System.Drawing.Font, System.Drawing">
@@ -4330,264 +4330,264 @@
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;AudioCustomParameterTextBox.Parent" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+    <value>AudioGroupBox</value>
   </data>
   <data name="&gt;&gt;AudioCustomParameterTextBox.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="NeroAACGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 6</value>
   </data>
-  <data name="NeroAACGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>566, 201</value>
   </data>
-  <data name="NeroAACGroupBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="NeroAACGroupBox.Text" xml:space="preserve">
+  <data name="AudioGroupBox.Text" xml:space="preserve">
     <value>音频压制</value>
   </data>
-  <data name="&gt;&gt;NeroAACGroupBox.Name" xml:space="preserve">
-    <value>NeroAACGroupBox</value>
+  <data name="&gt;&gt;AudioGroupBox.Name" xml:space="preserve">
+    <value>AudioGroupBox</value>
   </data>
-  <data name="&gt;&gt;NeroAACGroupBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NeroAACGroupBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AudioGroupBox.Parent" xml:space="preserve">
     <value>AudioTab</value>
   </data>
-  <data name="&gt;&gt;NeroAACGroupBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="AudioJoinButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioBatchConcatButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AudioJoinButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioBatchConcatButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioJoinButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioBatchConcatButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>410, 343</value>
   </data>
-  <data name="AudioJoinButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioBatchConcatButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 23</value>
   </data>
-  <data name="AudioJoinButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioBatchConcatButton.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="AudioJoinButton.Text" xml:space="preserve">
+  <data name="AudioBatchConcatButton.Text" xml:space="preserve">
     <value>合并</value>
   </data>
-  <data name="&gt;&gt;AudioJoinButton.Name" xml:space="preserve">
-    <value>AudioJoinButton</value>
+  <data name="&gt;&gt;AudioBatchConcatButton.Name" xml:space="preserve">
+    <value>AudioBatchConcatButton</value>
   </data>
-  <data name="&gt;&gt;AudioJoinButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchConcatButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioJoinButton.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;AudioBatchConcatButton.Parent" xml:space="preserve">
+    <value>AudioBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioJoinButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchConcatButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AudioBatchOutputNotificationLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioBatchOutputNotificationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioBatchOutputNotificationLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 323</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioBatchOutputNotificationLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 12</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioBatchOutputNotificationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="AudioBatchOutputNotificationLabel.Text" xml:space="preserve">
     <value>新文件生成在源文件目录</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;AudioBatchOutputNotificationLabel.Name" xml:space="preserve">
+    <value>AudioBatchOutputNotificationLabel</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchOutputNotificationLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;AudioBatchOutputNotificationLabel.Parent" xml:space="preserve">
+    <value>AudioBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchOutputNotificationLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="AudioBatchButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioBatchStartButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AudioBatchButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioBatchStartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioBatchButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioBatchStartButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 343</value>
   </data>
-  <data name="AudioBatchButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioBatchStartButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="AudioBatchButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioBatchStartButton.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <data name="AudioBatchButton.Text" xml:space="preserve">
+  <data name="AudioBatchStartButton.Text" xml:space="preserve">
     <value>批量压制</value>
   </data>
-  <data name="&gt;&gt;AudioBatchButton.Name" xml:space="preserve">
-    <value>AudioBatchButton</value>
+  <data name="&gt;&gt;AudioBatchStartButton.Name" xml:space="preserve">
+    <value>AudioBatchStartButton</value>
   </data>
-  <data name="&gt;&gt;AudioBatchButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchStartButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioBatchButton.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;AudioBatchStartButton.Parent" xml:space="preserve">
+    <value>AudioBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioBatchButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchStartButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="AudioListBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
+  <data name="AudioBatchItemListBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="AudioListBox.ItemHeight" type="System.Int32, mscorlib">
+  <data name="AudioBatchItemListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="AudioListBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioBatchItemListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 20</value>
   </data>
-  <data name="AudioListBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioBatchItemListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>551, 292</value>
   </data>
-  <data name="AudioListBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioBatchItemListBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="&gt;&gt;AudioListBox.Name" xml:space="preserve">
-    <value>AudioListBox</value>
+  <data name="&gt;&gt;AudioBatchItemListBox.Name" xml:space="preserve">
+    <value>AudioBatchItemListBox</value>
   </data>
-  <data name="&gt;&gt;AudioListBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchItemListBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AudioListBox.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;AudioBatchItemListBox.Parent" xml:space="preserve">
+    <value>AudioBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioListBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchItemListBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="AudioAddButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioBatchAddButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AudioAddButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioBatchAddButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioAddButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioBatchAddButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 343</value>
   </data>
-  <data name="AudioAddButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioBatchAddButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="AudioAddButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioBatchAddButton.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="AudioAddButton.Text" xml:space="preserve">
+  <data name="AudioBatchAddButton.Text" xml:space="preserve">
     <value>添加</value>
   </data>
-  <data name="&gt;&gt;AudioAddButton.Name" xml:space="preserve">
-    <value>AudioAddButton</value>
+  <data name="&gt;&gt;AudioBatchAddButton.Name" xml:space="preserve">
+    <value>AudioBatchAddButton</value>
   </data>
-  <data name="&gt;&gt;AudioAddButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchAddButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioAddButton.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;AudioBatchAddButton.Parent" xml:space="preserve">
+    <value>AudioBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioAddButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchAddButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="AudioClearButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioBatchClearButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AudioClearButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioBatchClearButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioClearButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioBatchClearButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>171, 343</value>
   </data>
-  <data name="AudioClearButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioBatchClearButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="AudioClearButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioBatchClearButton.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="AudioClearButton.Text" xml:space="preserve">
+  <data name="AudioBatchClearButton.Text" xml:space="preserve">
     <value>清空</value>
   </data>
-  <data name="&gt;&gt;AudioClearButton.Name" xml:space="preserve">
-    <value>AudioClearButton</value>
+  <data name="&gt;&gt;AudioBatchClearButton.Name" xml:space="preserve">
+    <value>AudioBatchClearButton</value>
   </data>
-  <data name="&gt;&gt;AudioClearButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchClearButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioClearButton.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;AudioBatchClearButton.Parent" xml:space="preserve">
+    <value>AudioBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioClearButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchClearButton.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="AudioDeleteButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AudioBatchDeleteButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AudioDeleteButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AudioBatchDeleteButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AudioDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioBatchDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>90, 343</value>
   </data>
-  <data name="AudioDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioBatchDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="AudioDeleteButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioBatchDeleteButton.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="AudioDeleteButton.Text" xml:space="preserve">
+  <data name="AudioBatchDeleteButton.Text" xml:space="preserve">
     <value>删除</value>
   </data>
-  <data name="&gt;&gt;AudioDeleteButton.Name" xml:space="preserve">
-    <value>AudioDeleteButton</value>
+  <data name="&gt;&gt;AudioBatchDeleteButton.Name" xml:space="preserve">
+    <value>AudioBatchDeleteButton</value>
   </data>
-  <data name="&gt;&gt;AudioDeleteButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchDeleteButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AudioDeleteButton.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;AudioBatchDeleteButton.Parent" xml:space="preserve">
+    <value>AudioBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;AudioDeleteButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchDeleteButton.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AudioBatchGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 213</value>
   </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AudioBatchGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>566, 375</value>
   </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+  <data name="AudioBatchGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
+  <data name="AudioBatchGroupBox.Text" xml:space="preserve">
     <value>批量压制</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;AudioBatchGroupBox.Name" xml:space="preserve">
+    <value>AudioBatchGroupBox</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchGroupBox.Parent" xml:space="preserve">
     <value>AudioTab</value>
   </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AudioBatchGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="AudioTab.Location" type="System.Drawing.Point, System.Drawing">

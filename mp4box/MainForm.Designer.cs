@@ -161,33 +161,33 @@
             this.button2 = new ControlExs.QQButton();
             this.button7 = new ControlExs.QQButton();
             this.AudioTab = new System.Windows.Forms.TabPage();
-            this.NeroAACGroupBox = new System.Windows.Forms.GroupBox();
-            this.audioAddBt = new ControlExs.QQButton();
-            this.audioDeleteBt = new ControlExs.QQButton();
+            this.AudioGroupBox = new System.Windows.Forms.GroupBox();
+            this.AudioPresetAddButton = new ControlExs.QQButton();
+            this.AudioPresetDeleteButton = new ControlExs.QQButton();
             this.AudioPresetComboBox = new System.Windows.Forms.ComboBox();
             this.AudioPresetLabel = new System.Windows.Forms.Label();
             this.AudioBitrateComboBox = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.AudioEncoderLabel = new System.Windows.Forms.Label();
             this.AudioEncoderComboBox = new System.Windows.Forms.ComboBox();
-            this.txtaudio2 = new ControlExs.QQTextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.AudioBitrateRadioButton = new ControlExs.QQRadioButton();
-            this.AudioCustomizeRadioButton = new ControlExs.QQRadioButton();
+            this.AudioInputTextBox = new ControlExs.QQTextBox();
+            this.AudioAudioModePanel = new System.Windows.Forms.Panel();
+            this.AudioAudioModeBitrateRadioButton = new ControlExs.QQRadioButton();
+            this.AudioAudioModeCustomRadioButton = new ControlExs.QQRadioButton();
             this.AudioOutputTextBox = new ControlExs.QQTextBox();
-            this.btnaudio2 = new ControlExs.QQButton();
-            this.lbaackbps = new System.Windows.Forms.Label();
-            this.btnout3 = new ControlExs.QQButton();
+            this.AudioInputButton = new ControlExs.QQButton();
+            this.AudioKbpsLabel = new System.Windows.Forms.Label();
+            this.AudioOutputBotton = new ControlExs.QQButton();
             this.lbaacrate = new System.Windows.Forms.Label();
-            this.btnaac = new ControlExs.QQButton();
+            this.AudioStartButton = new ControlExs.QQButton();
             this.AudioCustomParameterTextBox = new ControlExs.QQTextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.AudioJoinButton = new ControlExs.QQButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.AudioBatchButton = new ControlExs.QQButton();
-            this.AudioListBox = new System.Windows.Forms.ListBox();
-            this.AudioAddButton = new ControlExs.QQButton();
-            this.AudioClearButton = new ControlExs.QQButton();
-            this.AudioDeleteButton = new ControlExs.QQButton();
+            this.AudioBatchGroupBox = new System.Windows.Forms.GroupBox();
+            this.AudioBatchConcatButton = new ControlExs.QQButton();
+            this.AudioBatchOutputNotificationLabel = new System.Windows.Forms.Label();
+            this.AudioBatchStartButton = new ControlExs.QQButton();
+            this.AudioBatchItemListBox = new System.Windows.Forms.ListBox();
+            this.AudioBatchAddButton = new ControlExs.QQButton();
+            this.AudioBatchClearButton = new ControlExs.QQButton();
+            this.AudioBatchDeleteButton = new ControlExs.QQButton();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label46 = new System.Windows.Forms.Label();
             this.OnePicAudioSecondTxt = new System.Windows.Forms.TextBox();
@@ -339,9 +339,9 @@
             this.groupBox3.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.AudioTab.SuspendLayout();
-            this.NeroAACGroupBox.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.AudioGroupBox.SuspendLayout();
+            this.AudioAudioModePanel.SuspendLayout();
+            this.AudioBatchGroupBox.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OnePicCRFNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OnePicFPSNum)).BeginInit();
@@ -1591,47 +1591,47 @@
             // AudioTab
             // 
             this.AudioTab.AllowDrop = true;
-            this.AudioTab.Controls.Add(this.NeroAACGroupBox);
-            this.AudioTab.Controls.Add(this.groupBox2);
+            this.AudioTab.Controls.Add(this.AudioGroupBox);
+            this.AudioTab.Controls.Add(this.AudioBatchGroupBox);
             resources.ApplyResources(this.AudioTab, "AudioTab");
             this.AudioTab.Name = "AudioTab";
             this.AudioTab.UseVisualStyleBackColor = true;
             // 
-            // NeroAACGroupBox
+            // AudioGroupBox
             // 
-            this.NeroAACGroupBox.Controls.Add(this.audioAddBt);
-            this.NeroAACGroupBox.Controls.Add(this.audioDeleteBt);
-            this.NeroAACGroupBox.Controls.Add(this.AudioPresetComboBox);
-            this.NeroAACGroupBox.Controls.Add(this.AudioPresetLabel);
-            this.NeroAACGroupBox.Controls.Add(this.AudioBitrateComboBox);
-            this.NeroAACGroupBox.Controls.Add(this.label7);
-            this.NeroAACGroupBox.Controls.Add(this.AudioEncoderComboBox);
-            this.NeroAACGroupBox.Controls.Add(this.txtaudio2);
-            this.NeroAACGroupBox.Controls.Add(this.panel2);
-            this.NeroAACGroupBox.Controls.Add(this.AudioOutputTextBox);
-            this.NeroAACGroupBox.Controls.Add(this.btnaudio2);
-            this.NeroAACGroupBox.Controls.Add(this.lbaackbps);
-            this.NeroAACGroupBox.Controls.Add(this.btnout3);
-            this.NeroAACGroupBox.Controls.Add(this.lbaacrate);
-            this.NeroAACGroupBox.Controls.Add(this.btnaac);
-            this.NeroAACGroupBox.Controls.Add(this.AudioCustomParameterTextBox);
-            resources.ApplyResources(this.NeroAACGroupBox, "NeroAACGroupBox");
-            this.NeroAACGroupBox.Name = "NeroAACGroupBox";
-            this.NeroAACGroupBox.TabStop = false;
+            this.AudioGroupBox.Controls.Add(this.AudioPresetAddButton);
+            this.AudioGroupBox.Controls.Add(this.AudioPresetDeleteButton);
+            this.AudioGroupBox.Controls.Add(this.AudioPresetComboBox);
+            this.AudioGroupBox.Controls.Add(this.AudioPresetLabel);
+            this.AudioGroupBox.Controls.Add(this.AudioBitrateComboBox);
+            this.AudioGroupBox.Controls.Add(this.AudioEncoderLabel);
+            this.AudioGroupBox.Controls.Add(this.AudioEncoderComboBox);
+            this.AudioGroupBox.Controls.Add(this.AudioInputTextBox);
+            this.AudioGroupBox.Controls.Add(this.AudioAudioModePanel);
+            this.AudioGroupBox.Controls.Add(this.AudioOutputTextBox);
+            this.AudioGroupBox.Controls.Add(this.AudioInputButton);
+            this.AudioGroupBox.Controls.Add(this.AudioKbpsLabel);
+            this.AudioGroupBox.Controls.Add(this.AudioOutputBotton);
+            this.AudioGroupBox.Controls.Add(this.lbaacrate);
+            this.AudioGroupBox.Controls.Add(this.AudioStartButton);
+            this.AudioGroupBox.Controls.Add(this.AudioCustomParameterTextBox);
+            resources.ApplyResources(this.AudioGroupBox, "AudioGroupBox");
+            this.AudioGroupBox.Name = "AudioGroupBox";
+            this.AudioGroupBox.TabStop = false;
             // 
-            // audioAddBt
+            // AudioPresetAddButton
             // 
-            resources.ApplyResources(this.audioAddBt, "audioAddBt");
-            this.audioAddBt.Name = "audioAddBt";
-            this.audioAddBt.UseVisualStyleBackColor = true;
-            this.audioAddBt.Click += new System.EventHandler(this.audioAddBt_Click);
+            resources.ApplyResources(this.AudioPresetAddButton, "AudioPresetAddButton");
+            this.AudioPresetAddButton.Name = "AudioPresetAddButton";
+            this.AudioPresetAddButton.UseVisualStyleBackColor = true;
+            this.AudioPresetAddButton.Click += new System.EventHandler(this.audioAddBt_Click);
             // 
-            // audioDeleteBt
+            // AudioPresetDeleteButton
             // 
-            resources.ApplyResources(this.audioDeleteBt, "audioDeleteBt");
-            this.audioDeleteBt.Name = "audioDeleteBt";
-            this.audioDeleteBt.UseVisualStyleBackColor = true;
-            this.audioDeleteBt.Click += new System.EventHandler(this.audioDeleteBt_Click);
+            resources.ApplyResources(this.AudioPresetDeleteButton, "AudioPresetDeleteButton");
+            this.AudioPresetDeleteButton.Name = "AudioPresetDeleteButton";
+            this.AudioPresetDeleteButton.UseVisualStyleBackColor = true;
+            this.AudioPresetDeleteButton.Click += new System.EventHandler(this.audioDeleteBt_Click);
             // 
             // AudioPresetComboBox
             // 
@@ -1660,10 +1660,10 @@
             resources.ApplyResources(this.AudioBitrateComboBox, "AudioBitrateComboBox");
             this.AudioBitrateComboBox.Name = "AudioBitrateComboBox";
             // 
-            // label7
+            // AudioEncoderLabel
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.AudioEncoderLabel, "AudioEncoderLabel");
+            this.AudioEncoderLabel.Name = "AudioEncoderLabel";
             // 
             // AudioEncoderComboBox
             // 
@@ -1682,42 +1682,42 @@
             this.AudioEncoderComboBox.Name = "AudioEncoderComboBox";
             this.AudioEncoderComboBox.SelectedIndexChanged += new System.EventHandler(this.AudioEncoderComboBox_SelectedIndexChanged);
             // 
-            // txtaudio2
+            // AudioInputTextBox
             // 
-            this.txtaudio2.AllowDrop = true;
-            this.txtaudio2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtaudio2.EmptyTextTip = null;
-            this.txtaudio2.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtaudio2, "txtaudio2");
-            this.txtaudio2.Name = "txtaudio2";
-            this.txtaudio2.ReadOnly = true;
-            this.txtaudio2.TextChanged += new System.EventHandler(this.txtaudio2_TextChanged);
-            this.txtaudio2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtaudio2_MouseDoubleClick);
+            this.AudioInputTextBox.AllowDrop = true;
+            this.AudioInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AudioInputTextBox.EmptyTextTip = null;
+            this.AudioInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.AudioInputTextBox, "AudioInputTextBox");
+            this.AudioInputTextBox.Name = "AudioInputTextBox";
+            this.AudioInputTextBox.ReadOnly = true;
+            this.AudioInputTextBox.TextChanged += new System.EventHandler(this.txtaudio2_TextChanged);
+            this.AudioInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtaudio2_MouseDoubleClick);
             // 
-            // panel2
+            // AudioAudioModePanel
             // 
-            this.panel2.Controls.Add(this.AudioBitrateRadioButton);
-            this.panel2.Controls.Add(this.AudioCustomizeRadioButton);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
+            this.AudioAudioModePanel.Controls.Add(this.AudioAudioModeBitrateRadioButton);
+            this.AudioAudioModePanel.Controls.Add(this.AudioAudioModeCustomRadioButton);
+            resources.ApplyResources(this.AudioAudioModePanel, "AudioAudioModePanel");
+            this.AudioAudioModePanel.Name = "AudioAudioModePanel";
             // 
-            // AudioBitrateRadioButton
+            // AudioAudioModeBitrateRadioButton
             // 
-            this.AudioBitrateRadioButton.BackColor = System.Drawing.Color.Transparent;
-            this.AudioBitrateRadioButton.Checked = true;
-            resources.ApplyResources(this.AudioBitrateRadioButton, "AudioBitrateRadioButton");
-            this.AudioBitrateRadioButton.Name = "AudioBitrateRadioButton";
-            this.AudioBitrateRadioButton.TabStop = true;
-            this.AudioBitrateRadioButton.UseVisualStyleBackColor = true;
-            this.AudioBitrateRadioButton.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.AudioAudioModeBitrateRadioButton.BackColor = System.Drawing.Color.Transparent;
+            this.AudioAudioModeBitrateRadioButton.Checked = true;
+            resources.ApplyResources(this.AudioAudioModeBitrateRadioButton, "AudioAudioModeBitrateRadioButton");
+            this.AudioAudioModeBitrateRadioButton.Name = "AudioAudioModeBitrateRadioButton";
+            this.AudioAudioModeBitrateRadioButton.TabStop = true;
+            this.AudioAudioModeBitrateRadioButton.UseVisualStyleBackColor = true;
+            this.AudioAudioModeBitrateRadioButton.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // AudioCustomizeRadioButton
+            // AudioAudioModeCustomRadioButton
             // 
-            this.AudioCustomizeRadioButton.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.AudioCustomizeRadioButton, "AudioCustomizeRadioButton");
-            this.AudioCustomizeRadioButton.Name = "AudioCustomizeRadioButton";
-            this.AudioCustomizeRadioButton.UseVisualStyleBackColor = true;
-            this.AudioCustomizeRadioButton.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            this.AudioAudioModeCustomRadioButton.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.AudioAudioModeCustomRadioButton, "AudioAudioModeCustomRadioButton");
+            this.AudioAudioModeCustomRadioButton.Name = "AudioAudioModeCustomRadioButton";
+            this.AudioAudioModeCustomRadioButton.UseVisualStyleBackColor = true;
+            this.AudioAudioModeCustomRadioButton.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // AudioOutputTextBox
             // 
@@ -1730,36 +1730,36 @@
             this.AudioOutputTextBox.TextChanged += new System.EventHandler(this.txtout3_TextChanged);
             this.AudioOutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout3_MouseDoubleClick);
             // 
-            // btnaudio2
+            // AudioInputButton
             // 
-            resources.ApplyResources(this.btnaudio2, "btnaudio2");
-            this.btnaudio2.Name = "btnaudio2";
-            this.btnaudio2.UseVisualStyleBackColor = true;
-            this.btnaudio2.Click += new System.EventHandler(this.btnaudio2_Click);
+            resources.ApplyResources(this.AudioInputButton, "AudioInputButton");
+            this.AudioInputButton.Name = "AudioInputButton";
+            this.AudioInputButton.UseVisualStyleBackColor = true;
+            this.AudioInputButton.Click += new System.EventHandler(this.btnaudio2_Click);
             // 
-            // lbaackbps
+            // AudioKbpsLabel
             // 
-            resources.ApplyResources(this.lbaackbps, "lbaackbps");
-            this.lbaackbps.Name = "lbaackbps";
+            resources.ApplyResources(this.AudioKbpsLabel, "AudioKbpsLabel");
+            this.AudioKbpsLabel.Name = "AudioKbpsLabel";
             // 
-            // btnout3
+            // AudioOutputBotton
             // 
-            resources.ApplyResources(this.btnout3, "btnout3");
-            this.btnout3.Name = "btnout3";
-            this.btnout3.UseVisualStyleBackColor = true;
-            this.btnout3.Click += new System.EventHandler(this.btnout3_Click);
+            resources.ApplyResources(this.AudioOutputBotton, "AudioOutputBotton");
+            this.AudioOutputBotton.Name = "AudioOutputBotton";
+            this.AudioOutputBotton.UseVisualStyleBackColor = true;
+            this.AudioOutputBotton.Click += new System.EventHandler(this.btnout3_Click);
             // 
             // lbaacrate
             // 
             resources.ApplyResources(this.lbaacrate, "lbaacrate");
             this.lbaacrate.Name = "lbaacrate";
             // 
-            // btnaac
+            // AudioStartButton
             // 
-            resources.ApplyResources(this.btnaac, "btnaac");
-            this.btnaac.Name = "btnaac";
-            this.btnaac.UseVisualStyleBackColor = true;
-            this.btnaac.Click += new System.EventHandler(this.btnaac_Click);
+            resources.ApplyResources(this.AudioStartButton, "AudioStartButton");
+            this.AudioStartButton.Name = "AudioStartButton";
+            this.AudioStartButton.UseVisualStyleBackColor = true;
+            this.AudioStartButton.Click += new System.EventHandler(this.btnaac_Click);
             // 
             // AudioCustomParameterTextBox
             // 
@@ -1770,68 +1770,68 @@
             resources.ApplyResources(this.AudioCustomParameterTextBox, "AudioCustomParameterTextBox");
             this.AudioCustomParameterTextBox.Name = "AudioCustomParameterTextBox";
             // 
-            // groupBox2
+            // AudioBatchGroupBox
             // 
-            this.groupBox2.Controls.Add(this.AudioJoinButton);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.AudioBatchButton);
-            this.groupBox2.Controls.Add(this.AudioListBox);
-            this.groupBox2.Controls.Add(this.AudioAddButton);
-            this.groupBox2.Controls.Add(this.AudioClearButton);
-            this.groupBox2.Controls.Add(this.AudioDeleteButton);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchConcatButton);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchOutputNotificationLabel);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchStartButton);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchItemListBox);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchAddButton);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchClearButton);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchDeleteButton);
+            resources.ApplyResources(this.AudioBatchGroupBox, "AudioBatchGroupBox");
+            this.AudioBatchGroupBox.Name = "AudioBatchGroupBox";
+            this.AudioBatchGroupBox.TabStop = false;
             // 
-            // AudioJoinButton
+            // AudioBatchConcatButton
             // 
-            resources.ApplyResources(this.AudioJoinButton, "AudioJoinButton");
-            this.AudioJoinButton.Name = "AudioJoinButton";
-            this.AudioJoinButton.UseVisualStyleBackColor = true;
-            this.AudioJoinButton.Click += new System.EventHandler(this.AudioJoinButton_Click);
+            resources.ApplyResources(this.AudioBatchConcatButton, "AudioBatchConcatButton");
+            this.AudioBatchConcatButton.Name = "AudioBatchConcatButton";
+            this.AudioBatchConcatButton.UseVisualStyleBackColor = true;
+            this.AudioBatchConcatButton.Click += new System.EventHandler(this.AudioJoinButton_Click);
             // 
-            // label1
+            // AudioBatchOutputNotificationLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.AudioBatchOutputNotificationLabel, "AudioBatchOutputNotificationLabel");
+            this.AudioBatchOutputNotificationLabel.Name = "AudioBatchOutputNotificationLabel";
             // 
-            // AudioBatchButton
+            // AudioBatchStartButton
             // 
-            resources.ApplyResources(this.AudioBatchButton, "AudioBatchButton");
-            this.AudioBatchButton.Name = "AudioBatchButton";
-            this.AudioBatchButton.UseVisualStyleBackColor = true;
-            this.AudioBatchButton.Click += new System.EventHandler(this.AudioBatchButton_Click);
+            resources.ApplyResources(this.AudioBatchStartButton, "AudioBatchStartButton");
+            this.AudioBatchStartButton.Name = "AudioBatchStartButton";
+            this.AudioBatchStartButton.UseVisualStyleBackColor = true;
+            this.AudioBatchStartButton.Click += new System.EventHandler(this.AudioBatchButton_Click);
             // 
-            // AudioListBox
+            // AudioBatchItemListBox
             // 
-            this.AudioListBox.AllowDrop = true;
-            this.AudioListBox.FormattingEnabled = true;
-            resources.ApplyResources(this.AudioListBox, "AudioListBox");
-            this.AudioListBox.Name = "AudioListBox";
-            this.AudioListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.AudioListBox_DragDrop);
-            this.AudioListBox.DragOver += new System.Windows.Forms.DragEventHandler(this.AudioListBox_DragOver);
-            this.AudioListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AudioListBox_MouseDown);
+            this.AudioBatchItemListBox.AllowDrop = true;
+            this.AudioBatchItemListBox.FormattingEnabled = true;
+            resources.ApplyResources(this.AudioBatchItemListBox, "AudioBatchItemListBox");
+            this.AudioBatchItemListBox.Name = "AudioBatchItemListBox";
+            this.AudioBatchItemListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.AudioListBox_DragDrop);
+            this.AudioBatchItemListBox.DragOver += new System.Windows.Forms.DragEventHandler(this.AudioListBox_DragOver);
+            this.AudioBatchItemListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AudioListBox_MouseDown);
             // 
-            // AudioAddButton
+            // AudioBatchAddButton
             // 
-            resources.ApplyResources(this.AudioAddButton, "AudioAddButton");
-            this.AudioAddButton.Name = "AudioAddButton";
-            this.AudioAddButton.UseVisualStyleBackColor = true;
-            this.AudioAddButton.Click += new System.EventHandler(this.AudioAddButton_Click);
+            resources.ApplyResources(this.AudioBatchAddButton, "AudioBatchAddButton");
+            this.AudioBatchAddButton.Name = "AudioBatchAddButton";
+            this.AudioBatchAddButton.UseVisualStyleBackColor = true;
+            this.AudioBatchAddButton.Click += new System.EventHandler(this.AudioAddButton_Click);
             // 
-            // AudioClearButton
+            // AudioBatchClearButton
             // 
-            resources.ApplyResources(this.AudioClearButton, "AudioClearButton");
-            this.AudioClearButton.Name = "AudioClearButton";
-            this.AudioClearButton.UseVisualStyleBackColor = true;
-            this.AudioClearButton.Click += new System.EventHandler(this.AudioClearButton_Click);
+            resources.ApplyResources(this.AudioBatchClearButton, "AudioBatchClearButton");
+            this.AudioBatchClearButton.Name = "AudioBatchClearButton";
+            this.AudioBatchClearButton.UseVisualStyleBackColor = true;
+            this.AudioBatchClearButton.Click += new System.EventHandler(this.AudioClearButton_Click);
             // 
-            // AudioDeleteButton
+            // AudioBatchDeleteButton
             // 
-            resources.ApplyResources(this.AudioDeleteButton, "AudioDeleteButton");
-            this.AudioDeleteButton.Name = "AudioDeleteButton";
-            this.AudioDeleteButton.UseVisualStyleBackColor = true;
-            this.AudioDeleteButton.Click += new System.EventHandler(this.AudioDeleteButton_Click);
+            resources.ApplyResources(this.AudioBatchDeleteButton, "AudioBatchDeleteButton");
+            this.AudioBatchDeleteButton.Name = "AudioBatchDeleteButton";
+            this.AudioBatchDeleteButton.UseVisualStyleBackColor = true;
+            this.AudioBatchDeleteButton.Click += new System.EventHandler(this.AudioDeleteButton_Click);
             // 
             // groupBox9
             // 
@@ -3053,11 +3053,11 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.AudioTab.ResumeLayout(false);
-            this.NeroAACGroupBox.ResumeLayout(false);
-            this.NeroAACGroupBox.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.AudioGroupBox.ResumeLayout(false);
+            this.AudioGroupBox.PerformLayout();
+            this.AudioAudioModePanel.ResumeLayout(false);
+            this.AudioBatchGroupBox.ResumeLayout(false);
+            this.AudioBatchGroupBox.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OnePicCRFNum)).EndInit();
@@ -3171,15 +3171,15 @@
         private System.Windows.Forms.Label label14;
         private ControlExs.QQTextBox txtout;
         private System.Windows.Forms.TabPage AudioTab;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lbaackbps;
+        private System.Windows.Forms.Panel AudioAudioModePanel;
+        private System.Windows.Forms.Label AudioKbpsLabel;
         private System.Windows.Forms.Label lbaacrate;
-        private ControlExs.QQButton btnaac;
-        private ControlExs.QQButton btnout3;
-        private ControlExs.QQButton btnaudio2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private ControlExs.QQButton AudioStartButton;
+        private ControlExs.QQButton AudioOutputBotton;
+        private ControlExs.QQButton AudioInputButton;
+        private System.Windows.Forms.GroupBox AudioBatchGroupBox;
         private ControlExs.QQTextBox AudioOutputTextBox;
-        private ControlExs.QQTextBox txtaudio2;
+        private ControlExs.QQTextBox AudioInputTextBox;
         private ControlExs.QQTextBox AudioCustomParameterTextBox;
         private System.Windows.Forms.TabPage VideoTab;
         private System.Windows.Forms.GroupBox VideoBatchGroupBox;
@@ -3228,15 +3228,15 @@
         private ControlExs.QQButton HomePageBtn;
         private ControlExs.QQButton AboutBtn;
         private System.Windows.Forms.TabControl tabControl;
-        private ControlExs.QQRadioButton AudioBitrateRadioButton;
-        private ControlExs.QQRadioButton AudioCustomizeRadioButton;
+        private ControlExs.QQRadioButton AudioAudioModeBitrateRadioButton;
+        private ControlExs.QQRadioButton AudioAudioModeCustomRadioButton;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.ListBox AudioListBox;
-        private ControlExs.QQButton AudioAddButton;
-        private ControlExs.QQButton AudioClearButton;
-        private ControlExs.QQButton AudioDeleteButton;
-        private ControlExs.QQButton AudioBatchButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox AudioBatchItemListBox;
+        private ControlExs.QQButton AudioBatchAddButton;
+        private ControlExs.QQButton AudioBatchClearButton;
+        private ControlExs.QQButton AudioBatchDeleteButton;
+        private ControlExs.QQButton AudioBatchStartButton;
+        private System.Windows.Forms.Label AudioBatchOutputNotificationLabel;
         private System.Windows.Forms.NumericUpDown AVSHeightNumericUpDown;
         private System.Windows.Forms.NumericUpDown AVSWidthNumericUpDown;
         private System.Windows.Forms.Label label18;
@@ -3278,8 +3278,8 @@
         private ControlExs.QQButton ViewLogButton;
         private ControlExs.QQButton VideoBatchOutputFolderButton;
         private ControlExs.QQTextBox VideoBatchOutputFolderTextBox;
-        private System.Windows.Forms.GroupBox NeroAACGroupBox;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox AudioGroupBox;
+        private System.Windows.Forms.Label AudioEncoderLabel;
         private System.Windows.Forms.ComboBox AudioEncoderComboBox;
         private System.Windows.Forms.TabPage SetupTabPage;
         private ControlExs.QQButton SetDefaultButton;
@@ -3353,7 +3353,7 @@
         private System.Windows.Forms.ComboBox VideoBatchSubtitleLanguage;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.ComboBox MuxFormatComboBox;
-        private ControlExs.QQButton AudioJoinButton;
+        private ControlExs.QQButton AudioBatchConcatButton;
         private System.Windows.Forms.ComboBox Mp4BoxParComboBox;
         private System.Windows.Forms.Label label41;
         private ControlExs.QQButton gmkvextractguibButton;
@@ -3375,8 +3375,8 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.ComboBox MuxAacEncoderComboBox;
         private ControlExs.QQCheckBox x265CheckBox;
-        private ControlExs.QQButton audioDeleteBt;
-        private ControlExs.QQButton audioAddBt;
+        private ControlExs.QQButton AudioPresetDeleteButton;
+        private ControlExs.QQButton AudioPresetAddButton;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox OnePicAudioSecondTxt;
         private System.Windows.Forms.Label label45;
