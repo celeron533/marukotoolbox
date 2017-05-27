@@ -35,27 +35,16 @@
             this.MiscMiscGroupBox = new System.Windows.Forms.GroupBox();
             this.MiscMiscTransposeLabel = new System.Windows.Forms.Label();
             this.MiscMiscTransposeComboBox = new System.Windows.Forms.ComboBox();
-            this.MiscMiscRotateButton = new ControlExs.QQButton();
-            this.MiscMiscVideoInputTextBox = new ControlExs.QQTextBox();
-            this.MiscMiscVideoInputButton = new ControlExs.QQButton();
-            this.MiscMiscVideoOutputButton = new ControlExs.QQButton();
-            this.MiscMiscClipButton = new ControlExs.QQButton();
-            this.MiscMiscVideoOutputTextBox = new ControlExs.QQTextBox();
             this.MiscMiscEndTimeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.MiscMiscBeginTimeLabel = new System.Windows.Forms.Label();
             this.MiscMiscEndTimeLabel = new System.Windows.Forms.Label();
             this.MiscMiscBeginTimeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.MediaInfoTab = new System.Windows.Forms.TabPage();
-            this.btnMIopen = new ControlExs.QQButton();
-            this.btnMIplay = new ControlExs.QQButton();
-            this.btnMIcopy = new ControlExs.QQButton();
             this.MediaInfoTextBox = new System.Windows.Forms.TextBox();
             this.AVSTab = new System.Windows.Forms.TabPage();
-            this.AVSAddFilterButton = new ControlExs.QQButton();
             this.label39 = new System.Windows.Forms.Label();
             this.AVSFilterComboBox = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.AVSCropTextBox = new ControlExs.QQTextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.TrimEndNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -82,6 +71,120 @@
             this.TweakBrightnessNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.TweakSaturationNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.TweakChromaNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.ExtractTab = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.MuxTab = new System.Windows.Forms.TabPage();
+            this.MuxConvertGroupBox = new System.Windows.Forms.GroupBox();
+            this.MuxConvertAacEncoderLabel = new System.Windows.Forms.Label();
+            this.MuxConvertAacEncoderComboBox = new System.Windows.Forms.ComboBox();
+            this.MuxConvertFormatLabel = new System.Windows.Forms.Label();
+            this.MuxConvertFormatComboBox = new System.Windows.Forms.ComboBox();
+            this.MuxConvertItemListBox = new System.Windows.Forms.ListBox();
+            this.MuxConvertOutputNotificationLabel = new System.Windows.Forms.Label();
+            this.MuxMp4GroupBox = new System.Windows.Forms.GroupBox();
+            this.MuxMp4ParComboBox = new System.Windows.Forms.ComboBox();
+            this.MuxMp4ParLabel = new System.Windows.Forms.Label();
+            this.MuxMp4FpsComboBox = new System.Windows.Forms.ComboBox();
+            this.MuxMp4FpsLabel = new System.Windows.Forms.Label();
+            this.MuxMkvGroupBox = new System.Windows.Forms.GroupBox();
+            this.AudioTab = new System.Windows.Forms.TabPage();
+            this.AudioGroupBox = new System.Windows.Forms.GroupBox();
+            this.AudioPresetComboBox = new System.Windows.Forms.ComboBox();
+            this.AudioPresetLabel = new System.Windows.Forms.Label();
+            this.AudioBitrateComboBox = new System.Windows.Forms.ComboBox();
+            this.AudioEncoderLabel = new System.Windows.Forms.Label();
+            this.AudioEncoderComboBox = new System.Windows.Forms.ComboBox();
+            this.AudioAudioModePanel = new System.Windows.Forms.Panel();
+            this.AudioKbpsLabel = new System.Windows.Forms.Label();
+            this.lbaacrate = new System.Windows.Forms.Label();
+            this.AudioBatchGroupBox = new System.Windows.Forms.GroupBox();
+            this.AudioBatchOutputNotificationLabel = new System.Windows.Forms.Label();
+            this.AudioBatchItemListBox = new System.Windows.Forms.ListBox();
+            this.MiscOnePicGroupBox = new System.Windows.Forms.GroupBox();
+            this.MiscOnePicDurationSecondsLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicDurationSecondsTextBox = new System.Windows.Forms.TextBox();
+            this.MiscOnePicDurationLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiscOnePicCrfLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicFpsLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicFpsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiscOnePicKbpsLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicBitrateLabel = new System.Windows.Forms.Label();
+            this.MiscOnePicBitrateLabelNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoTab = new System.Windows.Forms.TabPage();
+            this.VideoFramesLabel = new System.Windows.Forms.Label();
+            this.VideoSeekLabel = new System.Windows.Forms.Label();
+            this.VideoFramesNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoSeekNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoDemuxerComboBox = new System.Windows.Forms.ComboBox();
+            this.VideoBatchGroupBox = new System.Windows.Forms.GroupBox();
+            this.VideoBatchFormatLabel = new System.Windows.Forms.Label();
+            this.VideoBatchFormatComboBox = new System.Windows.Forms.ComboBox();
+            this.VideoBatchSubtitleLanguage = new System.Windows.Forms.ComboBox();
+            this.VideoBatchItemListbox = new System.Windows.Forms.ListBox();
+            this.VideoX264ModePanel = new System.Windows.Forms.Panel();
+            this.VideoDemuxerLabel = new System.Windows.Forms.Label();
+            this.VideoEncoderLabel = new System.Windows.Forms.Label();
+            this.VideoEncoderComboBox = new System.Windows.Forms.ComboBox();
+            this.VideoFpsComboBox = new System.Windows.Forms.ComboBox();
+            this.VideoFpsLabel = new System.Windows.Forms.Label();
+            this.VideoAudioModeComboBox = new System.Windows.Forms.ComboBox();
+            this.VideoPresetComboBox = new System.Windows.Forms.ComboBox();
+            this.VideoAudioModeLabel = new System.Windows.Forms.Label();
+            this.VideoGoToAudioLabel = new System.Windows.Forms.Label();
+            this.VideoCrfKbpsLabel = new System.Windows.Forms.Label();
+            this.VideoCrfLabel = new System.Windows.Forms.Label();
+            this.labelx264Height = new System.Windows.Forms.Label();
+            this.VideoWidthLabel = new System.Windows.Forms.Label();
+            this.VideoHeightNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoWidthNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.VideoBitrateLabel = new System.Windows.Forms.Label();
+            this.VideoPresetLabel = new System.Windows.Forms.Label();
+            this.VideoBitrateNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.HelpTab = new System.Windows.Forms.TabPage();
+            this.HelpTextBox = new System.Windows.Forms.RichTextBox();
+            this.ReleaseDatelabel = new System.Windows.Forms.Label();
+            this.ReleaseDatelabel2 = new System.Windows.Forms.Label();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.MiscTab = new System.Windows.Forms.TabPage();
+            this.MiscBlackGroupBox = new System.Windows.Forms.GroupBox();
+            this.MiscBlackKbpsLabel = new System.Windows.Forms.Label();
+            this.MiscBlackBitrateLabel = new System.Windows.Forms.Label();
+            this.MiscBlackBitrateNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiscBlackDurationSecondsLabel = new System.Windows.Forms.Label();
+            this.MiscBlackDurationSecondsComboBox = new System.Windows.Forms.ComboBox();
+            this.MiscBlackDurationLabel = new System.Windows.Forms.Label();
+            this.MiscBlackCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiscBlackCrfLabel = new System.Windows.Forms.Label();
+            this.MiscBlackFpsComboBox = new System.Windows.Forms.Label();
+            this.MiscBlackFpsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.SetupTabPage = new System.Windows.Forms.TabPage();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.languageComboBox = new System.Windows.Forms.ComboBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.x264PriorityComboBox = new System.Windows.Forms.ComboBox();
+            this.x264ThreadsComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.VideoMaintainResolutionCheckBox = new ControlExs.QQCheckBox();
+            this.MiscMiscRotateButton = new ControlExs.QQButton();
+            this.MiscMiscVideoInputTextBox = new ControlExs.QQTextBox();
+            this.MiscMiscVideoInputButton = new ControlExs.QQButton();
+            this.MiscMiscVideoOutputButton = new ControlExs.QQButton();
+            this.MiscMiscClipButton = new ControlExs.QQButton();
+            this.MiscMiscVideoOutputTextBox = new ControlExs.QQTextBox();
+            this.btnMIopen = new ControlExs.QQButton();
+            this.btnMIplay = new ControlExs.QQButton();
+            this.btnMIcopy = new ControlExs.QQButton();
+            this.AVSAddFilterButton = new ControlExs.QQButton();
+            this.AVSCropTextBox = new ControlExs.QQTextBox();
             this.AVSScriptTextBox = new ControlExs.QQTextBox();
             this.txtvideo9 = new ControlExs.QQTextBox();
             this.txtout9 = new ControlExs.QQTextBox();
@@ -103,8 +206,6 @@
             this.btnvideo9 = new ControlExs.QQButton();
             this.btnout9 = new ControlExs.QQButton();
             this.btnsub9 = new ControlExs.QQButton();
-            this.ExtractTab = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.gmkvextractguibButton = new ControlExs.QQButton();
             this.MkvExtract4Button = new ControlExs.QQButton();
             this.MkvExtract3Button = new ControlExs.QQButton();
@@ -113,93 +214,53 @@
             this.btnextract7 = new ControlExs.QQButton();
             this.btnvideo7 = new ControlExs.QQButton();
             this.txtvideo6 = new ControlExs.QQTextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btnvextract8 = new ControlExs.QQButton();
             this.btnvideo8 = new ControlExs.QQButton();
             this.txtvideo8 = new ControlExs.QQTextBox();
             this.btnaextract8 = new ControlExs.QQButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.ExtractMP4TextBox = new ControlExs.QQTextBox();
             this.btnaextract3 = new ControlExs.QQButton();
             this.ExtractMP4Button = new ControlExs.QQButton();
             this.btnvextract = new ControlExs.QQButton();
             this.btnaextract = new ControlExs.QQButton();
             this.btnaextract2 = new ControlExs.QQButton();
-            this.MuxTab = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.MuxAacEncoderComboBox = new System.Windows.Forms.ComboBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.MuxFormatComboBox = new System.Windows.Forms.ComboBox();
-            this.lbffmpeg = new System.Windows.Forms.ListBox();
-            this.btnffmpegAdd = new ControlExs.QQButton();
-            this.btnffmpegClear = new ControlExs.QQButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnffmpegDel = new ControlExs.QQButton();
-            this.btnBatchMP4 = new ControlExs.QQButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Mp4BoxParComboBox = new System.Windows.Forms.ComboBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.MuxReplaceAudioButton = new ControlExs.QQButton();
-            this.txtvideo = new ControlExs.QQTextBox();
-            this.btnvideo = new ControlExs.QQButton();
+            this.MuxConvertAddButton = new ControlExs.QQButton();
+            this.MuxConvertClearButton = new ControlExs.QQButton();
+            this.MuxConvertDeleteButton = new ControlExs.QQButton();
+            this.MuxConvertStartButton = new ControlExs.QQButton();
+            this.MuxMp4ReplaceAudioButton = new ControlExs.QQButton();
+            this.MuxMp4VideoInputTextBox = new ControlExs.QQTextBox();
+            this.MuxMp4VideoInputButton = new ControlExs.QQButton();
             this.btnmux = new ControlExs.QQButton();
-            this.cbFPS = new System.Windows.Forms.ComboBox();
-            this.btnaudio = new ControlExs.QQButton();
-            this.btnout = new ControlExs.QQButton();
-            this.txtaudio = new ControlExs.QQTextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtout = new ControlExs.QQTextBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.txtvideo5 = new ControlExs.QQTextBox();
-            this.button4 = new ControlExs.QQButton();
-            this.txtsub = new ControlExs.QQTextBox();
-            this.button3 = new ControlExs.QQButton();
-            this.txtaudio3 = new ControlExs.QQTextBox();
-            this.button5 = new ControlExs.QQButton();
-            this.txtout6 = new ControlExs.QQTextBox();
-            this.button2 = new ControlExs.QQButton();
-            this.button7 = new ControlExs.QQButton();
-            this.AudioTab = new System.Windows.Forms.TabPage();
-            this.AudioGroupBox = new System.Windows.Forms.GroupBox();
+            this.MuxMp4AudioInputButton = new ControlExs.QQButton();
+            this.MuxMp4OutputButton = new ControlExs.QQButton();
+            this.MuxMp4AudioInputTextBox = new ControlExs.QQTextBox();
+            this.MuxMp4OutputTextBox = new ControlExs.QQTextBox();
+            this.MuxMkvVideoInputTextBox = new ControlExs.QQTextBox();
+            this.MuxMkvOutputButton = new ControlExs.QQButton();
+            this.MuxMkvSubtitleTextBox = new ControlExs.QQTextBox();
+            this.MuxMkvAudioInputButton = new ControlExs.QQButton();
+            this.MuxMkvAudioInputTextBox = new ControlExs.QQTextBox();
+            this.MuxMkvSubtitleButton = new ControlExs.QQButton();
+            this.MuxMkvOutputTextBox = new ControlExs.QQTextBox();
+            this.MuxMkvVideoInputButton = new ControlExs.QQButton();
+            this.MuxMkvStartButton = new ControlExs.QQButton();
             this.AudioPresetAddButton = new ControlExs.QQButton();
             this.AudioPresetDeleteButton = new ControlExs.QQButton();
-            this.AudioPresetComboBox = new System.Windows.Forms.ComboBox();
-            this.AudioPresetLabel = new System.Windows.Forms.Label();
-            this.AudioBitrateComboBox = new System.Windows.Forms.ComboBox();
-            this.AudioEncoderLabel = new System.Windows.Forms.Label();
-            this.AudioEncoderComboBox = new System.Windows.Forms.ComboBox();
             this.AudioInputTextBox = new ControlExs.QQTextBox();
-            this.AudioAudioModePanel = new System.Windows.Forms.Panel();
             this.AudioAudioModeBitrateRadioButton = new ControlExs.QQRadioButton();
             this.AudioAudioModeCustomRadioButton = new ControlExs.QQRadioButton();
             this.AudioOutputTextBox = new ControlExs.QQTextBox();
             this.AudioInputButton = new ControlExs.QQButton();
-            this.AudioKbpsLabel = new System.Windows.Forms.Label();
             this.AudioOutputBotton = new ControlExs.QQButton();
-            this.lbaacrate = new System.Windows.Forms.Label();
             this.AudioStartButton = new ControlExs.QQButton();
             this.AudioCustomParameterTextBox = new ControlExs.QQTextBox();
-            this.AudioBatchGroupBox = new System.Windows.Forms.GroupBox();
             this.AudioBatchConcatButton = new ControlExs.QQButton();
-            this.AudioBatchOutputNotificationLabel = new System.Windows.Forms.Label();
             this.AudioBatchStartButton = new ControlExs.QQButton();
-            this.AudioBatchItemListBox = new System.Windows.Forms.ListBox();
             this.AudioBatchAddButton = new ControlExs.QQButton();
             this.AudioBatchClearButton = new ControlExs.QQButton();
             this.AudioBatchDeleteButton = new ControlExs.QQButton();
-            this.MiscOnePicGroupBox = new System.Windows.Forms.GroupBox();
-            this.MiscOnePicDurationSecondsLabel = new System.Windows.Forms.Label();
-            this.MiscOnePicDurationSecondsTextBox = new System.Windows.Forms.TextBox();
-            this.MiscOnePicDurationLabel = new System.Windows.Forms.Label();
-            this.MiscOnePicCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.MiscOnePicCrfLabel = new System.Windows.Forms.Label();
             this.MiscOnePicCopyAudioCheckBox = new ControlExs.QQCheckBox();
-            this.MiscOnePicFpsLabel = new System.Windows.Forms.Label();
-            this.MiscOnePicFpsNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.MiscOnePicKbpsLabel = new System.Windows.Forms.Label();
-            this.MiscOnePicBitrateLabel = new System.Windows.Forms.Label();
-            this.MiscOnePicBitrateLabelNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.MiscOnePicOutputButton = new ControlExs.QQButton();
             this.AudioOnePicButton = new ControlExs.QQButton();
             this.MiscOnePicAudioInputButton = new ControlExs.QQButton();
@@ -207,20 +268,8 @@
             this.MiscOnePicOutputTextBox = new ControlExs.QQTextBox();
             this.MiscOnePicAudioInputTextBox = new ControlExs.QQTextBox();
             this.MiscOnePicInputTextBox = new ControlExs.QQTextBox();
-            this.VideoTab = new System.Windows.Forms.TabPage();
-            this.VideoFramesLabel = new System.Windows.Forms.Label();
-            this.VideoSeekLabel = new System.Windows.Forms.Label();
-            this.VideoFramesNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.VideoSeekNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.VideoMaintainResolutionCheckBox = new ControlExs.QQCheckBox();
-            this.VideoDemuxerComboBox = new System.Windows.Forms.ComboBox();
-            this.VideoBatchGroupBox = new System.Windows.Forms.GroupBox();
-            this.VideoBatchFormatLabel = new System.Windows.Forms.Label();
-            this.VideoBatchFormatComboBox = new System.Windows.Forms.ComboBox();
-            this.VideoBatchSubtitleLanguage = new System.Windows.Forms.ComboBox();
             this.VideoBatchOutputFolderButton = new ControlExs.QQButton();
             this.VideoBatchOutputFolderTextBox = new ControlExs.QQTextBox();
-            this.VideoBatchItemListbox = new System.Windows.Forms.ListBox();
             this.VideoBatchClearButton = new ControlExs.QQButton();
             this.VideoBatchSubtitleCheckBox = new ControlExs.QQCheckBox();
             this.VideoBatchDeleteButton = new ControlExs.QQButton();
@@ -231,58 +280,21 @@
             this.VideoSubtitleTextBox = new ControlExs.QQTextBox();
             this.VideoOutputTextBox = new ControlExs.QQTextBox();
             this.VideoInputTextBox = new ControlExs.QQTextBox();
-            this.VideoX264ModePanel = new System.Windows.Forms.Panel();
             this.VideoModeCrfRadioButton = new ControlExs.QQRadioButton();
             this.VideoModeCustomRadioButton = new ControlExs.QQRadioButton();
             this.VideoMode2PassRadioButton = new ControlExs.QQRadioButton();
-            this.VideoDemuxerLabel = new System.Windows.Forms.Label();
             this.VideoAddPresetButton = new ControlExs.QQButton();
             this.VideoDeletePresetButton = new ControlExs.QQButton();
             this.VideoStartButton = new ControlExs.QQButton();
             this.VideoSubtitleButton = new ControlExs.QQButton();
             this.VideoOutputButton = new ControlExs.QQButton();
             this.VideoInputButton = new ControlExs.QQButton();
-            this.VideoEncoderLabel = new System.Windows.Forms.Label();
-            this.VideoEncoderComboBox = new System.Windows.Forms.ComboBox();
-            this.VideoFpsComboBox = new System.Windows.Forms.ComboBox();
-            this.VideoFpsLabel = new System.Windows.Forms.Label();
-            this.VideoAudioModeComboBox = new System.Windows.Forms.ComboBox();
-            this.VideoPresetComboBox = new System.Windows.Forms.ComboBox();
-            this.VideoAudioModeLabel = new System.Windows.Forms.Label();
-            this.VideoGoToAudioLabel = new System.Windows.Forms.Label();
-            this.VideoCrfKbpsLabel = new System.Windows.Forms.Label();
-            this.VideoCrfLabel = new System.Windows.Forms.Label();
-            this.labelx264Height = new System.Windows.Forms.Label();
-            this.VideoWidthLabel = new System.Windows.Forms.Label();
-            this.VideoHeightNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.VideoWidthNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.VideoCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.VideoBitrateLabel = new System.Windows.Forms.Label();
             this.VideoCustomParameterTextBox = new ControlExs.QQTextBox();
-            this.VideoPresetLabel = new System.Windows.Forms.Label();
-            this.VideoBitrateNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.HelpTab = new System.Windows.Forms.TabPage();
             this.FeedbackButton = new ControlExs.QQButton();
-            this.HelpTextBox = new System.Windows.Forms.RichTextBox();
-            this.ReleaseDatelabel = new System.Windows.Forms.Label();
-            this.ReleaseDatelabel2 = new System.Windows.Forms.Label();
             this.CheckUpdateButton = new ControlExs.QQButton();
             this.HomePageBtn = new ControlExs.QQButton();
             this.AboutBtn = new ControlExs.QQButton();
-            this.tabControl = new System.Windows.Forms.TabControl();
-            this.MiscTab = new System.Windows.Forms.TabPage();
-            this.MiscBlackGroupBox = new System.Windows.Forms.GroupBox();
-            this.MiscBlackKbpsLabel = new System.Windows.Forms.Label();
-            this.MiscBlackBitrateLabel = new System.Windows.Forms.Label();
-            this.MiscBlackBitrateNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.MiscBlackDurationSecondsLabel = new System.Windows.Forms.Label();
-            this.MiscBlackDurationSecondsComboBox = new System.Windows.Forms.ComboBox();
-            this.MiscBlackDurationLabel = new System.Windows.Forms.Label();
-            this.MiscBlackCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.MiscBlackCrfLabel = new System.Windows.Forms.Label();
             this.MiscBlackNoPicCheckBox = new ControlExs.QQCheckBox();
-            this.MiscBlackFpsComboBox = new System.Windows.Forms.Label();
-            this.MiscBlackFpsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.MiscBlackPicInputButton = new ControlExs.QQButton();
             this.MiscBlackPicInputTextBox = new ControlExs.QQTextBox();
             this.MiscBlackStartButton = new ControlExs.QQButton();
@@ -290,26 +302,14 @@
             this.MiscBlackVideoInputButton = new ControlExs.QQButton();
             this.MiscBlackOutputTextBox = new ControlExs.QQTextBox();
             this.MiscBlackVideoInputTextBox = new ControlExs.QQTextBox();
-            this.SetupTabPage = new System.Windows.Forms.TabPage();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.x265CheckBox = new ControlExs.QQCheckBox();
-            this.label38 = new System.Windows.Forms.Label();
             this.SetupPlayerTextBox = new ControlExs.QQTextBox();
             this.SetupPlayerButton = new ControlExs.QQButton();
             this.SetupDeleteTempFileCheckBox = new ControlExs.QQCheckBox();
             this.CheckUpdateCheckBox = new ControlExs.QQCheckBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.SplashScreenCheckBox = new ControlExs.QQCheckBox();
             this.TrayModeCheckBox = new ControlExs.QQCheckBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.languageComboBox = new System.Windows.Forms.ComboBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.x264extraLine = new ControlExs.QQTextBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.x264PriorityComboBox = new System.Windows.Forms.ComboBox();
-            this.x264ThreadsComboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.DeleteLogButton = new ControlExs.QQButton();
             this.SetDefaultButton = new ControlExs.QQButton();
             this.ViewLogButton = new ControlExs.QQButton();
@@ -335,9 +335,9 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.MuxTab.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox8.SuspendLayout();
+            this.MuxConvertGroupBox.SuspendLayout();
+            this.MuxMp4GroupBox.SuspendLayout();
+            this.MuxMkvGroupBox.SuspendLayout();
             this.AudioTab.SuspendLayout();
             this.AudioGroupBox.SuspendLayout();
             this.AudioAudioModePanel.SuspendLayout();
@@ -409,57 +409,6 @@
             resources.ApplyResources(this.MiscMiscTransposeComboBox, "MiscMiscTransposeComboBox");
             this.MiscMiscTransposeComboBox.Name = "MiscMiscTransposeComboBox";
             // 
-            // MiscMiscRotateButton
-            // 
-            resources.ApplyResources(this.MiscMiscRotateButton, "MiscMiscRotateButton");
-            this.MiscMiscRotateButton.Name = "MiscMiscRotateButton";
-            this.MiscMiscRotateButton.UseVisualStyleBackColor = true;
-            this.MiscMiscRotateButton.Click += new System.EventHandler(this.RotateButton_Click);
-            // 
-            // MiscMiscVideoInputTextBox
-            // 
-            this.MiscMiscVideoInputTextBox.AllowDrop = true;
-            this.MiscMiscVideoInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MiscMiscVideoInputTextBox.EmptyTextTip = null;
-            this.MiscMiscVideoInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.MiscMiscVideoInputTextBox, "MiscMiscVideoInputTextBox");
-            this.MiscMiscVideoInputTextBox.Name = "MiscMiscVideoInputTextBox";
-            this.MiscMiscVideoInputTextBox.ReadOnly = true;
-            this.MiscMiscVideoInputTextBox.TextChanged += new System.EventHandler(this.txtvideo4_TextChanged);
-            this.MiscMiscVideoInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo4_MouseDoubleClick);
-            // 
-            // MiscMiscVideoInputButton
-            // 
-            resources.ApplyResources(this.MiscMiscVideoInputButton, "MiscMiscVideoInputButton");
-            this.MiscMiscVideoInputButton.Name = "MiscMiscVideoInputButton";
-            this.MiscMiscVideoInputButton.UseVisualStyleBackColor = true;
-            this.MiscMiscVideoInputButton.Click += new System.EventHandler(this.btnvideo4_Click);
-            // 
-            // MiscMiscVideoOutputButton
-            // 
-            resources.ApplyResources(this.MiscMiscVideoOutputButton, "MiscMiscVideoOutputButton");
-            this.MiscMiscVideoOutputButton.Name = "MiscMiscVideoOutputButton";
-            this.MiscMiscVideoOutputButton.UseVisualStyleBackColor = true;
-            this.MiscMiscVideoOutputButton.Click += new System.EventHandler(this.btnout5_Click);
-            // 
-            // MiscMiscClipButton
-            // 
-            resources.ApplyResources(this.MiscMiscClipButton, "MiscMiscClipButton");
-            this.MiscMiscClipButton.Name = "MiscMiscClipButton";
-            this.MiscMiscClipButton.UseVisualStyleBackColor = true;
-            this.MiscMiscClipButton.Click += new System.EventHandler(this.btnClip_Click);
-            // 
-            // MiscMiscVideoOutputTextBox
-            // 
-            this.MiscMiscVideoOutputTextBox.AllowDrop = true;
-            this.MiscMiscVideoOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MiscMiscVideoOutputTextBox.EmptyTextTip = null;
-            this.MiscMiscVideoOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.MiscMiscVideoOutputTextBox, "MiscMiscVideoOutputTextBox");
-            this.MiscMiscVideoOutputTextBox.Name = "MiscMiscVideoOutputTextBox";
-            this.MiscMiscVideoOutputTextBox.TextChanged += new System.EventHandler(this.txtout5_TextChanged);
-            this.MiscMiscVideoOutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout5_MouseDoubleClick);
-            // 
             // MiscMiscEndTimeMaskedTextBox
             // 
             resources.ApplyResources(this.MiscMiscEndTimeMaskedTextBox, "MiscMiscEndTimeMaskedTextBox");
@@ -489,27 +438,6 @@
             resources.ApplyResources(this.MediaInfoTab, "MediaInfoTab");
             this.MediaInfoTab.Name = "MediaInfoTab";
             this.MediaInfoTab.UseVisualStyleBackColor = true;
-            // 
-            // btnMIopen
-            // 
-            resources.ApplyResources(this.btnMIopen, "btnMIopen");
-            this.btnMIopen.Name = "btnMIopen";
-            this.btnMIopen.UseVisualStyleBackColor = true;
-            this.btnMIopen.Click += new System.EventHandler(this.btnMIopen_Click);
-            // 
-            // btnMIplay
-            // 
-            resources.ApplyResources(this.btnMIplay, "btnMIplay");
-            this.btnMIplay.Name = "btnMIplay";
-            this.btnMIplay.UseVisualStyleBackColor = true;
-            this.btnMIplay.Click += new System.EventHandler(this.btnMIplay_Click);
-            // 
-            // btnMIcopy
-            // 
-            resources.ApplyResources(this.btnMIcopy, "btnMIcopy");
-            this.btnMIcopy.Name = "btnMIcopy";
-            this.btnMIcopy.UseVisualStyleBackColor = true;
-            this.btnMIcopy.Click += new System.EventHandler(this.btnMIcopy_Click);
             // 
             // MediaInfoTextBox
             // 
@@ -581,13 +509,6 @@
             this.AVSTab.UseVisualStyleBackColor = true;
             this.AVSTab.Click += new System.EventHandler(this.txtAVScreate_Click);
             // 
-            // AVSAddFilterButton
-            // 
-            resources.ApplyResources(this.AVSAddFilterButton, "AVSAddFilterButton");
-            this.AVSAddFilterButton.Name = "AVSAddFilterButton";
-            this.AVSAddFilterButton.UseVisualStyleBackColor = true;
-            this.AVSAddFilterButton.Click += new System.EventHandler(this.AVSAddFilterButton_Click);
-            // 
             // label39
             // 
             resources.ApplyResources(this.label39, "label39");
@@ -603,16 +524,6 @@
             // 
             resources.ApplyResources(this.label25, "label25");
             this.label25.Name = "label25";
-            // 
-            // AVSCropTextBox
-            // 
-            this.AVSCropTextBox.AllowDrop = true;
-            this.AVSCropTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AVSCropTextBox.EmptyTextTip = null;
-            this.AVSCropTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.AVSCropTextBox, "AVSCropTextBox");
-            this.AVSCropTextBox.Name = "AVSCropTextBox";
-            this.AVSCropTextBox.TextChanged += new System.EventHandler(this.AVSCropTextBox_TextChanged);
             // 
             // label30
             // 
@@ -904,6 +815,1155 @@
             this.TweakChromaNumericUpDown.Name = "TweakChromaNumericUpDown";
             this.TweakChromaNumericUpDown.ValueChanged += new System.EventHandler(this.TweakChromaNumericUpDown_ValueChanged);
             // 
+            // ExtractTab
+            // 
+            this.ExtractTab.AllowDrop = true;
+            this.ExtractTab.Controls.Add(this.groupBox7);
+            this.ExtractTab.Controls.Add(this.groupBox6);
+            this.ExtractTab.Controls.Add(this.groupBox5);
+            resources.ApplyResources(this.ExtractTab, "ExtractTab");
+            this.ExtractTab.Name = "ExtractTab";
+            this.ExtractTab.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.gmkvextractguibButton);
+            this.groupBox7.Controls.Add(this.MkvExtract4Button);
+            this.groupBox7.Controls.Add(this.MkvExtract3Button);
+            this.groupBox7.Controls.Add(this.MkvExtract2Button);
+            this.groupBox7.Controls.Add(this.MkvExtract1Button);
+            this.groupBox7.Controls.Add(this.btnextract7);
+            this.groupBox7.Controls.Add(this.btnvideo7);
+            this.groupBox7.Controls.Add(this.txtvideo6);
+            resources.ApplyResources(this.groupBox7, "groupBox7");
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.TabStop = false;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btnvextract8);
+            this.groupBox6.Controls.Add(this.btnvideo8);
+            this.groupBox6.Controls.Add(this.txtvideo8);
+            this.groupBox6.Controls.Add(this.btnaextract8);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.ExtractMP4TextBox);
+            this.groupBox5.Controls.Add(this.btnaextract3);
+            this.groupBox5.Controls.Add(this.ExtractMP4Button);
+            this.groupBox5.Controls.Add(this.btnvextract);
+            this.groupBox5.Controls.Add(this.btnaextract);
+            this.groupBox5.Controls.Add(this.btnaextract2);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // MuxTab
+            // 
+            this.MuxTab.Controls.Add(this.MuxConvertGroupBox);
+            this.MuxTab.Controls.Add(this.MuxMp4GroupBox);
+            this.MuxTab.Controls.Add(this.MuxMkvGroupBox);
+            resources.ApplyResources(this.MuxTab, "MuxTab");
+            this.MuxTab.Name = "MuxTab";
+            this.MuxTab.UseVisualStyleBackColor = true;
+            // 
+            // MuxConvertGroupBox
+            // 
+            this.MuxConvertGroupBox.Controls.Add(this.MuxConvertAacEncoderLabel);
+            this.MuxConvertGroupBox.Controls.Add(this.MuxConvertAacEncoderComboBox);
+            this.MuxConvertGroupBox.Controls.Add(this.MuxConvertFormatLabel);
+            this.MuxConvertGroupBox.Controls.Add(this.MuxConvertFormatComboBox);
+            this.MuxConvertGroupBox.Controls.Add(this.MuxConvertItemListBox);
+            this.MuxConvertGroupBox.Controls.Add(this.MuxConvertAddButton);
+            this.MuxConvertGroupBox.Controls.Add(this.MuxConvertClearButton);
+            this.MuxConvertGroupBox.Controls.Add(this.MuxConvertOutputNotificationLabel);
+            this.MuxConvertGroupBox.Controls.Add(this.MuxConvertDeleteButton);
+            this.MuxConvertGroupBox.Controls.Add(this.MuxConvertStartButton);
+            resources.ApplyResources(this.MuxConvertGroupBox, "MuxConvertGroupBox");
+            this.MuxConvertGroupBox.Name = "MuxConvertGroupBox";
+            this.MuxConvertGroupBox.TabStop = false;
+            // 
+            // MuxConvertAacEncoderLabel
+            // 
+            resources.ApplyResources(this.MuxConvertAacEncoderLabel, "MuxConvertAacEncoderLabel");
+            this.MuxConvertAacEncoderLabel.Name = "MuxConvertAacEncoderLabel";
+            // 
+            // MuxConvertAacEncoderComboBox
+            // 
+            this.MuxConvertAacEncoderComboBox.FormattingEnabled = true;
+            this.MuxConvertAacEncoderComboBox.Items.AddRange(new object[] {
+            resources.GetString("MuxConvertAacEncoderComboBox.Items"),
+            resources.GetString("MuxConvertAacEncoderComboBox.Items1")});
+            resources.ApplyResources(this.MuxConvertAacEncoderComboBox, "MuxConvertAacEncoderComboBox");
+            this.MuxConvertAacEncoderComboBox.Name = "MuxConvertAacEncoderComboBox";
+            // 
+            // MuxConvertFormatLabel
+            // 
+            resources.ApplyResources(this.MuxConvertFormatLabel, "MuxConvertFormatLabel");
+            this.MuxConvertFormatLabel.Name = "MuxConvertFormatLabel";
+            // 
+            // MuxConvertFormatComboBox
+            // 
+            this.MuxConvertFormatComboBox.FormattingEnabled = true;
+            this.MuxConvertFormatComboBox.Items.AddRange(new object[] {
+            resources.GetString("MuxConvertFormatComboBox.Items"),
+            resources.GetString("MuxConvertFormatComboBox.Items1"),
+            resources.GetString("MuxConvertFormatComboBox.Items2"),
+            resources.GetString("MuxConvertFormatComboBox.Items3"),
+            resources.GetString("MuxConvertFormatComboBox.Items4"),
+            resources.GetString("MuxConvertFormatComboBox.Items5")});
+            resources.ApplyResources(this.MuxConvertFormatComboBox, "MuxConvertFormatComboBox");
+            this.MuxConvertFormatComboBox.Name = "MuxConvertFormatComboBox";
+            // 
+            // MuxConvertItemListBox
+            // 
+            this.MuxConvertItemListBox.AllowDrop = true;
+            this.MuxConvertItemListBox.FormattingEnabled = true;
+            resources.ApplyResources(this.MuxConvertItemListBox, "MuxConvertItemListBox");
+            this.MuxConvertItemListBox.Name = "MuxConvertItemListBox";
+            this.MuxConvertItemListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbffmpeg_DragDrop);
+            this.MuxConvertItemListBox.DragOver += new System.Windows.Forms.DragEventHandler(this.lbffmpeg_DragOver);
+            this.MuxConvertItemListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbffmpeg_MouseDown);
+            // 
+            // MuxConvertOutputNotificationLabel
+            // 
+            resources.ApplyResources(this.MuxConvertOutputNotificationLabel, "MuxConvertOutputNotificationLabel");
+            this.MuxConvertOutputNotificationLabel.Name = "MuxConvertOutputNotificationLabel";
+            // 
+            // MuxMp4GroupBox
+            // 
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4ParComboBox);
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4ParLabel);
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4ReplaceAudioButton);
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4VideoInputTextBox);
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4VideoInputButton);
+            this.MuxMp4GroupBox.Controls.Add(this.btnmux);
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4FpsComboBox);
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4AudioInputButton);
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4OutputButton);
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4AudioInputTextBox);
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4FpsLabel);
+            this.MuxMp4GroupBox.Controls.Add(this.MuxMp4OutputTextBox);
+            resources.ApplyResources(this.MuxMp4GroupBox, "MuxMp4GroupBox");
+            this.MuxMp4GroupBox.Name = "MuxMp4GroupBox";
+            this.MuxMp4GroupBox.TabStop = false;
+            // 
+            // MuxMp4ParComboBox
+            // 
+            this.MuxMp4ParComboBox.FormattingEnabled = true;
+            this.MuxMp4ParComboBox.Items.AddRange(new object[] {
+            resources.GetString("MuxMp4ParComboBox.Items"),
+            resources.GetString("MuxMp4ParComboBox.Items1"),
+            resources.GetString("MuxMp4ParComboBox.Items2"),
+            resources.GetString("MuxMp4ParComboBox.Items3"),
+            resources.GetString("MuxMp4ParComboBox.Items4"),
+            resources.GetString("MuxMp4ParComboBox.Items5"),
+            resources.GetString("MuxMp4ParComboBox.Items6"),
+            resources.GetString("MuxMp4ParComboBox.Items7"),
+            resources.GetString("MuxMp4ParComboBox.Items8")});
+            resources.ApplyResources(this.MuxMp4ParComboBox, "MuxMp4ParComboBox");
+            this.MuxMp4ParComboBox.Name = "MuxMp4ParComboBox";
+            // 
+            // MuxMp4ParLabel
+            // 
+            resources.ApplyResources(this.MuxMp4ParLabel, "MuxMp4ParLabel");
+            this.MuxMp4ParLabel.Name = "MuxMp4ParLabel";
+            // 
+            // MuxMp4FpsComboBox
+            // 
+            this.MuxMp4FpsComboBox.FormattingEnabled = true;
+            this.MuxMp4FpsComboBox.Items.AddRange(new object[] {
+            resources.GetString("MuxMp4FpsComboBox.Items"),
+            resources.GetString("MuxMp4FpsComboBox.Items1"),
+            resources.GetString("MuxMp4FpsComboBox.Items2"),
+            resources.GetString("MuxMp4FpsComboBox.Items3"),
+            resources.GetString("MuxMp4FpsComboBox.Items4"),
+            resources.GetString("MuxMp4FpsComboBox.Items5"),
+            resources.GetString("MuxMp4FpsComboBox.Items6"),
+            resources.GetString("MuxMp4FpsComboBox.Items7"),
+            resources.GetString("MuxMp4FpsComboBox.Items8")});
+            resources.ApplyResources(this.MuxMp4FpsComboBox, "MuxMp4FpsComboBox");
+            this.MuxMp4FpsComboBox.Name = "MuxMp4FpsComboBox";
+            this.MuxMp4FpsComboBox.SelectedIndexChanged += new System.EventHandler(this.cbFPS_SelectedIndexChanged);
+            // 
+            // MuxMp4FpsLabel
+            // 
+            resources.ApplyResources(this.MuxMp4FpsLabel, "MuxMp4FpsLabel");
+            this.MuxMp4FpsLabel.Name = "MuxMp4FpsLabel";
+            // 
+            // MuxMkvGroupBox
+            // 
+            this.MuxMkvGroupBox.Controls.Add(this.MuxMkvVideoInputTextBox);
+            this.MuxMkvGroupBox.Controls.Add(this.MuxMkvOutputButton);
+            this.MuxMkvGroupBox.Controls.Add(this.MuxMkvSubtitleTextBox);
+            this.MuxMkvGroupBox.Controls.Add(this.MuxMkvAudioInputButton);
+            this.MuxMkvGroupBox.Controls.Add(this.MuxMkvAudioInputTextBox);
+            this.MuxMkvGroupBox.Controls.Add(this.MuxMkvSubtitleButton);
+            this.MuxMkvGroupBox.Controls.Add(this.MuxMkvOutputTextBox);
+            this.MuxMkvGroupBox.Controls.Add(this.MuxMkvVideoInputButton);
+            this.MuxMkvGroupBox.Controls.Add(this.MuxMkvStartButton);
+            resources.ApplyResources(this.MuxMkvGroupBox, "MuxMkvGroupBox");
+            this.MuxMkvGroupBox.Name = "MuxMkvGroupBox";
+            this.MuxMkvGroupBox.TabStop = false;
+            // 
+            // AudioTab
+            // 
+            this.AudioTab.AllowDrop = true;
+            this.AudioTab.Controls.Add(this.AudioGroupBox);
+            this.AudioTab.Controls.Add(this.AudioBatchGroupBox);
+            resources.ApplyResources(this.AudioTab, "AudioTab");
+            this.AudioTab.Name = "AudioTab";
+            this.AudioTab.UseVisualStyleBackColor = true;
+            // 
+            // AudioGroupBox
+            // 
+            this.AudioGroupBox.Controls.Add(this.AudioPresetAddButton);
+            this.AudioGroupBox.Controls.Add(this.AudioPresetDeleteButton);
+            this.AudioGroupBox.Controls.Add(this.AudioPresetComboBox);
+            this.AudioGroupBox.Controls.Add(this.AudioPresetLabel);
+            this.AudioGroupBox.Controls.Add(this.AudioBitrateComboBox);
+            this.AudioGroupBox.Controls.Add(this.AudioEncoderLabel);
+            this.AudioGroupBox.Controls.Add(this.AudioEncoderComboBox);
+            this.AudioGroupBox.Controls.Add(this.AudioInputTextBox);
+            this.AudioGroupBox.Controls.Add(this.AudioAudioModePanel);
+            this.AudioGroupBox.Controls.Add(this.AudioOutputTextBox);
+            this.AudioGroupBox.Controls.Add(this.AudioInputButton);
+            this.AudioGroupBox.Controls.Add(this.AudioKbpsLabel);
+            this.AudioGroupBox.Controls.Add(this.AudioOutputBotton);
+            this.AudioGroupBox.Controls.Add(this.lbaacrate);
+            this.AudioGroupBox.Controls.Add(this.AudioStartButton);
+            this.AudioGroupBox.Controls.Add(this.AudioCustomParameterTextBox);
+            resources.ApplyResources(this.AudioGroupBox, "AudioGroupBox");
+            this.AudioGroupBox.Name = "AudioGroupBox";
+            this.AudioGroupBox.TabStop = false;
+            // 
+            // AudioPresetComboBox
+            // 
+            this.AudioPresetComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AudioPresetComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.AudioPresetComboBox, "AudioPresetComboBox");
+            this.AudioPresetComboBox.Name = "AudioPresetComboBox";
+            this.AudioPresetComboBox.SelectedIndexChanged += new System.EventHandler(this.AudioPresetComboBox_SelectedIndexChanged);
+            // 
+            // AudioPresetLabel
+            // 
+            resources.ApplyResources(this.AudioPresetLabel, "AudioPresetLabel");
+            this.AudioPresetLabel.Name = "AudioPresetLabel";
+            // 
+            // AudioBitrateComboBox
+            // 
+            this.AudioBitrateComboBox.FormattingEnabled = true;
+            this.AudioBitrateComboBox.Items.AddRange(new object[] {
+            resources.GetString("AudioBitrateComboBox.Items"),
+            resources.GetString("AudioBitrateComboBox.Items1"),
+            resources.GetString("AudioBitrateComboBox.Items2"),
+            resources.GetString("AudioBitrateComboBox.Items3"),
+            resources.GetString("AudioBitrateComboBox.Items4"),
+            resources.GetString("AudioBitrateComboBox.Items5"),
+            resources.GetString("AudioBitrateComboBox.Items6")});
+            resources.ApplyResources(this.AudioBitrateComboBox, "AudioBitrateComboBox");
+            this.AudioBitrateComboBox.Name = "AudioBitrateComboBox";
+            // 
+            // AudioEncoderLabel
+            // 
+            resources.ApplyResources(this.AudioEncoderLabel, "AudioEncoderLabel");
+            this.AudioEncoderLabel.Name = "AudioEncoderLabel";
+            // 
+            // AudioEncoderComboBox
+            // 
+            this.AudioEncoderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AudioEncoderComboBox.FormattingEnabled = true;
+            this.AudioEncoderComboBox.Items.AddRange(new object[] {
+            resources.GetString("AudioEncoderComboBox.Items"),
+            resources.GetString("AudioEncoderComboBox.Items1"),
+            resources.GetString("AudioEncoderComboBox.Items2"),
+            resources.GetString("AudioEncoderComboBox.Items3"),
+            resources.GetString("AudioEncoderComboBox.Items4"),
+            resources.GetString("AudioEncoderComboBox.Items5"),
+            resources.GetString("AudioEncoderComboBox.Items6"),
+            resources.GetString("AudioEncoderComboBox.Items7")});
+            resources.ApplyResources(this.AudioEncoderComboBox, "AudioEncoderComboBox");
+            this.AudioEncoderComboBox.Name = "AudioEncoderComboBox";
+            this.AudioEncoderComboBox.SelectedIndexChanged += new System.EventHandler(this.AudioEncoderComboBox_SelectedIndexChanged);
+            // 
+            // AudioAudioModePanel
+            // 
+            this.AudioAudioModePanel.Controls.Add(this.AudioAudioModeBitrateRadioButton);
+            this.AudioAudioModePanel.Controls.Add(this.AudioAudioModeCustomRadioButton);
+            resources.ApplyResources(this.AudioAudioModePanel, "AudioAudioModePanel");
+            this.AudioAudioModePanel.Name = "AudioAudioModePanel";
+            // 
+            // AudioKbpsLabel
+            // 
+            resources.ApplyResources(this.AudioKbpsLabel, "AudioKbpsLabel");
+            this.AudioKbpsLabel.Name = "AudioKbpsLabel";
+            // 
+            // lbaacrate
+            // 
+            resources.ApplyResources(this.lbaacrate, "lbaacrate");
+            this.lbaacrate.Name = "lbaacrate";
+            // 
+            // AudioBatchGroupBox
+            // 
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchConcatButton);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchOutputNotificationLabel);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchStartButton);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchItemListBox);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchAddButton);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchClearButton);
+            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchDeleteButton);
+            resources.ApplyResources(this.AudioBatchGroupBox, "AudioBatchGroupBox");
+            this.AudioBatchGroupBox.Name = "AudioBatchGroupBox";
+            this.AudioBatchGroupBox.TabStop = false;
+            // 
+            // AudioBatchOutputNotificationLabel
+            // 
+            resources.ApplyResources(this.AudioBatchOutputNotificationLabel, "AudioBatchOutputNotificationLabel");
+            this.AudioBatchOutputNotificationLabel.Name = "AudioBatchOutputNotificationLabel";
+            // 
+            // AudioBatchItemListBox
+            // 
+            this.AudioBatchItemListBox.AllowDrop = true;
+            this.AudioBatchItemListBox.FormattingEnabled = true;
+            resources.ApplyResources(this.AudioBatchItemListBox, "AudioBatchItemListBox");
+            this.AudioBatchItemListBox.Name = "AudioBatchItemListBox";
+            this.AudioBatchItemListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.AudioListBox_DragDrop);
+            this.AudioBatchItemListBox.DragOver += new System.Windows.Forms.DragEventHandler(this.AudioListBox_DragOver);
+            this.AudioBatchItemListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AudioListBox_MouseDown);
+            // 
+            // MiscOnePicGroupBox
+            // 
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicDurationSecondsLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicDurationSecondsTextBox);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicDurationLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicCrfNumericUpDown);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicCrfLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicCopyAudioCheckBox);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicFpsLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicFpsNumericUpDown);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicKbpsLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicBitrateLabel);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicBitrateLabelNumericUpDown);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicOutputButton);
+            this.MiscOnePicGroupBox.Controls.Add(this.AudioOnePicButton);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicAudioInputButton);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicInputButton);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicOutputTextBox);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicAudioInputTextBox);
+            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicInputTextBox);
+            resources.ApplyResources(this.MiscOnePicGroupBox, "MiscOnePicGroupBox");
+            this.MiscOnePicGroupBox.Name = "MiscOnePicGroupBox";
+            this.MiscOnePicGroupBox.TabStop = false;
+            // 
+            // MiscOnePicDurationSecondsLabel
+            // 
+            resources.ApplyResources(this.MiscOnePicDurationSecondsLabel, "MiscOnePicDurationSecondsLabel");
+            this.MiscOnePicDurationSecondsLabel.Name = "MiscOnePicDurationSecondsLabel";
+            // 
+            // MiscOnePicDurationSecondsTextBox
+            // 
+            resources.ApplyResources(this.MiscOnePicDurationSecondsTextBox, "MiscOnePicDurationSecondsTextBox");
+            this.MiscOnePicDurationSecondsTextBox.Name = "MiscOnePicDurationSecondsTextBox";
+            // 
+            // MiscOnePicDurationLabel
+            // 
+            resources.ApplyResources(this.MiscOnePicDurationLabel, "MiscOnePicDurationLabel");
+            this.MiscOnePicDurationLabel.Name = "MiscOnePicDurationLabel";
+            // 
+            // MiscOnePicCrfNumericUpDown
+            // 
+            this.MiscOnePicCrfNumericUpDown.DecimalPlaces = 1;
+            this.MiscOnePicCrfNumericUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            resources.ApplyResources(this.MiscOnePicCrfNumericUpDown, "MiscOnePicCrfNumericUpDown");
+            this.MiscOnePicCrfNumericUpDown.Maximum = new decimal(new int[] {
+            51,
+            0,
+            0,
+            0});
+            this.MiscOnePicCrfNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MiscOnePicCrfNumericUpDown.Name = "MiscOnePicCrfNumericUpDown";
+            this.MiscOnePicCrfNumericUpDown.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            // 
+            // MiscOnePicCrfLabel
+            // 
+            resources.ApplyResources(this.MiscOnePicCrfLabel, "MiscOnePicCrfLabel");
+            this.MiscOnePicCrfLabel.Name = "MiscOnePicCrfLabel";
+            // 
+            // MiscOnePicFpsLabel
+            // 
+            resources.ApplyResources(this.MiscOnePicFpsLabel, "MiscOnePicFpsLabel");
+            this.MiscOnePicFpsLabel.Name = "MiscOnePicFpsLabel";
+            // 
+            // MiscOnePicFpsNumericUpDown
+            // 
+            resources.ApplyResources(this.MiscOnePicFpsNumericUpDown, "MiscOnePicFpsNumericUpDown");
+            this.MiscOnePicFpsNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.MiscOnePicFpsNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MiscOnePicFpsNumericUpDown.Name = "MiscOnePicFpsNumericUpDown";
+            this.MiscOnePicFpsNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // MiscOnePicKbpsLabel
+            // 
+            resources.ApplyResources(this.MiscOnePicKbpsLabel, "MiscOnePicKbpsLabel");
+            this.MiscOnePicKbpsLabel.Name = "MiscOnePicKbpsLabel";
+            // 
+            // MiscOnePicBitrateLabel
+            // 
+            resources.ApplyResources(this.MiscOnePicBitrateLabel, "MiscOnePicBitrateLabel");
+            this.MiscOnePicBitrateLabel.Name = "MiscOnePicBitrateLabel";
+            // 
+            // MiscOnePicBitrateLabelNumericUpDown
+            // 
+            resources.ApplyResources(this.MiscOnePicBitrateLabelNumericUpDown, "MiscOnePicBitrateLabelNumericUpDown");
+            this.MiscOnePicBitrateLabelNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.MiscOnePicBitrateLabelNumericUpDown.Name = "MiscOnePicBitrateLabelNumericUpDown";
+            this.MiscOnePicBitrateLabelNumericUpDown.Value = new decimal(new int[] {
+            128,
+            0,
+            0,
+            0});
+            // 
+            // VideoTab
+            // 
+            this.VideoTab.AllowDrop = true;
+            this.VideoTab.Controls.Add(this.VideoFramesLabel);
+            this.VideoTab.Controls.Add(this.VideoSeekLabel);
+            this.VideoTab.Controls.Add(this.VideoFramesNumericUpDown);
+            this.VideoTab.Controls.Add(this.VideoSeekNumericUpDown);
+            this.VideoTab.Controls.Add(this.VideoMaintainResolutionCheckBox);
+            this.VideoTab.Controls.Add(this.VideoDemuxerComboBox);
+            this.VideoTab.Controls.Add(this.VideoBatchGroupBox);
+            this.VideoTab.Controls.Add(this.VideoAutoShutdownCheckBox);
+            this.VideoTab.Controls.Add(this.VideoAudioParameterTextBox);
+            this.VideoTab.Controls.Add(this.VideoSubtitleTextBox);
+            this.VideoTab.Controls.Add(this.VideoOutputTextBox);
+            this.VideoTab.Controls.Add(this.VideoInputTextBox);
+            this.VideoTab.Controls.Add(this.VideoX264ModePanel);
+            this.VideoTab.Controls.Add(this.VideoDemuxerLabel);
+            this.VideoTab.Controls.Add(this.VideoAddPresetButton);
+            this.VideoTab.Controls.Add(this.VideoDeletePresetButton);
+            this.VideoTab.Controls.Add(this.VideoStartButton);
+            this.VideoTab.Controls.Add(this.VideoSubtitleButton);
+            this.VideoTab.Controls.Add(this.VideoOutputButton);
+            this.VideoTab.Controls.Add(this.VideoInputButton);
+            this.VideoTab.Controls.Add(this.VideoEncoderLabel);
+            this.VideoTab.Controls.Add(this.VideoEncoderComboBox);
+            this.VideoTab.Controls.Add(this.VideoFpsComboBox);
+            this.VideoTab.Controls.Add(this.VideoFpsLabel);
+            this.VideoTab.Controls.Add(this.VideoAudioModeComboBox);
+            this.VideoTab.Controls.Add(this.VideoPresetComboBox);
+            this.VideoTab.Controls.Add(this.VideoAudioModeLabel);
+            this.VideoTab.Controls.Add(this.VideoGoToAudioLabel);
+            this.VideoTab.Controls.Add(this.VideoCrfKbpsLabel);
+            this.VideoTab.Controls.Add(this.VideoCrfLabel);
+            this.VideoTab.Controls.Add(this.labelx264Height);
+            this.VideoTab.Controls.Add(this.VideoWidthLabel);
+            this.VideoTab.Controls.Add(this.VideoHeightNumericUpDown);
+            this.VideoTab.Controls.Add(this.VideoWidthNumericUpDown);
+            this.VideoTab.Controls.Add(this.VideoCrfNumericUpDown);
+            this.VideoTab.Controls.Add(this.VideoBitrateLabel);
+            this.VideoTab.Controls.Add(this.VideoCustomParameterTextBox);
+            this.VideoTab.Controls.Add(this.VideoPresetLabel);
+            this.VideoTab.Controls.Add(this.VideoBitrateNumericUpDown);
+            resources.ApplyResources(this.VideoTab, "VideoTab");
+            this.VideoTab.Name = "VideoTab";
+            this.VideoTab.UseVisualStyleBackColor = true;
+            // 
+            // VideoFramesLabel
+            // 
+            resources.ApplyResources(this.VideoFramesLabel, "VideoFramesLabel");
+            this.VideoFramesLabel.Name = "VideoFramesLabel";
+            // 
+            // VideoSeekLabel
+            // 
+            resources.ApplyResources(this.VideoSeekLabel, "VideoSeekLabel");
+            this.VideoSeekLabel.Name = "VideoSeekLabel";
+            // 
+            // VideoFramesNumericUpDown
+            // 
+            resources.ApplyResources(this.VideoFramesNumericUpDown, "VideoFramesNumericUpDown");
+            this.VideoFramesNumericUpDown.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.VideoFramesNumericUpDown.Name = "VideoFramesNumericUpDown";
+            // 
+            // VideoSeekNumericUpDown
+            // 
+            resources.ApplyResources(this.VideoSeekNumericUpDown, "VideoSeekNumericUpDown");
+            this.VideoSeekNumericUpDown.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.VideoSeekNumericUpDown.Name = "VideoSeekNumericUpDown";
+            // 
+            // VideoDemuxerComboBox
+            // 
+            this.VideoDemuxerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VideoDemuxerComboBox.FormattingEnabled = true;
+            this.VideoDemuxerComboBox.Items.AddRange(new object[] {
+            resources.GetString("VideoDemuxerComboBox.Items"),
+            resources.GetString("VideoDemuxerComboBox.Items1"),
+            resources.GetString("VideoDemuxerComboBox.Items2"),
+            resources.GetString("VideoDemuxerComboBox.Items3"),
+            resources.GetString("VideoDemuxerComboBox.Items4"),
+            resources.GetString("VideoDemuxerComboBox.Items5")});
+            resources.ApplyResources(this.VideoDemuxerComboBox, "VideoDemuxerComboBox");
+            this.VideoDemuxerComboBox.Name = "VideoDemuxerComboBox";
+            // 
+            // VideoBatchGroupBox
+            // 
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchFormatLabel);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchFormatComboBox);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchSubtitleLanguage);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchOutputFolderButton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchOutputFolderTextBox);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchItemListbox);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchClearButton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchSubtitleCheckBox);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchDeleteButton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchAddButton);
+            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchStartButton);
+            resources.ApplyResources(this.VideoBatchGroupBox, "VideoBatchGroupBox");
+            this.VideoBatchGroupBox.Name = "VideoBatchGroupBox";
+            this.VideoBatchGroupBox.TabStop = false;
+            // 
+            // VideoBatchFormatLabel
+            // 
+            resources.ApplyResources(this.VideoBatchFormatLabel, "VideoBatchFormatLabel");
+            this.VideoBatchFormatLabel.Name = "VideoBatchFormatLabel";
+            // 
+            // VideoBatchFormatComboBox
+            // 
+            this.VideoBatchFormatComboBox.FormattingEnabled = true;
+            this.VideoBatchFormatComboBox.Items.AddRange(new object[] {
+            resources.GetString("VideoBatchFormatComboBox.Items"),
+            resources.GetString("VideoBatchFormatComboBox.Items1"),
+            resources.GetString("VideoBatchFormatComboBox.Items2"),
+            resources.GetString("VideoBatchFormatComboBox.Items3"),
+            resources.GetString("VideoBatchFormatComboBox.Items4"),
+            resources.GetString("VideoBatchFormatComboBox.Items5")});
+            resources.ApplyResources(this.VideoBatchFormatComboBox, "VideoBatchFormatComboBox");
+            this.VideoBatchFormatComboBox.Name = "VideoBatchFormatComboBox";
+            // 
+            // VideoBatchSubtitleLanguage
+            // 
+            this.VideoBatchSubtitleLanguage.FormattingEnabled = true;
+            resources.ApplyResources(this.VideoBatchSubtitleLanguage, "VideoBatchSubtitleLanguage");
+            this.VideoBatchSubtitleLanguage.Name = "VideoBatchSubtitleLanguage";
+            // 
+            // VideoBatchItemListbox
+            // 
+            this.VideoBatchItemListbox.AllowDrop = true;
+            this.VideoBatchItemListbox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.VideoBatchItemListbox.FormattingEnabled = true;
+            resources.ApplyResources(this.VideoBatchItemListbox, "VideoBatchItemListbox");
+            this.VideoBatchItemListbox.Name = "VideoBatchItemListbox";
+            this.VideoBatchItemListbox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lbAuto_DrawItem);
+            this.VideoBatchItemListbox.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragDrop);
+            this.VideoBatchItemListbox.DragEnter += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragEnter);
+            this.VideoBatchItemListbox.DragOver += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragOver);
+            this.VideoBatchItemListbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbAuto_MouseDown);
+            // 
+            // VideoX264ModePanel
+            // 
+            this.VideoX264ModePanel.Controls.Add(this.VideoModeCrfRadioButton);
+            this.VideoX264ModePanel.Controls.Add(this.VideoModeCustomRadioButton);
+            this.VideoX264ModePanel.Controls.Add(this.VideoMode2PassRadioButton);
+            resources.ApplyResources(this.VideoX264ModePanel, "VideoX264ModePanel");
+            this.VideoX264ModePanel.Name = "VideoX264ModePanel";
+            // 
+            // VideoDemuxerLabel
+            // 
+            resources.ApplyResources(this.VideoDemuxerLabel, "VideoDemuxerLabel");
+            this.VideoDemuxerLabel.Name = "VideoDemuxerLabel";
+            // 
+            // VideoEncoderLabel
+            // 
+            resources.ApplyResources(this.VideoEncoderLabel, "VideoEncoderLabel");
+            this.VideoEncoderLabel.Name = "VideoEncoderLabel";
+            // 
+            // VideoEncoderComboBox
+            // 
+            this.VideoEncoderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VideoEncoderComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.VideoEncoderComboBox, "VideoEncoderComboBox");
+            this.VideoEncoderComboBox.Name = "VideoEncoderComboBox";
+            this.VideoEncoderComboBox.SelectedIndexChanged += new System.EventHandler(this.x264ExeComboBox_SelectedIndexChanged);
+            // 
+            // VideoFpsComboBox
+            // 
+            this.VideoFpsComboBox.FormattingEnabled = true;
+            this.VideoFpsComboBox.Items.AddRange(new object[] {
+            resources.GetString("VideoFpsComboBox.Items"),
+            resources.GetString("VideoFpsComboBox.Items1"),
+            resources.GetString("VideoFpsComboBox.Items2"),
+            resources.GetString("VideoFpsComboBox.Items3"),
+            resources.GetString("VideoFpsComboBox.Items4"),
+            resources.GetString("VideoFpsComboBox.Items5"),
+            resources.GetString("VideoFpsComboBox.Items6"),
+            resources.GetString("VideoFpsComboBox.Items7"),
+            resources.GetString("VideoFpsComboBox.Items8")});
+            resources.ApplyResources(this.VideoFpsComboBox, "VideoFpsComboBox");
+            this.VideoFpsComboBox.Name = "VideoFpsComboBox";
+            // 
+            // VideoFpsLabel
+            // 
+            resources.ApplyResources(this.VideoFpsLabel, "VideoFpsLabel");
+            this.VideoFpsLabel.Name = "VideoFpsLabel";
+            // 
+            // VideoAudioModeComboBox
+            // 
+            this.VideoAudioModeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VideoAudioModeComboBox.FormattingEnabled = true;
+            this.VideoAudioModeComboBox.Items.AddRange(new object[] {
+            resources.GetString("VideoAudioModeComboBox.Items"),
+            resources.GetString("VideoAudioModeComboBox.Items1"),
+            resources.GetString("VideoAudioModeComboBox.Items2")});
+            resources.ApplyResources(this.VideoAudioModeComboBox, "VideoAudioModeComboBox");
+            this.VideoAudioModeComboBox.Name = "VideoAudioModeComboBox";
+            // 
+            // VideoPresetComboBox
+            // 
+            this.VideoPresetComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VideoPresetComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.VideoPresetComboBox, "VideoPresetComboBox");
+            this.VideoPresetComboBox.Name = "VideoPresetComboBox";
+            this.VideoPresetComboBox.SelectedIndexChanged += new System.EventHandler(this.cbX264_SelectedIndexChanged);
+            // 
+            // VideoAudioModeLabel
+            // 
+            resources.ApplyResources(this.VideoAudioModeLabel, "VideoAudioModeLabel");
+            this.VideoAudioModeLabel.Name = "VideoAudioModeLabel";
+            // 
+            // VideoGoToAudioLabel
+            // 
+            resources.ApplyResources(this.VideoGoToAudioLabel, "VideoGoToAudioLabel");
+            this.VideoGoToAudioLabel.ForeColor = System.Drawing.Color.Blue;
+            this.VideoGoToAudioLabel.Name = "VideoGoToAudioLabel";
+            this.VideoGoToAudioLabel.Click += new System.EventHandler(this.labelAudio_Click);
+            // 
+            // VideoCrfKbpsLabel
+            // 
+            resources.ApplyResources(this.VideoCrfKbpsLabel, "VideoCrfKbpsLabel");
+            this.VideoCrfKbpsLabel.Name = "VideoCrfKbpsLabel";
+            // 
+            // VideoCrfLabel
+            // 
+            resources.ApplyResources(this.VideoCrfLabel, "VideoCrfLabel");
+            this.VideoCrfLabel.Name = "VideoCrfLabel";
+            // 
+            // labelx264Height
+            // 
+            resources.ApplyResources(this.labelx264Height, "labelx264Height");
+            this.labelx264Height.Name = "labelx264Height";
+            // 
+            // VideoWidthLabel
+            // 
+            resources.ApplyResources(this.VideoWidthLabel, "VideoWidthLabel");
+            this.VideoWidthLabel.Name = "VideoWidthLabel";
+            // 
+            // VideoHeightNumericUpDown
+            // 
+            resources.ApplyResources(this.VideoHeightNumericUpDown, "VideoHeightNumericUpDown");
+            this.VideoHeightNumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.VideoHeightNumericUpDown.Name = "VideoHeightNumericUpDown";
+            // 
+            // VideoWidthNumericUpDown
+            // 
+            resources.ApplyResources(this.VideoWidthNumericUpDown, "VideoWidthNumericUpDown");
+            this.VideoWidthNumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.VideoWidthNumericUpDown.Name = "VideoWidthNumericUpDown";
+            // 
+            // VideoCrfNumericUpDown
+            // 
+            this.VideoCrfNumericUpDown.DecimalPlaces = 1;
+            this.VideoCrfNumericUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            resources.ApplyResources(this.VideoCrfNumericUpDown, "VideoCrfNumericUpDown");
+            this.VideoCrfNumericUpDown.Maximum = new decimal(new int[] {
+            63,
+            0,
+            0,
+            0});
+            this.VideoCrfNumericUpDown.Minimum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            -2147483648});
+            this.VideoCrfNumericUpDown.Name = "VideoCrfNumericUpDown";
+            this.VideoCrfNumericUpDown.Value = new decimal(new int[] {
+            235,
+            0,
+            0,
+            65536});
+            // 
+            // VideoBitrateLabel
+            // 
+            resources.ApplyResources(this.VideoBitrateLabel, "VideoBitrateLabel");
+            this.VideoBitrateLabel.Name = "VideoBitrateLabel";
+            // 
+            // VideoPresetLabel
+            // 
+            resources.ApplyResources(this.VideoPresetLabel, "VideoPresetLabel");
+            this.VideoPresetLabel.Name = "VideoPresetLabel";
+            // 
+            // VideoBitrateNumericUpDown
+            // 
+            resources.ApplyResources(this.VideoBitrateNumericUpDown, "VideoBitrateNumericUpDown");
+            this.VideoBitrateNumericUpDown.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.VideoBitrateNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.VideoBitrateNumericUpDown.Name = "VideoBitrateNumericUpDown";
+            this.VideoBitrateNumericUpDown.Value = new decimal(new int[] {
+            800,
+            0,
+            0,
+            0});
+            // 
+            // HelpTab
+            // 
+            this.HelpTab.Controls.Add(this.FeedbackButton);
+            this.HelpTab.Controls.Add(this.HelpTextBox);
+            this.HelpTab.Controls.Add(this.ReleaseDatelabel);
+            this.HelpTab.Controls.Add(this.ReleaseDatelabel2);
+            this.HelpTab.Controls.Add(this.CheckUpdateButton);
+            this.HelpTab.Controls.Add(this.HomePageBtn);
+            this.HelpTab.Controls.Add(this.AboutBtn);
+            resources.ApplyResources(this.HelpTab, "HelpTab");
+            this.HelpTab.Name = "HelpTab";
+            this.HelpTab.UseVisualStyleBackColor = true;
+            // 
+            // HelpTextBox
+            // 
+            resources.ApplyResources(this.HelpTextBox, "HelpTextBox");
+            this.HelpTextBox.Name = "HelpTextBox";
+            this.HelpTextBox.ReadOnly = true;
+            this.HelpTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.HelpTextBox_LinkClicked);
+            // 
+            // ReleaseDatelabel
+            // 
+            resources.ApplyResources(this.ReleaseDatelabel, "ReleaseDatelabel");
+            this.ReleaseDatelabel.Name = "ReleaseDatelabel";
+            this.ReleaseDatelabel.DoubleClick += new System.EventHandler(this.ReleaseDatelabel_DoubleClick);
+            // 
+            // ReleaseDatelabel2
+            // 
+            resources.ApplyResources(this.ReleaseDatelabel2, "ReleaseDatelabel2");
+            this.ReleaseDatelabel2.Name = "ReleaseDatelabel2";
+            // 
+            // tabControl
+            // 
+            this.tabControl.AllowDrop = true;
+            this.tabControl.Controls.Add(this.VideoTab);
+            this.tabControl.Controls.Add(this.AudioTab);
+            this.tabControl.Controls.Add(this.MiscTab);
+            this.tabControl.Controls.Add(this.MuxTab);
+            this.tabControl.Controls.Add(this.ExtractTab);
+            this.tabControl.Controls.Add(this.AVSTab);
+            this.tabControl.Controls.Add(this.MediaInfoTab);
+            this.tabControl.Controls.Add(this.SetupTabPage);
+            this.tabControl.Controls.Add(this.HelpTab);
+            this.tabControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tabControl.HotTrack = true;
+            resources.ApplyResources(this.tabControl, "tabControl");
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.DragOver += new System.Windows.Forms.DragEventHandler(this.tabControl_DragOver);
+            // 
+            // MiscTab
+            // 
+            this.MiscTab.Controls.Add(this.MiscBlackGroupBox);
+            this.MiscTab.Controls.Add(this.MiscMiscGroupBox);
+            this.MiscTab.Controls.Add(this.MiscOnePicGroupBox);
+            resources.ApplyResources(this.MiscTab, "MiscTab");
+            this.MiscTab.Name = "MiscTab";
+            this.MiscTab.UseVisualStyleBackColor = true;
+            // 
+            // MiscBlackGroupBox
+            // 
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackKbpsLabel);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackBitrateLabel);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackBitrateNumericUpDown);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationSecondsLabel);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationSecondsComboBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationLabel);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackCrfNumericUpDown);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackCrfLabel);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackNoPicCheckBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsComboBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsNumericUpDown);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackPicInputButton);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackPicInputTextBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackStartButton);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackOutputButton);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackVideoInputButton);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackOutputTextBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackVideoInputTextBox);
+            resources.ApplyResources(this.MiscBlackGroupBox, "MiscBlackGroupBox");
+            this.MiscBlackGroupBox.Name = "MiscBlackGroupBox";
+            this.MiscBlackGroupBox.TabStop = false;
+            // 
+            // MiscBlackKbpsLabel
+            // 
+            resources.ApplyResources(this.MiscBlackKbpsLabel, "MiscBlackKbpsLabel");
+            this.MiscBlackKbpsLabel.Name = "MiscBlackKbpsLabel";
+            // 
+            // MiscBlackBitrateLabel
+            // 
+            resources.ApplyResources(this.MiscBlackBitrateLabel, "MiscBlackBitrateLabel");
+            this.MiscBlackBitrateLabel.Name = "MiscBlackBitrateLabel";
+            // 
+            // MiscBlackBitrateNumericUpDown
+            // 
+            resources.ApplyResources(this.MiscBlackBitrateNumericUpDown, "MiscBlackBitrateNumericUpDown");
+            this.MiscBlackBitrateNumericUpDown.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.MiscBlackBitrateNumericUpDown.Name = "MiscBlackBitrateNumericUpDown";
+            this.MiscBlackBitrateNumericUpDown.Value = new decimal(new int[] {
+            900,
+            0,
+            0,
+            0});
+            // 
+            // MiscBlackDurationSecondsLabel
+            // 
+            resources.ApplyResources(this.MiscBlackDurationSecondsLabel, "MiscBlackDurationSecondsLabel");
+            this.MiscBlackDurationSecondsLabel.Name = "MiscBlackDurationSecondsLabel";
+            // 
+            // MiscBlackDurationSecondsComboBox
+            // 
+            this.MiscBlackDurationSecondsComboBox.FormattingEnabled = true;
+            this.MiscBlackDurationSecondsComboBox.Items.AddRange(new object[] {
+            resources.GetString("MiscBlackDurationSecondsComboBox.Items"),
+            resources.GetString("MiscBlackDurationSecondsComboBox.Items1"),
+            resources.GetString("MiscBlackDurationSecondsComboBox.Items2"),
+            resources.GetString("MiscBlackDurationSecondsComboBox.Items3"),
+            resources.GetString("MiscBlackDurationSecondsComboBox.Items4")});
+            resources.ApplyResources(this.MiscBlackDurationSecondsComboBox, "MiscBlackDurationSecondsComboBox");
+            this.MiscBlackDurationSecondsComboBox.Name = "MiscBlackDurationSecondsComboBox";
+            this.MiscBlackDurationSecondsComboBox.SelectedIndexChanged += new System.EventHandler(this.BlackSecondComboBox_SelectedIndexChanged);
+            // 
+            // MiscBlackDurationLabel
+            // 
+            resources.ApplyResources(this.MiscBlackDurationLabel, "MiscBlackDurationLabel");
+            this.MiscBlackDurationLabel.Name = "MiscBlackDurationLabel";
+            // 
+            // MiscBlackCrfNumericUpDown
+            // 
+            this.MiscBlackCrfNumericUpDown.DecimalPlaces = 1;
+            this.MiscBlackCrfNumericUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            resources.ApplyResources(this.MiscBlackCrfNumericUpDown, "MiscBlackCrfNumericUpDown");
+            this.MiscBlackCrfNumericUpDown.Maximum = new decimal(new int[] {
+            63,
+            0,
+            0,
+            0});
+            this.MiscBlackCrfNumericUpDown.Minimum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            -2147483648});
+            this.MiscBlackCrfNumericUpDown.Name = "MiscBlackCrfNumericUpDown";
+            this.MiscBlackCrfNumericUpDown.Value = new decimal(new int[] {
+            51,
+            0,
+            0,
+            0});
+            // 
+            // MiscBlackCrfLabel
+            // 
+            resources.ApplyResources(this.MiscBlackCrfLabel, "MiscBlackCrfLabel");
+            this.MiscBlackCrfLabel.Name = "MiscBlackCrfLabel";
+            // 
+            // MiscBlackFpsComboBox
+            // 
+            resources.ApplyResources(this.MiscBlackFpsComboBox, "MiscBlackFpsComboBox");
+            this.MiscBlackFpsComboBox.Name = "MiscBlackFpsComboBox";
+            // 
+            // MiscBlackFpsNumericUpDown
+            // 
+            resources.ApplyResources(this.MiscBlackFpsNumericUpDown, "MiscBlackFpsNumericUpDown");
+            this.MiscBlackFpsNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.MiscBlackFpsNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MiscBlackFpsNumericUpDown.Name = "MiscBlackFpsNumericUpDown";
+            this.MiscBlackFpsNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // SetupTabPage
+            // 
+            this.SetupTabPage.Controls.Add(this.groupBox14);
+            this.SetupTabPage.Controls.Add(this.groupBox13);
+            this.SetupTabPage.Controls.Add(this.groupBox12);
+            this.SetupTabPage.Controls.Add(this.DeleteLogButton);
+            this.SetupTabPage.Controls.Add(this.SetDefaultButton);
+            this.SetupTabPage.Controls.Add(this.ViewLogButton);
+            resources.ApplyResources(this.SetupTabPage, "SetupTabPage");
+            this.SetupTabPage.Name = "SetupTabPage";
+            this.SetupTabPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.x265CheckBox);
+            this.groupBox14.Controls.Add(this.label38);
+            this.groupBox14.Controls.Add(this.SetupPlayerTextBox);
+            this.groupBox14.Controls.Add(this.SetupPlayerButton);
+            this.groupBox14.Controls.Add(this.SetupDeleteTempFileCheckBox);
+            this.groupBox14.Controls.Add(this.CheckUpdateCheckBox);
+            resources.ApplyResources(this.groupBox14, "groupBox14");
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.TabStop = false;
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.Name = "label38";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.SplashScreenCheckBox);
+            this.groupBox13.Controls.Add(this.TrayModeCheckBox);
+            this.groupBox13.Controls.Add(this.label26);
+            this.groupBox13.Controls.Add(this.languageComboBox);
+            resources.ApplyResources(this.groupBox13, "groupBox13");
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.TabStop = false;
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            // 
+            // languageComboBox
+            // 
+            this.languageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.languageComboBox.FormattingEnabled = true;
+            this.languageComboBox.Items.AddRange(new object[] {
+            resources.GetString("languageComboBox.Items"),
+            resources.GetString("languageComboBox.Items1"),
+            resources.GetString("languageComboBox.Items2"),
+            resources.GetString("languageComboBox.Items3")});
+            resources.ApplyResources(this.languageComboBox, "languageComboBox");
+            this.languageComboBox.Name = "languageComboBox";
+            this.languageComboBox.SelectedIndexChanged += new System.EventHandler(this.languageComboBox_SelectedIndexChanged);
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.x264extraLine);
+            this.groupBox12.Controls.Add(this.label43);
+            this.groupBox12.Controls.Add(this.x264PriorityComboBox);
+            this.groupBox12.Controls.Add(this.x264ThreadsComboBox);
+            this.groupBox12.Controls.Add(this.label2);
+            this.groupBox12.Controls.Add(this.label11);
+            resources.ApplyResources(this.groupBox12, "groupBox12");
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.TabStop = false;
+            // 
+            // label43
+            // 
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.Name = "label43";
+            // 
+            // x264PriorityComboBox
+            // 
+            this.x264PriorityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.x264PriorityComboBox.FormattingEnabled = true;
+            this.x264PriorityComboBox.Items.AddRange(new object[] {
+            resources.GetString("x264PriorityComboBox.Items"),
+            resources.GetString("x264PriorityComboBox.Items1"),
+            resources.GetString("x264PriorityComboBox.Items2"),
+            resources.GetString("x264PriorityComboBox.Items3"),
+            resources.GetString("x264PriorityComboBox.Items4"),
+            resources.GetString("x264PriorityComboBox.Items5")});
+            resources.ApplyResources(this.x264PriorityComboBox, "x264PriorityComboBox");
+            this.x264PriorityComboBox.Name = "x264PriorityComboBox";
+            this.x264PriorityComboBox.SelectedIndexChanged += new System.EventHandler(this.x264PriorityComboBox_SelectedIndexChanged);
+            // 
+            // x264ThreadsComboBox
+            // 
+            this.x264ThreadsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.x264ThreadsComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.x264ThreadsComboBox, "x264ThreadsComboBox");
+            this.x264ThreadsComboBox.Name = "x264ThreadsComboBox";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // VideoMaintainResolutionCheckBox
+            // 
+            resources.ApplyResources(this.VideoMaintainResolutionCheckBox, "VideoMaintainResolutionCheckBox");
+            this.VideoMaintainResolutionCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.VideoMaintainResolutionCheckBox.Checked = true;
+            this.VideoMaintainResolutionCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.VideoMaintainResolutionCheckBox.Name = "VideoMaintainResolutionCheckBox";
+            this.VideoMaintainResolutionCheckBox.UseVisualStyleBackColor = true;
+            this.VideoMaintainResolutionCheckBox.CheckedChanged += new System.EventHandler(this.MaintainResolutionCheckBox_CheckedChanged);
+            // 
+            // MiscMiscRotateButton
+            // 
+            resources.ApplyResources(this.MiscMiscRotateButton, "MiscMiscRotateButton");
+            this.MiscMiscRotateButton.Name = "MiscMiscRotateButton";
+            this.MiscMiscRotateButton.UseVisualStyleBackColor = true;
+            this.MiscMiscRotateButton.Click += new System.EventHandler(this.RotateButton_Click);
+            // 
+            // MiscMiscVideoInputTextBox
+            // 
+            this.MiscMiscVideoInputTextBox.AllowDrop = true;
+            this.MiscMiscVideoInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiscMiscVideoInputTextBox.EmptyTextTip = null;
+            this.MiscMiscVideoInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MiscMiscVideoInputTextBox, "MiscMiscVideoInputTextBox");
+            this.MiscMiscVideoInputTextBox.Name = "MiscMiscVideoInputTextBox";
+            this.MiscMiscVideoInputTextBox.ReadOnly = true;
+            this.MiscMiscVideoInputTextBox.TextChanged += new System.EventHandler(this.txtvideo4_TextChanged);
+            this.MiscMiscVideoInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo4_MouseDoubleClick);
+            // 
+            // MiscMiscVideoInputButton
+            // 
+            resources.ApplyResources(this.MiscMiscVideoInputButton, "MiscMiscVideoInputButton");
+            this.MiscMiscVideoInputButton.Name = "MiscMiscVideoInputButton";
+            this.MiscMiscVideoInputButton.UseVisualStyleBackColor = true;
+            this.MiscMiscVideoInputButton.Click += new System.EventHandler(this.btnvideo4_Click);
+            // 
+            // MiscMiscVideoOutputButton
+            // 
+            resources.ApplyResources(this.MiscMiscVideoOutputButton, "MiscMiscVideoOutputButton");
+            this.MiscMiscVideoOutputButton.Name = "MiscMiscVideoOutputButton";
+            this.MiscMiscVideoOutputButton.UseVisualStyleBackColor = true;
+            this.MiscMiscVideoOutputButton.Click += new System.EventHandler(this.btnout5_Click);
+            // 
+            // MiscMiscClipButton
+            // 
+            resources.ApplyResources(this.MiscMiscClipButton, "MiscMiscClipButton");
+            this.MiscMiscClipButton.Name = "MiscMiscClipButton";
+            this.MiscMiscClipButton.UseVisualStyleBackColor = true;
+            this.MiscMiscClipButton.Click += new System.EventHandler(this.btnClip_Click);
+            // 
+            // MiscMiscVideoOutputTextBox
+            // 
+            this.MiscMiscVideoOutputTextBox.AllowDrop = true;
+            this.MiscMiscVideoOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiscMiscVideoOutputTextBox.EmptyTextTip = null;
+            this.MiscMiscVideoOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MiscMiscVideoOutputTextBox, "MiscMiscVideoOutputTextBox");
+            this.MiscMiscVideoOutputTextBox.Name = "MiscMiscVideoOutputTextBox";
+            this.MiscMiscVideoOutputTextBox.TextChanged += new System.EventHandler(this.txtout5_TextChanged);
+            this.MiscMiscVideoOutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout5_MouseDoubleClick);
+            // 
+            // btnMIopen
+            // 
+            resources.ApplyResources(this.btnMIopen, "btnMIopen");
+            this.btnMIopen.Name = "btnMIopen";
+            this.btnMIopen.UseVisualStyleBackColor = true;
+            this.btnMIopen.Click += new System.EventHandler(this.btnMIopen_Click);
+            // 
+            // btnMIplay
+            // 
+            resources.ApplyResources(this.btnMIplay, "btnMIplay");
+            this.btnMIplay.Name = "btnMIplay";
+            this.btnMIplay.UseVisualStyleBackColor = true;
+            this.btnMIplay.Click += new System.EventHandler(this.btnMIplay_Click);
+            // 
+            // btnMIcopy
+            // 
+            resources.ApplyResources(this.btnMIcopy, "btnMIcopy");
+            this.btnMIcopy.Name = "btnMIcopy";
+            this.btnMIcopy.UseVisualStyleBackColor = true;
+            this.btnMIcopy.Click += new System.EventHandler(this.btnMIcopy_Click);
+            // 
+            // AVSAddFilterButton
+            // 
+            resources.ApplyResources(this.AVSAddFilterButton, "AVSAddFilterButton");
+            this.AVSAddFilterButton.Name = "AVSAddFilterButton";
+            this.AVSAddFilterButton.UseVisualStyleBackColor = true;
+            this.AVSAddFilterButton.Click += new System.EventHandler(this.AVSAddFilterButton_Click);
+            // 
+            // AVSCropTextBox
+            // 
+            this.AVSCropTextBox.AllowDrop = true;
+            this.AVSCropTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AVSCropTextBox.EmptyTextTip = null;
+            this.AVSCropTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.AVSCropTextBox, "AVSCropTextBox");
+            this.AVSCropTextBox.Name = "AVSCropTextBox";
+            this.AVSCropTextBox.TextChanged += new System.EventHandler(this.AVSCropTextBox_TextChanged);
+            // 
             // AVSScriptTextBox
             // 
             this.AVSScriptTextBox.AllowDrop = true;
@@ -1076,30 +2136,6 @@
             this.btnsub9.UseVisualStyleBackColor = true;
             this.btnsub9.Click += new System.EventHandler(this.btnsub9_Click);
             // 
-            // ExtractTab
-            // 
-            this.ExtractTab.AllowDrop = true;
-            this.ExtractTab.Controls.Add(this.groupBox7);
-            this.ExtractTab.Controls.Add(this.groupBox6);
-            this.ExtractTab.Controls.Add(this.groupBox5);
-            resources.ApplyResources(this.ExtractTab, "ExtractTab");
-            this.ExtractTab.Name = "ExtractTab";
-            this.ExtractTab.UseVisualStyleBackColor = true;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.gmkvextractguibButton);
-            this.groupBox7.Controls.Add(this.MkvExtract4Button);
-            this.groupBox7.Controls.Add(this.MkvExtract3Button);
-            this.groupBox7.Controls.Add(this.MkvExtract2Button);
-            this.groupBox7.Controls.Add(this.MkvExtract1Button);
-            this.groupBox7.Controls.Add(this.btnextract7);
-            this.groupBox7.Controls.Add(this.btnvideo7);
-            this.groupBox7.Controls.Add(this.txtvideo6);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.TabStop = false;
-            // 
             // gmkvextractguibButton
             // 
             resources.ApplyResources(this.gmkvextractguibButton, "gmkvextractguibButton");
@@ -1161,16 +2197,6 @@
             this.txtvideo6.TextChanged += new System.EventHandler(this.txtvideo6_TextChanged_1);
             this.txtvideo6.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo6_MouseDoubleClick);
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.btnvextract8);
-            this.groupBox6.Controls.Add(this.btnvideo8);
-            this.groupBox6.Controls.Add(this.txtvideo8);
-            this.groupBox6.Controls.Add(this.btnaextract8);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.TabStop = false;
-            // 
             // btnvextract8
             // 
             resources.ApplyResources(this.btnvextract8, "btnvextract8");
@@ -1203,18 +2229,6 @@
             this.btnaextract8.Name = "btnaextract8";
             this.btnaextract8.UseVisualStyleBackColor = true;
             this.btnaextract8.Click += new System.EventHandler(this.btnaextract8_Click);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.ExtractMP4TextBox);
-            this.groupBox5.Controls.Add(this.btnaextract3);
-            this.groupBox5.Controls.Add(this.ExtractMP4Button);
-            this.groupBox5.Controls.Add(this.btnvextract);
-            this.groupBox5.Controls.Add(this.btnaextract);
-            this.groupBox5.Controls.Add(this.btnaextract2);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
             // 
             // ExtractMP4TextBox
             // 
@@ -1262,170 +2276,59 @@
             this.btnaextract2.UseVisualStyleBackColor = true;
             this.btnaextract2.Click += new System.EventHandler(this.btnaextract2_Click);
             // 
-            // MuxTab
+            // MuxConvertAddButton
             // 
-            this.MuxTab.Controls.Add(this.groupBox4);
-            this.MuxTab.Controls.Add(this.groupBox3);
-            this.MuxTab.Controls.Add(this.groupBox8);
-            resources.ApplyResources(this.MuxTab, "MuxTab");
-            this.MuxTab.Name = "MuxTab";
-            this.MuxTab.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.MuxConvertAddButton, "MuxConvertAddButton");
+            this.MuxConvertAddButton.Name = "MuxConvertAddButton";
+            this.MuxConvertAddButton.UseVisualStyleBackColor = true;
+            this.MuxConvertAddButton.Click += new System.EventHandler(this.btnffmpegAdd_Click);
             // 
-            // groupBox4
+            // MuxConvertClearButton
             // 
-            this.groupBox4.Controls.Add(this.label44);
-            this.groupBox4.Controls.Add(this.MuxAacEncoderComboBox);
-            this.groupBox4.Controls.Add(this.label40);
-            this.groupBox4.Controls.Add(this.MuxFormatComboBox);
-            this.groupBox4.Controls.Add(this.lbffmpeg);
-            this.groupBox4.Controls.Add(this.btnffmpegAdd);
-            this.groupBox4.Controls.Add(this.btnffmpegClear);
-            this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.btnffmpegDel);
-            this.groupBox4.Controls.Add(this.btnBatchMP4);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
+            resources.ApplyResources(this.MuxConvertClearButton, "MuxConvertClearButton");
+            this.MuxConvertClearButton.Name = "MuxConvertClearButton";
+            this.MuxConvertClearButton.UseVisualStyleBackColor = true;
+            this.MuxConvertClearButton.Click += new System.EventHandler(this.btnffmpegClear_Click);
             // 
-            // label44
+            // MuxConvertDeleteButton
             // 
-            resources.ApplyResources(this.label44, "label44");
-            this.label44.Name = "label44";
+            resources.ApplyResources(this.MuxConvertDeleteButton, "MuxConvertDeleteButton");
+            this.MuxConvertDeleteButton.Name = "MuxConvertDeleteButton";
+            this.MuxConvertDeleteButton.UseVisualStyleBackColor = true;
+            this.MuxConvertDeleteButton.Click += new System.EventHandler(this.btnffmpegDel_Click);
             // 
-            // MuxAacEncoderComboBox
+            // MuxConvertStartButton
             // 
-            this.MuxAacEncoderComboBox.FormattingEnabled = true;
-            this.MuxAacEncoderComboBox.Items.AddRange(new object[] {
-            resources.GetString("MuxAacEncoderComboBox.Items"),
-            resources.GetString("MuxAacEncoderComboBox.Items1")});
-            resources.ApplyResources(this.MuxAacEncoderComboBox, "MuxAacEncoderComboBox");
-            this.MuxAacEncoderComboBox.Name = "MuxAacEncoderComboBox";
+            resources.ApplyResources(this.MuxConvertStartButton, "MuxConvertStartButton");
+            this.MuxConvertStartButton.Name = "MuxConvertStartButton";
+            this.MuxConvertStartButton.UseVisualStyleBackColor = true;
+            this.MuxConvertStartButton.Click += new System.EventHandler(this.btnBatchMP4_Click);
             // 
-            // label40
+            // MuxMp4ReplaceAudioButton
             // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.Name = "label40";
+            resources.ApplyResources(this.MuxMp4ReplaceAudioButton, "MuxMp4ReplaceAudioButton");
+            this.MuxMp4ReplaceAudioButton.Name = "MuxMp4ReplaceAudioButton";
+            this.MuxMp4ReplaceAudioButton.UseVisualStyleBackColor = true;
+            this.MuxMp4ReplaceAudioButton.Click += new System.EventHandler(this.MuxReplaceAudioButton_Click);
             // 
-            // MuxFormatComboBox
+            // MuxMp4VideoInputTextBox
             // 
-            this.MuxFormatComboBox.FormattingEnabled = true;
-            this.MuxFormatComboBox.Items.AddRange(new object[] {
-            resources.GetString("MuxFormatComboBox.Items"),
-            resources.GetString("MuxFormatComboBox.Items1"),
-            resources.GetString("MuxFormatComboBox.Items2"),
-            resources.GetString("MuxFormatComboBox.Items3"),
-            resources.GetString("MuxFormatComboBox.Items4"),
-            resources.GetString("MuxFormatComboBox.Items5")});
-            resources.ApplyResources(this.MuxFormatComboBox, "MuxFormatComboBox");
-            this.MuxFormatComboBox.Name = "MuxFormatComboBox";
+            this.MuxMp4VideoInputTextBox.AllowDrop = true;
+            this.MuxMp4VideoInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MuxMp4VideoInputTextBox.EmptyTextTip = "";
+            this.MuxMp4VideoInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MuxMp4VideoInputTextBox, "MuxMp4VideoInputTextBox");
+            this.MuxMp4VideoInputTextBox.Name = "MuxMp4VideoInputTextBox";
+            this.MuxMp4VideoInputTextBox.ReadOnly = true;
+            this.MuxMp4VideoInputTextBox.TextChanged += new System.EventHandler(this.txtvideo_TextChanged);
+            this.MuxMp4VideoInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo_MouseDoubleClick);
             // 
-            // lbffmpeg
+            // MuxMp4VideoInputButton
             // 
-            this.lbffmpeg.AllowDrop = true;
-            this.lbffmpeg.FormattingEnabled = true;
-            resources.ApplyResources(this.lbffmpeg, "lbffmpeg");
-            this.lbffmpeg.Name = "lbffmpeg";
-            this.lbffmpeg.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbffmpeg_DragDrop);
-            this.lbffmpeg.DragOver += new System.Windows.Forms.DragEventHandler(this.lbffmpeg_DragOver);
-            this.lbffmpeg.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbffmpeg_MouseDown);
-            // 
-            // btnffmpegAdd
-            // 
-            resources.ApplyResources(this.btnffmpegAdd, "btnffmpegAdd");
-            this.btnffmpegAdd.Name = "btnffmpegAdd";
-            this.btnffmpegAdd.UseVisualStyleBackColor = true;
-            this.btnffmpegAdd.Click += new System.EventHandler(this.btnffmpegAdd_Click);
-            // 
-            // btnffmpegClear
-            // 
-            resources.ApplyResources(this.btnffmpegClear, "btnffmpegClear");
-            this.btnffmpegClear.Name = "btnffmpegClear";
-            this.btnffmpegClear.UseVisualStyleBackColor = true;
-            this.btnffmpegClear.Click += new System.EventHandler(this.btnffmpegClear_Click);
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // btnffmpegDel
-            // 
-            resources.ApplyResources(this.btnffmpegDel, "btnffmpegDel");
-            this.btnffmpegDel.Name = "btnffmpegDel";
-            this.btnffmpegDel.UseVisualStyleBackColor = true;
-            this.btnffmpegDel.Click += new System.EventHandler(this.btnffmpegDel_Click);
-            // 
-            // btnBatchMP4
-            // 
-            resources.ApplyResources(this.btnBatchMP4, "btnBatchMP4");
-            this.btnBatchMP4.Name = "btnBatchMP4";
-            this.btnBatchMP4.UseVisualStyleBackColor = true;
-            this.btnBatchMP4.Click += new System.EventHandler(this.btnBatchMP4_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.Mp4BoxParComboBox);
-            this.groupBox3.Controls.Add(this.label41);
-            this.groupBox3.Controls.Add(this.MuxReplaceAudioButton);
-            this.groupBox3.Controls.Add(this.txtvideo);
-            this.groupBox3.Controls.Add(this.btnvideo);
-            this.groupBox3.Controls.Add(this.btnmux);
-            this.groupBox3.Controls.Add(this.cbFPS);
-            this.groupBox3.Controls.Add(this.btnaudio);
-            this.groupBox3.Controls.Add(this.btnout);
-            this.groupBox3.Controls.Add(this.txtaudio);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.txtout);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // Mp4BoxParComboBox
-            // 
-            this.Mp4BoxParComboBox.FormattingEnabled = true;
-            this.Mp4BoxParComboBox.Items.AddRange(new object[] {
-            resources.GetString("Mp4BoxParComboBox.Items"),
-            resources.GetString("Mp4BoxParComboBox.Items1"),
-            resources.GetString("Mp4BoxParComboBox.Items2"),
-            resources.GetString("Mp4BoxParComboBox.Items3"),
-            resources.GetString("Mp4BoxParComboBox.Items4"),
-            resources.GetString("Mp4BoxParComboBox.Items5"),
-            resources.GetString("Mp4BoxParComboBox.Items6"),
-            resources.GetString("Mp4BoxParComboBox.Items7"),
-            resources.GetString("Mp4BoxParComboBox.Items8")});
-            resources.ApplyResources(this.Mp4BoxParComboBox, "Mp4BoxParComboBox");
-            this.Mp4BoxParComboBox.Name = "Mp4BoxParComboBox";
-            // 
-            // label41
-            // 
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.Name = "label41";
-            // 
-            // MuxReplaceAudioButton
-            // 
-            resources.ApplyResources(this.MuxReplaceAudioButton, "MuxReplaceAudioButton");
-            this.MuxReplaceAudioButton.Name = "MuxReplaceAudioButton";
-            this.MuxReplaceAudioButton.UseVisualStyleBackColor = true;
-            this.MuxReplaceAudioButton.Click += new System.EventHandler(this.MuxReplaceAudioButton_Click);
-            // 
-            // txtvideo
-            // 
-            this.txtvideo.AllowDrop = true;
-            this.txtvideo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtvideo.EmptyTextTip = "";
-            this.txtvideo.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtvideo, "txtvideo");
-            this.txtvideo.Name = "txtvideo";
-            this.txtvideo.ReadOnly = true;
-            this.txtvideo.TextChanged += new System.EventHandler(this.txtvideo_TextChanged);
-            this.txtvideo.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo_MouseDoubleClick);
-            // 
-            // btnvideo
-            // 
-            resources.ApplyResources(this.btnvideo, "btnvideo");
-            this.btnvideo.Name = "btnvideo";
-            this.btnvideo.UseVisualStyleBackColor = true;
-            this.btnvideo.Click += new System.EventHandler(this.btnvideo_Click);
+            resources.ApplyResources(this.MuxMp4VideoInputButton, "MuxMp4VideoInputButton");
+            this.MuxMp4VideoInputButton.Name = "MuxMp4VideoInputButton";
+            this.MuxMp4VideoInputButton.UseVisualStyleBackColor = true;
+            this.MuxMp4VideoInputButton.Click += new System.EventHandler(this.btnvideo_Click);
             // 
             // btnmux
             // 
@@ -1434,190 +2337,122 @@
             this.btnmux.UseVisualStyleBackColor = true;
             this.btnmux.Click += new System.EventHandler(this.btnmux_Click);
             // 
-            // cbFPS
+            // MuxMp4AudioInputButton
             // 
-            this.cbFPS.FormattingEnabled = true;
-            this.cbFPS.Items.AddRange(new object[] {
-            resources.GetString("cbFPS.Items"),
-            resources.GetString("cbFPS.Items1"),
-            resources.GetString("cbFPS.Items2"),
-            resources.GetString("cbFPS.Items3"),
-            resources.GetString("cbFPS.Items4"),
-            resources.GetString("cbFPS.Items5"),
-            resources.GetString("cbFPS.Items6"),
-            resources.GetString("cbFPS.Items7"),
-            resources.GetString("cbFPS.Items8")});
-            resources.ApplyResources(this.cbFPS, "cbFPS");
-            this.cbFPS.Name = "cbFPS";
-            this.cbFPS.SelectedIndexChanged += new System.EventHandler(this.cbFPS_SelectedIndexChanged);
+            resources.ApplyResources(this.MuxMp4AudioInputButton, "MuxMp4AudioInputButton");
+            this.MuxMp4AudioInputButton.Name = "MuxMp4AudioInputButton";
+            this.MuxMp4AudioInputButton.UseVisualStyleBackColor = true;
+            this.MuxMp4AudioInputButton.Click += new System.EventHandler(this.btnaudio_Click);
             // 
-            // btnaudio
+            // MuxMp4OutputButton
             // 
-            resources.ApplyResources(this.btnaudio, "btnaudio");
-            this.btnaudio.Name = "btnaudio";
-            this.btnaudio.UseVisualStyleBackColor = true;
-            this.btnaudio.Click += new System.EventHandler(this.btnaudio_Click);
+            resources.ApplyResources(this.MuxMp4OutputButton, "MuxMp4OutputButton");
+            this.MuxMp4OutputButton.Name = "MuxMp4OutputButton";
+            this.MuxMp4OutputButton.UseVisualStyleBackColor = true;
+            this.MuxMp4OutputButton.Click += new System.EventHandler(this.btnout_Click);
             // 
-            // btnout
+            // MuxMp4AudioInputTextBox
             // 
-            resources.ApplyResources(this.btnout, "btnout");
-            this.btnout.Name = "btnout";
-            this.btnout.UseVisualStyleBackColor = true;
-            this.btnout.Click += new System.EventHandler(this.btnout_Click);
+            this.MuxMp4AudioInputTextBox.AllowDrop = true;
+            this.MuxMp4AudioInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MuxMp4AudioInputTextBox.EmptyTextTip = null;
+            this.MuxMp4AudioInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MuxMp4AudioInputTextBox, "MuxMp4AudioInputTextBox");
+            this.MuxMp4AudioInputTextBox.Name = "MuxMp4AudioInputTextBox";
+            this.MuxMp4AudioInputTextBox.ReadOnly = true;
+            this.MuxMp4AudioInputTextBox.TextChanged += new System.EventHandler(this.txtaudio_TextChanged);
             // 
-            // txtaudio
+            // MuxMp4OutputTextBox
             // 
-            this.txtaudio.AllowDrop = true;
-            this.txtaudio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtaudio.EmptyTextTip = null;
-            this.txtaudio.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtaudio, "txtaudio");
-            this.txtaudio.Name = "txtaudio";
-            this.txtaudio.ReadOnly = true;
-            this.txtaudio.TextChanged += new System.EventHandler(this.txtaudio_TextChanged);
+            this.MuxMp4OutputTextBox.AllowDrop = true;
+            this.MuxMp4OutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MuxMp4OutputTextBox.EmptyTextTip = null;
+            this.MuxMp4OutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MuxMp4OutputTextBox, "MuxMp4OutputTextBox");
+            this.MuxMp4OutputTextBox.Name = "MuxMp4OutputTextBox";
+            this.MuxMp4OutputTextBox.TextChanged += new System.EventHandler(this.txtout_TextChanged);
+            this.MuxMp4OutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout_MouseDoubleClick);
             // 
-            // label14
+            // MuxMkvVideoInputTextBox
             // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
+            this.MuxMkvVideoInputTextBox.AllowDrop = true;
+            this.MuxMkvVideoInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MuxMkvVideoInputTextBox.EmptyTextTip = null;
+            this.MuxMkvVideoInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MuxMkvVideoInputTextBox, "MuxMkvVideoInputTextBox");
+            this.MuxMkvVideoInputTextBox.Name = "MuxMkvVideoInputTextBox";
+            this.MuxMkvVideoInputTextBox.ReadOnly = true;
+            this.MuxMkvVideoInputTextBox.TextChanged += new System.EventHandler(this.txtvideo5_TextChanged);
+            this.MuxMkvVideoInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo5_MouseDoubleClick);
             // 
-            // txtout
+            // MuxMkvOutputButton
             // 
-            this.txtout.AllowDrop = true;
-            this.txtout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtout.EmptyTextTip = null;
-            this.txtout.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtout, "txtout");
-            this.txtout.Name = "txtout";
-            this.txtout.TextChanged += new System.EventHandler(this.txtout_TextChanged);
-            this.txtout.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout_MouseDoubleClick);
+            resources.ApplyResources(this.MuxMkvOutputButton, "MuxMkvOutputButton");
+            this.MuxMkvOutputButton.Name = "MuxMkvOutputButton";
+            this.MuxMkvOutputButton.UseVisualStyleBackColor = true;
+            this.MuxMkvOutputButton.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // groupBox8
+            // MuxMkvSubtitleTextBox
             // 
-            this.groupBox8.Controls.Add(this.txtvideo5);
-            this.groupBox8.Controls.Add(this.button4);
-            this.groupBox8.Controls.Add(this.txtsub);
-            this.groupBox8.Controls.Add(this.button3);
-            this.groupBox8.Controls.Add(this.txtaudio3);
-            this.groupBox8.Controls.Add(this.button5);
-            this.groupBox8.Controls.Add(this.txtout6);
-            this.groupBox8.Controls.Add(this.button2);
-            this.groupBox8.Controls.Add(this.button7);
-            resources.ApplyResources(this.groupBox8, "groupBox8");
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.TabStop = false;
+            this.MuxMkvSubtitleTextBox.AllowDrop = true;
+            this.MuxMkvSubtitleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MuxMkvSubtitleTextBox.EmptyTextTip = null;
+            this.MuxMkvSubtitleTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MuxMkvSubtitleTextBox, "MuxMkvSubtitleTextBox");
+            this.MuxMkvSubtitleTextBox.Name = "MuxMkvSubtitleTextBox";
+            this.MuxMkvSubtitleTextBox.ReadOnly = true;
+            this.MuxMkvSubtitleTextBox.TextChanged += new System.EventHandler(this.txtsub_TextChanged);
             // 
-            // txtvideo5
+            // MuxMkvAudioInputButton
             // 
-            this.txtvideo5.AllowDrop = true;
-            this.txtvideo5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtvideo5.EmptyTextTip = null;
-            this.txtvideo5.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtvideo5, "txtvideo5");
-            this.txtvideo5.Name = "txtvideo5";
-            this.txtvideo5.ReadOnly = true;
-            this.txtvideo5.TextChanged += new System.EventHandler(this.txtvideo5_TextChanged);
-            this.txtvideo5.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo5_MouseDoubleClick);
+            resources.ApplyResources(this.MuxMkvAudioInputButton, "MuxMkvAudioInputButton");
+            this.MuxMkvAudioInputButton.Name = "MuxMkvAudioInputButton";
+            this.MuxMkvAudioInputButton.UseVisualStyleBackColor = true;
+            this.MuxMkvAudioInputButton.Click += new System.EventHandler(this.button3_Click_1);
             // 
-            // button4
+            // MuxMkvAudioInputTextBox
             // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.MuxMkvAudioInputTextBox.AllowDrop = true;
+            this.MuxMkvAudioInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MuxMkvAudioInputTextBox.EmptyTextTip = "";
+            this.MuxMkvAudioInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MuxMkvAudioInputTextBox, "MuxMkvAudioInputTextBox");
+            this.MuxMkvAudioInputTextBox.Name = "MuxMkvAudioInputTextBox";
+            this.MuxMkvAudioInputTextBox.ReadOnly = true;
+            this.MuxMkvAudioInputTextBox.TextChanged += new System.EventHandler(this.txtaudio3_TextChanged);
+            this.MuxMkvAudioInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtaudio3_MouseDoubleClick);
             // 
-            // txtsub
+            // MuxMkvSubtitleButton
             // 
-            this.txtsub.AllowDrop = true;
-            this.txtsub.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtsub.EmptyTextTip = null;
-            this.txtsub.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtsub, "txtsub");
-            this.txtsub.Name = "txtsub";
-            this.txtsub.ReadOnly = true;
-            this.txtsub.TextChanged += new System.EventHandler(this.txtsub_TextChanged);
+            resources.ApplyResources(this.MuxMkvSubtitleButton, "MuxMkvSubtitleButton");
+            this.MuxMkvSubtitleButton.Name = "MuxMkvSubtitleButton";
+            this.MuxMkvSubtitleButton.UseVisualStyleBackColor = true;
+            this.MuxMkvSubtitleButton.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // button3
+            // MuxMkvOutputTextBox
             // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.MuxMkvOutputTextBox.AllowDrop = true;
+            this.MuxMkvOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MuxMkvOutputTextBox.EmptyTextTip = null;
+            this.MuxMkvOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.MuxMkvOutputTextBox, "MuxMkvOutputTextBox");
+            this.MuxMkvOutputTextBox.Name = "MuxMkvOutputTextBox";
+            this.MuxMkvOutputTextBox.TextChanged += new System.EventHandler(this.txtout6_TextChanged_1);
+            this.MuxMkvOutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout6_MouseDoubleClick);
             // 
-            // txtaudio3
+            // MuxMkvVideoInputButton
             // 
-            this.txtaudio3.AllowDrop = true;
-            this.txtaudio3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtaudio3.EmptyTextTip = "";
-            this.txtaudio3.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtaudio3, "txtaudio3");
-            this.txtaudio3.Name = "txtaudio3";
-            this.txtaudio3.ReadOnly = true;
-            this.txtaudio3.TextChanged += new System.EventHandler(this.txtaudio3_TextChanged);
-            this.txtaudio3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtaudio3_MouseDoubleClick);
+            resources.ApplyResources(this.MuxMkvVideoInputButton, "MuxMkvVideoInputButton");
+            this.MuxMkvVideoInputButton.Name = "MuxMkvVideoInputButton";
+            this.MuxMkvVideoInputButton.UseVisualStyleBackColor = true;
+            this.MuxMkvVideoInputButton.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // button5
+            // MuxMkvStartButton
             // 
-            resources.ApplyResources(this.button5, "button5");
-            this.button5.Name = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // txtout6
-            // 
-            this.txtout6.AllowDrop = true;
-            this.txtout6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtout6.EmptyTextTip = null;
-            this.txtout6.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtout6, "txtout6");
-            this.txtout6.Name = "txtout6";
-            this.txtout6.TextChanged += new System.EventHandler(this.txtout6_TextChanged_1);
-            this.txtout6.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout6_MouseDoubleClick);
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button7
-            // 
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
-            // 
-            // AudioTab
-            // 
-            this.AudioTab.AllowDrop = true;
-            this.AudioTab.Controls.Add(this.AudioGroupBox);
-            this.AudioTab.Controls.Add(this.AudioBatchGroupBox);
-            resources.ApplyResources(this.AudioTab, "AudioTab");
-            this.AudioTab.Name = "AudioTab";
-            this.AudioTab.UseVisualStyleBackColor = true;
-            // 
-            // AudioGroupBox
-            // 
-            this.AudioGroupBox.Controls.Add(this.AudioPresetAddButton);
-            this.AudioGroupBox.Controls.Add(this.AudioPresetDeleteButton);
-            this.AudioGroupBox.Controls.Add(this.AudioPresetComboBox);
-            this.AudioGroupBox.Controls.Add(this.AudioPresetLabel);
-            this.AudioGroupBox.Controls.Add(this.AudioBitrateComboBox);
-            this.AudioGroupBox.Controls.Add(this.AudioEncoderLabel);
-            this.AudioGroupBox.Controls.Add(this.AudioEncoderComboBox);
-            this.AudioGroupBox.Controls.Add(this.AudioInputTextBox);
-            this.AudioGroupBox.Controls.Add(this.AudioAudioModePanel);
-            this.AudioGroupBox.Controls.Add(this.AudioOutputTextBox);
-            this.AudioGroupBox.Controls.Add(this.AudioInputButton);
-            this.AudioGroupBox.Controls.Add(this.AudioKbpsLabel);
-            this.AudioGroupBox.Controls.Add(this.AudioOutputBotton);
-            this.AudioGroupBox.Controls.Add(this.lbaacrate);
-            this.AudioGroupBox.Controls.Add(this.AudioStartButton);
-            this.AudioGroupBox.Controls.Add(this.AudioCustomParameterTextBox);
-            resources.ApplyResources(this.AudioGroupBox, "AudioGroupBox");
-            this.AudioGroupBox.Name = "AudioGroupBox";
-            this.AudioGroupBox.TabStop = false;
+            resources.ApplyResources(this.MuxMkvStartButton, "MuxMkvStartButton");
+            this.MuxMkvStartButton.Name = "MuxMkvStartButton";
+            this.MuxMkvStartButton.UseVisualStyleBackColor = true;
+            this.MuxMkvStartButton.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // AudioPresetAddButton
             // 
@@ -1633,55 +2468,6 @@
             this.AudioPresetDeleteButton.UseVisualStyleBackColor = true;
             this.AudioPresetDeleteButton.Click += new System.EventHandler(this.audioDeleteBt_Click);
             // 
-            // AudioPresetComboBox
-            // 
-            this.AudioPresetComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AudioPresetComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.AudioPresetComboBox, "AudioPresetComboBox");
-            this.AudioPresetComboBox.Name = "AudioPresetComboBox";
-            this.AudioPresetComboBox.SelectedIndexChanged += new System.EventHandler(this.AudioPresetComboBox_SelectedIndexChanged);
-            // 
-            // AudioPresetLabel
-            // 
-            resources.ApplyResources(this.AudioPresetLabel, "AudioPresetLabel");
-            this.AudioPresetLabel.Name = "AudioPresetLabel";
-            // 
-            // AudioBitrateComboBox
-            // 
-            this.AudioBitrateComboBox.FormattingEnabled = true;
-            this.AudioBitrateComboBox.Items.AddRange(new object[] {
-            resources.GetString("AudioBitrateComboBox.Items"),
-            resources.GetString("AudioBitrateComboBox.Items1"),
-            resources.GetString("AudioBitrateComboBox.Items2"),
-            resources.GetString("AudioBitrateComboBox.Items3"),
-            resources.GetString("AudioBitrateComboBox.Items4"),
-            resources.GetString("AudioBitrateComboBox.Items5"),
-            resources.GetString("AudioBitrateComboBox.Items6")});
-            resources.ApplyResources(this.AudioBitrateComboBox, "AudioBitrateComboBox");
-            this.AudioBitrateComboBox.Name = "AudioBitrateComboBox";
-            // 
-            // AudioEncoderLabel
-            // 
-            resources.ApplyResources(this.AudioEncoderLabel, "AudioEncoderLabel");
-            this.AudioEncoderLabel.Name = "AudioEncoderLabel";
-            // 
-            // AudioEncoderComboBox
-            // 
-            this.AudioEncoderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AudioEncoderComboBox.FormattingEnabled = true;
-            this.AudioEncoderComboBox.Items.AddRange(new object[] {
-            resources.GetString("AudioEncoderComboBox.Items"),
-            resources.GetString("AudioEncoderComboBox.Items1"),
-            resources.GetString("AudioEncoderComboBox.Items2"),
-            resources.GetString("AudioEncoderComboBox.Items3"),
-            resources.GetString("AudioEncoderComboBox.Items4"),
-            resources.GetString("AudioEncoderComboBox.Items5"),
-            resources.GetString("AudioEncoderComboBox.Items6"),
-            resources.GetString("AudioEncoderComboBox.Items7")});
-            resources.ApplyResources(this.AudioEncoderComboBox, "AudioEncoderComboBox");
-            this.AudioEncoderComboBox.Name = "AudioEncoderComboBox";
-            this.AudioEncoderComboBox.SelectedIndexChanged += new System.EventHandler(this.AudioEncoderComboBox_SelectedIndexChanged);
-            // 
             // AudioInputTextBox
             // 
             this.AudioInputTextBox.AllowDrop = true;
@@ -1693,13 +2479,6 @@
             this.AudioInputTextBox.ReadOnly = true;
             this.AudioInputTextBox.TextChanged += new System.EventHandler(this.txtaudio2_TextChanged);
             this.AudioInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtaudio2_MouseDoubleClick);
-            // 
-            // AudioAudioModePanel
-            // 
-            this.AudioAudioModePanel.Controls.Add(this.AudioAudioModeBitrateRadioButton);
-            this.AudioAudioModePanel.Controls.Add(this.AudioAudioModeCustomRadioButton);
-            resources.ApplyResources(this.AudioAudioModePanel, "AudioAudioModePanel");
-            this.AudioAudioModePanel.Name = "AudioAudioModePanel";
             // 
             // AudioAudioModeBitrateRadioButton
             // 
@@ -1737,22 +2516,12 @@
             this.AudioInputButton.UseVisualStyleBackColor = true;
             this.AudioInputButton.Click += new System.EventHandler(this.btnaudio2_Click);
             // 
-            // AudioKbpsLabel
-            // 
-            resources.ApplyResources(this.AudioKbpsLabel, "AudioKbpsLabel");
-            this.AudioKbpsLabel.Name = "AudioKbpsLabel";
-            // 
             // AudioOutputBotton
             // 
             resources.ApplyResources(this.AudioOutputBotton, "AudioOutputBotton");
             this.AudioOutputBotton.Name = "AudioOutputBotton";
             this.AudioOutputBotton.UseVisualStyleBackColor = true;
             this.AudioOutputBotton.Click += new System.EventHandler(this.btnout3_Click);
-            // 
-            // lbaacrate
-            // 
-            resources.ApplyResources(this.lbaacrate, "lbaacrate");
-            this.lbaacrate.Name = "lbaacrate";
             // 
             // AudioStartButton
             // 
@@ -1770,19 +2539,6 @@
             resources.ApplyResources(this.AudioCustomParameterTextBox, "AudioCustomParameterTextBox");
             this.AudioCustomParameterTextBox.Name = "AudioCustomParameterTextBox";
             // 
-            // AudioBatchGroupBox
-            // 
-            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchConcatButton);
-            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchOutputNotificationLabel);
-            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchStartButton);
-            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchItemListBox);
-            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchAddButton);
-            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchClearButton);
-            this.AudioBatchGroupBox.Controls.Add(this.AudioBatchDeleteButton);
-            resources.ApplyResources(this.AudioBatchGroupBox, "AudioBatchGroupBox");
-            this.AudioBatchGroupBox.Name = "AudioBatchGroupBox";
-            this.AudioBatchGroupBox.TabStop = false;
-            // 
             // AudioBatchConcatButton
             // 
             resources.ApplyResources(this.AudioBatchConcatButton, "AudioBatchConcatButton");
@@ -1790,27 +2546,12 @@
             this.AudioBatchConcatButton.UseVisualStyleBackColor = true;
             this.AudioBatchConcatButton.Click += new System.EventHandler(this.AudioJoinButton_Click);
             // 
-            // AudioBatchOutputNotificationLabel
-            // 
-            resources.ApplyResources(this.AudioBatchOutputNotificationLabel, "AudioBatchOutputNotificationLabel");
-            this.AudioBatchOutputNotificationLabel.Name = "AudioBatchOutputNotificationLabel";
-            // 
             // AudioBatchStartButton
             // 
             resources.ApplyResources(this.AudioBatchStartButton, "AudioBatchStartButton");
             this.AudioBatchStartButton.Name = "AudioBatchStartButton";
             this.AudioBatchStartButton.UseVisualStyleBackColor = true;
             this.AudioBatchStartButton.Click += new System.EventHandler(this.AudioBatchButton_Click);
-            // 
-            // AudioBatchItemListBox
-            // 
-            this.AudioBatchItemListBox.AllowDrop = true;
-            this.AudioBatchItemListBox.FormattingEnabled = true;
-            resources.ApplyResources(this.AudioBatchItemListBox, "AudioBatchItemListBox");
-            this.AudioBatchItemListBox.Name = "AudioBatchItemListBox";
-            this.AudioBatchItemListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.AudioListBox_DragDrop);
-            this.AudioBatchItemListBox.DragOver += new System.Windows.Forms.DragEventHandler(this.AudioListBox_DragOver);
-            this.AudioBatchItemListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AudioListBox_MouseDown);
             // 
             // AudioBatchAddButton
             // 
@@ -1833,76 +2574,6 @@
             this.AudioBatchDeleteButton.UseVisualStyleBackColor = true;
             this.AudioBatchDeleteButton.Click += new System.EventHandler(this.AudioDeleteButton_Click);
             // 
-            // MiscOnePicGroupBox
-            // 
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicDurationSecondsLabel);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicDurationSecondsTextBox);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicDurationLabel);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicCrfNumericUpDown);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicCrfLabel);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicCopyAudioCheckBox);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicFpsLabel);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicFpsNumericUpDown);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicKbpsLabel);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicBitrateLabel);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicBitrateLabelNumericUpDown);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicOutputButton);
-            this.MiscOnePicGroupBox.Controls.Add(this.AudioOnePicButton);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicAudioInputButton);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicInputButton);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicOutputTextBox);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicAudioInputTextBox);
-            this.MiscOnePicGroupBox.Controls.Add(this.MiscOnePicInputTextBox);
-            resources.ApplyResources(this.MiscOnePicGroupBox, "MiscOnePicGroupBox");
-            this.MiscOnePicGroupBox.Name = "MiscOnePicGroupBox";
-            this.MiscOnePicGroupBox.TabStop = false;
-            // 
-            // MiscOnePicDurationSecondsLabel
-            // 
-            resources.ApplyResources(this.MiscOnePicDurationSecondsLabel, "MiscOnePicDurationSecondsLabel");
-            this.MiscOnePicDurationSecondsLabel.Name = "MiscOnePicDurationSecondsLabel";
-            // 
-            // MiscOnePicDurationSecondsTextBox
-            // 
-            resources.ApplyResources(this.MiscOnePicDurationSecondsTextBox, "MiscOnePicDurationSecondsTextBox");
-            this.MiscOnePicDurationSecondsTextBox.Name = "MiscOnePicDurationSecondsTextBox";
-            // 
-            // MiscOnePicDurationLabel
-            // 
-            resources.ApplyResources(this.MiscOnePicDurationLabel, "MiscOnePicDurationLabel");
-            this.MiscOnePicDurationLabel.Name = "MiscOnePicDurationLabel";
-            // 
-            // MiscOnePicCrfNumericUpDown
-            // 
-            this.MiscOnePicCrfNumericUpDown.DecimalPlaces = 1;
-            this.MiscOnePicCrfNumericUpDown.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            resources.ApplyResources(this.MiscOnePicCrfNumericUpDown, "MiscOnePicCrfNumericUpDown");
-            this.MiscOnePicCrfNumericUpDown.Maximum = new decimal(new int[] {
-            51,
-            0,
-            0,
-            0});
-            this.MiscOnePicCrfNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.MiscOnePicCrfNumericUpDown.Name = "MiscOnePicCrfNumericUpDown";
-            this.MiscOnePicCrfNumericUpDown.Value = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            // 
-            // MiscOnePicCrfLabel
-            // 
-            resources.ApplyResources(this.MiscOnePicCrfLabel, "MiscOnePicCrfLabel");
-            this.MiscOnePicCrfLabel.Name = "MiscOnePicCrfLabel";
-            // 
             // MiscOnePicCopyAudioCheckBox
             // 
             resources.ApplyResources(this.MiscOnePicCopyAudioCheckBox, "MiscOnePicCopyAudioCheckBox");
@@ -1910,56 +2581,6 @@
             this.MiscOnePicCopyAudioCheckBox.Name = "MiscOnePicCopyAudioCheckBox";
             this.MiscOnePicCopyAudioCheckBox.UseVisualStyleBackColor = false;
             this.MiscOnePicCopyAudioCheckBox.CheckedChanged += new System.EventHandler(this.AudioCopyCheckBox_CheckedChanged);
-            // 
-            // MiscOnePicFpsLabel
-            // 
-            resources.ApplyResources(this.MiscOnePicFpsLabel, "MiscOnePicFpsLabel");
-            this.MiscOnePicFpsLabel.Name = "MiscOnePicFpsLabel";
-            // 
-            // MiscOnePicFpsNumericUpDown
-            // 
-            resources.ApplyResources(this.MiscOnePicFpsNumericUpDown, "MiscOnePicFpsNumericUpDown");
-            this.MiscOnePicFpsNumericUpDown.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.MiscOnePicFpsNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.MiscOnePicFpsNumericUpDown.Name = "MiscOnePicFpsNumericUpDown";
-            this.MiscOnePicFpsNumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // MiscOnePicKbpsLabel
-            // 
-            resources.ApplyResources(this.MiscOnePicKbpsLabel, "MiscOnePicKbpsLabel");
-            this.MiscOnePicKbpsLabel.Name = "MiscOnePicKbpsLabel";
-            // 
-            // MiscOnePicBitrateLabel
-            // 
-            resources.ApplyResources(this.MiscOnePicBitrateLabel, "MiscOnePicBitrateLabel");
-            this.MiscOnePicBitrateLabel.Name = "MiscOnePicBitrateLabel";
-            // 
-            // MiscOnePicBitrateLabelNumericUpDown
-            // 
-            resources.ApplyResources(this.MiscOnePicBitrateLabelNumericUpDown, "MiscOnePicBitrateLabelNumericUpDown");
-            this.MiscOnePicBitrateLabelNumericUpDown.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.MiscOnePicBitrateLabelNumericUpDown.Name = "MiscOnePicBitrateLabelNumericUpDown";
-            this.MiscOnePicBitrateLabelNumericUpDown.Value = new decimal(new int[] {
-            128,
-            0,
-            0,
-            0});
             // 
             // MiscOnePicOutputButton
             // 
@@ -2019,147 +2640,6 @@
             this.MiscOnePicInputTextBox.Name = "MiscOnePicInputTextBox";
             this.MiscOnePicInputTextBox.ReadOnly = true;
             // 
-            // VideoTab
-            // 
-            this.VideoTab.AllowDrop = true;
-            this.VideoTab.Controls.Add(this.VideoFramesLabel);
-            this.VideoTab.Controls.Add(this.VideoSeekLabel);
-            this.VideoTab.Controls.Add(this.VideoFramesNumericUpDown);
-            this.VideoTab.Controls.Add(this.VideoSeekNumericUpDown);
-            this.VideoTab.Controls.Add(this.VideoMaintainResolutionCheckBox);
-            this.VideoTab.Controls.Add(this.VideoDemuxerComboBox);
-            this.VideoTab.Controls.Add(this.VideoBatchGroupBox);
-            this.VideoTab.Controls.Add(this.VideoAutoShutdownCheckBox);
-            this.VideoTab.Controls.Add(this.VideoAudioParameterTextBox);
-            this.VideoTab.Controls.Add(this.VideoSubtitleTextBox);
-            this.VideoTab.Controls.Add(this.VideoOutputTextBox);
-            this.VideoTab.Controls.Add(this.VideoInputTextBox);
-            this.VideoTab.Controls.Add(this.VideoX264ModePanel);
-            this.VideoTab.Controls.Add(this.VideoDemuxerLabel);
-            this.VideoTab.Controls.Add(this.VideoAddPresetButton);
-            this.VideoTab.Controls.Add(this.VideoDeletePresetButton);
-            this.VideoTab.Controls.Add(this.VideoStartButton);
-            this.VideoTab.Controls.Add(this.VideoSubtitleButton);
-            this.VideoTab.Controls.Add(this.VideoOutputButton);
-            this.VideoTab.Controls.Add(this.VideoInputButton);
-            this.VideoTab.Controls.Add(this.VideoEncoderLabel);
-            this.VideoTab.Controls.Add(this.VideoEncoderComboBox);
-            this.VideoTab.Controls.Add(this.VideoFpsComboBox);
-            this.VideoTab.Controls.Add(this.VideoFpsLabel);
-            this.VideoTab.Controls.Add(this.VideoAudioModeComboBox);
-            this.VideoTab.Controls.Add(this.VideoPresetComboBox);
-            this.VideoTab.Controls.Add(this.VideoAudioModeLabel);
-            this.VideoTab.Controls.Add(this.VideoGoToAudioLabel);
-            this.VideoTab.Controls.Add(this.VideoCrfKbpsLabel);
-            this.VideoTab.Controls.Add(this.VideoCrfLabel);
-            this.VideoTab.Controls.Add(this.labelx264Height);
-            this.VideoTab.Controls.Add(this.VideoWidthLabel);
-            this.VideoTab.Controls.Add(this.VideoHeightNumericUpDown);
-            this.VideoTab.Controls.Add(this.VideoWidthNumericUpDown);
-            this.VideoTab.Controls.Add(this.VideoCrfNumericUpDown);
-            this.VideoTab.Controls.Add(this.VideoBitrateLabel);
-            this.VideoTab.Controls.Add(this.VideoCustomParameterTextBox);
-            this.VideoTab.Controls.Add(this.VideoPresetLabel);
-            this.VideoTab.Controls.Add(this.VideoBitrateNumericUpDown);
-            resources.ApplyResources(this.VideoTab, "VideoTab");
-            this.VideoTab.Name = "VideoTab";
-            this.VideoTab.UseVisualStyleBackColor = true;
-            // 
-            // VideoFramesLabel
-            // 
-            resources.ApplyResources(this.VideoFramesLabel, "VideoFramesLabel");
-            this.VideoFramesLabel.Name = "VideoFramesLabel";
-            // 
-            // VideoSeekLabel
-            // 
-            resources.ApplyResources(this.VideoSeekLabel, "VideoSeekLabel");
-            this.VideoSeekLabel.Name = "VideoSeekLabel";
-            // 
-            // VideoFramesNumericUpDown
-            // 
-            resources.ApplyResources(this.VideoFramesNumericUpDown, "VideoFramesNumericUpDown");
-            this.VideoFramesNumericUpDown.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.VideoFramesNumericUpDown.Name = "VideoFramesNumericUpDown";
-            // 
-            // VideoSeekNumericUpDown
-            // 
-            resources.ApplyResources(this.VideoSeekNumericUpDown, "VideoSeekNumericUpDown");
-            this.VideoSeekNumericUpDown.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.VideoSeekNumericUpDown.Name = "VideoSeekNumericUpDown";
-            // 
-            // VideoMaintainResolutionCheckBox
-            // 
-            resources.ApplyResources(this.VideoMaintainResolutionCheckBox, "VideoMaintainResolutionCheckBox");
-            this.VideoMaintainResolutionCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.VideoMaintainResolutionCheckBox.Checked = true;
-            this.VideoMaintainResolutionCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.VideoMaintainResolutionCheckBox.Name = "VideoMaintainResolutionCheckBox";
-            this.VideoMaintainResolutionCheckBox.UseVisualStyleBackColor = true;
-            this.VideoMaintainResolutionCheckBox.CheckedChanged += new System.EventHandler(this.MaintainResolutionCheckBox_CheckedChanged);
-            // 
-            // VideoDemuxerComboBox
-            // 
-            this.VideoDemuxerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.VideoDemuxerComboBox.FormattingEnabled = true;
-            this.VideoDemuxerComboBox.Items.AddRange(new object[] {
-            resources.GetString("VideoDemuxerComboBox.Items"),
-            resources.GetString("VideoDemuxerComboBox.Items1"),
-            resources.GetString("VideoDemuxerComboBox.Items2"),
-            resources.GetString("VideoDemuxerComboBox.Items3"),
-            resources.GetString("VideoDemuxerComboBox.Items4"),
-            resources.GetString("VideoDemuxerComboBox.Items5")});
-            resources.ApplyResources(this.VideoDemuxerComboBox, "VideoDemuxerComboBox");
-            this.VideoDemuxerComboBox.Name = "VideoDemuxerComboBox";
-            // 
-            // VideoBatchGroupBox
-            // 
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchFormatLabel);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchFormatComboBox);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchSubtitleLanguage);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchOutputFolderButton);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchOutputFolderTextBox);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchItemListbox);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchClearButton);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchSubtitleCheckBox);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchDeleteButton);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchAddButton);
-            this.VideoBatchGroupBox.Controls.Add(this.VideoBatchStartButton);
-            resources.ApplyResources(this.VideoBatchGroupBox, "VideoBatchGroupBox");
-            this.VideoBatchGroupBox.Name = "VideoBatchGroupBox";
-            this.VideoBatchGroupBox.TabStop = false;
-            // 
-            // VideoBatchFormatLabel
-            // 
-            resources.ApplyResources(this.VideoBatchFormatLabel, "VideoBatchFormatLabel");
-            this.VideoBatchFormatLabel.Name = "VideoBatchFormatLabel";
-            // 
-            // VideoBatchFormatComboBox
-            // 
-            this.VideoBatchFormatComboBox.FormattingEnabled = true;
-            this.VideoBatchFormatComboBox.Items.AddRange(new object[] {
-            resources.GetString("VideoBatchFormatComboBox.Items"),
-            resources.GetString("VideoBatchFormatComboBox.Items1"),
-            resources.GetString("VideoBatchFormatComboBox.Items2"),
-            resources.GetString("VideoBatchFormatComboBox.Items3"),
-            resources.GetString("VideoBatchFormatComboBox.Items4"),
-            resources.GetString("VideoBatchFormatComboBox.Items5")});
-            resources.ApplyResources(this.VideoBatchFormatComboBox, "VideoBatchFormatComboBox");
-            this.VideoBatchFormatComboBox.Name = "VideoBatchFormatComboBox";
-            // 
-            // VideoBatchSubtitleLanguage
-            // 
-            this.VideoBatchSubtitleLanguage.FormattingEnabled = true;
-            resources.ApplyResources(this.VideoBatchSubtitleLanguage, "VideoBatchSubtitleLanguage");
-            this.VideoBatchSubtitleLanguage.Name = "VideoBatchSubtitleLanguage";
-            // 
             // VideoBatchOutputFolderButton
             // 
             resources.ApplyResources(this.VideoBatchOutputFolderButton, "VideoBatchOutputFolderButton");
@@ -2175,19 +2655,6 @@
             this.VideoBatchOutputFolderTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.VideoBatchOutputFolderTextBox, "VideoBatchOutputFolderTextBox");
             this.VideoBatchOutputFolderTextBox.Name = "VideoBatchOutputFolderTextBox";
-            // 
-            // VideoBatchItemListbox
-            // 
-            this.VideoBatchItemListbox.AllowDrop = true;
-            this.VideoBatchItemListbox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.VideoBatchItemListbox.FormattingEnabled = true;
-            resources.ApplyResources(this.VideoBatchItemListbox, "VideoBatchItemListbox");
-            this.VideoBatchItemListbox.Name = "VideoBatchItemListbox";
-            this.VideoBatchItemListbox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lbAuto_DrawItem);
-            this.VideoBatchItemListbox.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragDrop);
-            this.VideoBatchItemListbox.DragEnter += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragEnter);
-            this.VideoBatchItemListbox.DragOver += new System.Windows.Forms.DragEventHandler(this.lbAuto_DragOver);
-            this.VideoBatchItemListbox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbAuto_MouseDown);
             // 
             // VideoBatchClearButton
             // 
@@ -2274,14 +2741,6 @@
             this.VideoInputTextBox.ReadOnly = true;
             this.VideoInputTextBox.TextChanged += new System.EventHandler(this.x264VideoTextBox_TextChanged);
             // 
-            // VideoX264ModePanel
-            // 
-            this.VideoX264ModePanel.Controls.Add(this.VideoModeCrfRadioButton);
-            this.VideoX264ModePanel.Controls.Add(this.VideoModeCustomRadioButton);
-            this.VideoX264ModePanel.Controls.Add(this.VideoMode2PassRadioButton);
-            resources.ApplyResources(this.VideoX264ModePanel, "VideoX264ModePanel");
-            this.VideoX264ModePanel.Name = "VideoX264ModePanel";
-            // 
             // VideoModeCrfRadioButton
             // 
             resources.ApplyResources(this.VideoModeCrfRadioButton, "VideoModeCrfRadioButton");
@@ -2307,11 +2766,6 @@
             this.VideoMode2PassRadioButton.Name = "VideoMode2PassRadioButton";
             this.VideoMode2PassRadioButton.UseVisualStyleBackColor = false;
             this.VideoMode2PassRadioButton.CheckedChanged += new System.EventHandler(this.x264Mode2RadioButton_CheckedChanged);
-            // 
-            // VideoDemuxerLabel
-            // 
-            resources.ApplyResources(this.VideoDemuxerLabel, "VideoDemuxerLabel");
-            this.VideoDemuxerLabel.Name = "VideoDemuxerLabel";
             // 
             // VideoAddPresetButton
             // 
@@ -2355,142 +2809,6 @@
             this.VideoInputButton.UseVisualStyleBackColor = true;
             this.VideoInputButton.Click += new System.EventHandler(this.x264VideoBtn_Click);
             // 
-            // VideoEncoderLabel
-            // 
-            resources.ApplyResources(this.VideoEncoderLabel, "VideoEncoderLabel");
-            this.VideoEncoderLabel.Name = "VideoEncoderLabel";
-            // 
-            // VideoEncoderComboBox
-            // 
-            this.VideoEncoderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.VideoEncoderComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.VideoEncoderComboBox, "VideoEncoderComboBox");
-            this.VideoEncoderComboBox.Name = "VideoEncoderComboBox";
-            this.VideoEncoderComboBox.SelectedIndexChanged += new System.EventHandler(this.x264ExeComboBox_SelectedIndexChanged);
-            // 
-            // VideoFpsComboBox
-            // 
-            this.VideoFpsComboBox.FormattingEnabled = true;
-            this.VideoFpsComboBox.Items.AddRange(new object[] {
-            resources.GetString("VideoFpsComboBox.Items"),
-            resources.GetString("VideoFpsComboBox.Items1"),
-            resources.GetString("VideoFpsComboBox.Items2"),
-            resources.GetString("VideoFpsComboBox.Items3"),
-            resources.GetString("VideoFpsComboBox.Items4"),
-            resources.GetString("VideoFpsComboBox.Items5"),
-            resources.GetString("VideoFpsComboBox.Items6"),
-            resources.GetString("VideoFpsComboBox.Items7"),
-            resources.GetString("VideoFpsComboBox.Items8")});
-            resources.ApplyResources(this.VideoFpsComboBox, "VideoFpsComboBox");
-            this.VideoFpsComboBox.Name = "VideoFpsComboBox";
-            // 
-            // VideoFpsLabel
-            // 
-            resources.ApplyResources(this.VideoFpsLabel, "VideoFpsLabel");
-            this.VideoFpsLabel.Name = "VideoFpsLabel";
-            // 
-            // VideoAudioModeComboBox
-            // 
-            this.VideoAudioModeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.VideoAudioModeComboBox.FormattingEnabled = true;
-            this.VideoAudioModeComboBox.Items.AddRange(new object[] {
-            resources.GetString("VideoAudioModeComboBox.Items"),
-            resources.GetString("VideoAudioModeComboBox.Items1"),
-            resources.GetString("VideoAudioModeComboBox.Items2")});
-            resources.ApplyResources(this.VideoAudioModeComboBox, "VideoAudioModeComboBox");
-            this.VideoAudioModeComboBox.Name = "VideoAudioModeComboBox";
-            // 
-            // VideoPresetComboBox
-            // 
-            this.VideoPresetComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.VideoPresetComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.VideoPresetComboBox, "VideoPresetComboBox");
-            this.VideoPresetComboBox.Name = "VideoPresetComboBox";
-            this.VideoPresetComboBox.SelectedIndexChanged += new System.EventHandler(this.cbX264_SelectedIndexChanged);
-            // 
-            // VideoAudioModeLabel
-            // 
-            resources.ApplyResources(this.VideoAudioModeLabel, "VideoAudioModeLabel");
-            this.VideoAudioModeLabel.Name = "VideoAudioModeLabel";
-            // 
-            // VideoGoToAudioLabel
-            // 
-            resources.ApplyResources(this.VideoGoToAudioLabel, "VideoGoToAudioLabel");
-            this.VideoGoToAudioLabel.ForeColor = System.Drawing.Color.Blue;
-            this.VideoGoToAudioLabel.Name = "VideoGoToAudioLabel";
-            this.VideoGoToAudioLabel.Click += new System.EventHandler(this.labelAudio_Click);
-            // 
-            // VideoCrfKbpsLabel
-            // 
-            resources.ApplyResources(this.VideoCrfKbpsLabel, "VideoCrfKbpsLabel");
-            this.VideoCrfKbpsLabel.Name = "VideoCrfKbpsLabel";
-            // 
-            // VideoCrfLabel
-            // 
-            resources.ApplyResources(this.VideoCrfLabel, "VideoCrfLabel");
-            this.VideoCrfLabel.Name = "VideoCrfLabel";
-            // 
-            // labelx264Height
-            // 
-            resources.ApplyResources(this.labelx264Height, "labelx264Height");
-            this.labelx264Height.Name = "labelx264Height";
-            // 
-            // VideoWidthLabel
-            // 
-            resources.ApplyResources(this.VideoWidthLabel, "VideoWidthLabel");
-            this.VideoWidthLabel.Name = "VideoWidthLabel";
-            // 
-            // VideoHeightNumericUpDown
-            // 
-            resources.ApplyResources(this.VideoHeightNumericUpDown, "VideoHeightNumericUpDown");
-            this.VideoHeightNumericUpDown.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.VideoHeightNumericUpDown.Name = "VideoHeightNumericUpDown";
-            // 
-            // VideoWidthNumericUpDown
-            // 
-            resources.ApplyResources(this.VideoWidthNumericUpDown, "VideoWidthNumericUpDown");
-            this.VideoWidthNumericUpDown.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.VideoWidthNumericUpDown.Name = "VideoWidthNumericUpDown";
-            // 
-            // VideoCrfNumericUpDown
-            // 
-            this.VideoCrfNumericUpDown.DecimalPlaces = 1;
-            this.VideoCrfNumericUpDown.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            resources.ApplyResources(this.VideoCrfNumericUpDown, "VideoCrfNumericUpDown");
-            this.VideoCrfNumericUpDown.Maximum = new decimal(new int[] {
-            63,
-            0,
-            0,
-            0});
-            this.VideoCrfNumericUpDown.Minimum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            -2147483648});
-            this.VideoCrfNumericUpDown.Name = "VideoCrfNumericUpDown";
-            this.VideoCrfNumericUpDown.Value = new decimal(new int[] {
-            235,
-            0,
-            0,
-            65536});
-            // 
-            // VideoBitrateLabel
-            // 
-            resources.ApplyResources(this.VideoBitrateLabel, "VideoBitrateLabel");
-            this.VideoBitrateLabel.Name = "VideoBitrateLabel";
-            // 
             // VideoCustomParameterTextBox
             // 
             this.VideoCustomParameterTextBox.AllowDrop = true;
@@ -2501,68 +2819,12 @@
             this.VideoCustomParameterTextBox.Name = "VideoCustomParameterTextBox";
             this.VideoCustomParameterTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.x264CustomParameterTextBox_KeyDown);
             // 
-            // VideoPresetLabel
-            // 
-            resources.ApplyResources(this.VideoPresetLabel, "VideoPresetLabel");
-            this.VideoPresetLabel.Name = "VideoPresetLabel";
-            // 
-            // VideoBitrateNumericUpDown
-            // 
-            resources.ApplyResources(this.VideoBitrateNumericUpDown, "VideoBitrateNumericUpDown");
-            this.VideoBitrateNumericUpDown.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.VideoBitrateNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.VideoBitrateNumericUpDown.Name = "VideoBitrateNumericUpDown";
-            this.VideoBitrateNumericUpDown.Value = new decimal(new int[] {
-            800,
-            0,
-            0,
-            0});
-            // 
-            // HelpTab
-            // 
-            this.HelpTab.Controls.Add(this.FeedbackButton);
-            this.HelpTab.Controls.Add(this.HelpTextBox);
-            this.HelpTab.Controls.Add(this.ReleaseDatelabel);
-            this.HelpTab.Controls.Add(this.ReleaseDatelabel2);
-            this.HelpTab.Controls.Add(this.CheckUpdateButton);
-            this.HelpTab.Controls.Add(this.HomePageBtn);
-            this.HelpTab.Controls.Add(this.AboutBtn);
-            resources.ApplyResources(this.HelpTab, "HelpTab");
-            this.HelpTab.Name = "HelpTab";
-            this.HelpTab.UseVisualStyleBackColor = true;
-            // 
             // FeedbackButton
             // 
             resources.ApplyResources(this.FeedbackButton, "FeedbackButton");
             this.FeedbackButton.Name = "FeedbackButton";
             this.FeedbackButton.UseVisualStyleBackColor = true;
             this.FeedbackButton.Click += new System.EventHandler(this.FeedbackButton_Click);
-            // 
-            // HelpTextBox
-            // 
-            resources.ApplyResources(this.HelpTextBox, "HelpTextBox");
-            this.HelpTextBox.Name = "HelpTextBox";
-            this.HelpTextBox.ReadOnly = true;
-            this.HelpTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.HelpTextBox_LinkClicked);
-            // 
-            // ReleaseDatelabel
-            // 
-            resources.ApplyResources(this.ReleaseDatelabel, "ReleaseDatelabel");
-            this.ReleaseDatelabel.Name = "ReleaseDatelabel";
-            this.ReleaseDatelabel.DoubleClick += new System.EventHandler(this.ReleaseDatelabel_DoubleClick);
-            // 
-            // ReleaseDatelabel2
-            // 
-            resources.ApplyResources(this.ReleaseDatelabel2, "ReleaseDatelabel2");
-            this.ReleaseDatelabel2.Name = "ReleaseDatelabel2";
             // 
             // CheckUpdateButton
             // 
@@ -2585,137 +2847,6 @@
             this.AboutBtn.UseVisualStyleBackColor = true;
             this.AboutBtn.Click += new System.EventHandler(this.AboutBtn_Click);
             // 
-            // tabControl
-            // 
-            this.tabControl.AllowDrop = true;
-            this.tabControl.Controls.Add(this.VideoTab);
-            this.tabControl.Controls.Add(this.AudioTab);
-            this.tabControl.Controls.Add(this.MiscTab);
-            this.tabControl.Controls.Add(this.MuxTab);
-            this.tabControl.Controls.Add(this.ExtractTab);
-            this.tabControl.Controls.Add(this.AVSTab);
-            this.tabControl.Controls.Add(this.MediaInfoTab);
-            this.tabControl.Controls.Add(this.SetupTabPage);
-            this.tabControl.Controls.Add(this.HelpTab);
-            this.tabControl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tabControl.HotTrack = true;
-            resources.ApplyResources(this.tabControl, "tabControl");
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.DragOver += new System.Windows.Forms.DragEventHandler(this.tabControl_DragOver);
-            // 
-            // MiscTab
-            // 
-            this.MiscTab.Controls.Add(this.MiscBlackGroupBox);
-            this.MiscTab.Controls.Add(this.MiscMiscGroupBox);
-            this.MiscTab.Controls.Add(this.MiscOnePicGroupBox);
-            resources.ApplyResources(this.MiscTab, "MiscTab");
-            this.MiscTab.Name = "MiscTab";
-            this.MiscTab.UseVisualStyleBackColor = true;
-            // 
-            // MiscBlackGroupBox
-            // 
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackKbpsLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackBitrateLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackBitrateNumericUpDown);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationSecondsLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationSecondsComboBox);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackCrfNumericUpDown);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackCrfLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackNoPicCheckBox);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsComboBox);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsNumericUpDown);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackPicInputButton);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackPicInputTextBox);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackStartButton);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackOutputButton);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackVideoInputButton);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackOutputTextBox);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackVideoInputTextBox);
-            resources.ApplyResources(this.MiscBlackGroupBox, "MiscBlackGroupBox");
-            this.MiscBlackGroupBox.Name = "MiscBlackGroupBox";
-            this.MiscBlackGroupBox.TabStop = false;
-            // 
-            // MiscBlackKbpsLabel
-            // 
-            resources.ApplyResources(this.MiscBlackKbpsLabel, "MiscBlackKbpsLabel");
-            this.MiscBlackKbpsLabel.Name = "MiscBlackKbpsLabel";
-            // 
-            // MiscBlackBitrateLabel
-            // 
-            resources.ApplyResources(this.MiscBlackBitrateLabel, "MiscBlackBitrateLabel");
-            this.MiscBlackBitrateLabel.Name = "MiscBlackBitrateLabel";
-            // 
-            // MiscBlackBitrateNumericUpDown
-            // 
-            resources.ApplyResources(this.MiscBlackBitrateNumericUpDown, "MiscBlackBitrateNumericUpDown");
-            this.MiscBlackBitrateNumericUpDown.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.MiscBlackBitrateNumericUpDown.Name = "MiscBlackBitrateNumericUpDown";
-            this.MiscBlackBitrateNumericUpDown.Value = new decimal(new int[] {
-            900,
-            0,
-            0,
-            0});
-            // 
-            // MiscBlackDurationSecondsLabel
-            // 
-            resources.ApplyResources(this.MiscBlackDurationSecondsLabel, "MiscBlackDurationSecondsLabel");
-            this.MiscBlackDurationSecondsLabel.Name = "MiscBlackDurationSecondsLabel";
-            // 
-            // MiscBlackDurationSecondsComboBox
-            // 
-            this.MiscBlackDurationSecondsComboBox.FormattingEnabled = true;
-            this.MiscBlackDurationSecondsComboBox.Items.AddRange(new object[] {
-            resources.GetString("MiscBlackDurationSecondsComboBox.Items"),
-            resources.GetString("MiscBlackDurationSecondsComboBox.Items1"),
-            resources.GetString("MiscBlackDurationSecondsComboBox.Items2"),
-            resources.GetString("MiscBlackDurationSecondsComboBox.Items3"),
-            resources.GetString("MiscBlackDurationSecondsComboBox.Items4")});
-            resources.ApplyResources(this.MiscBlackDurationSecondsComboBox, "MiscBlackDurationSecondsComboBox");
-            this.MiscBlackDurationSecondsComboBox.Name = "MiscBlackDurationSecondsComboBox";
-            this.MiscBlackDurationSecondsComboBox.SelectedIndexChanged += new System.EventHandler(this.BlackSecondComboBox_SelectedIndexChanged);
-            // 
-            // MiscBlackDurationLabel
-            // 
-            resources.ApplyResources(this.MiscBlackDurationLabel, "MiscBlackDurationLabel");
-            this.MiscBlackDurationLabel.Name = "MiscBlackDurationLabel";
-            // 
-            // MiscBlackCrfNumericUpDown
-            // 
-            this.MiscBlackCrfNumericUpDown.DecimalPlaces = 1;
-            this.MiscBlackCrfNumericUpDown.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            resources.ApplyResources(this.MiscBlackCrfNumericUpDown, "MiscBlackCrfNumericUpDown");
-            this.MiscBlackCrfNumericUpDown.Maximum = new decimal(new int[] {
-            63,
-            0,
-            0,
-            0});
-            this.MiscBlackCrfNumericUpDown.Minimum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            -2147483648});
-            this.MiscBlackCrfNumericUpDown.Name = "MiscBlackCrfNumericUpDown";
-            this.MiscBlackCrfNumericUpDown.Value = new decimal(new int[] {
-            51,
-            0,
-            0,
-            0});
-            // 
-            // MiscBlackCrfLabel
-            // 
-            resources.ApplyResources(this.MiscBlackCrfLabel, "MiscBlackCrfLabel");
-            this.MiscBlackCrfLabel.Name = "MiscBlackCrfLabel";
-            // 
             // MiscBlackNoPicCheckBox
             // 
             resources.ApplyResources(this.MiscBlackNoPicCheckBox, "MiscBlackNoPicCheckBox");
@@ -2725,31 +2856,6 @@
             this.MiscBlackNoPicCheckBox.Name = "MiscBlackNoPicCheckBox";
             this.MiscBlackNoPicCheckBox.UseVisualStyleBackColor = false;
             this.MiscBlackNoPicCheckBox.CheckedChanged += new System.EventHandler(this.BlackNoPicCheckBox_CheckedChanged);
-            // 
-            // MiscBlackFpsComboBox
-            // 
-            resources.ApplyResources(this.MiscBlackFpsComboBox, "MiscBlackFpsComboBox");
-            this.MiscBlackFpsComboBox.Name = "MiscBlackFpsComboBox";
-            // 
-            // MiscBlackFpsNumericUpDown
-            // 
-            resources.ApplyResources(this.MiscBlackFpsNumericUpDown, "MiscBlackFpsNumericUpDown");
-            this.MiscBlackFpsNumericUpDown.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.MiscBlackFpsNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.MiscBlackFpsNumericUpDown.Name = "MiscBlackFpsNumericUpDown";
-            this.MiscBlackFpsNumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // MiscBlackPicInputButton
             // 
@@ -2808,30 +2914,6 @@
             this.MiscBlackVideoInputTextBox.ReadOnly = true;
             this.MiscBlackVideoInputTextBox.TextChanged += new System.EventHandler(this.BlackVideoTextBox_TextChanged);
             // 
-            // SetupTabPage
-            // 
-            this.SetupTabPage.Controls.Add(this.groupBox14);
-            this.SetupTabPage.Controls.Add(this.groupBox13);
-            this.SetupTabPage.Controls.Add(this.groupBox12);
-            this.SetupTabPage.Controls.Add(this.DeleteLogButton);
-            this.SetupTabPage.Controls.Add(this.SetDefaultButton);
-            this.SetupTabPage.Controls.Add(this.ViewLogButton);
-            resources.ApplyResources(this.SetupTabPage, "SetupTabPage");
-            this.SetupTabPage.Name = "SetupTabPage";
-            this.SetupTabPage.UseVisualStyleBackColor = true;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.x265CheckBox);
-            this.groupBox14.Controls.Add(this.label38);
-            this.groupBox14.Controls.Add(this.SetupPlayerTextBox);
-            this.groupBox14.Controls.Add(this.SetupPlayerButton);
-            this.groupBox14.Controls.Add(this.SetupDeleteTempFileCheckBox);
-            this.groupBox14.Controls.Add(this.CheckUpdateCheckBox);
-            resources.ApplyResources(this.groupBox14, "groupBox14");
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.TabStop = false;
-            // 
             // x265CheckBox
             // 
             resources.ApplyResources(this.x265CheckBox, "x265CheckBox");
@@ -2841,11 +2923,6 @@
             this.x265CheckBox.Name = "x265CheckBox";
             this.x265CheckBox.UseVisualStyleBackColor = false;
             this.x265CheckBox.Click += new System.EventHandler(this.x265CheckBox_Click);
-            // 
-            // label38
-            // 
-            resources.ApplyResources(this.label38, "label38");
-            this.label38.Name = "label38";
             // 
             // SetupPlayerTextBox
             // 
@@ -2881,16 +2958,6 @@
             this.CheckUpdateCheckBox.Name = "CheckUpdateCheckBox";
             this.CheckUpdateCheckBox.UseVisualStyleBackColor = false;
             // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.SplashScreenCheckBox);
-            this.groupBox13.Controls.Add(this.TrayModeCheckBox);
-            this.groupBox13.Controls.Add(this.label26);
-            this.groupBox13.Controls.Add(this.languageComboBox);
-            resources.ApplyResources(this.groupBox13, "groupBox13");
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.TabStop = false;
-            // 
             // SplashScreenCheckBox
             // 
             resources.ApplyResources(this.SplashScreenCheckBox, "SplashScreenCheckBox");
@@ -2908,36 +2975,6 @@
             this.TrayModeCheckBox.UseVisualStyleBackColor = false;
             this.TrayModeCheckBox.CheckedChanged += new System.EventHandler(this.TrayModeCheckBox_CheckedChanged);
             // 
-            // label26
-            // 
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.Name = "label26";
-            // 
-            // languageComboBox
-            // 
-            this.languageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.languageComboBox.FormattingEnabled = true;
-            this.languageComboBox.Items.AddRange(new object[] {
-            resources.GetString("languageComboBox.Items"),
-            resources.GetString("languageComboBox.Items1"),
-            resources.GetString("languageComboBox.Items2"),
-            resources.GetString("languageComboBox.Items3")});
-            resources.ApplyResources(this.languageComboBox, "languageComboBox");
-            this.languageComboBox.Name = "languageComboBox";
-            this.languageComboBox.SelectedIndexChanged += new System.EventHandler(this.languageComboBox_SelectedIndexChanged);
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.x264extraLine);
-            this.groupBox12.Controls.Add(this.label43);
-            this.groupBox12.Controls.Add(this.x264PriorityComboBox);
-            this.groupBox12.Controls.Add(this.x264ThreadsComboBox);
-            this.groupBox12.Controls.Add(this.label2);
-            this.groupBox12.Controls.Add(this.label11);
-            resources.ApplyResources(this.groupBox12, "groupBox12");
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.TabStop = false;
-            // 
             // x264extraLine
             // 
             this.x264extraLine.AllowDrop = true;
@@ -2946,43 +2983,6 @@
             this.x264extraLine.EmptyTextTipColor = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.x264extraLine, "x264extraLine");
             this.x264extraLine.Name = "x264extraLine";
-            // 
-            // label43
-            // 
-            resources.ApplyResources(this.label43, "label43");
-            this.label43.Name = "label43";
-            // 
-            // x264PriorityComboBox
-            // 
-            this.x264PriorityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.x264PriorityComboBox.FormattingEnabled = true;
-            this.x264PriorityComboBox.Items.AddRange(new object[] {
-            resources.GetString("x264PriorityComboBox.Items"),
-            resources.GetString("x264PriorityComboBox.Items1"),
-            resources.GetString("x264PriorityComboBox.Items2"),
-            resources.GetString("x264PriorityComboBox.Items3"),
-            resources.GetString("x264PriorityComboBox.Items4"),
-            resources.GetString("x264PriorityComboBox.Items5")});
-            resources.ApplyResources(this.x264PriorityComboBox, "x264PriorityComboBox");
-            this.x264PriorityComboBox.Name = "x264PriorityComboBox";
-            this.x264PriorityComboBox.SelectedIndexChanged += new System.EventHandler(this.x264PriorityComboBox_SelectedIndexChanged);
-            // 
-            // x264ThreadsComboBox
-            // 
-            this.x264ThreadsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.x264ThreadsComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.x264ThreadsComboBox, "x264ThreadsComboBox");
-            this.x264ThreadsComboBox.Name = "x264ThreadsComboBox";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
             // 
             // DeleteLogButton
             // 
@@ -3046,12 +3046,12 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.MuxTab.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.MuxConvertGroupBox.ResumeLayout(false);
+            this.MuxConvertGroupBox.PerformLayout();
+            this.MuxMp4GroupBox.ResumeLayout(false);
+            this.MuxMp4GroupBox.PerformLayout();
+            this.MuxMkvGroupBox.ResumeLayout(false);
+            this.MuxMkvGroupBox.PerformLayout();
             this.AudioTab.ResumeLayout(false);
             this.AudioGroupBox.ResumeLayout(false);
             this.AudioGroupBox.PerformLayout();
@@ -3143,33 +3143,33 @@
         private ControlExs.QQButton btnaextract;
         private ControlExs.QQButton btnaextract2;
         private System.Windows.Forms.TabPage MuxTab;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private ControlExs.QQTextBox txtvideo5;
-        private ControlExs.QQButton button4;
-        private ControlExs.QQTextBox txtsub;
-        private ControlExs.QQButton button3;
-        private ControlExs.QQTextBox txtaudio3;
-        private ControlExs.QQButton button5;
-        private ControlExs.QQTextBox txtout6;
-        private ControlExs.QQButton button2;
-        private ControlExs.QQButton button7;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ListBox lbffmpeg;
-        private ControlExs.QQButton btnffmpegAdd;
-        private ControlExs.QQButton btnffmpegClear;
-        private System.Windows.Forms.Label label3;
-        private ControlExs.QQButton btnffmpegDel;
-        private ControlExs.QQButton btnBatchMP4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private ControlExs.QQTextBox txtvideo;
-        private ControlExs.QQButton btnvideo;
+        private System.Windows.Forms.GroupBox MuxMkvGroupBox;
+        private ControlExs.QQTextBox MuxMkvVideoInputTextBox;
+        private ControlExs.QQButton MuxMkvOutputButton;
+        private ControlExs.QQTextBox MuxMkvSubtitleTextBox;
+        private ControlExs.QQButton MuxMkvAudioInputButton;
+        private ControlExs.QQTextBox MuxMkvAudioInputTextBox;
+        private ControlExs.QQButton MuxMkvSubtitleButton;
+        private ControlExs.QQTextBox MuxMkvOutputTextBox;
+        private ControlExs.QQButton MuxMkvVideoInputButton;
+        private ControlExs.QQButton MuxMkvStartButton;
+        private System.Windows.Forms.GroupBox MuxConvertGroupBox;
+        private System.Windows.Forms.ListBox MuxConvertItemListBox;
+        private ControlExs.QQButton MuxConvertAddButton;
+        private ControlExs.QQButton MuxConvertClearButton;
+        private System.Windows.Forms.Label MuxConvertOutputNotificationLabel;
+        private ControlExs.QQButton MuxConvertDeleteButton;
+        private ControlExs.QQButton MuxConvertStartButton;
+        private System.Windows.Forms.GroupBox MuxMp4GroupBox;
+        private ControlExs.QQTextBox MuxMp4VideoInputTextBox;
+        private ControlExs.QQButton MuxMp4VideoInputButton;
         private ControlExs.QQButton btnmux;
-        private System.Windows.Forms.ComboBox cbFPS;
-        private ControlExs.QQButton btnaudio;
-        private ControlExs.QQButton btnout;
-        private ControlExs.QQTextBox txtaudio;
-        private System.Windows.Forms.Label label14;
-        private ControlExs.QQTextBox txtout;
+        private System.Windows.Forms.ComboBox MuxMp4FpsComboBox;
+        private ControlExs.QQButton MuxMp4AudioInputButton;
+        private ControlExs.QQButton MuxMp4OutputButton;
+        private ControlExs.QQTextBox MuxMp4AudioInputTextBox;
+        private System.Windows.Forms.Label MuxMp4FpsLabel;
+        private ControlExs.QQTextBox MuxMp4OutputTextBox;
         private System.Windows.Forms.TabPage AudioTab;
         private System.Windows.Forms.Panel AudioAudioModePanel;
         private System.Windows.Forms.Label AudioKbpsLabel;
@@ -3351,13 +3351,13 @@
         private ControlExs.QQButton AVSAddFilterButton;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.ComboBox VideoBatchSubtitleLanguage;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.ComboBox MuxFormatComboBox;
+        private System.Windows.Forms.Label MuxConvertFormatLabel;
+        private System.Windows.Forms.ComboBox MuxConvertFormatComboBox;
         private ControlExs.QQButton AudioBatchConcatButton;
-        private System.Windows.Forms.ComboBox Mp4BoxParComboBox;
-        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.ComboBox MuxMp4ParComboBox;
+        private System.Windows.Forms.Label MuxMp4ParLabel;
         private ControlExs.QQButton gmkvextractguibButton;
-        private ControlExs.QQButton MuxReplaceAudioButton;
+        private ControlExs.QQButton MuxMp4ReplaceAudioButton;
         private ControlExs.QQButton FeedbackButton;
         private ControlExs.QQCheckBox CheckUpdateCheckBox;
         private System.Windows.Forms.ComboBox MiscMiscTransposeComboBox;
@@ -3372,8 +3372,8 @@
         private ControlExs.QQTextBox x264extraLine;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.ComboBox MuxAacEncoderComboBox;
+        private System.Windows.Forms.Label MuxConvertAacEncoderLabel;
+        private System.Windows.Forms.ComboBox MuxConvertAacEncoderComboBox;
         private ControlExs.QQCheckBox x265CheckBox;
         private ControlExs.QQButton AudioPresetDeleteButton;
         private ControlExs.QQButton AudioPresetAddButton;

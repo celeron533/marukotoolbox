@@ -2748,499 +2748,499 @@
   <data name="&gt;&gt;ExtractTab.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label44.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MuxConvertAacEncoderLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label44.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxConvertAacEncoderLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label44.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertAacEncoderLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 246</value>
   </data>
-  <data name="label44.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertAacEncoderLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 12</value>
   </data>
-  <data name="label44.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertAacEncoderLabel.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <data name="label44.Text" xml:space="preserve">
+  <data name="MuxConvertAacEncoderLabel.Text" xml:space="preserve">
     <value>AAC编码器</value>
   </data>
-  <data name="&gt;&gt;label44.Name" xml:space="preserve">
-    <value>label44</value>
+  <data name="&gt;&gt;MuxConvertAacEncoderLabel.Name" xml:space="preserve">
+    <value>MuxConvertAacEncoderLabel</value>
   </data>
-  <data name="&gt;&gt;label44.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertAacEncoderLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label44.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertAacEncoderLabel.Parent" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;label44.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertAacEncoderLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="MuxAacEncoderComboBox.Items" xml:space="preserve">
+  <data name="MuxConvertAacEncoderComboBox.Items" xml:space="preserve">
     <value>aac</value>
   </data>
-  <data name="MuxAacEncoderComboBox.Items1" xml:space="preserve">
+  <data name="MuxConvertAacEncoderComboBox.Items1" xml:space="preserve">
     <value>libfdk_aac</value>
   </data>
-  <data name="MuxAacEncoderComboBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertAacEncoderComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 241</value>
   </data>
-  <data name="MuxAacEncoderComboBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertAacEncoderComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 20</value>
   </data>
-  <data name="MuxAacEncoderComboBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertAacEncoderComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="MuxAacEncoderComboBox.Text" xml:space="preserve">
+  <data name="MuxConvertAacEncoderComboBox.Text" xml:space="preserve">
     <value>aac</value>
   </data>
-  <data name="&gt;&gt;MuxAacEncoderComboBox.Name" xml:space="preserve">
-    <value>MuxAacEncoderComboBox</value>
+  <data name="&gt;&gt;MuxConvertAacEncoderComboBox.Name" xml:space="preserve">
+    <value>MuxConvertAacEncoderComboBox</value>
   </data>
-  <data name="&gt;&gt;MuxAacEncoderComboBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertAacEncoderComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MuxAacEncoderComboBox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertAacEncoderComboBox.Parent" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;MuxAacEncoderComboBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertAacEncoderComboBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label40.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MuxConvertFormatLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label40.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxConvertFormatLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label40.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertFormatLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>204, 246</value>
   </data>
-  <data name="label40.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 12</value>
   </data>
-  <data name="label40.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertFormatLabel.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="label40.Text" xml:space="preserve">
+  <data name="MuxConvertFormatLabel.Text" xml:space="preserve">
     <value>输出格式</value>
   </data>
-  <data name="&gt;&gt;label40.Name" xml:space="preserve">
-    <value>label40</value>
+  <data name="&gt;&gt;MuxConvertFormatLabel.Name" xml:space="preserve">
+    <value>MuxConvertFormatLabel</value>
   </data>
-  <data name="&gt;&gt;label40.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertFormatLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label40.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertFormatLabel.Parent" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;label40.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertFormatLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="MuxFormatComboBox.Items" xml:space="preserve">
+  <data name="MuxConvertFormatComboBox.Items" xml:space="preserve">
     <value>flv</value>
   </data>
-  <data name="MuxFormatComboBox.Items1" xml:space="preserve">
+  <data name="MuxConvertFormatComboBox.Items1" xml:space="preserve">
     <value>mp4</value>
   </data>
-  <data name="MuxFormatComboBox.Items2" xml:space="preserve">
+  <data name="MuxConvertFormatComboBox.Items2" xml:space="preserve">
     <value>mkv</value>
   </data>
-  <data name="MuxFormatComboBox.Items3" xml:space="preserve">
+  <data name="MuxConvertFormatComboBox.Items3" xml:space="preserve">
     <value>mov</value>
   </data>
-  <data name="MuxFormatComboBox.Items4" xml:space="preserve">
+  <data name="MuxConvertFormatComboBox.Items4" xml:space="preserve">
     <value>avi</value>
   </data>
-  <data name="MuxFormatComboBox.Items5" xml:space="preserve">
+  <data name="MuxConvertFormatComboBox.Items5" xml:space="preserve">
     <value>f4v</value>
   </data>
-  <data name="MuxFormatComboBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertFormatComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>269, 241</value>
   </data>
-  <data name="MuxFormatComboBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertFormatComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 20</value>
   </data>
-  <data name="MuxFormatComboBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertFormatComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="&gt;&gt;MuxFormatComboBox.Name" xml:space="preserve">
-    <value>MuxFormatComboBox</value>
+  <data name="&gt;&gt;MuxConvertFormatComboBox.Name" xml:space="preserve">
+    <value>MuxConvertFormatComboBox</value>
   </data>
-  <data name="&gt;&gt;MuxFormatComboBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertFormatComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MuxFormatComboBox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertFormatComboBox.Parent" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;MuxFormatComboBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertFormatComboBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="lbffmpeg.HorizontalScrollbar" type="System.Boolean, mscorlib">
+  <data name="MuxConvertItemListBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbffmpeg.ItemHeight" type="System.Int32, mscorlib">
+  <data name="MuxConvertItemListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="lbffmpeg.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertItemListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 19</value>
   </data>
-  <data name="lbffmpeg.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertItemListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>471, 220</value>
   </data>
-  <data name="lbffmpeg.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertItemListBox.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;lbffmpeg.Name" xml:space="preserve">
-    <value>lbffmpeg</value>
+  <data name="&gt;&gt;MuxConvertItemListBox.Name" xml:space="preserve">
+    <value>MuxConvertItemListBox</value>
   </data>
-  <data name="&gt;&gt;lbffmpeg.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertItemListBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbffmpeg.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertItemListBox.Parent" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;lbffmpeg.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertItemListBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="btnffmpegAdd.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxConvertAddButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnffmpegAdd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxConvertAddButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnffmpegAdd.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertAddButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 19</value>
   </data>
-  <data name="btnffmpegAdd.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertAddButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnffmpegAdd.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertAddButton.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="btnffmpegAdd.Text" xml:space="preserve">
+  <data name="MuxConvertAddButton.Text" xml:space="preserve">
     <value>添加</value>
   </data>
-  <data name="&gt;&gt;btnffmpegAdd.Name" xml:space="preserve">
-    <value>btnffmpegAdd</value>
+  <data name="&gt;&gt;MuxConvertAddButton.Name" xml:space="preserve">
+    <value>MuxConvertAddButton</value>
   </data>
-  <data name="&gt;&gt;btnffmpegAdd.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertAddButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnffmpegAdd.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertAddButton.Parent" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;btnffmpegAdd.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertAddButton.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="btnffmpegClear.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxConvertClearButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnffmpegClear.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxConvertClearButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnffmpegClear.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertClearButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 77</value>
   </data>
-  <data name="btnffmpegClear.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertClearButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnffmpegClear.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertClearButton.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="btnffmpegClear.Text" xml:space="preserve">
+  <data name="MuxConvertClearButton.Text" xml:space="preserve">
     <value>清空</value>
   </data>
-  <data name="&gt;&gt;btnffmpegClear.Name" xml:space="preserve">
-    <value>btnffmpegClear</value>
+  <data name="&gt;&gt;MuxConvertClearButton.Name" xml:space="preserve">
+    <value>MuxConvertClearButton</value>
   </data>
-  <data name="&gt;&gt;btnffmpegClear.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertClearButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnffmpegClear.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertClearButton.Parent" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;btnffmpegClear.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertClearButton.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MuxConvertOutputNotificationLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxConvertOutputNotificationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertOutputNotificationLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>357, 246</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertOutputNotificationLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 12</value>
   </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertOutputNotificationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
+  <data name="MuxConvertOutputNotificationLabel.Text" xml:space="preserve">
     <value>输出到源文件目录</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="&gt;&gt;MuxConvertOutputNotificationLabel.Name" xml:space="preserve">
+    <value>MuxConvertOutputNotificationLabel</value>
   </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertOutputNotificationLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertOutputNotificationLabel.Parent" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertOutputNotificationLabel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="btnffmpegDel.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxConvertDeleteButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnffmpegDel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxConvertDeleteButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnffmpegDel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 48</value>
   </data>
-  <data name="btnffmpegDel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnffmpegDel.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertDeleteButton.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="btnffmpegDel.Text" xml:space="preserve">
+  <data name="MuxConvertDeleteButton.Text" xml:space="preserve">
     <value>删除</value>
   </data>
-  <data name="&gt;&gt;btnffmpegDel.Name" xml:space="preserve">
-    <value>btnffmpegDel</value>
+  <data name="&gt;&gt;MuxConvertDeleteButton.Name" xml:space="preserve">
+    <value>MuxConvertDeleteButton</value>
   </data>
-  <data name="&gt;&gt;btnffmpegDel.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertDeleteButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnffmpegDel.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertDeleteButton.Parent" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;btnffmpegDel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertDeleteButton.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="btnBatchMP4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxConvertStartButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnBatchMP4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxConvertStartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnBatchMP4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertStartButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 239</value>
   </data>
-  <data name="btnBatchMP4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertStartButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnBatchMP4.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertStartButton.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="btnBatchMP4.Text" xml:space="preserve">
+  <data name="MuxConvertStartButton.Text" xml:space="preserve">
     <value>封装</value>
   </data>
-  <data name="&gt;&gt;btnBatchMP4.Name" xml:space="preserve">
-    <value>btnBatchMP4</value>
+  <data name="&gt;&gt;MuxConvertStartButton.Name" xml:space="preserve">
+    <value>MuxConvertStartButton</value>
   </data>
-  <data name="&gt;&gt;btnBatchMP4.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertStartButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnBatchMP4.Parent" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertStartButton.Parent" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;btnBatchMP4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertStartButton.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxConvertGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 321</value>
   </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxConvertGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>570, 267</value>
   </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxConvertGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="groupBox4.Text" xml:space="preserve">
+  <data name="MuxConvertGroupBox.Text" xml:space="preserve">
     <value>封装转换</value>
   </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
-    <value>groupBox4</value>
+  <data name="&gt;&gt;MuxConvertGroupBox.Name" xml:space="preserve">
+    <value>MuxConvertGroupBox</value>
   </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertGroupBox.Parent" xml:space="preserve">
     <value>MuxTab</value>
   </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxConvertGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Mp4BoxParComboBox.Items" xml:space="preserve">
+  <data name="MuxMp4ParComboBox.Items" xml:space="preserve">
     <value>1:1</value>
   </data>
-  <data name="Mp4BoxParComboBox.Items1" xml:space="preserve">
+  <data name="MuxMp4ParComboBox.Items1" xml:space="preserve">
     <value>4:3</value>
   </data>
-  <data name="Mp4BoxParComboBox.Items2" xml:space="preserve">
+  <data name="MuxMp4ParComboBox.Items2" xml:space="preserve">
     <value>8:9</value>
   </data>
-  <data name="Mp4BoxParComboBox.Items3" xml:space="preserve">
+  <data name="MuxMp4ParComboBox.Items3" xml:space="preserve">
     <value>10:11</value>
   </data>
-  <data name="Mp4BoxParComboBox.Items4" xml:space="preserve">
+  <data name="MuxMp4ParComboBox.Items4" xml:space="preserve">
     <value>12:11</value>
   </data>
-  <data name="Mp4BoxParComboBox.Items5" xml:space="preserve">
+  <data name="MuxMp4ParComboBox.Items5" xml:space="preserve">
     <value>16:11</value>
   </data>
-  <data name="Mp4BoxParComboBox.Items6" xml:space="preserve">
+  <data name="MuxMp4ParComboBox.Items6" xml:space="preserve">
     <value>32:27</value>
   </data>
-  <data name="Mp4BoxParComboBox.Items7" xml:space="preserve">
+  <data name="MuxMp4ParComboBox.Items7" xml:space="preserve">
     <value>40:33</value>
   </data>
-  <data name="Mp4BoxParComboBox.Items8" xml:space="preserve">
+  <data name="MuxMp4ParComboBox.Items8" xml:space="preserve">
     <value>64:45</value>
   </data>
-  <data name="Mp4BoxParComboBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4ParComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>195, 107</value>
   </data>
-  <data name="Mp4BoxParComboBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4ParComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 20</value>
   </data>
-  <data name="Mp4BoxParComboBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4ParComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="Mp4BoxParComboBox.Text" xml:space="preserve">
+  <data name="MuxMp4ParComboBox.Text" xml:space="preserve">
     <value>1:1</value>
   </data>
-  <data name="&gt;&gt;Mp4BoxParComboBox.Name" xml:space="preserve">
-    <value>Mp4BoxParComboBox</value>
+  <data name="&gt;&gt;MuxMp4ParComboBox.Name" xml:space="preserve">
+    <value>MuxMp4ParComboBox</value>
   </data>
-  <data name="&gt;&gt;Mp4BoxParComboBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4ParComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Mp4BoxParComboBox.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4ParComboBox.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;Mp4BoxParComboBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4ParComboBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label41.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MuxMp4ParLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label41.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMp4ParLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label41.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4ParLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 111</value>
   </data>
-  <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4ParLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 12</value>
   </data>
-  <data name="label41.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4ParLabel.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="label41.Text" xml:space="preserve">
+  <data name="MuxMp4ParLabel.Text" xml:space="preserve">
     <value>PAR</value>
   </data>
-  <data name="&gt;&gt;label41.Name" xml:space="preserve">
-    <value>label41</value>
+  <data name="&gt;&gt;MuxMp4ParLabel.Name" xml:space="preserve">
+    <value>MuxMp4ParLabel</value>
   </data>
-  <data name="&gt;&gt;label41.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4ParLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label41.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4ParLabel.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;label41.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4ParLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="MuxReplaceAudioButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMp4ReplaceAudioButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="MuxReplaceAudioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMp4ReplaceAudioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MuxReplaceAudioButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4ReplaceAudioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>359, 105</value>
   </data>
-  <data name="MuxReplaceAudioButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4ReplaceAudioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 23</value>
   </data>
-  <data name="MuxReplaceAudioButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4ReplaceAudioButton.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="MuxReplaceAudioButton.Text" xml:space="preserve">
+  <data name="MuxMp4ReplaceAudioButton.Text" xml:space="preserve">
     <value>替换音频</value>
   </data>
-  <data name="&gt;&gt;MuxReplaceAudioButton.Name" xml:space="preserve">
-    <value>MuxReplaceAudioButton</value>
+  <data name="&gt;&gt;MuxMp4ReplaceAudioButton.Name" xml:space="preserve">
+    <value>MuxMp4ReplaceAudioButton</value>
   </data>
-  <data name="&gt;&gt;MuxReplaceAudioButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4ReplaceAudioButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;MuxReplaceAudioButton.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4ReplaceAudioButton.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;MuxReplaceAudioButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4ReplaceAudioButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="txtvideo.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMp4VideoInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtvideo.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4VideoInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 18</value>
   </data>
-  <data name="txtvideo.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4VideoInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>471, 21</value>
   </data>
-  <data name="txtvideo.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4VideoInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;txtvideo.Name" xml:space="preserve">
-    <value>txtvideo</value>
+  <data name="&gt;&gt;MuxMp4VideoInputTextBox.Name" xml:space="preserve">
+    <value>MuxMp4VideoInputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtvideo.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4VideoInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtvideo.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4VideoInputTextBox.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;txtvideo.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4VideoInputTextBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="btnvideo.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMp4VideoInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnvideo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMp4VideoInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnvideo.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4VideoInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 18</value>
   </data>
-  <data name="btnvideo.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4VideoInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnvideo.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4VideoInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="btnvideo.Text" xml:space="preserve">
+  <data name="MuxMp4VideoInputButton.Text" xml:space="preserve">
     <value>视频</value>
   </data>
-  <data name="&gt;&gt;btnvideo.Name" xml:space="preserve">
-    <value>btnvideo</value>
+  <data name="&gt;&gt;MuxMp4VideoInputButton.Name" xml:space="preserve">
+    <value>MuxMp4VideoInputButton</value>
   </data>
-  <data name="&gt;&gt;btnvideo.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4VideoInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnvideo.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4VideoInputButton.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;btnvideo.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4VideoInputButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="btnmux.Font" type="System.Drawing.Font, System.Drawing">
@@ -3268,492 +3268,492 @@
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnmux.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>MuxMp4GroupBox</value>
   </data>
   <data name="&gt;&gt;btnmux.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="cbFPS.Items" xml:space="preserve">
+  <data name="MuxMp4FpsComboBox.Items" xml:space="preserve">
     <value>auto</value>
   </data>
-  <data name="cbFPS.Items1" xml:space="preserve">
+  <data name="MuxMp4FpsComboBox.Items1" xml:space="preserve">
     <value>23.976</value>
   </data>
-  <data name="cbFPS.Items2" xml:space="preserve">
+  <data name="MuxMp4FpsComboBox.Items2" xml:space="preserve">
     <value>24</value>
   </data>
-  <data name="cbFPS.Items3" xml:space="preserve">
+  <data name="MuxMp4FpsComboBox.Items3" xml:space="preserve">
     <value>25</value>
   </data>
-  <data name="cbFPS.Items4" xml:space="preserve">
+  <data name="MuxMp4FpsComboBox.Items4" xml:space="preserve">
     <value>29.970</value>
   </data>
-  <data name="cbFPS.Items5" xml:space="preserve">
+  <data name="MuxMp4FpsComboBox.Items5" xml:space="preserve">
     <value>30</value>
   </data>
-  <data name="cbFPS.Items6" xml:space="preserve">
+  <data name="MuxMp4FpsComboBox.Items6" xml:space="preserve">
     <value>50</value>
   </data>
-  <data name="cbFPS.Items7" xml:space="preserve">
+  <data name="MuxMp4FpsComboBox.Items7" xml:space="preserve">
     <value>59.940</value>
   </data>
-  <data name="cbFPS.Items8" xml:space="preserve">
+  <data name="MuxMp4FpsComboBox.Items8" xml:space="preserve">
     <value>60</value>
   </data>
-  <data name="cbFPS.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4FpsComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>37, 107</value>
   </data>
-  <data name="cbFPS.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4FpsComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 20</value>
   </data>
-  <data name="cbFPS.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4FpsComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="cbFPS.Text" xml:space="preserve">
+  <data name="MuxMp4FpsComboBox.Text" xml:space="preserve">
     <value>auto</value>
   </data>
-  <data name="&gt;&gt;cbFPS.Name" xml:space="preserve">
-    <value>cbFPS</value>
+  <data name="&gt;&gt;MuxMp4FpsComboBox.Name" xml:space="preserve">
+    <value>MuxMp4FpsComboBox</value>
   </data>
-  <data name="&gt;&gt;cbFPS.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4FpsComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cbFPS.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4FpsComboBox.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;cbFPS.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4FpsComboBox.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="btnaudio.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMp4AudioInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnaudio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMp4AudioInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnaudio.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4AudioInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 47</value>
   </data>
-  <data name="btnaudio.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4AudioInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnaudio.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4AudioInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="btnaudio.Text" xml:space="preserve">
+  <data name="MuxMp4AudioInputButton.Text" xml:space="preserve">
     <value>音频</value>
   </data>
-  <data name="&gt;&gt;btnaudio.Name" xml:space="preserve">
-    <value>btnaudio</value>
+  <data name="&gt;&gt;MuxMp4AudioInputButton.Name" xml:space="preserve">
+    <value>MuxMp4AudioInputButton</value>
   </data>
-  <data name="&gt;&gt;btnaudio.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4AudioInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnaudio.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4AudioInputButton.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;btnaudio.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4AudioInputButton.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="btnout.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMp4OutputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMp4OutputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnout.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4OutputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 76</value>
   </data>
-  <data name="btnout.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4OutputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnout.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4OutputButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="btnout.Text" xml:space="preserve">
+  <data name="MuxMp4OutputButton.Text" xml:space="preserve">
     <value>输出</value>
   </data>
-  <data name="&gt;&gt;btnout.Name" xml:space="preserve">
-    <value>btnout</value>
+  <data name="&gt;&gt;MuxMp4OutputButton.Name" xml:space="preserve">
+    <value>MuxMp4OutputButton</value>
   </data>
-  <data name="&gt;&gt;btnout.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4OutputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnout.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4OutputButton.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;btnout.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4OutputButton.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="txtaudio.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMp4AudioInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtaudio.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4AudioInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 47</value>
   </data>
-  <data name="txtaudio.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4AudioInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>471, 21</value>
   </data>
-  <data name="txtaudio.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4AudioInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;txtaudio.Name" xml:space="preserve">
-    <value>txtaudio</value>
+  <data name="&gt;&gt;MuxMp4AudioInputTextBox.Name" xml:space="preserve">
+    <value>MuxMp4AudioInputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtaudio.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4AudioInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtaudio.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4AudioInputTextBox.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;txtaudio.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4AudioInputTextBox.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MuxMp4FpsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMp4FpsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4FpsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 111</value>
   </data>
-  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4FpsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 12</value>
   </data>
-  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4FpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="label14.Text" xml:space="preserve">
+  <data name="MuxMp4FpsLabel.Text" xml:space="preserve">
     <value>FPS</value>
   </data>
-  <data name="&gt;&gt;label14.Name" xml:space="preserve">
-    <value>label14</value>
+  <data name="&gt;&gt;MuxMp4FpsLabel.Name" xml:space="preserve">
+    <value>MuxMp4FpsLabel</value>
   </data>
-  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4FpsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4FpsLabel.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4FpsLabel.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="txtout.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMp4OutputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtout.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4OutputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 76</value>
   </data>
-  <data name="txtout.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4OutputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>471, 21</value>
   </data>
-  <data name="txtout.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4OutputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;txtout.Name" xml:space="preserve">
-    <value>txtout</value>
+  <data name="&gt;&gt;MuxMp4OutputTextBox.Name" xml:space="preserve">
+    <value>MuxMp4OutputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtout.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4OutputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtout.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4OutputTextBox.Parent" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;txtout.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4OutputTextBox.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMp4GroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 6</value>
   </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMp4GroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>570, 140</value>
   </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMp4GroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <data name="groupBox3.Text" xml:space="preserve">
+  <data name="MuxMp4GroupBox.Text" xml:space="preserve">
     <value>合并为MP4</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;MuxMp4GroupBox.Name" xml:space="preserve">
+    <value>MuxMp4GroupBox</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4GroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4GroupBox.Parent" xml:space="preserve">
     <value>MuxTab</value>
   </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMp4GroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="txtvideo5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMkvVideoInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtvideo5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMkvVideoInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 18</value>
   </data>
-  <data name="txtvideo5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMkvVideoInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>471, 21</value>
   </data>
-  <data name="txtvideo5.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMkvVideoInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;txtvideo5.Name" xml:space="preserve">
-    <value>txtvideo5</value>
+  <data name="&gt;&gt;MuxMkvVideoInputTextBox.Name" xml:space="preserve">
+    <value>MuxMkvVideoInputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtvideo5.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvVideoInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtvideo5.Parent" xml:space="preserve">
-    <value>groupBox8</value>
+  <data name="&gt;&gt;MuxMkvVideoInputTextBox.Parent" xml:space="preserve">
+    <value>MuxMkvGroupBox</value>
   </data>
-  <data name="&gt;&gt;txtvideo5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvVideoInputTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMkvOutputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMkvOutputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMkvOutputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 105</value>
   </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMkvOutputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="button4.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMkvOutputButton.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="button4.Text" xml:space="preserve">
+  <data name="MuxMkvOutputButton.Text" xml:space="preserve">
     <value>输出</value>
   </data>
-  <data name="&gt;&gt;button4.Name" xml:space="preserve">
-    <value>button4</value>
+  <data name="&gt;&gt;MuxMkvOutputButton.Name" xml:space="preserve">
+    <value>MuxMkvOutputButton</value>
   </data>
-  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvOutputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
-    <value>groupBox8</value>
+  <data name="&gt;&gt;MuxMkvOutputButton.Parent" xml:space="preserve">
+    <value>MuxMkvGroupBox</value>
   </data>
-  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvOutputButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="txtsub.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMkvSubtitleTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtsub.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMkvSubtitleTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 76</value>
   </data>
-  <data name="txtsub.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMkvSubtitleTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>471, 21</value>
   </data>
-  <data name="txtsub.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMkvSubtitleTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;txtsub.Name" xml:space="preserve">
-    <value>txtsub</value>
+  <data name="&gt;&gt;MuxMkvSubtitleTextBox.Name" xml:space="preserve">
+    <value>MuxMkvSubtitleTextBox</value>
   </data>
-  <data name="&gt;&gt;txtsub.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvSubtitleTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtsub.Parent" xml:space="preserve">
-    <value>groupBox8</value>
+  <data name="&gt;&gt;MuxMkvSubtitleTextBox.Parent" xml:space="preserve">
+    <value>MuxMkvGroupBox</value>
   </data>
-  <data name="&gt;&gt;txtsub.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvSubtitleTextBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMkvAudioInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMkvAudioInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMkvAudioInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 47</value>
   </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMkvAudioInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMkvAudioInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="button3.Text" xml:space="preserve">
+  <data name="MuxMkvAudioInputButton.Text" xml:space="preserve">
     <value>音频</value>
   </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
+  <data name="&gt;&gt;MuxMkvAudioInputButton.Name" xml:space="preserve">
+    <value>MuxMkvAudioInputButton</value>
   </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvAudioInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
-    <value>groupBox8</value>
+  <data name="&gt;&gt;MuxMkvAudioInputButton.Parent" xml:space="preserve">
+    <value>MuxMkvGroupBox</value>
   </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvAudioInputButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="txtaudio3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMkvAudioInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtaudio3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMkvAudioInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 47</value>
   </data>
-  <data name="txtaudio3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMkvAudioInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>471, 21</value>
   </data>
-  <data name="txtaudio3.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMkvAudioInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;txtaudio3.Name" xml:space="preserve">
-    <value>txtaudio3</value>
+  <data name="&gt;&gt;MuxMkvAudioInputTextBox.Name" xml:space="preserve">
+    <value>MuxMkvAudioInputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtaudio3.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvAudioInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtaudio3.Parent" xml:space="preserve">
-    <value>groupBox8</value>
+  <data name="&gt;&gt;MuxMkvAudioInputTextBox.Parent" xml:space="preserve">
+    <value>MuxMkvGroupBox</value>
   </data>
-  <data name="&gt;&gt;txtaudio3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvAudioInputTextBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="button5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMkvSubtitleButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMkvSubtitleButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMkvSubtitleButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 76</value>
   </data>
-  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMkvSubtitleButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="button5.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMkvSubtitleButton.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="button5.Text" xml:space="preserve">
+  <data name="MuxMkvSubtitleButton.Text" xml:space="preserve">
     <value>字幕</value>
   </data>
-  <data name="&gt;&gt;button5.Name" xml:space="preserve">
-    <value>button5</value>
+  <data name="&gt;&gt;MuxMkvSubtitleButton.Name" xml:space="preserve">
+    <value>MuxMkvSubtitleButton</value>
   </data>
-  <data name="&gt;&gt;button5.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvSubtitleButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
-    <value>groupBox8</value>
+  <data name="&gt;&gt;MuxMkvSubtitleButton.Parent" xml:space="preserve">
+    <value>MuxMkvGroupBox</value>
   </data>
-  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvSubtitleButton.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="txtout6.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMkvOutputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtout6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMkvOutputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 105</value>
   </data>
-  <data name="txtout6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMkvOutputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>471, 21</value>
   </data>
-  <data name="txtout6.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMkvOutputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;txtout6.Name" xml:space="preserve">
-    <value>txtout6</value>
+  <data name="&gt;&gt;MuxMkvOutputTextBox.Name" xml:space="preserve">
+    <value>MuxMkvOutputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtout6.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvOutputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtout6.Parent" xml:space="preserve">
-    <value>groupBox8</value>
+  <data name="&gt;&gt;MuxMkvOutputTextBox.Parent" xml:space="preserve">
+    <value>MuxMkvGroupBox</value>
   </data>
-  <data name="&gt;&gt;txtout6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvOutputTextBox.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMkvVideoInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMkvVideoInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMkvVideoInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 18</value>
   </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMkvVideoInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMkvVideoInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="MuxMkvVideoInputButton.Text" xml:space="preserve">
     <value>视频</value>
   </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
+  <data name="&gt;&gt;MuxMkvVideoInputButton.Name" xml:space="preserve">
+    <value>MuxMkvVideoInputButton</value>
   </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvVideoInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
-    <value>groupBox8</value>
+  <data name="&gt;&gt;MuxMkvVideoInputButton.Parent" xml:space="preserve">
+    <value>MuxMkvGroupBox</value>
   </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvVideoInputButton.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="button7.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="MuxMkvStartButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="button7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MuxMkvStartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMkvStartButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 134</value>
   </data>
-  <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMkvStartButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="button7.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMkvStartButton.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="button7.Text" xml:space="preserve">
+  <data name="MuxMkvStartButton.Text" xml:space="preserve">
     <value>封装</value>
   </data>
-  <data name="&gt;&gt;button7.Name" xml:space="preserve">
-    <value>button7</value>
+  <data name="&gt;&gt;MuxMkvStartButton.Name" xml:space="preserve">
+    <value>MuxMkvStartButton</value>
   </data>
-  <data name="&gt;&gt;button7.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvStartButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
-    <value>groupBox8</value>
+  <data name="&gt;&gt;MuxMkvStartButton.Parent" xml:space="preserve">
+    <value>MuxMkvGroupBox</value>
   </data>
-  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvStartButton.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="groupBox8.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MuxMkvGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 152</value>
   </data>
-  <data name="groupBox8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MuxMkvGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>570, 163</value>
   </data>
-  <data name="groupBox8.TabIndex" type="System.Int32, mscorlib">
+  <data name="MuxMkvGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="groupBox8.Text" xml:space="preserve">
+  <data name="MuxMkvGroupBox.Text" xml:space="preserve">
     <value>合并为MKV</value>
   </data>
-  <data name="&gt;&gt;groupBox8.Name" xml:space="preserve">
-    <value>groupBox8</value>
+  <data name="&gt;&gt;MuxMkvGroupBox.Name" xml:space="preserve">
+    <value>MuxMkvGroupBox</value>
   </data>
-  <data name="&gt;&gt;groupBox8.Type" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvGroupBox.Parent" xml:space="preserve">
     <value>MuxTab</value>
   </data>
-  <data name="&gt;&gt;groupBox8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MuxMkvGroupBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="MuxTab.Location" type="System.Drawing.Point, System.Drawing">
@@ -8251,7 +8251,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>52</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>574, 609</value>
@@ -8679,6 +8679,9 @@
         /6VO//+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAA
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>小丸工具箱</value>
