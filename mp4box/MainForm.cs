@@ -908,7 +908,7 @@ namespace mp4box
 
             #region General Tab
 
-            MiscOnePicBitrateLabelNumericUpDown.Value = 128;
+            MiscOnePicBitrateNumericUpDown.Value = 128;
             MiscOnePicFpsNumericUpDown.Value = 1;
             MiscOnePicCrfNumericUpDown.Value = 24;
 
@@ -973,7 +973,7 @@ namespace mp4box
                 AVSScriptTextBox.Text = ConfigurationManager.AppSettings["AVSScript"];
                 AudioEncoderComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["AudioEncoder"]);
                 AudioBitrateComboBox.Text = ConfigurationManager.AppSettings["AudioBitrate"];
-                MiscOnePicBitrateLabelNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicAudioBitrate"]);
+                MiscOnePicBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicAudioBitrate"]);
                 MiscOnePicFpsNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicFPS"]);
                 MiscOnePicCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicCRF"]);
                 MiscBlackFpsNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackFPS"]);
@@ -1057,7 +1057,7 @@ namespace mp4box
             cfa.AppSettings.Settings["AVSScript"].Value = AVSScriptTextBox.Text;
             cfa.AppSettings.Settings["AudioEncoder"].Value = AudioEncoderComboBox.SelectedIndex.ToString();
             cfa.AppSettings.Settings["AudioParameter"].Value = AudioBitrateComboBox.Text;
-            cfa.AppSettings.Settings["OnePicAudioBitrate"].Value = MiscOnePicBitrateLabelNumericUpDown.Value.ToString();
+            cfa.AppSettings.Settings["OnePicAudioBitrate"].Value = MiscOnePicBitrateNumericUpDown.Value.ToString();
             cfa.AppSettings.Settings["OnePicFPS"].Value = MiscOnePicFpsNumericUpDown.Value.ToString();
             cfa.AppSettings.Settings["OnePicCRF"].Value = MiscOnePicCrfNumericUpDown.Value.ToString();
             cfa.AppSettings.Settings["BlackFPS"].Value = MiscBlackFpsNumericUpDown.Value.ToString();
@@ -2654,7 +2654,7 @@ namespace mp4box
             VideoBitrateNumericUpDown.Visible = true;
             VideoCrfKbpsLabel.Visible = true;
             VideoWidthLabel.Visible = true;
-            labelx264Height.Visible = true;
+            VideoHeightLabel.Visible = true;
             VideoWidthNumericUpDown.Visible = true;
             VideoHeightNumericUpDown.Visible = true;
             VideoMaintainResolutionCheckBox.Visible = true;
@@ -2676,7 +2676,7 @@ namespace mp4box
             VideoAddPresetButton.Visible = true;
             VideoDeletePresetButton.Visible = true;
             VideoWidthLabel.Visible = false;
-            labelx264Height.Visible = false;
+            VideoHeightLabel.Visible = false;
             VideoWidthNumericUpDown.Visible = false;
             VideoHeightNumericUpDown.Visible = false;
             VideoMaintainResolutionCheckBox.Visible = false;
@@ -2693,7 +2693,7 @@ namespace mp4box
             VideoCrfLabel.Visible = true;
             VideoCrfNumericUpDown.Visible = true;
             VideoWidthLabel.Visible = true;
-            labelx264Height.Visible = true;
+            VideoHeightLabel.Visible = true;
             VideoWidthNumericUpDown.Visible = true;
             VideoHeightNumericUpDown.Visible = true;
             VideoMaintainResolutionCheckBox.Visible = true;
@@ -3114,7 +3114,7 @@ namespace mp4box
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
-            lbaacrate.Visible = false;
+            AudioBitrateLabel.Visible = false;
             AudioKbpsLabel.Visible = false;
             AudioBitrateComboBox.Visible = false;
             AudioCustomParameterTextBox.Visible = true;
@@ -3126,7 +3126,7 @@ namespace mp4box
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            lbaacrate.Visible = true;
+            AudioBitrateLabel.Visible = true;
             AudioKbpsLabel.Visible = true;
             AudioBitrateComboBox.Visible = true;
             AudioCustomParameterTextBox.Visible = false;
@@ -3791,7 +3791,7 @@ namespace mp4box
                 }
                 else
                 {
-                    mux = "\"" + ffPath + "\" -i \"" + MiscOnePicAudioInputTextBox.Text + "\" -f wav - |" + neroPath + " -br " + MiscOnePicBitrateLabelNumericUpDown.Value.ToString() + "000 -ignorelength -if - -of audio.mp4 -lc\r\n";
+                    mux = "\"" + ffPath + "\" -i \"" + MiscOnePicAudioInputTextBox.Text + "\" -f wav - |" + neroPath + " -br " + MiscOnePicBitrateNumericUpDown.Value.ToString() + "000 -ignorelength -if - -of audio.mp4 -lc\r\n";
                     mux += "\"" + ffPath + "\" -loop 1 -r " + MiscOnePicFpsNumericUpDown.Value.ToString() + " -t " + seconds.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscOnePicCrfNumericUpDown.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
                     mux += "\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i audio.mp4 -c:v copy -c:a copy -y \"" + MiscOnePicOutputTextBox.Text + "\"\r\n";
                     mux += "del SinglePictureVideo.mp4\r\ndel audio.mp4\r\n";
@@ -4249,7 +4249,7 @@ namespace mp4box
 
         private void AudioCopyCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            MiscOnePicBitrateLabelNumericUpDown.Enabled = !MiscOnePicCopyAudioCheckBox.Checked;
+            MiscOnePicBitrateNumericUpDown.Enabled = !MiscOnePicCopyAudioCheckBox.Checked;
         }
 
         private void HelpTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
