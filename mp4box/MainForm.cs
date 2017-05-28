@@ -163,11 +163,11 @@ namespace mp4box
         {
             var xvs = new XvSettings();
             xvs.CrfValue = VideoCrfNumericUpDown.Value;
-            xvs.ExtParameter = x264extraLine.Text;
+            xvs.ExtParameter = ConfigX264ExtraParameterTextBox.Text;
             xvs.CustomParameter = VideoCustomParameterTextBox.Text;
             xvs.V_width = (int)VideoWidthNumericUpDown.Value;
             xvs.V_height = (int)VideoHeightNumericUpDown.Value;
-            xvs.X26xThreads = x264ThreadsComboBox.SelectedItem.ToString();
+            xvs.X26xThreads = ConfigX264ThreadsComboBox.SelectedItem.ToString();
             xvs.X26xDemuxer = VideoDemuxerComboBox.Text;
             xvs.X26xBitrate = (int)VideoBitrateNumericUpDown.Value;
             xvs.X26xSeek = (int)VideoSeekNumericUpDown.Value;
@@ -777,7 +777,7 @@ namespace mp4box
         {
             #region Delete Temp Files
 
-            if (SetupDeleteTempFileCheckBox.Checked && !workPath.Equals("!undefined"))
+            if (ConfigFunctionDeleteTempFileCheckBox.Checked && !workPath.Equals("!undefined"))
             {
                 List<string> deleteFileList = new List<string>();
 
@@ -889,7 +889,7 @@ namespace mp4box
             VideoWidthNumericUpDown.Value = 0;
             VideoHeightNumericUpDown.Value = 0;
             VideoCustomParameterTextBox.Text = "";
-            x264PriorityComboBox.SelectedIndex = 2;
+            ConfigX264PriorityComboBox.SelectedIndex = 2;
             VideoFramesNumericUpDown.Value = 0;
             VideoSeekNumericUpDown.Value = 0;
             VideoModeCrfRadioButton.Checked = true;
@@ -940,13 +940,13 @@ namespace mp4box
 
             #region Setup Tab
 
-            SplashScreenCheckBox.Checked = true;
-            TrayModeCheckBox.Checked = false;
-            x264PriorityComboBox.SelectedIndex = 2;
-            x264ThreadsComboBox.SelectedIndex = 0;
-            SetupDeleteTempFileCheckBox.Checked = true;
-            CheckUpdateCheckBox.Checked = true;
-            x265CheckBox.Checked = false;
+            ConfigUiSplashScreenCheckBox.Checked = true;
+            ConfigUiTrayModeCheckBox.Checked = false;
+            ConfigX264PriorityComboBox.SelectedIndex = 2;
+            ConfigX264ThreadsComboBox.SelectedIndex = 0;
+            ConfigFunctionDeleteTempFileCheckBox.Checked = true;
+            ConfigFunctionAutoCheckUpdateCheckBox.Checked = true;
+            ConfigFunctionEnableX265CheckBox.Checked = false;
 
             #endregion Setup Tab
         }
@@ -968,8 +968,8 @@ namespace mp4box
                 VideoWidthNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Width"]);
                 VideoHeightNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Height"]);
                 VideoCustomParameterTextBox.Text = ConfigurationManager.AppSettings["x264CustomParameter"];
-                x264PriorityComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Priority"]);
-                x264extraLine.Text = ConfigurationManager.AppSettings["x264ExtraParameter"];
+                ConfigX264PriorityComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Priority"]);
+                ConfigX264ExtraParameterTextBox.Text = ConfigurationManager.AppSettings["x264ExtraParameter"];
                 AvsScriptTextBox.Text = ConfigurationManager.AppSettings["AVSScript"];
                 AudioEncoderComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["AudioEncoder"]);
                 AudioBitrateComboBox.Text = ConfigurationManager.AppSettings["AudioBitrate"];
@@ -979,13 +979,13 @@ namespace mp4box
                 MiscBlackFpsNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackFPS"]);
                 MiscBlackCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackCRF"]);
                 MiscBlackBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackBitrate"]);
-                SetupDeleteTempFileCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["SetupDeleteTempFile"]);
-                CheckUpdateCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["CheckUpdate"]);
-                x264ThreadsComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Threads"]);
-                x265CheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["x265Enable"]);
-                TrayModeCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["TrayMode"]);
-                SplashScreenCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["SplashScreen"]);
-                SetupPlayerTextBox.Text = ConfigurationManager.AppSettings["PreviewPlayer"];
+                ConfigFunctionDeleteTempFileCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["SetupDeleteTempFile"]);
+                ConfigFunctionAutoCheckUpdateCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["CheckUpdate"]);
+                ConfigX264ThreadsComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Threads"]);
+                ConfigFunctionEnableX265CheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["x265Enable"]);
+                ConfigUiTrayModeCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["TrayMode"]);
+                ConfigUiSplashScreenCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["SplashScreen"]);
+                ConfigFunctionVideoPlayerTextBox.Text = ConfigurationManager.AppSettings["PreviewPlayer"];
                 string SubLangExt = Convert.ToString(ConfigurationManager.AppSettings["SubLanguageExtension"]);
                 MuxConvertFormatComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["MuxFormat"]);
                 VideoBatchSubtitleLanguage.DataSource = SubLangExt.Split(',');
@@ -1001,21 +1001,21 @@ namespace mp4box
                     {
                         case "zh-CN":
                         case "zh-SG":
-                            languageComboBox.SelectedIndex = 0;
+                            ConfigUiLanguageComboBox.SelectedIndex = 0;
                             break;
 
                         case "zh-TW":
                         case "zh-HK":
                         case "zh-MO":
-                            languageComboBox.SelectedIndex = 1;
+                            ConfigUiLanguageComboBox.SelectedIndex = 1;
                             break;
 
                         case "en-US":
-                            languageComboBox.SelectedIndex = 2;
+                            ConfigUiLanguageComboBox.SelectedIndex = 2;
                             break;
 
                         case "ja-JP":
-                            languageComboBox.SelectedIndex = 3;
+                            ConfigUiLanguageComboBox.SelectedIndex = 3;
                             break;
 
                         default:
@@ -1023,9 +1023,9 @@ namespace mp4box
                     }
                 }
                 else
-                    languageComboBox.SelectedIndex = int.Parse(ConfigurationManager.AppSettings["LanguageIndex"]);
+                    ConfigUiLanguageComboBox.SelectedIndex = int.Parse(ConfigurationManager.AppSettings["LanguageIndex"]);
 
-                if (CheckUpdateCheckBox.Checked && Util.IsConnectInternet())
+                if (ConfigFunctionAutoCheckUpdateCheckBox.Checked && Util.IsConnectInternet())
                 {
                     DateTime d;
                     bool f;
@@ -1052,8 +1052,8 @@ namespace mp4box
             cfa.AppSettings.Settings["x264Width"].Value = VideoWidthNumericUpDown.Value.ToString();
             cfa.AppSettings.Settings["x264Height"].Value = VideoHeightNumericUpDown.Value.ToString();
             cfa.AppSettings.Settings["x264CustomParameter"].Value = VideoCustomParameterTextBox.Text;
-            cfa.AppSettings.Settings["x264Priority"].Value = x264PriorityComboBox.SelectedIndex.ToString();
-            cfa.AppSettings.Settings["x264ExtraParameter"].Value = x264extraLine.Text;
+            cfa.AppSettings.Settings["x264Priority"].Value = ConfigX264PriorityComboBox.SelectedIndex.ToString();
+            cfa.AppSettings.Settings["x264ExtraParameter"].Value = ConfigX264ExtraParameterTextBox.Text;
             cfa.AppSettings.Settings["AVSScript"].Value = AvsScriptTextBox.Text;
             cfa.AppSettings.Settings["AudioEncoder"].Value = AudioEncoderComboBox.SelectedIndex.ToString();
             cfa.AppSettings.Settings["AudioParameter"].Value = AudioBitrateComboBox.Text;
@@ -1063,14 +1063,14 @@ namespace mp4box
             cfa.AppSettings.Settings["BlackFPS"].Value = MiscBlackFpsNumericUpDown.Value.ToString();
             cfa.AppSettings.Settings["BlackCRF"].Value = MiscBlackCrfNumericUpDown.Value.ToString();
             cfa.AppSettings.Settings["BlackBitrate"].Value = MiscBlackBitrateNumericUpDown.Value.ToString();
-            cfa.AppSettings.Settings["SetupDeleteTempFile"].Value = SetupDeleteTempFileCheckBox.Checked.ToString();
-            cfa.AppSettings.Settings["CheckUpdate"].Value = CheckUpdateCheckBox.Checked.ToString();
-            cfa.AppSettings.Settings["TrayMode"].Value = TrayModeCheckBox.Checked.ToString();
-            cfa.AppSettings.Settings["LanguageIndex"].Value = languageComboBox.SelectedIndex.ToString();
-            cfa.AppSettings.Settings["SplashScreen"].Value = SplashScreenCheckBox.Checked.ToString();
-            cfa.AppSettings.Settings["x264Threads"].Value = x264ThreadsComboBox.SelectedIndex.ToString();
-            cfa.AppSettings.Settings["x265Enable"].Value = x265CheckBox.Checked.ToString();
-            cfa.AppSettings.Settings["PreviewPlayer"].Value = SetupPlayerTextBox.Text;
+            cfa.AppSettings.Settings["SetupDeleteTempFile"].Value = ConfigFunctionDeleteTempFileCheckBox.Checked.ToString();
+            cfa.AppSettings.Settings["CheckUpdate"].Value = ConfigFunctionAutoCheckUpdateCheckBox.Checked.ToString();
+            cfa.AppSettings.Settings["TrayMode"].Value = ConfigUiTrayModeCheckBox.Checked.ToString();
+            cfa.AppSettings.Settings["LanguageIndex"].Value = ConfigUiLanguageComboBox.SelectedIndex.ToString();
+            cfa.AppSettings.Settings["SplashScreen"].Value = ConfigUiSplashScreenCheckBox.Checked.ToString();
+            cfa.AppSettings.Settings["x264Threads"].Value = ConfigX264ThreadsComboBox.SelectedIndex.ToString();
+            cfa.AppSettings.Settings["x265Enable"].Value = ConfigFunctionEnableX265CheckBox.Checked.ToString();
+            cfa.AppSettings.Settings["PreviewPlayer"].Value = ConfigFunctionVideoPlayerTextBox.Text;
             cfa.AppSettings.Settings["MuxFormat"].Value = MuxConvertFormatComboBox.SelectedIndex.ToString(); ;
             cfa.Save();
             ConfigurationManager.RefreshSection("appSettings"); // 刷新命名节，在下次检索它时将从磁盘重新读取它。记住应用程序要刷新节点
@@ -1107,10 +1107,10 @@ namespace mp4box
         {
             int processorNumber = Environment.ProcessorCount;
 
-            x264ThreadsComboBox.Items.Add("auto");
+            ConfigX264ThreadsComboBox.Items.Add("auto");
             for (int i = 1; i <= 16; i++)
             {
-                x264ThreadsComboBox.Items.Add(i.ToString());
+                ConfigX264ThreadsComboBox.Items.Add(i.ToString());
             }
             //Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("zh-TW");
             //use YAHEI in VistaOrNewer
@@ -1201,7 +1201,7 @@ namespace mp4box
             // load Help Text
             if (File.Exists(startpath + "\\help.rtf"))
             {
-                HelpTextBox.LoadFile(startpath + "\\help.rtf");
+                HelpContentRichTextBox.LoadFile(startpath + "\\help.rtf");
             }
 
             LoadSettings();
@@ -1813,9 +1813,9 @@ namespace mp4box
             {
                 string filepath = workPath + "\\temp.avs";
                 File.WriteAllText(filepath, AvsScriptTextBox.Text.ToString(), Encoding.Default);
-                if (File.Exists(SetupPlayerTextBox.Text))
+                if (File.Exists(ConfigFunctionVideoPlayerTextBox.Text))
                 {
-                    Process.Start(SetupPlayerTextBox.Text, filepath);
+                    Process.Start(ConfigFunctionVideoPlayerTextBox.Text, filepath);
                 }
                 else
                 {
@@ -2128,7 +2128,7 @@ namespace mp4box
                 //我是要找到我需要的YZT.exe的进程,可以根据ProcessName属性判断
                 if (processes[i].ProcessName.Equals(Path.GetFileNameWithoutExtension(VideoEncoderComboBox.Text)))
                 {
-                    switch (x264PriorityComboBox.SelectedIndex)
+                    switch (ConfigX264PriorityComboBox.SelectedIndex)
                     {
                         case 0: processes[i].PriorityClass = ProcessPriorityClass.Idle; break;
                         case 1: processes[i].PriorityClass = ProcessPriorityClass.BelowNormal; break;
@@ -2450,9 +2450,9 @@ namespace mp4box
             }
 
             //防止未选择 x264 thread
-            if (x264ThreadsComboBox.SelectedIndex == -1)
+            if (ConfigX264ThreadsComboBox.SelectedIndex == -1)
             {
-                x264ThreadsComboBox.SelectedIndex = 0;
+                ConfigX264ThreadsComboBox.SelectedIndex = 0;
             }
 
             //目标文件已经存在提示是否覆盖
@@ -2725,7 +2725,7 @@ namespace mp4box
                 //我是要找到我需要的YZT.exe的进程,可以根据ProcessName属性判断
                 if (processes[i].ProcessName.Equals(processName))
                 {
-                    switch (x264PriorityComboBox.SelectedIndex)
+                    switch (ConfigX264PriorityComboBox.SelectedIndex)
                     {
                         case 0: processes[i].PriorityClass = ProcessPriorityClass.Idle; break;
                         case 1: processes[i].PriorityClass = ProcessPriorityClass.BelowNormal; break;
@@ -3479,15 +3479,15 @@ namespace mp4box
             VideoModeCrfRadioButton.Checked = true;
             AudioAudioModeBitrateRadioButton.Checked = true;
             int x264AudioModeComboBoxIndex = 0;
-            switch (languageComboBox.SelectedIndex)
+            switch (ConfigUiLanguageComboBox.SelectedIndex)
             {
                 case 0:
                     SetLang("zh-CN", this, typeof(MainForm));
                     //this.Text = string.Format("小丸工具箱 {0}", Assembly.GetExecutingAssembly().GetName().Version.Build);
                     this.Text = string.Format("小丸工具箱 {0}", Util.GetAssemblyFileVersion());
-                    x264PriorityComboBox.Items.Clear();
-                    x264PriorityComboBox.Items.AddRange(new string[] { "低", "低于标准", "普通", "高于标准", "高", "实时" });
-                    x264PriorityComboBox.SelectedIndex = 2;
+                    ConfigX264PriorityComboBox.Items.Clear();
+                    ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "低于标准", "普通", "高于标准", "高", "实时" });
+                    ConfigX264PriorityComboBox.SelectedIndex = 2;
                     x264AudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
                     VideoAudioModeComboBox.Items.Clear();
                     VideoAudioModeComboBox.Items.Add("压制音频");
@@ -3505,16 +3505,16 @@ namespace mp4box
                     //load Help Text
                     if (File.Exists(startpath + "\\help.rtf"))
                     {
-                        HelpTextBox.LoadFile(startpath + "\\help.rtf");
+                        HelpContentRichTextBox.LoadFile(startpath + "\\help.rtf");
                     }
                     break;
 
                 case 1:
                     SetLang("zh-TW", this, typeof(MainForm));
                     this.Text = string.Format("小丸工具箱 {0}", Util.GetAssemblyFileVersion());
-                    x264PriorityComboBox.Items.Clear();
-                    x264PriorityComboBox.Items.AddRange(new string[] { "低", "在標準以下", "標準", "在標準以上", "高", "即時" });
-                    x264PriorityComboBox.SelectedIndex = 2;
+                    ConfigX264PriorityComboBox.Items.Clear();
+                    ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "在標準以下", "標準", "在標準以上", "高", "即時" });
+                    ConfigX264PriorityComboBox.SelectedIndex = 2;
                     x264AudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
                     VideoAudioModeComboBox.Items.Clear();
                     VideoAudioModeComboBox.Items.Add("壓制音頻");
@@ -3532,16 +3532,16 @@ namespace mp4box
                     //load Help Text
                     if (File.Exists(startpath + "\\help_zh_tw.rtf"))
                     {
-                        HelpTextBox.LoadFile(startpath + "\\help_zh_tw.rtf");
+                        HelpContentRichTextBox.LoadFile(startpath + "\\help_zh_tw.rtf");
                     }
                     break;
 
                 case 2:
                     SetLang("en-US", this, typeof(MainForm));
                     this.Text = string.Format("Maruko Toolbox {0}", Util.GetAssemblyFileVersion());
-                    x264PriorityComboBox.Items.Clear();
-                    x264PriorityComboBox.Items.AddRange(new string[] { "Idle", "BelowNormal", "Normal", "AboveNormal", "High", "RealTime" });
-                    x264PriorityComboBox.SelectedIndex = 2;
+                    ConfigX264PriorityComboBox.Items.Clear();
+                    ConfigX264PriorityComboBox.Items.AddRange(new string[] { "Idle", "BelowNormal", "Normal", "AboveNormal", "High", "RealTime" });
+                    ConfigX264PriorityComboBox.SelectedIndex = 2;
                     x264AudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
                     VideoAudioModeComboBox.Items.Clear();
                     VideoAudioModeComboBox.Items.Add("with audio");
@@ -3559,16 +3559,16 @@ namespace mp4box
                     //load Help Text
                     if (File.Exists(startpath + "\\help.rtf"))
                     {
-                        HelpTextBox.LoadFile(startpath + "\\help.rtf");
+                        HelpContentRichTextBox.LoadFile(startpath + "\\help.rtf");
                     }
                     break;
 
                 case 3:
                     SetLang("ja-JP", this, typeof(MainForm));
                     this.Text = string.Format("小丸道具箱 {0}", Util.GetAssemblyFileVersion());
-                    x264PriorityComboBox.Items.Clear();
-                    x264PriorityComboBox.Items.AddRange(new string[] { "低", "通常以下", "通常", "通常以上", "高", "リアルタイム" });
-                    x264PriorityComboBox.SelectedIndex = 2;
+                    ConfigX264PriorityComboBox.Items.Clear();
+                    ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "通常以下", "通常", "通常以上", "高", "リアルタイム" });
+                    ConfigX264PriorityComboBox.SelectedIndex = 2;
                     x264AudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
                     VideoAudioModeComboBox.Items.Clear();
                     VideoAudioModeComboBox.Items.Add("オーディオ付き");
@@ -3585,7 +3585,7 @@ namespace mp4box
                     ExtractMkvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
                     if (File.Exists(startpath + "\\help.rtf"))
                     {
-                        HelpTextBox.LoadFile(startpath + "\\help.rtf");
+                        HelpContentRichTextBox.LoadFile(startpath + "\\help.rtf");
                     }
                     break;
 
@@ -3597,7 +3597,7 @@ namespace mp4box
         private string GetCultureName()
         {
             string name = "zh-CN";
-            switch (languageComboBox.SelectedIndex)
+            switch (ConfigUiLanguageComboBox.SelectedIndex)
             {
                 case 0:
                     name = "zh-CN";
@@ -4237,7 +4237,7 @@ namespace mp4box
 
         private void TrayModeCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            trayMode = TrayModeCheckBox.Checked;
+            trayMode = ConfigUiTrayModeCheckBox.Checked;
         }
 
         private void ReleaseDatelabel_DoubleClick(object sender, EventArgs e)
@@ -4259,7 +4259,7 @@ namespace mp4box
 
         private void labelAudio_Click(object sender, EventArgs e)
         {
-            tabControl.SelectedIndex = 1;
+            MainTabControl.SelectedIndex = 1;
         }
 
         private void SetupAVSPlayerButton_Click(object sender, EventArgs e)
@@ -4268,7 +4268,7 @@ namespace mp4box
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                SetupPlayerTextBox.Text = openFileDialog1.FileName;
+                ConfigFunctionVideoPlayerTextBox.Text = openFileDialog1.FileName;
             }
         }
 
@@ -4325,7 +4325,7 @@ namespace mp4box
                 int pi = GetTabPageByTab(pt);
                 if (pi != -1)
                 {
-                    tabControl.SelectedIndex = pi;
+                    MainTabControl.SelectedIndex = pi;
                 }
             }
             else e.Effect = DragDropEffects.None;
@@ -4340,13 +4340,13 @@ namespace mp4box
         {
             TabPage tp = null;
             int pageIndex = -1;
-            for (int i = 0; i < tabControl.TabPages.Count; i++)
+            for (int i = 0; i < MainTabControl.TabPages.Count; i++)
             {
-                Rectangle a = tabControl.GetTabRect(i);
+                Rectangle a = MainTabControl.GetTabRect(i);
 
-                if (tabControl.GetTabRect(i).Contains(pt))
+                if (MainTabControl.GetTabRect(i).Contains(pt))
                 {
-                    tp = tabControl.TabPages[i];
+                    tp = MainTabControl.TabPages[i];
                     pageIndex = i;
                     break;
                 }
@@ -4358,39 +4358,39 @@ namespace mp4box
         {
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D1)
             {
-                tabControl.SelectedIndex = 0;
+                MainTabControl.SelectedIndex = 0;
             }
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D2)
             {
-                tabControl.SelectedIndex = 1;
+                MainTabControl.SelectedIndex = 1;
             }
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D3)
             {
-                tabControl.SelectedIndex = 2;
+                MainTabControl.SelectedIndex = 2;
             }
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D4)
             {
-                tabControl.SelectedIndex = 3;
+                MainTabControl.SelectedIndex = 3;
             }
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D5)
             {
-                tabControl.SelectedIndex = 4;
+                MainTabControl.SelectedIndex = 4;
             }
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D6)
             {
-                tabControl.SelectedIndex = 5;
+                MainTabControl.SelectedIndex = 5;
             }
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D7)
             {
-                tabControl.SelectedIndex = 6;
+                MainTabControl.SelectedIndex = 6;
             }
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D8)
             {
-                tabControl.SelectedIndex = 7;
+                MainTabControl.SelectedIndex = 7;
             }
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D9)
             {
-                tabControl.SelectedIndex = 8;
+                MainTabControl.SelectedIndex = 8;
             }
         }
 
