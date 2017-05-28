@@ -1214,7 +1214,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 namevideo6 = openFileDialog1.FileName;
-                txtvideo6.Text = namevideo6;
+                ExtractMkvInputTextBox.Text = namevideo6;
             }
         }
 
@@ -1308,7 +1308,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 namevideo6 = openFileDialog1.FileName;
-                txtvideo6.Text = namevideo6;
+                ExtractMkvInputTextBox.Text = namevideo6;
             }
         }
 
@@ -1423,7 +1423,7 @@ namespace mp4box
 
         private void txtvideo6_TextChanged(object sender, EventArgs e)
         {
-            namevideo6 = txtvideo6.Text;
+            namevideo6 = ExtractMkvInputTextBox.Text;
         }
 
         private void btnAutoAdd_Click(object sender, EventArgs e)
@@ -1757,7 +1757,7 @@ namespace mp4box
 
         private void txtvideo8_TextChanged(object sender, EventArgs e)
         {
-            namevideo8 = txtvideo8.Text;
+            namevideo8 = ExtractFlvInputTextBox.Text;
         }
 
         private void btnvextract8_Click(object sender, EventArgs e)
@@ -1803,7 +1803,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 namevideo8 = openFileDialog1.FileName;
-                txtvideo8.Text = namevideo;
+                ExtractFlvInputTextBox.Text = namevideo;
             }
         }
 
@@ -2082,9 +2082,9 @@ namespace mp4box
 
         private void txtvideo8_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(txtvideo8.Text.ToString()))
+            if (File.Exists(ExtractFlvInputTextBox.Text.ToString()))
             {
-                Process.Start(txtvideo8.Text.ToString());
+                Process.Start(ExtractFlvInputTextBox.Text.ToString());
             }
         }
 
@@ -2098,9 +2098,9 @@ namespace mp4box
 
         private void txtvideo6_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(txtvideo6.Text.ToString()))
+            if (File.Exists(ExtractMkvInputTextBox.Text.ToString()))
             {
-                Process.Start(txtvideo6.Text.ToString());
+                Process.Start(ExtractMkvInputTextBox.Text.ToString());
             }
         }
 
@@ -2251,7 +2251,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 namevideo6 = openFileDialog1.FileName;
-                txtvideo6.Text = namevideo6;
+                ExtractMkvInputTextBox.Text = namevideo6;
             }
         }
 
@@ -2351,9 +2351,9 @@ namespace mp4box
 
         private void txtvideo6_TextChanged_1(object sender, EventArgs e)
         {
-            if (File.Exists(txtvideo6.Text.ToString()))
+            if (File.Exists(ExtractMkvInputTextBox.Text.ToString()))
             {
-                namevideo6 = txtvideo6.Text;
+                namevideo6 = ExtractMkvInputTextBox.Text;
             }
         }
 
@@ -3357,7 +3357,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 namevideo = openFileDialog1.FileName;
-                ExtractMP4TextBox.Text = namevideo;
+                ExtractMp4InputTextBox.Text = namevideo;
             }
         }
 
@@ -3432,7 +3432,7 @@ namespace mp4box
 
         private void ExtractMP4TextBox_TextChanged(object sender, EventArgs e)
         {
-            namevideo = ExtractMP4TextBox.Text;
+            namevideo = ExtractMp4InputTextBox.Text;
         }
 
         private void MaintainResolutionCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -3499,9 +3499,9 @@ namespace mp4box
                     //x264OutTextBox.EmptyTextTip = "宽度和高度全为0即不改变分辨率";
                     VideoBatchOutputFolderTextBox.EmptyTextTip = "字幕文件和视频文件在同一目录下且同名，不同名仅有语言后缀时请在右方选择或输入";
                     //txtvideo3.EmptyTextTip = "音频参数在音频选项卡设定";
-                    ExtractMP4TextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
-                    txtvideo8.EmptyTextTip = "抽取的视频或音频在原视频目录下";
-                    txtvideo6.EmptyTextTip = "抽取的视频或音频在原视频目录下";
+                    ExtractMp4InputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
+                    ExtractFlvInputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
+                    ExtractMkvInputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
                     //load Help Text
                     if (File.Exists(startpath + "\\help.rtf"))
                     {
@@ -3526,9 +3526,9 @@ namespace mp4box
                     //x264OutTextBox.EmptyTextTip = "寬度和高度全為0即不改變解析度";
                     VideoBatchOutputFolderTextBox.EmptyTextTip = "字幕和視頻在同一資料夾下且同名，不同名僅有語言後綴時請在右方選擇或輸入";
                     //txtvideo3.EmptyTextTip = "音頻參數需在音頻選項卡设定";
-                    ExtractMP4TextBox.EmptyTextTip = "新檔案生成在原資料夾";
-                    txtvideo8.EmptyTextTip = "新檔案生成在原資料夾";
-                    txtvideo6.EmptyTextTip = "新檔案生成在原資料夾";
+                    ExtractMp4InputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
+                    ExtractFlvInputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
+                    ExtractMkvInputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
                     //load Help Text
                     if (File.Exists(startpath + "\\help_zh_tw.rtf"))
                     {
@@ -3553,9 +3553,9 @@ namespace mp4box
                     //x264OutTextBox.EmptyTextTip = "Both the width and height equal zero means using original resolution";
                     VideoBatchOutputFolderTextBox.EmptyTextTip = "Subtitle and Video must be of the same name and in the same folder";
                     //txtvideo3.EmptyTextTip = "It is necessary to set audio parameter in the Audio tab";
-                    ExtractMP4TextBox.EmptyTextTip = "New file will be created in the original folder";
-                    txtvideo8.EmptyTextTip = "New file will be created in the original folder";
-                    txtvideo6.EmptyTextTip = "New file will be created in the original folder";
+                    ExtractMp4InputTextBox.EmptyTextTip = "New file will be created in the original folder";
+                    ExtractFlvInputTextBox.EmptyTextTip = "New file will be created in the original folder";
+                    ExtractMkvInputTextBox.EmptyTextTip = "New file will be created in the original folder";
                     //load Help Text
                     if (File.Exists(startpath + "\\help.rtf"))
                     {
@@ -3580,9 +3580,9 @@ namespace mp4box
                     //x264OutTextBox.EmptyTextTip = "Both the width and height equal zero means using original resolution";
                     VideoBatchOutputFolderTextBox.EmptyTextTip = "字幕とビデオは同じ名前と同じフォルダにある必要があります";
                     //txtvideo3.EmptyTextTip = "It is necessary to set audio parameter in the Audio tab";
-                    ExtractMP4TextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
-                    txtvideo8.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
-                    txtvideo6.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
+                    ExtractMp4InputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
+                    ExtractFlvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
+                    ExtractMkvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
                     if (File.Exists(startpath + "\\help.rtf"))
                     {
                         HelpTextBox.LoadFile(startpath + "\\help.rtf");

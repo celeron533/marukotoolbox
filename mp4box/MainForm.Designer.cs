@@ -104,27 +104,27 @@
             this.btnout9 = new ControlExs.QQButton();
             this.btnsub9 = new ControlExs.QQButton();
             this.ExtractTab = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.gmkvextractguibButton = new ControlExs.QQButton();
-            this.MkvExtract4Button = new ControlExs.QQButton();
-            this.MkvExtract3Button = new ControlExs.QQButton();
-            this.MkvExtract2Button = new ControlExs.QQButton();
-            this.MkvExtract1Button = new ControlExs.QQButton();
-            this.btnextract7 = new ControlExs.QQButton();
-            this.btnvideo7 = new ControlExs.QQButton();
-            this.txtvideo6 = new ControlExs.QQTextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnvextract8 = new ControlExs.QQButton();
-            this.btnvideo8 = new ControlExs.QQButton();
-            this.txtvideo8 = new ControlExs.QQTextBox();
-            this.btnaextract8 = new ControlExs.QQButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.ExtractMP4TextBox = new ControlExs.QQTextBox();
-            this.btnaextract3 = new ControlExs.QQButton();
-            this.ExtractMP4Button = new ControlExs.QQButton();
-            this.btnvextract = new ControlExs.QQButton();
-            this.btnaextract = new ControlExs.QQButton();
-            this.btnaextract2 = new ControlExs.QQButton();
+            this.ExtractMkvGroupBox = new System.Windows.Forms.GroupBox();
+            this.ExtractMkvExtractByExternalButton = new ControlExs.QQButton();
+            this.ExtractMkvExtractTrack4Button = new ControlExs.QQButton();
+            this.ExtractMkvExtractTrack3Button = new ControlExs.QQButton();
+            this.ExtractMkvExtractTrack2Button = new ControlExs.QQButton();
+            this.ExtractMkvExtractTrack1Button = new ControlExs.QQButton();
+            this.ExtractMkvExtractTrack0Button = new ControlExs.QQButton();
+            this.ExtractMkvInputButton = new ControlExs.QQButton();
+            this.ExtractMkvInputTextBox = new ControlExs.QQTextBox();
+            this.ExtractFlvGroupBox = new System.Windows.Forms.GroupBox();
+            this.ExtractFlvExtractVideoButton = new ControlExs.QQButton();
+            this.ExtractFlvInputButton = new ControlExs.QQButton();
+            this.ExtractFlvInputTextBox = new ControlExs.QQTextBox();
+            this.ExtractFlvExtractAudioButton = new ControlExs.QQButton();
+            this.ExtractMp4GroupBox = new System.Windows.Forms.GroupBox();
+            this.ExtractMp4InputTextBox = new ControlExs.QQTextBox();
+            this.ExtractMp4ExtractAudio3Button = new ControlExs.QQButton();
+            this.ExtractMp4InputButton = new ControlExs.QQButton();
+            this.ExtractMp4ExtractVideoButton = new ControlExs.QQButton();
+            this.ExtractMp4ExtractAudio1Button = new ControlExs.QQButton();
+            this.btnaextract2ExtractMp4ExtractAudio2Button = new ControlExs.QQButton();
             this.MuxTab = new System.Windows.Forms.TabPage();
             this.MuxConvertGroupBox = new System.Windows.Forms.GroupBox();
             this.MuxConvertAacEncoderLabel = new System.Windows.Forms.Label();
@@ -331,9 +331,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.TweakSaturationNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TweakChromaNumericUpDown)).BeginInit();
             this.ExtractTab.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.ExtractMkvGroupBox.SuspendLayout();
+            this.ExtractFlvGroupBox.SuspendLayout();
+            this.ExtractMp4GroupBox.SuspendLayout();
             this.MuxTab.SuspendLayout();
             this.MuxConvertGroupBox.SuspendLayout();
             this.MuxMp4GroupBox.SuspendLayout();
@@ -1079,188 +1079,188 @@
             // ExtractTab
             // 
             this.ExtractTab.AllowDrop = true;
-            this.ExtractTab.Controls.Add(this.groupBox7);
-            this.ExtractTab.Controls.Add(this.groupBox6);
-            this.ExtractTab.Controls.Add(this.groupBox5);
+            this.ExtractTab.Controls.Add(this.ExtractMkvGroupBox);
+            this.ExtractTab.Controls.Add(this.ExtractFlvGroupBox);
+            this.ExtractTab.Controls.Add(this.ExtractMp4GroupBox);
             resources.ApplyResources(this.ExtractTab, "ExtractTab");
             this.ExtractTab.Name = "ExtractTab";
             this.ExtractTab.UseVisualStyleBackColor = true;
             // 
-            // groupBox7
+            // ExtractMkvGroupBox
             // 
-            this.groupBox7.Controls.Add(this.gmkvextractguibButton);
-            this.groupBox7.Controls.Add(this.MkvExtract4Button);
-            this.groupBox7.Controls.Add(this.MkvExtract3Button);
-            this.groupBox7.Controls.Add(this.MkvExtract2Button);
-            this.groupBox7.Controls.Add(this.MkvExtract1Button);
-            this.groupBox7.Controls.Add(this.btnextract7);
-            this.groupBox7.Controls.Add(this.btnvideo7);
-            this.groupBox7.Controls.Add(this.txtvideo6);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.TabStop = false;
+            this.ExtractMkvGroupBox.Controls.Add(this.ExtractMkvExtractByExternalButton);
+            this.ExtractMkvGroupBox.Controls.Add(this.ExtractMkvExtractTrack4Button);
+            this.ExtractMkvGroupBox.Controls.Add(this.ExtractMkvExtractTrack3Button);
+            this.ExtractMkvGroupBox.Controls.Add(this.ExtractMkvExtractTrack2Button);
+            this.ExtractMkvGroupBox.Controls.Add(this.ExtractMkvExtractTrack1Button);
+            this.ExtractMkvGroupBox.Controls.Add(this.ExtractMkvExtractTrack0Button);
+            this.ExtractMkvGroupBox.Controls.Add(this.ExtractMkvInputButton);
+            this.ExtractMkvGroupBox.Controls.Add(this.ExtractMkvInputTextBox);
+            resources.ApplyResources(this.ExtractMkvGroupBox, "ExtractMkvGroupBox");
+            this.ExtractMkvGroupBox.Name = "ExtractMkvGroupBox";
+            this.ExtractMkvGroupBox.TabStop = false;
             // 
-            // gmkvextractguibButton
+            // ExtractMkvExtractByExternalButton
             // 
-            resources.ApplyResources(this.gmkvextractguibButton, "gmkvextractguibButton");
-            this.gmkvextractguibButton.Name = "gmkvextractguibButton";
-            this.gmkvextractguibButton.UseVisualStyleBackColor = true;
-            this.gmkvextractguibButton.Click += new System.EventHandler(this.gmkvextractguibButton_Click);
+            resources.ApplyResources(this.ExtractMkvExtractByExternalButton, "ExtractMkvExtractByExternalButton");
+            this.ExtractMkvExtractByExternalButton.Name = "ExtractMkvExtractByExternalButton";
+            this.ExtractMkvExtractByExternalButton.UseVisualStyleBackColor = true;
+            this.ExtractMkvExtractByExternalButton.Click += new System.EventHandler(this.gmkvextractguibButton_Click);
             // 
-            // MkvExtract4Button
+            // ExtractMkvExtractTrack4Button
             // 
-            resources.ApplyResources(this.MkvExtract4Button, "MkvExtract4Button");
-            this.MkvExtract4Button.Name = "MkvExtract4Button";
-            this.MkvExtract4Button.UseVisualStyleBackColor = true;
-            this.MkvExtract4Button.Click += new System.EventHandler(this.MkvExtract4Button_Click);
+            resources.ApplyResources(this.ExtractMkvExtractTrack4Button, "ExtractMkvExtractTrack4Button");
+            this.ExtractMkvExtractTrack4Button.Name = "ExtractMkvExtractTrack4Button";
+            this.ExtractMkvExtractTrack4Button.UseVisualStyleBackColor = true;
+            this.ExtractMkvExtractTrack4Button.Click += new System.EventHandler(this.MkvExtract4Button_Click);
             // 
-            // MkvExtract3Button
+            // ExtractMkvExtractTrack3Button
             // 
-            resources.ApplyResources(this.MkvExtract3Button, "MkvExtract3Button");
-            this.MkvExtract3Button.Name = "MkvExtract3Button";
-            this.MkvExtract3Button.UseVisualStyleBackColor = true;
-            this.MkvExtract3Button.Click += new System.EventHandler(this.MkvExtract3Button_Click);
+            resources.ApplyResources(this.ExtractMkvExtractTrack3Button, "ExtractMkvExtractTrack3Button");
+            this.ExtractMkvExtractTrack3Button.Name = "ExtractMkvExtractTrack3Button";
+            this.ExtractMkvExtractTrack3Button.UseVisualStyleBackColor = true;
+            this.ExtractMkvExtractTrack3Button.Click += new System.EventHandler(this.MkvExtract3Button_Click);
             // 
-            // MkvExtract2Button
+            // ExtractMkvExtractTrack2Button
             // 
-            resources.ApplyResources(this.MkvExtract2Button, "MkvExtract2Button");
-            this.MkvExtract2Button.Name = "MkvExtract2Button";
-            this.MkvExtract2Button.UseVisualStyleBackColor = true;
-            this.MkvExtract2Button.Click += new System.EventHandler(this.MkvExtract2Button_Click);
+            resources.ApplyResources(this.ExtractMkvExtractTrack2Button, "ExtractMkvExtractTrack2Button");
+            this.ExtractMkvExtractTrack2Button.Name = "ExtractMkvExtractTrack2Button";
+            this.ExtractMkvExtractTrack2Button.UseVisualStyleBackColor = true;
+            this.ExtractMkvExtractTrack2Button.Click += new System.EventHandler(this.MkvExtract2Button_Click);
             // 
-            // MkvExtract1Button
+            // ExtractMkvExtractTrack1Button
             // 
-            resources.ApplyResources(this.MkvExtract1Button, "MkvExtract1Button");
-            this.MkvExtract1Button.Name = "MkvExtract1Button";
-            this.MkvExtract1Button.UseVisualStyleBackColor = true;
-            this.MkvExtract1Button.Click += new System.EventHandler(this.MkvExtract1Button_Click);
+            resources.ApplyResources(this.ExtractMkvExtractTrack1Button, "ExtractMkvExtractTrack1Button");
+            this.ExtractMkvExtractTrack1Button.Name = "ExtractMkvExtractTrack1Button";
+            this.ExtractMkvExtractTrack1Button.UseVisualStyleBackColor = true;
+            this.ExtractMkvExtractTrack1Button.Click += new System.EventHandler(this.MkvExtract1Button_Click);
             // 
-            // btnextract7
+            // ExtractMkvExtractTrack0Button
             // 
-            resources.ApplyResources(this.btnextract7, "btnextract7");
-            this.btnextract7.Name = "btnextract7";
-            this.btnextract7.UseVisualStyleBackColor = true;
-            this.btnextract7.Click += new System.EventHandler(this.btnextract7_Click);
+            resources.ApplyResources(this.ExtractMkvExtractTrack0Button, "ExtractMkvExtractTrack0Button");
+            this.ExtractMkvExtractTrack0Button.Name = "ExtractMkvExtractTrack0Button";
+            this.ExtractMkvExtractTrack0Button.UseVisualStyleBackColor = true;
+            this.ExtractMkvExtractTrack0Button.Click += new System.EventHandler(this.btnextract7_Click);
             // 
-            // btnvideo7
+            // ExtractMkvInputButton
             // 
-            resources.ApplyResources(this.btnvideo7, "btnvideo7");
-            this.btnvideo7.Name = "btnvideo7";
-            this.btnvideo7.UseVisualStyleBackColor = true;
-            this.btnvideo7.Click += new System.EventHandler(this.btnvideo7_Click);
+            resources.ApplyResources(this.ExtractMkvInputButton, "ExtractMkvInputButton");
+            this.ExtractMkvInputButton.Name = "ExtractMkvInputButton";
+            this.ExtractMkvInputButton.UseVisualStyleBackColor = true;
+            this.ExtractMkvInputButton.Click += new System.EventHandler(this.btnvideo7_Click);
             // 
-            // txtvideo6
+            // ExtractMkvInputTextBox
             // 
-            this.txtvideo6.AllowDrop = true;
-            this.txtvideo6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtvideo6.EmptyTextTip = "";
-            this.txtvideo6.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtvideo6, "txtvideo6");
-            this.txtvideo6.Name = "txtvideo6";
-            this.txtvideo6.ReadOnly = true;
-            this.txtvideo6.TextChanged += new System.EventHandler(this.txtvideo6_TextChanged_1);
-            this.txtvideo6.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo6_MouseDoubleClick);
+            this.ExtractMkvInputTextBox.AllowDrop = true;
+            this.ExtractMkvInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ExtractMkvInputTextBox.EmptyTextTip = "";
+            this.ExtractMkvInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.ExtractMkvInputTextBox, "ExtractMkvInputTextBox");
+            this.ExtractMkvInputTextBox.Name = "ExtractMkvInputTextBox";
+            this.ExtractMkvInputTextBox.ReadOnly = true;
+            this.ExtractMkvInputTextBox.TextChanged += new System.EventHandler(this.txtvideo6_TextChanged_1);
+            this.ExtractMkvInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo6_MouseDoubleClick);
             // 
-            // groupBox6
+            // ExtractFlvGroupBox
             // 
-            this.groupBox6.Controls.Add(this.btnvextract8);
-            this.groupBox6.Controls.Add(this.btnvideo8);
-            this.groupBox6.Controls.Add(this.txtvideo8);
-            this.groupBox6.Controls.Add(this.btnaextract8);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.TabStop = false;
+            this.ExtractFlvGroupBox.Controls.Add(this.ExtractFlvExtractVideoButton);
+            this.ExtractFlvGroupBox.Controls.Add(this.ExtractFlvInputButton);
+            this.ExtractFlvGroupBox.Controls.Add(this.ExtractFlvInputTextBox);
+            this.ExtractFlvGroupBox.Controls.Add(this.ExtractFlvExtractAudioButton);
+            resources.ApplyResources(this.ExtractFlvGroupBox, "ExtractFlvGroupBox");
+            this.ExtractFlvGroupBox.Name = "ExtractFlvGroupBox";
+            this.ExtractFlvGroupBox.TabStop = false;
             // 
-            // btnvextract8
+            // ExtractFlvExtractVideoButton
             // 
-            resources.ApplyResources(this.btnvextract8, "btnvextract8");
-            this.btnvextract8.Name = "btnvextract8";
-            this.btnvextract8.UseVisualStyleBackColor = true;
-            this.btnvextract8.Click += new System.EventHandler(this.btnvextract8_Click);
+            resources.ApplyResources(this.ExtractFlvExtractVideoButton, "ExtractFlvExtractVideoButton");
+            this.ExtractFlvExtractVideoButton.Name = "ExtractFlvExtractVideoButton";
+            this.ExtractFlvExtractVideoButton.UseVisualStyleBackColor = true;
+            this.ExtractFlvExtractVideoButton.Click += new System.EventHandler(this.btnvextract8_Click);
             // 
-            // btnvideo8
+            // ExtractFlvInputButton
             // 
-            resources.ApplyResources(this.btnvideo8, "btnvideo8");
-            this.btnvideo8.Name = "btnvideo8";
-            this.btnvideo8.UseVisualStyleBackColor = true;
-            this.btnvideo8.Click += new System.EventHandler(this.btnvideo8_Click);
+            resources.ApplyResources(this.ExtractFlvInputButton, "ExtractFlvInputButton");
+            this.ExtractFlvInputButton.Name = "ExtractFlvInputButton";
+            this.ExtractFlvInputButton.UseVisualStyleBackColor = true;
+            this.ExtractFlvInputButton.Click += new System.EventHandler(this.btnvideo8_Click);
             // 
-            // txtvideo8
+            // ExtractFlvInputTextBox
             // 
-            this.txtvideo8.AllowDrop = true;
-            this.txtvideo8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtvideo8.EmptyTextTip = "";
-            this.txtvideo8.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtvideo8, "txtvideo8");
-            this.txtvideo8.Name = "txtvideo8";
-            this.txtvideo8.ReadOnly = true;
-            this.txtvideo8.TextChanged += new System.EventHandler(this.txtvideo8_TextChanged);
-            this.txtvideo8.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo8_MouseDoubleClick);
+            this.ExtractFlvInputTextBox.AllowDrop = true;
+            this.ExtractFlvInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ExtractFlvInputTextBox.EmptyTextTip = "";
+            this.ExtractFlvInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.ExtractFlvInputTextBox, "ExtractFlvInputTextBox");
+            this.ExtractFlvInputTextBox.Name = "ExtractFlvInputTextBox";
+            this.ExtractFlvInputTextBox.ReadOnly = true;
+            this.ExtractFlvInputTextBox.TextChanged += new System.EventHandler(this.txtvideo8_TextChanged);
+            this.ExtractFlvInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo8_MouseDoubleClick);
             // 
-            // btnaextract8
+            // ExtractFlvExtractAudioButton
             // 
-            resources.ApplyResources(this.btnaextract8, "btnaextract8");
-            this.btnaextract8.Name = "btnaextract8";
-            this.btnaextract8.UseVisualStyleBackColor = true;
-            this.btnaextract8.Click += new System.EventHandler(this.btnaextract8_Click);
+            resources.ApplyResources(this.ExtractFlvExtractAudioButton, "ExtractFlvExtractAudioButton");
+            this.ExtractFlvExtractAudioButton.Name = "ExtractFlvExtractAudioButton";
+            this.ExtractFlvExtractAudioButton.UseVisualStyleBackColor = true;
+            this.ExtractFlvExtractAudioButton.Click += new System.EventHandler(this.btnaextract8_Click);
             // 
-            // groupBox5
+            // ExtractMp4GroupBox
             // 
-            this.groupBox5.Controls.Add(this.ExtractMP4TextBox);
-            this.groupBox5.Controls.Add(this.btnaextract3);
-            this.groupBox5.Controls.Add(this.ExtractMP4Button);
-            this.groupBox5.Controls.Add(this.btnvextract);
-            this.groupBox5.Controls.Add(this.btnaextract);
-            this.groupBox5.Controls.Add(this.btnaextract2);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
+            this.ExtractMp4GroupBox.Controls.Add(this.ExtractMp4InputTextBox);
+            this.ExtractMp4GroupBox.Controls.Add(this.ExtractMp4ExtractAudio3Button);
+            this.ExtractMp4GroupBox.Controls.Add(this.ExtractMp4InputButton);
+            this.ExtractMp4GroupBox.Controls.Add(this.ExtractMp4ExtractVideoButton);
+            this.ExtractMp4GroupBox.Controls.Add(this.ExtractMp4ExtractAudio1Button);
+            this.ExtractMp4GroupBox.Controls.Add(this.btnaextract2ExtractMp4ExtractAudio2Button);
+            resources.ApplyResources(this.ExtractMp4GroupBox, "ExtractMp4GroupBox");
+            this.ExtractMp4GroupBox.Name = "ExtractMp4GroupBox";
+            this.ExtractMp4GroupBox.TabStop = false;
             // 
-            // ExtractMP4TextBox
+            // ExtractMp4InputTextBox
             // 
-            this.ExtractMP4TextBox.AllowDrop = true;
-            this.ExtractMP4TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ExtractMP4TextBox.EmptyTextTip = "";
-            this.ExtractMP4TextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.ExtractMP4TextBox, "ExtractMP4TextBox");
-            this.ExtractMP4TextBox.Name = "ExtractMP4TextBox";
-            this.ExtractMP4TextBox.ReadOnly = true;
-            this.ExtractMP4TextBox.TextChanged += new System.EventHandler(this.ExtractMP4TextBox_TextChanged);
+            this.ExtractMp4InputTextBox.AllowDrop = true;
+            this.ExtractMp4InputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ExtractMp4InputTextBox.EmptyTextTip = "";
+            this.ExtractMp4InputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.ExtractMp4InputTextBox, "ExtractMp4InputTextBox");
+            this.ExtractMp4InputTextBox.Name = "ExtractMp4InputTextBox";
+            this.ExtractMp4InputTextBox.ReadOnly = true;
+            this.ExtractMp4InputTextBox.TextChanged += new System.EventHandler(this.ExtractMP4TextBox_TextChanged);
             // 
-            // btnaextract3
+            // ExtractMp4ExtractAudio3Button
             // 
-            resources.ApplyResources(this.btnaextract3, "btnaextract3");
-            this.btnaextract3.Name = "btnaextract3";
-            this.btnaextract3.UseVisualStyleBackColor = true;
-            this.btnaextract3.Click += new System.EventHandler(this.btnaextract3_Click);
+            resources.ApplyResources(this.ExtractMp4ExtractAudio3Button, "ExtractMp4ExtractAudio3Button");
+            this.ExtractMp4ExtractAudio3Button.Name = "ExtractMp4ExtractAudio3Button";
+            this.ExtractMp4ExtractAudio3Button.UseVisualStyleBackColor = true;
+            this.ExtractMp4ExtractAudio3Button.Click += new System.EventHandler(this.btnaextract3_Click);
             // 
-            // ExtractMP4Button
+            // ExtractMp4InputButton
             // 
-            resources.ApplyResources(this.ExtractMP4Button, "ExtractMP4Button");
-            this.ExtractMP4Button.Name = "ExtractMP4Button";
-            this.ExtractMP4Button.UseVisualStyleBackColor = true;
-            this.ExtractMP4Button.Click += new System.EventHandler(this.ExtractMP4Button_Click);
+            resources.ApplyResources(this.ExtractMp4InputButton, "ExtractMp4InputButton");
+            this.ExtractMp4InputButton.Name = "ExtractMp4InputButton";
+            this.ExtractMp4InputButton.UseVisualStyleBackColor = true;
+            this.ExtractMp4InputButton.Click += new System.EventHandler(this.ExtractMP4Button_Click);
             // 
-            // btnvextract
+            // ExtractMp4ExtractVideoButton
             // 
-            resources.ApplyResources(this.btnvextract, "btnvextract");
-            this.btnvextract.Name = "btnvextract";
-            this.btnvextract.UseVisualStyleBackColor = true;
-            this.btnvextract.Click += new System.EventHandler(this.btnvextract_Click);
+            resources.ApplyResources(this.ExtractMp4ExtractVideoButton, "ExtractMp4ExtractVideoButton");
+            this.ExtractMp4ExtractVideoButton.Name = "ExtractMp4ExtractVideoButton";
+            this.ExtractMp4ExtractVideoButton.UseVisualStyleBackColor = true;
+            this.ExtractMp4ExtractVideoButton.Click += new System.EventHandler(this.btnvextract_Click);
             // 
-            // btnaextract
+            // ExtractMp4ExtractAudio1Button
             // 
-            resources.ApplyResources(this.btnaextract, "btnaextract");
-            this.btnaextract.Name = "btnaextract";
-            this.btnaextract.UseVisualStyleBackColor = true;
-            this.btnaextract.Click += new System.EventHandler(this.btnaextract_Click);
+            resources.ApplyResources(this.ExtractMp4ExtractAudio1Button, "ExtractMp4ExtractAudio1Button");
+            this.ExtractMp4ExtractAudio1Button.Name = "ExtractMp4ExtractAudio1Button";
+            this.ExtractMp4ExtractAudio1Button.UseVisualStyleBackColor = true;
+            this.ExtractMp4ExtractAudio1Button.Click += new System.EventHandler(this.btnaextract_Click);
             // 
-            // btnaextract2
+            // btnaextract2ExtractMp4ExtractAudio2Button
             // 
-            resources.ApplyResources(this.btnaextract2, "btnaextract2");
-            this.btnaextract2.Name = "btnaextract2";
-            this.btnaextract2.UseVisualStyleBackColor = true;
-            this.btnaextract2.Click += new System.EventHandler(this.btnaextract2_Click);
+            resources.ApplyResources(this.btnaextract2ExtractMp4ExtractAudio2Button, "btnaextract2ExtractMp4ExtractAudio2Button");
+            this.btnaextract2ExtractMp4ExtractAudio2Button.Name = "btnaextract2ExtractMp4ExtractAudio2Button";
+            this.btnaextract2ExtractMp4ExtractAudio2Button.UseVisualStyleBackColor = true;
+            this.btnaextract2ExtractMp4ExtractAudio2Button.Click += new System.EventHandler(this.btnaextract2_Click);
             // 
             // MuxTab
             // 
@@ -3039,12 +3039,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.TweakSaturationNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TweakChromaNumericUpDown)).EndInit();
             this.ExtractTab.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.ExtractMkvGroupBox.ResumeLayout(false);
+            this.ExtractMkvGroupBox.PerformLayout();
+            this.ExtractFlvGroupBox.ResumeLayout(false);
+            this.ExtractFlvGroupBox.PerformLayout();
+            this.ExtractMp4GroupBox.ResumeLayout(false);
+            this.ExtractMp4GroupBox.PerformLayout();
             this.MuxTab.ResumeLayout(false);
             this.MuxConvertGroupBox.ResumeLayout(false);
             this.MuxConvertGroupBox.PerformLayout();
@@ -3126,22 +3126,22 @@
         private ControlExs.QQButton btnout9;
         private ControlExs.QQButton btnsub9;
         private System.Windows.Forms.TabPage ExtractTab;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private ControlExs.QQButton btnextract7;
-        private ControlExs.QQButton btnvideo7;
-        private ControlExs.QQTextBox txtvideo6;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private ControlExs.QQButton btnvextract8;
-        private ControlExs.QQButton btnvideo8;
-        private ControlExs.QQTextBox txtvideo8;
-        private ControlExs.QQButton btnaextract8;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private ControlExs.QQTextBox ExtractMP4TextBox;
-        private ControlExs.QQButton btnaextract3;
-        private ControlExs.QQButton ExtractMP4Button;
-        private ControlExs.QQButton btnvextract;
-        private ControlExs.QQButton btnaextract;
-        private ControlExs.QQButton btnaextract2;
+        private System.Windows.Forms.GroupBox ExtractMkvGroupBox;
+        private ControlExs.QQButton ExtractMkvExtractTrack0Button;
+        private ControlExs.QQButton ExtractMkvInputButton;
+        private ControlExs.QQTextBox ExtractMkvInputTextBox;
+        private System.Windows.Forms.GroupBox ExtractFlvGroupBox;
+        private ControlExs.QQButton ExtractFlvExtractVideoButton;
+        private ControlExs.QQButton ExtractFlvInputButton;
+        private ControlExs.QQTextBox ExtractFlvInputTextBox;
+        private ControlExs.QQButton ExtractFlvExtractAudioButton;
+        private System.Windows.Forms.GroupBox ExtractMp4GroupBox;
+        private ControlExs.QQTextBox ExtractMp4InputTextBox;
+        private ControlExs.QQButton ExtractMp4ExtractAudio3Button;
+        private ControlExs.QQButton ExtractMp4InputButton;
+        private ControlExs.QQButton ExtractMp4ExtractVideoButton;
+        private ControlExs.QQButton ExtractMp4ExtractAudio1Button;
+        private ControlExs.QQButton btnaextract2ExtractMp4ExtractAudio2Button;
         private System.Windows.Forms.TabPage MuxTab;
         private System.Windows.Forms.GroupBox MuxMkvGroupBox;
         private ControlExs.QQTextBox MuxMkvVideoInputTextBox;
@@ -3293,10 +3293,10 @@
         private System.Windows.Forms.ComboBox x264PriorityComboBox;
         private System.Windows.Forms.Label label11;
         private ControlExs.QQCheckBox VideoMaintainResolutionCheckBox;
-        private ControlExs.QQButton MkvExtract4Button;
-        private ControlExs.QQButton MkvExtract3Button;
-        private ControlExs.QQButton MkvExtract2Button;
-        private ControlExs.QQButton MkvExtract1Button;
+        private ControlExs.QQButton ExtractMkvExtractTrack4Button;
+        private ControlExs.QQButton ExtractMkvExtractTrack3Button;
+        private ControlExs.QQButton ExtractMkvExtractTrack2Button;
+        private ControlExs.QQButton ExtractMkvExtractTrack1Button;
         private System.Windows.Forms.GroupBox MiscOnePicGroupBox;
         private ControlExs.QQButton MiscOnePicStartButton;
         private ControlExs.QQButton MiscOnePicAudioInputButton;
@@ -3356,7 +3356,7 @@
         private ControlExs.QQButton AudioBatchConcatButton;
         private System.Windows.Forms.ComboBox MuxMp4ParComboBox;
         private System.Windows.Forms.Label MuxMp4ParLabel;
-        private ControlExs.QQButton gmkvextractguibButton;
+        private ControlExs.QQButton ExtractMkvExtractByExternalButton;
         private ControlExs.QQButton MuxMp4ReplaceAudioButton;
         private ControlExs.QQButton FeedbackButton;
         private ControlExs.QQCheckBox CheckUpdateCheckBox;
