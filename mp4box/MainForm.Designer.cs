@@ -35,11 +35,11 @@
             this.MiscMiscGroupBox = new System.Windows.Forms.GroupBox();
             this.MiscMiscTransposeLabel = new System.Windows.Forms.Label();
             this.MiscMiscTransposeComboBox = new System.Windows.Forms.ComboBox();
-            this.MiscMiscRotateButton = new ControlExs.QQButton();
+            this.MiscMiscStartRotateButton = new ControlExs.QQButton();
             this.MiscMiscVideoInputTextBox = new ControlExs.QQTextBox();
             this.MiscMiscVideoInputButton = new ControlExs.QQButton();
             this.MiscMiscVideoOutputButton = new ControlExs.QQButton();
-            this.MiscMiscClipButton = new ControlExs.QQButton();
+            this.MiscMiscStartClipButton = new ControlExs.QQButton();
             this.MiscMiscVideoOutputTextBox = new ControlExs.QQTextBox();
             this.MiscMiscEndTimeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.MiscMiscBeginTimeLabel = new System.Windows.Forms.Label();
@@ -378,11 +378,11 @@
             // 
             this.MiscMiscGroupBox.Controls.Add(this.MiscMiscTransposeLabel);
             this.MiscMiscGroupBox.Controls.Add(this.MiscMiscTransposeComboBox);
-            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscRotateButton);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscStartRotateButton);
             this.MiscMiscGroupBox.Controls.Add(this.MiscMiscVideoInputTextBox);
             this.MiscMiscGroupBox.Controls.Add(this.MiscMiscVideoInputButton);
             this.MiscMiscGroupBox.Controls.Add(this.MiscMiscVideoOutputButton);
-            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscClipButton);
+            this.MiscMiscGroupBox.Controls.Add(this.MiscMiscStartClipButton);
             this.MiscMiscGroupBox.Controls.Add(this.MiscMiscVideoOutputTextBox);
             this.MiscMiscGroupBox.Controls.Add(this.MiscMiscEndTimeMaskedTextBox);
             this.MiscMiscGroupBox.Controls.Add(this.MiscMiscBeginTimeLabel);
@@ -409,12 +409,12 @@
             resources.ApplyResources(this.MiscMiscTransposeComboBox, "MiscMiscTransposeComboBox");
             this.MiscMiscTransposeComboBox.Name = "MiscMiscTransposeComboBox";
             // 
-            // MiscMiscRotateButton
+            // MiscMiscStartRotateButton
             // 
-            resources.ApplyResources(this.MiscMiscRotateButton, "MiscMiscRotateButton");
-            this.MiscMiscRotateButton.Name = "MiscMiscRotateButton";
-            this.MiscMiscRotateButton.UseVisualStyleBackColor = true;
-            this.MiscMiscRotateButton.Click += new System.EventHandler(this.RotateButton_Click);
+            resources.ApplyResources(this.MiscMiscStartRotateButton, "MiscMiscStartRotateButton");
+            this.MiscMiscStartRotateButton.Name = "MiscMiscStartRotateButton";
+            this.MiscMiscStartRotateButton.UseVisualStyleBackColor = true;
+            this.MiscMiscStartRotateButton.Click += new System.EventHandler(this.RotateButton_Click);
             // 
             // MiscMiscVideoInputTextBox
             // 
@@ -442,12 +442,12 @@
             this.MiscMiscVideoOutputButton.UseVisualStyleBackColor = true;
             this.MiscMiscVideoOutputButton.Click += new System.EventHandler(this.btnout5_Click);
             // 
-            // MiscMiscClipButton
+            // MiscMiscStartClipButton
             // 
-            resources.ApplyResources(this.MiscMiscClipButton, "MiscMiscClipButton");
-            this.MiscMiscClipButton.Name = "MiscMiscClipButton";
-            this.MiscMiscClipButton.UseVisualStyleBackColor = true;
-            this.MiscMiscClipButton.Click += new System.EventHandler(this.btnClip_Click);
+            resources.ApplyResources(this.MiscMiscStartClipButton, "MiscMiscStartClipButton");
+            this.MiscMiscStartClipButton.Name = "MiscMiscStartClipButton";
+            this.MiscMiscStartClipButton.UseVisualStyleBackColor = true;
+            this.MiscMiscStartClipButton.Click += new System.EventHandler(this.btnClip_Click);
             // 
             // MiscMiscVideoOutputTextBox
             // 
@@ -3099,7 +3099,7 @@
 
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private ControlExs.QQButton MiscMiscClipButton;
+        private ControlExs.QQButton MiscMiscStartClipButton;
         private System.Windows.Forms.MaskedTextBox MiscMiscEndTimeMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox MiscMiscBeginTimeMaskedTextBox;
         private System.Windows.Forms.Label MiscMiscEndTimeLabel;
@@ -3361,7 +3361,7 @@
         private ControlExs.QQButton HelpFeedbackButton;
         private ControlExs.QQCheckBox ConfigFunctionAutoCheckUpdateCheckBox;
         private System.Windows.Forms.ComboBox MiscMiscTransposeComboBox;
-        private ControlExs.QQButton MiscMiscRotateButton;
+        private ControlExs.QQButton MiscMiscStartRotateButton;
         private System.Windows.Forms.Label MiscMiscTransposeLabel;
         private System.Windows.Forms.Label VideoBatchFormatLabel;
         private System.Windows.Forms.ComboBox VideoBatchFormatComboBox;
