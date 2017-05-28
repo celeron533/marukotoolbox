@@ -50,59 +50,59 @@
             this.btnMIplay = new ControlExs.QQButton();
             this.btnMIcopy = new ControlExs.QQButton();
             this.MediaInfoTextBox = new System.Windows.Forms.TextBox();
-            this.AVSTab = new System.Windows.Forms.TabPage();
-            this.AVSAddFilterButton = new ControlExs.QQButton();
-            this.label39 = new System.Windows.Forms.Label();
-            this.AVSFilterComboBox = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.AVSCropTextBox = new ControlExs.QQTextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.TrimEndNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.TrimStartNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.LevelsNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.AddBorders4NumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.AddBorders3NumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.AddBorders2NumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.SharpenNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.AddBorders1NumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.AVSHeightNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.AVSWidthNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TweakContrastNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.TweakBrightnessNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.TweakSaturationNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.TweakChromaNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.AVSScriptTextBox = new ControlExs.QQTextBox();
-            this.txtvideo9 = new ControlExs.QQTextBox();
-            this.txtout9 = new ControlExs.QQTextBox();
-            this.txtsub9 = new ControlExs.QQTextBox();
-            this.AVSwithAudioCheckBox = new ControlExs.QQCheckBox();
-            this.AVSSaveButton = new ControlExs.QQButton();
-            this.LevelsCheckBox = new ControlExs.QQCheckBox();
-            this.CropCheckBox = new ControlExs.QQCheckBox();
-            this.TrimCheckBox = new ControlExs.QQCheckBox();
-            this.SharpenCheckBox = new ControlExs.QQCheckBox();
-            this.AddBordersCheckBox = new ControlExs.QQCheckBox();
-            this.LanczosResizeCheckBox = new ControlExs.QQCheckBox();
-            this.TweakCheckBox = new ControlExs.QQCheckBox();
-            this.UndotCheckBox = new ControlExs.QQCheckBox();
-            this.button9 = new ControlExs.QQButton();
-            this.button6 = new ControlExs.QQButton();
-            this.btnpreview9 = new ControlExs.QQButton();
-            this.btnAVS9 = new ControlExs.QQButton();
-            this.btnvideo9 = new ControlExs.QQButton();
-            this.btnout9 = new ControlExs.QQButton();
-            this.btnsub9 = new ControlExs.QQButton();
+            this.AvsTab = new System.Windows.Forms.TabPage();
+            this.AvsAddFilterButton = new ControlExs.QQButton();
+            this.AvsFilterLabel = new System.Windows.Forms.Label();
+            this.AvsFilterComboBox = new System.Windows.Forms.ComboBox();
+            this.AvsCropIntroductionLabel = new System.Windows.Forms.Label();
+            this.AvsCropTextBox = new ControlExs.QQTextBox();
+            this.AvsTrimEndLabel = new System.Windows.Forms.Label();
+            this.AvsTrimStartLabel = new System.Windows.Forms.Label();
+            this.AvsTrimEndNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsTrimStartNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsLevelsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsAddBordersTopLabel = new System.Windows.Forms.Label();
+            this.AvsAddBordersRightLabel = new System.Windows.Forms.Label();
+            this.AvsAddBordersBottomLabel = new System.Windows.Forms.Label();
+            this.AvsAddBordersLeftLabel = new System.Windows.Forms.Label();
+            this.AvsAddBordersBottomNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsAddBordersRightNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsAddBordersTopNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsSharpenNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsAddBordersLeftNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsLanczosResizeHeightLabel = new System.Windows.Forms.Label();
+            this.AvsLanczosResizeWidthLabel = new System.Windows.Forms.Label();
+            this.AvsLanczosResizeHeightNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsLanczosResizeWidthNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsTweakContrastLabel = new System.Windows.Forms.Label();
+            this.AvsTweakBrightnessLabel = new System.Windows.Forms.Label();
+            this.AvsTweakSaturationLabel = new System.Windows.Forms.Label();
+            this.AvsTweakChromaLabel = new System.Windows.Forms.Label();
+            this.AvsTweakContrastNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsTweakBrightnessNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsTweakSaturationNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsTweakChromaNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AvsScriptTextBox = new ControlExs.QQTextBox();
+            this.AvsVideoInputTextBox = new ControlExs.QQTextBox();
+            this.AvsOutputTextBox = new ControlExs.QQTextBox();
+            this.AvsSubtitleInputTextBox = new ControlExs.QQTextBox();
+            this.AvsIncludeAudioCheckBox = new ControlExs.QQCheckBox();
+            this.AvsSaveButton = new ControlExs.QQButton();
+            this.AvsLevelsCheckBox = new ControlExs.QQCheckBox();
+            this.AvsCropCheckBox = new ControlExs.QQCheckBox();
+            this.AvsTrimCheckBox = new ControlExs.QQCheckBox();
+            this.AvsSharpenCheckBox = new ControlExs.QQCheckBox();
+            this.AvsAddBordersCheckBox = new ControlExs.QQCheckBox();
+            this.AvsLanczosResizeCheckBox = new ControlExs.QQCheckBox();
+            this.AvsTweakCheckBox = new ControlExs.QQCheckBox();
+            this.AvsUndotCheckBox = new ControlExs.QQCheckBox();
+            this.AvsClearButton = new ControlExs.QQButton();
+            this.AvsGenerateButton = new ControlExs.QQButton();
+            this.AvPreviewButton = new ControlExs.QQButton();
+            this.AvsStartButton = new ControlExs.QQButton();
+            this.AvsVideoInputButton = new ControlExs.QQButton();
+            this.AvsOutputButton = new ControlExs.QQButton();
+            this.AvsSubtitleInputButton = new ControlExs.QQButton();
             this.ExtractTab = new System.Windows.Forms.TabPage();
             this.ExtractMkvGroupBox = new System.Windows.Forms.GroupBox();
             this.ExtractMkvExtractByExternalButton = new ControlExs.QQButton();
@@ -315,21 +315,21 @@
             this.ViewLogButton = new ControlExs.QQButton();
             this.MiscMiscGroupBox.SuspendLayout();
             this.MediaInfoTab.SuspendLayout();
-            this.AVSTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TrimEndNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TrimStartNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LevelsNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBorders4NumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBorders3NumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBorders2NumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SharpenNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBorders1NumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AVSHeightNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AVSWidthNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TweakContrastNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TweakBrightnessNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TweakSaturationNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TweakChromaNumericUpDown)).BeginInit();
+            this.AvsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTrimEndNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTrimStartNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsLevelsNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsAddBordersBottomNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsAddBordersRightNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsAddBordersTopNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsSharpenNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsAddBordersLeftNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsLanczosResizeHeightNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsLanczosResizeWidthNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTweakContrastNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTweakBrightnessNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTweakSaturationNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTweakChromaNumericUpDown)).BeginInit();
             this.ExtractTab.SuspendLayout();
             this.ExtractMkvGroupBox.SuspendLayout();
             this.ExtractFlvGroupBox.SuspendLayout();
@@ -522,559 +522,559 @@
             this.MediaInfoTextBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.txtMI_DragEnter);
             this.MediaInfoTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MediaInfoTextBox_KeyDown);
             // 
-            // AVSTab
+            // AvsTab
             // 
-            this.AVSTab.Controls.Add(this.AVSAddFilterButton);
-            this.AVSTab.Controls.Add(this.label39);
-            this.AVSTab.Controls.Add(this.AVSFilterComboBox);
-            this.AVSTab.Controls.Add(this.label25);
-            this.AVSTab.Controls.Add(this.AVSCropTextBox);
-            this.AVSTab.Controls.Add(this.label30);
-            this.AVSTab.Controls.Add(this.label29);
-            this.AVSTab.Controls.Add(this.TrimEndNumericUpDown);
-            this.AVSTab.Controls.Add(this.TrimStartNumericUpDown);
-            this.AVSTab.Controls.Add(this.LevelsNumericUpDown);
-            this.AVSTab.Controls.Add(this.label24);
-            this.AVSTab.Controls.Add(this.label23);
-            this.AVSTab.Controls.Add(this.label22);
-            this.AVSTab.Controls.Add(this.label21);
-            this.AVSTab.Controls.Add(this.AddBorders4NumericUpDown);
-            this.AVSTab.Controls.Add(this.AddBorders3NumericUpDown);
-            this.AVSTab.Controls.Add(this.AddBorders2NumericUpDown);
-            this.AVSTab.Controls.Add(this.SharpenNumericUpDown);
-            this.AVSTab.Controls.Add(this.AddBorders1NumericUpDown);
-            this.AVSTab.Controls.Add(this.label19);
-            this.AVSTab.Controls.Add(this.label20);
-            this.AVSTab.Controls.Add(this.AVSHeightNumericUpDown);
-            this.AVSTab.Controls.Add(this.AVSWidthNumericUpDown);
-            this.AVSTab.Controls.Add(this.label18);
-            this.AVSTab.Controls.Add(this.label10);
-            this.AVSTab.Controls.Add(this.label9);
-            this.AVSTab.Controls.Add(this.label5);
-            this.AVSTab.Controls.Add(this.TweakContrastNumericUpDown);
-            this.AVSTab.Controls.Add(this.TweakBrightnessNumericUpDown);
-            this.AVSTab.Controls.Add(this.TweakSaturationNumericUpDown);
-            this.AVSTab.Controls.Add(this.TweakChromaNumericUpDown);
-            this.AVSTab.Controls.Add(this.AVSScriptTextBox);
-            this.AVSTab.Controls.Add(this.txtvideo9);
-            this.AVSTab.Controls.Add(this.txtout9);
-            this.AVSTab.Controls.Add(this.txtsub9);
-            this.AVSTab.Controls.Add(this.AVSwithAudioCheckBox);
-            this.AVSTab.Controls.Add(this.AVSSaveButton);
-            this.AVSTab.Controls.Add(this.LevelsCheckBox);
-            this.AVSTab.Controls.Add(this.CropCheckBox);
-            this.AVSTab.Controls.Add(this.TrimCheckBox);
-            this.AVSTab.Controls.Add(this.SharpenCheckBox);
-            this.AVSTab.Controls.Add(this.AddBordersCheckBox);
-            this.AVSTab.Controls.Add(this.LanczosResizeCheckBox);
-            this.AVSTab.Controls.Add(this.TweakCheckBox);
-            this.AVSTab.Controls.Add(this.UndotCheckBox);
-            this.AVSTab.Controls.Add(this.button9);
-            this.AVSTab.Controls.Add(this.button6);
-            this.AVSTab.Controls.Add(this.btnpreview9);
-            this.AVSTab.Controls.Add(this.btnAVS9);
-            this.AVSTab.Controls.Add(this.btnvideo9);
-            this.AVSTab.Controls.Add(this.btnout9);
-            this.AVSTab.Controls.Add(this.btnsub9);
-            resources.ApplyResources(this.AVSTab, "AVSTab");
-            this.AVSTab.Name = "AVSTab";
-            this.AVSTab.UseVisualStyleBackColor = true;
-            this.AVSTab.Click += new System.EventHandler(this.txtAVScreate_Click);
+            this.AvsTab.Controls.Add(this.AvsAddFilterButton);
+            this.AvsTab.Controls.Add(this.AvsFilterLabel);
+            this.AvsTab.Controls.Add(this.AvsFilterComboBox);
+            this.AvsTab.Controls.Add(this.AvsCropIntroductionLabel);
+            this.AvsTab.Controls.Add(this.AvsCropTextBox);
+            this.AvsTab.Controls.Add(this.AvsTrimEndLabel);
+            this.AvsTab.Controls.Add(this.AvsTrimStartLabel);
+            this.AvsTab.Controls.Add(this.AvsTrimEndNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsTrimStartNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsLevelsNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsAddBordersTopLabel);
+            this.AvsTab.Controls.Add(this.AvsAddBordersRightLabel);
+            this.AvsTab.Controls.Add(this.AvsAddBordersBottomLabel);
+            this.AvsTab.Controls.Add(this.AvsAddBordersLeftLabel);
+            this.AvsTab.Controls.Add(this.AvsAddBordersBottomNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsAddBordersRightNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsAddBordersTopNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsSharpenNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsAddBordersLeftNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsLanczosResizeHeightLabel);
+            this.AvsTab.Controls.Add(this.AvsLanczosResizeWidthLabel);
+            this.AvsTab.Controls.Add(this.AvsLanczosResizeHeightNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsLanczosResizeWidthNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsTweakContrastLabel);
+            this.AvsTab.Controls.Add(this.AvsTweakBrightnessLabel);
+            this.AvsTab.Controls.Add(this.AvsTweakSaturationLabel);
+            this.AvsTab.Controls.Add(this.AvsTweakChromaLabel);
+            this.AvsTab.Controls.Add(this.AvsTweakContrastNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsTweakBrightnessNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsTweakSaturationNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsTweakChromaNumericUpDown);
+            this.AvsTab.Controls.Add(this.AvsScriptTextBox);
+            this.AvsTab.Controls.Add(this.AvsVideoInputTextBox);
+            this.AvsTab.Controls.Add(this.AvsOutputTextBox);
+            this.AvsTab.Controls.Add(this.AvsSubtitleInputTextBox);
+            this.AvsTab.Controls.Add(this.AvsIncludeAudioCheckBox);
+            this.AvsTab.Controls.Add(this.AvsSaveButton);
+            this.AvsTab.Controls.Add(this.AvsLevelsCheckBox);
+            this.AvsTab.Controls.Add(this.AvsCropCheckBox);
+            this.AvsTab.Controls.Add(this.AvsTrimCheckBox);
+            this.AvsTab.Controls.Add(this.AvsSharpenCheckBox);
+            this.AvsTab.Controls.Add(this.AvsAddBordersCheckBox);
+            this.AvsTab.Controls.Add(this.AvsLanczosResizeCheckBox);
+            this.AvsTab.Controls.Add(this.AvsTweakCheckBox);
+            this.AvsTab.Controls.Add(this.AvsUndotCheckBox);
+            this.AvsTab.Controls.Add(this.AvsClearButton);
+            this.AvsTab.Controls.Add(this.AvsGenerateButton);
+            this.AvsTab.Controls.Add(this.AvPreviewButton);
+            this.AvsTab.Controls.Add(this.AvsStartButton);
+            this.AvsTab.Controls.Add(this.AvsVideoInputButton);
+            this.AvsTab.Controls.Add(this.AvsOutputButton);
+            this.AvsTab.Controls.Add(this.AvsSubtitleInputButton);
+            resources.ApplyResources(this.AvsTab, "AvsTab");
+            this.AvsTab.Name = "AvsTab";
+            this.AvsTab.UseVisualStyleBackColor = true;
+            this.AvsTab.Click += new System.EventHandler(this.txtAVScreate_Click);
             // 
-            // AVSAddFilterButton
+            // AvsAddFilterButton
             // 
-            resources.ApplyResources(this.AVSAddFilterButton, "AVSAddFilterButton");
-            this.AVSAddFilterButton.Name = "AVSAddFilterButton";
-            this.AVSAddFilterButton.UseVisualStyleBackColor = true;
-            this.AVSAddFilterButton.Click += new System.EventHandler(this.AVSAddFilterButton_Click);
+            resources.ApplyResources(this.AvsAddFilterButton, "AvsAddFilterButton");
+            this.AvsAddFilterButton.Name = "AvsAddFilterButton";
+            this.AvsAddFilterButton.UseVisualStyleBackColor = true;
+            this.AvsAddFilterButton.Click += new System.EventHandler(this.AVSAddFilterButton_Click);
             // 
-            // label39
+            // AvsFilterLabel
             // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.Name = "label39";
+            resources.ApplyResources(this.AvsFilterLabel, "AvsFilterLabel");
+            this.AvsFilterLabel.Name = "AvsFilterLabel";
             // 
-            // AVSFilterComboBox
+            // AvsFilterComboBox
             // 
-            this.AVSFilterComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.AVSFilterComboBox, "AVSFilterComboBox");
-            this.AVSFilterComboBox.Name = "AVSFilterComboBox";
+            this.AvsFilterComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.AvsFilterComboBox, "AvsFilterComboBox");
+            this.AvsFilterComboBox.Name = "AvsFilterComboBox";
             // 
-            // label25
+            // AvsCropIntroductionLabel
             // 
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
+            resources.ApplyResources(this.AvsCropIntroductionLabel, "AvsCropIntroductionLabel");
+            this.AvsCropIntroductionLabel.Name = "AvsCropIntroductionLabel";
             // 
-            // AVSCropTextBox
+            // AvsCropTextBox
             // 
-            this.AVSCropTextBox.AllowDrop = true;
-            this.AVSCropTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AVSCropTextBox.EmptyTextTip = null;
-            this.AVSCropTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.AVSCropTextBox, "AVSCropTextBox");
-            this.AVSCropTextBox.Name = "AVSCropTextBox";
-            this.AVSCropTextBox.TextChanged += new System.EventHandler(this.AVSCropTextBox_TextChanged);
+            this.AvsCropTextBox.AllowDrop = true;
+            this.AvsCropTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AvsCropTextBox.EmptyTextTip = null;
+            this.AvsCropTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.AvsCropTextBox, "AvsCropTextBox");
+            this.AvsCropTextBox.Name = "AvsCropTextBox";
+            this.AvsCropTextBox.TextChanged += new System.EventHandler(this.AVSCropTextBox_TextChanged);
             // 
-            // label30
+            // AvsTrimEndLabel
             // 
-            resources.ApplyResources(this.label30, "label30");
-            this.label30.Name = "label30";
+            resources.ApplyResources(this.AvsTrimEndLabel, "AvsTrimEndLabel");
+            this.AvsTrimEndLabel.Name = "AvsTrimEndLabel";
             // 
-            // label29
+            // AvsTrimStartLabel
             // 
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.Name = "label29";
+            resources.ApplyResources(this.AvsTrimStartLabel, "AvsTrimStartLabel");
+            this.AvsTrimStartLabel.Name = "AvsTrimStartLabel";
             // 
-            // TrimEndNumericUpDown
+            // AvsTrimEndNumericUpDown
             // 
-            resources.ApplyResources(this.TrimEndNumericUpDown, "TrimEndNumericUpDown");
-            this.TrimEndNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsTrimEndNumericUpDown, "AvsTrimEndNumericUpDown");
+            this.AvsTrimEndNumericUpDown.Maximum = new decimal(new int[] {
             99999999,
             0,
             0,
             0});
-            this.TrimEndNumericUpDown.Name = "TrimEndNumericUpDown";
-            this.TrimEndNumericUpDown.Value = new decimal(new int[] {
+            this.AvsTrimEndNumericUpDown.Name = "AvsTrimEndNumericUpDown";
+            this.AvsTrimEndNumericUpDown.Value = new decimal(new int[] {
             1440,
             0,
             0,
             0});
-            this.TrimEndNumericUpDown.ValueChanged += new System.EventHandler(this.TrimEndNumericUpDown_ValueChanged);
+            this.AvsTrimEndNumericUpDown.ValueChanged += new System.EventHandler(this.TrimEndNumericUpDown_ValueChanged);
             // 
-            // TrimStartNumericUpDown
+            // AvsTrimStartNumericUpDown
             // 
-            resources.ApplyResources(this.TrimStartNumericUpDown, "TrimStartNumericUpDown");
-            this.TrimStartNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsTrimStartNumericUpDown, "AvsTrimStartNumericUpDown");
+            this.AvsTrimStartNumericUpDown.Maximum = new decimal(new int[] {
             99999999,
             0,
             0,
             0});
-            this.TrimStartNumericUpDown.Name = "TrimStartNumericUpDown";
-            this.TrimStartNumericUpDown.ValueChanged += new System.EventHandler(this.TrimStartNumericUpDown_ValueChanged);
+            this.AvsTrimStartNumericUpDown.Name = "AvsTrimStartNumericUpDown";
+            this.AvsTrimStartNumericUpDown.ValueChanged += new System.EventHandler(this.TrimStartNumericUpDown_ValueChanged);
             // 
-            // LevelsNumericUpDown
+            // AvsLevelsNumericUpDown
             // 
-            this.LevelsNumericUpDown.DecimalPlaces = 1;
-            this.LevelsNumericUpDown.Increment = new decimal(new int[] {
+            this.AvsLevelsNumericUpDown.DecimalPlaces = 1;
+            this.AvsLevelsNumericUpDown.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            resources.ApplyResources(this.LevelsNumericUpDown, "LevelsNumericUpDown");
-            this.LevelsNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsLevelsNumericUpDown, "AvsLevelsNumericUpDown");
+            this.AvsLevelsNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.LevelsNumericUpDown.Name = "LevelsNumericUpDown";
-            this.LevelsNumericUpDown.Value = new decimal(new int[] {
+            this.AvsLevelsNumericUpDown.Name = "AvsLevelsNumericUpDown";
+            this.AvsLevelsNumericUpDown.Value = new decimal(new int[] {
             12,
             0,
             0,
             65536});
-            this.LevelsNumericUpDown.ValueChanged += new System.EventHandler(this.LevelsNumericUpDown_ValueChanged);
+            this.AvsLevelsNumericUpDown.ValueChanged += new System.EventHandler(this.LevelsNumericUpDown_ValueChanged);
             // 
-            // label24
+            // AvsAddBordersTopLabel
             // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.Name = "label24";
+            resources.ApplyResources(this.AvsAddBordersTopLabel, "AvsAddBordersTopLabel");
+            this.AvsAddBordersTopLabel.Name = "AvsAddBordersTopLabel";
             // 
-            // label23
+            // AvsAddBordersRightLabel
             // 
-            resources.ApplyResources(this.label23, "label23");
-            this.label23.Name = "label23";
+            resources.ApplyResources(this.AvsAddBordersRightLabel, "AvsAddBordersRightLabel");
+            this.AvsAddBordersRightLabel.Name = "AvsAddBordersRightLabel";
             // 
-            // label22
+            // AvsAddBordersBottomLabel
             // 
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.Name = "label22";
+            resources.ApplyResources(this.AvsAddBordersBottomLabel, "AvsAddBordersBottomLabel");
+            this.AvsAddBordersBottomLabel.Name = "AvsAddBordersBottomLabel";
             // 
-            // label21
+            // AvsAddBordersLeftLabel
             // 
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.Name = "label21";
+            resources.ApplyResources(this.AvsAddBordersLeftLabel, "AvsAddBordersLeftLabel");
+            this.AvsAddBordersLeftLabel.Name = "AvsAddBordersLeftLabel";
             // 
-            // AddBorders4NumericUpDown
+            // AvsAddBordersBottomNumericUpDown
             // 
-            resources.ApplyResources(this.AddBorders4NumericUpDown, "AddBorders4NumericUpDown");
-            this.AddBorders4NumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsAddBordersBottomNumericUpDown, "AvsAddBordersBottomNumericUpDown");
+            this.AvsAddBordersBottomNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.AddBorders4NumericUpDown.Name = "AddBorders4NumericUpDown";
-            this.AddBorders4NumericUpDown.ValueChanged += new System.EventHandler(this.AddBorders4NumericUpDown_ValueChanged);
+            this.AvsAddBordersBottomNumericUpDown.Name = "AvsAddBordersBottomNumericUpDown";
+            this.AvsAddBordersBottomNumericUpDown.ValueChanged += new System.EventHandler(this.AddBorders4NumericUpDown_ValueChanged);
             // 
-            // AddBorders3NumericUpDown
+            // AvsAddBordersRightNumericUpDown
             // 
-            resources.ApplyResources(this.AddBorders3NumericUpDown, "AddBorders3NumericUpDown");
-            this.AddBorders3NumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsAddBordersRightNumericUpDown, "AvsAddBordersRightNumericUpDown");
+            this.AvsAddBordersRightNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.AddBorders3NumericUpDown.Name = "AddBorders3NumericUpDown";
-            this.AddBorders3NumericUpDown.ValueChanged += new System.EventHandler(this.AddBorders3NumericUpDown_ValueChanged);
+            this.AvsAddBordersRightNumericUpDown.Name = "AvsAddBordersRightNumericUpDown";
+            this.AvsAddBordersRightNumericUpDown.ValueChanged += new System.EventHandler(this.AddBorders3NumericUpDown_ValueChanged);
             // 
-            // AddBorders2NumericUpDown
+            // AvsAddBordersTopNumericUpDown
             // 
-            resources.ApplyResources(this.AddBorders2NumericUpDown, "AddBorders2NumericUpDown");
-            this.AddBorders2NumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsAddBordersTopNumericUpDown, "AvsAddBordersTopNumericUpDown");
+            this.AvsAddBordersTopNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.AddBorders2NumericUpDown.Name = "AddBorders2NumericUpDown";
-            this.AddBorders2NumericUpDown.ValueChanged += new System.EventHandler(this.AddBorders2NumericUpDown_ValueChanged);
+            this.AvsAddBordersTopNumericUpDown.Name = "AvsAddBordersTopNumericUpDown";
+            this.AvsAddBordersTopNumericUpDown.ValueChanged += new System.EventHandler(this.AddBorders2NumericUpDown_ValueChanged);
             // 
-            // SharpenNumericUpDown
+            // AvsSharpenNumericUpDown
             // 
-            this.SharpenNumericUpDown.DecimalPlaces = 1;
-            this.SharpenNumericUpDown.Increment = new decimal(new int[] {
+            this.AvsSharpenNumericUpDown.DecimalPlaces = 1;
+            this.AvsSharpenNumericUpDown.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            resources.ApplyResources(this.SharpenNumericUpDown, "SharpenNumericUpDown");
-            this.SharpenNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsSharpenNumericUpDown, "AvsSharpenNumericUpDown");
+            this.AvsSharpenNumericUpDown.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.SharpenNumericUpDown.Name = "SharpenNumericUpDown";
-            this.SharpenNumericUpDown.Value = new decimal(new int[] {
+            this.AvsSharpenNumericUpDown.Name = "AvsSharpenNumericUpDown";
+            this.AvsSharpenNumericUpDown.Value = new decimal(new int[] {
             2,
             0,
             0,
             65536});
-            this.SharpenNumericUpDown.ValueChanged += new System.EventHandler(this.SharpenNumericUpDown_ValueChanged);
+            this.AvsSharpenNumericUpDown.ValueChanged += new System.EventHandler(this.SharpenNumericUpDown_ValueChanged);
             // 
-            // AddBorders1NumericUpDown
+            // AvsAddBordersLeftNumericUpDown
             // 
-            resources.ApplyResources(this.AddBorders1NumericUpDown, "AddBorders1NumericUpDown");
-            this.AddBorders1NumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsAddBordersLeftNumericUpDown, "AvsAddBordersLeftNumericUpDown");
+            this.AvsAddBordersLeftNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.AddBorders1NumericUpDown.Name = "AddBorders1NumericUpDown";
-            this.AddBorders1NumericUpDown.ValueChanged += new System.EventHandler(this.AddBorders1NumericUpDown_ValueChanged);
+            this.AvsAddBordersLeftNumericUpDown.Name = "AvsAddBordersLeftNumericUpDown";
+            this.AvsAddBordersLeftNumericUpDown.ValueChanged += new System.EventHandler(this.AddBorders1NumericUpDown_ValueChanged);
             // 
-            // label19
+            // AvsLanczosResizeHeightLabel
             // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.Name = "label19";
+            resources.ApplyResources(this.AvsLanczosResizeHeightLabel, "AvsLanczosResizeHeightLabel");
+            this.AvsLanczosResizeHeightLabel.Name = "AvsLanczosResizeHeightLabel";
             // 
-            // label20
+            // AvsLanczosResizeWidthLabel
             // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.Name = "label20";
+            resources.ApplyResources(this.AvsLanczosResizeWidthLabel, "AvsLanczosResizeWidthLabel");
+            this.AvsLanczosResizeWidthLabel.Name = "AvsLanczosResizeWidthLabel";
             // 
-            // AVSHeightNumericUpDown
+            // AvsLanczosResizeHeightNumericUpDown
             // 
-            resources.ApplyResources(this.AVSHeightNumericUpDown, "AVSHeightNumericUpDown");
-            this.AVSHeightNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsLanczosResizeHeightNumericUpDown, "AvsLanczosResizeHeightNumericUpDown");
+            this.AvsLanczosResizeHeightNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.AVSHeightNumericUpDown.Name = "AVSHeightNumericUpDown";
-            this.AVSHeightNumericUpDown.Value = new decimal(new int[] {
+            this.AvsLanczosResizeHeightNumericUpDown.Name = "AvsLanczosResizeHeightNumericUpDown";
+            this.AvsLanczosResizeHeightNumericUpDown.Value = new decimal(new int[] {
             720,
             0,
             0,
             0});
-            this.AVSHeightNumericUpDown.ValueChanged += new System.EventHandler(this.AVSHeightNumericUpDown_ValueChanged);
+            this.AvsLanczosResizeHeightNumericUpDown.ValueChanged += new System.EventHandler(this.AVSHeightNumericUpDown_ValueChanged);
             // 
-            // AVSWidthNumericUpDown
+            // AvsLanczosResizeWidthNumericUpDown
             // 
-            resources.ApplyResources(this.AVSWidthNumericUpDown, "AVSWidthNumericUpDown");
-            this.AVSWidthNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsLanczosResizeWidthNumericUpDown, "AvsLanczosResizeWidthNumericUpDown");
+            this.AvsLanczosResizeWidthNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.AVSWidthNumericUpDown.Name = "AVSWidthNumericUpDown";
-            this.AVSWidthNumericUpDown.Value = new decimal(new int[] {
+            this.AvsLanczosResizeWidthNumericUpDown.Name = "AvsLanczosResizeWidthNumericUpDown";
+            this.AvsLanczosResizeWidthNumericUpDown.Value = new decimal(new int[] {
             1280,
             0,
             0,
             0});
-            this.AVSWidthNumericUpDown.ValueChanged += new System.EventHandler(this.AVSWidthNumericUpDown_ValueChanged);
+            this.AvsLanczosResizeWidthNumericUpDown.ValueChanged += new System.EventHandler(this.AVSWidthNumericUpDown_ValueChanged);
             // 
-            // label18
+            // AvsTweakContrastLabel
             // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
+            resources.ApplyResources(this.AvsTweakContrastLabel, "AvsTweakContrastLabel");
+            this.AvsTweakContrastLabel.Name = "AvsTweakContrastLabel";
             // 
-            // label10
+            // AvsTweakBrightnessLabel
             // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
+            resources.ApplyResources(this.AvsTweakBrightnessLabel, "AvsTweakBrightnessLabel");
+            this.AvsTweakBrightnessLabel.Name = "AvsTweakBrightnessLabel";
             // 
-            // label9
+            // AvsTweakSaturationLabel
             // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
+            resources.ApplyResources(this.AvsTweakSaturationLabel, "AvsTweakSaturationLabel");
+            this.AvsTweakSaturationLabel.Name = "AvsTweakSaturationLabel";
             // 
-            // label5
+            // AvsTweakChromaLabel
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.AvsTweakChromaLabel, "AvsTweakChromaLabel");
+            this.AvsTweakChromaLabel.Name = "AvsTweakChromaLabel";
             // 
-            // TweakContrastNumericUpDown
+            // AvsTweakContrastNumericUpDown
             // 
-            this.TweakContrastNumericUpDown.DecimalPlaces = 1;
-            this.TweakContrastNumericUpDown.Increment = new decimal(new int[] {
+            this.AvsTweakContrastNumericUpDown.DecimalPlaces = 1;
+            this.AvsTweakContrastNumericUpDown.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            resources.ApplyResources(this.TweakContrastNumericUpDown, "TweakContrastNumericUpDown");
-            this.TweakContrastNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsTweakContrastNumericUpDown, "AvsTweakContrastNumericUpDown");
+            this.AvsTweakContrastNumericUpDown.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.TweakContrastNumericUpDown.Name = "TweakContrastNumericUpDown";
-            this.TweakContrastNumericUpDown.Value = new decimal(new int[] {
+            this.AvsTweakContrastNumericUpDown.Name = "AvsTweakContrastNumericUpDown";
+            this.AvsTweakContrastNumericUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.TweakContrastNumericUpDown.ValueChanged += new System.EventHandler(this.TweakContrastNumericUpDown_ValueChanged);
+            this.AvsTweakContrastNumericUpDown.ValueChanged += new System.EventHandler(this.TweakContrastNumericUpDown_ValueChanged);
             // 
-            // TweakBrightnessNumericUpDown
+            // AvsTweakBrightnessNumericUpDown
             // 
-            this.TweakBrightnessNumericUpDown.DecimalPlaces = 1;
-            resources.ApplyResources(this.TweakBrightnessNumericUpDown, "TweakBrightnessNumericUpDown");
-            this.TweakBrightnessNumericUpDown.Maximum = new decimal(new int[] {
+            this.AvsTweakBrightnessNumericUpDown.DecimalPlaces = 1;
+            resources.ApplyResources(this.AvsTweakBrightnessNumericUpDown, "AvsTweakBrightnessNumericUpDown");
+            this.AvsTweakBrightnessNumericUpDown.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
-            this.TweakBrightnessNumericUpDown.Minimum = new decimal(new int[] {
+            this.AvsTweakBrightnessNumericUpDown.Minimum = new decimal(new int[] {
             255,
             0,
             0,
             -2147483648});
-            this.TweakBrightnessNumericUpDown.Name = "TweakBrightnessNumericUpDown";
-            this.TweakBrightnessNumericUpDown.ValueChanged += new System.EventHandler(this.TweakBrightnessNumericUpDown_ValueChanged);
+            this.AvsTweakBrightnessNumericUpDown.Name = "AvsTweakBrightnessNumericUpDown";
+            this.AvsTweakBrightnessNumericUpDown.ValueChanged += new System.EventHandler(this.TweakBrightnessNumericUpDown_ValueChanged);
             // 
-            // TweakSaturationNumericUpDown
+            // AvsTweakSaturationNumericUpDown
             // 
-            this.TweakSaturationNumericUpDown.DecimalPlaces = 1;
-            this.TweakSaturationNumericUpDown.Increment = new decimal(new int[] {
+            this.AvsTweakSaturationNumericUpDown.DecimalPlaces = 1;
+            this.AvsTweakSaturationNumericUpDown.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            resources.ApplyResources(this.TweakSaturationNumericUpDown, "TweakSaturationNumericUpDown");
-            this.TweakSaturationNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsTweakSaturationNumericUpDown, "AvsTweakSaturationNumericUpDown");
+            this.AvsTweakSaturationNumericUpDown.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.TweakSaturationNumericUpDown.Name = "TweakSaturationNumericUpDown";
-            this.TweakSaturationNumericUpDown.Value = new decimal(new int[] {
+            this.AvsTweakSaturationNumericUpDown.Name = "AvsTweakSaturationNumericUpDown";
+            this.AvsTweakSaturationNumericUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.TweakSaturationNumericUpDown.ValueChanged += new System.EventHandler(this.TweakSaturationNumericUpDown_ValueChanged);
+            this.AvsTweakSaturationNumericUpDown.ValueChanged += new System.EventHandler(this.TweakSaturationNumericUpDown_ValueChanged);
             // 
-            // TweakChromaNumericUpDown
+            // AvsTweakChromaNumericUpDown
             // 
-            this.TweakChromaNumericUpDown.DecimalPlaces = 1;
-            this.TweakChromaNumericUpDown.Increment = new decimal(new int[] {
+            this.AvsTweakChromaNumericUpDown.DecimalPlaces = 1;
+            this.AvsTweakChromaNumericUpDown.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            resources.ApplyResources(this.TweakChromaNumericUpDown, "TweakChromaNumericUpDown");
-            this.TweakChromaNumericUpDown.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.AvsTweakChromaNumericUpDown, "AvsTweakChromaNumericUpDown");
+            this.AvsTweakChromaNumericUpDown.Maximum = new decimal(new int[] {
             180,
             0,
             0,
             0});
-            this.TweakChromaNumericUpDown.Minimum = new decimal(new int[] {
+            this.AvsTweakChromaNumericUpDown.Minimum = new decimal(new int[] {
             180,
             0,
             0,
             -2147483648});
-            this.TweakChromaNumericUpDown.Name = "TweakChromaNumericUpDown";
-            this.TweakChromaNumericUpDown.ValueChanged += new System.EventHandler(this.TweakChromaNumericUpDown_ValueChanged);
+            this.AvsTweakChromaNumericUpDown.Name = "AvsTweakChromaNumericUpDown";
+            this.AvsTweakChromaNumericUpDown.ValueChanged += new System.EventHandler(this.TweakChromaNumericUpDown_ValueChanged);
             // 
-            // AVSScriptTextBox
+            // AvsScriptTextBox
             // 
-            this.AVSScriptTextBox.AllowDrop = true;
-            this.AVSScriptTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AVSScriptTextBox.EmptyTextTip = null;
-            this.AVSScriptTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.AVSScriptTextBox, "AVSScriptTextBox");
-            this.AVSScriptTextBox.Name = "AVSScriptTextBox";
-            this.AVSScriptTextBox.TextChanged += new System.EventHandler(this.txtAVS_TextChanged);
-            this.AVSScriptTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AVSScriptTextBox_KeyDown);
+            this.AvsScriptTextBox.AllowDrop = true;
+            this.AvsScriptTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AvsScriptTextBox.EmptyTextTip = null;
+            this.AvsScriptTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.AvsScriptTextBox, "AvsScriptTextBox");
+            this.AvsScriptTextBox.Name = "AvsScriptTextBox";
+            this.AvsScriptTextBox.TextChanged += new System.EventHandler(this.txtAVS_TextChanged);
+            this.AvsScriptTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AVSScriptTextBox_KeyDown);
             // 
-            // txtvideo9
+            // AvsVideoInputTextBox
             // 
-            this.txtvideo9.AllowDrop = true;
-            this.txtvideo9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtvideo9.EmptyTextTip = null;
-            this.txtvideo9.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtvideo9, "txtvideo9");
-            this.txtvideo9.Name = "txtvideo9";
-            this.txtvideo9.ReadOnly = true;
-            this.txtvideo9.TextChanged += new System.EventHandler(this.txtvideo9_TextChanged);
-            this.txtvideo9.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo9_MouseDoubleClick);
+            this.AvsVideoInputTextBox.AllowDrop = true;
+            this.AvsVideoInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AvsVideoInputTextBox.EmptyTextTip = null;
+            this.AvsVideoInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.AvsVideoInputTextBox, "AvsVideoInputTextBox");
+            this.AvsVideoInputTextBox.Name = "AvsVideoInputTextBox";
+            this.AvsVideoInputTextBox.ReadOnly = true;
+            this.AvsVideoInputTextBox.TextChanged += new System.EventHandler(this.txtvideo9_TextChanged);
+            this.AvsVideoInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtvideo9_MouseDoubleClick);
             // 
-            // txtout9
+            // AvsOutputTextBox
             // 
-            this.txtout9.AllowDrop = true;
-            this.txtout9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtout9.EmptyTextTip = null;
-            this.txtout9.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtout9, "txtout9");
-            this.txtout9.Name = "txtout9";
-            this.txtout9.TextChanged += new System.EventHandler(this.txtout9_TextChanged);
-            this.txtout9.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout9_MouseDoubleClick);
+            this.AvsOutputTextBox.AllowDrop = true;
+            this.AvsOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AvsOutputTextBox.EmptyTextTip = null;
+            this.AvsOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.AvsOutputTextBox, "AvsOutputTextBox");
+            this.AvsOutputTextBox.Name = "AvsOutputTextBox";
+            this.AvsOutputTextBox.TextChanged += new System.EventHandler(this.txtout9_TextChanged);
+            this.AvsOutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtout9_MouseDoubleClick);
             // 
-            // txtsub9
+            // AvsSubtitleInputTextBox
             // 
-            this.txtsub9.AllowDrop = true;
-            this.txtsub9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtsub9.EmptyTextTip = null;
-            this.txtsub9.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.txtsub9, "txtsub9");
-            this.txtsub9.Name = "txtsub9";
-            this.txtsub9.ReadOnly = true;
-            this.txtsub9.TextChanged += new System.EventHandler(this.txtsub9_TextChanged);
+            this.AvsSubtitleInputTextBox.AllowDrop = true;
+            this.AvsSubtitleInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AvsSubtitleInputTextBox.EmptyTextTip = null;
+            this.AvsSubtitleInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.AvsSubtitleInputTextBox, "AvsSubtitleInputTextBox");
+            this.AvsSubtitleInputTextBox.Name = "AvsSubtitleInputTextBox";
+            this.AvsSubtitleInputTextBox.ReadOnly = true;
+            this.AvsSubtitleInputTextBox.TextChanged += new System.EventHandler(this.txtsub9_TextChanged);
             // 
-            // AVSwithAudioCheckBox
+            // AvsIncludeAudioCheckBox
             // 
-            resources.ApplyResources(this.AVSwithAudioCheckBox, "AVSwithAudioCheckBox");
-            this.AVSwithAudioCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.AVSwithAudioCheckBox.Name = "AVSwithAudioCheckBox";
-            this.AVSwithAudioCheckBox.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.AvsIncludeAudioCheckBox, "AvsIncludeAudioCheckBox");
+            this.AvsIncludeAudioCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.AvsIncludeAudioCheckBox.Name = "AvsIncludeAudioCheckBox";
+            this.AvsIncludeAudioCheckBox.UseVisualStyleBackColor = false;
             // 
-            // AVSSaveButton
+            // AvsSaveButton
             // 
-            resources.ApplyResources(this.AVSSaveButton, "AVSSaveButton");
-            this.AVSSaveButton.Name = "AVSSaveButton";
-            this.AVSSaveButton.UseVisualStyleBackColor = true;
-            this.AVSSaveButton.Click += new System.EventHandler(this.AVSSaveButton_Click);
+            resources.ApplyResources(this.AvsSaveButton, "AvsSaveButton");
+            this.AvsSaveButton.Name = "AvsSaveButton";
+            this.AvsSaveButton.UseVisualStyleBackColor = true;
+            this.AvsSaveButton.Click += new System.EventHandler(this.AVSSaveButton_Click);
             // 
-            // LevelsCheckBox
+            // AvsLevelsCheckBox
             // 
-            resources.ApplyResources(this.LevelsCheckBox, "LevelsCheckBox");
-            this.LevelsCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.LevelsCheckBox.Name = "LevelsCheckBox";
-            this.LevelsCheckBox.UseVisualStyleBackColor = false;
-            this.LevelsCheckBox.CheckedChanged += new System.EventHandler(this.LevelsCheckBox_CheckedChanged);
+            resources.ApplyResources(this.AvsLevelsCheckBox, "AvsLevelsCheckBox");
+            this.AvsLevelsCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.AvsLevelsCheckBox.Name = "AvsLevelsCheckBox";
+            this.AvsLevelsCheckBox.UseVisualStyleBackColor = false;
+            this.AvsLevelsCheckBox.CheckedChanged += new System.EventHandler(this.LevelsCheckBox_CheckedChanged);
             // 
-            // CropCheckBox
+            // AvsCropCheckBox
             // 
-            resources.ApplyResources(this.CropCheckBox, "CropCheckBox");
-            this.CropCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.CropCheckBox.Name = "CropCheckBox";
-            this.CropCheckBox.UseVisualStyleBackColor = false;
-            this.CropCheckBox.CheckedChanged += new System.EventHandler(this.CropCheckBox_CheckedChanged);
+            resources.ApplyResources(this.AvsCropCheckBox, "AvsCropCheckBox");
+            this.AvsCropCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.AvsCropCheckBox.Name = "AvsCropCheckBox";
+            this.AvsCropCheckBox.UseVisualStyleBackColor = false;
+            this.AvsCropCheckBox.CheckedChanged += new System.EventHandler(this.CropCheckBox_CheckedChanged);
             // 
-            // TrimCheckBox
+            // AvsTrimCheckBox
             // 
-            resources.ApplyResources(this.TrimCheckBox, "TrimCheckBox");
-            this.TrimCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.TrimCheckBox.Name = "TrimCheckBox";
-            this.TrimCheckBox.UseVisualStyleBackColor = false;
-            this.TrimCheckBox.CheckedChanged += new System.EventHandler(this.TrimCheckBox_CheckedChanged);
+            resources.ApplyResources(this.AvsTrimCheckBox, "AvsTrimCheckBox");
+            this.AvsTrimCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.AvsTrimCheckBox.Name = "AvsTrimCheckBox";
+            this.AvsTrimCheckBox.UseVisualStyleBackColor = false;
+            this.AvsTrimCheckBox.CheckedChanged += new System.EventHandler(this.TrimCheckBox_CheckedChanged);
             // 
-            // SharpenCheckBox
+            // AvsSharpenCheckBox
             // 
-            resources.ApplyResources(this.SharpenCheckBox, "SharpenCheckBox");
-            this.SharpenCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.SharpenCheckBox.Name = "SharpenCheckBox";
-            this.SharpenCheckBox.UseVisualStyleBackColor = false;
-            this.SharpenCheckBox.CheckedChanged += new System.EventHandler(this.SharpenCheckBox_CheckedChanged);
+            resources.ApplyResources(this.AvsSharpenCheckBox, "AvsSharpenCheckBox");
+            this.AvsSharpenCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.AvsSharpenCheckBox.Name = "AvsSharpenCheckBox";
+            this.AvsSharpenCheckBox.UseVisualStyleBackColor = false;
+            this.AvsSharpenCheckBox.CheckedChanged += new System.EventHandler(this.SharpenCheckBox_CheckedChanged);
             // 
-            // AddBordersCheckBox
+            // AvsAddBordersCheckBox
             // 
-            resources.ApplyResources(this.AddBordersCheckBox, "AddBordersCheckBox");
-            this.AddBordersCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.AddBordersCheckBox.Name = "AddBordersCheckBox";
-            this.AddBordersCheckBox.UseVisualStyleBackColor = false;
-            this.AddBordersCheckBox.CheckedChanged += new System.EventHandler(this.AddBordersCheckBox_CheckedChanged);
+            resources.ApplyResources(this.AvsAddBordersCheckBox, "AvsAddBordersCheckBox");
+            this.AvsAddBordersCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.AvsAddBordersCheckBox.Name = "AvsAddBordersCheckBox";
+            this.AvsAddBordersCheckBox.UseVisualStyleBackColor = false;
+            this.AvsAddBordersCheckBox.CheckedChanged += new System.EventHandler(this.AddBordersCheckBox_CheckedChanged);
             // 
-            // LanczosResizeCheckBox
+            // AvsLanczosResizeCheckBox
             // 
-            resources.ApplyResources(this.LanczosResizeCheckBox, "LanczosResizeCheckBox");
-            this.LanczosResizeCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.LanczosResizeCheckBox.Name = "LanczosResizeCheckBox";
-            this.LanczosResizeCheckBox.UseVisualStyleBackColor = false;
-            this.LanczosResizeCheckBox.CheckedChanged += new System.EventHandler(this.LanczosResizeCheckBox_CheckedChanged);
+            resources.ApplyResources(this.AvsLanczosResizeCheckBox, "AvsLanczosResizeCheckBox");
+            this.AvsLanczosResizeCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.AvsLanczosResizeCheckBox.Name = "AvsLanczosResizeCheckBox";
+            this.AvsLanczosResizeCheckBox.UseVisualStyleBackColor = false;
+            this.AvsLanczosResizeCheckBox.CheckedChanged += new System.EventHandler(this.LanczosResizeCheckBox_CheckedChanged);
             // 
-            // TweakCheckBox
+            // AvsTweakCheckBox
             // 
-            resources.ApplyResources(this.TweakCheckBox, "TweakCheckBox");
-            this.TweakCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.TweakCheckBox.Name = "TweakCheckBox";
-            this.TweakCheckBox.UseVisualStyleBackColor = false;
-            this.TweakCheckBox.CheckedChanged += new System.EventHandler(this.TweakCheckBox_CheckedChanged);
+            resources.ApplyResources(this.AvsTweakCheckBox, "AvsTweakCheckBox");
+            this.AvsTweakCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.AvsTweakCheckBox.Name = "AvsTweakCheckBox";
+            this.AvsTweakCheckBox.UseVisualStyleBackColor = false;
+            this.AvsTweakCheckBox.CheckedChanged += new System.EventHandler(this.TweakCheckBox_CheckedChanged);
             // 
-            // UndotCheckBox
+            // AvsUndotCheckBox
             // 
-            resources.ApplyResources(this.UndotCheckBox, "UndotCheckBox");
-            this.UndotCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.UndotCheckBox.Name = "UndotCheckBox";
-            this.UndotCheckBox.UseVisualStyleBackColor = false;
-            this.UndotCheckBox.CheckedChanged += new System.EventHandler(this.UndotCheckBox_CheckedChanged);
+            resources.ApplyResources(this.AvsUndotCheckBox, "AvsUndotCheckBox");
+            this.AvsUndotCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.AvsUndotCheckBox.Name = "AvsUndotCheckBox";
+            this.AvsUndotCheckBox.UseVisualStyleBackColor = false;
+            this.AvsUndotCheckBox.CheckedChanged += new System.EventHandler(this.UndotCheckBox_CheckedChanged);
             // 
-            // button9
+            // AvsClearButton
             // 
-            resources.ApplyResources(this.button9, "button9");
-            this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            resources.ApplyResources(this.AvsClearButton, "AvsClearButton");
+            this.AvsClearButton.Name = "AvsClearButton";
+            this.AvsClearButton.UseVisualStyleBackColor = true;
+            this.AvsClearButton.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button6
+            // AvsGenerateButton
             // 
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_2);
+            resources.ApplyResources(this.AvsGenerateButton, "AvsGenerateButton");
+            this.AvsGenerateButton.Name = "AvsGenerateButton";
+            this.AvsGenerateButton.UseVisualStyleBackColor = true;
+            this.AvsGenerateButton.Click += new System.EventHandler(this.button6_Click_2);
             // 
-            // btnpreview9
+            // AvPreviewButton
             // 
-            resources.ApplyResources(this.btnpreview9, "btnpreview9");
-            this.btnpreview9.Name = "btnpreview9";
-            this.btnpreview9.UseVisualStyleBackColor = true;
-            this.btnpreview9.Click += new System.EventHandler(this.btnpreview9_Click);
+            resources.ApplyResources(this.AvPreviewButton, "AvPreviewButton");
+            this.AvPreviewButton.Name = "AvPreviewButton";
+            this.AvPreviewButton.UseVisualStyleBackColor = true;
+            this.AvPreviewButton.Click += new System.EventHandler(this.btnpreview9_Click);
             // 
-            // btnAVS9
+            // AvsStartButton
             // 
-            resources.ApplyResources(this.btnAVS9, "btnAVS9");
-            this.btnAVS9.Name = "btnAVS9";
-            this.btnAVS9.UseVisualStyleBackColor = true;
-            this.btnAVS9.Click += new System.EventHandler(this.btnAVS9_Click);
+            resources.ApplyResources(this.AvsStartButton, "AvsStartButton");
+            this.AvsStartButton.Name = "AvsStartButton";
+            this.AvsStartButton.UseVisualStyleBackColor = true;
+            this.AvsStartButton.Click += new System.EventHandler(this.btnAVS9_Click);
             // 
-            // btnvideo9
+            // AvsVideoInputButton
             // 
-            resources.ApplyResources(this.btnvideo9, "btnvideo9");
-            this.btnvideo9.Name = "btnvideo9";
-            this.btnvideo9.UseVisualStyleBackColor = true;
-            this.btnvideo9.Click += new System.EventHandler(this.btnvideo9_Click);
+            resources.ApplyResources(this.AvsVideoInputButton, "AvsVideoInputButton");
+            this.AvsVideoInputButton.Name = "AvsVideoInputButton";
+            this.AvsVideoInputButton.UseVisualStyleBackColor = true;
+            this.AvsVideoInputButton.Click += new System.EventHandler(this.btnvideo9_Click);
             // 
-            // btnout9
+            // AvsOutputButton
             // 
-            resources.ApplyResources(this.btnout9, "btnout9");
-            this.btnout9.Name = "btnout9";
-            this.btnout9.UseVisualStyleBackColor = true;
-            this.btnout9.Click += new System.EventHandler(this.btnout9_Click);
+            resources.ApplyResources(this.AvsOutputButton, "AvsOutputButton");
+            this.AvsOutputButton.Name = "AvsOutputButton";
+            this.AvsOutputButton.UseVisualStyleBackColor = true;
+            this.AvsOutputButton.Click += new System.EventHandler(this.btnout9_Click);
             // 
-            // btnsub9
+            // AvsSubtitleInputButton
             // 
-            resources.ApplyResources(this.btnsub9, "btnsub9");
-            this.btnsub9.Name = "btnsub9";
-            this.btnsub9.UseVisualStyleBackColor = true;
-            this.btnsub9.Click += new System.EventHandler(this.btnsub9_Click);
+            resources.ApplyResources(this.AvsSubtitleInputButton, "AvsSubtitleInputButton");
+            this.AvsSubtitleInputButton.Name = "AvsSubtitleInputButton";
+            this.AvsSubtitleInputButton.UseVisualStyleBackColor = true;
+            this.AvsSubtitleInputButton.Click += new System.EventHandler(this.btnsub9_Click);
             // 
             // ExtractTab
             // 
@@ -2593,7 +2593,7 @@
             this.tabControl.Controls.Add(this.MiscTab);
             this.tabControl.Controls.Add(this.MuxTab);
             this.tabControl.Controls.Add(this.ExtractTab);
-            this.tabControl.Controls.Add(this.AVSTab);
+            this.tabControl.Controls.Add(this.AvsTab);
             this.tabControl.Controls.Add(this.MediaInfoTab);
             this.tabControl.Controls.Add(this.SetupTabPage);
             this.tabControl.Controls.Add(this.HelpTab);
@@ -3022,22 +3022,22 @@
             this.MiscMiscGroupBox.PerformLayout();
             this.MediaInfoTab.ResumeLayout(false);
             this.MediaInfoTab.PerformLayout();
-            this.AVSTab.ResumeLayout(false);
-            this.AVSTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TrimEndNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TrimStartNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LevelsNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBorders4NumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBorders3NumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBorders2NumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SharpenNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBorders1NumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AVSHeightNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AVSWidthNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TweakContrastNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TweakBrightnessNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TweakSaturationNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TweakChromaNumericUpDown)).EndInit();
+            this.AvsTab.ResumeLayout(false);
+            this.AvsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTrimEndNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTrimStartNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsLevelsNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsAddBordersBottomNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsAddBordersRightNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsAddBordersTopNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsSharpenNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsAddBordersLeftNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsLanczosResizeHeightNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsLanczosResizeWidthNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTweakContrastNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTweakBrightnessNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTweakSaturationNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvsTweakChromaNumericUpDown)).EndInit();
             this.ExtractTab.ResumeLayout(false);
             this.ExtractMkvGroupBox.ResumeLayout(false);
             this.ExtractMkvGroupBox.PerformLayout();
@@ -3113,18 +3113,18 @@
         private ControlExs.QQButton btnMIplay;
         private ControlExs.QQButton btnMIcopy;
         private System.Windows.Forms.TextBox MediaInfoTextBox;
-        private System.Windows.Forms.TabPage AVSTab;
-        private ControlExs.QQButton button9;
-        private ControlExs.QQButton button6;
-        private ControlExs.QQButton btnpreview9;
-        private ControlExs.QQButton btnAVS9;
-        private ControlExs.QQTextBox AVSScriptTextBox;
-        private ControlExs.QQTextBox txtvideo9;
-        private ControlExs.QQTextBox txtout9;
-        private ControlExs.QQTextBox txtsub9;
-        private ControlExs.QQButton btnvideo9;
-        private ControlExs.QQButton btnout9;
-        private ControlExs.QQButton btnsub9;
+        private System.Windows.Forms.TabPage AvsTab;
+        private ControlExs.QQButton AvsClearButton;
+        private ControlExs.QQButton AvsGenerateButton;
+        private ControlExs.QQButton AvPreviewButton;
+        private ControlExs.QQButton AvsStartButton;
+        private ControlExs.QQTextBox AvsScriptTextBox;
+        private ControlExs.QQTextBox AvsVideoInputTextBox;
+        private ControlExs.QQTextBox AvsOutputTextBox;
+        private ControlExs.QQTextBox AvsSubtitleInputTextBox;
+        private ControlExs.QQButton AvsVideoInputButton;
+        private ControlExs.QQButton AvsOutputButton;
+        private ControlExs.QQButton AvsSubtitleInputButton;
         private System.Windows.Forms.TabPage ExtractTab;
         private System.Windows.Forms.GroupBox ExtractMkvGroupBox;
         private ControlExs.QQButton ExtractMkvExtractTrack0Button;
@@ -3237,42 +3237,42 @@
         private ControlExs.QQButton AudioBatchDeleteButton;
         private ControlExs.QQButton AudioBatchStartButton;
         private System.Windows.Forms.Label AudioBatchOutputNotificationLabel;
-        private System.Windows.Forms.NumericUpDown AVSHeightNumericUpDown;
-        private System.Windows.Forms.NumericUpDown AVSWidthNumericUpDown;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown TweakContrastNumericUpDown;
-        private System.Windows.Forms.NumericUpDown TweakBrightnessNumericUpDown;
-        private System.Windows.Forms.NumericUpDown TweakSaturationNumericUpDown;
-        private System.Windows.Forms.NumericUpDown TweakChromaNumericUpDown;
-        private ControlExs.QQCheckBox TrimCheckBox;
-        private ControlExs.QQCheckBox SharpenCheckBox;
-        private ControlExs.QQCheckBox AddBordersCheckBox;
-        private ControlExs.QQCheckBox LanczosResizeCheckBox;
-        private ControlExs.QQCheckBox TweakCheckBox;
-        private ControlExs.QQCheckBox UndotCheckBox;
-        private System.Windows.Forms.NumericUpDown LevelsNumericUpDown;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.NumericUpDown AddBorders4NumericUpDown;
-        private System.Windows.Forms.NumericUpDown AddBorders3NumericUpDown;
-        private System.Windows.Forms.NumericUpDown AddBorders2NumericUpDown;
-        private System.Windows.Forms.NumericUpDown SharpenNumericUpDown;
-        private ControlExs.QQCheckBox LevelsCheckBox;
-        private ControlExs.QQCheckBox CropCheckBox;
-        private System.Windows.Forms.NumericUpDown AddBorders1NumericUpDown;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label25;
-        private ControlExs.QQTextBox AVSCropTextBox;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.NumericUpDown TrimEndNumericUpDown;
-        private System.Windows.Forms.NumericUpDown TrimStartNumericUpDown;
+        private System.Windows.Forms.NumericUpDown AvsLanczosResizeHeightNumericUpDown;
+        private System.Windows.Forms.NumericUpDown AvsLanczosResizeWidthNumericUpDown;
+        private System.Windows.Forms.Label AvsTweakContrastLabel;
+        private System.Windows.Forms.Label AvsTweakBrightnessLabel;
+        private System.Windows.Forms.Label AvsTweakSaturationLabel;
+        private System.Windows.Forms.Label AvsTweakChromaLabel;
+        private System.Windows.Forms.NumericUpDown AvsTweakContrastNumericUpDown;
+        private System.Windows.Forms.NumericUpDown AvsTweakBrightnessNumericUpDown;
+        private System.Windows.Forms.NumericUpDown AvsTweakSaturationNumericUpDown;
+        private System.Windows.Forms.NumericUpDown AvsTweakChromaNumericUpDown;
+        private ControlExs.QQCheckBox AvsTrimCheckBox;
+        private ControlExs.QQCheckBox AvsSharpenCheckBox;
+        private ControlExs.QQCheckBox AvsAddBordersCheckBox;
+        private ControlExs.QQCheckBox AvsLanczosResizeCheckBox;
+        private ControlExs.QQCheckBox AvsTweakCheckBox;
+        private ControlExs.QQCheckBox AvsUndotCheckBox;
+        private System.Windows.Forms.NumericUpDown AvsLevelsNumericUpDown;
+        private System.Windows.Forms.Label AvsAddBordersTopLabel;
+        private System.Windows.Forms.Label AvsAddBordersRightLabel;
+        private System.Windows.Forms.Label AvsAddBordersBottomLabel;
+        private System.Windows.Forms.Label AvsAddBordersLeftLabel;
+        private System.Windows.Forms.NumericUpDown AvsAddBordersBottomNumericUpDown;
+        private System.Windows.Forms.NumericUpDown AvsAddBordersRightNumericUpDown;
+        private System.Windows.Forms.NumericUpDown AvsAddBordersTopNumericUpDown;
+        private System.Windows.Forms.NumericUpDown AvsSharpenNumericUpDown;
+        private ControlExs.QQCheckBox AvsLevelsCheckBox;
+        private ControlExs.QQCheckBox AvsCropCheckBox;
+        private System.Windows.Forms.NumericUpDown AvsAddBordersLeftNumericUpDown;
+        private System.Windows.Forms.Label AvsLanczosResizeHeightLabel;
+        private System.Windows.Forms.Label AvsLanczosResizeWidthLabel;
+        private System.Windows.Forms.Label AvsCropIntroductionLabel;
+        private ControlExs.QQTextBox AvsCropTextBox;
+        private System.Windows.Forms.Label AvsTrimEndLabel;
+        private System.Windows.Forms.Label AvsTrimStartLabel;
+        private System.Windows.Forms.NumericUpDown AvsTrimEndNumericUpDown;
+        private System.Windows.Forms.NumericUpDown AvsTrimStartNumericUpDown;
         private System.Windows.Forms.ComboBox VideoDemuxerComboBox;
         private ControlExs.QQButton DeleteLogButton;
         private ControlExs.QQButton ViewLogButton;
@@ -3285,7 +3285,7 @@
         private ControlExs.QQButton SetDefaultButton;
         private System.Windows.Forms.ComboBox languageComboBox;
         private System.Windows.Forms.Label label26;
-        private ControlExs.QQButton AVSSaveButton;
+        private ControlExs.QQButton AvsSaveButton;
         private System.Windows.Forms.Label VideoFramesLabel;
         private System.Windows.Forms.Label VideoSeekLabel;
         private System.Windows.Forms.NumericUpDown VideoFramesNumericUpDown;
@@ -3343,13 +3343,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox x264ThreadsComboBox;
         private System.Windows.Forms.RichTextBox HelpTextBox;
-        private ControlExs.QQCheckBox AVSwithAudioCheckBox;
+        private ControlExs.QQCheckBox AvsIncludeAudioCheckBox;
         private ControlExs.QQTextBox SetupPlayerTextBox;
         private ControlExs.QQButton SetupPlayerButton;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.ComboBox AVSFilterComboBox;
-        private ControlExs.QQButton AVSAddFilterButton;
-        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox AvsFilterComboBox;
+        private ControlExs.QQButton AvsAddFilterButton;
+        private System.Windows.Forms.Label AvsFilterLabel;
         private System.Windows.Forms.ComboBox VideoBatchSubtitleLanguage;
         private System.Windows.Forms.Label MuxConvertFormatLabel;
         private System.Windows.Forms.ComboBox MuxConvertFormatComboBox;

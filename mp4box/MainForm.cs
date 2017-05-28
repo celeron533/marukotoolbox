@@ -934,7 +934,7 @@ namespace mp4box
 
             #region AVS Tab
 
-            AVSwithAudioCheckBox.Checked = false;
+            AvsIncludeAudioCheckBox.Checked = false;
 
             #endregion AVS Tab
 
@@ -970,7 +970,7 @@ namespace mp4box
                 VideoCustomParameterTextBox.Text = ConfigurationManager.AppSettings["x264CustomParameter"];
                 x264PriorityComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Priority"]);
                 x264extraLine.Text = ConfigurationManager.AppSettings["x264ExtraParameter"];
-                AVSScriptTextBox.Text = ConfigurationManager.AppSettings["AVSScript"];
+                AvsScriptTextBox.Text = ConfigurationManager.AppSettings["AVSScript"];
                 AudioEncoderComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["AudioEncoder"]);
                 AudioBitrateComboBox.Text = ConfigurationManager.AppSettings["AudioBitrate"];
                 MiscOnePicBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicAudioBitrate"]);
@@ -1054,7 +1054,7 @@ namespace mp4box
             cfa.AppSettings.Settings["x264CustomParameter"].Value = VideoCustomParameterTextBox.Text;
             cfa.AppSettings.Settings["x264Priority"].Value = x264PriorityComboBox.SelectedIndex.ToString();
             cfa.AppSettings.Settings["x264ExtraParameter"].Value = x264extraLine.Text;
-            cfa.AppSettings.Settings["AVSScript"].Value = AVSScriptTextBox.Text;
+            cfa.AppSettings.Settings["AVSScript"].Value = AvsScriptTextBox.Text;
             cfa.AppSettings.Settings["AudioEncoder"].Value = AudioEncoderComboBox.SelectedIndex.ToString();
             cfa.AppSettings.Settings["AudioParameter"].Value = AudioBitrateComboBox.Text;
             cfa.AppSettings.Settings["OnePicAudioBitrate"].Value = MiscOnePicBitrateNumericUpDown.Value.ToString();
@@ -1192,7 +1192,7 @@ namespace mp4box
                         avsfilters.Add(FileName.Name);
                     }
                 }
-                AVSFilterComboBox.Items.AddRange(avsfilters.ToArray());
+                AvsFilterComboBox.Items.AddRange(avsfilters.ToArray());
             }
 
             //ReleaseDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
@@ -1809,10 +1809,10 @@ namespace mp4box
 
         private void btnpreview9_Click(object sender, EventArgs e)
         {
-            if (AVSScriptTextBox.Text != "")
+            if (AvsScriptTextBox.Text != "")
             {
                 string filepath = workPath + "\\temp.avs";
-                File.WriteAllText(filepath, AVSScriptTextBox.Text.ToString(), Encoding.Default);
+                File.WriteAllText(filepath, AvsScriptTextBox.Text.ToString(), Encoding.Default);
                 if (File.Exists(SetupPlayerTextBox.Text))
                 {
                     Process.Start(SetupPlayerTextBox.Text, filepath);
@@ -1862,20 +1862,20 @@ namespace mp4box
 
         private void txtout9_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(txtout9.Text.ToString()))
+            if (File.Exists(AvsOutputTextBox.Text.ToString()))
             {
-                Process.Start(txtout9.Text.ToString());
+                Process.Start(AvsOutputTextBox.Text.ToString());
             }
         }
 
         private void txtvideo9_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(txtvideo9.Text.ToString()))
+            if (File.Exists(AvsVideoInputTextBox.Text.ToString()))
             {
-                namevideo9 = txtvideo9.Text;
+                namevideo9 = AvsVideoInputTextBox.Text;
                 string finish = namevideo9.Remove(namevideo9.LastIndexOf("."));
                 finish += "_AVS压制.mp4";
-                txtout9.Text = finish;
+                AvsOutputTextBox.Text = finish;
                 GenerateAVS();
             }
             //if (txtvideo9.Text != "")
@@ -1901,7 +1901,7 @@ namespace mp4box
 
         private void txtsub9_TextChanged(object sender, EventArgs e)
         {
-            namesub9 = txtsub9.Text;
+            namesub9 = AvsSubtitleInputTextBox.Text;
             GenerateAVS();
             //if (txtAVS.Text != "")
             //{
@@ -1924,7 +1924,7 @@ namespace mp4box
 
         private void txtout9_TextChanged(object sender, EventArgs e)
         {
-            nameout9 = txtout9.Text;
+            nameout9 = AvsOutputTextBox.Text;
         }
 
         private void btnAVS9_Click(object sender, EventArgs e)
@@ -1943,9 +1943,9 @@ namespace mp4box
                 return;
             }
 
-            if (File.Exists(txtout9.Text.Trim()))
+            if (File.Exists(AvsOutputTextBox.Text.Trim()))
             {
-                DialogResult dgs = ShowQuestion("目标文件:\r\n\r\n" + txtout9.Text.Trim() + "\r\n\r\n已经存在,是否覆盖继续压制？", "目标文件已经存在");
+                DialogResult dgs = ShowQuestion("目标文件:\r\n\r\n" + AvsOutputTextBox.Text.Trim() + "\r\n\r\n已经存在,是否覆盖继续压制？", "目标文件已经存在");
                 if (dgs == DialogResult.No) return;
             }
 
@@ -1966,7 +1966,7 @@ namespace mp4box
 
             string filepath = tempavspath;
             //string filepath = workpath + "\\temp.avs";
-            File.WriteAllText(filepath, AVSScriptTextBox.Text, Encoding.Default);
+            File.WriteAllText(filepath, AvsScriptTextBox.Text, Encoding.Default);
 
             //检测是否含有音频
             bool hasAudio = false;
@@ -1974,9 +1974,9 @@ namespace mp4box
             if (!string.IsNullOrEmpty(audio)) { hasAudio = true; }
 
             //audio
-            if (AVSwithAudioCheckBox.Checked && hasAudio)
+            if (AvsIncludeAudioCheckBox.Checked && hasAudio)
             {
-                if (!File.Exists(txtvideo9.Text))
+                if (!File.Exists(AvsVideoInputTextBox.Text))
                 {
                     ShowErrorMessage("请选择视频文件");
                     return;
@@ -1993,7 +1993,7 @@ namespace mp4box
                     x264 = x264bat(filepath, tempVideo, 1) + "\r\n" +
                            x264bat(filepath, tempVideo, 2);
                 else x264 = x264bat(filepath, tempVideo);
-                if (!AVSwithAudioCheckBox.Checked || !hasAudio)
+                if (!AvsIncludeAudioCheckBox.Checked || !hasAudio)
                     x264 = x264.Replace(tempVideo, nameout9);
             }
             else if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
@@ -2003,14 +2003,14 @@ namespace mp4box
                     x264 = x265bat(filepath, tempVideo, 1) + "\r\n" +
                            x265bat(filepath, tempVideo, 2);
                 else x264 = x265bat(filepath, tempVideo);
-                if (!AVSwithAudioCheckBox.Checked || !hasAudio)
+                if (!AvsIncludeAudioCheckBox.Checked || !hasAudio)
                 {
                     x264 += "\r\n\"" + workPath + "\\mp4box.exe\"  -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + nameout9 + "\" \r\n";
                     x264 += "del \"" + tempVideo + "\"";
                 }
             }
             //mux
-            if (AVSwithAudioCheckBox.Checked && hasAudio) //如果包含音频
+            if (AvsIncludeAudioCheckBox.Checked && hasAudio) //如果包含音频
                 mux = boxmuxbat(tempVideo, tempAudio, nameout9);
             else
                 mux = string.Empty;
@@ -2035,7 +2035,7 @@ namespace mp4box
             DialogResult result = savefile.ShowDialog();
             if (result == DialogResult.OK)
             {
-                txtout9.Text = nameout9 = savefile.FileName;
+                AvsOutputTextBox.Text = nameout9 = savefile.FileName;
             }
         }
 
@@ -2052,7 +2052,7 @@ namespace mp4box
             avs += "LoadPlugin(\"avs\\plugins\\VSFilter.DLL\")\r\n";
             avs += string.Format("\r\nLWLibavVideoSource(\"{0}\",23.976,convertFPS=True)\r\nConvertToYV12()\r\nCrop(0,0,0,0)\r\nAddBorders(0,0,0,0)\r\n" + "TextSub(\"{1}\")\r\n#LanczosResize(1280,960)\r\n", namevideo9, namesub9);
             //avs += "\r\nDirectShowSource(\"" + namevideo9 + "\",23.976,convertFPS=True)\r\nConvertToYV12()\r\nCrop(0,0,0,0)\r\nAddBorders(0,0,0,0)\r\n" + "TextSub(\"" + namesub9 + "\")\r\n#LanczosResize(1280,960)\r\n";
-            AVSScriptTextBox.Text = avs;
+            AvsScriptTextBox.Text = avs;
             avs = "";
         }
 
@@ -2090,9 +2090,9 @@ namespace mp4box
 
         private void txtvideo9_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(txtvideo9.Text.ToString()))
+            if (File.Exists(AvsVideoInputTextBox.Text.ToString()))
             {
-                Process.Start(txtvideo9.Text.ToString());
+                Process.Start(AvsVideoInputTextBox.Text.ToString());
             }
         }
 
@@ -2148,7 +2148,7 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 namesub9 = openFileDialog1.FileName;
-                txtsub9.Text = namesub9;
+                AvsSubtitleInputTextBox.Text = namesub9;
             }
         }
 
@@ -2159,13 +2159,13 @@ namespace mp4box
             if (result == DialogResult.OK)
             {
                 namevideo9 = openFileDialog1.FileName;
-                txtvideo9.Text = namevideo9;
+                AvsVideoInputTextBox.Text = namevideo9;
             }
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            AVSScriptTextBox.Clear();
+            AvsScriptTextBox.Clear();
         }
 
         private void btnClip_Click(object sender, EventArgs e)
@@ -3190,7 +3190,7 @@ namespace mp4box
                 avsBuilder.AppendLine("LoadPlugin(\"" + SupTitleDLLPath + "\")");
             else
                 avsBuilder.AppendLine("LoadPlugin(\"" + vsfilterDLLPath + "\")");
-            if (UndotCheckBox.Checked)
+            if (AvsUndotCheckBox.Checked)
                 avsBuilder.AppendLine("LoadPlugin(\"" + undotDLLPath + "\")");
             if (extInput == ".mp4"
                    || extInput == ".mov"
@@ -3201,21 +3201,21 @@ namespace mp4box
             else
                 avsBuilder.AppendLine("LWLibavVideoSource(\"" + namevideo9 + "\",format=\"YUV420P8\")");
             avsBuilder.AppendLine("ConvertToYV12()");
-            if (UndotCheckBox.Checked)
+            if (AvsUndotCheckBox.Checked)
                 avsBuilder.AppendLine("Undot()");
-            if (TweakCheckBox.Checked)
-                avsBuilder.AppendLine("Tweak(" + TweakChromaNumericUpDown.Value.ToString() + ", " + TweakSaturationNumericUpDown.Value.ToString() + ", " + TweakBrightnessNumericUpDown.Value.ToString() + ", " + TweakContrastNumericUpDown.Value.ToString() + ")");
-            if (LevelsCheckBox.Checked)
-                avsBuilder.AppendLine("Levels(0," + LevelsNumericUpDown.Value.ToString() + ",255,0,255)");
-            if (LanczosResizeCheckBox.Checked)
-                avsBuilder.AppendLine("LanczosResize(" + AVSWidthNumericUpDown.Value.ToString() + "," + AVSHeightNumericUpDown.Value.ToString() + ")");
-            if (SharpenCheckBox.Checked)
-                avsBuilder.AppendLine("Sharpen(" + SharpenNumericUpDown.Value.ToString() + ")");
-            if (CropCheckBox.Checked)
-                avsBuilder.AppendLine("Crop(" + AVSCropTextBox.Text + ")");
-            if (AddBordersCheckBox.Checked)
-                avsBuilder.AppendLine("AddBorders(" + AddBorders1NumericUpDown.Value.ToString() + "," + AddBorders2NumericUpDown.Value.ToString() + "," + AddBorders3NumericUpDown.Value.ToString() + "," + AddBorders4NumericUpDown.Value.ToString() + ")");
-            if (!string.IsNullOrEmpty(txtsub9.Text))
+            if (AvsTweakCheckBox.Checked)
+                avsBuilder.AppendLine("Tweak(" + AvsTweakChromaNumericUpDown.Value.ToString() + ", " + AvsTweakSaturationNumericUpDown.Value.ToString() + ", " + AvsTweakBrightnessNumericUpDown.Value.ToString() + ", " + AvsTweakContrastNumericUpDown.Value.ToString() + ")");
+            if (AvsLevelsCheckBox.Checked)
+                avsBuilder.AppendLine("Levels(0," + AvsLevelsNumericUpDown.Value.ToString() + ",255,0,255)");
+            if (AvsLanczosResizeCheckBox.Checked)
+                avsBuilder.AppendLine("LanczosResize(" + AvsLanczosResizeWidthNumericUpDown.Value.ToString() + "," + AvsLanczosResizeHeightNumericUpDown.Value.ToString() + ")");
+            if (AvsSharpenCheckBox.Checked)
+                avsBuilder.AppendLine("Sharpen(" + AvsSharpenNumericUpDown.Value.ToString() + ")");
+            if (AvsCropCheckBox.Checked)
+                avsBuilder.AppendLine("Crop(" + AvsCropTextBox.Text + ")");
+            if (AvsAddBordersCheckBox.Checked)
+                avsBuilder.AppendLine("AddBorders(" + AvsAddBordersLeftNumericUpDown.Value.ToString() + "," + AvsAddBordersTopNumericUpDown.Value.ToString() + "," + AvsAddBordersRightNumericUpDown.Value.ToString() + "," + AvsAddBordersBottomNumericUpDown.Value.ToString() + ")");
+            if (!string.IsNullOrEmpty(AvsSubtitleInputTextBox.Text))
             {
                 if (Path.GetExtension(namesub9).ToLower() == ".idx")
                     avsBuilder.AppendLine("vobsub(\"" + namesub9 + "\")");
@@ -3224,9 +3224,9 @@ namespace mp4box
                 else
                     avsBuilder.AppendLine("TextSub(\"" + namesub9 + "\")");
             }
-            if (TrimCheckBox.Checked)
-                avsBuilder.AppendLine("Trim(" + TrimStartNumericUpDown.Value.ToString() + "," + TrimEndNumericUpDown.Value.ToString() + ")");
-            AVSScriptTextBox.Text = avsBuilder.ToString();
+            if (AvsTrimCheckBox.Checked)
+                avsBuilder.AppendLine("Trim(" + AvsTrimStartNumericUpDown.Value.ToString() + "," + AvsTrimEndNumericUpDown.Value.ToString() + ")");
+            AvsScriptTextBox.Text = avsBuilder.ToString();
         }
 
         #region 更改AVS
@@ -3363,14 +3363,14 @@ namespace mp4box
 
         private void txtAVS_TextChanged(object sender, EventArgs e)
         {
-            Match m = Regex.Match(AVSScriptTextBox.Text, "ource\\(\"[a-zA-Z]:\\\\.+\\.\\w+\"");
+            Match m = Regex.Match(AvsScriptTextBox.Text, "ource\\(\"[a-zA-Z]:\\\\.+\\.\\w+\"");
             if (m.Success)
             {
                 string str = m.ToString();
                 str = str.Replace("ource(\"", "");
                 str = str.Replace("\"", "");
                 str = Util.ChangeExt(str, "_AVS.mp4");
-                txtout9.Text = str;
+                AvsOutputTextBox.Text = str;
             }
         }
 
@@ -3647,7 +3647,7 @@ namespace mp4box
             DialogResult result = savefile.ShowDialog();
             if (result == DialogResult.OK)
             {
-                File.WriteAllText(savefile.FileName, AVSScriptTextBox.Text, Encoding.Default);
+                File.WriteAllText(savefile.FileName, AvsScriptTextBox.Text, Encoding.Default);
             }
         }
 
@@ -4274,9 +4274,9 @@ namespace mp4box
 
         private void AVSAddFilterButton_Click(object sender, EventArgs e)
         {
-            string vsfilterDLLPath = Path.Combine(workPath, @"avs\plugins\" + AVSFilterComboBox.Text);
+            string vsfilterDLLPath = Path.Combine(workPath, @"avs\plugins\" + AvsFilterComboBox.Text);
             string text = "LoadPlugin(\"" + vsfilterDLLPath + "\")" + "\r\n";
-            AVSScriptTextBox.Text = text + AVSScriptTextBox.Text;
+            AvsScriptTextBox.Text = text + AvsScriptTextBox.Text;
         }
 
         private void AudioJoinButton_Click(object sender, EventArgs e)

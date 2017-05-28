@@ -651,1480 +651,1480 @@
   <data name="&gt;&gt;MediaInfoTab.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="AVSAddFilterButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsAddFilterButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AVSAddFilterButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsAddFilterButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AVSAddFilterButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsAddFilterButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>401, 304</value>
   </data>
-  <data name="AVSAddFilterButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsAddFilterButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="AVSAddFilterButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsAddFilterButton.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
   </data>
-  <data name="AVSAddFilterButton.Text" xml:space="preserve">
+  <data name="AvsAddFilterButton.Text" xml:space="preserve">
     <value>插入</value>
   </data>
-  <data name="&gt;&gt;AVSAddFilterButton.Name" xml:space="preserve">
-    <value>AVSAddFilterButton</value>
+  <data name="&gt;&gt;AvsAddFilterButton.Name" xml:space="preserve">
+    <value>AvsAddFilterButton</value>
   </data>
-  <data name="&gt;&gt;AVSAddFilterButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddFilterButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AVSAddFilterButton.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsAddFilterButton.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AVSAddFilterButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddFilterButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label39.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsFilterLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label39.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsFilterLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label39.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsFilterLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>29, 309</value>
   </data>
-  <data name="label39.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsFilterLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 12</value>
   </data>
-  <data name="label39.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsFilterLabel.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
-  <data name="label39.Text" xml:space="preserve">
+  <data name="AvsFilterLabel.Text" xml:space="preserve">
     <value>外置滤镜</value>
   </data>
-  <data name="&gt;&gt;label39.Name" xml:space="preserve">
-    <value>label39</value>
+  <data name="&gt;&gt;AvsFilterLabel.Name" xml:space="preserve">
+    <value>AvsFilterLabel</value>
   </data>
-  <data name="&gt;&gt;label39.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsFilterLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label39.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsFilterLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsFilterLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="AVSFilterComboBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsFilterComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>94, 306</value>
   </data>
-  <data name="AVSFilterComboBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsFilterComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>295, 20</value>
   </data>
-  <data name="AVSFilterComboBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsFilterComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
   </data>
-  <data name="&gt;&gt;AVSFilterComboBox.Name" xml:space="preserve">
-    <value>AVSFilterComboBox</value>
+  <data name="&gt;&gt;AvsFilterComboBox.Name" xml:space="preserve">
+    <value>AvsFilterComboBox</value>
   </data>
-  <data name="&gt;&gt;AVSFilterComboBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsFilterComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AVSFilterComboBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsFilterComboBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AVSFilterComboBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsFilterComboBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label25.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsCropIntroductionLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label25.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsCropIntroductionLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsCropIntroductionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>156, 176</value>
   </data>
-  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsCropIntroductionLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 12</value>
   </data>
-  <data name="label25.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsCropIntroductionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
-  <data name="label25.Text" xml:space="preserve">
+  <data name="AvsCropIntroductionLabel.Text" xml:space="preserve">
     <value>左,上,-右,-下（或左,上,宽,高）</value>
   </data>
-  <data name="&gt;&gt;label25.Name" xml:space="preserve">
-    <value>label25</value>
+  <data name="&gt;&gt;AvsCropIntroductionLabel.Name" xml:space="preserve">
+    <value>AvsCropIntroductionLabel</value>
   </data>
-  <data name="&gt;&gt;label25.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsCropIntroductionLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsCropIntroductionLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsCropIntroductionLabel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="AVSCropTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsCropTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="AVSCropTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsCropTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>360, 171</value>
   </data>
-  <data name="AVSCropTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsCropTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 21</value>
   </data>
-  <data name="AVSCropTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsCropTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
-  <data name="AVSCropTextBox.Text" xml:space="preserve">
+  <data name="AvsCropTextBox.Text" xml:space="preserve">
     <value>8,0,-8,-0</value>
   </data>
-  <data name="&gt;&gt;AVSCropTextBox.Name" xml:space="preserve">
-    <value>AVSCropTextBox</value>
+  <data name="&gt;&gt;AvsCropTextBox.Name" xml:space="preserve">
+    <value>AvsCropTextBox</value>
   </data>
-  <data name="&gt;&gt;AVSCropTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsCropTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AVSCropTextBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsCropTextBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AVSCropTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsCropTextBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label30.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsTrimEndLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label30.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsTrimEndLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTrimEndLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>313, 204</value>
   </data>
-  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTrimEndLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 12</value>
   </data>
-  <data name="label30.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTrimEndLabel.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <data name="label30.Text" xml:space="preserve">
+  <data name="AvsTrimEndLabel.Text" xml:space="preserve">
     <value>结束帧</value>
   </data>
-  <data name="&gt;&gt;label30.Name" xml:space="preserve">
-    <value>label30</value>
+  <data name="&gt;&gt;AvsTrimEndLabel.Name" xml:space="preserve">
+    <value>AvsTrimEndLabel</value>
   </data>
-  <data name="&gt;&gt;label30.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTrimEndLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTrimEndLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTrimEndLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label29.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsTrimStartLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsTrimStartLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTrimStartLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>156, 204</value>
   </data>
-  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTrimStartLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 12</value>
   </data>
-  <data name="label29.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTrimStartLabel.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
-  <data name="label29.Text" xml:space="preserve">
+  <data name="AvsTrimStartLabel.Text" xml:space="preserve">
     <value>起始帧</value>
   </data>
-  <data name="&gt;&gt;label29.Name" xml:space="preserve">
-    <value>label29</value>
+  <data name="&gt;&gt;AvsTrimStartLabel.Name" xml:space="preserve">
+    <value>AvsTrimStartLabel</value>
   </data>
-  <data name="&gt;&gt;label29.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTrimStartLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTrimStartLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTrimStartLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="TrimEndNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTrimEndNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>360, 200</value>
   </data>
-  <data name="TrimEndNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTrimEndNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 21</value>
   </data>
-  <data name="TrimEndNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTrimEndNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
   </data>
-  <data name="TrimEndNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="AvsTrimEndNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;TrimEndNumericUpDown.Name" xml:space="preserve">
-    <value>TrimEndNumericUpDown</value>
+  <data name="&gt;&gt;AvsTrimEndNumericUpDown.Name" xml:space="preserve">
+    <value>AvsTrimEndNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;TrimEndNumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTrimEndNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TrimEndNumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTrimEndNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;TrimEndNumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTrimEndNumericUpDown.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="TrimStartNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTrimStartNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>203, 200</value>
   </data>
-  <data name="TrimStartNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTrimStartNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 21</value>
   </data>
-  <data name="TrimStartNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTrimStartNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
-  <data name="TrimStartNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="AvsTrimStartNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;TrimStartNumericUpDown.Name" xml:space="preserve">
-    <value>TrimStartNumericUpDown</value>
+  <data name="&gt;&gt;AvsTrimStartNumericUpDown.Name" xml:space="preserve">
+    <value>AvsTrimStartNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;TrimStartNumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTrimStartNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TrimStartNumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTrimStartNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;TrimStartNumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTrimStartNumericUpDown.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="LevelsNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsLevelsNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>203, 227</value>
   </data>
-  <data name="LevelsNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsLevelsNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 21</value>
   </data>
-  <data name="LevelsNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsLevelsNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
   </data>
-  <data name="&gt;&gt;LevelsNumericUpDown.Name" xml:space="preserve">
-    <value>LevelsNumericUpDown</value>
+  <data name="&gt;&gt;AvsLevelsNumericUpDown.Name" xml:space="preserve">
+    <value>AvsLevelsNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;LevelsNumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsLevelsNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LevelsNumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsLevelsNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;LevelsNumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsLevelsNumericUpDown.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="label24.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsAddBordersTopLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsAddBordersTopLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsAddBordersTopLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 150</value>
   </data>
-  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsAddBordersTopLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 12</value>
   </data>
-  <data name="label24.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsAddBordersTopLabel.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
-  <data name="label24.Text" xml:space="preserve">
+  <data name="AvsAddBordersTopLabel.Text" xml:space="preserve">
     <value>上</value>
   </data>
-  <data name="&gt;&gt;label24.Name" xml:space="preserve">
-    <value>label24</value>
+  <data name="&gt;&gt;AvsAddBordersTopLabel.Name" xml:space="preserve">
+    <value>AvsAddBordersTopLabel</value>
   </data>
-  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersTopLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsAddBordersTopLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersTopLabel.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="label23.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsAddBordersRightLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsAddBordersRightLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsAddBordersRightLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>337, 150</value>
   </data>
-  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsAddBordersRightLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 12</value>
   </data>
-  <data name="label23.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsAddBordersRightLabel.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
   </data>
-  <data name="label23.Text" xml:space="preserve">
+  <data name="AvsAddBordersRightLabel.Text" xml:space="preserve">
     <value>右</value>
   </data>
-  <data name="&gt;&gt;label23.Name" xml:space="preserve">
-    <value>label23</value>
+  <data name="&gt;&gt;AvsAddBordersRightLabel.Name" xml:space="preserve">
+    <value>AvsAddBordersRightLabel</value>
   </data>
-  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersRightLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsAddBordersRightLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersRightLabel.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="label22.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsAddBordersBottomLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsAddBordersBottomLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsAddBordersBottomLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>421, 150</value>
   </data>
-  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsAddBordersBottomLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 12</value>
   </data>
-  <data name="label22.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsAddBordersBottomLabel.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
-  <data name="label22.Text" xml:space="preserve">
+  <data name="AvsAddBordersBottomLabel.Text" xml:space="preserve">
     <value>下</value>
   </data>
-  <data name="&gt;&gt;label22.Name" xml:space="preserve">
-    <value>label22</value>
+  <data name="&gt;&gt;AvsAddBordersBottomLabel.Name" xml:space="preserve">
+    <value>AvsAddBordersBottomLabel</value>
   </data>
-  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersBottomLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsAddBordersBottomLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersBottomLabel.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="label21.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsAddBordersLeftLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsAddBordersLeftLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsAddBordersLeftLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 150</value>
   </data>
-  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsAddBordersLeftLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 12</value>
   </data>
-  <data name="label21.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsAddBordersLeftLabel.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
   </data>
-  <data name="label21.Text" xml:space="preserve">
+  <data name="AvsAddBordersLeftLabel.Text" xml:space="preserve">
     <value>左</value>
   </data>
-  <data name="&gt;&gt;label21.Name" xml:space="preserve">
-    <value>label21</value>
+  <data name="&gt;&gt;AvsAddBordersLeftLabel.Name" xml:space="preserve">
+    <value>AvsAddBordersLeftLabel</value>
   </data>
-  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersLeftLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsAddBordersLeftLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersLeftLabel.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="AddBorders4NumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsAddBordersBottomNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>444, 148</value>
   </data>
-  <data name="AddBorders4NumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsAddBordersBottomNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 21</value>
   </data>
-  <data name="AddBorders4NumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsAddBordersBottomNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
-  <data name="&gt;&gt;AddBorders4NumericUpDown.Name" xml:space="preserve">
-    <value>AddBorders4NumericUpDown</value>
+  <data name="&gt;&gt;AvsAddBordersBottomNumericUpDown.Name" xml:space="preserve">
+    <value>AvsAddBordersBottomNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;AddBorders4NumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersBottomNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AddBorders4NumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsAddBordersBottomNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AddBorders4NumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersBottomNumericUpDown.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="AddBorders3NumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsAddBordersRightNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>360, 148</value>
   </data>
-  <data name="AddBorders3NumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsAddBordersRightNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 21</value>
   </data>
-  <data name="AddBorders3NumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsAddBordersRightNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
   </data>
-  <data name="&gt;&gt;AddBorders3NumericUpDown.Name" xml:space="preserve">
-    <value>AddBorders3NumericUpDown</value>
+  <data name="&gt;&gt;AvsAddBordersRightNumericUpDown.Name" xml:space="preserve">
+    <value>AvsAddBordersRightNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;AddBorders3NumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersRightNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AddBorders3NumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsAddBordersRightNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AddBorders3NumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersRightNumericUpDown.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="AddBorders2NumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsAddBordersTopNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>276, 148</value>
   </data>
-  <data name="AddBorders2NumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsAddBordersTopNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 21</value>
   </data>
-  <data name="AddBorders2NumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsAddBordersTopNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
-  <data name="&gt;&gt;AddBorders2NumericUpDown.Name" xml:space="preserve">
-    <value>AddBorders2NumericUpDown</value>
+  <data name="&gt;&gt;AvsAddBordersTopNumericUpDown.Name" xml:space="preserve">
+    <value>AvsAddBordersTopNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;AddBorders2NumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersTopNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AddBorders2NumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsAddBordersTopNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AddBorders2NumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersTopNumericUpDown.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="SharpenNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsSharpenNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>203, 254</value>
   </data>
-  <data name="SharpenNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsSharpenNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 21</value>
   </data>
-  <data name="SharpenNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsSharpenNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
-  <data name="&gt;&gt;SharpenNumericUpDown.Name" xml:space="preserve">
-    <value>SharpenNumericUpDown</value>
+  <data name="&gt;&gt;AvsSharpenNumericUpDown.Name" xml:space="preserve">
+    <value>AvsSharpenNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;SharpenNumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsSharpenNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SharpenNumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsSharpenNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;SharpenNumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsSharpenNumericUpDown.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="AddBorders1NumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsAddBordersLeftNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>191, 148</value>
   </data>
-  <data name="AddBorders1NumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsAddBordersLeftNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 21</value>
   </data>
-  <data name="AddBorders1NumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsAddBordersLeftNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="&gt;&gt;AddBorders1NumericUpDown.Name" xml:space="preserve">
-    <value>AddBorders1NumericUpDown</value>
+  <data name="&gt;&gt;AvsAddBordersLeftNumericUpDown.Name" xml:space="preserve">
+    <value>AvsAddBordersLeftNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;AddBorders1NumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersLeftNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AddBorders1NumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsAddBordersLeftNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AddBorders1NumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersLeftNumericUpDown.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsLanczosResizeHeightLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsLanczosResizeHeightLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsLanczosResizeHeightLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 123</value>
   </data>
-  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsLanczosResizeHeightLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
   </data>
-  <data name="label19.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsLanczosResizeHeightLabel.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="label19.Text" xml:space="preserve">
+  <data name="AvsLanczosResizeHeightLabel.Text" xml:space="preserve">
     <value>高度</value>
   </data>
-  <data name="&gt;&gt;label19.Name" xml:space="preserve">
-    <value>label19</value>
+  <data name="&gt;&gt;AvsLanczosResizeHeightLabel.Name" xml:space="preserve">
+    <value>AvsLanczosResizeHeightLabel</value>
   </data>
-  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsLanczosResizeHeightLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsLanczosResizeHeightLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsLanczosResizeHeightLabel.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsLanczosResizeWidthLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsLanczosResizeWidthLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsLanczosResizeWidthLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>156, 123</value>
   </data>
-  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsLanczosResizeWidthLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
   </data>
-  <data name="label20.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsLanczosResizeWidthLabel.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="label20.Text" xml:space="preserve">
+  <data name="AvsLanczosResizeWidthLabel.Text" xml:space="preserve">
     <value>宽度</value>
   </data>
-  <data name="&gt;&gt;label20.Name" xml:space="preserve">
-    <value>label20</value>
+  <data name="&gt;&gt;AvsLanczosResizeWidthLabel.Name" xml:space="preserve">
+    <value>AvsLanczosResizeWidthLabel</value>
   </data>
-  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsLanczosResizeWidthLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsLanczosResizeWidthLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsLanczosResizeWidthLabel.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="AVSHeightNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsLanczosResizeHeightNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>360, 121</value>
   </data>
-  <data name="AVSHeightNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsLanczosResizeHeightNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 21</value>
   </data>
-  <data name="AVSHeightNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsLanczosResizeHeightNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
   </data>
-  <data name="AVSHeightNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="AvsLanczosResizeHeightNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;AVSHeightNumericUpDown.Name" xml:space="preserve">
-    <value>AVSHeightNumericUpDown</value>
+  <data name="&gt;&gt;AvsLanczosResizeHeightNumericUpDown.Name" xml:space="preserve">
+    <value>AvsLanczosResizeHeightNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;AVSHeightNumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsLanczosResizeHeightNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AVSHeightNumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsLanczosResizeHeightNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AVSHeightNumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsLanczosResizeHeightNumericUpDown.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <data name="AVSWidthNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsLanczosResizeWidthNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 121</value>
   </data>
-  <data name="AVSWidthNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsLanczosResizeWidthNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 21</value>
   </data>
-  <data name="AVSWidthNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsLanczosResizeWidthNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="AVSWidthNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="AvsLanczosResizeWidthNumericUpDown.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;AVSWidthNumericUpDown.Name" xml:space="preserve">
-    <value>AVSWidthNumericUpDown</value>
+  <data name="&gt;&gt;AvsLanczosResizeWidthNumericUpDown.Name" xml:space="preserve">
+    <value>AvsLanczosResizeWidthNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;AVSWidthNumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsLanczosResizeWidthNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AVSWidthNumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsLanczosResizeWidthNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AVSWidthNumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsLanczosResizeWidthNumericUpDown.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
-  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsTweakContrastLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsTweakContrastLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTweakContrastLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>456, 96</value>
   </data>
-  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTweakContrastLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 12</value>
   </data>
-  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTweakContrastLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
-  <data name="label18.Text" xml:space="preserve">
+  <data name="AvsTweakContrastLabel.Text" xml:space="preserve">
     <value>对比度</value>
   </data>
-  <data name="&gt;&gt;label18.Name" xml:space="preserve">
-    <value>label18</value>
+  <data name="&gt;&gt;AvsTweakContrastLabel.Name" xml:space="preserve">
+    <value>AvsTweakContrastLabel</value>
   </data>
-  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakContrastLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTweakContrastLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakContrastLabel.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsTweakBrightnessLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsTweakBrightnessLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTweakBrightnessLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>360, 96</value>
   </data>
-  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTweakBrightnessLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
   </data>
-  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTweakBrightnessLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
+  <data name="AvsTweakBrightnessLabel.Text" xml:space="preserve">
     <value>亮度</value>
   </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
+  <data name="&gt;&gt;AvsTweakBrightnessLabel.Name" xml:space="preserve">
+    <value>AvsTweakBrightnessLabel</value>
   </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakBrightnessLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTweakBrightnessLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakBrightnessLabel.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
-  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsTweakSaturationLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsTweakSaturationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTweakSaturationLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 96</value>
   </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTweakSaturationLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 12</value>
   </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTweakSaturationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
-  <data name="label9.Text" xml:space="preserve">
+  <data name="AvsTweakSaturationLabel.Text" xml:space="preserve">
     <value>饱和度</value>
   </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
+  <data name="&gt;&gt;AvsTweakSaturationLabel.Name" xml:space="preserve">
+    <value>AvsTweakSaturationLabel</value>
   </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakSaturationLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTweakSaturationLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakSaturationLabel.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsTweakChromaLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsTweakChromaLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTweakChromaLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>156, 96</value>
   </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTweakChromaLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 12</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTweakChromaLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
+  <data name="AvsTweakChromaLabel.Text" xml:space="preserve">
     <value>色度</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="&gt;&gt;AvsTweakChromaLabel.Name" xml:space="preserve">
+    <value>AvsTweakChromaLabel</value>
   </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakChromaLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTweakChromaLabel.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakChromaLabel.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="TweakContrastNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTweakContrastNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>503, 92</value>
   </data>
-  <data name="TweakContrastNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTweakContrastNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 21</value>
   </data>
-  <data name="TweakContrastNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTweakContrastNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="&gt;&gt;TweakContrastNumericUpDown.Name" xml:space="preserve">
-    <value>TweakContrastNumericUpDown</value>
+  <data name="&gt;&gt;AvsTweakContrastNumericUpDown.Name" xml:space="preserve">
+    <value>AvsTweakContrastNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;TweakContrastNumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakContrastNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TweakContrastNumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTweakContrastNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;TweakContrastNumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakContrastNumericUpDown.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <data name="TweakBrightnessNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTweakBrightnessNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>395, 92</value>
   </data>
-  <data name="TweakBrightnessNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTweakBrightnessNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 21</value>
   </data>
-  <data name="TweakBrightnessNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTweakBrightnessNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="&gt;&gt;TweakBrightnessNumericUpDown.Name" xml:space="preserve">
-    <value>TweakBrightnessNumericUpDown</value>
+  <data name="&gt;&gt;AvsTweakBrightnessNumericUpDown.Name" xml:space="preserve">
+    <value>AvsTweakBrightnessNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;TweakBrightnessNumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakBrightnessNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TweakBrightnessNumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTweakBrightnessNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;TweakBrightnessNumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakBrightnessNumericUpDown.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <data name="TweakSaturationNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTweakSaturationNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 92</value>
   </data>
-  <data name="TweakSaturationNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTweakSaturationNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 21</value>
   </data>
-  <data name="TweakSaturationNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTweakSaturationNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="&gt;&gt;TweakSaturationNumericUpDown.Name" xml:space="preserve">
-    <value>TweakSaturationNumericUpDown</value>
+  <data name="&gt;&gt;AvsTweakSaturationNumericUpDown.Name" xml:space="preserve">
+    <value>AvsTweakSaturationNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;TweakSaturationNumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakSaturationNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TweakSaturationNumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTweakSaturationNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;TweakSaturationNumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakSaturationNumericUpDown.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
-  <data name="TweakChromaNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTweakChromaNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>191, 92</value>
   </data>
-  <data name="TweakChromaNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTweakChromaNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 21</value>
   </data>
-  <data name="TweakChromaNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTweakChromaNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="&gt;&gt;TweakChromaNumericUpDown.Name" xml:space="preserve">
-    <value>TweakChromaNumericUpDown</value>
+  <data name="&gt;&gt;AvsTweakChromaNumericUpDown.Name" xml:space="preserve">
+    <value>AvsTweakChromaNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;TweakChromaNumericUpDown.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakChromaNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TweakChromaNumericUpDown.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTweakChromaNumericUpDown.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;TweakChromaNumericUpDown.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakChromaNumericUpDown.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
-  <data name="AVSScriptTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsScriptTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>SimSun, 9pt</value>
   </data>
-  <data name="AVSScriptTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsScriptTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 332</value>
   </data>
-  <data name="AVSScriptTextBox.Multiline" type="System.Boolean, mscorlib">
+  <data name="AvsScriptTextBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="AVSScriptTextBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+  <data name="AvsScriptTextBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
-  <data name="AVSScriptTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsScriptTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>550, 218</value>
   </data>
-  <data name="AVSScriptTextBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsScriptTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="AVSScriptTextBox.Text" xml:space="preserve">
+  <data name="AvsScriptTextBox.Text" xml:space="preserve">
     <value>可直接把AVS脚本粘贴到这里</value>
   </data>
-  <data name="&gt;&gt;AVSScriptTextBox.Name" xml:space="preserve">
-    <value>AVSScriptTextBox</value>
+  <data name="&gt;&gt;AvsScriptTextBox.Name" xml:space="preserve">
+    <value>AvsScriptTextBox</value>
   </data>
-  <data name="&gt;&gt;AVSScriptTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsScriptTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AVSScriptTextBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsScriptTextBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AVSScriptTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsScriptTextBox.ZOrder" xml:space="preserve">
     <value>31</value>
   </data>
-  <data name="txtvideo9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsVideoInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtvideo9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsVideoInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 6</value>
   </data>
-  <data name="txtvideo9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsVideoInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>468, 21</value>
   </data>
-  <data name="txtvideo9.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsVideoInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;txtvideo9.Name" xml:space="preserve">
-    <value>txtvideo9</value>
+  <data name="&gt;&gt;AvsVideoInputTextBox.Name" xml:space="preserve">
+    <value>AvsVideoInputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtvideo9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsVideoInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtvideo9.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsVideoInputTextBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;txtvideo9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsVideoInputTextBox.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
-  <data name="txtout9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsOutputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtout9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsOutputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 63</value>
   </data>
-  <data name="txtout9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsOutputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>468, 21</value>
   </data>
-  <data name="txtout9.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsOutputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;txtout9.Name" xml:space="preserve">
-    <value>txtout9</value>
+  <data name="&gt;&gt;AvsOutputTextBox.Name" xml:space="preserve">
+    <value>AvsOutputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtout9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsOutputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtout9.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsOutputTextBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;txtout9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsOutputTextBox.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
-  <data name="txtsub9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsSubtitleInputTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtsub9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsSubtitleInputTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 34</value>
   </data>
-  <data name="txtsub9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsSubtitleInputTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>468, 21</value>
   </data>
-  <data name="txtsub9.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsSubtitleInputTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;txtsub9.Name" xml:space="preserve">
-    <value>txtsub9</value>
+  <data name="&gt;&gt;AvsSubtitleInputTextBox.Name" xml:space="preserve">
+    <value>AvsSubtitleInputTextBox</value>
   </data>
-  <data name="&gt;&gt;txtsub9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsSubtitleInputTextBox.Type" xml:space="preserve">
     <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;txtsub9.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsSubtitleInputTextBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;txtsub9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsSubtitleInputTextBox.ZOrder" xml:space="preserve">
     <value>34</value>
   </data>
-  <data name="AVSwithAudioCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsIncludeAudioCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="AVSwithAudioCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsIncludeAudioCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="AVSwithAudioCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsIncludeAudioCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AVSwithAudioCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>357, 557</value>
+  <data name="AvsIncludeAudioCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>368, 557</value>
   </data>
-  <data name="AVSwithAudioCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsIncludeAudioCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 19</value>
   </data>
-  <data name="AVSwithAudioCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsIncludeAudioCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
-  <data name="AVSwithAudioCheckBox.Text" xml:space="preserve">
+  <data name="AvsIncludeAudioCheckBox.Text" xml:space="preserve">
     <value>压制音频</value>
   </data>
-  <data name="&gt;&gt;AVSwithAudioCheckBox.Name" xml:space="preserve">
-    <value>AVSwithAudioCheckBox</value>
+  <data name="&gt;&gt;AvsIncludeAudioCheckBox.Name" xml:space="preserve">
+    <value>AvsIncludeAudioCheckBox</value>
   </data>
-  <data name="&gt;&gt;AVSwithAudioCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsIncludeAudioCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AVSwithAudioCheckBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsIncludeAudioCheckBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AVSwithAudioCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsIncludeAudioCheckBox.ZOrder" xml:space="preserve">
     <value>35</value>
   </data>
-  <data name="AVSSaveButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsSaveButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AVSSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AVSSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 556</value>
+  <data name="AvsSaveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 556</value>
   </data>
-  <data name="AVSSaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 23</value>
+  <data name="AvsSaveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="AVSSaveButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsSaveButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="AVSSaveButton.Text" xml:space="preserve">
+  <data name="AvsSaveButton.Text" xml:space="preserve">
     <value>保存AVS</value>
   </data>
-  <data name="&gt;&gt;AVSSaveButton.Name" xml:space="preserve">
-    <value>AVSSaveButton</value>
+  <data name="&gt;&gt;AvsSaveButton.Name" xml:space="preserve">
+    <value>AvsSaveButton</value>
   </data>
-  <data name="&gt;&gt;AVSSaveButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsSaveButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AVSSaveButton.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsSaveButton.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AVSSaveButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsSaveButton.ZOrder" xml:space="preserve">
     <value>36</value>
   </data>
-  <data name="LevelsCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsLevelsCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="LevelsCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsLevelsCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="LevelsCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsLevelsCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LevelsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsLevelsCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 227</value>
   </data>
-  <data name="LevelsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsLevelsCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 19</value>
   </data>
-  <data name="LevelsCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsLevelsCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
-  <data name="LevelsCheckBox.Text" xml:space="preserve">
+  <data name="AvsLevelsCheckBox.Text" xml:space="preserve">
     <value>Levels 亮度</value>
   </data>
-  <data name="&gt;&gt;LevelsCheckBox.Name" xml:space="preserve">
-    <value>LevelsCheckBox</value>
+  <data name="&gt;&gt;AvsLevelsCheckBox.Name" xml:space="preserve">
+    <value>AvsLevelsCheckBox</value>
   </data>
-  <data name="&gt;&gt;LevelsCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsLevelsCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;LevelsCheckBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsLevelsCheckBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;LevelsCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsLevelsCheckBox.ZOrder" xml:space="preserve">
     <value>37</value>
   </data>
-  <data name="CropCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsCropCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="CropCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsCropCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="CropCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsCropCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="CropCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsCropCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 173</value>
   </data>
-  <data name="CropCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsCropCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 19</value>
   </data>
-  <data name="CropCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsCropCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
   </data>
-  <data name="CropCheckBox.Text" xml:space="preserve">
+  <data name="AvsCropCheckBox.Text" xml:space="preserve">
     <value>Crop 裁剪</value>
   </data>
-  <data name="&gt;&gt;CropCheckBox.Name" xml:space="preserve">
-    <value>CropCheckBox</value>
+  <data name="&gt;&gt;AvsCropCheckBox.Name" xml:space="preserve">
+    <value>AvsCropCheckBox</value>
   </data>
-  <data name="&gt;&gt;CropCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsCropCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;CropCheckBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsCropCheckBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;CropCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsCropCheckBox.ZOrder" xml:space="preserve">
     <value>38</value>
   </data>
-  <data name="TrimCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsTrimCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TrimCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsTrimCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="TrimCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsTrimCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="TrimCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTrimCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 200</value>
   </data>
-  <data name="TrimCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTrimCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 19</value>
   </data>
-  <data name="TrimCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTrimCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="TrimCheckBox.Text" xml:space="preserve">
+  <data name="AvsTrimCheckBox.Text" xml:space="preserve">
     <value>Trim 截取</value>
   </data>
-  <data name="&gt;&gt;TrimCheckBox.Name" xml:space="preserve">
-    <value>TrimCheckBox</value>
+  <data name="&gt;&gt;AvsTrimCheckBox.Name" xml:space="preserve">
+    <value>AvsTrimCheckBox</value>
   </data>
-  <data name="&gt;&gt;TrimCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTrimCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;TrimCheckBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTrimCheckBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;TrimCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTrimCheckBox.ZOrder" xml:space="preserve">
     <value>39</value>
   </data>
-  <data name="SharpenCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsSharpenCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="SharpenCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsSharpenCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="SharpenCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsSharpenCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="SharpenCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsSharpenCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 254</value>
   </data>
-  <data name="SharpenCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsSharpenCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 19</value>
   </data>
-  <data name="SharpenCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsSharpenCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="SharpenCheckBox.Text" xml:space="preserve">
+  <data name="AvsSharpenCheckBox.Text" xml:space="preserve">
     <value>Sharpen 锐化</value>
   </data>
-  <data name="&gt;&gt;SharpenCheckBox.Name" xml:space="preserve">
-    <value>SharpenCheckBox</value>
+  <data name="&gt;&gt;AvsSharpenCheckBox.Name" xml:space="preserve">
+    <value>AvsSharpenCheckBox</value>
   </data>
-  <data name="&gt;&gt;SharpenCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsSharpenCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;SharpenCheckBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsSharpenCheckBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;SharpenCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsSharpenCheckBox.ZOrder" xml:space="preserve">
     <value>40</value>
   </data>
-  <data name="AddBordersCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsAddBordersCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="AddBordersCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsAddBordersCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="AddBordersCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsAddBordersCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AddBordersCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsAddBordersCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 146</value>
   </data>
-  <data name="AddBordersCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsAddBordersCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 19</value>
   </data>
-  <data name="AddBordersCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsAddBordersCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="AddBordersCheckBox.Text" xml:space="preserve">
+  <data name="AvsAddBordersCheckBox.Text" xml:space="preserve">
     <value>AddBorders 黑边</value>
   </data>
-  <data name="&gt;&gt;AddBordersCheckBox.Name" xml:space="preserve">
-    <value>AddBordersCheckBox</value>
+  <data name="&gt;&gt;AvsAddBordersCheckBox.Name" xml:space="preserve">
+    <value>AvsAddBordersCheckBox</value>
   </data>
-  <data name="&gt;&gt;AddBordersCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AddBordersCheckBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsAddBordersCheckBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AddBordersCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsAddBordersCheckBox.ZOrder" xml:space="preserve">
     <value>41</value>
   </data>
-  <data name="LanczosResizeCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsLanczosResizeCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="LanczosResizeCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsLanczosResizeCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="LanczosResizeCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsLanczosResizeCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LanczosResizeCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsLanczosResizeCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 119</value>
   </data>
-  <data name="LanczosResizeCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsLanczosResizeCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 19</value>
   </data>
-  <data name="LanczosResizeCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsLanczosResizeCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="LanczosResizeCheckBox.Text" xml:space="preserve">
+  <data name="AvsLanczosResizeCheckBox.Text" xml:space="preserve">
     <value>LanczosResize</value>
   </data>
-  <data name="&gt;&gt;LanczosResizeCheckBox.Name" xml:space="preserve">
-    <value>LanczosResizeCheckBox</value>
+  <data name="&gt;&gt;AvsLanczosResizeCheckBox.Name" xml:space="preserve">
+    <value>AvsLanczosResizeCheckBox</value>
   </data>
-  <data name="&gt;&gt;LanczosResizeCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsLanczosResizeCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;LanczosResizeCheckBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsLanczosResizeCheckBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;LanczosResizeCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsLanczosResizeCheckBox.ZOrder" xml:space="preserve">
     <value>42</value>
   </data>
-  <data name="TweakCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsTweakCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TweakCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsTweakCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="TweakCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsTweakCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="TweakCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTweakCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 92</value>
   </data>
-  <data name="TweakCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTweakCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 19</value>
   </data>
-  <data name="TweakCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTweakCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="TweakCheckBox.Text" xml:space="preserve">
+  <data name="AvsTweakCheckBox.Text" xml:space="preserve">
     <value>Tweak</value>
   </data>
-  <data name="&gt;&gt;TweakCheckBox.Name" xml:space="preserve">
-    <value>TweakCheckBox</value>
+  <data name="&gt;&gt;AvsTweakCheckBox.Name" xml:space="preserve">
+    <value>AvsTweakCheckBox</value>
   </data>
-  <data name="&gt;&gt;TweakCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;TweakCheckBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTweakCheckBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;TweakCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTweakCheckBox.ZOrder" xml:space="preserve">
     <value>43</value>
   </data>
-  <data name="UndotCheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="AvsUndotCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="UndotCheckBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsUndotCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="UndotCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsUndotCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="UndotCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsUndotCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 281</value>
   </data>
-  <data name="UndotCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsUndotCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 19</value>
   </data>
-  <data name="UndotCheckBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsUndotCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="UndotCheckBox.Text" xml:space="preserve">
+  <data name="AvsUndotCheckBox.Text" xml:space="preserve">
     <value>Undot 降噪</value>
   </data>
-  <data name="&gt;&gt;UndotCheckBox.Name" xml:space="preserve">
-    <value>UndotCheckBox</value>
+  <data name="&gt;&gt;AvsUndotCheckBox.Name" xml:space="preserve">
+    <value>AvsUndotCheckBox</value>
   </data>
-  <data name="&gt;&gt;UndotCheckBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsUndotCheckBox.Type" xml:space="preserve">
     <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;UndotCheckBox.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsUndotCheckBox.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;UndotCheckBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsUndotCheckBox.ZOrder" xml:space="preserve">
     <value>44</value>
   </data>
-  <data name="button9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsClearButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="button9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsClearButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsClearButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 556</value>
   </data>
-  <data name="button9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsClearButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="button9.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsClearButton.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="button9.Text" xml:space="preserve">
+  <data name="AvsClearButton.Text" xml:space="preserve">
     <value>清空</value>
   </data>
-  <data name="&gt;&gt;button9.Name" xml:space="preserve">
-    <value>button9</value>
+  <data name="&gt;&gt;AvsClearButton.Name" xml:space="preserve">
+    <value>AvsClearButton</value>
   </data>
-  <data name="&gt;&gt;button9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsClearButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;button9.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsClearButton.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsClearButton.ZOrder" xml:space="preserve">
     <value>45</value>
   </data>
-  <data name="button6.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsGenerateButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="button6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsGenerateButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsGenerateButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>99, 556</value>
   </data>
-  <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsGenerateButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="button6.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsGenerateButton.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="button6.Text" xml:space="preserve">
+  <data name="AvsGenerateButton.Text" xml:space="preserve">
     <value>生成</value>
   </data>
-  <data name="button6.Visible" type="System.Boolean, mscorlib">
+  <data name="AvsGenerateButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;button6.Name" xml:space="preserve">
-    <value>button6</value>
+  <data name="&gt;&gt;AvsGenerateButton.Name" xml:space="preserve">
+    <value>AvsGenerateButton</value>
   </data>
-  <data name="&gt;&gt;button6.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsGenerateButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsGenerateButton.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsGenerateButton.ZOrder" xml:space="preserve">
     <value>46</value>
   </data>
-  <data name="btnpreview9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvPreviewButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnpreview9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvPreviewButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnpreview9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvPreviewButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>276, 556</value>
   </data>
-  <data name="btnpreview9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvPreviewButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnpreview9.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvPreviewButton.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="btnpreview9.Text" xml:space="preserve">
+  <data name="AvPreviewButton.Text" xml:space="preserve">
     <value>预览</value>
   </data>
-  <data name="&gt;&gt;btnpreview9.Name" xml:space="preserve">
-    <value>btnpreview9</value>
+  <data name="&gt;&gt;AvPreviewButton.Name" xml:space="preserve">
+    <value>AvPreviewButton</value>
   </data>
-  <data name="&gt;&gt;btnpreview9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvPreviewButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnpreview9.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvPreviewButton.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;btnpreview9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvPreviewButton.ZOrder" xml:space="preserve">
     <value>47</value>
   </data>
-  <data name="btnAVS9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsStartButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnAVS9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsStartButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnAVS9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsStartButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 556</value>
   </data>
-  <data name="btnAVS9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsStartButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnAVS9.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsStartButton.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="btnAVS9.Text" xml:space="preserve">
+  <data name="AvsStartButton.Text" xml:space="preserve">
     <value>压制</value>
   </data>
-  <data name="&gt;&gt;btnAVS9.Name" xml:space="preserve">
-    <value>btnAVS9</value>
+  <data name="&gt;&gt;AvsStartButton.Name" xml:space="preserve">
+    <value>AvsStartButton</value>
   </data>
-  <data name="&gt;&gt;btnAVS9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsStartButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnAVS9.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsStartButton.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;btnAVS9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsStartButton.ZOrder" xml:space="preserve">
     <value>48</value>
   </data>
-  <data name="btnvideo9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsVideoInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnvideo9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsVideoInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnvideo9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsVideoInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 6</value>
   </data>
-  <data name="btnvideo9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsVideoInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnvideo9.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsVideoInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="btnvideo9.Text" xml:space="preserve">
+  <data name="AvsVideoInputButton.Text" xml:space="preserve">
     <value>视频</value>
   </data>
-  <data name="&gt;&gt;btnvideo9.Name" xml:space="preserve">
-    <value>btnvideo9</value>
+  <data name="&gt;&gt;AvsVideoInputButton.Name" xml:space="preserve">
+    <value>AvsVideoInputButton</value>
   </data>
-  <data name="&gt;&gt;btnvideo9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsVideoInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnvideo9.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsVideoInputButton.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;btnvideo9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsVideoInputButton.ZOrder" xml:space="preserve">
     <value>49</value>
   </data>
-  <data name="btnout9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsOutputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnout9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsOutputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnout9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsOutputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 63</value>
   </data>
-  <data name="btnout9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsOutputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnout9.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsOutputButton.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="btnout9.Text" xml:space="preserve">
+  <data name="AvsOutputButton.Text" xml:space="preserve">
     <value>输出</value>
   </data>
-  <data name="&gt;&gt;btnout9.Name" xml:space="preserve">
-    <value>btnout9</value>
+  <data name="&gt;&gt;AvsOutputButton.Name" xml:space="preserve">
+    <value>AvsOutputButton</value>
   </data>
-  <data name="&gt;&gt;btnout9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsOutputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnout9.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsOutputButton.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;btnout9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsOutputButton.ZOrder" xml:space="preserve">
     <value>50</value>
   </data>
-  <data name="btnsub9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsSubtitleInputButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="btnsub9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsSubtitleInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnsub9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsSubtitleInputButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>483, 34</value>
   </data>
-  <data name="btnsub9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsSubtitleInputButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="btnsub9.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsSubtitleInputButton.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="btnsub9.Text" xml:space="preserve">
+  <data name="AvsSubtitleInputButton.Text" xml:space="preserve">
     <value>字幕</value>
   </data>
-  <data name="&gt;&gt;btnsub9.Name" xml:space="preserve">
-    <value>btnsub9</value>
+  <data name="&gt;&gt;AvsSubtitleInputButton.Name" xml:space="preserve">
+    <value>AvsSubtitleInputButton</value>
   </data>
-  <data name="&gt;&gt;btnsub9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsSubtitleInputButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;btnsub9.Parent" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsSubtitleInputButton.Parent" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;btnsub9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsSubtitleInputButton.ZOrder" xml:space="preserve">
     <value>51</value>
   </data>
-  <data name="AVSTab.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="AVSTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="AvsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="AVSTab.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsTab.Size" type="System.Drawing.Size, System.Drawing">
     <value>572, 587</value>
   </data>
-  <data name="AVSTab.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsTab.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="AVSTab.Text" xml:space="preserve">
+  <data name="AvsTab.Text" xml:space="preserve">
     <value>AVS</value>
   </data>
-  <data name="&gt;&gt;AVSTab.Name" xml:space="preserve">
-    <value>AVSTab</value>
+  <data name="&gt;&gt;AvsTab.Name" xml:space="preserve">
+    <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AVSTab.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsTab.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AVSTab.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AvsTab.Parent" xml:space="preserve">
     <value>tabControl</value>
   </data>
-  <data name="&gt;&gt;AVSTab.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsTab.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="ExtractMkvExtractByExternalButton.Font" type="System.Drawing.Font, System.Drawing">
