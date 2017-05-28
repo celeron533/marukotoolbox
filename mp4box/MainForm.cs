@@ -3681,7 +3681,7 @@ namespace mp4box
 
         #region 一图流
 
-        private void AudioPicButton_Click(object sender, EventArgs e)
+        private void MiscOnePicInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = Util.GetDialogFilter(Util.DialogFilterTypes.IMAGE); //"图片(*.jpg;*.jpeg;*.png;*.bmp;*.gif)|*.jpg;*.jpeg;*.png;*.bmp;*.gif|所有文件(*.*)|*.*";
             DialogResult result = openFileDialog1.ShowDialog();
@@ -3691,7 +3691,7 @@ namespace mp4box
             }
         }
 
-        private void AudioPicAudioButton_Click(object sender, EventArgs e)
+        private void MiscOnePicAudioInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = Util.GetDialogFilter(Util.DialogFilterTypes.AUDIO_4); //"音频(*.aac;*.mp3;*.mp4;*.wav)|*.aac;*.mp3;*.mp4;*.wav|所有文件(*.*)|*.*";
             DialogResult result = openFileDialog1.ShowDialog();
@@ -3701,7 +3701,7 @@ namespace mp4box
             }
         }
 
-        private void AudioOnePicOutputButton_Click(object sender, EventArgs e)
+        private void MiscOnePicOutputButton_Click(object sender, EventArgs e)
         {
             SaveFileDialog savefile = new SaveFileDialog();
             savefile.Filter = Util.GetDialogFilter(Util.DialogFilterTypes.VIDEO_D_2); //"MP4视频(*.mp4)|*.mp4|FLV视频(*.flv)|*.flv";
@@ -3713,6 +3713,19 @@ namespace mp4box
             }
         }
 
+        private void MiscOnePicAudioInputTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (File.Exists(MiscOnePicAudioInputTextBox.Text.ToString()))
+            {
+                MiscOnePicOutputTextBox.Text = Util.ChangeExt(MiscOnePicAudioInputTextBox.Text, "_SP.flv");
+            }
+        }
+
+        /// <summary>
+        /// Convert HHMMSS to seconds
+        /// </summary>
+        /// <param name="hhmmss">"99:59:59"</param>
+        /// <returns>Converted seconds </returns>
         public int SecondsFromHHMMSS(string hhmmss)
         {
             int hh = int.Parse(hhmmss.Substring(0, 2));
@@ -3721,7 +3734,7 @@ namespace mp4box
             return hh * 3600 + mm * 60 + ss;
         }
 
-        private void AudioOnePicButton_Click(object sender, EventArgs e)
+        private void MiscOnePicStartButton_Click(object sender, EventArgs e)
         {
             if (!File.Exists(MiscOnePicInputTextBox.Text))
             {
@@ -3737,38 +3750,27 @@ namespace mp4box
             }
             else
             {
-                System.Drawing.Image img = System.Drawing.Image.FromFile(MiscOnePicInputTextBox.Text);
+                Image img = Image.FromFile(MiscOnePicInputTextBox.Text);
                 // if not even number, chop 1 pixel out
-                int newWidth = (img.Width % 2 == 0 ? img.Width : img.Width - 1);
-                int newHeight = (img.Height % 2 == 0 ? img.Height : img.Height - 1);
-                Rectangle cropArea;
                 if (img.Width % 2 != 0 || img.Height % 2 != 0)
                 {
+                    int newWidth = (img.Width % 2 == 0 ? img.Width : img.Width - 1);
+                    int newHeight = (img.Height % 2 == 0 ? img.Height : img.Height - 1);
                     Bitmap bmp = new Bitmap(img);
-                    cropArea = new Rectangle(0, 0, newWidth, newHeight);
+                    Rectangle cropArea = new Rectangle(0, 0, newWidth, newHeight);
                     img = (Image)bmp.Clone(cropArea, bmp.PixelFormat);
                 }
 
-                //if (img.Width % 2 != 0 || img.Height % 2 != 0)
-                //{
-                //    MessageBox.Show("图片的长和宽必须是偶数。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    img.Dispose();
-                //    return;
-                //}
-                //if (img.RawFormat.Equals(ImageFormat.Jpeg))
-                //{
-                //    File.Copy(AudioPicTextBox.Text, tempPic, true);
-                //}
-                //else
-                {
-                    System.Drawing.Imaging.Encoder ImageEncoder = System.Drawing.Imaging.Encoder.Quality;
-                    EncoderParameter ep = new EncoderParameter(ImageEncoder, 100L);
-                    EncoderParameters eps = new EncoderParameters(1);
-                    ImageCodecInfo ImageCoderType = getImageCoderInfo("image/jpeg");
-                    eps.Param[0] = ep;
-                    img.Save(tempPic, ImageCoderType, eps);
-                    //img.Save(tempPic, ImageFormat.Jpeg);
-                }
+                EncoderParameters eps = new EncoderParameters();
+                eps.Param = new EncoderParameter[]
+                            {
+                                // set best quality
+                                new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L)
+                            };
+                ImageCodecInfo ImageCoderType = GetImageCoderInfo("image/jpeg");
+                img.Save(tempPic, ImageCoderType, eps);
+                //img.Save(tempPic, ImageFormat.Jpeg);
+
                 //获得音频时长
                 string timeStr = new MediaInfoWrapper(MiscOnePicAudioInputTextBox.Text).duration3;
                 if (!string.IsNullOrEmpty(timeStr))
@@ -3822,41 +3824,14 @@ namespace mp4box
             }
         }
 
-        private void txtMI_DragDrop(object sender, DragEventArgs e)
-        {
-            MIvideo = ((System.Array)e.Data.GetData(DataFormats.FileDrop)).GetValue(0).ToString();
-            MediaInfoTextBox.Text = GetMediaInfoString(MIvideo);
-        }
-
-        private void txtMI_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-                e.Effect = DragDropEffects.Link;
-            else e.Effect = DragDropEffects.None;
-        }
-
-        private void AudioPicAudioTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (File.Exists(MiscOnePicAudioInputTextBox.Text.ToString()))
-            {
-                MiscOnePicOutputTextBox.Text = Util.ChangeExt(MiscOnePicAudioInputTextBox.Text, "_SP.flv");
-            }
-        }
-
         /// <summary>
         /// 获取图片编码类型信息
         /// </summary>
-        /// <param name="ImageCoderType">编码类型</param>
+        /// <param name="imageCoderType">编码类型</param>
         /// <returns>ImageCodecInfo</returns>
-        private ImageCodecInfo getImageCoderInfo(string ImageCoderType)
+        public ImageCodecInfo GetImageCoderInfo(string imageCoderType)
         {
-            ImageCodecInfo[] coderTypeArray = ImageCodecInfo.GetImageEncoders();
-            foreach (ImageCodecInfo coderType in coderTypeArray)
-            {
-                if (coderType.MimeType.Equals(ImageCoderType))
-                    return coderType;
-            }
-            return null;
+            return ImageCodecInfo.GetImageEncoders()?.FirstOrDefault(e => e.MimeType.Equals(imageCoderType));
         }
 
         #endregion 一图流
@@ -3968,7 +3943,7 @@ namespace mp4box
                     System.Drawing.Imaging.Encoder ImageEncoder = System.Drawing.Imaging.Encoder.Quality;
                     EncoderParameter ep = new EncoderParameter(ImageEncoder, 100L);
                     EncoderParameters eps = new EncoderParameters(1);
-                    ImageCodecInfo ImageCoderType = getImageCoderInfo("image/jpeg");
+                    ImageCodecInfo ImageCoderType = GetImageCoderInfo("image/jpeg");
                     eps.Param[0] = ep;
                     img.Save(tempPic, ImageCoderType, eps);
                     //img.Save(tempPic, ImageFormat.Jpeg);
@@ -4059,6 +4034,21 @@ namespace mp4box
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.A)
                 ((TextBoxBase)sender).SelectAll();  // using TextBoxBase to include TextBox, RichTextBox and MaskedTextBox
         }
+
+
+        private void txtMI_DragDrop(object sender, DragEventArgs e)
+        {
+            MIvideo = ((System.Array)e.Data.GetData(DataFormats.FileDrop)).GetValue(0).ToString();
+            MediaInfoTextBox.Text = GetMediaInfoString(MIvideo);
+        }
+
+        private void txtMI_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Link;
+            else e.Effect = DragDropEffects.None;
+        }
+
 
         #region CheckUpdate
 

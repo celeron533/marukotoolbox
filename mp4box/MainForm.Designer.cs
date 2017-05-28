@@ -1966,28 +1966,28 @@
             resources.ApplyResources(this.MiscOnePicOutputButton, "MiscOnePicOutputButton");
             this.MiscOnePicOutputButton.Name = "MiscOnePicOutputButton";
             this.MiscOnePicOutputButton.UseVisualStyleBackColor = true;
-            this.MiscOnePicOutputButton.Click += new System.EventHandler(this.AudioOnePicOutputButton_Click);
+            this.MiscOnePicOutputButton.Click += new System.EventHandler(this.MiscOnePicOutputButton_Click);
             // 
             // MiscOnePicStartButton
             // 
             resources.ApplyResources(this.MiscOnePicStartButton, "MiscOnePicStartButton");
             this.MiscOnePicStartButton.Name = "MiscOnePicStartButton";
             this.MiscOnePicStartButton.UseVisualStyleBackColor = true;
-            this.MiscOnePicStartButton.Click += new System.EventHandler(this.AudioOnePicButton_Click);
+            this.MiscOnePicStartButton.Click += new System.EventHandler(this.MiscOnePicStartButton_Click);
             // 
             // MiscOnePicAudioInputButton
             // 
             resources.ApplyResources(this.MiscOnePicAudioInputButton, "MiscOnePicAudioInputButton");
             this.MiscOnePicAudioInputButton.Name = "MiscOnePicAudioInputButton";
             this.MiscOnePicAudioInputButton.UseVisualStyleBackColor = true;
-            this.MiscOnePicAudioInputButton.Click += new System.EventHandler(this.AudioPicAudioButton_Click);
+            this.MiscOnePicAudioInputButton.Click += new System.EventHandler(this.MiscOnePicAudioInputButton_Click);
             // 
             // MiscOnePicInputButton
             // 
             resources.ApplyResources(this.MiscOnePicInputButton, "MiscOnePicInputButton");
             this.MiscOnePicInputButton.Name = "MiscOnePicInputButton";
             this.MiscOnePicInputButton.UseVisualStyleBackColor = true;
-            this.MiscOnePicInputButton.Click += new System.EventHandler(this.AudioPicButton_Click);
+            this.MiscOnePicInputButton.Click += new System.EventHandler(this.MiscOnePicInputButton_Click);
             // 
             // MiscOnePicOutputTextBox
             // 
@@ -2007,7 +2007,7 @@
             resources.ApplyResources(this.MiscOnePicAudioInputTextBox, "MiscOnePicAudioInputTextBox");
             this.MiscOnePicAudioInputTextBox.Name = "MiscOnePicAudioInputTextBox";
             this.MiscOnePicAudioInputTextBox.ReadOnly = true;
-            this.MiscOnePicAudioInputTextBox.TextChanged += new System.EventHandler(this.AudioPicAudioTextBox_TextChanged);
+            this.MiscOnePicAudioInputTextBox.TextChanged += new System.EventHandler(this.MiscOnePicAudioInputTextBox_TextChanged);
             // 
             // MiscOnePicInputTextBox
             // 
