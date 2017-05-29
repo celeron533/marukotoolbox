@@ -3772,21 +3772,22 @@ namespace mp4box
                 //img.Save(tempPic, ImageFormat.Jpeg);
 
                 //获得音频时长
-                string timeStr = new MediaInfoWrapper(MiscOnePicAudioInputTextBox.Text).duration3;
-                if (!string.IsNullOrEmpty(timeStr))
-                    MiscOnePicDurationSecondsTextBox.Text = SecondsFromHHMMSS(timeStr).ToString();
-                int seconds = 0;
-                bool SecondisInt = int.TryParse(MiscOnePicDurationSecondsTextBox.Text, out seconds);
-                if (!SecondisInt)
+                string audioDurationStr = new MediaInfoWrapper(MiscOnePicAudioInputTextBox.Text).duration3;
+                if (!string.IsNullOrEmpty(audioDurationStr))
+                    MiscOnePicDurationSecondsTextBox.Text = SecondsFromHHMMSS(audioDurationStr).ToString();
+
+                int duration = 0;
+                if (int.TryParse(MiscOnePicDurationSecondsTextBox.Text, out duration))
                 {
                     ShowErrorMessage("未能获取正确时间，请手动输入秒数。");
                     return;
                 }
+
                 string ffPath = Path.Combine(workPath, "ffmpeg.exe");
                 string neroPath = Util.FormatPath(Path.Combine(workPath, "neroaacenc.exe"));
                 if (MiscOnePicCopyAudioCheckBox.Checked)
                 {
-                    mux = "\"" + ffPath + "\" -loop 1 -r " + MiscOnePicFpsNumericUpDown.Value.ToString() + " -t " + seconds.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscOnePicCrfNumericUpDown.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
+                    mux = "\"" + ffPath + "\" -loop 1 -r " + MiscOnePicFpsNumericUpDown.Value.ToString() + " -t " + duration.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscOnePicCrfNumericUpDown.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
                     mux += "\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i \"" + MiscOnePicAudioInputTextBox.Text + "\" -c:v copy -c:a copy -y \"" + MiscOnePicOutputTextBox.Text + "\"\r\n";
                     mux += "del SinglePictureVideo.mp4\r\n";
                     mux += "cmd";
@@ -3794,7 +3795,7 @@ namespace mp4box
                 else
                 {
                     mux = "\"" + ffPath + "\" -i \"" + MiscOnePicAudioInputTextBox.Text + "\" -f wav - |" + neroPath + " -br " + MiscOnePicBitrateNumericUpDown.Value.ToString() + "000 -ignorelength -if - -of audio.mp4 -lc\r\n";
-                    mux += "\"" + ffPath + "\" -loop 1 -r " + MiscOnePicFpsNumericUpDown.Value.ToString() + " -t " + seconds.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscOnePicCrfNumericUpDown.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
+                    mux += "\"" + ffPath + "\" -loop 1 -r " + MiscOnePicFpsNumericUpDown.Value.ToString() + " -t " + duration.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscOnePicCrfNumericUpDown.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
                     mux += "\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i audio.mp4 -c:v copy -c:a copy -y \"" + MiscOnePicOutputTextBox.Text + "\"\r\n";
                     mux += "del SinglePictureVideo.mp4\r\ndel audio.mp4\r\n";
                     mux += "cmd";
