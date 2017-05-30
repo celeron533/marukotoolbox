@@ -114,6 +114,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extension\MessageBoxExtension.cs" />
     <Compile Include="FeedbackForm.cs">
       <SubType>Form</SubType>
     </Compile>

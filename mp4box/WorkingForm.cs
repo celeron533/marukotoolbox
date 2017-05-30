@@ -329,7 +329,7 @@ namespace mp4box
 
         private void buttonAbort_Click(object sender, EventArgs e)
         {
-            DialogResult dgs = MainForm.ShowQuestion("是否放弃压制？", "提示");
+            DialogResult dgs = MessageBoxExtension.ShowQuestion("是否放弃压制？", "提示");
             if (dgs == DialogResult.Yes)
             {
                 bgworker.CancelAsync();
