@@ -1169,7 +1169,7 @@ namespace mp4box
             }
 
             //ReleaseDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
-            ReleaseDatelabel.Text = ReleaseDate.ToString("yyyy-M-d");
+            ReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
 
             // load Help Text
             if (File.Exists(startpath + "\\help.rtf"))

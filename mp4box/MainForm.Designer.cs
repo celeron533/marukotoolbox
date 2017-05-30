@@ -264,7 +264,7 @@
             this.HelpTab = new System.Windows.Forms.TabPage();
             this.HelpFeedbackButton = new ControlExs.QQButton();
             this.HelpContentRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.ReleaseDatelabel = new System.Windows.Forms.Label();
+            this.ReleaseDateLabel = new System.Windows.Forms.Label();
             this.HelpReleaseDateLabel = new System.Windows.Forms.Label();
             this.HelpCheckUpdateButton = new ControlExs.QQButton();
             this.HelpHomepageButton = new ControlExs.QQButton();
@@ -2530,7 +2530,7 @@
             // 
             this.HelpTab.Controls.Add(this.HelpFeedbackButton);
             this.HelpTab.Controls.Add(this.HelpContentRichTextBox);
-            this.HelpTab.Controls.Add(this.ReleaseDatelabel);
+            this.HelpTab.Controls.Add(this.ReleaseDateLabel);
             this.HelpTab.Controls.Add(this.HelpReleaseDateLabel);
             this.HelpTab.Controls.Add(this.HelpCheckUpdateButton);
             this.HelpTab.Controls.Add(this.HelpHomepageButton);
@@ -2555,9 +2555,9 @@
             // 
             // ReleaseDatelabel
             // 
-            resources.ApplyResources(this.ReleaseDatelabel, "ReleaseDatelabel");
-            this.ReleaseDatelabel.Name = "ReleaseDatelabel";
-            this.ReleaseDatelabel.DoubleClick += new System.EventHandler(this.ReleaseDatelabel_DoubleClick);
+            resources.ApplyResources(this.ReleaseDateLabel, "ReleaseDatelabel");
+            this.ReleaseDateLabel.Name = "ReleaseDatelabel";
+            this.ReleaseDateLabel.DoubleClick += new System.EventHandler(this.ReleaseDatelabel_DoubleClick);
             // 
             // HelpReleaseDateLabel
             // 
@@ -3337,7 +3337,7 @@
         private System.Windows.Forms.ComboBox AudioBitrateComboBox;
         private ControlExs.QQButton HelpCheckUpdateButton;
         private System.Windows.Forms.Label HelpReleaseDateLabel;
-        private System.Windows.Forms.Label ReleaseDatelabel;
+        private System.Windows.Forms.Label ReleaseDateLabel;
         private ControlExs.QQCheckBox ConfigUiTrayModeCheckBox;
         private ControlExs.QQCheckBox ConfigUiSplashScreenCheckBox;
         private System.Windows.Forms.Label ConfigX264ThreadsLabel;
