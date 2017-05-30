@@ -135,6 +135,8 @@
     <Compile Include="MediaInfo\MediaInfoWrapper.cs" />
     <Compile Include="OSInfo.cs" />
     <Compile Include="Preset.cs" />
+    <Compile Include="Procedure\OnePicProcedure.cs" />
+    <Compile Include="Procedure\ProcedureBase.cs" />
     <Compile Include="ProgressTaskbar.cs" />
     <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -309,6 +311,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>$(ProjectDir)Res\PostBuildEvent.bat "$(SolutionDir)" "$(TargetDir)"</PostBuildEvent>

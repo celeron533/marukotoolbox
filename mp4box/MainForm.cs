@@ -22,6 +22,7 @@
 
 using ControlExs;
 using MediaInfoLib;
+using mp4box.Procedure;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -3734,6 +3735,20 @@ namespace mp4box
             return hh * 3600 + mm * 60 + ss;
         }
 
+        private void GetOnePicDataFromUI(OnePicProcedure p)
+        {
+            p.imageFilePath = MiscOnePicInputTextBox.Text;
+            p.audioFilePath = MiscOnePicAudioInputTextBox.Text;
+            p.outputFilePath = MiscOnePicOutputTextBox.Text;
+            p.audioBitrate = (int)MiscOnePicBitrateNumericUpDown.Value;
+            p.fps = (int)MiscOnePicFpsNumericUpDown.Value;
+            p.crf = (float)MiscOnePicCrfNumericUpDown.Value;
+            int duration = 0;
+            int.TryParse(MiscOnePicDurationSecondsTextBox.Text, out duration);
+            p.duration = duration;
+            p.copyAudio = MiscOnePicCopyAudioCheckBox.Checked;
+        }
+
         private void MiscOnePicStartButton_Click(object sender, EventArgs e)
         {
             if (!File.Exists(MiscOnePicInputTextBox.Text))
@@ -3750,78 +3765,9 @@ namespace mp4box
             }
             else
             {
-                Image img = Image.FromFile(MiscOnePicInputTextBox.Text);
-                // if not even number, chop 1 pixel out
-                if (img.Width % 2 != 0 || img.Height % 2 != 0)
-                {
-                    int newWidth = (img.Width % 2 == 0 ? img.Width : img.Width - 1);
-                    int newHeight = (img.Height % 2 == 0 ? img.Height : img.Height - 1);
-                    Bitmap bmp = new Bitmap(img);
-                    Rectangle cropArea = new Rectangle(0, 0, newWidth, newHeight);
-                    img = (Image)bmp.Clone(cropArea, bmp.PixelFormat);
-                }
-
-                EncoderParameters eps = new EncoderParameters();
-                eps.Param = new EncoderParameter[]
-                            {
-                                // set best quality
-                                new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L)
-                            };
-                ImageCodecInfo ImageCoderType = GetImageCoderInfo("image/jpeg");
-                img.Save(tempPic, ImageCoderType, eps);
-                //img.Save(tempPic, ImageFormat.Jpeg);
-
-                //获得音频时长
-                string audioDurationStr = new MediaInfoWrapper(MiscOnePicAudioInputTextBox.Text).duration3;
-                if (!string.IsNullOrEmpty(audioDurationStr))
-                    MiscOnePicDurationSecondsTextBox.Text = SecondsFromHHMMSS(audioDurationStr).ToString();
-
-                int duration = 0;
-                if (int.TryParse(MiscOnePicDurationSecondsTextBox.Text, out duration))
-                {
-                    ShowErrorMessage("未能获取正确时间，请手动输入秒数。");
-                    return;
-                }
-
-                string ffPath = Path.Combine(workPath, "ffmpeg.exe");
-                string neroPath = Util.FormatPath(Path.Combine(workPath, "neroaacenc.exe"));
-                if (MiscOnePicCopyAudioCheckBox.Checked)
-                {
-                    mux = "\"" + ffPath + "\" -loop 1 -r " + MiscOnePicFpsNumericUpDown.Value.ToString() + " -t " + duration.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscOnePicCrfNumericUpDown.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
-                    mux += "\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i \"" + MiscOnePicAudioInputTextBox.Text + "\" -c:v copy -c:a copy -y \"" + MiscOnePicOutputTextBox.Text + "\"\r\n";
-                    mux += "del SinglePictureVideo.mp4\r\n";
-                    mux += "cmd";
-                }
-                else
-                {
-                    mux = "\"" + ffPath + "\" -i \"" + MiscOnePicAudioInputTextBox.Text + "\" -f wav - |" + neroPath + " -br " + MiscOnePicBitrateNumericUpDown.Value.ToString() + "000 -ignorelength -if - -of audio.mp4 -lc\r\n";
-                    mux += "\"" + ffPath + "\" -loop 1 -r " + MiscOnePicFpsNumericUpDown.Value.ToString() + " -t " + duration.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscOnePicCrfNumericUpDown.Value.ToString() + " -y SinglePictureVideo.mp4\r\n";
-                    mux += "\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i audio.mp4 -c:v copy -c:a copy -y \"" + MiscOnePicOutputTextBox.Text + "\"\r\n";
-                    mux += "del SinglePictureVideo.mp4\r\ndel audio.mp4\r\n";
-                    mux += "cmd";
-                }
-                /*
-                string audioPath = AddExt(Path.GetFileName(AudioPicAudioTextBox.Text), "_atmp.mp4");
-                string videoPath = AddExt(Path.GetFileName(AudioPicAudioTextBox.Text), "_vtmp.mp4");
-                string picturePath = "c:\\" + Path.GetFileNameWithoutExtension(AudioPicTextBox.Text) + "_tmp.jpg";
-                if (AudioCopyCheckBox.Checked)
-                {
-                    mux = "ffmpeg -loop 1 -r " + AudioOnePicFPSNum.Value.ToString() + " -t " + seconds.ToString() + " -f image2 -i \"" + picturePath + "\" -vcodec libx264 -crf 24 -y \"" + videoPath + "\"\r\n";
-                    mux += "ffmpeg -i \"" + videoPath + "\" -i \"" + AudioPicAudioTextBox.Text + "\" -c:v copy -c:a copy -y \"" + AudioOnePicOutputTextBox.Text + "\"\r\n";
-                    mux += "del \"" + videoPath + "\"\r\ndel \"" + picturePath + "\"\r\n";
-                }
-                else
-                {
-                    mux = "ffmpeg -i \"" + AudioPicAudioTextBox.Text + "\" -f wav - |neroaacenc -br " + AudioOnePicAudioBitrateNum.Value.ToString() + "000 -ignorelength -if - -of \"" + audioPath + "\" -lc\r\n";
-                    mux += "ffmpeg -loop 1 -r " + AudioOnePicFPSNum.Value.ToString() + " -t " + seconds.ToString() + " -f image2 -i \"" + picturePath + "\" -vcodec libx264 -crf 24 -y \"" + videoPath + "\"\r\n";
-                    mux += "ffmpeg -i \"" + videoPath + "\" -i \"" + audioPath + "\" -c:v copy -c:a copy -y \"" + AudioOnePicOutputTextBox.Text + "\"\r\n";
-                    mux += "del \"" + videoPath + "\"\r\ndel \"" + audioPath + "\"\r\ndel \"" + picturePath + "\"\r\n";
-                }
-                */
-                batpath = Path.Combine(workPath, Path.GetRandomFileName() + ".bat");
-                File.WriteAllText(batpath, mux, Encoding.Default);
-                LogRecord(mux);
-                Process.Start(batpath);
+                OnePicProcedure procedure = new OnePicProcedure(tempPic,workPath);
+                procedure.GetDataFromUI(GetOnePicDataFromUI);
+                procedure.Execute();
             }
         }
 
