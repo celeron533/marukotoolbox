@@ -3723,19 +3723,6 @@ namespace mp4box
             }
         }
 
-        /// <summary>
-        /// Convert HHMMSS to seconds
-        /// </summary>
-        /// <param name="hhmmss">"99:59:59"</param>
-        /// <returns>Converted seconds </returns>
-        public int SecondsFromHHMMSS(string hhmmss)
-        {
-            int hh = int.Parse(hhmmss.Substring(0, 2));
-            int mm = int.Parse(hhmmss.Substring(3, 2));
-            int ss = int.Parse(hhmmss.Substring(6, 2));
-            return hh * 3600 + mm * 60 + ss;
-        }
-
         private void GetOnePicDataFromUI(OnePicProcedure p)
         {
             p.imageFilePath = MiscOnePicInputTextBox.Text;
@@ -3770,16 +3757,6 @@ namespace mp4box
                 procedure.GetDataFromUI(GetOnePicDataFromUI);
                 procedure.Execute();
             }
-        }
-
-        /// <summary>
-        /// 获取图片编码类型信息
-        /// </summary>
-        /// <param name="imageCoderType">编码类型</param>
-        /// <returns>ImageCodecInfo</returns>
-        public ImageCodecInfo GetImageCoderInfo(string imageCoderType)
-        {
-            return ImageCodecInfo.GetImageEncoders()?.FirstOrDefault(e => e.MimeType.Equals(imageCoderType));
         }
 
         #endregion 一图流
@@ -3909,7 +3886,7 @@ namespace mp4box
                     System.Drawing.Imaging.Encoder ImageEncoder = System.Drawing.Imaging.Encoder.Quality;
                     EncoderParameter ep = new EncoderParameter(ImageEncoder, 100L);
                     EncoderParameters eps = new EncoderParameters(1);
-                    ImageCodecInfo ImageCoderType = GetImageCoderInfo("image/jpeg");
+                    ImageCodecInfo ImageCoderType = Other.GetImageCoderInfo("image/jpeg");
                     eps.Param[0] = ep;
                     img.Save(tempPic, ImageCoderType, eps);
                     //img.Save(tempPic, ImageFormat.Jpeg);
@@ -3919,7 +3896,7 @@ namespace mp4box
             //计算后黑时长
             if (MiscBlackDurationSecondsComboBox.Text == "auto")
             {
-                int seconds = SecondsFromHHMMSS(MIW.duration3);
+                int seconds = Other.SecondsFromHHMMSS(MIW.duration3);
                 double s = videobitrate / 1000.0 * (double)seconds / targetBitrate - (double)seconds;
                 blackSecond = (int)s;
                 MiscBlackDurationSecondsComboBox.Text = blackSecond.ToString();

@@ -61,7 +61,7 @@ namespace mp4box.Procedure
                             // set best quality
                             new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L)
                         };
-            ImageCodecInfo ImageCoderType = GetImageCoderInfo("image/jpeg");
+            ImageCodecInfo ImageCoderType = Other.GetImageCoderInfo("image/jpeg");
             img.Save(tempPic, ImageCoderType, eps);
             //img.Save(tempPic, ImageFormat.Jpeg);
 
@@ -103,31 +103,6 @@ namespace mp4box.Procedure
             // TODO: log function
             //LogRecord(muxCommand.ToString());
             Process.Start(batpath);
-        }
-
-
-        /// <summary>
-        /// 获取图片编码类型信息
-        /// </summary>
-        /// <param name="imageCoderType">编码类型</param>
-        /// <returns>ImageCodecInfo</returns>
-        private ImageCodecInfo GetImageCoderInfo(string imageCoderType)
-        {
-            return ImageCodecInfo.GetImageEncoders()?.FirstOrDefault(e => e.MimeType.Equals(imageCoderType));
-        }
-
-
-        /// <summary>
-        /// Convert HHMMSS to seconds
-        /// </summary>
-        /// <param name="hhmmss">"99:59:59"</param>
-        /// <returns>Converted seconds </returns>
-        private int SecondsFromHHMMSS(string hhmmss)
-        {
-            int hh = int.Parse(hhmmss.Substring(0, 2));
-            int mm = int.Parse(hhmmss.Substring(3, 2));
-            int ss = int.Parse(hhmmss.Substring(6, 2));
-            return hh * 3600 + mm * 60 + ss;
         }
     }
 }
