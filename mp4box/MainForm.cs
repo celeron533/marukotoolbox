@@ -4244,41 +4244,11 @@ namespace mp4box
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D1)
+            // Keys.D0 = 48, Keys.D1 = 49, ... , Keys.D9 = 57
+            // The following code uses number key 1 to 9, and 0 is still available for furture use.
+            if (e.Modifiers == Keys.Control && Keys.D1 <= e.KeyCode && e.KeyCode <= Keys.D9)
             {
-                MainTabControl.SelectedIndex = 0;
-            }
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D2)
-            {
-                MainTabControl.SelectedIndex = 1;
-            }
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D3)
-            {
-                MainTabControl.SelectedIndex = 2;
-            }
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D4)
-            {
-                MainTabControl.SelectedIndex = 3;
-            }
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D5)
-            {
-                MainTabControl.SelectedIndex = 4;
-            }
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D6)
-            {
-                MainTabControl.SelectedIndex = 5;
-            }
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D7)
-            {
-                MainTabControl.SelectedIndex = 6;
-            }
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D8)
-            {
-                MainTabControl.SelectedIndex = 7;
-            }
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D9)
-            {
-                MainTabControl.SelectedIndex = 8;
+                MainTabControl.SelectedIndex = e.KeyCode - Keys.D1;
             }
         }
 
