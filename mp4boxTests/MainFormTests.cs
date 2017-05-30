@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using mp4box;
+using mp4box.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -107,20 +108,6 @@ namespace mp4box.Tests
             }
             h = h + h2 - h1;
             return h.ToString() + ":" + m.ToString() + ":" + s.ToString();
-        }
-
-        [TestMethod()]
-        public void getImageCoderInfoTest()
-        {
-            var result = new MainForm().GetImageCoderInfo("image/jpeg");
-            Assert.AreEqual("image/jpeg", result.MimeType);
-        }
-
-        [TestMethod()]
-        public void getImageCoderInfoTest2()
-        {
-            var result = new MainForm().GetImageCoderInfo("image/doesNotExist");
-            Assert.IsNull(result);
         }
     }
 }
