@@ -415,7 +415,7 @@ namespace mp4box
 
         private void MuxMp4AudioInputButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.AUDIO_5); //"音频(*.mp4;*.aac;*.mp2;*.mp3;*.m4a;*.ac3)|*.mp4;*.aac;*.mp2;*.mp3;*.m4a;*.ac3|所有文件(*.*)|*.*";
+            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.AUDIO_3); //"音频(*.mp4;*.aac;*.mp2;*.mp3;*.m4a;*.ac3)|*.mp4;*.aac;*.mp2;*.mp3;*.m4a;*.ac3|所有文件(*.*)|*.*";
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -1233,7 +1233,7 @@ namespace mp4box
 
         private void MuxMkvAudioInputButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.AUDIO_2); //"音频(*.mp3;*.aac;*.ac3)|*.mp3;*.aac;*.ac3|所有文件(*.*)|*.*";
+            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.AUDIO_1); //"音频(*.mp3;*.aac;*.ac3)|*.mp3;*.aac;*.ac3|所有文件(*.*)|*.*";
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -3505,7 +3505,7 @@ namespace mp4box
 
         private void MiscOnePicAudioInputButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.AUDIO_4); //"音频(*.aac;*.mp3;*.mp4;*.wav)|*.aac;*.mp3;*.mp4;*.wav|所有文件(*.*)|*.*";
+            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.AUDIO_2); //"音频(*.aac;*.mp3;*.mp4;*.wav)|*.aac;*.mp3;*.mp4;*.wav|所有文件(*.*)|*.*";
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {

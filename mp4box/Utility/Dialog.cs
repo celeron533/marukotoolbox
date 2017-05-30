@@ -61,14 +61,10 @@ namespace mp4box.Utility
 
                 //audio
                 case DialogFilterTypes.AUDIO_1:
-                    filterString = String.Format("{0}(*.mp3)|*.mp3|{0}(*.aac)|*.aac|{1}(*.*)|*.*;", audio, all); break;
-                case DialogFilterTypes.AUDIO_2:
                     filterString = String.Format("{0}(*.mp3;*.aac;*.ac3)|*.mp3;*.aac;*.ac3|{1}(*.*)|*.*;", audio, all); break;
-                case DialogFilterTypes.AUDIO_3:
-                    filterString = String.Format("{0}(*.aac;*.wav;*.m4a;*.flac)|*.aac;*.wav;*.m4a;*.flac;", audio); break;
-                case DialogFilterTypes.AUDIO_4:
+                case DialogFilterTypes.AUDIO_2:
                     filterString = String.Format("{0}(*.aac;*.mp3;*.mp4;*.wav)|*.aac;*.mp3;*.mp4;*.wav|{1}(*.*)|*.*;", audio, all); break;
-                case DialogFilterTypes.AUDIO_5:
+                case DialogFilterTypes.AUDIO_3:
                     filterString = String.Format("{0}(*.mp4;*.aac;*.mp2;*.mp3;*.m4a;*.ac3)|*.mp4;*.aac;*.mp2;*.mp3;*.m4a;*.ac3|{1}(*.*)|*.*;", audio, all); break;
 
                 //others
@@ -94,7 +90,7 @@ namespace mp4box.Utility
             ALL,
             VIDEO_1, VIDEO_2, VIDEO_3, VIDEO_4, VIDEO_5, VIDEO_6, VIDEO_7, VIDEO_8, VIDEO_9,
             VIDEO_D_1, VIDEO_D_2, VIDEO_D_3,
-            AUDIO_1, AUDIO_2, AUDIO_3, AUDIO_4, AUDIO_5,
+            AUDIO_1, AUDIO_2, AUDIO_3,
             AVS,
             PROGRAM,
             SUBTITLE_1, SUBTITLE_2,
