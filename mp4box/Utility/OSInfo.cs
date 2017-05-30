@@ -23,9 +23,9 @@ using System.Management;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace mp4box
+namespace mp4box.Utility
 {
-    public class OSInfo
+    public static class OSInfo
     {
         [StructLayout(LayoutKind.Sequential)]
         private struct OSVERSIONINFOEX

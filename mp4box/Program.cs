@@ -19,12 +19,14 @@
 // -------------------------------------------------------------------
 //
 
+using mp4box.Utility;
 using System;
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+
 namespace mp4box
 {
     static class Program
@@ -51,7 +53,7 @@ namespace mp4box
         static void Main(string[] args)
         {
             // 检查程序路径是否可写入
-            if (!Util.IsDirWriteable(Path.GetDirectoryName(Application.ExecutablePath)))
+            if (!FileString.IsDirWriteable(Path.GetDirectoryName(Application.ExecutablePath)))
             {
                 bool bRunElevated = false;
                 //检测程序是否以高权限运行

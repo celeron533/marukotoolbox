@@ -133,7 +133,10 @@
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
     <Compile Include="MediaInfo\MediaInfoWrapper.cs" />
-    <Compile Include="OSInfo.cs" />
+    <Compile Include="Utility\Assembly.cs" />
+    <Compile Include="Utility\Dialog.cs" />
+    <Compile Include="Utility\Network.cs" />
+    <Compile Include="Utility\OSInfo.cs" />
     <Compile Include="Preset.cs" />
     <Compile Include="Procedure\OnePicProcedure.cs" />
     <Compile Include="Procedure\ProcedureBase.cs" />
@@ -144,7 +147,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Extension\StringBuilderExtension.cs" />
-    <Compile Include="Util.cs" />
+    <Compile Include="Utility\FileString.cs" />
     <Compile Include="SplashScreenApplicationContext.cs" />
     <Compile Include="StartUpClass.cs" />
     <Compile Include="Supplements.cs" />

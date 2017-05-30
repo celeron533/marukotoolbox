@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mp4box.Utility;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -78,7 +79,7 @@ namespace mp4box.Procedure
             //}
 
             string ffPath = Path.Combine(workPath, "ffmpeg.exe");
-            string neroPath = Util.FormatPath(Path.Combine(workPath, "neroaacenc.exe"));
+            string neroPath = FileString.FormatPath(Path.Combine(workPath, "neroaacenc.exe"));
             StringBuilder muxCommand = new StringBuilder();
             if (copyAudio)
             {

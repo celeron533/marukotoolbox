@@ -25,6 +25,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Text;
 using System.Text.RegularExpressions;
+using mp4box.Utility;
 
 namespace mp4box
 {
@@ -130,7 +131,7 @@ namespace mp4box
         public static string GetFFmpegOutput(string workPath, string filename)
         {
             var processInfo = new System.Diagnostics.ProcessStartInfo(
-                System.IO.Path.Combine(workPath, "ffmpeg.exe"), "-i " + Util.FormatPath(filename));
+                System.IO.Path.Combine(workPath, "ffmpeg.exe"), "-i " + FileString.FormatPath(filename));
             processInfo.WorkingDirectory = System.IO.Directory.GetCurrentDirectory();
             processInfo.CreateNoWindow = true;
             processInfo.UseShellExecute = false;
