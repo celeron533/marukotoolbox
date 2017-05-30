@@ -83,7 +83,6 @@ namespace mp4box
         private string MIvideo = "";
         private string MItext = "把视频文件拖到这里";
 
-        private string mkvextract;
         private string mkvmerge;
         private string mux;
         private string x264;
@@ -646,11 +645,6 @@ namespace mp4box
             Process.Start(batpath);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBoxExtension.ShowInfoMessage(string.Format(" \r\n有任何建议或疑问可以通过以下方式联系小丸。\nQQ：57655408\n微博：weibo.com/xiaowan3\n百度贴吧ID：小丸到达\n\n\t\t\t发布日期：2012年10月17日\n\t\t\t- ( ゜- ゜)つロ 乾杯~"), "关于");
-        }
-
         private void ExtractMp4ExtractVideoButton_Click(object sender, EventArgs e)
         {
             //MP4抽取视频1
@@ -1182,89 +1176,6 @@ namespace mp4box
             LoadSettings();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.VIDEO_2);//"视频(*.mkv)|*.mkv";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                extractMkvInput = openFileDialog1.FileName;
-                ExtractMkvInputTextBox.Text = extractMkvInput;
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (extractMkvInput == "")
-            {
-                MessageBoxExtension.ShowErrorMessage("请选择视频文件");
-            }
-            else
-            {
-                mkvextract = workPath + "\\ mkvextract.exe tracks \"" + extractMkvInput + "\" 1:video.h264 2:audio.aac";
-                batpath = workPath + "\\mkvextract.bat";
-                File.WriteAllText(batpath, mkvextract, Encoding.Default);
-                Process.Start(batpath);
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.VIDEO_3); //"视频(*.mp4)|*.mp4|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                muxMkvVideoInput = openFileDialog1.FileName;
-                MuxMkvVideoInputTextBox.Text = muxMkvVideoInput;
-            }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.AUDIO_1); //"音频(*.mp3)|*.mp3|音频(*.aac)|*.aac|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                muxMkvAudio = openFileDialog1.FileName;
-                MuxMkvAudioInputTextBox.Text = muxMkvAudio;
-            }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog savefile = new SaveFileDialog();
-            savefile.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.VIDEO_2); //"视频(*.mkv)|*.mkv";
-            DialogResult result = savefile.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                muxMkvOutput = savefile.FileName;
-                MuxMkvOutputTextBox.Text = muxMkvOutput;
-            }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            if (muxMkvVideoInput == "")
-            {
-                MessageBoxExtension.ShowErrorMessage("请选择视频文件");
-            }
-            else if (muxMkvAudio == "")
-            {
-                MessageBoxExtension.ShowErrorMessage("请选择音频文件");
-            }
-            else if (muxMkvOutput == "")
-            {
-                MessageBoxExtension.ShowErrorMessage("请选择输出文件");
-            }
-            else
-            {
-                mkvmerge = workPath + "\\mkvmerge.exe -o \"" + muxMkvOutput + "\"   \"" + muxMkvVideoInput + "\"   \"" + muxMkvAudio + "\"";
-                batpath = workPath + "\\mkvmerge.bat";
-                File.WriteAllText(batpath, mkvmerge, Encoding.Default);
-                Process.Start(batpath);
-            }
-        }
-
         private void MuxMkvVideoInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.ALL); //"所有文件(*.*)|*.*";
@@ -1273,17 +1184,6 @@ namespace mp4box
             {
                 muxMkvVideoInput = openFileDialog1.FileName;
                 MuxMkvVideoInputTextBox.Text = muxMkvVideoInput;
-            }
-        }
-
-        private void button6_Click_1(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.VIDEO_2); //"视频(*.mkv)|*.mkv";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                extractMkvInput = openFileDialog1.FileName;
-                ExtractMkvInputTextBox.Text = extractMkvInput;
             }
         }
 
@@ -1353,23 +1253,6 @@ namespace mp4box
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            if (extractMkvInput == "")
-            {
-                MessageBoxExtension.ShowErrorMessage("请选择视频文件");
-            }
-            else
-            {
-                int i = extractMkvInput.IndexOf(".mkv");
-                string mkvname = extractMkvInput.Remove(i);
-                mkvextract = "\"" + workPath + "\\mkvextract.exe\" tracks \"" + extractMkvInput + "\" 1:\"" + mkvname + "_video.h264\" 2:\"" + mkvname + "_audio.aac\"";
-                batpath = workPath + "\\mkvextract.bat";
-                File.WriteAllText(batpath, mkvextract, Encoding.Default);
-                Process.Start(batpath);
-            }
-        }
-
         private void MuxMkvVideoInputTextBox_TextChanged(object sender, EventArgs e)
         {
             if (File.Exists(MuxMkvVideoInputTextBox.Text.ToString()))
@@ -1394,48 +1277,6 @@ namespace mp4box
         private void MuxMkvOutputTextBox_TextChanged(object sender, EventArgs e)
         {
             muxMkvOutput = MuxMkvOutputTextBox.Text;
-        }
-
-        private void txtvideo6_TextChanged(object sender, EventArgs e)
-        {
-            extractMkvInput = ExtractMkvInputTextBox.Text;
-        }
-
-        private void btnAutoAdd_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Multiselect = true;
-            openFileDialog1.Filter = Dialog.GetDialogFilter(Dialog.DialogFilterTypes.ALL); //"所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                VideoBatchItemListbox.Items.AddRange(openFileDialog1.FileNames);
-            }
-            openFileDialog1.Multiselect = false;
-        }
-
-        private void btnAutoDel_Click(object sender, EventArgs e)
-        {
-            if (VideoBatchItemListbox.Items.Count > 0)
-            {
-                if (VideoBatchItemListbox.SelectedItems.Count > 0)
-                {
-                    int index = VideoBatchItemListbox.SelectedIndex;
-                    VideoBatchItemListbox.Items.RemoveAt(VideoBatchItemListbox.SelectedIndex);
-                    if (index == VideoBatchItemListbox.Items.Count)
-                    {
-                        VideoBatchItemListbox.SelectedIndex = index - 1;
-                    }
-                    if (index >= 0 && index < VideoBatchItemListbox.Items.Count && VideoBatchItemListbox.Items.Count > 0)
-                    {
-                        VideoBatchItemListbox.SelectedIndex = index;
-                    }
-                }
-            }
-        }
-
-        private void btnAutoClear_Click(object sender, EventArgs e)
-        {
-            VideoBatchItemListbox.Items.Clear();
         }
 
         private void VideoBatchItemListbox_DragDrop(object sender, DragEventArgs e)
@@ -2263,10 +2104,6 @@ namespace mp4box
         private void MediaInfoTextBox_TextChanged(object sender, EventArgs e)
         {
             MItext = MediaInfoTextBox.Text;
-        }
-
-        private void txtAVScreate_Click(object sender, EventArgs e)
-        {
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

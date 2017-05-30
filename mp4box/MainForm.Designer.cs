@@ -579,7 +579,6 @@
             resources.ApplyResources(this.AvsTab, "AvsTab");
             this.AvsTab.Name = "AvsTab";
             this.AvsTab.UseVisualStyleBackColor = true;
-            this.AvsTab.Click += new System.EventHandler(this.txtAVScreate_Click);
             // 
             // AvsAddFilterButton
             // 
