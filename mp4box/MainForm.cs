@@ -308,16 +308,7 @@ namespace mp4box
             return string.IsNullOrEmpty(str);
         }
 
-        public string timeSubtract(int[] beginTimeInt, int[] endTimeInt)
-        {
-            // endTimeInt must later than beginTimeInt
-            // TimeSpan not able to direct parse greater than 24 hours without day specified
-            TimeSpan beginTime = new TimeSpan(beginTimeInt[0], beginTimeInt[1], beginTimeInt[2]);
-            TimeSpan endTime = new TimeSpan(endTimeInt[0], endTimeInt[1], endTimeInt[2]);
-            TimeSpan result = endTime.Subtract(beginTime);
-            // Do not use TimeSpan.ToString(), which converts hours to day when it is greater than 24h
-            return $"{(int)result.TotalHours}:{result.Minutes}:{result.Seconds}";
-        }
+
 
         public string audiobat(string input, string output)
         {
@@ -2004,7 +1995,7 @@ namespace mp4box
                                         int.Parse(MiscMiscEndTimeMaskedTextBox.Text.Substring(3, 2)),
                                         int.Parse(MiscMiscEndTimeMaskedTextBox.Text.Substring(6, 2))
                                       };
-                clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""", workPath, MiscMiscBeginTimeMaskedTextBox.Text, timeSubtract(begin, end), miscMiscVideoInput, miscMiscVideoOutput) + Environment.NewLine + "cmd";
+                clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""", workPath, MiscMiscBeginTimeMaskedTextBox.Text, Other.TimeSubtract(begin, end), miscMiscVideoInput, miscMiscVideoOutput) + Environment.NewLine + "cmd";
                 //clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{3}"" -ss {1} -to {2} -y  -c copy ""{4}""", workPath, maskb.Text, maske.Text, namevideo4, nameout5) + Environment.NewLine + "cmd";
                 batpath = workPath + "\\clip.bat";
                 LogRecord(clip);

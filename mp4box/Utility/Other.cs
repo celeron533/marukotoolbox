@@ -31,5 +31,32 @@ namespace mp4box.Utility
             int ss = int.Parse(hhmmss.Substring(6, 2));
             return hh * 3600 + mm * 60 + ss;
         }
+
+
+        /// <summary>
+        /// Calculate time: EndTime - BeginTime
+        /// </summary>
+        /// <param name="beginTimeInt">Array of hh, mm, ss</param>
+        /// <param name="endTimeInt">Array of hh, mm, ss</param>
+        /// <returns>hh:mm:ss as formatted string</returns>
+        public static string TimeSubtract(int[] beginTimeInt, int[] endTimeInt)
+        {
+            // endTimeInt must later than beginTimeInt
+            // TimeSpan not able to direct parse greater than 24 hours without day specified
+            TimeSpan beginTime = new TimeSpan(beginTimeInt[0], beginTimeInt[1], beginTimeInt[2]);
+            TimeSpan endTime = new TimeSpan(endTimeInt[0], endTimeInt[1], endTimeInt[2]);
+            if (endTime > beginTime)
+            {
+                TimeSpan result = endTime.Subtract(beginTime);
+                // Do not use TimeSpan.ToString(), which converts hours to day when it is greater than 24h
+                return $"{(int)result.TotalHours}:{result.Minutes}:{result.Seconds}";
+            }
+            else
+            {
+                TimeSpan result = beginTime.Subtract(endTime);
+                return $"-{(int)result.TotalHours}:{result.Minutes}:{result.Seconds}";
+            }
+
+        }
     }
 }
