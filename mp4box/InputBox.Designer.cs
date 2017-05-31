@@ -29,64 +29,67 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InputBox));
-            this.text = new System.Windows.Forms.TextBox();
-            this.lblMessage = new System.Windows.Forms.Label();
-            this.btnOk = new ControlExs.QQButton();
-            this.btnCancel = new ControlExs.QQButton();
+            this.InputTextBox = new System.Windows.Forms.TextBox();
+            this.MessageLabel = new System.Windows.Forms.Label();
+            this.OKButton = new ControlExs.QQButton();
+            this.CancelButton = new ControlExs.QQButton();
             this.SuspendLayout();
             // 
-            // text
+            // InputTextBox
             // 
-            this.text.Location = new System.Drawing.Point(12, 80);
-            this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(326, 21);
-            this.text.TabIndex = 4;
-            this.text.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_KeyPress);
+            this.InputTextBox.Location = new System.Drawing.Point(12, 80);
+            this.InputTextBox.Name = "InputTextBox";
+            this.InputTextBox.Size = new System.Drawing.Size(326, 21);
+            this.InputTextBox.TabIndex = 4;
+            this.InputTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputTextBox_KeyPress);
             // 
-            // lblMessage
+            // MessageLabel
             // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(10, 9);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(35, 12);
-            this.lblMessage.TabIndex = 5;
-            this.lblMessage.Text = "标签1";
+            this.MessageLabel.AutoSize = true;
+            this.MessageLabel.Location = new System.Drawing.Point(10, 9);
+            this.MessageLabel.Name = "MessageLabel";
+            this.MessageLabel.Size = new System.Drawing.Size(35, 12);
+            this.MessageLabel.TabIndex = 5;
+            this.MessageLabel.Text = "标签1";
             // 
-            // btnOk
+            // OKButton
             // 
-            this.btnOk.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.btnOk.Location = new System.Drawing.Point(270, 12);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(68, 23);
-            this.btnOk.TabIndex = 6;
-            this.btnOk.Text = "确定";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.qqButton1_Click);
+            this.OKButton.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.OKButton.Location = new System.Drawing.Point(270, 12);
+            this.OKButton.Name = "OKButton";
+            this.OKButton.Size = new System.Drawing.Size(68, 23);
+            this.OKButton.TabIndex = 6;
+            this.OKButton.Text = "确定";
+            this.OKButton.UseVisualStyleBackColor = true;
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
-            // btnCancel
+            // CancelButton
             // 
-            this.btnCancel.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.btnCancel.Location = new System.Drawing.Point(270, 41);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(68, 23);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "取消";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.CancelButton.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.CancelButton.Location = new System.Drawing.Point(270, 41);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(68, 23);
+            this.CancelButton.TabIndex = 7;
+            this.CancelButton.Text = "取消";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // InputBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 112);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.lblMessage);
-            this.Controls.Add(this.text);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.OKButton);
+            this.Controls.Add(this.MessageLabel);
+            this.Controls.Add(this.InputTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "InputBox";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "输入框";
             this.ResumeLayout(false);
@@ -96,9 +99,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox text;
-        private System.Windows.Forms.Label lblMessage;
-        private ControlExs.QQButton btnOk;
-        private ControlExs.QQButton btnCancel;
+        private System.Windows.Forms.TextBox InputTextBox;
+        private System.Windows.Forms.Label MessageLabel;
+        private ControlExs.QQButton OKButton;
+        private ControlExs.QQButton CancelButton;
     }
 }

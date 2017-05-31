@@ -31,45 +31,43 @@ namespace mp4box
 {
     public partial class InputBox : Form
     {
-        public InputBox()
+        private InputBox()
         {
             InitializeComponent();
         }
 
-        private void qqButton1_Click(object sender, EventArgs e)
+        private void OKButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             Close();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
         }
 
-        internal static string Show(string message, string title, string text)
+        public static string Show(string message, string title, string text)
         {
             using (InputBox inbox = new InputBox())
             {
-                inbox.lblMessage.Text = message;
-                inbox.text.Text = text;
+                inbox.MessageLabel.Text = message;
+                inbox.InputTextBox.Text = text;
                 inbox.Text = title;
-                if (inbox.ShowDialog() == DialogResult.OK)
-                    return inbox.text.Text;
-                return null;
+                return inbox.ShowDialog() == DialogResult.OK ? inbox.InputTextBox.Text : null;
             }
         }
 
-        private void text_KeyPress(object sender, KeyPressEventArgs e)
+        private void InputTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 13)
+            if (e.KeyChar == (char)Keys.Enter)
             {
-                qqButton1_Click(null, null);
+                OKButton_Click(null, null);
             }
-            else if (e.KeyChar == 27)
+            else if (e.KeyChar == (char)Keys.Escape)
             {
-                btnCancel_Click(null, null);
+                CancelButton_Click(null, null);
             }
         }
     }
