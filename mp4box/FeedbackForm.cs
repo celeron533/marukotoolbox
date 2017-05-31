@@ -109,7 +109,7 @@ namespace mp4box
             var sb = new StringBuilder();
             var version4 = OSInfo.GetDotNetVersion("4.0");
             var version = OSInfo.GetDotNetVersion();
-            sb.Append(string.Format("小丸工具箱 版本: {0}", Assembly.GetAssemblyFileVersion()));
+            sb.Append(string.Format("小丸工具箱 版本: {0}", AssemblyInfo.GetAssemblyFileVersion()));
             sb.Append(string.Format("\r\n操作系统: {0}{1} ({2}.{3}.{4}.{5})",
                 OSInfo.GetOSName(), OSInfo.GetOSServicePack(), OSInfo.OSMajorVersion, OSInfo.OSMinorVersion,
                 OSInfo.OSRevisionVersion, OSInfo.OSBuildVersion));

@@ -98,7 +98,7 @@ namespace mp4box
         private string tempPic = "";
         private string logFileName, logPath;
         private string tempfilepath;
-        private DateTime ReleaseDate = Utility.Assembly.GetAssemblyVersionTime();
+        private DateTime ReleaseDate = Utility.AssemblyInfo.GetAssemblyVersionTime();
 
         #endregion Private Members Declaration
 
@@ -3296,7 +3296,7 @@ namespace mp4box
                 case 0:
                     SetLang("zh-CN", this, typeof(MainForm));
                     //this.Text = string.Format("小丸工具箱 {0}", Assembly.GetExecutingAssembly().GetName().Version.Build);
-                    this.Text = string.Format("小丸工具箱 {0}", Utility.Assembly.GetAssemblyFileVersion());
+                    this.Text = string.Format("小丸工具箱 {0}", Utility.AssemblyInfo.GetAssemblyFileVersion());
                     ConfigX264PriorityComboBox.Items.Clear();
                     ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "低于标准", "普通", "高于标准", "高", "实时" });
                     ConfigX264PriorityComboBox.SelectedIndex = 2;
@@ -3323,7 +3323,7 @@ namespace mp4box
 
                 case 1:
                     SetLang("zh-TW", this, typeof(MainForm));
-                    this.Text = string.Format("小丸工具箱 {0}", Utility.Assembly.GetAssemblyFileVersion());
+                    this.Text = string.Format("小丸工具箱 {0}", Utility.AssemblyInfo.GetAssemblyFileVersion());
                     ConfigX264PriorityComboBox.Items.Clear();
                     ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "在標準以下", "標準", "在標準以上", "高", "即時" });
                     ConfigX264PriorityComboBox.SelectedIndex = 2;
@@ -3350,7 +3350,7 @@ namespace mp4box
 
                 case 2:
                     SetLang("en-US", this, typeof(MainForm));
-                    this.Text = string.Format("Maruko Toolbox {0}", Utility.Assembly.GetAssemblyFileVersion());
+                    this.Text = string.Format("Maruko Toolbox {0}", Utility.AssemblyInfo.GetAssemblyFileVersion());
                     ConfigX264PriorityComboBox.Items.Clear();
                     ConfigX264PriorityComboBox.Items.AddRange(new string[] { "Idle", "BelowNormal", "Normal", "AboveNormal", "High", "RealTime" });
                     ConfigX264PriorityComboBox.SelectedIndex = 2;
@@ -3377,7 +3377,7 @@ namespace mp4box
 
                 case 3:
                     SetLang("ja-JP", this, typeof(MainForm));
-                    this.Text = string.Format("小丸道具箱 {0}", Utility.Assembly.GetAssemblyFileVersion());
+                    this.Text = string.Format("小丸道具箱 {0}", Utility.AssemblyInfo.GetAssemblyFileVersion());
                     ConfigX264PriorityComboBox.Items.Clear();
                     ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "通常以下", "通常", "通常以上", "高", "リアルタイム" });
                     ConfigX264PriorityComboBox.SelectedIndex = 2;
