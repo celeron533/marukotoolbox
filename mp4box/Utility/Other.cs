@@ -56,7 +56,24 @@ namespace mp4box.Utility
                 TimeSpan result = beginTime.Subtract(endTime);
                 return $"-{(int)result.TotalHours}:{result.Minutes}:{result.Seconds}";
             }
+        }
 
+        // <summary>
+        /// 是否安装 Apple Application Support
+        /// </summary>
+        /// <returns>true:安装 false:没有安装</returns>
+        public static bool IsAppleAppSupportInstalled()
+        {
+            Microsoft.Win32.RegistryKey uninstallNode_1 = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"Software\Wow6432Node\Apple Inc.\Apple Application Support"); //x64 OS
+            Microsoft.Win32.RegistryKey uninstallNode_2 = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"Software\Apple Inc.\Apple Application Support"); //x86 OS
+            if (uninstallNode_1 != null || uninstallNode_2 != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

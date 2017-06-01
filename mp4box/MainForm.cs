@@ -2097,6 +2097,7 @@ namespace mp4box
             MItext = MediaInfoTextBox.Text;
         }
 
+        [Obsolete("Not used")]
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("http://www.sosg.net/read.php?tid=480646");
@@ -2626,24 +2627,6 @@ namespace mp4box
         #endregion 视频页面
 
         #region 音频界面
-
-        // <summary>
-        /// 是否安装 Apple Application Support
-        /// </summary>
-        /// <returns>true:安装 false:没有安装</returns>
-        private bool isAppleAppSupportInstalled()
-        {
-            Microsoft.Win32.RegistryKey uninstallNode_1 = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"Software\Wow6432Node\Apple Inc.\Apple Application Support"); //x64 OS
-            Microsoft.Win32.RegistryKey uninstallNode_2 = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"Software\Apple Inc.\Apple Application Support"); //x86 OS
-            if (uninstallNode_1 != null || uninstallNode_2 != null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
 
         private void AudioEncoderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
