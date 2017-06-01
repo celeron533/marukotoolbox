@@ -31,28 +31,15 @@ namespace mp4box
 {
     public partial class PreviewForm : Form
     {
-
-        string workpath = System.Windows.Forms.Application.StartupPath;
-
-        public PreviewForm()
+        public PreviewForm(string mediaFilePath="")
         {
             InitializeComponent();
+            this.axWindowsMediaPlayer1.URL = mediaFilePath;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_SizeChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
+        private void PreviewForm_Load(object sender, EventArgs e)
         {
             //axWindowsMediaPlayer1.Ctlcontrols.play();
         }
-
     }
 }

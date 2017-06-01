@@ -52,8 +52,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PreviewForm";
             this.Text = "Preview";
-            this.Load += new System.EventHandler(this.Form2_Load);
-            this.SizeChanged += new System.EventHandler(this.Form2_SizeChanged);
+            this.Load += new System.EventHandler(this.PreviewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 

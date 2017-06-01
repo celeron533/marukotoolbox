@@ -1631,9 +1631,7 @@ namespace mp4box
                         Process.Start(FileString.FormatPath(ffplayer), " -i " + FileString.FormatPath(filepath));
                     else
                     {
-                        PreviewForm pf = new PreviewForm();
-                        pf.Show();
-                        pf.axWindowsMediaPlayer1.URL = filepath;
+                        new PreviewForm(filepath).Show();
                     }
                 }
             }
