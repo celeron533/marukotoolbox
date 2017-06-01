@@ -1614,7 +1614,7 @@ namespace mp4box
             }
         }
 
-        private void AvPreviewButton_Click(object sender, EventArgs e)
+        private void AvsPreviewButton_Click(object sender, EventArgs e)
         {
             if (AvsScriptTextBox.Text != "")
             {

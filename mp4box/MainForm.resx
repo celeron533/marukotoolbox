@@ -1950,34 +1950,34 @@
   <data name="&gt;&gt;AvsGenerateButton.ZOrder" xml:space="preserve">
     <value>46</value>
   </data>
-  <data name="AvPreviewButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AvsPreviewButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
   </data>
-  <data name="AvPreviewButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="AvsPreviewButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AvPreviewButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AvsPreviewButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>276, 556</value>
   </data>
-  <data name="AvPreviewButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AvsPreviewButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="AvPreviewButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AvsPreviewButton.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="AvPreviewButton.Text" xml:space="preserve">
+  <data name="AvsPreviewButton.Text" xml:space="preserve">
     <value>预览</value>
   </data>
-  <data name="&gt;&gt;AvPreviewButton.Name" xml:space="preserve">
-    <value>AvPreviewButton</value>
+  <data name="&gt;&gt;AvsPreviewButton.Name" xml:space="preserve">
+    <value>AvsPreviewButton</value>
   </data>
-  <data name="&gt;&gt;AvPreviewButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AvsPreviewButton.Type" xml:space="preserve">
     <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AvPreviewButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AvsPreviewButton.Parent" xml:space="preserve">
     <value>AvsTab</value>
   </data>
-  <data name="&gt;&gt;AvPreviewButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AvsPreviewButton.ZOrder" xml:space="preserve">
     <value>47</value>
   </data>
   <data name="AvsStartButton.Font" type="System.Drawing.Font, System.Drawing">

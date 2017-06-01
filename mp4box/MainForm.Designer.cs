@@ -98,7 +98,7 @@
             this.AvsUndotCheckBox = new ControlExs.QQCheckBox();
             this.AvsClearButton = new ControlExs.QQButton();
             this.AvsGenerateButton = new ControlExs.QQButton();
-            this.AvPreviewButton = new ControlExs.QQButton();
+            this.AvsPreviewButton = new ControlExs.QQButton();
             this.AvsStartButton = new ControlExs.QQButton();
             this.AvsVideoInputButton = new ControlExs.QQButton();
             this.AvsOutputButton = new ControlExs.QQButton();
@@ -571,7 +571,7 @@
             this.AvsTab.Controls.Add(this.AvsUndotCheckBox);
             this.AvsTab.Controls.Add(this.AvsClearButton);
             this.AvsTab.Controls.Add(this.AvsGenerateButton);
-            this.AvsTab.Controls.Add(this.AvPreviewButton);
+            this.AvsTab.Controls.Add(this.AvsPreviewButton);
             this.AvsTab.Controls.Add(this.AvsStartButton);
             this.AvsTab.Controls.Add(this.AvsVideoInputButton);
             this.AvsTab.Controls.Add(this.AvsOutputButton);
@@ -1040,12 +1040,12 @@
             this.AvsGenerateButton.UseVisualStyleBackColor = true;
             this.AvsGenerateButton.Click += new System.EventHandler(this.AvsGenerateButton_Click);
             // 
-            // AvPreviewButton
+            // AvsPreviewButton
             // 
-            resources.ApplyResources(this.AvPreviewButton, "AvPreviewButton");
-            this.AvPreviewButton.Name = "AvPreviewButton";
-            this.AvPreviewButton.UseVisualStyleBackColor = true;
-            this.AvPreviewButton.Click += new System.EventHandler(this.AvPreviewButton_Click);
+            resources.ApplyResources(this.AvsPreviewButton, "AvsPreviewButton");
+            this.AvsPreviewButton.Name = "AvsPreviewButton";
+            this.AvsPreviewButton.UseVisualStyleBackColor = true;
+            this.AvsPreviewButton.Click += new System.EventHandler(this.AvsPreviewButton_Click);
             // 
             // AvsStartButton
             // 
@@ -3115,7 +3115,7 @@
         private System.Windows.Forms.TabPage AvsTab;
         private ControlExs.QQButton AvsClearButton;
         private ControlExs.QQButton AvsGenerateButton;
-        private ControlExs.QQButton AvPreviewButton;
+        private ControlExs.QQButton AvsPreviewButton;
         private ControlExs.QQButton AvsStartButton;
         private ControlExs.QQTextBox AvsScriptTextBox;
         private ControlExs.QQTextBox AvsVideoInputTextBox;
