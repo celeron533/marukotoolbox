@@ -457,7 +457,6 @@
             this.MiscMiscVideoOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.MiscMiscVideoOutputTextBox, "MiscMiscVideoOutputTextBox");
             this.MiscMiscVideoOutputTextBox.Name = "MiscMiscVideoOutputTextBox";
-            this.MiscMiscVideoOutputTextBox.TextChanged += new System.EventHandler(this.MiscMiscVideoOutputTextBox_TextChanged);
             this.MiscMiscVideoOutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MiscMiscVideoOutputTextBox_MouseDoubleClick);
             // 
             // MiscMiscEndTimeMaskedTextBox

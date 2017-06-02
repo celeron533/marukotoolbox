@@ -67,8 +67,6 @@ namespace mp4box
         private string avsVideoInput = "video";
         private string extractFlvInput = "";
         private string extractMkvInput = "";
-        private string miscMiscVideoInput = "";
-        private string miscMiscVideoOutput;
         private string muxMkvAudio = "";
         private string muxMkvOutput;
         private string muxMkvSubtitle;
@@ -793,20 +791,15 @@ namespace mp4box
 
         private void MiscMiscVideoInputTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(MiscMiscVideoInputTextBox.Text.ToString()))
+            if (File.Exists(MiscMiscVideoInputTextBox.Text))
             {
-                miscMiscVideoInput = MiscMiscVideoInputTextBox.Text;
+                string inputFileName = MiscMiscVideoInputTextBox.Text;
                 //string finish = namevideo4.Insert(namevideo4.LastIndexOf(".")-1,"");
                 //string ext = namevideo4.Substring(namevideo4.LastIndexOf(".") + 1, 3);
                 //finish += "_clip." + ext;
-                string finish = miscMiscVideoInput.Insert(miscMiscVideoInput.LastIndexOf("."), "_output");
-                MiscMiscVideoOutputTextBox.Text = finish;
+                string outputFileName = inputFileName.Insert(inputFileName.LastIndexOf("."), "_output");
+                MiscMiscVideoOutputTextBox.Text = outputFileName;
             }
-        }
-
-        private void MiscMiscVideoOutputTextBox_TextChanged(object sender, EventArgs e)
-        {
-            miscMiscVideoOutput = MiscMiscVideoOutputTextBox.Text;
         }
 
         private void MiscMiscVideoInputButton_Click(object sender, EventArgs e)
@@ -815,8 +808,7 @@ namespace mp4box
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                miscMiscVideoInput = openFileDialog1.FileName;
-                MiscMiscVideoInputTextBox.Text = miscMiscVideoInput;
+                MiscMiscVideoInputTextBox.Text = openFileDialog1.FileName;
             }
         }
 
@@ -827,8 +819,52 @@ namespace mp4box
             DialogResult result = savefile.ShowDialog();
             if (result == DialogResult.OK)
             {
-                miscMiscVideoOutput = savefile.FileName;
-                MiscMiscVideoOutputTextBox.Text = miscMiscVideoOutput;
+                MiscMiscVideoOutputTextBox.Text = savefile.FileName;
+            }
+        }
+
+        private void GetMiscDataFromUI(MiscProcedure p)
+        {
+            p.inputVideoFilePath = MiscMiscVideoInputTextBox.Text;
+            p.outputVideoFilePath = MiscMiscVideoOutputTextBox.Text;
+            p.beginTimeStr = MiscMiscBeginTimeMaskedTextBox.Text;
+            p.endTimeStr = MiscMiscEndTimeMaskedTextBox.Text;
+            p.transposeIndex = MiscMiscTransposeComboBox.SelectedIndex;
+        }
+
+        private void MiscMiscStartClipButton_Click(object sender, EventArgs e)
+        {
+            if (MiscMiscVideoInputTextBox.Text == "")
+            {
+                MessageBoxExtension.ShowErrorMessage("请选择视频文件");
+            }
+            else if (MiscMiscVideoOutputTextBox.Text == "")
+            {
+                MessageBoxExtension.ShowErrorMessage("请选择输出文件");
+            }
+            else
+            {
+                MiscProcedure miscProcedure = new MiscProcedure(workPath);
+                miscProcedure.GetDataFromUI(GetMiscDataFromUI);
+                miscProcedure.Execute();
+            }
+        }
+
+        private void MiscMiscStartRotateButton_Click(object sender, EventArgs e)
+        {
+            if (MiscMiscVideoInputTextBox.Text == "")
+            {
+                MessageBoxExtension.ShowErrorMessage("请选择视频文件");
+            }
+            else if (MiscMiscVideoOutputTextBox.Text == "")
+            {
+                MessageBoxExtension.ShowErrorMessage("请选择输出文件");
+            }
+            else
+            {
+                MiscProcedure miscProcedure = new MiscProcedure(workPath);
+                miscProcedure.GetDataFromUI(GetMiscDataFromUI);
+                miscProcedure.ExecuteRotate();
             }
         }
 
@@ -1971,35 +2007,6 @@ namespace mp4box
         private void AvsClearButton_Click(object sender, EventArgs e)
         {
             AvsScriptTextBox.Clear();
-        }
-
-        private void MiscMiscStartClipButton_Click(object sender, EventArgs e)
-        {
-            if (miscMiscVideoInput == "")
-            {
-                MessageBoxExtension.ShowErrorMessage("请选择视频文件");
-            }
-            else if (miscMiscVideoOutput == "")
-            {
-                MessageBoxExtension.ShowErrorMessage("请选择输出文件");
-            }
-            else
-            {
-                int[] begin = new int[] { int.Parse(MiscMiscBeginTimeMaskedTextBox.Text.Substring(0, 2)),
-                                          int.Parse(MiscMiscBeginTimeMaskedTextBox.Text.Substring(3, 2)),
-                                          int.Parse(MiscMiscBeginTimeMaskedTextBox.Text.Substring(6, 2))
-                                        };
-                int[] end = new int[] { int.Parse(MiscMiscEndTimeMaskedTextBox.Text.Substring(0, 2)),
-                                        int.Parse(MiscMiscEndTimeMaskedTextBox.Text.Substring(3, 2)),
-                                        int.Parse(MiscMiscEndTimeMaskedTextBox.Text.Substring(6, 2))
-                                      };
-                clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""", workPath, MiscMiscBeginTimeMaskedTextBox.Text, Other.TimeSubtract(begin, end), miscMiscVideoInput, miscMiscVideoOutput) + Environment.NewLine + "cmd";
-                //clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{3}"" -ss {1} -to {2} -y  -c copy ""{4}""", workPath, maskb.Text, maske.Text, namevideo4, nameout5) + Environment.NewLine + "cmd";
-                batpath = workPath + "\\clip.bat";
-                LogRecord(clip);
-                File.WriteAllText(batpath, clip, Encoding.Default);
-                Process.Start(batpath);
-            }
         }
 
         private void VideoPresetComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -4081,26 +4088,6 @@ namespace mp4box
         private void VideoSubtitleTextBox_DoubleClick(object sender, EventArgs e)
         {
             VideoSubtitleTextBox.Clear();
-        }
-
-        private void MiscMiscStartRotateButton_Click(object sender, EventArgs e)
-        {
-            if (miscMiscVideoInput == "")
-            {
-                MessageBoxExtension.ShowErrorMessage("请选择视频文件");
-            }
-            else if (miscMiscVideoOutput == "")
-            {
-                MessageBoxExtension.ShowErrorMessage("请选择输出文件");
-            }
-            else
-            {
-                clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{1}"" -vf ""transpose={2}"" -y ""{3}""",
-                    workPath, miscMiscVideoInput, MiscMiscTransposeComboBox.SelectedIndex, miscMiscVideoOutput) + Environment.NewLine + "cmd";
-                batpath = workPath + "\\clip.bat";
-                File.WriteAllText(batpath, clip, Encoding.Default);
-                Process.Start(batpath);
-            }
         }
 
         private void AudioPresetComboBox_SelectedIndexChanged(object sender, EventArgs e)

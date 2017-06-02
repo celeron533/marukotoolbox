@@ -134,6 +134,7 @@
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
     <Compile Include="MediaInfo\MediaInfoWrapper.cs" />
+    <Compile Include="Procedure\MiscProcedure.cs" />
     <Compile Include="Utility\AssemblyInfo.cs" />
     <Compile Include="Utility\Dialog.cs" />
     <Compile Include="Utility\Network.cs" />
