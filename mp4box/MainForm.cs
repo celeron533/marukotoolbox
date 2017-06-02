@@ -3609,11 +3609,6 @@ namespace mp4box
                 MessageBoxExtension.ShowErrorMessage("请选择FLV视频文件");
                 return;
             }
-
-            MediaInfoWrapper MIW = new MediaInfoWrapper(MiscBlackVideoInputTextBox.Text);
-            double videobitrate = double.Parse(MIW.bitRate1);
-            double targetBitrate = (double)MiscBlackBitrateNumericUpDown.Value;
-
             if (!File.Exists(MiscBlackPicInputTextBox.Text) && MiscBlackNoPicCheckBox.Checked == false)
             {
                 MessageBoxExtension.ShowErrorMessage("请选择图片文件或勾选使用黑屏");
@@ -3624,86 +3619,31 @@ namespace mp4box
                 MessageBoxExtension.ShowErrorMessage("请选择输出文件");
                 return;
             }
-
-            if (videobitrate < 1000000)
+            if (MiscBlackBitrateNumericUpDown.Value <= 1)
             {
-                MessageBoxExtension.ShowInfoMessage("此视频不需要后黑。");
-                return;
-            }
-            if (videobitrate > 5000000)
-            {
-                MessageBoxExtension.ShowInfoMessage("此视频码率过大，请先压制再后黑。");
+                MessageBoxExtension.ShowErrorMessage("请填写目标码率");
                 return;
             }
 
-            //处理图片
-            int videoWidth = int.Parse(MIW.v_width);
-            int videoHeight = int.Parse(MIW.v_height);
-            if (MiscBlackNoPicCheckBox.Checked)
+            BlackProcedure blackProcedure = new BlackProcedure(tempPic, workPath);
+            blackProcedure.GetDataFromUI(p =>
             {
-                Bitmap bm = new Bitmap(videoWidth, videoHeight);
-                Graphics g = Graphics.FromImage(bm);
-                //g.FillRectangle(Brushes.White, new Rectangle(0, 0, 800, 600));
-                g.Clear(Color.Black);
-                bm.Save(tempPic, ImageFormat.Jpeg);
-                g.Dispose();
-                bm.Dispose();
-            }
-            else
-            {
-                System.Drawing.Image img = System.Drawing.Image.FromFile(MiscBlackPicInputTextBox.Text);
-                int sourceWidth = img.Width;
-                int sourceHeight = img.Height;
-                if (img.Width % 2 != 0 || img.Height % 2 != 0)
-                {
-                    MessageBoxExtension.ShowErrorMessage("图片的长和宽必须都是偶数。");
-                    img.Dispose();
-                    return;
-                }
-                if (img.Width != videoWidth || img.Height != videoHeight)
-                {
-                    MessageBoxExtension.ShowErrorMessage("图片的长和宽和视频不一致。");
-                    img.Dispose();
-                    return;
-                }
-                if (img.RawFormat.Equals(ImageFormat.Jpeg))
-                {
-                    File.Copy(MiscBlackPicInputTextBox.Text, tempPic, true);
-                }
-                else
-                {
-                    System.Drawing.Imaging.Encoder ImageEncoder = System.Drawing.Imaging.Encoder.Quality;
-                    EncoderParameter ep = new EncoderParameter(ImageEncoder, 100L);
-                    EncoderParameters eps = new EncoderParameters(1);
-                    ImageCodecInfo ImageCoderType = OtherUtil.GetImageCoderInfo("image/jpeg");
-                    eps.Param[0] = ep;
-                    img.Save(tempPic, ImageCoderType, eps);
-                    //img.Save(tempPic, ImageFormat.Jpeg);
-                }
-            }
-            int blackSecond = 300;
-            //计算后黑时长
-            if (MiscBlackDurationSecondsComboBox.Text == "auto")
-            {
-                int seconds = OtherUtil.SecondsFromHHMMSS(MIW.duration3);
-                double s = videobitrate / 1000.0 * (double)seconds / targetBitrate - (double)seconds;
-                blackSecond = (int)s;
-                MiscBlackDurationSecondsComboBox.Text = blackSecond.ToString();
-            }
-            else
-            {
-                blackSecond = int.Parse(Regex.Replace(MiscBlackDurationSecondsComboBox.Text.ToString(), @"\D", "")); //排除除数字外的所有字符
-            }
+                p.inputVideoFile = MiscBlackVideoInputTextBox.Text;
+                p.inputImageFile = MiscBlackPicInputTextBox.Text;
+                p.outputVideoFile = MiscBlackOutputTextBox.Text;
+                p.targetBitrate = (int)MiscBlackBitrateNumericUpDown.Value;
+                p.fps = (int)MiscBlackFpsNumericUpDown.Value;
+                p.crf = (float)MiscBlackCrfNumericUpDown.Value;
+                p.doNotUseImg = MiscBlackNoPicCheckBox.Checked;
+            });
 
-            //批处理
-            mux = "\"" + workPath + "\\ffmpeg\" -loop 1 -r " + MiscBlackFpsNumericUpDown.Value.ToString() + " -t " + blackSecond.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + MiscBlackCrfNumericUpDown.Value.ToString() + " -y black.flv\r\n";
-            mux += string.Format("\"{0}\\flvbind\" \"{1}\"  \"{2}\"  black.flv\r\n", workPath, MiscBlackOutputTextBox.Text, MiscBlackVideoInputTextBox.Text);
-            mux += "del black.flv\r\n";
+            blackProcedure.Execute();
 
-            batpath = Path.Combine(workPath, Path.GetRandomFileName() + ".bat");
-            File.WriteAllText(batpath, mux, Encoding.Default);
-            LogRecord(mux);
-            Process.Start(batpath);
+            blackProcedure.SetDataToUI(p =>
+            {
+                MiscBlackDurationSecondsComboBox.Text = p.durationStr;
+            }
+            );
         }
 
         private void MiscBlackVideoInputTextBox_TextChanged(object sender, EventArgs e)

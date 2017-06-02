@@ -281,7 +281,7 @@
             this.MiscBlackCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.MiscBlackCrfLabel = new System.Windows.Forms.Label();
             this.MiscBlackNoPicCheckBox = new ControlExs.QQCheckBox();
-            this.MiscBlackFpsComboBox = new System.Windows.Forms.Label();
+            this.MiscBlackFpsLabel = new System.Windows.Forms.Label();
             this.MiscBlackFpsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.MiscBlackPicInputButton = new ControlExs.QQButton();
             this.MiscBlackPicInputTextBox = new ControlExs.QQTextBox();
@@ -2622,7 +2622,7 @@
             this.MiscBlackGroupBox.Controls.Add(this.MiscBlackCrfNumericUpDown);
             this.MiscBlackGroupBox.Controls.Add(this.MiscBlackCrfLabel);
             this.MiscBlackGroupBox.Controls.Add(this.MiscBlackNoPicCheckBox);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsComboBox);
+            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsLabel);
             this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsNumericUpDown);
             this.MiscBlackGroupBox.Controls.Add(this.MiscBlackPicInputButton);
             this.MiscBlackGroupBox.Controls.Add(this.MiscBlackPicInputTextBox);
@@ -2726,8 +2726,8 @@
             // 
             // MiscBlackFpsComboBox
             // 
-            resources.ApplyResources(this.MiscBlackFpsComboBox, "MiscBlackFpsComboBox");
-            this.MiscBlackFpsComboBox.Name = "MiscBlackFpsComboBox";
+            resources.ApplyResources(this.MiscBlackFpsLabel, "MiscBlackFpsComboBox");
+            this.MiscBlackFpsLabel.Name = "MiscBlackFpsComboBox";
             // 
             // MiscBlackFpsNumericUpDown
             // 
@@ -3323,7 +3323,7 @@
         private System.Windows.Forms.NumericUpDown MiscBlackCrfNumericUpDown;
         private System.Windows.Forms.Label MiscBlackCrfLabel;
         private ControlExs.QQCheckBox MiscBlackNoPicCheckBox;
-        private System.Windows.Forms.Label MiscBlackFpsComboBox;
+        private System.Windows.Forms.Label MiscBlackFpsLabel;
         private System.Windows.Forms.NumericUpDown MiscBlackFpsNumericUpDown;
         private System.Windows.Forms.ComboBox MiscBlackDurationSecondsComboBox;
         private System.Windows.Forms.Label MiscBlackDurationLabel;
