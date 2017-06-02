@@ -61,7 +61,7 @@ namespace mp4box.Procedure
                             // set best quality
                             new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L)
                         };
-            ImageCodecInfo ImageCoderType = Other.GetImageCoderInfo("image/jpeg");
+            ImageCodecInfo ImageCoderType = OtherUtil.GetImageCoderInfo("image/jpeg");
             img.Save(tempPic, ImageCoderType, eps);
             //img.Save(tempPic, ImageFormat.Jpeg);
 
@@ -79,7 +79,7 @@ namespace mp4box.Procedure
             //}
 
             string ffPath = Path.Combine(workPath, "ffmpeg.exe");
-            string neroPath = FileString.FormatPath(Path.Combine(workPath, "neroaacenc.exe"));
+            string neroPath = FileStringUtil.FormatPath(Path.Combine(workPath, "neroaacenc.exe"));
             StringBuilder muxCommand = new StringBuilder();
             if (copyAudio)
             {

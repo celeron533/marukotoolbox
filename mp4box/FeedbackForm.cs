@@ -107,22 +107,22 @@ namespace mp4box
         private static string GetSystemInfo()
         {
             var sb = new StringBuilder();
-            var version4 = OSInfo.GetDotNetVersion("4.0");
-            var version = OSInfo.GetDotNetVersion();
-            sb.Append(string.Format("小丸工具箱 版本: {0}", AssemblyInfo.GetAssemblyFileVersion()));
+            var version4 = OSInfoUtil.GetDotNetVersion("4.0");
+            var version = OSInfoUtil.GetDotNetVersion();
+            sb.Append(string.Format("小丸工具箱 版本: {0}", AssemblyUtil.GetAssemblyFileVersion()));
             sb.Append(string.Format("\r\n操作系统: {0}{1} ({2}.{3}.{4}.{5})",
-                OSInfo.GetOSName(), OSInfo.GetOSServicePack(), OSInfo.OSMajorVersion, OSInfo.OSMinorVersion,
-                OSInfo.OSRevisionVersion, OSInfo.OSBuildVersion));
+                OSInfoUtil.GetOSName(), OSInfoUtil.GetOSServicePack(), OSInfoUtil.OSMajorVersion, OSInfoUtil.OSMinorVersion,
+                OSInfoUtil.OSRevisionVersion, OSInfoUtil.OSBuildVersion));
             if (string.IsNullOrEmpty(version4))
                 sb.Append("\r\n.NET Framework 4.0 未安装");
             else
                 sb.Append(string.Format("\r\nMicrosoft .NET Framework: {0}", version4));
             if (!string.IsNullOrEmpty(version) && !version4.Equals(version))
                 sb.Append(string.Format("\r\nMicrosoft .NET Framework: {0}", version));
-            if (!string.IsNullOrEmpty(FileString.CheckAviSynth()))
-                sb.Append("\r\n" + FileString.CheckAviSynth());
-            else if (!string.IsNullOrEmpty(FileString.CheckinternalAviSynth()))
-                sb.Append("\r\n" + FileString.CheckinternalAviSynth() + " (本地内置的绿色版本)");
+            if (!string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
+                sb.Append("\r\n" + FileStringUtil.CheckAviSynth());
+            else if (!string.IsNullOrEmpty(FileStringUtil.CheckinternalAviSynth()))
+                sb.Append("\r\n" + FileStringUtil.CheckinternalAviSynth() + " (本地内置的绿色版本)");
             else
                 sb.Append("\r\nAvisynth 未安装");
             sb.Append("\r\n------------------------------以上信息为自动检测-----------------------------\r\n\r\n");

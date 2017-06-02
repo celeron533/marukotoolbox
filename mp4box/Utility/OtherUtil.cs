@@ -6,7 +6,7 @@ using System.Text;
 
 namespace mp4box.Utility
 {
-    public static class Other
+    public static class OtherUtil
     {
         /// <summary>
         /// 获取图片编码类型信息

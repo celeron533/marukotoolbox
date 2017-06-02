@@ -5,7 +5,7 @@ using System.Text;
 
 namespace mp4box.Utility
 {
-    public static class AssemblyInfo
+    public static class AssemblyUtil
     {
         public static DateTime GetAssemblyVersionTime()
         {

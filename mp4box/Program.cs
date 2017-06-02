@@ -53,7 +53,7 @@ namespace mp4box
         static void Main(string[] args)
         {
             // 检查程序路径是否可写入
-            if (!FileString.IsDirWriteable(Path.GetDirectoryName(Application.ExecutablePath)))
+            if (!FileStringUtil.IsDirWriteable(Path.GetDirectoryName(Application.ExecutablePath)))
             {
                 bool bRunElevated = false;
                 //检测程序是否以高权限运行

@@ -32,7 +32,7 @@ namespace mp4box.Utility
     /// <summary>
     /// File, folder and file name related operations.
     /// </summary>
-    public static class FileString
+    public static class FileStringUtil
     {
         /// <summary>
         /// 自动加引号

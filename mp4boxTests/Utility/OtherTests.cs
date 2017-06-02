@@ -12,14 +12,14 @@ namespace mp4box.Utility.Tests
         [TestMethod()]
         public void GetImageCoderInfoTest()
         {
-            var result = Other.GetImageCoderInfo("image/jpeg");
+            var result = OtherUtil.GetImageCoderInfo("image/jpeg");
             Assert.AreEqual("image/jpeg", result.MimeType);
         }
 
         [TestMethod()]
         public void GetImageCoderInfoTest2()
         {
-            var result = Other.GetImageCoderInfo("image/doesNotExist");
+            var result = OtherUtil.GetImageCoderInfo("image/doesNotExist");
             Assert.IsNull(result);
         }
 
@@ -33,7 +33,7 @@ namespace mp4box.Utility.Tests
 
             int[] begin = new int[] { 0, 2, 30 };
             int[] end = new int[] { 1, 1, 1 };
-            string result = Other.TimeSubtract(begin, end);
+            string result = OtherUtil.TimeSubtract(begin, end);
 
             Assert.AreEqual(expResult, result);
         }
@@ -46,7 +46,7 @@ namespace mp4box.Utility.Tests
 
             int[] begin = new int[] { 0, 2, 30 };
             int[] end = new int[] { 25, 1, 1 };
-            string result = Other.TimeSubtract(begin, end);
+            string result = OtherUtil.TimeSubtract(begin, end);
 
             Assert.AreEqual(expResult, result);
         }
@@ -60,7 +60,7 @@ namespace mp4box.Utility.Tests
 
             int[] begin = new int[] { 0, 2, 30 };
             int[] end = new int[] { 50, 1, 1 };
-            string result = Other.TimeSubtract(begin, end);
+            string result = OtherUtil.TimeSubtract(begin, end);
 
             Assert.AreEqual(expResult, result);
         }

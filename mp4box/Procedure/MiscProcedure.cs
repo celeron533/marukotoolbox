@@ -53,7 +53,7 @@ namespace mp4box.Procedure
             };
 
             string clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""",
-                    workPath, beginTimeStr, Other.TimeSubtract(begin, end), inputVideoFilePath, outputVideoFilePath) + Environment.NewLine + "cmd";
+                    workPath, beginTimeStr, OtherUtil.TimeSubtract(begin, end), inputVideoFilePath, outputVideoFilePath) + Environment.NewLine + "cmd";
             //clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{3}"" -ss {1} -to {2} -y  -c copy ""{4}""", workPath, maskb.Text, maske.Text, namevideo4, nameout5) + Environment.NewLine + "cmd";
             batpath = workPath + "\\clip.bat";
             // TODO: Log function

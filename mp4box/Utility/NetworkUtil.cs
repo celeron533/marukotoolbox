@@ -6,7 +6,7 @@ using System.Text;
 
 namespace mp4box.Utility
 {
-    public static class Network
+    public static class NetworkUtil
     {
         [DllImport("wininet.dll")]
         private extern static bool InternetGetConnectedState(int Description, int ReservedValue);

@@ -135,10 +135,10 @@
     </Compile>
     <Compile Include="MediaInfo\MediaInfoWrapper.cs" />
     <Compile Include="Procedure\MiscProcedure.cs" />
-    <Compile Include="Utility\AssemblyInfo.cs" />
-    <Compile Include="Utility\Dialog.cs" />
-    <Compile Include="Utility\Network.cs" />
-    <Compile Include="Utility\OSInfo.cs" />
+    <Compile Include="Utility\AssemblyUtil.cs" />
+    <Compile Include="Utility\DialogUtil.cs" />
+    <Compile Include="Utility\NetworkUtil.cs" />
+    <Compile Include="Utility\OSInfoUtil.cs" />
     <Compile Include="Preset.cs" />
     <Compile Include="Procedure\OnePicProcedure.cs" />
     <Compile Include="Procedure\ProcedureBase.cs" />
@@ -149,7 +149,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Extension\StringBuilderExtension.cs" />
-    <Compile Include="Utility\FileString.cs" />
+    <Compile Include="Utility\FileStringUtil.cs" />
     <Compile Include="SplashScreenApplicationContext.cs" />
     <Compile Include="StartUpClass.cs" />
     <Compile Include="Supplements.cs" />
@@ -175,7 +175,7 @@
     <Compile Include="MediaInfo\MediaInfoDLL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility\Other.cs" />
+    <Compile Include="Utility\OtherUtil.cs" />
     <Compile Include="Win32API.cs" />
     <Compile Include="WorkingForm.cs">
       <SubType>Form</SubType>
