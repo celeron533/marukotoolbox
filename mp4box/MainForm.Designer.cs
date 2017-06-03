@@ -516,7 +516,6 @@
             this.MediaInfoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.MediaInfoTextBox, "MediaInfoTextBox");
             this.MediaInfoTextBox.Name = "MediaInfoTextBox";
-            this.MediaInfoTextBox.TextChanged += new System.EventHandler(this.MediaInfoTextBox_TextChanged);
             this.MediaInfoTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.MediaInfoTextBox_DragDrop);
             this.MediaInfoTextBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.MediaInfoTextBox_DragEnter);
             this.MediaInfoTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MediaInfoTextBox_KeyDown);

@@ -78,8 +78,7 @@ namespace mp4box
         private string videoOutput;
         private string videoSubtitle = "";
 
-        private string MIvideo = "";
-        private string MItext = "把视频文件拖到这里";
+        private string mediaInfoFile;
 
         private string mkvmerge;
         private string mux;
@@ -2030,32 +2029,6 @@ namespace mp4box
             }
         }
 
-        private void MediaInfoVideoInputButton_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_6); //"视频(*.mp4;*.flv;*.mkv)|*.mp4;*.flv;*.mkv|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                MIvideo = openFileDialog1.FileName;
-                MediaInfoTextBox.Text = GetMediaInfoString(MIvideo);
-            }
-        }
-
-        private void MediaInfoPlayVideoButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start(MIvideo);
-            }
-            catch
-            { }
-        }
-
-        private void MediaInfoCopyButton_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(MItext);
-        }
-
         private void ExtractMkvInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_2); //"视频(*.mkv)|*.mkv";
@@ -2095,11 +2068,6 @@ namespace mp4box
         {
             //MKV 抽4
             ExtractTrack(extractMkvInput, 4);
-        }
-
-        private void MediaInfoTextBox_TextChanged(object sender, EventArgs e)
-        {
-            MItext = MediaInfoTextBox.Text;
         }
 
         [Obsolete("Not used")]
@@ -3667,12 +3635,6 @@ namespace mp4box
             }
         }
 
-        //Ctrl+A 可以全选文本
-        private void MediaInfoTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            TextBoxSelectAll(sender, e);
-        }
-
         private void AvsScriptTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             TextBoxSelectAll(sender, e);
@@ -3683,25 +3645,58 @@ namespace mp4box
             TextBoxSelectAll(sender, e);
         }
 
+        //Ctrl+A 可以全选文本
         private void TextBoxSelectAll(object sender, KeyEventArgs e)
         {
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.A)
                 ((TextBoxBase)sender).SelectAll();  // using TextBoxBase to include TextBox, RichTextBox and MaskedTextBox
         }
 
-
-        private void MediaInfoTextBox_DragDrop(object sender, DragEventArgs e)
-        {
-            MIvideo = ((System.Array)e.Data.GetData(DataFormats.FileDrop)).GetValue(0).ToString();
-            MediaInfoTextBox.Text = GetMediaInfoString(MIvideo);
-        }
+        #region MediaInfo
 
         private void MediaInfoTextBox_DragEnter(object sender, DragEventArgs e)
         {
+            // Only allows file drop as link
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Link;
             else e.Effect = DragDropEffects.None;
         }
+
+        private void MediaInfoTextBox_DragDrop(object sender, DragEventArgs e)
+        {
+            mediaInfoFile = ((System.Array)e.Data.GetData(DataFormats.FileDrop)).GetValue(0).ToString();
+            MediaInfoTextBox.Text = GetMediaInfoString(mediaInfoFile);
+        }
+
+
+        private void MediaInfoVideoInputButton_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_6); //"视频(*.mp4;*.flv;*.mkv)|*.mp4;*.flv;*.mkv|所有文件(*.*)|*.*";
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                mediaInfoFile = openFileDialog1.FileName;
+                MediaInfoTextBox.Text = GetMediaInfoString(mediaInfoFile);
+            }
+        }
+
+        private void MediaInfoPlayVideoButton_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(mediaInfoFile))
+                Process.Start(mediaInfoFile);
+        }
+
+        private void MediaInfoTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBoxSelectAll(sender, e);
+        }
+
+        private void MediaInfoCopyButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(MediaInfoTextBox.Text);
+        }
+
+        #endregion MediaInfo
 
 
         #region CheckUpdate
