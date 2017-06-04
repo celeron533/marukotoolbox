@@ -65,10 +65,6 @@ namespace mp4box
         private string avsVideoInput = "video";
         private string extractFlvInput = "";
         private string extractMkvInput = "";
-        private string muxMkvAudio = "";
-        private string muxMkvOutput;
-        private string muxMkvSubtitle;
-        private string muxMkvVideoInput = "";
         private string muxMp4AudioInput = "";
         private string muxMp4Output;
         private string muxMp4VideoInput = "";
@@ -78,7 +74,6 @@ namespace mp4box
 
         private string mediaInfoFile;
 
-        private string mkvmerge;
         private string mux;
         private string x264;
         private string ffmpeg;
@@ -1115,52 +1110,36 @@ namespace mp4box
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.ALL); //"所有文件(*.*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                muxMkvVideoInput = openFileDialog1.FileName;
-                MuxMkvVideoInputTextBox.Text = muxMkvVideoInput;
+                MuxMkvVideoInputTextBox.Text = openFileDialog1.FileName;
             }
         }
 
         private void MuxMkvStartButton_Click(object sender, EventArgs e)
         {
-            if (muxMkvVideoInput == "" && muxMkvAudio == "")
+            if (MuxMkvVideoInputTextBox.Text == "" && MuxMkvAudioInputTextBox.Text == "")
             {
                 MessageBoxExtension.ShowErrorMessage("请选择文件");
+                return;
             }
-            else
+
+            MuxMkvProcedure muxMkvProcedure = new MuxMkvProcedure(workPath);
+            muxMkvProcedure.GetDataFromUI(p =>
             {
-                if (MuxMkvAudioInputTextBox.Text != "" && MuxMkvSubtitleTextBox.Text != "")
-                {
-                    mkvmerge = "\"" + workPath + "\\mkvmerge.exe\" -o \"" + muxMkvOutput + "\" \"" + muxMkvVideoInput + "\" \"" + muxMkvAudio + "\" \"" + muxMkvSubtitle + "\"";
-                }
-                if (MuxMkvAudioInputTextBox.Text == "" && MuxMkvSubtitleTextBox.Text == "")
-                {
-                    mkvmerge = "\"" + workPath + "\\mkvmerge.exe\" -o \"" + muxMkvOutput + "\" \"" + muxMkvVideoInput + "\"";
-                }
-                if (MuxMkvAudioInputTextBox.Text != "" && MuxMkvSubtitleTextBox.Text == "")
-                {
-                    mkvmerge = "\"" + workPath + "\\mkvmerge.exe\" -o \"" + muxMkvOutput + "\" \"" + muxMkvVideoInput + "\" \"" + muxMkvAudio + "\"";
-                }
-                if (MuxMkvAudioInputTextBox.Text == "" && MuxMkvSubtitleTextBox.Text != "")
-                {
-                    mkvmerge = "\"" + workPath + "\\mkvmerge.exe\" -o \"" + muxMkvOutput + "\" \"" + muxMkvVideoInput + "\" \"" + muxMkvSubtitle + "\"";
-                }
-                mkvmerge += "\r\ncmd";
-                batpath = workPath + "\\mkvmerge.bat";
-                File.WriteAllText(batpath, mkvmerge, Encoding.Default);
-                LogRecord(mkvmerge);
-                Process.Start(batpath);
-            }
+                p.output = MuxMkvOutputTextBox.Text;
+                p.videoInput = MuxMkvVideoInputTextBox.Text;
+                p.audioInput = MuxMkvAudioInputTextBox.Text;
+                p.subtitleInput = MuxMkvSubtitleTextBox.Text;
+            });
+            muxMkvProcedure.Execute();
         }
 
         private void MuxMkvOutputButton_Click(object sender, EventArgs e)
         {
-            SaveFileDialog savefile = new SaveFileDialog();
-            savefile.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_2); //"视频(*.mkv)|*.mkv";
-            DialogResult result = savefile.ShowDialog();
-            if (result == DialogResult.OK)
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_2); //"视频(*.mkv)|*.mkv";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                muxMkvOutput = savefile.FileName;
-                MuxMkvOutputTextBox.Text = muxMkvOutput;
+                MuxMkvOutputTextBox.Text = saveFileDialog.FileName;
             }
         }
 
@@ -1169,8 +1148,7 @@ namespace mp4box
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.AUDIO_1); //"音频(*.mp3;*.aac;*.ac3)|*.mp3;*.aac;*.ac3|所有文件(*.*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                muxMkvAudio = openFileDialog1.FileName;
-                MuxMkvAudioInputTextBox.Text = muxMkvAudio;
+                MuxMkvAudioInputTextBox.Text = openFileDialog1.FileName;
             }
         }
 
@@ -1179,58 +1157,42 @@ namespace mp4box
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.SUBTITLE_2); //"字幕(*.ass;*.ssa;*.srt;*.idx;*.sup)|*.ass;*.ssa;*.srt;*.idx;*.sup|所有文件(*.*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                muxMkvSubtitle = openFileDialog1.FileName;
-                MuxMkvSubtitleTextBox.Text = muxMkvSubtitle;
+                MuxMkvSubtitleTextBox.Text = openFileDialog1.FileName;
             }
         }
 
         private void MuxMkvVideoInputTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(MuxMkvVideoInputTextBox.Text.ToString()))
+            if (File.Exists(MuxMkvVideoInputTextBox.Text))
             {
-                muxMkvVideoInput = MuxMkvVideoInputTextBox.Text;
-                string finish = muxMkvVideoInput.Remove(muxMkvVideoInput.LastIndexOf("."));
-                finish += "_mkv封装.mkv";
-                MuxMkvOutputTextBox.Text = finish;
+                string muxMkvVideoInput = MuxMkvVideoInputTextBox.Text;
+                string outputFileName = muxMkvVideoInput.Remove(muxMkvVideoInput.LastIndexOf("."));
+                outputFileName += "_mkv封装.mkv";
+                MuxMkvOutputTextBox.Text = outputFileName;
             }
-        }
-
-        private void MuxMkvAudioInputTextBox_TextChanged(object sender, EventArgs e)
-        {
-            muxMkvAudio = MuxMkvAudioInputTextBox.Text;
-        }
-
-        private void MuxMkvSubtitleTextBox_TextChanged(object sender, EventArgs e)
-        {
-            muxMkvSubtitle = MuxMkvSubtitleTextBox.Text;
-        }
-
-        private void MuxMkvOutputTextBox_TextChanged(object sender, EventArgs e)
-        {
-            muxMkvOutput = MuxMkvOutputTextBox.Text;
         }
 
         private void MuxMkvOutputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(MuxMkvOutputTextBox.Text.ToString()))
+            if (File.Exists(MuxMkvOutputTextBox.Text))
             {
-                Process.Start(MuxMkvOutputTextBox.Text.ToString());
+                Process.Start(MuxMkvOutputTextBox.Text);
             }
         }
 
         private void MuxMkvVideoInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(MuxMkvVideoInputTextBox.Text.ToString()))
+            if (File.Exists(MuxMkvVideoInputTextBox.Text))
             {
-                Process.Start(MuxMkvVideoInputTextBox.Text.ToString());
+                Process.Start(MuxMkvVideoInputTextBox.Text);
             }
         }
 
         private void MuxMkvAudioInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(MuxMkvAudioInputTextBox.Text.ToString()))
+            if (File.Exists(MuxMkvAudioInputTextBox.Text))
             {
-                Process.Start(MuxMkvAudioInputTextBox.Text.ToString());
+                Process.Start(MuxMkvAudioInputTextBox.Text);
             }
         }
 

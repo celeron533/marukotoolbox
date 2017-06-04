@@ -1532,7 +1532,6 @@
             resources.ApplyResources(this.MuxMkvSubtitleTextBox, "MuxMkvSubtitleTextBox");
             this.MuxMkvSubtitleTextBox.Name = "MuxMkvSubtitleTextBox";
             this.MuxMkvSubtitleTextBox.ReadOnly = true;
-            this.MuxMkvSubtitleTextBox.TextChanged += new System.EventHandler(this.MuxMkvSubtitleTextBox_TextChanged);
             // 
             // MuxMkvAudioInputButton
             // 
@@ -1550,7 +1549,6 @@
             resources.ApplyResources(this.MuxMkvAudioInputTextBox, "MuxMkvAudioInputTextBox");
             this.MuxMkvAudioInputTextBox.Name = "MuxMkvAudioInputTextBox";
             this.MuxMkvAudioInputTextBox.ReadOnly = true;
-            this.MuxMkvAudioInputTextBox.TextChanged += new System.EventHandler(this.MuxMkvAudioInputTextBox_TextChanged);
             this.MuxMkvAudioInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MuxMkvAudioInputTextBox_MouseDoubleClick);
             // 
             // MuxMkvSubtitleButton
@@ -1568,7 +1566,6 @@
             this.MuxMkvOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.MuxMkvOutputTextBox, "MuxMkvOutputTextBox");
             this.MuxMkvOutputTextBox.Name = "MuxMkvOutputTextBox";
-            this.MuxMkvOutputTextBox.TextChanged += new System.EventHandler(this.MuxMkvOutputTextBox_TextChanged);
             this.MuxMkvOutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MuxMkvOutputTextBox_MouseDoubleClick);
             // 
             // MuxMkvVideoInputButton

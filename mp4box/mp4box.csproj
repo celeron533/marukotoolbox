@@ -136,6 +136,7 @@
     <Compile Include="MediaInfo\MediaInfoWrapper.cs" />
     <Compile Include="Procedure\BlackProcedure.cs" />
     <Compile Include="Procedure\MiscProcedure.cs" />
+    <Compile Include="Procedure\MuxMkvProcedure.cs" />
     <Compile Include="Utility\AssemblyUtil.cs" />
     <Compile Include="Utility\DialogUtil.cs" />
     <Compile Include="Utility\NetworkUtil.cs" />
