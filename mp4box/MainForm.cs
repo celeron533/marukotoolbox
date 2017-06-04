@@ -57,7 +57,6 @@ namespace mp4box
         private int indexofsource;
         private int indexoftarget;
         private byte x264mode = 1;
-        private string clip = "";
 
         private string audioInput = "";
         private string audioOutput;
@@ -94,7 +93,7 @@ namespace mp4box
         private string tempPic = "";
         private string logFileName, logPath;
         private string tempfilepath;
-        private DateTime ReleaseDate = Utility.AssemblyUtil.GetAssemblyVersionTime();
+        private DateTime ReleaseDate = AssemblyUtil.GetAssemblyVersionTime();
 
         #endregion Private Members Declaration
 
@@ -579,10 +578,8 @@ namespace mp4box
         /// <summary>
         /// 还原默认参数
         /// </summary>
-        private void InitParameter()
+        private void ResetParameters()
         {
-            #region Video Tab
-
             VideoCrfNumericUpDown.Value = 23.5m;
             VideoBitrateNumericUpDown.Value = 800;
             VideoAudioParameterTextBox.Text = "--abitrate 128";
@@ -597,18 +594,10 @@ namespace mp4box
             VideoModeCrfRadioButton.Checked = true;
             VideoAutoShutdownCheckBox.Checked = false;
 
-            #endregion Video Tab
-
-            #region Audio Tab
-
             AudioEncoderComboBox.SelectedIndex = 0;
             AudioPresetComboBox.SelectedIndex = 0;
             AudioBitrateComboBox.Text = "128";
             AudioAudioModeBitrateRadioButton.Checked = true;
-
-            #endregion Audio Tab
-
-            #region General Tab
 
             MiscOnePicBitrateNumericUpDown.Value = 128;
             MiscOnePicFpsNumericUpDown.Value = 1;
@@ -620,27 +609,14 @@ namespace mp4box
 
             MiscMiscBeginTimeMaskedTextBox.Text = "000000";
             MiscMiscEndTimeMaskedTextBox.Text = "000020";
-
             MiscMiscTransposeComboBox.SelectedIndex = 1;
-
-            #endregion General Tab
-
-            #region Mux Tab
 
             MuxMp4FpsComboBox.SelectedIndex = 0;
             MuxMp4ParComboBox.SelectedIndex = 0;
             MuxConvertAacEncoderComboBox.SelectedIndex = 0;
             MuxConvertFormatComboBox.Text = "flv";
 
-            #endregion Mux Tab
-
-            #region AVS Tab
-
             AvsIncludeAudioCheckBox.Checked = false;
-
-            #endregion AVS Tab
-
-            #region Setup Tab
 
             ConfigUiSplashScreenCheckBox.Checked = true;
             ConfigUiTrayModeCheckBox.Checked = false;
@@ -649,8 +625,6 @@ namespace mp4box
             ConfigFunctionDeleteTempFileCheckBox.Checked = true;
             ConfigFunctionAutoCheckUpdateCheckBox.Checked = true;
             ConfigFunctionEnableX265CheckBox.Checked = false;
-
-            #endregion Setup Tab
         }
 
         private void LoadSettings()
@@ -1139,8 +1113,7 @@ namespace mp4box
         private void MuxMkvVideoInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.ALL); //"所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 muxMkvVideoInput = openFileDialog1.FileName;
                 MuxMkvVideoInputTextBox.Text = muxMkvVideoInput;
@@ -1194,8 +1167,7 @@ namespace mp4box
         private void MuxMkvAudioInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.AUDIO_1); //"音频(*.mp3;*.aac;*.ac3)|*.mp3;*.aac;*.ac3|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 muxMkvAudio = openFileDialog1.FileName;
                 MuxMkvAudioInputTextBox.Text = muxMkvAudio;
@@ -1205,8 +1177,7 @@ namespace mp4box
         private void MuxMkvSubtitleButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.SUBTITLE_2); //"字幕(*.ass;*.ssa;*.srt;*.idx;*.sup)|*.ass;*.ssa;*.srt;*.idx;*.sup|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 muxMkvSubtitle = openFileDialog1.FileName;
                 MuxMkvSubtitleTextBox.Text = muxMkvSubtitle;
@@ -1342,8 +1313,7 @@ namespace mp4box
         private void MuxMp4AudioInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.AUDIO_3); //"音频(*.mp4;*.aac;*.mp2;*.mp3;*.m4a;*.ac3)|*.mp4;*.aac;*.mp2;*.mp3;*.m4a;*.ac3|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 muxMp4AudioInput = openFileDialog1.FileName;
                 MuxMp4AudioInputTextBox.Text = muxMp4AudioInput;
@@ -1353,8 +1323,7 @@ namespace mp4box
         private void MuxMp4VideoInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_9);//"视频(*.avi;*.mp4;*.m1v;*.m2v;*.m4v;*.264;*.h264;*.hevc)|*.avi;*.mp4;*.m1v;*.m2v;*.m4v;*.264;*.h264;*.hevc|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 muxMp4VideoInput = openFileDialog1.FileName;
                 MuxMp4VideoInputTextBox.Text = muxMp4VideoInput;
@@ -1365,8 +1334,7 @@ namespace mp4box
         {
             SaveFileDialog savefile = new SaveFileDialog();
             savefile.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_3);  //"视频(*.mp4)|*.mp4";
-            DialogResult result = savefile.ShowDialog();
-            if (result == DialogResult.OK)
+            if (savefile.ShowDialog() == DialogResult.OK)
             {
                 muxMp4Output = savefile.FileName;
                 MuxMp4OutputTextBox.Text = muxMp4Output;
@@ -1522,8 +1490,7 @@ namespace mp4box
         {
             openFileDialog1.Multiselect = true;
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.ALL); //"所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 MuxConvertItemListBox.Items.AddRange(openFileDialog1.FileNames);
             }
@@ -1626,8 +1593,7 @@ namespace mp4box
         private void ExtractMkvInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_2); //"视频(*.mkv)|*.mkv";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 extractMkvInput = openFileDialog1.FileName;
                 ExtractMkvInputTextBox.Text = extractMkvInput;
@@ -1712,8 +1678,7 @@ namespace mp4box
         private void ExtractFlvInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_4); //"视频(*.flv;*.hlv)|*.flv;*.hlv";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 extractFlvInput = openFileDialog1.FileName;
                 ExtractFlvInputTextBox.Text = muxMp4VideoInput;
@@ -1735,8 +1700,7 @@ namespace mp4box
         private void ExtractMp4InputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_5); //"视频(*.mp4)|*.mp4|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 muxMp4VideoInput = openFileDialog1.FileName;
                 ExtractMp4InputTextBox.Text = muxMp4VideoInput;
@@ -1901,8 +1865,7 @@ namespace mp4box
         private void VideoInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_8); //"视频(*.mp4;*.flv;*.mkv;*.avi;*.wmv;*.mpg;*.avs)|*.mp4;*.flv;*.mkv;*.avi;*.wmv;*.mpg;*.avs|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 videoInput = openFileDialog1.FileName;
                 VideoInputTextBox.Text = videoInput;
@@ -1925,8 +1888,7 @@ namespace mp4box
         private void VideoSubtitleButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.SUBTITLE_1); //"字幕(*.ass;*.ssa;*.srt)|*.ass;*.ssa;*.srt|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 videoSubtitle = openFileDialog1.FileName;
                 VideoSubtitleTextBox.Text = videoSubtitle;
@@ -2334,8 +2296,7 @@ namespace mp4box
         {
             openFileDialog1.Multiselect = true;
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.ALL); //"所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 VideoBatchItemListbox.Items.AddRange(openFileDialog1.FileNames);
             }
@@ -2467,10 +2428,7 @@ namespace mp4box
             if (e.Data.GetDataPresent(DataFormats.FileDrop, false))
             {
                 String[] files = (String[])e.Data.GetData(DataFormats.FileDrop);
-                foreach (String s in files)
-                {
-                    listbox.Items.Add(s);
-                }
+                listbox.Items.AddRange(files);
                 return;
             }
             indexoftarget = listbox.IndexFromPoint(listbox.PointToClient(new Point(e.X, e.Y)));
@@ -2543,8 +2501,7 @@ namespace mp4box
         private void AudioInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.ALL); //"所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 audioInput = openFileDialog1.FileName;
                 AudioInputTextBox.Text = audioInput;
@@ -2644,8 +2601,7 @@ namespace mp4box
         {
             openFileDialog1.Multiselect = true;
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.ALL); //"所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 AudioBatchItemListBox.Items.AddRange(openFileDialog1.FileNames);
             }
@@ -2915,8 +2871,7 @@ namespace mp4box
         private void AvsSubtitleInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.SUBTITLE_2); //"字幕(*.ass;*.ssa;*.srt;*.idx;*.sup)|*.ass;*.ssa;*.srt;*.idx;*.sup|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 avsSubtitleInput = openFileDialog1.FileName;
                 AvsSubtitleInputTextBox.Text = avsSubtitleInput;
@@ -2926,8 +2881,7 @@ namespace mp4box
         private void AvsVideoInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_7); //"视频(*.mp4;*.flv;*.mkv;*.wmv)|*.mp4;*.flv;*.mkv;*.wmv|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 avsVideoInput = openFileDialog1.FileName;
                 AvsVideoInputTextBox.Text = avsVideoInput;
@@ -2954,12 +2908,11 @@ namespace mp4box
 
         private void AvsSaveButton_Click(object sender, EventArgs e)
         {
-            SaveFileDialog savefile = new SaveFileDialog();
-            savefile.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.AVS); //"AVS(*.avs)|*.avs";
-            DialogResult result = savefile.ShowDialog();
-            if (result == DialogResult.OK)
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.AVS); //"AVS(*.avs)|*.avs";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllText(savefile.FileName, AvsScriptTextBox.Text, Encoding.Default);
+                File.WriteAllText(saveFileDialog.FileName, AvsScriptTextBox.Text, Encoding.Default);
             }
         }
 
@@ -3184,9 +3137,9 @@ namespace mp4box
 
         private void VideoBatchOutputFolderButton_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            if (fbd.ShowDialog() == DialogResult.OK)
-                VideoBatchOutputFolderTextBox.Text = fbd.SelectedPath;
+            FolderBrowserDialog folderBrowerDialog = new FolderBrowserDialog();
+            if (folderBrowerDialog.ShowDialog() == DialogResult.OK)
+                VideoBatchOutputFolderTextBox.Text = folderBrowerDialog.SelectedPath;
         }
 
         private void VideoMaintainResolutionCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -3410,8 +3363,7 @@ namespace mp4box
         private void MiscOnePicInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.IMAGE); //"图片(*.jpg;*.jpeg;*.png;*.bmp;*.gif)|*.jpg;*.jpeg;*.png;*.bmp;*.gif|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 MiscOnePicInputTextBox.Text = openFileDialog1.FileName;
             }
@@ -3420,8 +3372,7 @@ namespace mp4box
         private void MiscOnePicAudioInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.AUDIO_2); //"音频(*.aac;*.mp3;*.mp4;*.wav)|*.aac;*.mp3;*.mp4;*.wav|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 MiscOnePicAudioInputTextBox.Text = openFileDialog1.FileName;
             }
@@ -3429,13 +3380,12 @@ namespace mp4box
 
         private void MiscOnePicOutputButton_Click(object sender, EventArgs e)
         {
-            SaveFileDialog savefile = new SaveFileDialog();
-            savefile.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_D_2); //"MP4视频(*.mp4)|*.mp4|FLV视频(*.flv)|*.flv";
-            savefile.FileName = "Single";
-            DialogResult result = savefile.ShowDialog();
-            if (result == DialogResult.OK)
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_D_2); //"MP4视频(*.mp4)|*.mp4|FLV视频(*.flv)|*.flv";
+            saveFileDialog.FileName = "Single";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                MiscOnePicOutputTextBox.Text = savefile.FileName;
+                MiscOnePicOutputTextBox.Text = saveFileDialog.FileName;
             }
         }
 
@@ -3508,8 +3458,7 @@ namespace mp4box
         private void MiscMiscVideoInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_6); //"视频(*.mp4;*.flv;*.mkv)|*.mp4;*.flv;*.mkv|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 MiscMiscVideoInputTextBox.Text = openFileDialog1.FileName;
             }
@@ -3517,12 +3466,11 @@ namespace mp4box
 
         private void MiscMiscVideoOutputButton_Click(object sender, EventArgs e)
         {
-            SaveFileDialog savefile = new SaveFileDialog();
-            savefile.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_1); //"视频(*.*)|*.*";
-            DialogResult result = savefile.ShowDialog();
-            if (result == DialogResult.OK)
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_1); //"视频(*.*)|*.*";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                MiscMiscVideoOutputTextBox.Text = savefile.FileName;
+                MiscMiscVideoOutputTextBox.Text = saveFileDialog.FileName;
             }
         }
 
@@ -3585,8 +3533,7 @@ namespace mp4box
         private void MiscBlackVideoInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_D_1); //"FLV视频(*.flv)|*.flv";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 MiscBlackVideoInputTextBox.Text = openFileDialog1.FileName;
             }
@@ -3594,20 +3541,18 @@ namespace mp4box
 
         private void MiscBlackOutputButton_Click(object sender, EventArgs e)
         {
-            SaveFileDialog savefile = new SaveFileDialog();
-            savefile.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_D_1); //"FLV视频(*.flv)|*.flv";
-            DialogResult result = savefile.ShowDialog();
-            if (result == DialogResult.OK)
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_D_1); //"FLV视频(*.flv)|*.flv";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                MiscBlackOutputTextBox.Text = savefile.FileName;
+                MiscBlackOutputTextBox.Text = saveFileDialog.FileName;
             }
         }
 
         private void MiscBlackPicInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.IMAGE); //"图片(*.jpg;*.jpeg;*.png;*.bmp;*.gif)|*.jpg;*.jpeg;*.png;*.bmp;*.gif|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 MiscBlackPicInputTextBox.Text = openFileDialog1.FileName;
             }
@@ -3697,10 +3642,10 @@ namespace mp4box
         }
         private void ConfigFunctionRestoreDefaultButton_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBoxExtension.ShowQuestion(string.Format("是否将所有界面参数恢复到默认设置？"), "提示");
-            if (dr == DialogResult.Yes)
+            DialogResult result = MessageBoxExtension.ShowQuestion(string.Format("是否将所有界面参数恢复到默认设置？"), "提示");
+            if (result == DialogResult.Yes)
             {
-                InitParameter();
+                ResetParameters();
                 MessageBoxExtension.ShowInfoMessage("恢复默认设置完成！");
             }
         }
@@ -3725,8 +3670,7 @@ namespace mp4box
         private void ConfigFunctionVideoPlayerButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.PROGRAM); //"程序(*.exe)|*.exe|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 ConfigFunctionVideoPlayerTextBox.Text = openFileDialog1.FileName;
             }
@@ -3782,8 +3726,7 @@ namespace mp4box
         private void MediaInfoVideoInputButton_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.VIDEO_6); //"视频(*.mp4;*.flv;*.mkv)|*.mp4;*.flv;*.mkv|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 mediaInfoFile = openFileDialog1.FileName;
                 MediaInfoTextBox.Text = GetMediaInfoString(mediaInfoFile);
