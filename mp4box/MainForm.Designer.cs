@@ -264,8 +264,8 @@
             this.HelpTab = new System.Windows.Forms.TabPage();
             this.HelpFeedbackButton = new ControlExs.QQButton();
             this.HelpContentRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.ReleaseDateLabel = new System.Windows.Forms.Label();
             this.HelpReleaseDateLabel = new System.Windows.Forms.Label();
+            this.HelpReleaseDateInfoLabel = new System.Windows.Forms.Label();
             this.HelpCheckUpdateButton = new ControlExs.QQButton();
             this.HelpHomepageButton = new ControlExs.QQButton();
             this.HelpAboutButton = new ControlExs.QQButton();
@@ -2527,8 +2527,8 @@
             // 
             this.HelpTab.Controls.Add(this.HelpFeedbackButton);
             this.HelpTab.Controls.Add(this.HelpContentRichTextBox);
-            this.HelpTab.Controls.Add(this.ReleaseDateLabel);
             this.HelpTab.Controls.Add(this.HelpReleaseDateLabel);
+            this.HelpTab.Controls.Add(this.HelpReleaseDateInfoLabel);
             this.HelpTab.Controls.Add(this.HelpCheckUpdateButton);
             this.HelpTab.Controls.Add(this.HelpHomepageButton);
             this.HelpTab.Controls.Add(this.HelpAboutButton);
@@ -2550,16 +2550,16 @@
             this.HelpContentRichTextBox.ReadOnly = true;
             this.HelpContentRichTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.HelpContentRichTextBox_LinkClicked);
             // 
-            // ReleaseDateLabel
-            // 
-            resources.ApplyResources(this.ReleaseDateLabel, "ReleaseDateLabel");
-            this.ReleaseDateLabel.Name = "ReleaseDateLabel";
-            this.ReleaseDateLabel.DoubleClick += new System.EventHandler(this.ReleaseDateLabel_DoubleClick);
-            // 
             // HelpReleaseDateLabel
             // 
             resources.ApplyResources(this.HelpReleaseDateLabel, "HelpReleaseDateLabel");
             this.HelpReleaseDateLabel.Name = "HelpReleaseDateLabel";
+            this.HelpReleaseDateLabel.DoubleClick += new System.EventHandler(this.HelpReleaseDateLabel_DoubleClick);
+            // 
+            // HelpReleaseDateInfoLabel
+            // 
+            resources.ApplyResources(this.HelpReleaseDateInfoLabel, "HelpReleaseDateInfoLabel");
+            this.HelpReleaseDateInfoLabel.Name = "HelpReleaseDateInfoLabel";
             // 
             // HelpCheckUpdateButton
             // 
@@ -2723,10 +2723,10 @@
             this.MiscBlackNoPicCheckBox.UseVisualStyleBackColor = false;
             this.MiscBlackNoPicCheckBox.CheckedChanged += new System.EventHandler(this.MiscBlackNoPicCheckBox_CheckedChanged);
             // 
-            // MiscBlackFpsComboBox
+            // MiscBlackFpsLabel
             // 
-            resources.ApplyResources(this.MiscBlackFpsLabel, "MiscBlackFpsComboBox");
-            this.MiscBlackFpsLabel.Name = "MiscBlackFpsComboBox";
+            resources.ApplyResources(this.MiscBlackFpsLabel, "MiscBlackFpsLabel");
+            this.MiscBlackFpsLabel.Name = "MiscBlackFpsLabel";
             // 
             // MiscBlackFpsNumericUpDown
             // 
@@ -3333,8 +3333,8 @@
         private ControlExs.QQCheckBox ConfigFunctionDeleteTempFileCheckBox;
         private System.Windows.Forms.ComboBox AudioBitrateComboBox;
         private ControlExs.QQButton HelpCheckUpdateButton;
+        private System.Windows.Forms.Label HelpReleaseDateInfoLabel;
         private System.Windows.Forms.Label HelpReleaseDateLabel;
-        private System.Windows.Forms.Label ReleaseDateLabel;
         private ControlExs.QQCheckBox ConfigUiTrayModeCheckBox;
         private ControlExs.QQCheckBox ConfigUiSplashScreenCheckBox;
         private System.Windows.Forms.Label ConfigX264ThreadsLabel;

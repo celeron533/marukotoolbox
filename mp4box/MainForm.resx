@@ -6798,33 +6798,6 @@
   <data name="&gt;&gt;HelpContentRichTextBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="ReleaseDateLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ReleaseDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ReleaseDateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 565</value>
-  </data>
-  <data name="ReleaseDateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 12</value>
-  </data>
-  <data name="ReleaseDateLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;ReleaseDateLabel.Name" xml:space="preserve">
-    <value>ReleaseDateLabel</value>
-  </data>
-  <data name="&gt;&gt;ReleaseDateLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ReleaseDateLabel.Parent" xml:space="preserve">
-    <value>HelpTab</value>
-  </data>
-  <data name="&gt;&gt;ReleaseDateLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="HelpReleaseDateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -6832,16 +6805,13 @@
     <value>NoControl</value>
   </data>
   <data name="HelpReleaseDateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 565</value>
+    <value>89, 565</value>
   </data>
   <data name="HelpReleaseDateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
+    <value>0, 12</value>
   </data>
   <data name="HelpReleaseDateLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="HelpReleaseDateLabel.Text" xml:space="preserve">
-    <value>发布日期</value>
+    <value>42</value>
   </data>
   <data name="&gt;&gt;HelpReleaseDateLabel.Name" xml:space="preserve">
     <value>HelpReleaseDateLabel</value>
@@ -6853,6 +6823,36 @@
     <value>HelpTab</value>
   </data>
   <data name="&gt;&gt;HelpReleaseDateLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="HelpReleaseDateInfoLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="HelpReleaseDateInfoLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="HelpReleaseDateInfoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 565</value>
+  </data>
+  <data name="HelpReleaseDateInfoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="HelpReleaseDateInfoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="HelpReleaseDateInfoLabel.Text" xml:space="preserve">
+    <value>发布日期</value>
+  </data>
+  <data name="&gt;&gt;HelpReleaseDateInfoLabel.Name" xml:space="preserve">
+    <value>HelpReleaseDateInfoLabel</value>
+  </data>
+  <data name="&gt;&gt;HelpReleaseDateInfoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HelpReleaseDateInfoLabel.Parent" xml:space="preserve">
+    <value>HelpTab</value>
+  </data>
+  <data name="&gt;&gt;HelpReleaseDateInfoLabel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="HelpCheckUpdateButton.Font" type="System.Drawing.Font, System.Drawing">
@@ -7242,34 +7242,34 @@
   <data name="&gt;&gt;MiscBlackNoPicCheckBox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="MiscBlackFpsComboBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MiscBlackFpsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MiscBlackFpsComboBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MiscBlackFpsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MiscBlackFpsComboBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiscBlackFpsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>259, 109</value>
   </data>
-  <data name="MiscBlackFpsComboBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiscBlackFpsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 12</value>
   </data>
-  <data name="MiscBlackFpsComboBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiscBlackFpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="MiscBlackFpsComboBox.Text" xml:space="preserve">
+  <data name="MiscBlackFpsLabel.Text" xml:space="preserve">
     <value>FPS</value>
   </data>
-  <data name="&gt;&gt;MiscBlackFpsComboBox.Name" xml:space="preserve">
-    <value>MiscBlackFpsComboBox</value>
+  <data name="&gt;&gt;MiscBlackFpsLabel.Name" xml:space="preserve">
+    <value>MiscBlackFpsLabel</value>
   </data>
-  <data name="&gt;&gt;MiscBlackFpsComboBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackFpsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MiscBlackFpsComboBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackFpsLabel.Parent" xml:space="preserve">
     <value>MiscBlackGroupBox</value>
   </data>
-  <data name="&gt;&gt;MiscBlackFpsComboBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiscBlackFpsLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="MiscBlackFpsNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">

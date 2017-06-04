@@ -898,7 +898,7 @@ namespace mp4box
             }
 
             //ReleaseDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
-            ReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
+            HelpReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
 
             // load Help Text
             if (File.Exists(startpath + "\\help.rtf"))
@@ -1885,6 +1885,13 @@ namespace mp4box
         {
             FeedbackForm ff = new FeedbackForm();
             ff.ShowDialog();
+        }
+
+        private void HelpReleaseDateLabel_DoubleClick(object sender, EventArgs e)
+        {
+            SplashForm sf = new SplashForm();
+            sf.Owner = this;
+            sf.Show();
         }
 
         #endregion Help Tab
@@ -3141,6 +3148,8 @@ namespace mp4box
 
         #endregion Avs Tab
 
+        #region Log
+
         public void Log(string path)
         {
             ProcessStartInfo start = new ProcessStartInfo(path);//设置运行的命令行文件问ping.exe文件，这个文件系统会自己找到
@@ -3171,24 +3180,7 @@ namespace mp4box
                 "===========" + DateTime.Now.ToString() + "===========\r\n" + log + "\r\n\r\n", Encoding.Default);
         }
 
-        private void ConfigFunctionDeleteLogButton_Click(object sender, EventArgs e)
-        {
-            if (Directory.Exists(logPath))
-            {
-                FileStringUtil.DeleteDirectoryIfExists(logPath, true);
-                MessageBoxExtension.ShowInfoMessage("已经删除日志文件。");
-            }
-            else MessageBoxExtension.ShowInfoMessage("没有找到日志文件。");
-        }
-
-        private void ConfigFunctionViewLogButton_Click(object sender, EventArgs e)
-        {
-            if (File.Exists(logFileName))
-            {
-                Process.Start(logFileName);
-            }
-            else MessageBoxExtension.ShowInfoMessage("没有找到日志文件。");
-        }
+        #endregion Log
 
         private void VideoBatchOutputFolderButton_Click(object sender, EventArgs e)
         {
@@ -3697,6 +3689,12 @@ namespace mp4box
 
         #endregion Misc Tab
 
+        #region Config Tab
+
+        private void ConfigUiTrayModeCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            trayMode = ConfigUiTrayModeCheckBox.Checked;
+        }
         private void ConfigFunctionRestoreDefaultButton_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBoxExtension.ShowQuestion(string.Format("是否将所有界面参数恢复到默认设置？"), "提示");
@@ -3706,6 +3704,40 @@ namespace mp4box
                 MessageBoxExtension.ShowInfoMessage("恢复默认设置完成！");
             }
         }
+        private void ConfigFunctionDeleteLogButton_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists(logPath))
+            {
+                FileStringUtil.DeleteDirectoryIfExists(logPath, true);
+                MessageBoxExtension.ShowInfoMessage("已经删除日志文件。");
+            }
+            else MessageBoxExtension.ShowInfoMessage("没有找到日志文件。");
+        }
+
+        private void ConfigFunctionViewLogButton_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(logFileName))
+            {
+                Process.Start(logFileName);
+            }
+            else MessageBoxExtension.ShowInfoMessage("没有找到日志文件。");
+        }
+        private void ConfigFunctionVideoPlayerButton_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.PROGRAM); //"程序(*.exe)|*.exe|所有文件(*.*)|*.*";
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                ConfigFunctionVideoPlayerTextBox.Text = openFileDialog1.FileName;
+            }
+        }
+        private void ConfigFunctionEnableX265CheckBox_Click(object sender, EventArgs e)
+        {
+            if (MessageBoxExtension.ShowQuestion("你必须重新启动小丸工具箱才能使设置的生效 是否现在重新启动？", "需要重新启动") == DialogResult.Yes)
+                Application.Restart();
+        }
+
+        #endregion Config Tab
 
         private void VideoCustomParameterTextBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -3951,31 +3983,9 @@ namespace mp4box
             shutdownState = VideoAutoShutdownCheckBox.Checked;
         }
 
-        private void ConfigUiTrayModeCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            trayMode = ConfigUiTrayModeCheckBox.Checked;
-        }
-
-        private void ReleaseDateLabel_DoubleClick(object sender, EventArgs e)
-        {
-            SplashForm sf = new SplashForm();
-            sf.Owner = this;
-            sf.Show();
-        }
-
         private void VideoGoToAudioLabel_Click(object sender, EventArgs e)
         {
             MainTabControl.SelectedIndex = 1;
-        }
-
-        private void ConfigFunctionVideoPlayerButton_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogUtil.DialogFilterTypes.PROGRAM); //"程序(*.exe)|*.exe|所有文件(*.*)|*.*";
-            DialogResult result = openFileDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                ConfigFunctionVideoPlayerTextBox.Text = openFileDialog1.FileName;
-            }
         }
 
         private void AudioBatchConcatButton_Click(object sender, EventArgs e)
@@ -4225,12 +4235,6 @@ namespace mp4box
             {
                 MessageBoxExtension.ShowErrorMessage("添加失败! Reason: " + ex.Message);
             }
-        }
-
-        private void ConfigFunctionEnableX265CheckBox_Click(object sender, EventArgs e)
-        {
-            if (MessageBoxExtension.ShowQuestion("你必须重新启动小丸工具箱才能使设置的生效 是否现在重新启动？", "需要重新启动") == DialogResult.Yes)
-                Application.Restart();
         }
     }
 }
