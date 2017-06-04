@@ -2094,65 +2094,86 @@ namespace mp4box
             }
         }
 
+        #region VideoMode RadioButtonGroup
+
         private void VideoMode2PassRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             x264mode = 2;
-            VideoBitrateLabel.Visible = true;
-            VideoBitrateNumericUpDown.Visible = true;
-            VideoCrfKbpsLabel.Visible = true;
-            VideoWidthLabel.Visible = true;
-            VideoHeightLabel.Visible = true;
-            VideoWidthNumericUpDown.Visible = true;
-            VideoHeightNumericUpDown.Visible = true;
-            VideoMaintainResolutionCheckBox.Visible = true;
-            VideoCrfLabel.Visible = false;
+
+            // Bitrate
+            VideoBitrateLabel.Visible = 
+            VideoBitrateNumericUpDown.Visible = 
+            VideoBitrateKbpsLabel.Visible = true;
+            // Crf
+            VideoCrfLabel.Visible = 
             VideoCrfNumericUpDown.Visible = false;
-            VideoPresetLabel.Visible = false;
+            // Custom parameter
             VideoCustomParameterTextBox.Visible = false;
-            VideoPresetComboBox.Visible = false;
-            VideoAddPresetButton.Visible = false;
-            VideoDeletePresetButton.Visible = false;
+            // Resolution
+            VideoHeightLabel.Visible = 
+            VideoHeightNumericUpDown.Visible = 
+            VideoWidthLabel.Visible = 
+            VideoWidthNumericUpDown.Visible = 
+            VideoMaintainResolutionCheckBox.Visible = true;
+            // Preset
+            VideoAddPresetButton.Visible = 
+            VideoDeletePresetButton.Visible = 
+            VideoPresetComboBox.Visible = 
+            VideoPresetLabel.Visible = false;
         }
 
         private void VideoModeCustomRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             x264mode = 0;
-            VideoPresetLabel.Visible = true;
-            VideoCustomParameterTextBox.Visible = true;
-            VideoPresetComboBox.Visible = true;
-            VideoAddPresetButton.Visible = true;
-            VideoDeletePresetButton.Visible = true;
-            VideoWidthLabel.Visible = false;
-            VideoHeightLabel.Visible = false;
-            VideoWidthNumericUpDown.Visible = false;
-            VideoHeightNumericUpDown.Visible = false;
-            VideoMaintainResolutionCheckBox.Visible = false;
-            VideoBitrateLabel.Visible = false;
-            VideoBitrateNumericUpDown.Visible = false;
-            VideoCrfKbpsLabel.Visible = false;
-            VideoCrfLabel.Visible = false;
+            // Bitrate
+            VideoBitrateLabel.Visible = 
+            VideoBitrateNumericUpDown.Visible = 
+            VideoBitrateKbpsLabel.Visible = false;
+            // Crf
+            VideoCrfLabel.Visible = 
             VideoCrfNumericUpDown.Visible = false;
+            // Custom parameter
+            VideoCustomParameterTextBox.Visible = true;
+            // Resolution
+            VideoHeightLabel.Visible = 
+            VideoHeightNumericUpDown.Visible = 
+            VideoWidthLabel.Visible = 
+            VideoWidthNumericUpDown.Visible = 
+            VideoMaintainResolutionCheckBox.Visible = false;
+            // Preset
+            VideoAddPresetButton.Visible = 
+            VideoDeletePresetButton.Visible = 
+            VideoPresetComboBox.Visible = 
+            VideoPresetLabel.Visible = true;
+
         }
 
         private void VideoModeCrfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             x264mode = 1;
-            VideoCrfLabel.Visible = true;
+            // Bitrate
+            VideoBitrateLabel.Visible = 
+            VideoBitrateNumericUpDown.Visible = 
+            VideoBitrateKbpsLabel.Visible = false;
+            // Crf
+            VideoCrfLabel.Visible = 
             VideoCrfNumericUpDown.Visible = true;
-            VideoWidthLabel.Visible = true;
-            VideoHeightLabel.Visible = true;
-            VideoWidthNumericUpDown.Visible = true;
-            VideoHeightNumericUpDown.Visible = true;
-            VideoMaintainResolutionCheckBox.Visible = true;
-            VideoBitrateLabel.Visible = false;
-            VideoBitrateNumericUpDown.Visible = false;
-            VideoCrfKbpsLabel.Visible = false;
-            VideoPresetLabel.Visible = false;
+            // Custom parameter
             VideoCustomParameterTextBox.Visible = false;
-            VideoPresetComboBox.Visible = false;
-            VideoAddPresetButton.Visible = false;
-            VideoDeletePresetButton.Visible = false;
+            // Resolution
+            VideoHeightLabel.Visible = 
+            VideoHeightNumericUpDown.Visible = 
+            VideoWidthLabel.Visible = 
+            VideoWidthNumericUpDown.Visible = 
+            VideoMaintainResolutionCheckBox.Visible = true;
+            // Preset
+            VideoAddPresetButton.Visible = 
+            VideoDeletePresetButton.Visible = 
+            VideoPresetComboBox.Visible = 
+            VideoPresetLabel.Visible = false;
         }
+
+        #endregion VideoMode RadioButtonGroup
 
         private void ConfigX264PriorityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {

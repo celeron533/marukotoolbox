@@ -250,7 +250,7 @@
             this.VideoPresetComboBox = new System.Windows.Forms.ComboBox();
             this.VideoAudioModeLabel = new System.Windows.Forms.Label();
             this.VideoGoToAudioLabel = new System.Windows.Forms.Label();
-            this.VideoCrfKbpsLabel = new System.Windows.Forms.Label();
+            this.VideoBitrateKbpsLabel = new System.Windows.Forms.Label();
             this.VideoCrfLabel = new System.Windows.Forms.Label();
             this.VideoHeightLabel = new System.Windows.Forms.Label();
             this.VideoWidthLabel = new System.Windows.Forms.Label();
@@ -2044,7 +2044,7 @@
             this.VideoTab.Controls.Add(this.VideoPresetComboBox);
             this.VideoTab.Controls.Add(this.VideoAudioModeLabel);
             this.VideoTab.Controls.Add(this.VideoGoToAudioLabel);
-            this.VideoTab.Controls.Add(this.VideoCrfKbpsLabel);
+            this.VideoTab.Controls.Add(this.VideoBitrateKbpsLabel);
             this.VideoTab.Controls.Add(this.VideoCrfLabel);
             this.VideoTab.Controls.Add(this.VideoHeightLabel);
             this.VideoTab.Controls.Add(this.VideoWidthLabel);
@@ -2416,8 +2416,8 @@
             // 
             // VideoCrfKbpsLabel
             // 
-            resources.ApplyResources(this.VideoCrfKbpsLabel, "VideoCrfKbpsLabel");
-            this.VideoCrfKbpsLabel.Name = "VideoCrfKbpsLabel";
+            resources.ApplyResources(this.VideoBitrateKbpsLabel, "VideoCrfKbpsLabel");
+            this.VideoBitrateKbpsLabel.Name = "VideoCrfKbpsLabel";
             // 
             // VideoCrfLabel
             // 
@@ -3204,7 +3204,7 @@
         private System.Windows.Forms.ComboBox VideoPresetComboBox;
         private System.Windows.Forms.Label VideoAudioModeLabel;
         private System.Windows.Forms.Label VideoGoToAudioLabel;
-        private System.Windows.Forms.Label VideoCrfKbpsLabel;
+        private System.Windows.Forms.Label VideoBitrateKbpsLabel;
         private System.Windows.Forms.Panel VideoX264ModePanel;
         private ControlExs.QQRadioButton VideoModeCrfRadioButton;
         private ControlExs.QQRadioButton VideoModeCustomRadioButton;
