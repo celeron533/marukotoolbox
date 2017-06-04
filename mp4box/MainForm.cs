@@ -300,7 +300,7 @@ namespace mp4box
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\neroAacEnc.exe\" -ignorelength " + AudioCustomParameterTextBox.Text.ToString() + " -if - -of \"" + output + "\"";
+                        ffmpeg += "\"" + workPath + "\\neroAacEnc.exe\" -ignorelength " + AudioCustomParameterTextBox.Text + " -if - -of \"" + output + "\"";
                     }
                     break;
 
@@ -311,7 +311,7 @@ namespace mp4box
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\qaac.exe\" --ignorelength " + AudioCustomParameterTextBox.Text.ToString() + " - -o \"" + output + "\"";
+                        ffmpeg += "\"" + workPath + "\\qaac.exe\" --ignorelength " + AudioCustomParameterTextBox.Text + " - -o \"" + output + "\"";
                     }
                     break;
 
@@ -336,12 +336,12 @@ namespace mp4box
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\fdkaac.exe\" --ignorelength " + AudioCustomParameterTextBox.Text.ToString() + " - -o \"" + output + "\"";
+                        ffmpeg += "\"" + workPath + "\\fdkaac.exe\" --ignorelength " + AudioCustomParameterTextBox.Text + " - -o \"" + output + "\"";
                     }
                     break;
 
                 case 6:
-                    ffmpeg = "\"" + workPath + "\\ffmpeg.exe\" -i \"" + input + "\" -c:a ac3 -b:a " + AudioBitrateComboBox.Text.ToString() + "k \"" + output + "\"";
+                    ffmpeg = "\"" + workPath + "\\ffmpeg.exe\" -i \"" + input + "\" -c:a ac3 -b:a " + AudioBitrateComboBox.Text + "k \"" + output + "\"";
                     break;
 
                 case 7:
@@ -351,7 +351,7 @@ namespace mp4box
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\lame.exe\" " + AudioCustomParameterTextBox.Text.ToString() + " - \"" + output + "\"";
+                        ffmpeg += "\"" + workPath + "\\lame.exe\" " + AudioCustomParameterTextBox.Text + " - \"" + output + "\"";
                     }
                     break;
 
@@ -1063,9 +1063,9 @@ namespace mp4box
 
         private void AudioOutputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(AudioOutputTextBox.Text.ToString()))
+            if (File.Exists(AudioOutputTextBox.Text))
             {
-                Process.Start(AudioOutputTextBox.Text.ToString());
+                Process.Start(AudioOutputTextBox.Text);
             }
         }
 
@@ -1348,17 +1348,17 @@ namespace mp4box
 
         private void MuxMp4OutputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(MuxMp4OutputTextBox.Text.ToString()))
+            if (File.Exists(MuxMp4OutputTextBox.Text))
             {
-                Process.Start(MuxMp4OutputTextBox.Text.ToString());
+                Process.Start(MuxMp4OutputTextBox.Text);
             }
         }
 
         private void MuxMp4VideoInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(MuxMp4VideoInputTextBox.Text.ToString()))
+            if (File.Exists(MuxMp4VideoInputTextBox.Text))
             {
-                Process.Start(MuxMp4VideoInputTextBox.Text.ToString());
+                Process.Start(MuxMp4VideoInputTextBox.Text);
             }
         }
 
@@ -1529,7 +1529,7 @@ namespace mp4box
 
         private void ExtractMkvInputTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(ExtractMkvInputTextBox.Text.ToString()))
+            if (File.Exists(ExtractMkvInputTextBox.Text))
             {
                 extractMkvInput = ExtractMkvInputTextBox.Text;
             }
@@ -1537,9 +1537,9 @@ namespace mp4box
 
         private void ExtractMkvInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(ExtractMkvInputTextBox.Text.ToString()))
+            if (File.Exists(ExtractMkvInputTextBox.Text))
             {
-                Process.Start(ExtractMkvInputTextBox.Text.ToString());
+                Process.Start(ExtractMkvInputTextBox.Text);
             }
         }
 
@@ -1649,9 +1649,9 @@ namespace mp4box
 
         private void ExtractFlvInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(ExtractFlvInputTextBox.Text.ToString()))
+            if (File.Exists(ExtractFlvInputTextBox.Text))
             {
-                Process.Start(ExtractFlvInputTextBox.Text.ToString());
+                Process.Start(ExtractFlvInputTextBox.Text);
             }
         }
 
@@ -2504,7 +2504,7 @@ namespace mp4box
 
         private void AudioInputTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(AudioInputTextBox.Text.ToString()))
+            if (File.Exists(AudioInputTextBox.Text))
             {
                 audioInput = AudioInputTextBox.Text;
                 switch (AudioEncoderComboBox.SelectedIndex)
@@ -2529,9 +2529,9 @@ namespace mp4box
 
         private void AudioInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(AudioInputTextBox.Text.ToString()))
+            if (File.Exists(AudioInputTextBox.Text))
             {
-                Process.Start(AudioInputTextBox.Text.ToString());
+                Process.Start(AudioInputTextBox.Text);
             }
         }
 
@@ -2604,7 +2604,7 @@ namespace mp4box
             if (AvsScriptTextBox.Text != "")
             {
                 string filepath = workPath + "\\temp.avs";
-                File.WriteAllText(filepath, AvsScriptTextBox.Text.ToString(), Encoding.Default);
+                File.WriteAllText(filepath, AvsScriptTextBox.Text, Encoding.Default);
                 if (File.Exists(ConfigFunctionVideoPlayerTextBox.Text))
                 {
                     Process.Start(ConfigFunctionVideoPlayerTextBox.Text, filepath);
@@ -2628,15 +2628,15 @@ namespace mp4box
 
         private void AvsOutputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(AvsOutputTextBox.Text.ToString()))
+            if (File.Exists(AvsOutputTextBox.Text))
             {
-                Process.Start(AvsOutputTextBox.Text.ToString());
+                Process.Start(AvsOutputTextBox.Text);
             }
         }
 
         private void AvsVideoInputTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(AvsVideoInputTextBox.Text.ToString()))
+            if (File.Exists(AvsVideoInputTextBox.Text))
             {
                 avsVideoInput = AvsVideoInputTextBox.Text;
                 string finish = avsVideoInput.Remove(avsVideoInput.LastIndexOf("."));
@@ -2824,9 +2824,9 @@ namespace mp4box
 
         private void AvsVideoInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(AvsVideoInputTextBox.Text.ToString()))
+            if (File.Exists(AvsVideoInputTextBox.Text))
             {
-                Process.Start(AvsVideoInputTextBox.Text.ToString());
+                Process.Start(AvsVideoInputTextBox.Text);
             }
         }
 
@@ -3353,7 +3353,7 @@ namespace mp4box
 
         private void MiscOnePicAudioInputTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(MiscOnePicAudioInputTextBox.Text.ToString()))
+            if (File.Exists(MiscOnePicAudioInputTextBox.Text))
             {
                 MiscOnePicOutputTextBox.Text = FileStringUtil.ChangeExt(MiscOnePicAudioInputTextBox.Text, "_SP.flv");
             }
@@ -3474,17 +3474,17 @@ namespace mp4box
 
         private void MiscMiscVideoInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(MiscMiscVideoInputTextBox.Text.ToString()))
+            if (File.Exists(MiscMiscVideoInputTextBox.Text))
             {
-                Process.Start(MiscMiscVideoInputTextBox.Text.ToString());
+                Process.Start(MiscMiscVideoInputTextBox.Text);
             }
         }
 
         private void MiscMiscVideoOutputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (File.Exists(MiscMiscVideoOutputTextBox.Text.ToString()))
+            if (File.Exists(MiscMiscVideoOutputTextBox.Text))
             {
-                Process.Start(MiscMiscVideoOutputTextBox.Text.ToString());
+                Process.Start(MiscMiscVideoOutputTextBox.Text);
             }
         }
 
