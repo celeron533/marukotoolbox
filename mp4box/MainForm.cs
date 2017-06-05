@@ -2102,24 +2102,24 @@ namespace mp4box
             x264mode = 2;
 
             // Bitrate
-            VideoBitrateLabel.Visible = 
-            VideoBitrateNumericUpDown.Visible = 
+            VideoBitrateLabel.Visible =
+            VideoBitrateNumericUpDown.Visible =
             VideoBitrateKbpsLabel.Visible = true;
             // Crf
-            VideoCrfLabel.Visible = 
+            VideoCrfLabel.Visible =
             VideoCrfNumericUpDown.Visible = false;
             // Custom parameter
             VideoCustomParameterTextBox.Visible = false;
             // Resolution
-            VideoHeightLabel.Visible = 
-            VideoHeightNumericUpDown.Visible = 
-            VideoWidthLabel.Visible = 
-            VideoWidthNumericUpDown.Visible = 
+            VideoHeightLabel.Visible =
+            VideoHeightNumericUpDown.Visible =
+            VideoWidthLabel.Visible =
+            VideoWidthNumericUpDown.Visible =
             VideoMaintainResolutionCheckBox.Visible = true;
             // Preset
-            VideoAddPresetButton.Visible = 
-            VideoDeletePresetButton.Visible = 
-            VideoPresetComboBox.Visible = 
+            VideoAddPresetButton.Visible =
+            VideoDeletePresetButton.Visible =
+            VideoPresetComboBox.Visible =
             VideoPresetLabel.Visible = false;
         }
 
@@ -2127,24 +2127,24 @@ namespace mp4box
         {
             x264mode = 0;
             // Bitrate
-            VideoBitrateLabel.Visible = 
-            VideoBitrateNumericUpDown.Visible = 
+            VideoBitrateLabel.Visible =
+            VideoBitrateNumericUpDown.Visible =
             VideoBitrateKbpsLabel.Visible = false;
             // Crf
-            VideoCrfLabel.Visible = 
+            VideoCrfLabel.Visible =
             VideoCrfNumericUpDown.Visible = false;
             // Custom parameter
             VideoCustomParameterTextBox.Visible = true;
             // Resolution
-            VideoHeightLabel.Visible = 
-            VideoHeightNumericUpDown.Visible = 
-            VideoWidthLabel.Visible = 
-            VideoWidthNumericUpDown.Visible = 
+            VideoHeightLabel.Visible =
+            VideoHeightNumericUpDown.Visible =
+            VideoWidthLabel.Visible =
+            VideoWidthNumericUpDown.Visible =
             VideoMaintainResolutionCheckBox.Visible = false;
             // Preset
-            VideoAddPresetButton.Visible = 
-            VideoDeletePresetButton.Visible = 
-            VideoPresetComboBox.Visible = 
+            VideoAddPresetButton.Visible =
+            VideoDeletePresetButton.Visible =
+            VideoPresetComboBox.Visible =
             VideoPresetLabel.Visible = true;
 
         }
@@ -2153,24 +2153,24 @@ namespace mp4box
         {
             x264mode = 1;
             // Bitrate
-            VideoBitrateLabel.Visible = 
-            VideoBitrateNumericUpDown.Visible = 
+            VideoBitrateLabel.Visible =
+            VideoBitrateNumericUpDown.Visible =
             VideoBitrateKbpsLabel.Visible = false;
             // Crf
-            VideoCrfLabel.Visible = 
+            VideoCrfLabel.Visible =
             VideoCrfNumericUpDown.Visible = true;
             // Custom parameter
             VideoCustomParameterTextBox.Visible = false;
             // Resolution
-            VideoHeightLabel.Visible = 
-            VideoHeightNumericUpDown.Visible = 
-            VideoWidthLabel.Visible = 
-            VideoWidthNumericUpDown.Visible = 
+            VideoHeightLabel.Visible =
+            VideoHeightNumericUpDown.Visible =
+            VideoWidthLabel.Visible =
+            VideoWidthNumericUpDown.Visible =
             VideoMaintainResolutionCheckBox.Visible = true;
             // Preset
-            VideoAddPresetButton.Visible = 
-            VideoDeletePresetButton.Visible = 
-            VideoPresetComboBox.Visible = 
+            VideoAddPresetButton.Visible =
+            VideoDeletePresetButton.Visible =
+            VideoPresetComboBox.Visible =
             VideoPresetLabel.Visible = false;
         }
 
