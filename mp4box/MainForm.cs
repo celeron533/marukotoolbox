@@ -894,7 +894,8 @@ namespace mp4box
             //检测是否含有音频
             string audio = new MediaInfoWrapper(input).a_format;
             if (!string.IsNullOrEmpty(audio)) { hasAudio = true; }
-            string sub = (VideoBatchSubtitleCheckBox.Checked) ? GetSubtitlePath(input) : string.Empty;
+            string language = VideoBatchSubtitleLanguage.Text == "none" ? string.Empty : VideoBatchSubtitleLanguage.Text;
+            string sub = (VideoBatchSubtitleCheckBox.Checked) ? FileStringUtil.SpeculateSubtitlePath(input, language) : string.Empty;
 
             int audioMode = VideoAudioModeComboBox.SelectedIndex;
             if (!hasAudio)
@@ -4023,7 +4024,8 @@ namespace mp4box
             SolidBrush BlackBrush = new SolidBrush(Color.Black);
             Color vColor = Color.Black;
             string input = VideoBatchItemListbox.Items[e.Index].ToString();
-            if (!string.IsNullOrEmpty(GetSubtitlePath(input)))
+            string language = VideoBatchSubtitleLanguage.Text == "none" ? "" : VideoBatchSubtitleLanguage.Text;
+            if (!string.IsNullOrEmpty(FileStringUtil.SpeculateSubtitlePath(input, language)))
             {
                 e.Graphics.DrawString(Convert.ToString(VideoBatchItemListbox.Items[e.Index]), e.Font, BlueBrush, e.Bounds);
             }
@@ -4031,24 +4033,6 @@ namespace mp4box
             {
                 e.Graphics.DrawString(Convert.ToString(VideoBatchItemListbox.Items[e.Index]), e.Font, BlackBrush, e.Bounds);
             }
-        }
-
-        private string GetSubtitlePath(string videoPath)
-        {
-            string sub = "";
-            string splang = "";
-            string[] subExt = { ".ass", ".ssa", ".srt" };
-            if (VideoBatchSubtitleLanguage.Text != "none")
-                splang = "." + VideoBatchSubtitleLanguage.Text;
-            foreach (string ext in subExt)
-            {
-                if (File.Exists(videoPath.Remove(videoPath.LastIndexOf(".")) + splang + ext))
-                {
-                    sub = videoPath.Remove(videoPath.LastIndexOf(".")) + splang + ext;
-                    break;
-                }
-            }
-            return sub;
         }
 
         private void VideoEncoderComboBox_SelectedIndexChanged(object sender, EventArgs e)

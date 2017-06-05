@@ -301,5 +301,24 @@ namespace mp4box.Utility
             return path.Replace("\\", "\\\\\\\\").Replace(":", "\\\\:").Replace("[", "\\[").Replace("]", "\\]");
         }
 
+        public static string SpeculateSubtitlePath(string videoFilePath, string language="")
+        {
+            string[] subExt = { "ass", "ssa", "srt" };
+            string intermediateName = Path.GetFileNameWithoutExtension(videoFilePath);
+
+            if (!string.IsNullOrEmpty(language))
+                intermediateName = "." + language;
+
+            foreach (string ext in subExt)
+            {
+                string speculateSubtitleFile = intermediateName + "." + ext;
+                if (File.Exists(speculateSubtitleFile))
+                {
+                    return speculateSubtitleFile;
+                }
+            }
+            return string.Empty;
+        }
+
     }
 }
