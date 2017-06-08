@@ -48,12 +48,12 @@ namespace mp4box.Procedure
 
             if (videoBitrate < 1000 * 1000)
             {
-                MessageBoxExtension.ShowInfoMessage("此视频不需要后黑。");
+                MessageBoxExt.ShowInfoMessage("此视频不需要后黑。");
                 return;
             }
             else if (videoBitrate > 5000 * 1000)
             {
-                MessageBoxExtension.ShowInfoMessage("此视频码率过大，请先压制再后黑。");
+                MessageBoxExt.ShowInfoMessage("此视频码率过大，请先压制再后黑。");
                 return;
             }
 

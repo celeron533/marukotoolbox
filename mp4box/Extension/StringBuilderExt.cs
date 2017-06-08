@@ -5,7 +5,7 @@ using System.Text;
 
 namespace System.Text
 {
-    public static class StringBuilderExtension
+    public static class StringBuilderExt
     {
         public static StringBuilder AppendParameters(this StringBuilder sb, params object[] parameters)
         {

@@ -11,7 +11,7 @@ namespace System.Windows.Forms
     /// https://stackoverflow.com/questions/8688479/how-to-add-an-extension-method-to-the-messagebox
     /// And MessageBox class cannot be inherited
 
-    public static class MessageBoxExtension
+    public static class MessageBoxExt
     {
         public static DialogResult ShowErrorMessage(string argMessage, string argTitle = "错误!")
         {
