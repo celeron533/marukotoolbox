@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extension\MessageBoxExt.cs" />
+    <Compile Include="Extension\OpenFileDialogExt.cs" />
     <Compile Include="FeedbackForm.cs">
       <SubType>Form</SubType>
     </Compile>
