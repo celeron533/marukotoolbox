@@ -22,13 +22,11 @@ namespace System.Windows.Forms
             return dialog.Prepare(GetDialogFilter(filterType), presetFileName);
         }
 
-        public static DialogResult ShowDialogExt(this OpenFileDialog dialog, out string selectedFileName)
+        public static DialogResult ShowDialogExt(this OpenFileDialog dialog, ref string selectedFileName)
         {
             DialogResult result;
             if ((result = dialog.ShowDialog()) == DialogResult.OK)
                 selectedFileName = dialog.FileName;
-            else
-                selectedFileName = string.Empty;
             return result;
         }
 
