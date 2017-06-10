@@ -66,9 +66,7 @@ namespace mp4box
         private string avsVideoInput = "video";
         private string extractFlvInput = "";
         private string extractMkvInput = "";
-        private string muxMp4AudioInput = "";
-        private string muxMp4Output;
-        private string muxMp4VideoInput = "";
+        private string extractMp4VideoInput = "";
         private string videoInput = "";
         private string videoOutput;
         private string videoSubtitle = "";
@@ -1208,74 +1206,75 @@ namespace mp4box
 
         private void MuxMp4VideoInputTextBox_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (MuxMp4VideoInputTextBox.Text.Trim().Length > 0)
-                {
-                    if (!File.Exists(MuxMp4VideoInputTextBox.Text.Trim()))
-                    {
-                        throw new Exception("输入文件: \r\n\r\n" + MuxMp4VideoInputTextBox.Text.Trim() + "\r\n\r\n不存在!");
-                    }
-                    string inputExt = Path.GetExtension(MuxMp4VideoInputTextBox.Text.Trim()).ToLower();
-                    //if (inputExt != ".avi"  //Only MPEG-4 SP/ASP video and MP3 audio supported at the current time. To import AVC/H264 video, you must first extract the avi track.
-                    //        && inputExt != ".mp4" //MPEG-4 Video
-                    //        && inputExt != ".m1v" //MPEG-1 Video
-                    //        && inputExt != ".m2v" //MPEG-2 Video
-                    //        && inputExt != ".m4v" //MPEG-4 Video
-                    //        && inputExt != ".264" //AVC/H264 Video
-                    //        && inputExt != ".h264" //AVC/H264 Video
-                    //        && inputExt != ".hevc") //HEVC/H265 Video
-                    //{
-                    //    throw new Exception("输入文件: \r\n\r\n" + txtvideo.Text.Trim() + "\r\n\r\n是一个mp4box不支持的视频文件!");
-                    //}
-                    if (inputExt == ".264" || inputExt == ".h264" || inputExt == ".hevc")
-                    {
-                        MessageBoxExt.ShowWarningMessage("H.264或者HEVC流文件mp4box将会自动侦测帧率\r\n如果侦测不到将默认为25fps\r\n如果你知道该文件的帧率建议手动设置");
-                    }
-                    muxMp4VideoInput = MuxMp4VideoInputTextBox.Text;
-                    MuxMp4OutputTextBox.Text = FileStringUtil.ChangeExt(MuxMp4VideoInputTextBox.Text, "_Mux.mp4");
-                }
-            }
-            catch (Exception ex)
-            {
-                MuxMp4VideoInputTextBox.Text = string.Empty;
-                MessageBoxExt.ShowErrorMessage(ex.Message);
-            }
+            MuxMp4OutputTextBox.Text = FileStringUtil.ChangeExt(MuxMp4VideoInputTextBox.Text, "_Mux.mp4");
         }
 
-        private void MuxMp4AudioInputTextBox_TextChanged(object sender, EventArgs e)
+        public bool MuxMp4Validation()
         {
-            try
+            if (MuxMp4VideoInputTextBox.Text == "")
             {
-                if (MuxMp4AudioInputTextBox.Text.Trim().Length > 0)
+                MessageBoxExt.ShowErrorMessage("请选择视频文件");
+                return false;
+            }
+            if (MuxMp4AudioInputTextBox.Text == "")
+            {
+                MessageBoxExt.ShowErrorMessage("请选择音频文件");
+                return false;
+            }
+            if (MuxMp4OutputTextBox.Text == "")
+            {
+                MessageBoxExt.ShowErrorMessage("请选择输出文件");
+                return false;
+            }
+
+            if (MuxMp4VideoInputTextBox.Text.Length > 0)
+            {
+                if (!File.Exists(MuxMp4VideoInputTextBox.Text))
                 {
-                    if (!File.Exists(MuxMp4AudioInputTextBox.Text.Trim()))
-                    {
-                        throw new Exception("输入文件: \r\n\r\n" + MuxMp4AudioInputTextBox.Text.Trim() + "\r\n\r\n不存在!");
-                    }
-                    string inputExt = Path.GetExtension(MuxMp4AudioInputTextBox.Text.Trim()).ToLower();
-                    if (inputExt != ".mp4"
-                            && inputExt != ".aac" //ADIF or RAW formats not supported
-                            && inputExt != ".mp3"
-                            && inputExt != ".m4a"
-                            && inputExt != ".mp2"
-                            && inputExt != ".ac3")
-                    {
-                        throw new Exception("输入文件: \r\n\r\n" + MuxMp4AudioInputTextBox.Text.Trim() + "\r\n\r\n是一个mp4box不支持的音频文件!");
-                    }
-                    muxMp4AudioInput = MuxMp4AudioInputTextBox.Text;
+                    MessageBoxExt.ShowErrorMessage("输入文件: \r\n\r\n" + MuxMp4VideoInputTextBox.Text + "\r\n\r\n不存在!");
+                    return false;
+                }
+                string inputExt = Path.GetExtension(MuxMp4VideoInputTextBox.Text).ToLower();
+                if (inputExt != ".avi"  //Only MPEG-4 SP/ASP video and MP3 audio supported at the current time. To import AVC/H264 video, you must first extract the avi track.
+                        && inputExt != ".mp4" //MPEG-4 Video
+                        && inputExt != ".m1v" //MPEG-1 Video
+                        && inputExt != ".m2v" //MPEG-2 Video
+                        && inputExt != ".m4v" //MPEG-4 Video
+                        && inputExt != ".264" //AVC/H264 Video
+                        && inputExt != ".h264" //AVC/H264 Video
+                        && inputExt != ".hevc") //HEVC/H265 Video
+                {
+                    MessageBoxExt.ShowWarningMessage("输入文件: \r\n\r\n" + MuxMp4VideoInputTextBox.Text + "\r\n\r\n是一个mp4box不支持的视频文件!");
+                    return false;
+                }
+                if (inputExt == ".264" || inputExt == ".h264" || inputExt == ".hevc")
+                {
+                    MessageBoxExt.ShowWarningMessage("H.264或者HEVC流文件mp4box将会自动侦测帧率\r\n如果侦测不到将默认为25fps\r\n如果你知道该文件的帧率建议手动设置");
+                    return false;
+                }
+
+            }
+
+            if (MuxMp4AudioInputTextBox.Text.Length > 0)
+            {
+                if (!File.Exists(MuxMp4AudioInputTextBox.Text))
+                {
+                    MessageBoxExt.ShowErrorMessage("输入文件: \r\n\r\n" + MuxMp4AudioInputTextBox.Text + "\r\n\r\n不存在!");
+                    return false;
+                }
+                string inputExt = Path.GetExtension(MuxMp4AudioInputTextBox.Text).ToLower();
+                if (inputExt != ".mp4"
+                        && inputExt != ".aac" //ADIF or RAW formats not supported
+                        && inputExt != ".mp3"
+                        && inputExt != ".m4a"
+                        && inputExt != ".mp2"
+                        && inputExt != ".ac3")
+                {
+                    MessageBoxExt.ShowErrorMessage("输入文件: \r\n\r\n" + MuxMp4AudioInputTextBox.Text.Trim() + "\r\n\r\n是一个mp4box不支持的音频文件!");
+                    return false;
                 }
             }
-            catch (Exception ex)
-            {
-                MuxMp4AudioInputTextBox.Text = string.Empty;
-                MessageBoxExt.ShowErrorMessage(ex.Message);
-            }
-        }
-
-        private void MuxMp4OutputTextBox_TextChanged(object sender, EventArgs e)
-        {
-            muxMp4Output = MuxMp4OutputTextBox.Text;
+            return true;
         }
 
         private void MuxMp4AudioInputButton_Click(object sender, EventArgs e)
@@ -1283,8 +1282,7 @@ namespace mp4box
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogFilterTypes.AUDIO_3); //"音频(*.mp4;*.aac;*.mp2;*.mp3;*.m4a;*.ac3)|*.mp4;*.aac;*.mp2;*.mp3;*.m4a;*.ac3|所有文件(*.*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                muxMp4AudioInput = openFileDialog1.FileName;
-                MuxMp4AudioInputTextBox.Text = muxMp4AudioInput;
+                MuxMp4AudioInputTextBox.Text = openFileDialog1.FileName;
             }
         }
 
@@ -1293,8 +1291,7 @@ namespace mp4box
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogFilterTypes.VIDEO_9);//"视频(*.avi;*.mp4;*.m1v;*.m2v;*.m4v;*.264;*.h264;*.hevc)|*.avi;*.mp4;*.m1v;*.m2v;*.m4v;*.264;*.h264;*.hevc|所有文件(*.*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                muxMp4VideoInput = openFileDialog1.FileName;
-                MuxMp4VideoInputTextBox.Text = muxMp4VideoInput;
+                MuxMp4VideoInputTextBox.Text = openFileDialog1.FileName;
             }
         }
 
@@ -1304,52 +1301,27 @@ namespace mp4box
             savefile.Filter = DialogUtil.GetDialogFilter(DialogFilterTypes.VIDEO_3);  //"视频(*.mp4)|*.mp4";
             if (savefile.ShowDialog() == DialogResult.OK)
             {
-                muxMp4Output = savefile.FileName;
-                MuxMp4OutputTextBox.Text = muxMp4Output;
+                MuxMp4OutputTextBox.Text = savefile.FileName;
             }
+        }
+
+        private void GetMuxMp4DataFromUI(MuxMp4Procedure p)
+        {
+            p.videoInputFile = MuxMp4VideoInputTextBox.Text;
+            p.audioInputFile = MuxMp4AudioInputTextBox.Text;
+            p.outputFile = MuxMp4OutputTextBox.Text;
+            p.fpsStr = MuxMp4FpsComboBox.Text;
+            p.parStr = MuxMp4ParComboBox.Text;
         }
 
         private void MuxMp4StartButton_Click(object sender, EventArgs e)
         {
-            if (muxMp4VideoInput == "")
-            {
-                MessageBoxExt.ShowErrorMessage("请选择视频文件");
+            if (!MuxMp4Validation())
                 return;
-            }
-            string inputExt = Path.GetExtension(MuxMp4VideoInputTextBox.Text.Trim()).ToLower();
-            if (inputExt != ".avi"  //Only MPEG-4 SP/ASP video and MP3 audio supported at the current time. To import AVC/H264 video, you must first extract the avi track.
-                    && inputExt != ".mp4" //MPEG-4 Video
-                    && inputExt != ".m1v" //MPEG-1 Video
-                    && inputExt != ".m2v" //MPEG-2 Video
-                    && inputExt != ".m4v" //MPEG-4 Video
-                    && inputExt != ".264" //AVC/H264 Video
-                    && inputExt != ".h264" //AVC/H264 Video
-                    && inputExt != ".hevc") //HEVC/H265 Video
-            {
-                MessageBoxExt.ShowErrorMessage("输入文件: \r\n\r\n" + MuxMp4VideoInputTextBox.Text.Trim() + "\r\n\r\n是一个mp4box不支持的视频文件!");
-                return;
-            }
 
-            if (muxMp4Output == "")
-            {
-                MessageBoxExt.ShowErrorMessage("请选择输出文件");
-                return;
-            }
-            StringBuilder sb = new StringBuilder();
-            sb.Append(FileStringUtil.FormatPath(workPath + "\\mp4box.exe") + " -add \"" + muxMp4VideoInput + "#trackID=1");
-            if (MuxMp4ParComboBox.Text != "")
-                sb.Append(":par=" + MuxMp4ParComboBox.Text);
-            if (MuxMp4FpsComboBox.Text != "auto" && MuxMp4FpsComboBox.Text != "")
-                sb.Append(":fps=" + MuxMp4FpsComboBox.Text);
-            sb.Append(":name=\""); //输入raw时删除默认添加的gpac字符串
-            if (muxMp4AudioInput != "")
-                sb.Append(" -add \"" + muxMp4AudioInput + ":name=\"");
-            sb.Append(" -new \"" + muxMp4Output + "\" \r\n cmd");
-            mux = sb.ToString();
-            batpath = workPath + "\\mux.bat";
-            File.WriteAllText(batpath, mux, Encoding.Default);
-            LogRecord(mux);
-            Process.Start(batpath);
+            MuxMp4Procedure procedure = new MuxMp4Procedure(workPath);
+            procedure.GetDataFromUI(GetMuxMp4DataFromUI);
+            procedure.Execute();
         }
 
         private void MuxMp4OutputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -1370,7 +1342,7 @@ namespace mp4box
 
         private void MuxMp4FpsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string ext = Path.GetExtension(muxMp4VideoInput).ToLower();
+            string ext = Path.GetExtension(MuxMp4VideoInputTextBox.Text).ToLower();
             if (MuxMp4FpsComboBox.SelectedIndex != 0 && ext != ".264" && ext != ".h264" && ext != ".hevc")
             {
                 MessageBoxExt.ShowWarningMessage("只有扩展名为.264 .h264 .hevc的流文件设置帧率(fps)才有效");
@@ -1380,30 +1352,13 @@ namespace mp4box
 
         private void MuxMp4ReplaceAudioButton_Click(object sender, EventArgs e)
         {
-            if (muxMp4VideoInput == "")
-            {
-                MessageBoxExt.ShowErrorMessage("请选择视频文件");
+            if (!MuxMp4Validation())
                 return;
-            }
-            if (muxMp4AudioInput == "")
-            {
-                MessageBoxExt.ShowErrorMessage("请选择音频文件");
-                return;
-            }
-            if (muxMp4Output == "")
-            {
-                MessageBoxExt.ShowErrorMessage("请选择输出文件");
-                return;
-            }
-            mux = "";
-            //mux = "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + namevideo + "\" -c:v copy -an  \"" + workPath + "\\video_noaudio.mp4\" \r\n";
-            //mux += "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + workPath + "\\video_noaudio.mp4\" -i \"" + nameaudio + "\" -vcodec copy  -acodec copy \"" + nameout + "\" \r\n";
-            //mux += "del \"" + workPath + "\\video_noaudio.mp4\" \r\n";
-            mux = "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + muxMp4VideoInput + "\" -i \"" + muxMp4AudioInput + "\" -map 0:v -c:v copy -map 1:0 -c:a copy  \"" + MuxMp4OutputTextBox.Text + "\" \r\n";
-            batpath = workPath + "\\mux.bat";
-            File.WriteAllText(batpath, mux, Encoding.Default);
-            LogRecord(mux);
-            Process.Start(batpath);
+
+            MuxMp4Procedure procedure = new MuxMp4Procedure(workPath);
+            procedure.GetDataFromUI(GetMuxMp4DataFromUI);
+            procedure.ExecuteReplaceAudio();
+
         }
 
         #endregion MuxMp4
@@ -1649,7 +1604,7 @@ namespace mp4box
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 extractFlvInput = openFileDialog1.FileName;
-                ExtractFlvInputTextBox.Text = muxMp4VideoInput;
+                ExtractFlvInputTextBox.Text = extractFlvInput;
             }
         }
 
@@ -1670,20 +1625,20 @@ namespace mp4box
             openFileDialog1.Filter = DialogUtil.GetDialogFilter(DialogFilterTypes.VIDEO_5); //"视频(*.mp4)|*.mp4|所有文件(*.*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                muxMp4VideoInput = openFileDialog1.FileName;
-                ExtractMp4InputTextBox.Text = muxMp4VideoInput;
+                extractMp4VideoInput = openFileDialog1.FileName;
+                ExtractMp4InputTextBox.Text = extractMp4VideoInput;
             }
         }
 
         private void ExtractMp4InputTextBox_TextChanged(object sender, EventArgs e)
         {
-            muxMp4VideoInput = ExtractMp4InputTextBox.Text;
+            extractMp4VideoInput = ExtractMp4InputTextBox.Text;
         }
 
         private void ExtractMp4ExtractAudio1Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频1
-            ExtractAV(muxMp4VideoInput, "a", 0);
+            ExtractAV(extractMp4VideoInput, "a", 0);
             //if (namevideo == "")
             //{
             //    MessageBox.Show("请选择视频文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1708,7 +1663,7 @@ namespace mp4box
         private void ExtractMp4ExtractAudio2Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频2
-            ExtractAV(muxMp4VideoInput, "a", 1);
+            ExtractAV(extractMp4VideoInput, "a", 1);
             //if (namevideo == "")
             //{
             //    MessageBox.Show("请选择视频文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1733,7 +1688,7 @@ namespace mp4box
         private void ExtractMp4ExtractAudio3Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频3
-            ExtractAV(muxMp4VideoInput, "a", 2);
+            ExtractAV(extractMp4VideoInput, "a", 2);
             //if (namevideo == "")
             //{
             //    MessageBox.Show("请选择视频文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1758,7 +1713,7 @@ namespace mp4box
         private void ExtractMp4ExtractVideoButton_Click(object sender, EventArgs e)
         {
             //MP4抽取视频1
-            ExtractAV(muxMp4VideoInput, "v", 0);
+            ExtractAV(extractMp4VideoInput, "v", 0);
             //if (namevideo == "")
             //{
             //    MessageBox.Show("请选择视频文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);

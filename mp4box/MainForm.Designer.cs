@@ -1471,7 +1471,6 @@
             resources.ApplyResources(this.MuxMp4AudioInputTextBox, "MuxMp4AudioInputTextBox");
             this.MuxMp4AudioInputTextBox.Name = "MuxMp4AudioInputTextBox";
             this.MuxMp4AudioInputTextBox.ReadOnly = true;
-            this.MuxMp4AudioInputTextBox.TextChanged += new System.EventHandler(this.MuxMp4AudioInputTextBox_TextChanged);
             // 
             // MuxMp4FpsLabel
             // 
@@ -1486,7 +1485,6 @@
             this.MuxMp4OutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.MuxMp4OutputTextBox, "MuxMp4OutputTextBox");
             this.MuxMp4OutputTextBox.Name = "MuxMp4OutputTextBox";
-            this.MuxMp4OutputTextBox.TextChanged += new System.EventHandler(this.MuxMp4OutputTextBox_TextChanged);
             this.MuxMp4OutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MuxMp4OutputTextBox_MouseDoubleClick);
             // 
             // MuxMkvGroupBox
