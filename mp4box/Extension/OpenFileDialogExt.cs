@@ -17,11 +17,6 @@ namespace System.Windows.Forms
             return dialog;
         }
 
-        public static OpenFileDialog Prepare(this OpenFileDialog dialog, DialogFilterTypes filterType, string presetFileName = "")
-        {
-            return dialog.Prepare(GetDialogFilter(filterType), presetFileName);
-        }
-
         public static DialogResult ShowDialogExt(this OpenFileDialog dialog, ref string selectedFileName)
         {
             DialogResult result;
