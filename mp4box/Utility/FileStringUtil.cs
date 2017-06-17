@@ -227,7 +227,7 @@ namespace mp4box.Utility
         /// <summary>
         /// 检查目录是否可写入
         /// </summary>
-        /// <param name"strPath">需要检查的路径</param>
+        /// <param name="strPath">需要检查的路径</param>
         public static bool IsDirWriteable(string strPath)
         {
             try

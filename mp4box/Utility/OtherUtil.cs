@@ -58,7 +58,7 @@ namespace mp4box.Utility
             }
         }
 
-        // <summary>
+        /// <summary>
         /// 是否安装 Apple Application Support
         /// </summary>
         /// <returns>true:安装 false:没有安装</returns>

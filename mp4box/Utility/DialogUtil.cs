@@ -8,7 +8,7 @@ namespace mp4box.Utility
     public static class DialogUtil
     {
         /// <summary>
-        /// Consolidate the Filter settings for OpenFileDialog & SaveFileDialog
+        /// Consolidate the Filter settings for OpenFileDialog and SaveFileDialog
         /// </summary>
         /// <param name="type">DialogFilterTypes</param>
         /// <returns>string</returns>

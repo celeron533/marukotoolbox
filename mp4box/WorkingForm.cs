@@ -100,7 +100,7 @@ namespace mp4box
         /// Makesure a file really exists.
         /// </summary>
         /// <param name="path">Path to the file.</param>
-        /// <param name="arg">Supplement info.</param>
+        /// <param name="info">Supplement info.</param>
         /// <returns>The file exist or not.</returns>
         public static bool CheckFileExist(string path, string info = "")
         {
