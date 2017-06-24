@@ -34,7 +34,7 @@ namespace mp4box.Utility
                 X265_32,
                 X265_64
             }
-            );
+        );
 
         #region ToolInfo instances
 

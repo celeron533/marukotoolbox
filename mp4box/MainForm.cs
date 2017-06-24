@@ -316,7 +316,7 @@ namespace mp4box
 
                 case 2:
                     if (Path.GetExtension(output) == ".aac")
-                        output = FileStringUtil.ChangeExt(output, ".wav");
+                        output = Path.ChangeExtension(output, ".wav");
                     ffmpeg = "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + input + "\" -f wav \"" + output + "\"";
                     break;
 
@@ -436,8 +436,9 @@ namespace mp4box
                 suf = "_video_";
             }
             suf += "index" + streamIndex;
-            string outfile = FileStringUtil.GetDir(namevideo) +
-                Path.GetFileNameWithoutExtension(namevideo) + suf + ext;
+            //string outfile = FileStringUtil.GetDir(namevideo) +
+            //    Path.GetFileNameWithoutExtension(namevideo) + suf + ext;
+            string outfile = Path.ChangeExtension(namevideo, suf + ext);
             aextract += FileStringUtil.FormatPath(outfile);
             batpath = workPath + "\\" + av + "extract.bat";
             File.WriteAllText(batpath, aextract, Encoding.Default);
@@ -499,9 +500,11 @@ namespace mp4box
             aextract += " -i " + FileStringUtil.FormatPath(namevideo);
             aextract += " -map 0:" + streamIndex + " -c copy ";
             string suf = "_抽取流Index" + streamIndex;
-            string outfile = FileStringUtil.GetDir(namevideo) +
-                Path.GetFileNameWithoutExtension(namevideo) + suf + '.' +
-                FormatExtractor.Extract(workPath, namevideo)[streamIndex].Format;
+            //string outfile = FileStringUtil.GetDir(namevideo) +
+            //    Path.GetFileNameWithoutExtension(namevideo) + suf + '.' +
+            //    FormatExtractor.Extract(workPath, namevideo)[streamIndex].Format;
+            string outfile = Path.ChangeExtension(namevideo, suf + '.' +
+                             FormatExtractor.Extract(workPath, namevideo)[streamIndex].Format);
             aextract += FileStringUtil.FormatPath(outfile);
             batpath = workPath + "\\mkvextract.bat";
             File.WriteAllText(batpath, aextract, Encoding.Default);
@@ -1045,7 +1048,7 @@ namespace mp4box
                 if (Directory.Exists(VideoBatchOutputFolderTextBox.Text))
                     output = VideoBatchOutputFolderTextBox.Text + "\\" + Path.GetFileNameWithoutExtension(input) + "_batch." + VideoBatchFormatComboBox.Text;
                 else
-                    output = FileStringUtil.ChangeExt(input, "_batch." + VideoBatchFormatComboBox.Text);
+                    output = Path.ChangeExtension(input, "_batch." + VideoBatchFormatComboBox.Text);
                 bat += VideoBatch(VideoBatchItemListbox.Items[i].ToString(), output);
             }
 
@@ -1214,7 +1217,7 @@ namespace mp4box
 
         private void MuxMp4VideoInputTextBox_TextChanged(object sender, EventArgs e)
         {
-            MuxMp4OutputTextBox.Text = FileStringUtil.ChangeExt(MuxMp4VideoInputTextBox.Text, "_Mux.mp4");
+            MuxMp4OutputTextBox.Text = Path.ChangeExtension(MuxMp4VideoInputTextBox.Text, "_Mux.mp4");
         }
 
         public bool MuxMp4Validation()
@@ -1978,7 +1981,7 @@ namespace mp4box
                 else x264 = x265bat(videoInput, tempVideo, 0, videoSubtitle);
                 if (audioMode == 1)
                 {
-                    x264 += "\r\n\"" + workPath + "\\mp4box.exe\" -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + FileStringUtil.ChangeExt(videoOutput, ".mp4") + "\" \r\n";
+                    x264 += "\r\n\"" + workPath + "\\mp4box.exe\" -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + Path.ChangeExtension(videoOutput, ".mp4") + "\" \r\n";
                     x264 += "del \"" + tempVideo + "\"";
                 }
             }
@@ -1992,9 +1995,9 @@ namespace mp4box
             if (audioMode != 1)
             {
                 if (ext == ".mp4")
-                    mux = boxmuxbat(tempVideo, tempAudio, FileStringUtil.ChangeExt(videoOutput, ext));
+                    mux = boxmuxbat(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, ext));
                 else
-                    mux = ffmuxbat(tempVideo, tempAudio, FileStringUtil.ChangeExt(videoOutput, ext));
+                    mux = ffmuxbat(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, ext));
                 x264 = aextract + x264 + mux + "\r\n"
                     + "del \"" + tempVideo + "\"\r\n"
                     + "del \"" + tempAudio + "\"\r\n";
@@ -2193,10 +2196,10 @@ namespace mp4box
                 string encType = "x264";
                 if (VideoEncoderComboBox.SelectedItem != null)
                     encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
-                VideoOutputTextBox.Text = FileStringUtil.ChangeExt(videoInput, string.Format("_{0}.mp4", encType));
+                VideoOutputTextBox.Text = Path.ChangeExtension(videoInput, string.Format("_{0}.mp4", encType));
                 while (videoInput.Equals(VideoOutputTextBox.Text) || File.Exists(VideoOutputTextBox.Text))
                 {
-                    VideoOutputTextBox.Text = FileStringUtil.ChangeExt(videoInput, string.Format("_new_file({0})_{1}.mp4", num, encType));
+                    VideoOutputTextBox.Text = Path.ChangeExtension(videoInput, string.Format("_new_file({0})_{1}.mp4", num, encType));
                     num++;
                 }
 
@@ -2205,9 +2208,9 @@ namespace mp4box
                     string[] subExt = { ".ass", ".ssa", ".srt" };
                     foreach (string ext in subExt)
                     {
-                        if (File.Exists(FileStringUtil.ChangeExt(videoInput, ext)))
+                        if (File.Exists(Path.ChangeExtension(videoInput, ext)))
                         {
-                            VideoSubtitleTextBox.Text = FileStringUtil.ChangeExt(videoInput, ext);
+                            VideoSubtitleTextBox.Text = Path.ChangeExtension(videoInput, ext);
                             break;
                         }
                         else
@@ -2273,7 +2276,7 @@ namespace mp4box
             {
                 case 0:
                     if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_AAC.mp4");
+                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.mp4");
                     AudioBitrateComboBox.Enabled = true;
                     AudioAudioModeBitrateRadioButton.Enabled = true;
                     AudioAudioModeCustomRadioButton.Enabled = true;
@@ -2291,7 +2294,7 @@ namespace mp4box
                     //        Process.Start("http://www.apple.com/cn/quicktime/download");
                     //}
                     if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_AAC.m4a");
+                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a");
                     AudioBitrateComboBox.Enabled = true;
                     AudioAudioModeBitrateRadioButton.Enabled = true;
                     AudioAudioModeCustomRadioButton.Enabled = true;
@@ -2304,7 +2307,7 @@ namespace mp4box
 
                 case 2:
                     if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_WAV.wav");
+                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_WAV.wav");
                     AudioBitrateComboBox.Enabled = false;
                     AudioAudioModeBitrateRadioButton.Enabled = false;
                     AudioAudioModeCustomRadioButton.Enabled = false;
@@ -2314,7 +2317,7 @@ namespace mp4box
 
                 case 3:
                     if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_ALAC.m4a");
+                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_ALAC.m4a");
                     AudioBitrateComboBox.Enabled = false;
                     AudioAudioModeBitrateRadioButton.Enabled = false;
                     AudioAudioModeCustomRadioButton.Enabled = false;
@@ -2324,7 +2327,7 @@ namespace mp4box
 
                 case 4:
                     if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_FLAC.flac");
+                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_FLAC.flac");
                     AudioBitrateComboBox.Enabled = false;
                     AudioAudioModeBitrateRadioButton.Enabled = false;
                     AudioAudioModeCustomRadioButton.Enabled = false;
@@ -2334,7 +2337,7 @@ namespace mp4box
 
                 case 5:
                     if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_AAC.m4a");
+                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a");
                     AudioBitrateComboBox.Enabled = true;
                     AudioAudioModeBitrateRadioButton.Enabled = true;
                     AudioAudioModeCustomRadioButton.Enabled = true;
@@ -2347,7 +2350,7 @@ namespace mp4box
 
                 case 6:
                     if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_AC3.ac3");
+                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AC3.ac3");
                     AudioBitrateComboBox.Enabled = true;
                     AudioAudioModeBitrateRadioButton.Enabled = true;
                     AudioAudioModeCustomRadioButton.Enabled = false;
@@ -2357,7 +2360,7 @@ namespace mp4box
 
                 case 7:
                     if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_MP3.mp3");
+                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_MP3.mp3");
                     AudioBitrateComboBox.Enabled = true;
                     AudioAudioModeBitrateRadioButton.Enabled = true;
                     AudioAudioModeCustomRadioButton.Enabled = true;
@@ -2445,7 +2448,7 @@ namespace mp4box
                 for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
                 {
                     string outname = "_" + codec + "." + outputExt;
-                    finish = FileStringUtil.ChangeExt(AudioBatchItemListBox.Items[i].ToString(), outname);
+                    finish = Path.ChangeExtension(AudioBatchItemListBox.Items[i].ToString(), outname);
                     aac += audiobat(AudioBatchItemListBox.Items[i].ToString(), finish);
                     aac += "\r\n";
                 }
@@ -2507,15 +2510,15 @@ namespace mp4box
                 audioInput = AudioInputTextBox.Text;
                 switch (AudioEncoderComboBox.SelectedIndex)
                 {
-                    case 0: AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_AAC.mp4"); break;
-                    case 1: AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_AAC.m4a"); break;
-                    case 2: AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_WAV.wav"); break;
-                    case 3: AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_ALAC.m4a"); break;
-                    case 4: AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_FLAC.flac"); break;
-                    case 5: AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_AAC.m4a"); break;
-                    case 6: AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_AC3.ac3"); break;
-                    case 7: AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_MP3.mp3"); break;
-                    default: AudioOutputTextBox.Text = FileStringUtil.ChangeExt(AudioInputTextBox.Text, "_AAC.aac"); break;
+                    case 0: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.mp4"); break;
+                    case 1: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a"); break;
+                    case 2: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_WAV.wav"); break;
+                    case 3: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_ALAC.m4a"); break;
+                    case 4: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_FLAC.flac"); break;
+                    case 5: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a"); break;
+                    case 6: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AC3.ac3"); break;
+                    case 7: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_MP3.mp3"); break;
+                    default: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.aac"); break;
                 }
             }
         }
@@ -2861,7 +2864,7 @@ namespace mp4box
                 string str = m.ToString();
                 str = str.Replace("ource(\"", "");
                 str = str.Replace("\"", "");
-                str = FileStringUtil.ChangeExt(str, "_AVS.mp4");
+                str = Path.ChangeExtension(str, "_AVS.mp4");
                 AvsOutputTextBox.Text = str;
             }
         }
@@ -3361,7 +3364,7 @@ namespace mp4box
         {
             if (File.Exists(MiscOnePicAudioInputTextBox.Text))
             {
-                MiscOnePicOutputTextBox.Text = FileStringUtil.ChangeExt(MiscOnePicAudioInputTextBox.Text, "_SP.flv");
+                MiscOnePicOutputTextBox.Text = Path.ChangeExtension(MiscOnePicAudioInputTextBox.Text, "_SP.flv");
             }
         }
 
@@ -3606,7 +3609,7 @@ namespace mp4box
             string path = MiscBlackVideoInputTextBox.Text;
             if (File.Exists(path))
             {
-                MiscBlackOutputTextBox.Text = FileStringUtil.ChangeExt(path, "_black.flv");
+                MiscBlackOutputTextBox.Text = Path.ChangeExtension(path, "_black.flv");
             }
         }
 
@@ -3930,7 +3933,7 @@ namespace mp4box
             StringBuilder sb = new StringBuilder();
             ffmpeg = "";
             string ext = Path.GetExtension(AudioBatchItemListBox.Items[0].ToString());
-            string finish = FileStringUtil.ChangeExt(AudioOutputTextBox.Text, ext);
+            string finish = Path.ChangeExtension(AudioOutputTextBox.Text, ext);
             for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
             {
                 if (Path.GetExtension(AudioBatchItemListBox.Items[i].ToString()) != ext)
