@@ -22,12 +22,13 @@ namespace mp4box.Utility.Tests
         [TestMethod()]
         public void SpeculateSubtitlePathTest2()
         {
+            // subtitle file exists without language
             string videoFileName = "dummyVideo.mp5";
-            string subtitleFileName = "dummyVideo.sub";
+            string subtitleFileName = "dummyVideo.srt";
             System.IO.File.Create(subtitleFileName).Dispose();
 
             var result = FileStringUtil.SpeculateSubtitlePath(videoFileName);
-            Assert.AreEqual(result, string.Empty);
+            Assert.AreEqual(result, subtitleFileName);
 
             System.IO.File.Delete(subtitleFileName);
         }
@@ -35,13 +36,13 @@ namespace mp4box.Utility.Tests
         [TestMethod()]
         public void SpeculateSubtitlePathTest3()
         {
-            // with language
+            // subtitle file exists with language
             string videoFileName = "dummyVideo.mp5";
-            string subtitleFileName = "dummyVideo.eng.sub";
+            string subtitleFileName = "dummyVideo.eng.srt";
             System.IO.File.Create(subtitleFileName).Dispose();
 
             var result = FileStringUtil.SpeculateSubtitlePath(videoFileName,"eng");
-            Assert.AreEqual(result, string.Empty);
+            Assert.AreEqual(result, subtitleFileName);
 
             System.IO.File.Delete(subtitleFileName);
         }
