@@ -102,6 +102,6 @@
         private System.Windows.Forms.TextBox InputTextBox;
         private System.Windows.Forms.Label MessageLabel;
         private ControlExs.QQButton OKButton;
-        private ControlExs.QQButton CancelButton;
+        private new ControlExs.QQButton CancelButton;
     }
 }

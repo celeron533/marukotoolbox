@@ -84,49 +84,49 @@ namespace mp4box.Utility
         //    return str + ext;
         //}
 
-        /// <summary>
-        /// <para></para>输入：目标文件的 路径或所在目录；
-        /// <para></para>输入：原始文件的路径；
-        /// <para></para>输出：输出文件的路径。
-        /// <para></para>用目标目录或文件路径（取自tbOutput），和输入的文件，返回一个供输出的文件路径。
-        /// </summary>
-        /// <param name="DestDirOrFile_">目标目录或文件路径</param>
-        /// <param name="SrcFile_">输入的文件（若DestDirOrFile是文件，则忽略此项）</param>
-        /// <param name="dotExtension">换扩展名</param>
-        /// <returns></returns>
-        public static string GetSimilarFilePath(string DestDirOrFile_, string SrcFile_, string dotExtension = null)
-        {
-            if (string.IsNullOrEmpty(DestDirOrFile_)) { return null; }
-            if (string.IsNullOrEmpty(SrcFile_)) { return null; }
-            string DestDirOrFile = DestDirOrFile_.Replace("\"", string.Empty);
-            string SrcFile = SrcFile_.Replace("\"", string.Empty);//去掉引号
+        ///// <summary>
+        ///// 输入：目标文件的 路径或所在目录；
+        ///// 输入：原始文件的路径；
+        ///// 输出：输出文件的路径。
+        ///// 用目标目录或文件路径（取自tbOutput），和输入的文件，返回一个供输出的文件路径。
+        ///// </summary>
+        ///// <param name="DestDirOrFile_">目标目录或文件路径</param>
+        ///// <param name="SrcFile_">输入的文件（若DestDirOrFile是文件，则忽略此项）</param>
+        ///// <param name="dotExtension">换扩展名</param>
+        ///// <returns></returns>
+        //public static string GetSimilarFilePath(string DestDirOrFile_, string SrcFile_, string dotExtension = null)
+        //{
+        //    if (string.IsNullOrEmpty(DestDirOrFile_)) { return null; }
+        //    if (string.IsNullOrEmpty(SrcFile_)) { return null; }
+        //    string DestDirOrFile = DestDirOrFile_.Replace("\"", string.Empty);
+        //    string SrcFile = SrcFile_.Replace("\"", string.Empty);//去掉引号
 
-            if (DestDirOrFile.EndsWith("\\"))//目录
-            {
-                if (string.IsNullOrEmpty(dotExtension))//没有指定扩展名
-                {
-                    return DestDirOrFile + Path.GetFileName(SrcFile);
-                }
-                else//指定了扩展名
-                {
-                    return DestDirOrFile + Path.GetFileNameWithoutExtension(SrcFile) + dotExtension;
-                }
-            }
-            else
-            {
-                //单文件，已经设置好了输出
-                //DestDirOrFile是文件路径
+        //    if (DestDirOrFile.EndsWith("\\"))//目录
+        //    {
+        //        if (string.IsNullOrEmpty(dotExtension))//没有指定扩展名
+        //        {
+        //            return DestDirOrFile + Path.GetFileName(SrcFile);
+        //        }
+        //        else//指定了扩展名
+        //        {
+        //            return DestDirOrFile + Path.GetFileNameWithoutExtension(SrcFile) + dotExtension;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        //单文件，已经设置好了输出
+        //        //DestDirOrFile是文件路径
 
-                if (string.IsNullOrEmpty(dotExtension))//没有指定扩展名
-                {
-                    return DestDirOrFile;
-                }
-                else//指定了扩展名
-                {
-                    return Path.ChangeExtension(DestDirOrFile, dotExtension);//换扩展名
-                }
-            }
-        }
+        //        if (string.IsNullOrEmpty(dotExtension))//没有指定扩展名
+        //        {
+        //            return DestDirOrFile;
+        //        }
+        //        else//指定了扩展名
+        //        {
+        //            return Path.ChangeExtension(DestDirOrFile, dotExtension);//换扩展名
+        //        }
+        //    }
+        //}
 
         /// <summary>
         /// 确保目录存在
@@ -244,7 +244,7 @@ namespace mp4box.Utility
             return path.Replace("\\", "\\\\\\\\").Replace(":", "\\\\:").Replace("[", "\\[").Replace("]", "\\]");
         }
 
-        public static string SpeculateSubtitlePath(string videoFilePath, string language="")
+        public static string SpeculateSubtitlePath(string videoFilePath, string language = "")
         {
             // subExt is order sensitive
             string[] subExt = { ".ass", ".ssa", ".srt" };
