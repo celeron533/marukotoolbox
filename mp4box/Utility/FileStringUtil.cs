@@ -128,12 +128,6 @@ namespace mp4box.Utility
             }
         }
 
-        public static void DeleteDirectoryIfExists(string path, bool recursive)
-        {
-            if (Directory.Exists(path))
-                Directory.Delete(path, recursive);
-        }
-
         /// <summary>
         /// 确保目录存在
         /// </summary>
@@ -145,21 +139,10 @@ namespace mp4box.Utility
                 return new DirectoryInfo(path);
             if (string.IsNullOrEmpty(path))
                 throw new IOException("无法创建目录");
-            ensureDirectoryExists(GetDirectoryName(path));
-            System.Threading.Thread.Sleep(100);
+            Thread.Sleep(100);
             return Directory.CreateDirectory(path);
         }
 
-        public static string GetDirectoryName(string file)
-        {
-            string path = string.Empty;
-            try
-            {
-                path = Path.GetDirectoryName(file);
-            }
-            catch { }
-            return path;
-        }
 
         /// <summary>
         /// Gets the file version/date

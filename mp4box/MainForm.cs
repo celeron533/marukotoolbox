@@ -3636,7 +3636,7 @@ namespace mp4box
         {
             if (Directory.Exists(logPath))
             {
-                FileStringUtil.DeleteDirectoryIfExists(logPath, true);
+                Directory.Delete(logPath, true);
                 MessageBoxExt.ShowInfoMessage("已经删除日志文件。");
             }
             else MessageBoxExt.ShowInfoMessage("没有找到日志文件。");
