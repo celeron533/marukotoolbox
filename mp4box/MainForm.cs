@@ -1888,7 +1888,7 @@ namespace mp4box
             //如果是AVS复制到C盘根目录
             if (Path.GetExtension(VideoInputTextBox.Text) == ".avs")
             {
-                if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()) && string.IsNullOrEmpty(FileStringUtil.CheckinternalAviSynth()))
+                if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()) && string.IsNullOrEmpty(FileStringUtil.CheckInternalAviSynth()))
                 {
                     if (MessageBoxExt.ShowQuestion("检测到本机未安装avisynth无法继续压制，是否去下载安装", "avisynth未安装") == DialogResult.Yes)
                         Process.Start("http://sourceforge.net/projects/avisynth2/");
@@ -2716,7 +2716,7 @@ namespace mp4box
                 if (dgs == DialogResult.No) return;
             }
 
-            if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()) && string.IsNullOrEmpty(FileStringUtil.CheckinternalAviSynth()))
+            if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()) && string.IsNullOrEmpty(FileStringUtil.CheckInternalAviSynth()))
             {
                 if (MessageBoxExt.ShowQuestion("检测到本机未安装avisynth无法继续压制，是否去下载安装", "avisynth未安装") == DialogResult.Yes)
                     Process.Start("http://sourceforge.net/projects/avisynth2/");

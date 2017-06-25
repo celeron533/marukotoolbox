@@ -173,6 +173,8 @@ namespace mp4box.Utility
         /// <param name="strPath">需要检查的路径</param>
         public static bool IsDirWriteable(string strPath)
         {
+            // A better way to do this:
+            // https://social.msdn.microsoft.com/Forums/vstudio/en-US/f81bea37-26f5-44d8-bac4-bc534bbb03b4/c-how-to-check-file-folder-if-writable?forum=netfxbcl
             try
             {
                 bool bDirectoryCreated = false;
@@ -206,36 +208,61 @@ namespace mp4box.Utility
         /// <summary>
         /// Detects the AviSynth version/date
         /// </summary>
-        /// <returns></returns>
-        public static string CheckAviSynth()
+        /// <param name="checkInternal">False: check System folder. True: check Maruko tool folder.</param>
+        /// <returns>AviSynth.dll file information string.</returns>
+        public static string CheckAviSynth(bool checkInternal = false)
         {
-            bool bFoundInstalledAviSynth = false;
+            bool aviSynthFound = false;
             string fileVersion = string.Empty, fileDate = string.Empty, fileProductName = string.Empty;
+
+            const string AVISYNTH = "AviSynth.dll";
+            // 32-bit %windir%\SysWOW64 on 64-bit OS
             string syswow64path = Environment.GetFolderPath(Environment.SpecialFolder.SystemX86);
+            // %windir%\System32 on 32-bit OS
+            string system32path = Environment.GetFolderPath(Environment.SpecialFolder.System);
+            // embedded with Maruko Toolbox
+            string toolboxpath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tools");
 
-            if (!Directory.Exists(syswow64path)
-                           && GetFileInformation(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "avisynth.dll"), out fileVersion, out fileDate, out fileProductName))
-                bFoundInstalledAviSynth = true;
-            else if (GetFileInformation(Path.Combine(syswow64path, "avisynth.dll"), out fileVersion, out fileDate, out fileProductName))
-                bFoundInstalledAviSynth = true;
+            if (checkInternal)  // Maruko folder
+            {
+                if (GetFileInformation(Path.Combine(toolboxpath, AVISYNTH),
+                    out fileVersion, out fileDate, out fileProductName))
+                {
+                    aviSynthFound = true;
+                }
+            }
+            else   // System folder
+            {
+                if (GetFileInformation(Path.Combine(system32path, AVISYNTH),
+                    out fileVersion, out fileDate, out fileProductName))
+                {
+                    aviSynthFound = true;
+                }
+                else if (GetFileInformation(Path.Combine(syswow64path, AVISYNTH),
+                    out fileVersion, out fileDate, out fileProductName))
+                {
+                    aviSynthFound = true;
+                }
+            }
 
-            if (bFoundInstalledAviSynth)
+            if (aviSynthFound)
                 return "AviSynth" + (fileProductName.Contains("+") ? "+" : string.Empty) + "版本: " + fileVersion + " (" + fileDate + ")";
             else return string.Empty;
         }
 
         // 检查内置的avs版本
-        public static string CheckinternalAviSynth()
+        public static string CheckInternalAviSynth()
         {
-            bool bFoundInstalledAviSynth = false;
-            string fileVersion = string.Empty, fileDate = string.Empty, fileProductName = string.Empty;
+            return CheckAviSynth(true);
+            //bool bFoundInstalledAviSynth = false;
+            //string fileVersion = string.Empty, fileDate = string.Empty, fileProductName = string.Empty;
 
-            if (GetFileInformation(Path.Combine(Application.StartupPath, @"tools\AviSynth.dll"), out fileVersion, out fileDate, out fileProductName))
-                bFoundInstalledAviSynth = true;
+            //if (GetFileInformation(Path.Combine(Application.StartupPath, @"tools\AviSynth.dll"), out fileVersion, out fileDate, out fileProductName))
+            //    bFoundInstalledAviSynth = true;
 
-            if (bFoundInstalledAviSynth)
-                return "AviSynth" + (fileProductName.Contains("+") ? "+" : string.Empty) + "版本: " + fileVersion + " (" + fileDate + ")";
-            else return string.Empty;
+            //if (bFoundInstalledAviSynth)
+            //    return "AviSynth" + (fileProductName.Contains("+") ? "+" : string.Empty) + "版本: " + fileVersion + " (" + fileDate + ")";
+            //else return string.Empty;
         }
 
 
@@ -244,6 +271,12 @@ namespace mp4box.Utility
             return path.Replace("\\", "\\\\\\\\").Replace(":", "\\\\:").Replace("[", "\\[").Replace("]", "\\]");
         }
 
+        /// <summary>
+        /// Speculate the subtitle file name from provided video file name
+        /// </summary>
+        /// <param name="videoFilePath">video file</param>
+        /// <param name="language">language code</param>
+        /// <returns>Full path if the speculated subtitle file exists. If not, return empty.</returns>
         public static string SpeculateSubtitlePath(string videoFilePath, string language = "")
         {
             // subExt is order sensitive
