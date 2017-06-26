@@ -1420,13 +1420,12 @@ namespace mp4box
 
         private void MuxConvertAddButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Multiselect = true;
-            openFileDialog1.Filter = DialogFilter.ALL; //"所有文件(*.*)|*.*";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog = new OpenFileDialog().Prepare(DialogFilter.ALL); //"所有文件(*.*)|*.*";
+            openFileDialog.Multiselect = true;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                MuxConvertItemListBox.Items.AddRange(openFileDialog1.FileNames);
+                MuxConvertItemListBox.Items.AddRange(openFileDialog.FileNames);
             }
-            openFileDialog1.Multiselect = false;
         }
 
         private void MuxConvertDeleteButton_Click(object sender, EventArgs e)
@@ -1441,7 +1440,7 @@ namespace mp4box
                     {
                         MuxConvertItemListBox.SelectedIndex = index - 1;
                     }
-                    if (index >= 0 && index < MuxConvertItemListBox.Items.Count && MuxConvertItemListBox.Items.Count > 0)
+                    if (index >= 0 && index < MuxConvertItemListBox.Items.Count)
                     {
                         MuxConvertItemListBox.SelectedIndex = index;
                     }
@@ -1460,24 +1459,25 @@ namespace mp4box
             {
                 string ext = MuxConvertFormatComboBox.Text;
                 string mux = "";
-                for (int i = 0; i < MuxConvertItemListBox.Items.Count; i++)
+
+                foreach (var sourceItem in MuxConvertItemListBox.Items)
                 {
-                    string filePath = MuxConvertItemListBox.Items[i].ToString();
+                    string sourceFilePath = sourceItem.ToString();
                     //如果是源文件的格式和目标格式相同则跳过
-                    if (Path.GetExtension(filePath).Contains(ext))
+                    if (Path.GetExtension(sourceFilePath).Contains(ext))
                         continue;
-                    string finish = Path.ChangeExtension(filePath, ext);
+                    string targetFilePath = Path.ChangeExtension(sourceFilePath, ext);
                     aextract = "";
 
                     //检测音频是否需要转换为AAC
-                    string audio = new MediaInfoWrapper(filePath).a_format;
+                    string audio = new MediaInfoWrapper(sourceFilePath).a_format;
                     if (audio.ToLower() != "aac" && MuxConvertFormatComboBox.Text != "mkv")
                     {
-                        mux += "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + MuxConvertItemListBox.Items[i].ToString() + "\" -c:v copy -c:a " + MuxConvertAacEncoderComboBox.Text + " -strict -2 \"" + finish + "\" \r\n";
+                        mux += "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + sourceFilePath + "\" -c:v copy -c:a " + MuxConvertAacEncoderComboBox.Text + " -strict -2 \"" + targetFilePath + "\" \r\n";
                     }
                     else
                     {
-                        mux += "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + MuxConvertItemListBox.Items[i].ToString() + "\" -c copy \"" + finish + "\" \r\n";
+                        mux += "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + sourceFilePath + "\" -c copy \"" + targetFilePath + "\" \r\n";
                     }
                 }
                 mux += "\r\ncmd";
