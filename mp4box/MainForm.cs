@@ -577,51 +577,49 @@ namespace mp4box
         /// </summary>
         private void ResetParameters()
         {
-            VideoCrfNumericUpDown.Value = 23.5m;
-            VideoBitrateNumericUpDown.Value = 800;
-            VideoAudioParameterTextBox.Text = "--abitrate 128";
-            VideoAudioModeComboBox.SelectedIndex = 0;
-            VideoDemuxerComboBox.SelectedIndex = 0;
-            VideoWidthNumericUpDown.Value = 0;
-            VideoHeightNumericUpDown.Value = 0;
-            VideoCustomParameterTextBox.Text = "";
-            ConfigX264PriorityComboBox.SelectedIndex = 2;
-            VideoFramesNumericUpDown.Value = 0;
-            VideoSeekNumericUpDown.Value = 0;
-            VideoModeCrfRadioButton.Checked = true;
-            VideoAutoShutdownCheckBox.Checked = false;
-
+            AudioAudioModeBitrateRadioButton.Checked = true;
+            AudioBitrateComboBox.Text = "128";
             AudioEncoderComboBox.SelectedIndex = 0;
             AudioPresetComboBox.SelectedIndex = 0;
-            AudioBitrateComboBox.Text = "128";
-            AudioAudioModeBitrateRadioButton.Checked = true;
-
-            MiscOnePicBitrateNumericUpDown.Value = 128;
-            MiscOnePicFpsNumericUpDown.Value = 1;
-            MiscOnePicCrfNumericUpDown.Value = 24;
-
-            MiscBlackFpsNumericUpDown.Value = 1;
-            MiscBlackCrfNumericUpDown.Value = 51;
-            MiscBlackBitrateNumericUpDown.Value = 900;
-
-            MiscMiscBeginTimeMaskedTextBox.Text = "000000";
-            MiscMiscEndTimeMaskedTextBox.Text = "000020";
-            MiscMiscTransposeComboBox.SelectedIndex = 1;
-
-            MuxMp4FpsComboBox.SelectedIndex = 0;
-            MuxMp4ParComboBox.SelectedIndex = 0;
-            MuxConvertAacEncoderComboBox.SelectedIndex = 0;
-            MuxConvertFormatComboBox.Text = "flv";
 
             AvsIncludeAudioCheckBox.Checked = false;
 
+            ConfigFunctionAutoCheckUpdateCheckBox.Checked = true;
+            ConfigFunctionDeleteTempFileCheckBox.Checked = true;
+            ConfigFunctionEnableX265CheckBox.Checked = false;
             ConfigUiSplashScreenCheckBox.Checked = true;
             ConfigUiTrayModeCheckBox.Checked = false;
             ConfigX264PriorityComboBox.SelectedIndex = 2;
+            ConfigX264PriorityComboBox.SelectedIndex = 2;
             ConfigX264ThreadsComboBox.SelectedIndex = 0;
-            ConfigFunctionDeleteTempFileCheckBox.Checked = true;
-            ConfigFunctionAutoCheckUpdateCheckBox.Checked = true;
-            ConfigFunctionEnableX265CheckBox.Checked = false;
+
+            MiscBlackBitrateNumericUpDown.Value = 900;
+            MiscBlackCrfNumericUpDown.Value = 51;
+            MiscBlackFpsNumericUpDown.Value = 1;
+            MiscMiscBeginTimeMaskedTextBox.Text = "000000";
+            MiscMiscEndTimeMaskedTextBox.Text = "000020";
+            MiscMiscTransposeComboBox.SelectedIndex = 1;
+            MiscOnePicBitrateNumericUpDown.Value = 128;
+            MiscOnePicCrfNumericUpDown.Value = 24;
+            MiscOnePicFpsNumericUpDown.Value = 1;
+
+            MuxConvertAacEncoderComboBox.SelectedIndex = 0;
+            MuxConvertFormatComboBox.Text = "flv";
+            MuxMp4FpsComboBox.SelectedIndex = 0;
+            MuxMp4ParComboBox.SelectedIndex = 0;
+
+            VideoAudioModeComboBox.SelectedIndex = 0;
+            VideoAudioParameterTextBox.Text = "--abitrate 128";
+            VideoAutoShutdownCheckBox.Checked = false;
+            VideoBitrateNumericUpDown.Value = 800;
+            VideoCrfNumericUpDown.Value = 23.5m;
+            VideoCustomParameterTextBox.Text = "";
+            VideoDemuxerComboBox.SelectedIndex = 0;
+            VideoFramesNumericUpDown.Value = 0;
+            VideoHeightNumericUpDown.Value = 0;
+            VideoModeCrfRadioButton.Checked = true;
+            VideoSeekNumericUpDown.Value = 0;
+            VideoWidthNumericUpDown.Value = 0;
         }
 
         private void LoadSettings()
@@ -629,39 +627,39 @@ namespace mp4box
             try
             {
                 //load settings
-                VideoCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264CRF"]);
-                VideoBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Bitrate"]);
-                VideoAudioParameterTextBox.Text = ConfigurationManager.AppSettings["x264AudioParameter"];
-                VideoAudioModeComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264AudioMode"]);
+
                 if (int.Parse(ConfigurationManager.AppSettings["x264Exe"]) > VideoEncoderComboBox.Items.Count - 1)
                     VideoEncoderComboBox.SelectedIndex = 0;
                 else
                     VideoEncoderComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Exe"]);
-                VideoDemuxerComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Demuxer"]);
-                VideoWidthNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Width"]);
-                VideoHeightNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Height"]);
-                VideoCustomParameterTextBox.Text = ConfigurationManager.AppSettings["x264CustomParameter"];
-                ConfigX264PriorityComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Priority"]);
-                ConfigX264ExtraParameterTextBox.Text = ConfigurationManager.AppSettings["x264ExtraParameter"];
-                AvsScriptTextBox.Text = ConfigurationManager.AppSettings["AVSScript"];
-                AudioEncoderComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["AudioEncoder"]);
                 AudioBitrateComboBox.Text = ConfigurationManager.AppSettings["AudioBitrate"];
-                MiscOnePicBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicAudioBitrate"]);
-                MiscOnePicFpsNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicFPS"]);
-                MiscOnePicCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicCRF"]);
-                MiscBlackFpsNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackFPS"]);
-                MiscBlackCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackCRF"]);
-                MiscBlackBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackBitrate"]);
-                ConfigFunctionDeleteTempFileCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["SetupDeleteTempFile"]);
+                AudioEncoderComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["AudioEncoder"]);
+                AvsScriptTextBox.Text = ConfigurationManager.AppSettings["AVSScript"];
                 ConfigFunctionAutoCheckUpdateCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["CheckUpdate"]);
-                ConfigX264ThreadsComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Threads"]);
+                ConfigFunctionDeleteTempFileCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["SetupDeleteTempFile"]);
                 ConfigFunctionEnableX265CheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["x265Enable"]);
-                ConfigUiTrayModeCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["TrayMode"]);
-                ConfigUiSplashScreenCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["SplashScreen"]);
                 ConfigFunctionVideoPlayerTextBox.Text = ConfigurationManager.AppSettings["PreviewPlayer"];
-                string SubLangExt = Convert.ToString(ConfigurationManager.AppSettings["SubLanguageExtension"]);
+                ConfigUiSplashScreenCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["SplashScreen"]);
+                ConfigUiTrayModeCheckBox.Checked = Convert.ToBoolean(ConfigurationManager.AppSettings["TrayMode"]);
+                ConfigX264ExtraParameterTextBox.Text = ConfigurationManager.AppSettings["x264ExtraParameter"];
+                ConfigX264PriorityComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Priority"]);
+                ConfigX264ThreadsComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Threads"]);
+                MiscBlackBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackBitrate"]);
+                MiscBlackCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackCRF"]);
+                MiscBlackFpsNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["BlackFPS"]);
+                MiscOnePicBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicAudioBitrate"]);
+                MiscOnePicCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicCRF"]);
+                MiscOnePicFpsNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["OnePicFPS"]);
                 MuxConvertFormatComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["MuxFormat"]);
-                VideoBatchSubtitleLanguage.DataSource = SubLangExt.Split(',');
+                VideoAudioModeComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264AudioMode"]);
+                VideoAudioParameterTextBox.Text = ConfigurationManager.AppSettings["x264AudioParameter"];
+                VideoBatchSubtitleLanguage.DataSource = Convert.ToString(ConfigurationManager.AppSettings["SubLanguageExtension"]).Split(',');
+                VideoBitrateNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Bitrate"]);
+                VideoCrfNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264CRF"]);
+                VideoCustomParameterTextBox.Text = ConfigurationManager.AppSettings["x264CustomParameter"];
+                VideoDemuxerComboBox.SelectedIndex = Convert.ToInt32(ConfigurationManager.AppSettings["x264Demuxer"]);
+                VideoHeightNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Height"]);
+                VideoWidthNumericUpDown.Value = Convert.ToDecimal(ConfigurationManager.AppSettings["x264Width"]);
                 if (VideoEncoderComboBox.SelectedIndex == -1)
                 {
                     VideoEncoderComboBox.SelectedIndex = VideoEncoderComboBox.Items.IndexOf("x264_32-8bit");
@@ -785,14 +783,6 @@ namespace mp4box
             {
                 ConfigX264ThreadsComboBox.Items.Add(i.ToString());
             }
-            //Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("zh-TW");
-            //use YAHEI in VistaOrNewer
-            //if (IsWindowsVistaOrNewer)
-            //{
-            //    FontFamily myFontFamily = new FontFamily("微软雅黑"); //采用哪种字体
-            //    Font myFont = new Font(myFontFamily, 9, FontStyle.Regular); //字是那种字体，显示的风格
-            //    this.Font = myFont;
-            //}
 
             //define workpath
             startpath = System.Windows.Forms.Application.StartupPath;
