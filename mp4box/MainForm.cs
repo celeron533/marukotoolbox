@@ -3680,7 +3680,7 @@ namespace mp4box
             {
                 return new MediaInfoWrapper(mediaFileName).ToString();
             }
-            catch (FileNotFoundException ex)
+            catch (FileNotFoundException)
             {
                 return "文件不存在、非有效文件或者文件夹 无视频信息";
             }

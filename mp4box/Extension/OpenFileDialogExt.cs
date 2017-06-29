@@ -8,6 +8,12 @@ namespace System.Windows.Forms
 {
     public static class OpenFileDialogExt
     {
+        /// <summary>
+        /// Prepare a dialog with filter and preset selected file
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <param name="presetFileName"></param>
+        /// <returns></returns>
         public static OpenFileDialog Prepare(this OpenFileDialog dialog, string filter = "", string presetFileName = "")
         {
             if (!string.IsNullOrEmpty(presetFileName))
@@ -17,6 +23,11 @@ namespace System.Windows.Forms
             return dialog;
         }
 
+        /// <summary>
+        /// Update the reference <c>selectedFileName</c> when user click OK
+        /// </summary>
+        /// <param name="selectedFileName">reference of the output selected file path</param>
+        /// <returns></returns>
         public static DialogResult ShowDialogExt(this OpenFileDialog dialog, ref string selectedFileName)
         {
             DialogResult result;
@@ -25,6 +36,11 @@ namespace System.Windows.Forms
             return result;
         }
 
+        /// <summary>
+        /// Update the reference <c>selectedFileNameTextBoxBase.Text</c> when user click OK
+        /// </summary>
+        /// <param name="selectedFileNameTextBoxBase"></param>
+        /// <returns></returns>
         public static DialogResult ShowDialogExt(this OpenFileDialog dialog, TextBoxBase selectedFileNameTextBoxBase)
         {
             DialogResult result;
