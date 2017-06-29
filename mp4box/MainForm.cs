@@ -82,7 +82,6 @@ namespace mp4box
         private string batpath;
         private string auto;
         private string startpath;
-        private string avs = "";
         private string tempavspath = "";
         private string tempPic = "";
         private string logFileName, logPath;
@@ -776,10 +775,10 @@ namespace mp4box
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            int processorNumber = Environment.ProcessorCount;
+            //int processorNumber = Environment.ProcessorCount;
 
             ConfigX264ThreadsComboBox.Items.Add("auto");
-            for (int i = 1; i <= 16; i++)
+            for (int i = 1; i <= Environment.ProcessorCount; i++)
             {
                 ConfigX264ThreadsComboBox.Items.Add(i.ToString());
             }
@@ -2796,6 +2795,7 @@ namespace mp4box
             }
         }
 
+        [Obsolete("This button is always hidden and unaccessable")]
         private void AvsGenerateButton_Click(object sender, EventArgs e)
         {
             //if (Directory.Exists("avsfilter"))
@@ -2806,11 +2806,10 @@ namespace mp4box
             //        avs += "LoadPlugin(\"" + workpath + "\\avsfilter\\" + FileName + "\")\r\n";
             //    }
             //}
-            avs += "LoadPlugin(\"avs\\plugins\\VSFilter.DLL\")\r\n";
-            avs += string.Format("\r\nLWLibavVideoSource(\"{0}\",23.976,convertFPS=True)\r\nConvertToYV12()\r\nCrop(0,0,0,0)\r\nAddBorders(0,0,0,0)\r\n" + "TextSub(\"{1}\")\r\n#LanczosResize(1280,960)\r\n", avsVideoInput, avsSubtitleInput);
+            string avsScript = "LoadPlugin(\"avs\\plugins\\VSFilter.DLL\")\r\n";
+            avsScript += string.Format("\r\nLWLibavVideoSource(\"{0}\",23.976,convertFPS=True)\r\nConvertToYV12()\r\nCrop(0,0,0,0)\r\nAddBorders(0,0,0,0)\r\n" + "TextSub(\"{1}\")\r\n#LanczosResize(1280,960)\r\n", avsVideoInput, avsSubtitleInput);
             //avs += "\r\nDirectShowSource(\"" + namevideo9 + "\",23.976,convertFPS=True)\r\nConvertToYV12()\r\nCrop(0,0,0,0)\r\nAddBorders(0,0,0,0)\r\n" + "TextSub(\"" + namesub9 + "\")\r\n#LanczosResize(1280,960)\r\n";
-            AvsScriptTextBox.Text = avs;
-            avs = "";
+            AvsScriptTextBox.Text = avsScript;
         }
 
         private void AvsVideoInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
