@@ -2949,6 +2949,7 @@ namespace mp4box
 
         #region Log
 
+        [Obsolete("Not used")]
         public void Log(string path)
         {
             ProcessStartInfo start = new ProcessStartInfo(path);//设置运行的命令行文件问ping.exe文件，这个文件系统会自己找到
@@ -2972,6 +2973,7 @@ namespace mp4box
             reader.Close();//关闭流
         }
 
+        // TODO: use Log4Net
         public void LogRecord(string log)
         {
             FileStringUtil.ensureDirectoryExists(logPath);
@@ -3176,6 +3178,7 @@ namespace mp4box
 
         #endregion globalization
 
+        [Obsolete("Not used")]
         public static void RunProcess(string exe, string arg)
         {
             Thread thread = new Thread(() =>
