@@ -53,8 +53,6 @@ namespace mp4box
 
         #region Private Members Declaration
 
-        private StringBuilder avsBuilder = new StringBuilder(1000);
-
         private int indexofsource;
         private int indexoftarget;
         private byte x264mode = 1;
@@ -2882,53 +2880,56 @@ namespace mp4box
 
         private void GenerateAVS()
         {
-            avsBuilder.Remove(0, avsBuilder.Length);
+            StringBuilder avsBuilder = new StringBuilder(1000);
+
             string vsfilterDLLPath = Path.Combine(workPath, @"avs\plugins\VSFilter.DLL");
             string SupTitleDLLPath = Path.Combine(workPath, @"avs\plugins\SupTitle.dll");
             string LSMASHSourceDLLPath = Path.Combine(workPath, @"avs\plugins\LSMASHSource.DLL");
             string undotDLLPath = Path.Combine(workPath, @"avs\plugins\UnDot.DLL");
-            string extInput = Path.GetExtension(avsVideoInput).ToLower();
-            avsBuilder.AppendLine("LoadPlugin(\"" + LSMASHSourceDLLPath + "\")");
+
+            avsBuilder.AppendLine($"LoadPlugin(\"{LSMASHSourceDLLPath}\")");
             if (Path.GetExtension(avsSubtitleInput).ToLower() == ".sup")
-                avsBuilder.AppendLine("LoadPlugin(\"" + SupTitleDLLPath + "\")");
+                avsBuilder.AppendLine($"LoadPlugin(\"{SupTitleDLLPath}\")");
             else
-                avsBuilder.AppendLine("LoadPlugin(\"" + vsfilterDLLPath + "\")");
+                avsBuilder.AppendLine($"LoadPlugin(\"{vsfilterDLLPath}\")");
             if (AvsUndotCheckBox.Checked)
-                avsBuilder.AppendLine("LoadPlugin(\"" + undotDLLPath + "\")");
+                avsBuilder.AppendLine($"LoadPlugin(\"{undotDLLPath}\")");
+
+            string extInput = Path.GetExtension(avsVideoInput).ToLower();
             if (extInput == ".mp4"
                    || extInput == ".mov"
                    || extInput == ".qt"
                    || extInput == ".3gp"
                    || extInput == ".3g2")
-                avsBuilder.AppendLine("LSMASHVideoSource(\"" + avsVideoInput + "\",format=\"YUV420P8\")");
+                avsBuilder.AppendLine($"LSMASHVideoSource(\"{avsVideoInput}\",format=\"YUV420P8\")");
             else
-                avsBuilder.AppendLine("LWLibavVideoSource(\"" + avsVideoInput + "\",format=\"YUV420P8\")");
+                avsBuilder.AppendLine($"LWLibavVideoSource(\"{avsVideoInput}\",format=\"YUV420P8\")");
             avsBuilder.AppendLine("ConvertToYV12()");
             if (AvsUndotCheckBox.Checked)
                 avsBuilder.AppendLine("Undot()");
             if (AvsTweakCheckBox.Checked)
-                avsBuilder.AppendLine("Tweak(" + AvsTweakChromaNumericUpDown.Value.ToString() + ", " + AvsTweakSaturationNumericUpDown.Value.ToString() + ", " + AvsTweakBrightnessNumericUpDown.Value.ToString() + ", " + AvsTweakContrastNumericUpDown.Value.ToString() + ")");
+                avsBuilder.AppendLine($"Tweak({AvsTweakChromaNumericUpDown.Value}, {AvsTweakSaturationNumericUpDown.Value}, {AvsTweakBrightnessNumericUpDown.Value}, {AvsTweakContrastNumericUpDown.Value})");
             if (AvsLevelsCheckBox.Checked)
-                avsBuilder.AppendLine("Levels(0," + AvsLevelsNumericUpDown.Value.ToString() + ",255,0,255)");
+                avsBuilder.AppendLine($"Levels(0,{AvsLevelsNumericUpDown.Value},255,0,255)");
             if (AvsLanczosResizeCheckBox.Checked)
-                avsBuilder.AppendLine("LanczosResize(" + AvsLanczosResizeWidthNumericUpDown.Value.ToString() + "," + AvsLanczosResizeHeightNumericUpDown.Value.ToString() + ")");
+                avsBuilder.AppendLine($"LanczosResize({AvsLanczosResizeWidthNumericUpDown.Value},{AvsLanczosResizeHeightNumericUpDown.Value})");
             if (AvsSharpenCheckBox.Checked)
-                avsBuilder.AppendLine("Sharpen(" + AvsSharpenNumericUpDown.Value.ToString() + ")");
+                avsBuilder.AppendLine($"Sharpen({AvsSharpenNumericUpDown.Value})");
             if (AvsCropCheckBox.Checked)
-                avsBuilder.AppendLine("Crop(" + AvsCropTextBox.Text + ")");
+                avsBuilder.AppendLine($"Crop({AvsCropTextBox.Text})");
             if (AvsAddBordersCheckBox.Checked)
-                avsBuilder.AppendLine("AddBorders(" + AvsAddBordersLeftNumericUpDown.Value.ToString() + "," + AvsAddBordersTopNumericUpDown.Value.ToString() + "," + AvsAddBordersRightNumericUpDown.Value.ToString() + "," + AvsAddBordersBottomNumericUpDown.Value.ToString() + ")");
+                avsBuilder.AppendLine($"AddBorders({AvsAddBordersLeftNumericUpDown.Value},{AvsAddBordersTopNumericUpDown.Value},{AvsAddBordersRightNumericUpDown.Value},{AvsAddBordersBottomNumericUpDown.Value})");
             if (!string.IsNullOrEmpty(AvsSubtitleInputTextBox.Text))
             {
                 if (Path.GetExtension(avsSubtitleInput).ToLower() == ".idx")
-                    avsBuilder.AppendLine("vobsub(\"" + avsSubtitleInput + "\")");
+                    avsBuilder.AppendLine($"vobsub(\"{avsSubtitleInput}\")");
                 else if (Path.GetExtension(avsSubtitleInput).ToLower() == ".sup")
-                    avsBuilder.AppendLine("SupTitle(\"" + avsSubtitleInput + "\")");
+                    avsBuilder.AppendLine($"SupTitle(\"{avsSubtitleInput}\")");
                 else
-                    avsBuilder.AppendLine("TextSub(\"" + avsSubtitleInput + "\")");
+                    avsBuilder.AppendLine($"TextSub(\"{avsSubtitleInput}\")");
             }
             if (AvsTrimCheckBox.Checked)
-                avsBuilder.AppendLine("Trim(" + AvsTrimStartNumericUpDown.Value.ToString() + "," + AvsTrimEndNumericUpDown.Value.ToString() + ")");
+                avsBuilder.AppendLine($"Trim({AvsTrimStartNumericUpDown.Value},{AvsTrimEndNumericUpDown.Value})");
             AvsScriptTextBox.Text = avsBuilder.ToString();
         }
 
