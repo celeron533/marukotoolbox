@@ -2905,6 +2905,7 @@ namespace mp4box
             else
                 avsBuilder.AppendLine($"LWLibavVideoSource(\"{avsVideoInput}\",format=\"YUV420P8\")");
             avsBuilder.AppendLine("ConvertToYV12()");
+
             if (AvsUndotCheckBox.Checked)
                 avsBuilder.AppendLine("Undot()");
             if (AvsTweakCheckBox.Checked)
@@ -2930,122 +2931,14 @@ namespace mp4box
             }
             if (AvsTrimCheckBox.Checked)
                 avsBuilder.AppendLine($"Trim({AvsTrimStartNumericUpDown.Value},{AvsTrimEndNumericUpDown.Value})");
+
             AvsScriptTextBox.Text = avsBuilder.ToString();
         }
 
         #region 更改AVS
 
-        private void AvsTweakCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsLanczosResizeCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsAddBordersCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsCropCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsTrimCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsLevelsCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsSharpenCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsUndotCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsTweakChromaNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsTweakSaturationNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsTweakBrightnessNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsTweakContrastNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsLanczosResizeWidthNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsLanczosResizeHeightNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsAddBordersLeftNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsAddBordersTopNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsAddBordersRightNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsAddBordersBottomNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsCropTextBox_TextChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsTrimStartNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsTrimEndNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsLevelsNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            GenerateAVS();
-        }
-
-        private void AvsSharpenNumericUpDown_ValueChanged(object sender, EventArgs e)
+        // Triggered when AVS related controls changed, such as AvsCheckBox.CheckedChanged, AvsTrimCheckBox.CheckedChanged
+        private void GenerateAVSHandler(object sender, EventArgs e)
         {
             GenerateAVS();
         }

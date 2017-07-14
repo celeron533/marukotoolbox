@@ -609,7 +609,7 @@
             this.AvsCropTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.AvsCropTextBox, "AvsCropTextBox");
             this.AvsCropTextBox.Name = "AvsCropTextBox";
-            this.AvsCropTextBox.TextChanged += new System.EventHandler(this.AvsCropTextBox_TextChanged);
+            this.AvsCropTextBox.TextChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsTrimEndLabel
             // 
@@ -635,7 +635,7 @@
             0,
             0,
             0});
-            this.AvsTrimEndNumericUpDown.ValueChanged += new System.EventHandler(this.AvsTrimEndNumericUpDown_ValueChanged);
+            this.AvsTrimEndNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsTrimStartNumericUpDown
             // 
@@ -646,7 +646,7 @@
             0,
             0});
             this.AvsTrimStartNumericUpDown.Name = "AvsTrimStartNumericUpDown";
-            this.AvsTrimStartNumericUpDown.ValueChanged += new System.EventHandler(this.AvsTrimStartNumericUpDown_ValueChanged);
+            this.AvsTrimStartNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsLevelsNumericUpDown
             // 
@@ -668,7 +668,7 @@
             0,
             0,
             65536});
-            this.AvsLevelsNumericUpDown.ValueChanged += new System.EventHandler(this.AvsLevelsNumericUpDown_ValueChanged);
+            this.AvsLevelsNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsAddBordersTopLabel
             // 
@@ -699,7 +699,7 @@
             0,
             0});
             this.AvsAddBordersBottomNumericUpDown.Name = "AvsAddBordersBottomNumericUpDown";
-            this.AvsAddBordersBottomNumericUpDown.ValueChanged += new System.EventHandler(this.AvsAddBordersBottomNumericUpDown_ValueChanged);
+            this.AvsAddBordersBottomNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsAddBordersRightNumericUpDown
             // 
@@ -710,7 +710,7 @@
             0,
             0});
             this.AvsAddBordersRightNumericUpDown.Name = "AvsAddBordersRightNumericUpDown";
-            this.AvsAddBordersRightNumericUpDown.ValueChanged += new System.EventHandler(this.AvsAddBordersRightNumericUpDown_ValueChanged);
+            this.AvsAddBordersRightNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsAddBordersTopNumericUpDown
             // 
@@ -721,7 +721,7 @@
             0,
             0});
             this.AvsAddBordersTopNumericUpDown.Name = "AvsAddBordersTopNumericUpDown";
-            this.AvsAddBordersTopNumericUpDown.ValueChanged += new System.EventHandler(this.AvsAddBordersTopNumericUpDown_ValueChanged);
+            this.AvsAddBordersTopNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsSharpenNumericUpDown
             // 
@@ -743,7 +743,7 @@
             0,
             0,
             65536});
-            this.AvsSharpenNumericUpDown.ValueChanged += new System.EventHandler(this.AvsSharpenNumericUpDown_ValueChanged);
+            this.AvsSharpenNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsAddBordersLeftNumericUpDown
             // 
@@ -754,7 +754,7 @@
             0,
             0});
             this.AvsAddBordersLeftNumericUpDown.Name = "AvsAddBordersLeftNumericUpDown";
-            this.AvsAddBordersLeftNumericUpDown.ValueChanged += new System.EventHandler(this.AvsAddBordersLeftNumericUpDown_ValueChanged);
+            this.AvsAddBordersLeftNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsLanczosResizeHeightLabel
             // 
@@ -780,7 +780,7 @@
             0,
             0,
             0});
-            this.AvsLanczosResizeHeightNumericUpDown.ValueChanged += new System.EventHandler(this.AvsLanczosResizeHeightNumericUpDown_ValueChanged);
+            this.AvsLanczosResizeHeightNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsLanczosResizeWidthNumericUpDown
             // 
@@ -796,7 +796,7 @@
             0,
             0,
             0});
-            this.AvsLanczosResizeWidthNumericUpDown.ValueChanged += new System.EventHandler(this.AvsLanczosResizeWidthNumericUpDown_ValueChanged);
+            this.AvsLanczosResizeWidthNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsTweakContrastLabel
             // 
@@ -838,7 +838,7 @@
             0,
             0,
             0});
-            this.AvsTweakContrastNumericUpDown.ValueChanged += new System.EventHandler(this.AvsTweakContrastNumericUpDown_ValueChanged);
+            this.AvsTweakContrastNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsTweakBrightnessNumericUpDown
             // 
@@ -855,7 +855,7 @@
             0,
             -2147483648});
             this.AvsTweakBrightnessNumericUpDown.Name = "AvsTweakBrightnessNumericUpDown";
-            this.AvsTweakBrightnessNumericUpDown.ValueChanged += new System.EventHandler(this.AvsTweakBrightnessNumericUpDown_ValueChanged);
+            this.AvsTweakBrightnessNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsTweakSaturationNumericUpDown
             // 
@@ -877,7 +877,7 @@
             0,
             0,
             0});
-            this.AvsTweakSaturationNumericUpDown.ValueChanged += new System.EventHandler(this.AvsTweakSaturationNumericUpDown_ValueChanged);
+            this.AvsTweakSaturationNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsTweakChromaNumericUpDown
             // 
@@ -899,7 +899,7 @@
             0,
             -2147483648});
             this.AvsTweakChromaNumericUpDown.Name = "AvsTweakChromaNumericUpDown";
-            this.AvsTweakChromaNumericUpDown.ValueChanged += new System.EventHandler(this.AvsTweakChromaNumericUpDown_ValueChanged);
+            this.AvsTweakChromaNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsScriptTextBox
             // 
@@ -966,7 +966,7 @@
             this.AvsLevelsCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.AvsLevelsCheckBox.Name = "AvsLevelsCheckBox";
             this.AvsLevelsCheckBox.UseVisualStyleBackColor = false;
-            this.AvsLevelsCheckBox.CheckedChanged += new System.EventHandler(this.AvsLevelsCheckBox_CheckedChanged);
+            this.AvsLevelsCheckBox.CheckedChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsCropCheckBox
             // 
@@ -974,7 +974,7 @@
             this.AvsCropCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.AvsCropCheckBox.Name = "AvsCropCheckBox";
             this.AvsCropCheckBox.UseVisualStyleBackColor = false;
-            this.AvsCropCheckBox.CheckedChanged += new System.EventHandler(this.AvsCropCheckBox_CheckedChanged);
+            this.AvsCropCheckBox.CheckedChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsTrimCheckBox
             // 
@@ -982,7 +982,7 @@
             this.AvsTrimCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.AvsTrimCheckBox.Name = "AvsTrimCheckBox";
             this.AvsTrimCheckBox.UseVisualStyleBackColor = false;
-            this.AvsTrimCheckBox.CheckedChanged += new System.EventHandler(this.AvsTrimCheckBox_CheckedChanged);
+            this.AvsTrimCheckBox.CheckedChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsSharpenCheckBox
             // 
@@ -990,7 +990,7 @@
             this.AvsSharpenCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.AvsSharpenCheckBox.Name = "AvsSharpenCheckBox";
             this.AvsSharpenCheckBox.UseVisualStyleBackColor = false;
-            this.AvsSharpenCheckBox.CheckedChanged += new System.EventHandler(this.AvsSharpenCheckBox_CheckedChanged);
+            this.AvsSharpenCheckBox.CheckedChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsAddBordersCheckBox
             // 
@@ -998,7 +998,7 @@
             this.AvsAddBordersCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.AvsAddBordersCheckBox.Name = "AvsAddBordersCheckBox";
             this.AvsAddBordersCheckBox.UseVisualStyleBackColor = false;
-            this.AvsAddBordersCheckBox.CheckedChanged += new System.EventHandler(this.AvsAddBordersCheckBox_CheckedChanged);
+            this.AvsAddBordersCheckBox.CheckedChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsLanczosResizeCheckBox
             // 
@@ -1006,7 +1006,7 @@
             this.AvsLanczosResizeCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.AvsLanczosResizeCheckBox.Name = "AvsLanczosResizeCheckBox";
             this.AvsLanczosResizeCheckBox.UseVisualStyleBackColor = false;
-            this.AvsLanczosResizeCheckBox.CheckedChanged += new System.EventHandler(this.AvsLanczosResizeCheckBox_CheckedChanged);
+            this.AvsLanczosResizeCheckBox.CheckedChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsTweakCheckBox
             // 
@@ -1014,7 +1014,7 @@
             this.AvsTweakCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.AvsTweakCheckBox.Name = "AvsTweakCheckBox";
             this.AvsTweakCheckBox.UseVisualStyleBackColor = false;
-            this.AvsTweakCheckBox.CheckedChanged += new System.EventHandler(this.AvsTweakCheckBox_CheckedChanged);
+            this.AvsTweakCheckBox.CheckedChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsUndotCheckBox
             // 
@@ -1022,7 +1022,7 @@
             this.AvsUndotCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.AvsUndotCheckBox.Name = "AvsUndotCheckBox";
             this.AvsUndotCheckBox.UseVisualStyleBackColor = false;
-            this.AvsUndotCheckBox.CheckedChanged += new System.EventHandler(this.AvsUndotCheckBox_CheckedChanged);
+            this.AvsUndotCheckBox.CheckedChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsClearButton
             // 
