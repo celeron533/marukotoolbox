@@ -1427,22 +1427,7 @@ namespace mp4box
 
         private void MuxConvertDeleteButton_Click(object sender, EventArgs e)
         {
-            if (MuxConvertItemListBox.Items.Count > 0)
-            {
-                if (MuxConvertItemListBox.SelectedItems.Count > 0)
-                {
-                    int index = MuxConvertItemListBox.SelectedIndex;
-                    MuxConvertItemListBox.Items.RemoveAt(MuxConvertItemListBox.SelectedIndex);
-                    if (index == MuxConvertItemListBox.Items.Count)
-                    {
-                        MuxConvertItemListBox.SelectedIndex = index - 1;
-                    }
-                    if (index >= 0 && index < MuxConvertItemListBox.Items.Count)
-                    {
-                        MuxConvertItemListBox.SelectedIndex = index;
-                    }
-                }
-            }
+            RemoveSelectedItemFromListBox(MuxConvertItemListBox);
         }
 
         private void MuxConvertClearButton_Click(object sender, EventArgs e)
@@ -2224,22 +2209,7 @@ namespace mp4box
 
         private void VideoBatchDeleteButton_Click(object sender, EventArgs e)
         {
-            if (VideoBatchItemListbox.Items.Count > 0)
-            {
-                if (VideoBatchItemListbox.SelectedItems.Count > 0)
-                {
-                    int index = VideoBatchItemListbox.SelectedIndex;
-                    VideoBatchItemListbox.Items.RemoveAt(VideoBatchItemListbox.SelectedIndex);
-                    if (index == VideoBatchItemListbox.Items.Count)
-                    {
-                        VideoBatchItemListbox.SelectedIndex = index - 1;
-                    }
-                    if (index >= 0 && index < VideoBatchItemListbox.Items.Count && VideoBatchItemListbox.Items.Count > 0)
-                    {
-                        VideoBatchItemListbox.SelectedIndex = index;
-                    }
-                }
-            }
+            RemoveSelectedItemFromListBox(VideoBatchItemListbox);
         }
 
         private void VideoBatchAddButton_Click(object sender, EventArgs e)
@@ -2560,22 +2530,7 @@ namespace mp4box
 
         private void AudioBatchDeleteButton_Click(object sender, EventArgs e)
         {
-            if (AudioBatchItemListBox.Items.Count > 0)
-            {
-                if (AudioBatchItemListBox.SelectedItems.Count > 0)
-                {
-                    int index = AudioBatchItemListBox.SelectedIndex;
-                    AudioBatchItemListBox.Items.RemoveAt(AudioBatchItemListBox.SelectedIndex);
-                    if (index == AudioBatchItemListBox.Items.Count)
-                    {
-                        AudioBatchItemListBox.SelectedIndex = index - 1;
-                    }
-                    if (index >= 0 && index < AudioBatchItemListBox.Items.Count && AudioBatchItemListBox.Items.Count > 0)
-                    {
-                        AudioBatchItemListBox.SelectedIndex = index;
-                    }
-                }
-            }
+            RemoveSelectedItemFromListBox(AudioBatchItemListBox);
         }
 
         private void AudioBatchClearButton_Click(object sender, EventArgs e)
@@ -3566,6 +3521,24 @@ namespace mp4box
         {
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.A)
                 ((TextBoxBase)sender).SelectAll();  // using TextBoxBase to include TextBox, RichTextBox and MaskedTextBox
+        }
+
+        private void RemoveSelectedItemFromListBox(ListBox listBox)
+        {
+            if (listBox.Items.Count > 0 && listBox.SelectedItems.Count > 0)
+            {
+                int index = listBox.SelectedIndex;
+                listBox.Items.RemoveAt(listBox.SelectedIndex);
+                if (listBox.Items.Count == 0)   // nothing left in the list
+                    return;
+                else
+                {
+                    if (index == listBox.Items.Count)   // selectIndex is beyond the last item
+                        listBox.SelectedIndex = listBox.Items.Count - 1;
+                    else
+                        listBox.SelectedIndex = index;
+                }
+            }
         }
 
         #region MediaInfo Tab
