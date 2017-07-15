@@ -32,6 +32,7 @@ using System.Windows.Forms;
 namespace mp4box
 {
     using Extension;
+    using Utility;
     using Win32API;
     public partial class WorkingForm : Form
     {
@@ -141,11 +142,6 @@ namespace mp4box
         /// Frame count of current processing file via FFmpeg.
         /// </summary>
         private int frameCount;
-
-        /// <summary>
-        /// Path to the tools directory.
-        /// </summary>
-        private string workPath;
 
         /// <summary>
         /// true if the system is Win7 or later
@@ -299,7 +295,6 @@ namespace mp4box
                 this.Close();
             }
             notifyIcon.Visible = true;
-            workPath = MainForm.Instance.workPath;
             autoscroll = true;
         }
 
@@ -455,7 +450,7 @@ namespace mp4box
             // save log
             MainForm.Instance.LogRecord(internellog.ToString());
             // shutdown the system if required
-            if (MainForm.Instance.shutdownState)
+            if (Global.Running.shutdownState)
             {
                 System.Diagnostics.Process.Start("shutdown", "-s");
                 // wait a bit to ensure synchronization
@@ -513,7 +508,7 @@ namespace mp4box
                         progressBarX264.Style = ProgressBarStyle.Blocks
                     );
                     bgworker.ReportProgress(0, 0.0);
-                    frameCount = EstimateFrame(workPath, result.Groups["fileIn"].Value);
+                    frameCount = EstimateFrame(ToolsUtil.ToolsDir, result.Groups["fileIn"].Value);
                 }
                 result = Patterns.fileCompletedReg.Match(e.Data);
                 if (result.Success)
@@ -674,7 +669,7 @@ namespace mp4box
         /// <param name="timeout">Tip timeout.</param>
         private void BalloonTip(string notes, int timeout = 500)
         {
-            if (MainForm.Instance.trayMode)
+            if (Global.Running.trayMode)
             {
                 notifyIcon.Visible = true;
                 notifyIcon.ShowBalloonTip(timeout, "小丸工具箱", notes, ToolTipIcon.Info);

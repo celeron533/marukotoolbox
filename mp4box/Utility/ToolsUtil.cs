@@ -8,7 +8,7 @@ namespace mp4box.Utility
 {
     public static class ToolsUtil
     {
-        // Best way to get the application foldre path
+        // Best way to get the application foldre path (as known as workPath)
         // https://stackoverflow.com/questions/6041332/best-way-to-get-application-folder-path
         public static string ToolsDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"tools");
 

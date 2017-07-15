@@ -128,6 +128,7 @@
     <Compile Include="FormUpdater.Designer.cs">
       <DependentUpon>FormUpdater.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="InputBox.cs">
       <SubType>Form</SubType>
     </Compile>

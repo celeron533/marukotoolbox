@@ -45,10 +45,7 @@ namespace mp4box
 {
     public partial class MainForm : Form
     {
-        public static MainForm Instance;
         public string workPath = "!undefined";
-        public bool shutdownState = false;
-        public bool trayMode = false;
         private Preset preset;
 
         #region Private Members Declaration
@@ -90,7 +87,6 @@ namespace mp4box
 
         public MainForm()
         {
-            Instance = this;
             logPath = Application.StartupPath + "\\logs";
             logFileName = logPath + "\\LogFile-" + DateTime.Now.ToString("yyyy'-'MM'-'dd'_'HH'-'mm'-'ss") + ".log";
             preset = new Preset();
@@ -3405,7 +3401,7 @@ namespace mp4box
 
         private void ConfigUiTrayModeCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            trayMode = ConfigUiTrayModeCheckBox.Checked;
+            Global.Running.trayMode = ConfigUiTrayModeCheckBox.Checked;
         }
         private void ConfigFunctionRestoreDefaultButton_Click(object sender, EventArgs e)
         {
@@ -3706,7 +3702,7 @@ namespace mp4box
 
         private void VideoAutoShutdownCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            shutdownState = VideoAutoShutdownCheckBox.Checked;
+            Global.Running.shutdownState = VideoAutoShutdownCheckBox.Checked;
         }
 
         private void VideoGoToAudioLabel_Click(object sender, EventArgs e)
