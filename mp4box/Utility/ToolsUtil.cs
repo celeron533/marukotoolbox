@@ -10,7 +10,7 @@ namespace mp4box.Utility
     {
         // Best way to get the application foldre path (as known as workPath)
         // https://stackoverflow.com/questions/6041332/best-way-to-get-application-folder-path
-        public static string ToolsDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"tools");
+        public static string ToolsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"tools");
 
         public static List<ToolInfo> ToolList = new List<ToolInfo>(
             new ToolInfo[]
@@ -32,7 +32,9 @@ namespace mp4box.Utility
                 X264_64_10,
                 X264_64_8,
                 X265_32,
-                X265_64
+                X265_64,
+                ////
+                FFPLAY
             }
         );
 
@@ -128,6 +130,11 @@ namespace mp4box.Utility
             description = "x265_64"
         };
 
+        public static ToolInfo FFPLAY = new ToolInfo("ffplay.exe")
+        {
+            description = "ffplay"
+        };
+
         #endregion ToolInfo instances
 
 
@@ -140,8 +147,13 @@ namespace mp4box.Utility
 
             public string fileName { get; private set; }
             public string description { get; set; }
-            public string fullPath { get { return Path.Combine(ToolsDir, fileName); } }
+            public string fullPath { get { return Path.Combine(ToolsFolder, fileName); } }
             public bool exists { get { return File.Exists(fullPath); } }
+
+            public override string ToString()
+            {
+                return fullPath;
+            }
         }
 
     }

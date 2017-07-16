@@ -512,7 +512,7 @@ namespace mp4box
                         progressBarX264.Style = ProgressBarStyle.Blocks
                     );
                     bgworker.ReportProgress(0, 0.0);
-                    frameCount = EstimateFrame(ToolsUtil.ToolsDir, result.Groups["fileIn"].Value);
+                    frameCount = EstimateFrame(ToolsUtil.ToolsFolder, result.Groups["fileIn"].Value);
                 }
                 result = Patterns.fileCompletedReg.Match(e.Data);
                 if (result.Success)

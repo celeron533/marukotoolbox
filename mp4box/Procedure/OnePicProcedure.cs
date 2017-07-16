@@ -21,12 +21,11 @@ namespace mp4box.Procedure
         public int duration { get; set; }
         public bool copyAudio { get; set; }
 
-        string tempPic, workPath, batpath = "";
-        [Obsolete("It should be no parameter. Currently is just used for refactor compatibility")]
-        public OnePicProcedure(string tempPic, string workPath) : base()
+        string tempPic, batpath = "";
+
+        public OnePicProcedure(string tempPic) : base()
         {
             this.tempPic = tempPic;
-            this.workPath = workPath;
         }
 
 
@@ -78,27 +77,26 @@ namespace mp4box.Procedure
             //    return;
             //}
 
-            string ffPath = Path.Combine(workPath, "ffmpeg.exe");
-            string neroPath = FileStringUtil.FormatPath(Path.Combine(workPath, "neroaacenc.exe"));
+            string neroPath = FileStringUtil.FormatPath(ToolsUtil.NEROAACENC.fullPath);
             StringBuilder muxCommand = new StringBuilder();
             if (copyAudio)
             {
-                muxCommand.AppendLine("\"" + ffPath + "\" -loop 1 -r " + fps + " -t " + duration.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y SinglePictureVideo.mp4")
-                          .AppendLine("\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i \"" + audioFilePath + "\" -c:v copy -c:a copy -y \"" + outputFilePath + "\"")
+                muxCommand.AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -loop 1 -r " + fps + " -t " + duration.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y SinglePictureVideo.mp4")
+                          .AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -i SinglePictureVideo.mp4 -i \"" + audioFilePath + "\" -c:v copy -c:a copy -y \"" + outputFilePath + "\"")
                           .AppendLine("del SinglePictureVideo.mp4")
                           .AppendLine("cmd");
             }
             else
             {
-                muxCommand.AppendLine("\"" + ffPath + "\" -i \"" + audioFilePath + "\" -f wav - |" + neroPath + " -br " + audioBitrate * 1000 + " -ignorelength -if - -of audio.mp4 -lc")
-                          .AppendLine("\"" + ffPath + "\" -loop 1 -r " + fps + " -t " + duration.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y SinglePictureVideo.mp4")
-                          .AppendLine("\"" + ffPath + "\" -i SinglePictureVideo.mp4 -i audio.mp4 -c:v copy -c:a copy -y \"" + outputFilePath + "\"")
+                muxCommand.AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -i \"" + audioFilePath + "\" -f wav - |" + neroPath + " -br " + audioBitrate * 1000 + " -ignorelength -if - -of audio.mp4 -lc")
+                          .AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -loop 1 -r " + fps + " -t " + duration.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y SinglePictureVideo.mp4")
+                          .AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -i SinglePictureVideo.mp4 -i audio.mp4 -c:v copy -c:a copy -y \"" + outputFilePath + "\"")
                           .AppendLine("del SinglePictureVideo.mp4")
                           .AppendLine("del audio.mp4")
                           .AppendLine("cmd");
             }
 
-            batpath = Path.Combine(workPath, Path.GetRandomFileName() + ".bat");
+            batpath = Path.Combine(ToolsUtil.ToolsFolder, Path.GetRandomFileName() + ".bat");
             File.WriteAllText(batpath, muxCommand.ToString(), Encoding.Default);
             // TODO: log function
             //LogRecord(muxCommand.ToString());

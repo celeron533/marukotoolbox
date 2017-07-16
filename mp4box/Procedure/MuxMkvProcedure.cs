@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mp4box.Utility;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -14,11 +15,10 @@ namespace mp4box.Procedure
         public string audioInput { get; set; }
         public string subtitleInput { get; set; }
 
-        string workPath, batpath = "";
-        [Obsolete("It should be no parameter. Currently is just used for refactor compatibility")]
-        public MuxMkvProcedure(string workPath):base()
+        string batpath = "";
+
+        public MuxMkvProcedure():base()
         {
-            this.workPath = workPath;
         }
 
         public override void GetDataFromUI(Action<MuxMkvProcedure> p)
@@ -34,7 +34,7 @@ namespace mp4box.Procedure
         public override void Execute()
         {
             StringBuilder mkvCommand = new StringBuilder();
-            mkvCommand.Append("\"" + workPath + "\\mkvmerge.exe\" -o \"" + output + "\"")
+            mkvCommand.Append("\"" + ToolsUtil.MKVMERGE.fullPath + "\" -o \"" + output + "\"")
                 .AppendParameters($"\"{videoInput}\"");
 
             if (!string.IsNullOrEmpty(audioInput))
@@ -43,7 +43,7 @@ namespace mp4box.Procedure
                 mkvCommand.AppendParameters($"\"{subtitleInput}\"");
 
             mkvCommand.AppendLine("cmd");
-            batpath = workPath + "\\mkvmerge.bat";
+            batpath = ToolsUtil.ToolsFolder + "\\mkvmerge.bat";
             File.WriteAllText(batpath, mkvCommand.ToString(), Encoding.Default);
             // TODO: Log function
             //LogRecord(mkvCommand.ToString());

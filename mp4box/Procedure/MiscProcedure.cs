@@ -16,11 +16,10 @@ namespace mp4box.Procedure
         public string endTimeStr { get; set; }
         public int transposeIndex { get; set; }
 
-        string workPath, batpath = "";
-        [Obsolete("It should be no parameter. Currently is just used for refactor compatibility")]
-        public MiscProcedure(string workPath) : base()
+        string batpath = "";
+
+        public MiscProcedure() : base()
         {
-            this.workPath = workPath;
         }
 
         public override void GetDataFromUI(Action<MiscProcedure> p)
@@ -52,10 +51,10 @@ namespace mp4box.Procedure
                 int.Parse(endTimeStr.Substring(6, 2))
             };
 
-            string clip = string.Format(@"""{0}\ffmpeg.exe"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""",
-                    workPath, beginTimeStr, OtherUtil.TimeSubtract(begin, end), inputVideoFilePath, outputVideoFilePath) + Environment.NewLine + "cmd";
+            string clip = string.Format(@"""{0}"" -ss {1} -t {2} -y -i ""{3}"" -c copy ""{4}""",
+                    ToolsUtil.FFMPEG.fullPath, beginTimeStr, OtherUtil.TimeSubtract(begin, end), inputVideoFilePath, outputVideoFilePath) + Environment.NewLine + "cmd";
             //clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{3}"" -ss {1} -to {2} -y  -c copy ""{4}""", workPath, maskb.Text, maske.Text, namevideo4, nameout5) + Environment.NewLine + "cmd";
-            batpath = workPath + "\\clip.bat";
+            batpath = ToolsUtil.ToolsFolder + "\\clip.bat";
             // TODO: Log function
             //LogRecord(clip);
             File.WriteAllText(batpath, clip, Encoding.Default);
@@ -67,9 +66,9 @@ namespace mp4box.Procedure
         /// </summary>
         public void ExecuteRotate()
         {
-            string clip = string.Format(@"""{0}\ffmpeg.exe"" -i ""{1}"" -vf ""transpose={2}"" -y ""{3}""",
-                    workPath, inputVideoFilePath, transposeIndex, outputVideoFilePath) + Environment.NewLine + "cmd";
-            batpath = workPath + "\\clip.bat";
+            string clip = string.Format(@"""{0}"" -i ""{1}"" -vf ""transpose={2}"" -y ""{3}""",
+                    ToolsUtil.FFMPEG.fullPath, inputVideoFilePath, transposeIndex, outputVideoFilePath) + Environment.NewLine + "cmd";
+            batpath = ToolsUtil.ToolsFolder + "\\clip.bat";
             // TODO: Log function
             //LogRecord(clip);
             File.WriteAllText(batpath, clip, Encoding.Default);

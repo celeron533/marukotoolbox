@@ -23,12 +23,11 @@ namespace mp4box.Procedure
         public int targetBitrate { get; set; }
         public bool doNotUseImg { get; set; }
 
-        string tempPic, workPath, batpath = "";
-        [Obsolete("It should be no parameter. Currently is just used for refactor compatibility")]
-        public BlackProcedure(string tempPic, string workPath) : base()
+        string tempPic, batpath = "";
+
+        public BlackProcedure(string tempPic) : base()
         {
             this.tempPic = tempPic;
-            this.workPath = workPath;
         }
 
         public override void GetDataFromUI(Action<BlackProcedure> p)
@@ -102,11 +101,11 @@ namespace mp4box.Procedure
 
 
             //批处理
-            string mux = "\"" + workPath + "\\ffmpeg\" -loop 1 -r " + fps + " -t " + blackDuration + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y black.flv\r\n";
-            mux += string.Format("\"{0}\\flvbind\" \"{1}\"  \"{2}\"  black.flv\r\n", workPath, outputVideoFile, inputVideoFile);
+            string mux = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -loop 1 -r " + fps + " -t " + blackDuration + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y black.flv\r\n";
+            mux += string.Format("\"{0}\\flvbind\" \"{1}\"  \"{2}\"  black.flv\r\n", ToolsUtil.ToolsFolder, outputVideoFile, inputVideoFile);
             mux += "del black.flv\r\n";
 
-            batpath = Path.Combine(workPath, Path.GetRandomFileName() + ".bat");
+            batpath = Path.Combine(ToolsUtil.ToolsFolder, Path.GetRandomFileName() + ".bat");
             File.WriteAllText(batpath, mux, Encoding.Default);
             // TODO: Log function
             //LogRecord(mux);

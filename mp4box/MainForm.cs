@@ -47,7 +47,8 @@ namespace mp4box
     public partial class MainForm : Form
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        public string workPath = "!undefined";
+        private string logFileName = ((NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("f")).FileName.Render(null);
+
         private Preset preset;
 
         #region Private Members Declaration
@@ -81,7 +82,7 @@ namespace mp4box
         private string startpath;
         private string tempavspath = "";
         private string tempPic = "";
-        private string logFileName, logPath;
+
         private string tempfilepath;
         private DateTime ReleaseDate = AssemblyUtil.GetAssemblyVersionTime();
 
@@ -95,12 +96,12 @@ namespace mp4box
 
         public string ffmuxbat(string input1, string input2, string output)
         {
-            return $"\"{workPath}\\ffmpeg.exe\" -i \"{input1}\" -i \"{input2}\" -sn -c copy -y \"{output}\"{Environment.NewLine}";
+            return $"\"{ToolsUtil.FFMPEG.fullPath}\" -i \"{input1}\" -i \"{input2}\" -sn -c copy -y \"{output}\"{Environment.NewLine}";
         }
 
         public string boxmuxbat(string input1, string input2, string output)
         {
-            return $"\"{workPath}\\mp4box.exe\" -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new \"{output}\"{Environment.NewLine}";
+            return $"\"{ToolsUtil.MP4BOX.fullPath}\" -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new \"{output}\"{Environment.NewLine}";
         }
 
         public XvSettings GetXvSettings()
@@ -143,9 +144,9 @@ namespace mp4box
                 xvs.V_width = 0;
                 xvs.V_height = 0;
                 sub = string.Empty;
-                sb.Append("\"" + workPath + "\\avs4x26x.exe\"" + " -L ");
+                sb.Append("\"" + ToolsUtil.AVS4X26X.fullPath + "\"" + " -L ");
             }
-            sb.Append("\"" + Path.Combine(workPath, VideoEncoderComboBox.SelectedItem.ToString()) + "\"");
+            sb.Append("\"" + Path.Combine(ToolsUtil.ToolsFolder, VideoEncoderComboBox.SelectedItem.ToString()) + "\"");
             // 编码模式
             switch (x264mode)
             {
@@ -207,11 +208,11 @@ namespace mp4box
             bool isAvs = Path.GetExtension(input).ToLower().Equals(".avs");
             if (isAvs)
             {
-                sb.Append("\"" + workPath + "\\avs4x26x.exe\"" + " -L ");
+                sb.Append("\"" + ToolsUtil.AVS4X26X.fullPath + "\"" + " -L ");
             }
             else
             {
-                sb.Append("\"" + workPath + "\\ffmpeg.exe\"" + " -i \"" + input + "\"");
+                sb.Append("\"" + ToolsUtil.FFMPEG.fullPath + "\"" + " -i \"" + input + "\"");
                 if (xvs.V_height != 0 && xvs.V_height != 0 && !xvs.IsResizeChecked)
                     sb.Append(string.Format(" -vf zscale={0}x{1}:filter=lanczos", xvs.V_width, xvs.V_height));
                 if (!string.IsNullOrEmpty(sub))
@@ -228,7 +229,7 @@ namespace mp4box
                 sb.Append(" -strict -1 -f yuv4mpegpipe -an - | ");
             }
 
-            sb.Append(FileStringUtil.FormatPath(Path.Combine(workPath, VideoEncoderComboBox.SelectedItem.ToString())) + (isAvs ? string.Empty : " --y4m"));
+            sb.Append(FileStringUtil.FormatPath(Path.Combine(ToolsUtil.ToolsFolder, VideoEncoderComboBox.SelectedItem.ToString())) + (isAvs ? string.Empty : " --y4m"));
             // 编码模式
             switch (x264mode)
             {
@@ -282,68 +283,68 @@ namespace mp4box
         {
             int AACbr = 1000 * Convert.ToInt32(AudioBitrateComboBox.Text);
             string br = AACbr.ToString();
-            ffmpeg = "\"" + workPath + "\\ffmpeg.exe\" -i \"" + input + "\" -vn -sn -v 0 -c:a pcm_s16le -f wav pipe:|";
+            ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -i \"" + input + "\" -vn -sn -v 0 -c:a pcm_s16le -f wav pipe:|";
             switch (AudioEncoderComboBox.SelectedIndex)
             {
                 case 0:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\neroAacEnc.exe\" -ignorelength -lc -br " + br + " -if - -of \"" + output + "\"";
+                        ffmpeg += "\"" + ToolsUtil.NEROAACENC.fullPath + "\" -ignorelength -lc -br " + br + " -if - -of \"" + output + "\"";
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\neroAacEnc.exe\" -ignorelength " + AudioCustomParameterTextBox.Text + " -if - -of \"" + output + "\"";
+                        ffmpeg += "\"" + ToolsUtil.NEROAACENC.fullPath + "\" -ignorelength " + AudioCustomParameterTextBox.Text + " -if - -of \"" + output + "\"";
                     }
                     break;
 
                 case 1:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\qaac.exe\" -q 2 --ignorelength -c " + AudioBitrateComboBox.Text + " - -o \"" + output + "\"";
+                        ffmpeg += "\"" + ToolsUtil.QAAC.fullPath + "\" -q 2 --ignorelength -c " + AudioBitrateComboBox.Text + " - -o \"" + output + "\"";
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\qaac.exe\" --ignorelength " + AudioCustomParameterTextBox.Text + " - -o \"" + output + "\"";
+                        ffmpeg += "\"" + ToolsUtil.QAAC.fullPath + "\" --ignorelength " + AudioCustomParameterTextBox.Text + " - -o \"" + output + "\"";
                     }
                     break;
 
                 case 2:
                     if (Path.GetExtension(output) == ".aac")
                         output = Path.ChangeExtension(output, ".wav");
-                    ffmpeg = "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + input + "\" -f wav \"" + output + "\"";
+                    ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -y -i \"" + input + "\" -f wav \"" + output + "\"";
                     break;
 
                 case 3:
-                    ffmpeg += "\"" + workPath + "\\refalac.exe\" --ignorelength - -o \"" + output + "\"";
+                    ffmpeg += "\"" + ToolsUtil.REFALAC.fullPath + "\" --ignorelength - -o \"" + output + "\"";
                     break;
 
                 case 4:
-                    ffmpeg += "\"" + workPath + "\\flac.exe\" -f --ignore-chunk-sizes -5 - -o \"" + output + "\"";
+                    ffmpeg += "\"" + ToolsUtil.FLAC.fullPath + "\" -f --ignore-chunk-sizes -5 - -o \"" + output + "\"";
                     break;
 
                 case 5:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\fdkaac.exe\" --ignorelength -b " + AudioBitrateComboBox.Text + " - -o \"" + output + "\"";
+                        ffmpeg += "\"" + ToolsUtil.FDKAAC.fullPath + "\" --ignorelength -b " + AudioBitrateComboBox.Text + " - -o \"" + output + "\"";
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\fdkaac.exe\" --ignorelength " + AudioCustomParameterTextBox.Text + " - -o \"" + output + "\"";
+                        ffmpeg += "\"" + ToolsUtil.FDKAAC.fullPath + "\" --ignorelength " + AudioCustomParameterTextBox.Text + " - -o \"" + output + "\"";
                     }
                     break;
 
                 case 6:
-                    ffmpeg = "\"" + workPath + "\\ffmpeg.exe\" -i \"" + input + "\" -c:a ac3 -b:a " + AudioBitrateComboBox.Text + "k \"" + output + "\"";
+                    ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -i \"" + input + "\" -c:a ac3 -b:a " + AudioBitrateComboBox.Text + "k \"" + output + "\"";
                     break;
 
                 case 7:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\lame.exe\" -q 3 -b " + AudioBitrateComboBox.Text + " - \"" + output + "\"";
+                        ffmpeg += "\"" + ToolsUtil.LAME.fullPath + "\" -q 3 -b " + AudioBitrateComboBox.Text + " - \"" + output + "\"";
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + workPath + "\\lame.exe\" " + AudioCustomParameterTextBox.Text + " - \"" + output + "\"";
+                        ffmpeg += "\"" + ToolsUtil.LAME.fullPath + "\" " + AudioCustomParameterTextBox.Text + " - \"" + output + "\"";
                     }
                     break;
 
@@ -383,7 +384,7 @@ namespace mp4box
             string ext = Path.GetExtension(namevideo);
             //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 2 \"" + namevideo + "\"";
             string aextract = "";
-            aextract += FileStringUtil.FormatPath(workPath + "\\ffmpeg.exe");
+            aextract += FileStringUtil.FormatPath(ToolsUtil.FFMPEG.fullPath);
             aextract += " -i " + FileStringUtil.FormatPath(namevideo);
             if (av == "a")
             {
@@ -433,7 +434,7 @@ namespace mp4box
             //    Path.GetFileNameWithoutExtension(namevideo) + suf + ext;
             string outfile = Path.ChangeExtension(namevideo, suf + ext);
             aextract += FileStringUtil.FormatPath(outfile);
-            batpath = workPath + "\\" + av + "extract.bat";
+            batpath = ToolsUtil.ToolsFolder + "\\" + av + "extract.bat";
             File.WriteAllText(batpath, aextract, Encoding.Default);
             logger.Info(aextract);
             Process.Start(batpath);
@@ -448,7 +449,7 @@ namespace mp4box
             string ext = Path.GetExtension(namevideo);
             //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 2 \"" + namevideo + "\"";
             string aextract = "";
-            aextract += FileStringUtil.FormatPath(workPath + "\\ffmpeg.exe");
+            aextract += FileStringUtil.FormatPath(ToolsUtil.FFMPEG.fullPath);
             aextract += " -i " + FileStringUtil.FormatPath(namevideo);
             aextract += " -vn -sn -c:a copy -y -map 0:a:" + streamIndex + " ";
 
@@ -489,7 +490,7 @@ namespace mp4box
             }
 
             string aextract = "";
-            aextract += FileStringUtil.FormatPath(workPath + "\\ffmpeg.exe");
+            aextract += FileStringUtil.FormatPath(ToolsUtil.FFMPEG.fullPath);
             aextract += " -i " + FileStringUtil.FormatPath(namevideo);
             aextract += " -map 0:" + streamIndex + " -c copy ";
             string suf = "_抽取流Index" + streamIndex;
@@ -497,9 +498,9 @@ namespace mp4box
             //    Path.GetFileNameWithoutExtension(namevideo) + suf + '.' +
             //    FormatExtractor.Extract(workPath, namevideo)[streamIndex].Format;
             string outfile = Path.ChangeExtension(namevideo, suf + '.' +
-                             FormatExtractor.Extract(workPath, namevideo)[streamIndex].Format);
+                             FormatExtractor.Extract(ToolsUtil.ToolsFolder, namevideo)[streamIndex].Format);
             aextract += FileStringUtil.FormatPath(outfile);
-            batpath = workPath + "\\mkvextract.bat";
+            batpath = ToolsUtil.ToolsFolder + "\\mkvextract.bat";
             File.WriteAllText(batpath, aextract, Encoding.Default);
             logger.Info(aextract);
             Process.Start(batpath);
@@ -509,7 +510,7 @@ namespace mp4box
         {
             #region Delete Temp Files
 
-            if (ConfigFunctionDeleteTempFileCheckBox.Checked && !workPath.Equals("!undefined"))
+            if (ConfigFunctionDeleteTempFileCheckBox.Checked && Directory.Exists(ToolsUtil.ToolsFolder))
             {
                 List<string> deleteFileList = new List<string>();
 
@@ -523,7 +524,7 @@ namespace mp4box
                 //    if (NextFile.Extension.Equals(".bat"))
                 //        deleteFileList.Add(NextFile.FullName);
                 //}
-                string[] batFiles = Directory.GetFiles(workPath, "*.bat");
+                string[] batFiles = Directory.GetFiles(ToolsUtil.ToolsFolder, "*.bat");
 
                 if (Directory.Exists(tempfilepath))
                 {
@@ -779,8 +780,7 @@ namespace mp4box
 
             //define workpath
             startpath = System.Windows.Forms.Application.StartupPath;
-            workPath = startpath + "\\tools";
-            if (!Directory.Exists(workPath))
+            if (!Directory.Exists(ToolsUtil.ToolsFolder))
             {
                 logger.Error("tools not found.");
                 MessageBox.Show("tools文件夹没有解压喔~ 工具箱里没有工具的话运行不起来的喔~", "（这只丸子）",
@@ -798,7 +798,7 @@ namespace mp4box
             tempfilepath = startpath + "\\temp";
 
             //load x264 exe
-            DirectoryInfo folder = new DirectoryInfo(workPath);
+            DirectoryInfo folder = new DirectoryInfo(ToolsUtil.ToolsFolder);
             List<string> x264exe = new List<string>();
             try
             {
@@ -818,14 +818,14 @@ namespace mp4box
             // avisynth未安装使用本地内置的avs
             if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
             {
-                string sourceAviSynthdll = Path.Combine(workPath, @"avs\AviSynth.dll");
-                string sourceDevILdll = Path.Combine(workPath, @"avs\DevIL.dll");
+                string sourceAviSynthdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\AviSynth.dll");
+                string sourceDevILdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\DevIL.dll");
                 if (File.Exists(sourceAviSynthdll) && File.Exists(sourceDevILdll))
                 {
                     try
                     {
-                        File.Copy(sourceAviSynthdll, Path.Combine(workPath, "AviSynth.dll"), true);
-                        File.Copy(sourceDevILdll, Path.Combine(workPath, "DevIL.dll"), true);
+                        File.Copy(sourceAviSynthdll, Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"), true);
+                        File.Copy(sourceDevILdll, Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"), true);
                         logger.Info("未安装avisynth,使用本地内置avs.");
                     }
                     catch (IOException) { }
@@ -833,14 +833,14 @@ namespace mp4box
             }
             else
             {
-                File.Delete(Path.Combine(workPath, "AviSynth.dll"));
-                File.Delete(Path.Combine(workPath, "DevIL.dll"));
+                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"));
+                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"));
             }
 
             //load AVS filter
-            DirectoryInfo avspath = new DirectoryInfo(workPath + @"\avs\plugins");
+            DirectoryInfo avspath = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
             List<string> avsfilters = new List<string>();
-            if (Directory.Exists(workPath + @"\avs\plugins"))
+            if (Directory.Exists(ToolsUtil.ToolsFolder + @"\avs\plugins"))
             {
                 foreach (FileInfo FileName in avspath.GetFiles())
                 {
@@ -927,7 +927,7 @@ namespace mp4box
                            x265bat(input, tempVideo, 2, sub);
                 else x264 = x265bat(input, tempVideo, 0, sub);
                 if (audioMode == 1 || !hasAudio)
-                    x264 += "\r\n\"" + workPath + "\\mp4box.exe\"  -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + output + "\" \r\n";
+                    x264 += "\r\n\"" + ToolsUtil.MP4BOX.fullPath + "\"  -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + output + "\" \r\n";
             }
             x264 += "\r\n";
 
@@ -1107,7 +1107,7 @@ namespace mp4box
                 return;
             }
 
-            MuxMkvProcedure muxMkvProcedure = new MuxMkvProcedure(workPath);
+            MuxMkvProcedure muxMkvProcedure = new MuxMkvProcedure();
             muxMkvProcedure.GetDataFromUI(p =>
             {
                 p.output = MuxMkvOutputTextBox.Text;
@@ -1292,7 +1292,7 @@ namespace mp4box
             if (!MuxMp4Validation())
                 return;
 
-            MuxMp4Procedure procedure = new MuxMp4Procedure(workPath);
+            MuxMp4Procedure procedure = new MuxMp4Procedure();
             procedure.GetDataFromUI(GetMuxMp4DataFromUI);
             procedure.Execute();
         }
@@ -1328,7 +1328,7 @@ namespace mp4box
             if (!MuxMp4Validation())
                 return;
 
-            MuxMp4Procedure procedure = new MuxMp4Procedure(workPath);
+            MuxMp4Procedure procedure = new MuxMp4Procedure();
             procedure.GetDataFromUI(GetMuxMp4DataFromUI);
             procedure.ExecuteReplaceAudio();
 
@@ -1426,15 +1426,15 @@ namespace mp4box
                 string audio = new MediaInfoWrapper(sourceFilePath).a_format;
                 if (audio.ToLower() != "aac" && MuxConvertFormatComboBox.Text != "mkv")
                 {
-                    mux += "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + sourceFilePath + "\" -c:v copy -c:a " + MuxConvertAacEncoderComboBox.Text + " -strict -2 \"" + targetFilePath + "\" \r\n";
+                    mux += "\"" + ToolsUtil.FFMPEG.fullPath + "\" -y -i \"" + sourceFilePath + "\" -c:v copy -c:a " + MuxConvertAacEncoderComboBox.Text + " -strict -2 \"" + targetFilePath + "\" \r\n";
                 }
                 else
                 {
-                    mux += "\"" + workPath + "\\ffmpeg.exe\" -y -i \"" + sourceFilePath + "\" -c copy \"" + targetFilePath + "\" \r\n";
+                    mux += "\"" + ToolsUtil.FFMPEG.fullPath + "\" -y -i \"" + sourceFilePath + "\" -c copy \"" + targetFilePath + "\" \r\n";
                 }
             }
             mux += "\r\ncmd";
-            batpath = workPath + "\\mux.bat";
+            batpath = ToolsUtil.ToolsFolder + "\\mux.bat";
             File.WriteAllText(batpath, mux, Encoding.Default);
             logger.Info(mux);
             Process.Start(batpath);
@@ -1467,7 +1467,7 @@ namespace mp4box
 
         private void ExtractMkvExtractByExternalButton_Click(object sender, EventArgs e)
         {
-            string path = workPath + "\\gMKVExtractGUI.exe";
+            string path = ToolsUtil.GMKVEXTRACTGUI.fullPath;
             if (File.Exists(path))
                 Process.Start(path);
             else
@@ -1923,7 +1923,7 @@ namespace mp4box
                 else x264 = x265bat(videoInput, tempVideo, 0, videoSubtitle);
                 if (audioMode == 1)
                 {
-                    x264 += "\r\n\"" + workPath + "\\mp4box.exe\" -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + Path.ChangeExtension(videoOutput, ".mp4") + "\" \r\n";
+                    x264 += "\r\n\"" + ToolsUtil.MP4BOX.fullPath + "\" -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + Path.ChangeExtension(videoOutput, ".mp4") + "\" \r\n";
                     x264 += "del \"" + tempVideo + "\"";
                 }
             }
@@ -2380,7 +2380,7 @@ namespace mp4box
                     aac += "\r\n";
                 }
                 aac += "\r\ncmd";
-                batpath = workPath + "\\aac.bat";
+                batpath = ToolsUtil.ToolsFolder + "\\aac.bat";
                 File.WriteAllText(batpath, aac, Encoding.Default);
                 logger.Info(aac);
                 Process.Start(batpath);
@@ -2423,7 +2423,7 @@ namespace mp4box
             }
             else
             {
-                batpath = workPath + "\\aac.bat";
+                batpath = ToolsUtil.ToolsFolder + "\\aac.bat";
                 File.WriteAllText(batpath, audiobat(audioInput, audioOutput), Encoding.Default);
                 logger.Info(audiobat(audioInput, audioOutput));
                 Process.Start(batpath);
@@ -2516,7 +2516,7 @@ namespace mp4box
         {
             if (AvsScriptTextBox.Text != "")
             {
-                string filepath = workPath + "\\temp.avs";
+                string filepath = ToolsUtil.ToolsFolder + "\\temp.avs";
                 File.WriteAllText(filepath, AvsScriptTextBox.Text, Encoding.Default);
                 if (File.Exists(ConfigFunctionVideoPlayerTextBox.Text))
                 {
@@ -2524,7 +2524,7 @@ namespace mp4box
                 }
                 else
                 {
-                    string ffplayer = Path.Combine(workPath, "ffplay.exe");
+                    string ffplayer = ToolsUtil.FFPLAY.fullPath;
                     if (File.Exists(ffplayer))
                         Process.Start(FileStringUtil.FormatPath(ffplayer), " -i " + FileStringUtil.FormatPath(filepath));
                     else
@@ -2684,7 +2684,7 @@ namespace mp4box
                 else x264 = x265bat(filepath, tempVideo);
                 if (!AvsIncludeAudioCheckBox.Checked || !hasAudio)
                 {
-                    x264 += "\r\n\"" + workPath + "\\mp4box.exe\"  -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + avsOutput + "\" \r\n";
+                    x264 += "\r\n\"" + ToolsUtil.MP4BOX.fullPath + "\"  -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + avsOutput + "\" \r\n";
                     x264 += "del \"" + tempVideo + "\"";
                 }
             }
@@ -2793,7 +2793,7 @@ namespace mp4box
 
         private void AvsAddFilterButton_Click(object sender, EventArgs e)
         {
-            string vsfilterDLLPath = Path.Combine(workPath, @"avs\plugins\" + AvsFilterComboBox.Text);
+            string vsfilterDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\" + AvsFilterComboBox.Text);
             string text = "LoadPlugin(\"" + vsfilterDLLPath + "\")" + "\r\n";
             AvsScriptTextBox.Text = text + AvsScriptTextBox.Text;
         }
@@ -2807,10 +2807,10 @@ namespace mp4box
         {
             StringBuilder avsBuilder = new StringBuilder(1000);
 
-            string vsfilterDLLPath = Path.Combine(workPath, @"avs\plugins\VSFilter.DLL");
-            string SupTitleDLLPath = Path.Combine(workPath, @"avs\plugins\SupTitle.dll");
-            string LSMASHSourceDLLPath = Path.Combine(workPath, @"avs\plugins\LSMASHSource.DLL");
-            string undotDLLPath = Path.Combine(workPath, @"avs\plugins\UnDot.DLL");
+            string vsfilterDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\VSFilter.DLL");
+            string SupTitleDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\SupTitle.dll");
+            string LSMASHSourceDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\LSMASHSource.DLL");
+            string undotDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\UnDot.DLL");
 
             avsBuilder.AppendLine($"LoadPlugin(\"{LSMASHSourceDLLPath}\")");
             if (Path.GetExtension(avsSubtitleInput).ToLower() == ".sup")
@@ -3166,7 +3166,7 @@ namespace mp4box
             }
             else
             {
-                OnePicProcedure procedure = new OnePicProcedure(tempPic, workPath);
+                OnePicProcedure procedure = new OnePicProcedure(tempPic);
                 procedure.GetDataFromUI(GetOnePicDataFromUI);
                 procedure.Execute();
             }
@@ -3218,7 +3218,7 @@ namespace mp4box
             }
             else
             {
-                MiscProcedure miscProcedure = new MiscProcedure(workPath);
+                MiscProcedure miscProcedure = new MiscProcedure();
                 miscProcedure.GetDataFromUI(GetMiscDataFromUI);
                 miscProcedure.Execute();
             }
@@ -3236,7 +3236,7 @@ namespace mp4box
             }
             else
             {
-                MiscProcedure miscProcedure = new MiscProcedure(workPath);
+                MiscProcedure miscProcedure = new MiscProcedure();
                 miscProcedure.GetDataFromUI(GetMiscDataFromUI);
                 miscProcedure.ExecuteRotate();
             }
@@ -3328,7 +3328,7 @@ namespace mp4box
                 return;
             }
 
-            BlackProcedure blackProcedure = new BlackProcedure(tempPic, workPath);
+            BlackProcedure blackProcedure = new BlackProcedure(tempPic);
             blackProcedure.GetDataFromUI(p =>
             {
                 p.inputVideoFile = MiscBlackVideoInputTextBox.Text;
@@ -3379,6 +3379,7 @@ namespace mp4box
         }
         private void ConfigFunctionDeleteLogButton_Click(object sender, EventArgs e)
         {
+            string logPath = Path.GetDirectoryName(logFileName);
             if (Directory.Exists(logPath))
             {
                 Directory.Delete(logPath, true);
@@ -3700,10 +3701,10 @@ namespace mp4box
                 }
                 sb.AppendLine("file '" + AudioBatchItemListBox.Items[i].ToString() + "'");
                 File.WriteAllText("concat.txt", sb.ToString());
-                ffmpeg = "\"" + workPath + "\\ffmpeg.exe\" -f concat  -i concat.txt -y -c copy " + finish;
+                ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -f concat  -i concat.txt -y -c copy " + finish;
             }
             ffmpeg += "\r\ncmd";
-            batpath = workPath + "\\concat.bat";
+            batpath = ToolsUtil.ToolsFolder + "\\concat.bat";
             File.WriteAllText(batpath, ffmpeg, Encoding.Default);
             logger.Info(aac);
             Process.Start(batpath);
