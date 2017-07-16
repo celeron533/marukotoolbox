@@ -24,6 +24,7 @@ using ControlExs;
 using MediaInfoLib;
 using mp4box.Procedure;
 using mp4box.Utility;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,7 @@ namespace mp4box
 {
     public partial class MainForm : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public string workPath = "!undefined";
         private Preset preset;
 
@@ -87,8 +89,6 @@ namespace mp4box
 
         public MainForm()
         {
-            logPath = Application.StartupPath + "\\logs";
-            logFileName = logPath + "\\LogFile-" + DateTime.Now.ToString("yyyy'-'MM'-'dd'_'HH'-'mm'-'ss") + ".log";
             preset = new Preset();
             InitializeComponent();
         }
@@ -435,7 +435,7 @@ namespace mp4box
             aextract += FileStringUtil.FormatPath(outfile);
             batpath = workPath + "\\" + av + "extract.bat";
             File.WriteAllText(batpath, aextract, Encoding.Default);
-            LogRecord(aextract);
+            logger.Info(aextract);
             Process.Start(batpath);
         }
 
@@ -501,7 +501,7 @@ namespace mp4box
             aextract += FileStringUtil.FormatPath(outfile);
             batpath = workPath + "\\mkvextract.bat";
             File.WriteAllText(batpath, aextract, Encoding.Default);
-            LogRecord(aextract);
+            logger.Info(aextract);
             Process.Start(batpath);
         }
 
@@ -782,6 +782,7 @@ namespace mp4box
             workPath = startpath + "\\tools";
             if (!Directory.Exists(workPath))
             {
+                logger.Error("tools not found.");
                 MessageBox.Show("tools文件夹没有解压喔~ 工具箱里没有工具的话运行不起来的喔~", "（这只丸子）",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(1);
@@ -825,7 +826,7 @@ namespace mp4box
                     {
                         File.Copy(sourceAviSynthdll, Path.Combine(workPath, "AviSynth.dll"), true);
                         File.Copy(sourceDevILdll, Path.Combine(workPath, "DevIL.dll"), true);
-                        LogRecord("未安装avisynth,使用本地内置avs.");
+                        logger.Info("未安装avisynth,使用本地内置avs.");
                     }
                     catch (IOException) { }
                 }
@@ -1035,7 +1036,7 @@ namespace mp4box
                 bat += VideoBatch(VideoBatchItemListbox.Items[i].ToString(), output);
             }
 
-            LogRecord(bat);
+            logger.Info(bat);
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
             WorkingForm wf = new WorkingForm(bat, VideoBatchItemListbox.Items.Count);
             wf.Owner = this;
@@ -1435,7 +1436,7 @@ namespace mp4box
             mux += "\r\ncmd";
             batpath = workPath + "\\mux.bat";
             File.WriteAllText(batpath, mux, Encoding.Default);
-            LogRecord(mux);
+            logger.Info(mux);
             Process.Start(batpath);
 
         }
@@ -1947,7 +1948,7 @@ namespace mp4box
 
             #endregion Mux
 
-            LogRecord(x264);
+            logger.Info(x264);
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
             WorkingForm wf = new WorkingForm(x264);
             wf.Owner = this;
@@ -2381,7 +2382,7 @@ namespace mp4box
                 aac += "\r\ncmd";
                 batpath = workPath + "\\aac.bat";
                 File.WriteAllText(batpath, aac, Encoding.Default);
-                LogRecord(aac);
+                logger.Info(aac);
                 Process.Start(batpath);
             }
             else MessageBoxExt.ShowErrorMessage("请输入文件！");
@@ -2424,7 +2425,7 @@ namespace mp4box
             {
                 batpath = workPath + "\\aac.bat";
                 File.WriteAllText(batpath, audiobat(audioInput, audioOutput), Encoding.Default);
-                LogRecord(audiobat(audioInput, audioOutput));
+                logger.Info(audiobat(audioInput, audioOutput));
                 Process.Start(batpath);
             }
         }
@@ -2695,7 +2696,7 @@ namespace mp4box
 
             auto = aextract + x264 + "\r\n" + mux + " \r\n";
             auto += "\r\necho ===== one file is completed! =====\r\n";
-            LogRecord(auto);
+            logger.Info(auto);
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
             WorkingForm wf = new WorkingForm(auto);
             wf.Owner = this;
@@ -2870,42 +2871,6 @@ namespace mp4box
         #endregion 更改AVS
 
         #endregion Avs Tab
-
-        #region Log
-
-        [Obsolete("Not used")]
-        public void Log(string path)
-        {
-            ProcessStartInfo start = new ProcessStartInfo(path);//设置运行的命令行文件问ping.exe文件，这个文件系统会自己找到
-            //如果是其它exe文件，则有可能需要指定详细路径，如运行winRar.exe
-            start.CreateNoWindow = false;//不显示dos命令行窗口
-            start.RedirectStandardOutput = true;//
-            start.RedirectStandardInput = true;//
-            start.UseShellExecute = false;//是否指定操作系统外壳进程启动程序
-            Process p = Process.Start(start);
-            StreamReader reader = p.StandardOutput;//截取输出流
-            string line = reader.ReadLine();//每次读取一行
-            StringBuilder log = new StringBuilder(2000);
-            while (!reader.EndOfStream)
-            {
-                log.Append(line + "\r\n");
-                line = reader.ReadLine();
-            }
-            p.WaitForExit();//等待程序执行完退出进程
-            File.WriteAllText(startpath + "\\log.txt", log.ToString(), Encoding.Default);
-            p.Close();//关闭进程
-            reader.Close();//关闭流
-        }
-
-        // TODO: use Log4Net
-        public void LogRecord(string log)
-        {
-            FileStringUtil.ensureDirectoryExists(logPath);
-            File.AppendAllText(logFileName,
-                "===========" + DateTime.Now.ToString() + "===========\r\n" + log + "\r\n\r\n", Encoding.Default);
-        }
-
-        #endregion Log
 
         private void VideoBatchOutputFolderButton_Click(object sender, EventArgs e)
         {
@@ -3740,7 +3705,7 @@ namespace mp4box
             ffmpeg += "\r\ncmd";
             batpath = workPath + "\\concat.bat";
             File.WriteAllText(batpath, ffmpeg, Encoding.Default);
-            LogRecord(aac);
+            logger.Info(aac);
             Process.Start(batpath);
         }
 

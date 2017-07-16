@@ -19,6 +19,10 @@
 // -------------------------------------------------------------------
 //
 
+using mp4box.Extension;
+using mp4box.Utility;
+using mp4box.Win32API;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,11 +35,11 @@ using System.Windows.Forms;
 
 namespace mp4box
 {
-    using Extension;
-    using Utility;
-    using Win32API;
+
     public partial class WorkingForm : Form
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Initialize a cmd output wrapper.
         /// </summary>
@@ -448,7 +452,7 @@ namespace mp4box
             BalloonTip(@"完成了喵~ (= ω =)");
 
             // save log
-            MainForm.Instance.LogRecord(internellog.ToString());
+            logger.Info(internellog.ToString());
             // shutdown the system if required
             if (Global.Running.shutdownState)
             {

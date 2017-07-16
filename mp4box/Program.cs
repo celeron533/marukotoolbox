@@ -20,6 +20,7 @@
 //
 
 using mp4box.Utility;
+using NLog;
 using System;
 using System.Configuration;
 using System.Diagnostics;
@@ -31,6 +32,8 @@ namespace mp4box
 {
     static class Program
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         private class NativeMethods
         {
             [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
@@ -52,6 +55,7 @@ namespace mp4box
         [STAThread]
         static void Main(string[] args)
         {
+            logger.Info("MarukoToolbox launched.");
             // 检查程序路径是否可写入
             if (!FileStringUtil.IsDirWriteable(Path.GetDirectoryName(Application.ExecutablePath)))
             {
@@ -80,6 +84,7 @@ namespace mp4box
                     }
                     catch { }
                 }
+                logger.Error("Insufficient privilege. Exit.");
                 MessageBox.Show("小丸工具箱无法启动因为当前目录无法写入\r\n\r\n请赋予小丸工具箱所需权限或者将应用程序移动到未受保护的目录下", "小丸工具箱 错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
