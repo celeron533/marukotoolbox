@@ -55,7 +55,7 @@ namespace mp4box
 
         private int indexofsource;
         private int indexoftarget;
-        private byte x264mode = 1;
+        private int x264mode = 1;
 
         private string audioInput = "";
         private string audioOutput;
@@ -77,7 +77,6 @@ namespace mp4box
         private string aac;
         private string aextract;
 
-        private string batpath;
         private string auto;
         private string startpath;
         private string tempavspath = "";
@@ -434,7 +433,7 @@ namespace mp4box
             //    Path.GetFileNameWithoutExtension(namevideo) + suf + ext;
             string outfile = Path.ChangeExtension(namevideo, suf + ext);
             aextract += FileStringUtil.FormatPath(outfile);
-            batpath = ToolsUtil.ToolsFolder + "\\" + av + "extract.bat";
+            string batpath = ToolsUtil.ToolsFolder + "\\" + av + "extract.bat";
             File.WriteAllText(batpath, aextract, Encoding.Default);
             logger.Info(aextract);
             Process.Start(batpath);
@@ -500,7 +499,7 @@ namespace mp4box
             string outfile = Path.ChangeExtension(namevideo, suf + '.' +
                              FormatExtractor.Extract(ToolsUtil.ToolsFolder, namevideo)[streamIndex].Format);
             aextract += FileStringUtil.FormatPath(outfile);
-            batpath = ToolsUtil.ToolsFolder + "\\mkvextract.bat";
+            string batpath = ToolsUtil.ToolsFolder + "\\mkvextract.bat";
             File.WriteAllText(batpath, aextract, Encoding.Default);
             logger.Info(aextract);
             Process.Start(batpath);
@@ -1438,7 +1437,7 @@ namespace mp4box
                 }
             }
             mux += "\r\ncmd";
-            batpath = ToolsUtil.ToolsFolder + "\\mux.bat";
+            string batpath = ToolsUtil.ToolsFolder + "\\mux.bat";
             File.WriteAllText(batpath, mux, Encoding.Default);
             logger.Info(mux);
             Process.Start(batpath);
@@ -2384,7 +2383,7 @@ namespace mp4box
                     aac += "\r\n";
                 }
                 aac += "\r\ncmd";
-                batpath = ToolsUtil.ToolsFolder + "\\aac.bat";
+                string batpath = ToolsUtil.ToolsFolder + "\\aac.bat";
                 File.WriteAllText(batpath, aac, Encoding.Default);
                 logger.Info(aac);
                 Process.Start(batpath);
@@ -2427,7 +2426,7 @@ namespace mp4box
             }
             else
             {
-                batpath = ToolsUtil.ToolsFolder + "\\aac.bat";
+                string batpath = ToolsUtil.ToolsFolder + "\\aac.bat";
                 File.WriteAllText(batpath, audiobat(audioInput, audioOutput), Encoding.Default);
                 logger.Info(audiobat(audioInput, audioOutput));
                 Process.Start(batpath);
@@ -3707,7 +3706,7 @@ namespace mp4box
                 ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -f concat  -i concat.txt -y -c copy " + finish;
             }
             ffmpeg += "\r\ncmd";
-            batpath = ToolsUtil.ToolsFolder + "\\concat.bat";
+            string batpath = ToolsUtil.ToolsFolder + "\\concat.bat";
             File.WriteAllText(batpath, ffmpeg, Encoding.Default);
             logger.Info(aac);
             Process.Start(batpath);
