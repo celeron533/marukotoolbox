@@ -21,11 +21,10 @@ namespace mp4box.Procedure
         public int duration { get; set; }
         public bool copyAudio { get; set; }
 
-        string tempPic, batpath = "";
+        string batpath = "";
 
-        public OnePicProcedure(string tempPic) : base()
+        public OnePicProcedure() : base()
         {
-            this.tempPic = tempPic;
         }
 
 
@@ -61,7 +60,7 @@ namespace mp4box.Procedure
                             new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L)
                         };
             ImageCodecInfo ImageCoderType = OtherUtil.GetImageCoderInfo("image/jpeg");
-            img.Save(tempPic, ImageCoderType, eps);
+            img.Save(Global.Running.tempImgPath, ImageCoderType, eps);
             //img.Save(tempPic, ImageFormat.Jpeg);
 
             // TODO: move this logic after select the Audio file.
@@ -81,7 +80,7 @@ namespace mp4box.Procedure
             StringBuilder muxCommand = new StringBuilder();
             if (copyAudio)
             {
-                muxCommand.AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -loop 1 -r " + fps + " -t " + duration.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y SinglePictureVideo.mp4")
+                muxCommand.AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -loop 1 -r " + fps + " -t " + duration.ToString() + " -f image2 -i \"" + Global.Running.tempImgPath + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y SinglePictureVideo.mp4")
                           .AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -i SinglePictureVideo.mp4 -i \"" + audioFilePath + "\" -c:v copy -c:a copy -y \"" + outputFilePath + "\"")
                           .AppendLine("del SinglePictureVideo.mp4")
                           .AppendLine("cmd");
@@ -89,7 +88,7 @@ namespace mp4box.Procedure
             else
             {
                 muxCommand.AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -i \"" + audioFilePath + "\" -f wav - |" + neroPath + " -br " + audioBitrate * 1000 + " -ignorelength -if - -of audio.mp4 -lc")
-                          .AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -loop 1 -r " + fps + " -t " + duration.ToString() + " -f image2 -i \"" + tempPic + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y SinglePictureVideo.mp4")
+                          .AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -loop 1 -r " + fps + " -t " + duration.ToString() + " -f image2 -i \"" + Global.Running.tempImgPath + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y SinglePictureVideo.mp4")
                           .AppendLine("\"" + ToolsUtil.FFMPEG.fullPath + "\" -i SinglePictureVideo.mp4 -i audio.mp4 -c:v copy -c:a copy -y \"" + outputFilePath + "\"")
                           .AppendLine("del SinglePictureVideo.mp4")
                           .AppendLine("del audio.mp4")

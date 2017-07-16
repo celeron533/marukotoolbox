@@ -71,17 +71,10 @@ namespace mp4box
 
         private string mediaInfoFile;
 
-        private string mux;
         private string x264;
         private string ffmpeg;
         private string aextract;
 
-        private string auto;
-        private string startpath;
-        private string tempavspath = "";
-        private string tempPic = "";
-
-        private string tempfilepath;
         private DateTime ReleaseDate = AssemblyUtil.GetAssemblyVersionTime();
 
         #endregion Private Members Declaration
@@ -157,7 +150,7 @@ namespace mp4box
                     break;
 
                 case 2: // 2pass
-                    sb.Append(" --pass " + pass + " --bitrate " + xvs.X26xBitrate + " --stats \"" + Path.Combine(tempfilepath, Path.GetFileNameWithoutExtension(output)) + ".stats\"");
+                    sb.Append(" --pass " + pass + " --bitrate " + xvs.X26xBitrate + " --stats \"" + Path.Combine(Global.Running.tempPath, Path.GetFileNameWithoutExtension(output)) + ".stats\"");
                     break;
             }
             if (x264mode != 0)
@@ -240,7 +233,7 @@ namespace mp4box
                     break;
 
                 case 2: // 2pass
-                    sb.Append(" --pass " + pass + " --bitrate " + xvs.X26xBitrate + " --stats \"" + Path.Combine(tempfilepath, Path.GetFileNameWithoutExtension(output)) + ".stats\"");
+                    sb.Append(" --pass " + pass + " --bitrate " + xvs.X26xBitrate + " --stats \"" + Path.Combine(Global.Running.tempPath, Path.GetFileNameWithoutExtension(output)) + ".stats\"");
                     break;
             }
             if (x264mode != 0)
@@ -523,15 +516,15 @@ namespace mp4box
                 //}
                 string[] batFiles = Directory.GetFiles(ToolsUtil.ToolsFolder, "*.bat");
 
-                if (Directory.Exists(tempfilepath))
+                if (Directory.Exists(Global.Running.tempPath))
                 {
-                    foreach (var item in Directory.GetFiles(tempfilepath))
+                    foreach (var item in Directory.GetFiles(Global.Running.tempPath))
                     {
                         deleteFileList.Add(item);
                     }
                 }
 
-                string[] deletedfiles = { "concat.txt", tempPic, tempavspath };
+                string[] deletedfiles = { "concat.txt", Global.Running.tempAvsPath, Global.Running.tempImgPath };
                 deleteFileList.AddRange(deletedfiles);
                 deleteFileList.AddRange(batFiles);
 
@@ -775,8 +768,7 @@ namespace mp4box
                 ConfigX264ThreadsComboBox.Items.Add(i.ToString());
             }
 
-            //define workpath
-            startpath = System.Windows.Forms.Application.StartupPath;
+            // Tools verification
             if (!Directory.Exists(ToolsUtil.ToolsFolder))
             {
                 logger.Error("tools not found.");
@@ -784,15 +776,6 @@ namespace mp4box
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(1);
             }
-            //Directory.CreateDirectory(workPath);
-            //string diskSymbol = startpath.Substring(0, 1);
-
-            //string systemDisk = Environment.GetFolderPath(Environment.SpecialFolder.System).Substring(0, 3);
-            //string systemTempPath = systemDisk + @"windows\temp";
-            string systemTempPath = Environment.GetEnvironmentVariable("TEMP", EnvironmentVariableTarget.Machine);
-            tempavspath = systemTempPath + "\\temp.avs";
-            tempPic = systemTempPath + "\\marukotemp.jpg";
-            tempfilepath = startpath + "\\temp";
 
             //load x264 exe
             DirectoryInfo folder = new DirectoryInfo(ToolsUtil.ToolsFolder);
@@ -853,9 +836,9 @@ namespace mp4box
             HelpReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
 
             // load Help Text
-            if (File.Exists(startpath + "\\help.rtf"))
+            if (File.Exists(Global.Running.startPath + "\\help.rtf"))
             {
-                HelpContentRichTextBox.LoadFile(startpath + "\\help.rtf");
+                HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
             }
             else
             {
@@ -872,8 +855,8 @@ namespace mp4box
             bool hasAudio = false;
             string bat = "";
             string inputName = Path.GetFileNameWithoutExtension(input);
-            string tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.mp4");
-            string tempAudio = Path.Combine(tempfilepath, inputName + "_atemp" + getAudioExt());
+            string tempVideo = Path.Combine(Global.Running.tempPath, inputName + "_vtemp.mp4");
+            string tempAudio = Path.Combine(Global.Running.tempPath, inputName + "_atemp" + getAudioExt());
             // 避免编码失败最后混流使用上次的同名临时文件造成编码成功的假象
             if (File.Exists(tempVideo)) File.Delete(tempVideo);
             if (File.Exists(tempAudio)) File.Delete(tempAudio);
@@ -900,7 +883,7 @@ namespace mp4box
                 case 2:
                     if (audio.ToLower() == "aac")
                     {
-                        tempAudio = Path.Combine(tempfilepath, inputName + "_atemp.aac");
+                        tempAudio = Path.Combine(Global.Running.tempPath, inputName + "_atemp.aac");
                         aextract = ExtractAudio(input, tempAudio);
                     }
                     else
@@ -922,7 +905,7 @@ namespace mp4box
             }
             else if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
             {
-                tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.hevc");
+                tempVideo = Path.Combine(Global.Running.tempPath, inputName + "_vtemp.hevc");
                 if (x264mode == 2)
                     x264 = x265bat(input, tempVideo, 1, sub) + "\r\n" +
                            x265bat(input, tempVideo, 2, sub);
@@ -933,6 +916,7 @@ namespace mp4box
             x264 += "\r\n";
 
             //封装
+            string mux = string.Empty;
             if (VideoBatchFormatComboBox.Text == "mp4")
                 mux = boxmuxbat(tempVideo, tempAudio, output);
             else
@@ -1025,7 +1009,7 @@ namespace mp4box
                     return;
             }
 
-            FileStringUtil.ensureDirectoryExists(tempfilepath);
+            FileStringUtil.ensureDirectoryExists(Global.Running.tempPath);
             string bat = string.Empty;
             for (int i = 0; i < this.VideoBatchItemListbox.Items.Count; i++)
             {
@@ -1839,19 +1823,19 @@ namespace mp4box
                     return;
                 }
                 //if (File.Exists(tempavspath)) File.Delete(tempavspath);
-                File.Copy(VideoInputTextBox.Text, tempavspath, true);
-                videoInput = tempavspath;
+                File.Copy(VideoInputTextBox.Text, Global.Running.tempAvsPath, true);
+                videoInput = Global.Running.tempAvsPath;
                 VideoDemuxerComboBox.SelectedIndex = 0; //压制AVS始终使用分离器为auto
             }
 
             #endregion validation
 
-            string ext = Path.GetExtension(videoOutput).ToLower();
+            string targetExt = Path.GetExtension(videoOutput).ToLower();
             bool hasAudio = false;
             string inputName = Path.GetFileNameWithoutExtension(videoInput);
-            string tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.mp4");
-            string tempAudio = Path.Combine(tempfilepath, inputName + "_atemp" + getAudioExt());
-            FileStringUtil.ensureDirectoryExists(tempfilepath);
+            string tempVideo = Path.Combine(Global.Running.tempPath, inputName + "_vtemp.mp4");
+            string tempAudio = Path.Combine(Global.Running.tempPath, inputName + "_atemp" + getAudioExt());
+            FileStringUtil.ensureDirectoryExists(Global.Running.tempPath);
             // 避免编码失败最后混流使用上次的同名临时文件造成编码成功的假象
             if (File.Exists(tempVideo)) File.Delete(tempVideo);
             if (File.Exists(tempAudio)) File.Delete(tempAudio);
@@ -1865,10 +1849,10 @@ namespace mp4box
             int audioMode = VideoAudioModeComboBox.SelectedIndex;
             if (!hasAudio && VideoAudioModeComboBox.SelectedIndex != 1)
             {
-                DialogResult r = MessageBoxExt.ShowQuestionWithCancel("原视频不包含音频流，音频模式是否改为无音频流？", "提示");
-                if (r == DialogResult.Yes)
+                if (DialogResult.Yes == MessageBoxExt.ShowQuestionWithCancel(
+                                        "原视频不包含音频流，音频模式是否改为无音频流？", "提示"))
                     audioMode = 1;
-                else if (r == DialogResult.Cancel)
+                else
                     return;
             }
             switch (audioMode)
@@ -1884,7 +1868,7 @@ namespace mp4box
                 case 2:
                     if (audio.ToLower() == "aac")
                     {
-                        tempAudio = Path.Combine(tempfilepath, inputName + "_atemp.aac");
+                        tempAudio = Path.Combine(Global.Running.tempPath, inputName + "_atemp.aac");
                         aextract = ExtractAudio(videoInput, tempAudio);
                     }
                     else
@@ -1913,8 +1897,8 @@ namespace mp4box
             }
             else if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
             {
-                tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.hevc");
-                if (ext != ".mp4")
+                tempVideo = Path.Combine(Global.Running.tempPath, inputName + "_vtemp.hevc");
+                if (targetExt != ".mp4")
                 {
                     MessageBoxExt.ShowErrorMessage("不支持的格式输出,x265当前工具箱仅支持MP4输出");
                     return;
@@ -1938,10 +1922,11 @@ namespace mp4box
             //封装
             if (audioMode != 1)
             {
-                if (ext == ".mp4")
-                    mux = boxmuxbat(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, ext));
+                string mux = string.Empty;
+                if (targetExt == ".mp4")
+                    mux = boxmuxbat(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
                 else
-                    mux = ffmuxbat(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, ext));
+                    mux = ffmuxbat(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
                 x264 = aextract + x264 + mux + "\r\n"
                     + "del \"" + tempVideo + "\"\r\n"
                     + "del \"" + tempAudio + "\"\r\n";
@@ -2642,14 +2627,14 @@ namespace mp4box
             }
 
             string inputName = Path.GetFileNameWithoutExtension(avsVideoInput);
-            string tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.mp4");
-            string tempAudio = Path.Combine(tempfilepath, inputName + "_atemp" + getAudioExt());
-            FileStringUtil.ensureDirectoryExists(tempfilepath);
+            string tempVideo = Path.Combine(Global.Running.tempPath, inputName + "_vtemp.mp4");
+            string tempAudio = Path.Combine(Global.Running.tempPath, inputName + "_atemp" + getAudioExt());
+            FileStringUtil.ensureDirectoryExists(Global.Running.tempPath);
             // 避免编码失败最后混流使用上次的同名临时文件造成编码成功的假象
             if (File.Exists(tempVideo)) File.Delete(tempVideo);
             if (File.Exists(tempAudio)) File.Delete(tempAudio);
 
-            string filepath = tempavspath;
+            string filepath = Global.Running.tempAvsPath;
             //string filepath = workpath + "\\temp.avs";
             File.WriteAllText(filepath, AvsScriptTextBox.Text, Encoding.Default);
 
@@ -2683,7 +2668,7 @@ namespace mp4box
             }
             else if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
             {
-                tempVideo = Path.Combine(tempfilepath, inputName + "_vtemp.hevc");
+                tempVideo = Path.Combine(Global.Running.tempPath, inputName + "_vtemp.hevc");
                 if (x264mode == 2)
                     x264 = x265bat(filepath, tempVideo, 1) + "\r\n" +
                            x265bat(filepath, tempVideo, 2);
@@ -2695,12 +2680,11 @@ namespace mp4box
                 }
             }
             //mux
+            string mux = string.Empty;
             if (AvsIncludeAudioCheckBox.Checked && hasAudio) //如果包含音频
                 mux = boxmuxbat(tempVideo, tempAudio, avsOutput);
-            else
-                mux = string.Empty;
 
-            auto = aextract + x264 + "\r\n" + mux + " \r\n";
+            string auto = aextract + x264 + "\r\n" + mux + " \r\n";
             auto += "\r\necho ===== one file is completed! =====\r\n";
             logger.Info(auto);
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
@@ -2953,9 +2937,9 @@ namespace mp4box
                     ExtractFlvInputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
                     ExtractMkvInputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
                     //load Help Text
-                    if (File.Exists(startpath + "\\help.rtf"))
+                    if (File.Exists(Global.Running.startPath + "\\help.rtf"))
                     {
-                        HelpContentRichTextBox.LoadFile(startpath + "\\help.rtf");
+                        HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
                     }
                     break;
 
@@ -2980,9 +2964,9 @@ namespace mp4box
                     ExtractFlvInputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
                     ExtractMkvInputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
                     //load Help Text
-                    if (File.Exists(startpath + "\\help_zh_tw.rtf"))
+                    if (File.Exists(Global.Running.startPath + "\\help_zh_tw.rtf"))
                     {
-                        HelpContentRichTextBox.LoadFile(startpath + "\\help_zh_tw.rtf");
+                        HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help_zh_tw.rtf");
                     }
                     break;
 
@@ -3007,9 +2991,9 @@ namespace mp4box
                     ExtractFlvInputTextBox.EmptyTextTip = "New file will be created in the original folder";
                     ExtractMkvInputTextBox.EmptyTextTip = "New file will be created in the original folder";
                     //load Help Text
-                    if (File.Exists(startpath + "\\help.rtf"))
+                    if (File.Exists(Global.Running.startPath + "\\help.rtf"))
                     {
-                        HelpContentRichTextBox.LoadFile(startpath + "\\help.rtf");
+                        HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
                     }
                     break;
 
@@ -3033,9 +3017,9 @@ namespace mp4box
                     ExtractMp4InputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
                     ExtractFlvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
                     ExtractMkvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
-                    if (File.Exists(startpath + "\\help.rtf"))
+                    if (File.Exists(Global.Running.startPath + "\\help.rtf"))
                     {
-                        HelpContentRichTextBox.LoadFile(startpath + "\\help.rtf");
+                        HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
                     }
                     break;
 
@@ -3072,24 +3056,6 @@ namespace mp4box
         }
 
         #endregion globalization
-
-        [Obsolete("Not used")]
-        public static void RunProcess(string exe, string arg)
-        {
-            Thread thread = new Thread(() =>
-            {
-                ProcessStartInfo psi = new ProcessStartInfo(exe, arg);
-                psi.CreateNoWindow = true;
-                Process p = new Process();
-                p.StartInfo = psi;
-                p.Start();
-                p.WaitForExit();
-                MessageBox.Show("ts");
-                p.Close();
-            });
-            thread.IsBackground = true;
-            thread.Start();
-        }
 
         #region Misc Tab
 
@@ -3172,7 +3138,7 @@ namespace mp4box
             }
             else
             {
-                OnePicProcedure procedure = new OnePicProcedure(tempPic);
+                OnePicProcedure procedure = new OnePicProcedure();
                 procedure.GetDataFromUI(GetOnePicDataFromUI);
                 procedure.Execute();
             }
@@ -3334,7 +3300,7 @@ namespace mp4box
                 return;
             }
 
-            BlackProcedure blackProcedure = new BlackProcedure(tempPic);
+            BlackProcedure blackProcedure = new BlackProcedure();
             blackProcedure.GetDataFromUI(p =>
             {
                 p.inputVideoFile = MiscBlackVideoInputTextBox.Text;
@@ -3437,7 +3403,7 @@ namespace mp4box
                     return;
                 else
                 {
-                    if (index == listBox.Items.Count)   // selectIndex is beyond the last item
+                    if (index >= listBox.Items.Count)   // selectIndex is beyond the last item
                         listBox.SelectedIndex = listBox.Items.Count - 1;
                     else
                         listBox.SelectedIndex = index;
@@ -3530,7 +3496,7 @@ namespace mp4box
                         DialogResult dr = MessageBoxExt.ShowQuestion(string.Format("新版已于{0}发布，是否自动升级？（文件约1.5MB）", NewDate.ToString("yyyy-M-d")), "喜大普奔");
                         if (dr == DialogResult.Yes)
                         {
-                            FormUpdater formUpdater = new FormUpdater(startpath, NewDate.ToString());
+                            FormUpdater formUpdater = new FormUpdater(Global.Running.startPath, NewDate.ToString());
                             formUpdater.ShowDialog(this);
                         }
                     }
@@ -3653,7 +3619,7 @@ namespace mp4box
                         DialogResult dr = MessageBoxExt.ShowQuestion(string.Format("新版已于{0}发布，是否自动升级？（文件约1.5MB）", NewDate.ToString("yyyy-M-d")), "喜大普奔");
                         if (dr == DialogResult.Yes)
                         {
-                            FormUpdater formUpdater = new FormUpdater(startpath, date);
+                            FormUpdater formUpdater = new FormUpdater(Global.Running.startPath, date);
                             formUpdater.ShowDialog(this);
                         }
                     }
