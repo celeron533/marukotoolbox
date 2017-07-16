@@ -310,7 +310,7 @@
             this.ConfigX264ThreadsComboBox = new System.Windows.Forms.ComboBox();
             this.ConfigX264ThreadsLabel = new System.Windows.Forms.Label();
             this.ConfigX264PriorityLabel = new System.Windows.Forms.Label();
-            this.ConfigFunctionDeleteLogButton = new ControlExs.QQButton();
+            this.ConfigFunctionAllLogButton = new ControlExs.QQButton();
             this.ConfigFunctionRestoreDefaultButton = new ControlExs.QQButton();
             this.ConfigFunctionViewLogButton = new ControlExs.QQButton();
             this.MiscMiscGroupBox.SuspendLayout();
@@ -2412,10 +2412,10 @@
             this.VideoGoToAudioLabel.Name = "VideoGoToAudioLabel";
             this.VideoGoToAudioLabel.Click += new System.EventHandler(this.VideoGoToAudioLabel_Click);
             // 
-            // VideoCrfKbpsLabel
+            // VideoBitrateKbpsLabel
             // 
-            resources.ApplyResources(this.VideoBitrateKbpsLabel, "VideoCrfKbpsLabel");
-            this.VideoBitrateKbpsLabel.Name = "VideoCrfKbpsLabel";
+            resources.ApplyResources(this.VideoBitrateKbpsLabel, "VideoBitrateKbpsLabel");
+            this.VideoBitrateKbpsLabel.Name = "VideoBitrateKbpsLabel";
             // 
             // VideoCrfLabel
             // 
@@ -2805,7 +2805,7 @@
             this.ConfigTabPage.Controls.Add(this.ConfigFunctionGroupBox);
             this.ConfigTabPage.Controls.Add(this.ConfigUiGroupBox);
             this.ConfigTabPage.Controls.Add(this.ConfigX264GroupBox);
-            this.ConfigTabPage.Controls.Add(this.ConfigFunctionDeleteLogButton);
+            this.ConfigTabPage.Controls.Add(this.ConfigFunctionAllLogButton);
             this.ConfigTabPage.Controls.Add(this.ConfigFunctionRestoreDefaultButton);
             this.ConfigTabPage.Controls.Add(this.ConfigFunctionViewLogButton);
             resources.ApplyResources(this.ConfigTabPage, "ConfigTabPage");
@@ -2976,12 +2976,12 @@
             resources.ApplyResources(this.ConfigX264PriorityLabel, "ConfigX264PriorityLabel");
             this.ConfigX264PriorityLabel.Name = "ConfigX264PriorityLabel";
             // 
-            // ConfigFunctionDeleteLogButton
+            // ConfigFunctionAllLogButton
             // 
-            resources.ApplyResources(this.ConfigFunctionDeleteLogButton, "ConfigFunctionDeleteLogButton");
-            this.ConfigFunctionDeleteLogButton.Name = "ConfigFunctionDeleteLogButton";
-            this.ConfigFunctionDeleteLogButton.UseVisualStyleBackColor = true;
-            this.ConfigFunctionDeleteLogButton.Click += new System.EventHandler(this.ConfigFunctionDeleteLogButton_Click);
+            resources.ApplyResources(this.ConfigFunctionAllLogButton, "ConfigFunctionAllLogButton");
+            this.ConfigFunctionAllLogButton.Name = "ConfigFunctionAllLogButton";
+            this.ConfigFunctionAllLogButton.UseVisualStyleBackColor = true;
+            this.ConfigFunctionAllLogButton.Click += new System.EventHandler(this.ConfigFunctionAllLogButton_Click);
             // 
             // ConfigFunctionRestoreDefaultButton
             // 
@@ -3266,7 +3266,7 @@
         private System.Windows.Forms.NumericUpDown AvsTrimEndNumericUpDown;
         private System.Windows.Forms.NumericUpDown AvsTrimStartNumericUpDown;
         private System.Windows.Forms.ComboBox VideoDemuxerComboBox;
-        private ControlExs.QQButton ConfigFunctionDeleteLogButton;
+        private ControlExs.QQButton ConfigFunctionAllLogButton;
         private ControlExs.QQButton ConfigFunctionViewLogButton;
         private ControlExs.QQButton VideoBatchOutputFolderButton;
         private ControlExs.QQTextBox VideoBatchOutputFolderTextBox;

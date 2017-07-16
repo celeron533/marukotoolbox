@@ -3377,15 +3377,14 @@ namespace mp4box
                 MessageBoxExt.ShowInfoMessage("已恢复默认设置！");
             }
         }
-        private void ConfigFunctionDeleteLogButton_Click(object sender, EventArgs e)
+        private void ConfigFunctionAllLogButton_Click(object sender, EventArgs e)
         {
             string logPath = Path.GetDirectoryName(logFileName);
             if (Directory.Exists(logPath))
             {
-                Directory.Delete(logPath, true);
-                MessageBoxExt.ShowInfoMessage("已删除日志文件。");
+                Process.Start(logPath);
             }
-            else MessageBoxExt.ShowInfoMessage("没有找到日志文件。");
+            else MessageBoxExt.ShowInfoMessage("没有找到日志文件夹。");
         }
 
         private void ConfigFunctionViewLogButton_Click(object sender, EventArgs e)
