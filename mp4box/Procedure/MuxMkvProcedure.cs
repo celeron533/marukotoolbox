@@ -45,8 +45,7 @@ namespace mp4box.Procedure
             mkvCommand.AppendLine("cmd");
             batpath = ToolsUtil.ToolsFolder + "\\mkvmerge.bat";
             File.WriteAllText(batpath, mkvCommand.ToString(), Encoding.Default);
-            // TODO: Log function
-            //LogRecord(mkvCommand.ToString());
+            logger.Info(mkvCommand.ToString());
             Process.Start(batpath);
         }
     }

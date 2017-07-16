@@ -69,8 +69,7 @@ namespace mp4box.Procedure
             string clip = string.Format(@"""{0}"" -i ""{1}"" -vf ""transpose={2}"" -y ""{3}""",
                     ToolsUtil.FFMPEG.fullPath, inputVideoFilePath, transposeIndex, outputVideoFilePath) + Environment.NewLine + "cmd";
             batpath = ToolsUtil.ToolsFolder + "\\clip.bat";
-            // TODO: Log function
-            //LogRecord(clip);
+            logger.Info(clip);
             File.WriteAllText(batpath, clip, Encoding.Default);
             Process.Start(batpath);
         }

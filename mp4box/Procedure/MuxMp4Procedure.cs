@@ -61,8 +61,7 @@ namespace mp4box.Procedure
             string mux = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -y -i \"" + videoInputFile + "\" -i \"" + audioInputFile + "\" -map 0:v -c:v copy -map 1:0 -c:a copy  \"" + outputFile + "\" \r\n";
             batpath = ToolsUtil.ToolsFolder + "\\mux.bat";
             File.WriteAllText(batpath, mux, Encoding.Default);
-            //TODO: Log function
-            //LogRecord(mux);
+            logger.Info(mux);
             Process.Start(batpath);
         }
     }

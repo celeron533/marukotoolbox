@@ -98,8 +98,7 @@ namespace mp4box.Procedure
 
             batpath = Path.Combine(ToolsUtil.ToolsFolder, Path.GetRandomFileName() + ".bat");
             File.WriteAllText(batpath, muxCommand.ToString(), Encoding.Default);
-            // TODO: log function
-            //LogRecord(muxCommand.ToString());
+            logger.Info(muxCommand.ToString());
             Process.Start(batpath);
         }
     }
