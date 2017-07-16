@@ -860,6 +860,10 @@ namespace mp4box
             {
                 HelpContentRichTextBox.LoadFile(startpath + "\\help.rtf");
             }
+            else
+            {
+                HelpContentRichTextBox.Text = "help.rtf is not found.";
+            }
 
             LoadSettings();
         }
