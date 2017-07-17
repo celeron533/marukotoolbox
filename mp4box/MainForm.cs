@@ -1044,23 +1044,7 @@ namespace mp4box
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Process[] processes = Process.GetProcesses();
-            for (int i = 0; i < processes.GetLength(0); i++)
-            {
-                //我是要找到我需要的YZT.exe的进程,可以根据ProcessName属性判断
-                if (processes[i].ProcessName.Equals(Path.GetFileNameWithoutExtension(VideoEncoderComboBox.Text)))
-                {
-                    switch (ConfigX264PriorityComboBox.SelectedIndex)
-                    {
-                        case 0: processes[i].PriorityClass = ProcessPriorityClass.Idle; break;
-                        case 1: processes[i].PriorityClass = ProcessPriorityClass.BelowNormal; break;
-                        case 2: processes[i].PriorityClass = ProcessPriorityClass.Normal; break;
-                        case 3: processes[i].PriorityClass = ProcessPriorityClass.AboveNormal; break;
-                        case 4: processes[i].PriorityClass = ProcessPriorityClass.High; break;
-                        case 5: processes[i].PriorityClass = ProcessPriorityClass.RealTime; break;
-                    }
-                }
-            }
+            ChangeProcessPriority();
         }
 
         private void VideoPresetComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -2086,33 +2070,7 @@ namespace mp4box
 
         private void ConfigX264PriorityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string processName = VideoEncoderComboBox.Text;
-            processName = processName.Replace(".exe", "");
-            Process[] processes = Process.GetProcesses();
-            //if (x264PriorityComboBox.SelectedIndex == 4 || x264PriorityComboBox.SelectedIndex == 5)
-            //{
-            //    if (MessageBox.Show("优先级那么高的话会严重影响其他进程的运行速度，\r\n是否继续？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            //    {
-            //        x264PriorityComboBox.SelectedIndex = 2;
-            //    }
-            //}
-            //遍历电脑中的进程
-            for (int i = 0; i < processes.GetLength(0); i++)
-            {
-                //我是要找到我需要的YZT.exe的进程,可以根据ProcessName属性判断
-                if (processes[i].ProcessName.Equals(processName))
-                {
-                    switch (ConfigX264PriorityComboBox.SelectedIndex)
-                    {
-                        case 0: processes[i].PriorityClass = ProcessPriorityClass.Idle; break;
-                        case 1: processes[i].PriorityClass = ProcessPriorityClass.BelowNormal; break;
-                        case 2: processes[i].PriorityClass = ProcessPriorityClass.Normal; break;
-                        case 3: processes[i].PriorityClass = ProcessPriorityClass.AboveNormal; break;
-                        case 4: processes[i].PriorityClass = ProcessPriorityClass.High; break;
-                        case 5: processes[i].PriorityClass = ProcessPriorityClass.RealTime; break;
-                    }
-                }
-            }
+            ChangeProcessPriority();
         }
 
         private void VideoInputTextBox_TextChanged(object sender, EventArgs e)
@@ -3407,6 +3365,25 @@ namespace mp4box
                         listBox.SelectedIndex = listBox.Items.Count - 1;
                     else
                         listBox.SelectedIndex = index;
+                }
+            }
+        }
+
+        private void ChangeProcessPriority()
+        {
+            foreach (Process process in Process.GetProcesses())
+            {
+                if (process.ProcessName.Equals(Path.GetFileNameWithoutExtension(VideoEncoderComboBox.Text)))
+                {
+                    switch (ConfigX264PriorityComboBox.SelectedIndex)
+                    {
+                        case 0: process.PriorityClass = ProcessPriorityClass.Idle; break;
+                        case 1: process.PriorityClass = ProcessPriorityClass.BelowNormal; break;
+                        case 2: process.PriorityClass = ProcessPriorityClass.Normal; break;
+                        case 3: process.PriorityClass = ProcessPriorityClass.AboveNormal; break;
+                        case 4: process.PriorityClass = ProcessPriorityClass.High; break;
+                        case 5: process.PriorityClass = ProcessPriorityClass.RealTime; break;
+                    }
                 }
             }
         }
