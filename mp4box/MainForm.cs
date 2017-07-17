@@ -74,7 +74,6 @@ namespace mp4box
         private string mux;
         private string x264;
         private string ffmpeg;
-        private string aac;
         private string aextract;
 
         private string auto;
@@ -350,8 +349,7 @@ namespace mp4box
                 default:
                     break;
             }
-            aac = ffmpeg + "\r\n";
-            return aac;
+            return ffmpeg + "\r\n";
         }
 
         private string getAudioExt()
@@ -939,6 +937,7 @@ namespace mp4box
                 mux = boxmuxbat(tempVideo, tempAudio, output);
             else
                 mux = ffmuxbat(tempVideo, tempAudio, output);
+
             if (audioMode != 1 && hasAudio) //如果压制音频
                 bat += aextract + x264 + mux + " \r\n";
             else
@@ -2359,36 +2358,40 @@ namespace mp4box
 
         private void AudioBatchStartButton_Click(object sender, EventArgs e)
         {
-            if (AudioBatchItemListBox.Items.Count != 0)
+            if (AudioBatchItemListBox.Items.Count == 0)
             {
-                string finish, outputExt, codec;
-                aac = "";
-                switch (AudioEncoderComboBox.SelectedIndex)
-                {
-                    case 0: outputExt = "mp4"; codec = "AAC"; break;
-                    case 1: outputExt = "m4a"; codec = "AAC"; break;
-                    case 2: outputExt = "wav"; codec = "WAV"; break;
-                    case 3: outputExt = "m4a"; codec = "ALAC"; break;
-                    case 4: outputExt = "flac"; codec = "FLAC"; break;
-                    case 5: outputExt = "m4a"; codec = "AAC"; break;
-                    case 6: outputExt = "ac3"; codec = "AC3"; break;
-                    case 7: outputExt = "mp3"; codec = "MP3"; break;
-                    default: outputExt = "aac"; codec = "AAC"; break;
-                }
-                for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
-                {
-                    string outname = "_" + codec + "." + outputExt;
-                    finish = Path.ChangeExtension(AudioBatchItemListBox.Items[i].ToString(), outname);
-                    aac += audiobat(AudioBatchItemListBox.Items[i].ToString(), finish);
-                    aac += "\r\n";
-                }
-                aac += "\r\ncmd";
-                string batpath = ToolsUtil.ToolsFolder + "\\aac.bat";
-                File.WriteAllText(batpath, aac, Encoding.Default);
-                logger.Info(aac);
-                Process.Start(batpath);
+                MessageBoxExt.ShowErrorMessage("请输入文件！");
+                return;
             }
-            else MessageBoxExt.ShowErrorMessage("请输入文件！");
+
+            string finish, outputExt, codec;
+            string aac = "";
+            switch (AudioEncoderComboBox.SelectedIndex)
+            {
+                case 0: outputExt = "mp4"; codec = "AAC"; break;
+                case 1: outputExt = "m4a"; codec = "AAC"; break;
+                case 2: outputExt = "wav"; codec = "WAV"; break;
+                case 3: outputExt = "m4a"; codec = "ALAC"; break;
+                case 4: outputExt = "flac"; codec = "FLAC"; break;
+                case 5: outputExt = "m4a"; codec = "AAC"; break;
+                case 6: outputExt = "ac3"; codec = "AC3"; break;
+                case 7: outputExt = "mp3"; codec = "MP3"; break;
+                default: outputExt = "aac"; codec = "AAC"; break;
+            }
+            for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
+            {
+                string outname = "_" + codec + "." + outputExt;
+                finish = Path.ChangeExtension(AudioBatchItemListBox.Items[i].ToString(), outname);
+                aac += audiobat(AudioBatchItemListBox.Items[i].ToString(), finish);
+                aac += "\r\n";
+            }
+            aac += "\r\ncmd";
+            string batpath = ToolsUtil.ToolsFolder + "\\aac.bat";
+            File.WriteAllText(batpath, aac, Encoding.Default);
+            logger.Info(aac);
+            Process.Start(batpath);
+
+
         }
 
         private void AudioInputButton_Click(object sender, EventArgs e)
@@ -3708,7 +3711,7 @@ namespace mp4box
             ffmpeg += "\r\ncmd";
             string batpath = ToolsUtil.ToolsFolder + "\\concat.bat";
             File.WriteAllText(batpath, ffmpeg, Encoding.Default);
-            logger.Info(aac);
+            logger.Info(ffmpeg);
             Process.Start(batpath);
         }
 
