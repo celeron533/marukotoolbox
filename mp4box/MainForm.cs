@@ -72,7 +72,6 @@ namespace mp4box
         private string mediaInfoFile;
 
         private string x264;
-        private string ffmpeg;
         private string aextract;
 
         private DateTime ReleaseDate = AssemblyUtil.GetAssemblyVersionTime();
@@ -274,7 +273,7 @@ namespace mp4box
         {
             int AACbr = 1000 * Convert.ToInt32(AudioBitrateComboBox.Text);
             string br = AACbr.ToString();
-            ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -i \"" + input + "\" -vn -sn -v 0 -c:a pcm_s16le -f wav pipe:|";
+            string ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -i \"" + input + "\" -vn -sn -v 0 -c:a pcm_s16le -f wav pipe:|";
             switch (AudioEncoderComboBox.SelectedIndex)
             {
                 case 0:
@@ -3637,7 +3636,7 @@ namespace mp4box
                 return;
             }
             StringBuilder sb = new StringBuilder();
-            ffmpeg = "";
+            string ffmpeg = "";
             string ext = Path.GetExtension(AudioBatchItemListBox.Items[0].ToString());
             string finish = Path.ChangeExtension(AudioOutputTextBox.Text, ext);
             for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
