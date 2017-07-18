@@ -84,12 +84,12 @@ namespace mp4box
             InitializeComponent();
         }
 
-        public string ffmuxbat(string input1, string input2, string output)
+        public string FFMpegMuxCommand(string input1, string input2, string output)
         {
             return $"\"{ToolsUtil.FFMPEG.fullPath}\" -i \"{input1}\" -i \"{input2}\" -sn -c copy -y \"{output}\"";
         }
 
-        public string boxmuxbat(string input1, string input2, string output)
+        public string MP4MuxCommand(string input1, string input2, string output)
         {
             return $"\"{ToolsUtil.MP4BOX.fullPath}\" -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new \"{output}\"";
         }
@@ -917,9 +917,9 @@ namespace mp4box
             //封装
             string mux = string.Empty;
             if (VideoBatchFormatComboBox.Text == "mp4")
-                mux = boxmuxbat(tempVideo, tempAudio, output);
+                mux = MP4MuxCommand(tempVideo, tempAudio, output);
             else
-                mux = ffmuxbat(tempVideo, tempAudio, output);
+                mux = FFMpegMuxCommand(tempVideo, tempAudio, output);
 
             if (audioMode != 1 && hasAudio) //如果压制音频
                 bat += aextract + x264 + mux + " \r\n";
@@ -1907,9 +1907,9 @@ namespace mp4box
             {
                 string mux = string.Empty;
                 if (targetExt == ".mp4")
-                    mux = boxmuxbat(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
+                    mux = MP4MuxCommand(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
                 else
-                    mux = ffmuxbat(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
+                    mux = FFMpegMuxCommand(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
                 x264 = aextract + x264 + mux + "\r\n"
                     + "del \"" + tempVideo + "\"\r\n"
                     + "del \"" + tempAudio + "\"\r\n";
@@ -2639,7 +2639,7 @@ namespace mp4box
             //mux
             string mux = string.Empty;
             if (AvsIncludeAudioCheckBox.Checked && hasAudio) //如果包含音频
-                mux = boxmuxbat(tempVideo, tempAudio, avsOutput);
+                mux = MP4MuxCommand(tempVideo, tempAudio, avsOutput);
 
             string auto = aextract + x264 + "\r\n" + mux + " \r\n";
             auto += "\r\necho ===== one file is completed! =====\r\n";

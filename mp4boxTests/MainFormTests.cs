@@ -18,7 +18,7 @@ namespace mp4box.Tests
             string input2 = "input2";
             string output = "output";
             string resultBeforeRefactor = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -i \"" + input1 + "\" -i \"" + input2 + "\" -sn -c copy -y \"" + output + "\"";
-            string result = mf.ffmuxbat(input1, input2, output);
+            string result = mf.FFMpegMuxCommand(input1, input2, output);
             Assert.AreEqual(resultBeforeRefactor, result);
         }
 
@@ -31,7 +31,7 @@ namespace mp4box.Tests
             string input2 = "input2";
             string output = "output";
             string resultBeforeRefactor = "\"" + ToolsUtil.MP4BOX.fullPath + "\" -add \"" + input1 + "#trackID=1:name=\" -add \"" + input2 + "#trackID=1:name=\" -new \"" + output + "\"";
-            string result = mf.boxmuxbat(input1, input2, output);
+            string result = mf.MP4MuxCommand(input1, input2, output);
             Assert.AreEqual(resultBeforeRefactor, result);
         }
 
