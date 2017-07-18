@@ -86,12 +86,12 @@ namespace mp4box
 
         public string ffmuxbat(string input1, string input2, string output)
         {
-            return $"\"{ToolsUtil.FFMPEG.fullPath}\" -i \"{input1}\" -i \"{input2}\" -sn -c copy -y \"{output}\"{Environment.NewLine}";
+            return $"\"{ToolsUtil.FFMPEG.fullPath}\" -i \"{input1}\" -i \"{input2}\" -sn -c copy -y \"{output}\"";
         }
 
         public string boxmuxbat(string input1, string input2, string output)
         {
-            return $"\"{ToolsUtil.MP4BOX.fullPath}\" -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new \"{output}\"{Environment.NewLine}";
+            return $"\"{ToolsUtil.MP4BOX.fullPath}\" -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new \"{output}\"";
         }
 
         public XvSettings GetXvSettings()
