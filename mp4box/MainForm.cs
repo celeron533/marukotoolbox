@@ -53,8 +53,9 @@ namespace mp4box
 
         #region Private Members Declaration
 
-        private int indexofsource;
-        private int indexoftarget;
+        private int sourceIndex;    // used for ListBox Drag & Drop
+        private int targetIndex;    // used for ListBox Drag & Drop
+
         private int x264mode = 1;
 
         private string audioInput = "";
@@ -944,13 +945,13 @@ namespace mp4box
                 }
                 return;
             }
-            indexoftarget = listbox.IndexFromPoint(listbox.PointToClient(new Point(e.X, e.Y)));
-            if (indexoftarget != ListBox.NoMatches)
+            targetIndex = listbox.IndexFromPoint(listbox.PointToClient(new Point(e.X, e.Y)));
+            if (targetIndex != ListBox.NoMatches)
             {
-                string temp = listbox.Items[indexoftarget].ToString();
-                listbox.Items[indexoftarget] = listbox.Items[indexofsource];
-                listbox.Items[indexofsource] = temp;
-                listbox.SelectedIndex = indexoftarget;
+                string temp = listbox.Items[targetIndex].ToString();
+                listbox.Items[targetIndex] = listbox.Items[sourceIndex];
+                listbox.Items[sourceIndex] = temp;
+                listbox.SelectedIndex = targetIndex;
             }
         }
 
@@ -978,12 +979,12 @@ namespace mp4box
 
         private void VideoBatchItemListbox_MouseDown(object sender, MouseEventArgs e)
         {
-            indexofsource = ((ListBox)sender).IndexFromPoint(e.X, e.Y);
-            if (indexofsource == 65535)
+            sourceIndex = ((ListBox)sender).IndexFromPoint(e.X, e.Y);
+            if (sourceIndex == 65535)   // when the listbox is empty
                 return;
-            if (indexofsource != ListBox.NoMatches)
+            if (sourceIndex != ListBox.NoMatches)
             {
-                ((ListBox)sender).DoDragDrop(((ListBox)sender).Items[indexofsource].ToString(), DragDropEffects.All);
+                ((ListBox)sender).DoDragDrop(((ListBox)sender).Items[sourceIndex].ToString(), DragDropEffects.All);
             }
         }
 
@@ -1023,9 +1024,7 @@ namespace mp4box
 
             logger.Info(bat);
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
-            WorkingForm wf = new WorkingForm(bat, VideoBatchItemListbox.Items.Count);
-            wf.Owner = this;
-            wf.Show();
+            new WorkingForm(bat, VideoBatchItemListbox.Items.Count) { Owner = this }.Show();
             //batpath = workPath + "\\auto.bat";
             //File.WriteAllText(batpath, bat, Encoding.Default);
             //Process.Start(batpath);
@@ -1309,10 +1308,10 @@ namespace mp4box
 
         private void MuxConvertItemListBox_MouseDown(object sender, MouseEventArgs e)
         {
-            indexofsource = ((ListBox)sender).IndexFromPoint(e.X, e.Y);
-            if (indexofsource != ListBox.NoMatches)
+            sourceIndex = ((ListBox)sender).IndexFromPoint(e.X, e.Y);
+            if (sourceIndex != ListBox.NoMatches)
             {
-                ((ListBox)sender).DoDragDrop(((ListBox)sender).Items[indexofsource].ToString(), DragDropEffects.All);
+                ((ListBox)sender).DoDragDrop(((ListBox)sender).Items[sourceIndex].ToString(), DragDropEffects.All);
             }
         }
 
@@ -1327,13 +1326,13 @@ namespace mp4box
                 }
             }
             ListBox listbox = (ListBox)sender;
-            indexoftarget = listbox.IndexFromPoint(listbox.PointToClient(new Point(e.X, e.Y)));
-            if (indexoftarget != ListBox.NoMatches)
+            targetIndex = listbox.IndexFromPoint(listbox.PointToClient(new Point(e.X, e.Y)));
+            if (targetIndex != ListBox.NoMatches)
             {
-                string temp = listbox.Items[indexoftarget].ToString();
-                listbox.Items[indexoftarget] = listbox.Items[indexofsource];
-                listbox.Items[indexofsource] = temp;
-                listbox.SelectedIndex = indexoftarget;
+                string temp = listbox.Items[targetIndex].ToString();
+                listbox.Items[targetIndex] = listbox.Items[sourceIndex];
+                listbox.Items[sourceIndex] = temp;
+                listbox.SelectedIndex = targetIndex;
             }
         }
 
@@ -1700,15 +1699,12 @@ namespace mp4box
 
         private void HelpFeedbackButton_Click(object sender, EventArgs e)
         {
-            FeedbackForm ff = new FeedbackForm();
-            ff.ShowDialog();
+            new FeedbackForm().ShowDialog();
         }
 
         private void HelpReleaseDateLabel_DoubleClick(object sender, EventArgs e)
         {
-            SplashForm sf = new SplashForm();
-            sf.Owner = this;
-            sf.Show();
+            new SplashForm() { Owner = this }.Show();
         }
 
         #endregion Help Tab
@@ -1920,9 +1916,7 @@ namespace mp4box
 
             logger.Info(x264);
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
-            WorkingForm wf = new WorkingForm(x264);
-            wf.Owner = this;
-            wf.Show();
+            new WorkingForm(x264) { Owner = this }.Show();
             //x264 += "\r\ncmd";
             //batpath = workPath + "\\x264.bat";
             //File.WriteAllText(batpath, x264, Encoding.Default);
@@ -2128,13 +2122,13 @@ namespace mp4box
 
         private void VideoBatchAddButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Multiselect = true;
-            openFileDialog1.Filter = DialogFilter.ALL; //"所有文件(*.*)|*.*";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog = new OpenFileDialog()
+                .Prepare(DialogFilter.ALL); //"所有文件(*.*)|*.*"
+            openFileDialog.Multiselect = true;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                VideoBatchItemListbox.Items.AddRange(openFileDialog1.FileNames);
+                VideoBatchItemListbox.Items.AddRange(openFileDialog.FileNames);
             }
-            openFileDialog1.Multiselect = false;
         }
 
         #endregion 视频页面
@@ -2145,7 +2139,7 @@ namespace mp4box
         {
             switch (AudioEncoderComboBox.SelectedIndex)
             {
-                case 0:
+                case 0: //NeroAAC
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.mp4");
                     AudioBitrateComboBox.Enabled = true;
@@ -2153,12 +2147,12 @@ namespace mp4box
                     AudioAudioModeCustomRadioButton.Enabled = true;
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        AudioPresetDeleteButton.Visible = true;
+                        AudioPresetDeleteButton.Visible =
                         AudioPresetAddButton.Visible = true;
                     }
                     break;
 
-                case 1:
+                case 1: //  QAAC
                     //if (!isAppleAppSupportInstalled())
                     //{
                     //    if (MessageBoxExtension.ShowQuestion("Apple Application Support未安装.\r\n音频编码器QAAC可能无法使用.\r\n\r\n是否前往QuickTime下载页面?", "Apple Application Support未安装") == DialogResult.Yes)
@@ -2171,42 +2165,42 @@ namespace mp4box
                     AudioAudioModeCustomRadioButton.Enabled = true;
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        AudioPresetDeleteButton.Visible = true;
+                        AudioPresetDeleteButton.Visible =
                         AudioPresetAddButton.Visible = true;
                     }
                     break;
 
-                case 2:
+                case 2: //WAV
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_WAV.wav");
                     AudioBitrateComboBox.Enabled = false;
                     AudioAudioModeBitrateRadioButton.Enabled = false;
                     AudioAudioModeCustomRadioButton.Enabled = false;
-                    AudioPresetDeleteButton.Visible = false;
+                    AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case 3:
+                case 3: //ALAC
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_ALAC.m4a");
                     AudioBitrateComboBox.Enabled = false;
                     AudioAudioModeBitrateRadioButton.Enabled = false;
                     AudioAudioModeCustomRadioButton.Enabled = false;
-                    AudioPresetDeleteButton.Visible = false;
+                    AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case 4:
+                case 4: //FLAC
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_FLAC.flac");
                     AudioBitrateComboBox.Enabled = false;
                     AudioAudioModeBitrateRadioButton.Enabled = false;
                     AudioAudioModeCustomRadioButton.Enabled = false;
-                    AudioPresetDeleteButton.Visible = false;
+                    AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case 5:
+                case 5: //FDKAAC
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a");
                     AudioBitrateComboBox.Enabled = true;
@@ -2214,28 +2208,28 @@ namespace mp4box
                     AudioAudioModeCustomRadioButton.Enabled = true;
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        AudioPresetDeleteButton.Visible = true;
+                        AudioPresetDeleteButton.Visible =
                         AudioPresetAddButton.Visible = true;
                     }
                     break;
 
-                case 6:
+                case 6: //AC3
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AC3.ac3");
                     AudioBitrateComboBox.Enabled = true;
                     AudioAudioModeBitrateRadioButton.Enabled = true;
                     AudioAudioModeCustomRadioButton.Enabled = false;
-                    AudioPresetDeleteButton.Visible = false;
+                    AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case 7:
+                case 7: //MP3
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_MP3.mp3");
                     AudioBitrateComboBox.Enabled = true;
                     AudioAudioModeBitrateRadioButton.Enabled = true;
                     AudioAudioModeCustomRadioButton.Enabled = true;
-                    AudioPresetDeleteButton.Visible = false;
+                    AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
                     break;
 
@@ -2265,13 +2259,13 @@ namespace mp4box
                 listbox.Items.AddRange(files);
                 return;
             }
-            indexoftarget = listbox.IndexFromPoint(listbox.PointToClient(new Point(e.X, e.Y)));
-            if (indexoftarget != ListBox.NoMatches)
+            targetIndex = listbox.IndexFromPoint(listbox.PointToClient(new Point(e.X, e.Y)));
+            if (targetIndex != ListBox.NoMatches)
             {
-                string temp = listbox.Items[indexoftarget].ToString();
-                listbox.Items[indexoftarget] = listbox.Items[indexofsource];
-                listbox.Items[indexofsource] = temp;
-                listbox.SelectedIndex = indexoftarget;
+                string temp = listbox.Items[targetIndex].ToString();
+                listbox.Items[targetIndex] = listbox.Items[sourceIndex];
+                listbox.Items[sourceIndex] = temp;
+                listbox.SelectedIndex = targetIndex;
             }
         }
 
@@ -2291,10 +2285,10 @@ namespace mp4box
 
         private void AudioBatchItemListBox_MouseDown(object sender, MouseEventArgs e)
         {
-            indexofsource = ((ListBox)sender).IndexFromPoint(e.X, e.Y);
-            if (indexofsource != ListBox.NoMatches)
+            sourceIndex = ((ListBox)sender).IndexFromPoint(e.X, e.Y);
+            if (sourceIndex != ListBox.NoMatches)
             {
-                ((ListBox)sender).DoDragDrop(((ListBox)sender).Items[indexofsource].ToString(), DragDropEffects.All);
+                ((ListBox)sender).DoDragDrop(((ListBox)sender).Items[sourceIndex].ToString(), DragDropEffects.All);
             }
         }
 
@@ -2413,37 +2407,39 @@ namespace mp4box
 
         private void AudioAudioModeCustomRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            AudioBitrateLabel.Visible = false;
-            AudioKbpsLabel.Visible = false;
+            AudioBitrateLabel.Visible =
+            AudioKbpsLabel.Visible =
             AudioBitrateComboBox.Visible = false;
-            AudioCustomParameterTextBox.Visible = true;
-            AudioPresetLabel.Visible = true;
-            AudioPresetComboBox.Visible = true;
-            AudioPresetDeleteButton.Visible = true;
+
+            AudioCustomParameterTextBox.Visible =
+            AudioPresetLabel.Visible =
+            AudioPresetComboBox.Visible =
+            AudioPresetDeleteButton.Visible =
             AudioPresetAddButton.Visible = true;
         }
 
         private void AudioAudioModeBitrateRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            AudioBitrateLabel.Visible = true;
-            AudioKbpsLabel.Visible = true;
+            AudioBitrateLabel.Visible =
+            AudioKbpsLabel.Visible =
             AudioBitrateComboBox.Visible = true;
-            AudioCustomParameterTextBox.Visible = false;
-            AudioPresetLabel.Visible = false;
-            AudioPresetComboBox.Visible = false;
-            AudioPresetDeleteButton.Visible = false;
+
+            AudioCustomParameterTextBox.Visible =
+            AudioPresetLabel.Visible =
+            AudioPresetComboBox.Visible =
+            AudioPresetDeleteButton.Visible =
             AudioPresetAddButton.Visible = false;
         }
 
         private void AudioBatchAddButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Multiselect = true;
-            openFileDialog1.Filter = DialogFilter.ALL; //"所有文件(*.*)|*.*";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog = new OpenFileDialog()
+                .Prepare(DialogFilter.ALL); //"所有文件(*.*)|*.*"
+            openFileDialog.Multiselect = true;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                AudioBatchItemListBox.Items.AddRange(openFileDialog1.FileNames);
+                AudioBatchItemListBox.Items.AddRange(openFileDialog.FileNames);
             }
-            openFileDialog1.Multiselect = false;
         }
 
         private void AudioBatchDeleteButton_Click(object sender, EventArgs e)
@@ -2645,9 +2641,7 @@ namespace mp4box
             auto += "\r\necho ===== one file is completed! =====\r\n";
             logger.Info(auto);
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
-            WorkingForm wf = new WorkingForm(auto);
-            wf.Owner = this;
-            wf.Show();
+            new WorkingForm(auto) { Owner = this }.Show();
             //auto += "\r\ncmd";
             //batpath = workPath + "\\x264avs.bat";
             //File.WriteAllText(batpath, auto, Encoding.Default);
@@ -3724,7 +3718,7 @@ namespace mp4box
 
         private void VideoBatchItemListbox_DrawItem(object sender, DrawItemEventArgs e)
         {
-            if (e.Index < 0 || e.Index >= 65535)
+            if (e.Index < 0 || e.Index >= 65535)    // question: why 65535?
                 return;
 
             e.DrawBackground();
