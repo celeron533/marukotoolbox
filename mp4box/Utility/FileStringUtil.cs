@@ -282,13 +282,14 @@ namespace mp4box.Utility
             // subExt is order sensitive
             string[] subExt = { ".ass", ".ssa", ".srt" };
             string intermediateName = Path.GetFileNameWithoutExtension(videoFilePath);
+            string directory = Path.GetDirectoryName(videoFilePath);
 
             if (!string.IsNullOrEmpty(language))
                 intermediateName += "." + language;
 
             foreach (string ext in subExt)
             {
-                string speculateSubtitleFile = intermediateName + ext;
+                string speculateSubtitleFile = Path.Combine(directory, intermediateName + ext);
                 if (File.Exists(speculateSubtitleFile))
                 {
                     return speculateSubtitleFile;

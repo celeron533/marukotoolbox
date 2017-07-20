@@ -2068,10 +2068,9 @@ namespace mp4box
 
         private void VideoInputTextBox_TextChanged(object sender, EventArgs e)
         {
-            string path = VideoInputTextBox.Text;
-            if (File.Exists(path))
+            string videoInput = VideoInputTextBox.Text;
+            if (File.Exists(videoInput))
             {
-                videoInput = path;
                 int num = 1;
                 string encType = "x264";
                 if (VideoEncoderComboBox.SelectedItem != null)
@@ -2085,17 +2084,7 @@ namespace mp4box
 
                 if (Path.GetExtension(videoInput) != ".avs" && encType == "x264")
                 {
-                    string[] subExt = { ".ass", ".ssa", ".srt" };
-                    foreach (string ext in subExt)
-                    {
-                        if (File.Exists(Path.ChangeExtension(videoInput, ext)))
-                        {
-                            VideoSubtitleTextBox.Text = Path.ChangeExtension(videoInput, ext);
-                            break;
-                        }
-                        else
-                            VideoSubtitleTextBox.Text = string.Empty;
-                    }
+                    VideoSubtitleTextBox.Text = FileStringUtil.SpeculateSubtitlePath(videoInput);
                 }
             }
         }
