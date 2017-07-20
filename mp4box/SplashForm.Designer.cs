@@ -73,8 +73,10 @@
             this.ClientSize = new System.Drawing.Size(720, 480);
             this.Controls.Add(this.LuneartTextLabel);
             this.Controls.Add(this.pictureBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SplashForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "小丸工具箱";
             this.Load += new System.EventHandler(this.SplashForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

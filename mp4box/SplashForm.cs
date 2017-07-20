@@ -63,10 +63,6 @@ namespace mp4box
         public SplashForm()
         {
             InitializeComponent();
-            //去掉外框
-            this.FormBorderStyle = FormBorderStyle.None;
-            //屏幕中央
-            this.StartPosition = FormStartPosition.CenterScreen;
             //this.Opacity = 0.1;
         }
 
@@ -87,7 +83,7 @@ namespace mp4box
             LuneartTextLabel.Parent = pictureBox;
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e) // timer is not enabled
         {
             this.InvokeIfRequired(() =>
                 this.Opacity += 0.1);
@@ -103,6 +99,7 @@ namespace mp4box
             //this.Opacity = 1 - Convert.ToDouble(iCount) / 1000;
         }
 
+        [Obsolete("Not used")]
         private void SplashForm_Paint(object sender, PaintEventArgs e)
         {
             List<Point> list = new List<Point>();
@@ -163,6 +160,7 @@ namespace mp4box
                 this.Close();
         }
 
+        [Obsolete("Not used")]
         private void Type(Control sender, int p_1, double p_2)
         {
             GraphicsPath oPath = new GraphicsPath();
