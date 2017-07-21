@@ -512,7 +512,7 @@ namespace mp4box
                         progressBarX264.Style = ProgressBarStyle.Blocks
                     );
                     bgworker.ReportProgress(0, 0.0);
-                    frameCount = EstimateFrame(ToolsUtil.ToolsFolder, result.Groups["fileIn"].Value);
+                    frameCount = EstimateFrame(result.Groups["fileIn"].Value);
                 }
                 result = Patterns.fileCompletedReg.Match(e.Data);
                 if (result.Success)
@@ -618,14 +618,11 @@ namespace mp4box
         /// Get a rough estimation on frame counts via FFmpeg.
         ///     If failed, return <see cref="Int32.MaxValue"/> instead.
         /// </summary>
-        /// <param name="workPath">Path to ffmpeg binary.</param>
         /// <param name="filePath">Path to target file.</param>
         /// <returns>Estimated frame count. 1% tolerance added.</returns>
-        private int EstimateFrame(string workPath, string filePath)
+        private int EstimateFrame(string filePath)
         {
-            string ffmpegPath = System.IO.Path.Combine(workPath, "ffmpeg.exe");
-            CheckFileExist(ffmpegPath);
-            var processInfo = new System.Diagnostics.ProcessStartInfo(ffmpegPath, "-i \"" + filePath + '"');
+            var processInfo = new ProcessStartInfo(ToolsUtil.FFMPEG.fullPath, "-i \"" + filePath + '"');
             processInfo.CreateNoWindow = true;
             processInfo.UseShellExecute = false;
             processInfo.RedirectStandardError = true;
