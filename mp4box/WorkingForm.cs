@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -437,15 +438,13 @@ namespace mp4box
             // wait a little bit for the last asynchronous reading
             System.Threading.Thread.Sleep(75);
             // append finish tag
-            Print(Environment.NewLine + "Work Complete!");
+            PrintLine("Work Complete!");
             // fire a warning if something went wrong
             // this feature need %ERRORLEVEL% support in batch commands
             if (proc.ExitCode != 0)
             {
-                Print(Environment.NewLine +
-                    "Potential Error detected. Please double check the log.");
-                Print(Environment.NewLine +
-                    "Exit code is: " + proc.ExitCode.ToString());
+                PrintLine("Potential Error detected. Please double check the log.");
+                PrintLine("Exit code is: " + proc.ExitCode.ToString());
             }
             // flash form and show balloon tips
             FlashForm();
@@ -490,7 +489,7 @@ namespace mp4box
                 taskbarProgress.SetProgressState(this.Handle, TBPFLAG.TBPF_NOPROGRESS);
             }
             // Print abort message to log
-            Print(Environment.NewLine + "Work is aborted by user.");
+            PrintLine("Work is aborted by user.");
             // Disable abort button
             buttonAbort.Enabled = false;
         }
@@ -503,7 +502,7 @@ namespace mp4box
             if (!String.IsNullOrEmpty(e.Data))
             {
                 // convert and log first
-                Print(e.Data + Environment.NewLine);
+                PrintLine(e.Data);
                 // test if it is command
                 Match result = Patterns.fileReg.Match(e.Data);
                 if (result.Success)
@@ -554,7 +553,7 @@ namespace mp4box
             // suicide. Dump exceptions silently.
             try
             {
-                System.Diagnostics.Process.GetProcessById(pid).Kill();
+                Process.GetProcessById(pid).Kill();
             }
             catch (ArgumentException) { }
             // recursive genocide
@@ -626,17 +625,16 @@ namespace mp4box
             processInfo.CreateNoWindow = true;
             processInfo.UseShellExecute = false;
             processInfo.RedirectStandardError = true;
-            var ffproc = System.Diagnostics.Process.Start(processInfo);
+            var ffproc = Process.Start(processInfo);
             // log and append
             string mediaInfo = ffproc.StandardError.ReadToEnd();
-            Print("Input file: " + filePath + Environment.NewLine);
-            Print(mediaInfo + Environment.NewLine);
+            PrintLine("Input file: " + filePath);
+            PrintLine(mediaInfo);
             ffproc.WaitForExit();
             var result = Patterns.ffmpegReg.Match(mediaInfo);
             if (!result.Success)
             {
-                Print("Warning: Error detected on previous file. Estimatation may not work."
-                        + Environment.NewLine);
+                PrintLine("Warning: Error detected on previous file. Estimatation may not work.");
                 return Int32.MaxValue;
             }
             else
@@ -675,6 +673,11 @@ namespace mp4box
                 notifyIcon.Visible = true;
                 notifyIcon.ShowBalloonTip(timeout, "小丸工具箱", notes, ToolTipIcon.Info);
             }
+        }
+
+        private void PrintLine(string str)
+        {
+            Print(str + Environment.NewLine);
         }
 
         /// <summary>
