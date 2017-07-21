@@ -118,6 +118,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extension\InvokerExt.cs" />
     <Compile Include="Extension\MessageBoxExt.cs" />
     <Compile Include="Extension\OpenFileDialogExt.cs" />
     <Compile Include="FeedbackForm.cs">
@@ -161,7 +162,7 @@
     <Compile Include="Utility\FileStringUtil.cs" />
     <Compile Include="SplashScreenApplicationContext.cs" />
     <Compile Include="StartUpClass.cs" />
-    <Compile Include="Supplements.cs" />
+    <Compile Include="FormatExtractor.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

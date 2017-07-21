@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace System.Text
+namespace mp4box.Extension
 {
     public static class StringBuilderExt
     {

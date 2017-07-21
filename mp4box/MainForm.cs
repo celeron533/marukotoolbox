@@ -22,6 +22,7 @@
 
 using ControlExs;
 using MediaInfoLib;
+using mp4box.Extension;
 using mp4box.Procedure;
 using mp4box.Utility;
 using NLog;
@@ -261,6 +262,7 @@ namespace mp4box
             return sb.ToString();
         }
 
+        [Obsolete("Not used")]
         public static bool stringCheck(string str, string info = "")
         {
             if (string.IsNullOrEmpty(str))

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
-namespace System.Windows.Forms
+namespace mp4box.Extension
 {
     /// Actually it is not a real extension method.
     /// You cannot do this because System.Windows.Forms.MessageBox is NOT an instance of MessageBox.

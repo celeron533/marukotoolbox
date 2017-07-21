@@ -26,26 +26,10 @@ using System.Windows.Forms;
 using System.Text;
 using System.Text.RegularExpressions;
 using mp4box.Utility;
+using System.Diagnostics;
 
 namespace mp4box
 {
-    namespace Extension
-    {
-        /// <summary>
-        /// A wrapper to make Invoke more easy by using Method Extension.
-        /// </summary>
-        static class Invoker
-        {
-            public static void InvokeIfRequired(this ISynchronizeInvoke control, MethodInvoker action)
-            {
-                if (control.InvokeRequired)
-                    control.Invoke(action, null);
-                else
-                    action();
-            }
-        }
-    }
-
     public static class FormatExtractor
     {
         /// <summary>
@@ -130,16 +114,17 @@ namespace mp4box
         /// <returns>ffmpeg output info</returns>
         public static string GetFFmpegOutput(string workPath, string filename)
         {
-            var processInfo = new System.Diagnostics.ProcessStartInfo(
+            var processInfo = new ProcessStartInfo(
                 System.IO.Path.Combine(workPath, "ffmpeg.exe"), "-i " + FileStringUtil.FormatPath(filename));
             processInfo.WorkingDirectory = System.IO.Directory.GetCurrentDirectory();
             processInfo.CreateNoWindow = true;
             processInfo.UseShellExecute = false;
             processInfo.RedirectStandardError = true;
-            var proc = System.Diagnostics.Process.Start(processInfo);
+            var proc = Process.Start(processInfo);
             string output = proc.StandardError.ReadToEnd();
             proc.WaitForExit();
             return output;
         }
+
     }
 }

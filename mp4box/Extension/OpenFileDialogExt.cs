@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using static mp4box.Utility.DialogUtil;
 
-namespace System.Windows.Forms
+namespace mp4box.Extension
 {
     public static class OpenFileDialogExt
     {
