@@ -61,7 +61,6 @@ namespace mp4box
 
         private string audioInput = "";
         private string audioOutput;
-        private string avsOutput;
         private string avsSubtitleInput = "subtitle";
         private string avsVideoInput = "video";
         private string extractFlvInput = "";
@@ -2063,11 +2062,6 @@ namespace mp4box
 
         #endregion VideoMode RadioButtonGroup
 
-        private void ConfigX264PriorityComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ChangeProcessPriority();
-        }
-
         private void VideoInputTextBox_TextChanged(object sender, EventArgs e)
         {
             string videoInput = VideoInputTextBox.Text;
@@ -2536,15 +2530,10 @@ namespace mp4box
             //}
         }
 
-        private void AvsOutputTextBox_TextChanged(object sender, EventArgs e)
-        {
-            avsOutput = AvsOutputTextBox.Text;
-        }
-
         private void AvsStartButton_Click(object sender, EventArgs e)
         {
             VideoDemuxerComboBox.SelectedIndex = 0; //压制AVS始终使用分离器为auto
-
+            string avsOutput = AvsOutputTextBox.Text;
             if (string.IsNullOrEmpty(avsOutput))
             {
                 MessageBoxExt.ShowErrorMessage("请选择输出文件");
@@ -2646,7 +2635,7 @@ namespace mp4box
             DialogResult result = savefile.ShowDialog();
             if (result == DialogResult.OK)
             {
-                AvsOutputTextBox.Text = avsOutput = savefile.FileName;
+                AvsOutputTextBox.Text = savefile.FileName;
             }
         }
 
@@ -2792,15 +2781,11 @@ namespace mp4box
             AvsScriptTextBox.Text = avsBuilder.ToString();
         }
 
-        #region 更改AVS
-
         // Triggered when AVS related controls changed, such as AvsCheckBox.CheckedChanged, AvsTrimCheckBox.CheckedChanged
         private void GenerateAVSHandler(object sender, EventArgs e)
         {
             GenerateAVS();
         }
-
-        #endregion 更改AVS
 
         #endregion Avs Tab
 
@@ -3282,14 +3267,17 @@ namespace mp4box
         {
             Global.Running.trayMode = ConfigUiTrayModeCheckBox.Checked;
         }
-        private void ConfigFunctionRestoreDefaultButton_Click(object sender, EventArgs e)
+        private void ConfigX264PriorityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DialogResult result = MessageBoxExt.ShowQuestion("是否将所有界面参数恢复到默认设置？", "提示");
-            if (result == DialogResult.Yes)
+            ChangeProcessPriority();
+        }
+        private void ConfigFunctionViewLogButton_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(logFileName))
             {
-                ResetParameters();
-                MessageBoxExt.ShowInfoMessage("已恢复默认设置！");
+                Process.Start(logFileName);
             }
+            else MessageBoxExt.ShowInfoMessage("没有找到日志文件。");
         }
         private void ConfigFunctionAllLogButton_Click(object sender, EventArgs e)
         {
@@ -3300,14 +3288,14 @@ namespace mp4box
             }
             else MessageBoxExt.ShowInfoMessage("没有找到日志文件夹。");
         }
-
-        private void ConfigFunctionViewLogButton_Click(object sender, EventArgs e)
+        private void ConfigFunctionRestoreDefaultButton_Click(object sender, EventArgs e)
         {
-            if (File.Exists(logFileName))
+            DialogResult result = MessageBoxExt.ShowQuestion("是否将所有界面参数恢复到默认设置？", "提示");
+            if (result == DialogResult.Yes)
             {
-                Process.Start(logFileName);
+                ResetParameters();
+                MessageBoxExt.ShowInfoMessage("已恢复默认设置！");
             }
-            else MessageBoxExt.ShowInfoMessage("没有找到日志文件。");
         }
         private void ConfigFunctionVideoPlayerButton_Click(object sender, EventArgs e)
         {

@@ -932,7 +932,6 @@
             this.AvsOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.AvsOutputTextBox, "AvsOutputTextBox");
             this.AvsOutputTextBox.Name = "AvsOutputTextBox";
-            this.AvsOutputTextBox.TextChanged += new System.EventHandler(this.AvsOutputTextBox_TextChanged);
             this.AvsOutputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AvsOutputTextBox_MouseDoubleClick);
             // 
             // AvsSubtitleInputTextBox
