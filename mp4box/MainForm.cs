@@ -61,7 +61,6 @@ namespace mp4box
 
         private string audioInput = "";
         private string audioOutput;
-        private string avsSubtitleInput = "subtitle";
         private string avsVideoInput = "video";
         private string extractFlvInput = "";
         private string extractMkvInput = "";
@@ -2507,29 +2506,6 @@ namespace mp4box
             //}
         }
 
-        private void AvsSubtitleInputTextBox_TextChanged(object sender, EventArgs e)
-        {
-            avsSubtitleInput = AvsSubtitleInputTextBox.Text;
-            GenerateAVS();
-            //if (txtAVS.Text != "")
-            //{
-            //    txtAVS.Text=txtAVS.Text.Replace(namesub9, txtsub9.Text);
-            //    namesub9 = txtsub9.Text;
-            //}
-            //else
-            //{
-            //    namesub9 = txtsub9.Text;
-            //    DirectoryInfo TheFolder = new DirectoryInfo("avsfilter");
-            //    foreach (FileInfo FileName in TheFolder.GetFiles())
-            //    {
-            //        avs += "LoadPlugin(\"" + workpath + "\\avsfilter\\" + FileName + "\")\r\n";
-            //    }
-            //    avs += "\r\nDirectShowSource(\"" + namevideo9 + "\",23.976,convertFPS=True)\r\nConvertToYV12()\r\n" + "TextSub(\"" + namesub9 + "\")\r\n";
-            //    txtAVS.Text = avs;
-            //    avs = "";
-            //}
-        }
-
         private void AvsStartButton_Click(object sender, EventArgs e)
         {
             VideoDemuxerComboBox.SelectedIndex = 0; //压制AVS始终使用分离器为auto
@@ -2650,6 +2626,7 @@ namespace mp4box
             //        avs += "LoadPlugin(\"" + workpath + "\\avsfilter\\" + FileName + "\")\r\n";
             //    }
             //}
+            string avsSubtitleInput = AvsSubtitleInputTextBox.Text;
             string avsScript = "LoadPlugin(\"avs\\plugins\\VSFilter.DLL\")\r\n";
             avsScript += string.Format("\r\nLWLibavVideoSource(\"{0}\",23.976,convertFPS=True)\r\nConvertToYV12()\r\nCrop(0,0,0,0)\r\nAddBorders(0,0,0,0)\r\n" + "TextSub(\"{1}\")\r\n#LanczosResize(1280,960)\r\n", avsVideoInput, avsSubtitleInput);
             //avs += "\r\nDirectShowSource(\"" + namevideo9 + "\",23.976,convertFPS=True)\r\nConvertToYV12()\r\nCrop(0,0,0,0)\r\nAddBorders(0,0,0,0)\r\n" + "TextSub(\"" + namesub9 + "\")\r\n#LanczosResize(1280,960)\r\n";
@@ -2666,12 +2643,9 @@ namespace mp4box
 
         private void AvsSubtitleInputButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = DialogFilter.SUBTITLE_2; //"字幕(*.ass;*.ssa;*.srt;*.idx;*.sup)|*.ass;*.ssa;*.srt;*.idx;*.sup|所有文件(*.*)|*.*";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                avsSubtitleInput = openFileDialog1.FileName;
-                AvsSubtitleInputTextBox.Text = avsSubtitleInput;
-            }
+            new OpenFileDialog()//"字幕(*.ass;*.ssa;*.srt;*.idx;*.sup)|*.ass;*.ssa;*.srt;*.idx;*.sup|所有文件(*.*)|*.*";
+                .Prepare(DialogFilter.SUBTITLE_2, AvsSubtitleInputTextBox.Text)
+                .ShowDialogExt(AvsSubtitleInputTextBox);
         }
 
         private void AvsVideoInputButton_Click(object sender, EventArgs e)
@@ -2726,6 +2700,7 @@ namespace mp4box
 
         private void GenerateAVS()
         {
+            string avsSubtitleInput = AvsSubtitleInputTextBox.Text;
             StringBuilder avsBuilder = new StringBuilder(1000);
 
             string vsfilterDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\VSFilter.DLL");

@@ -943,7 +943,7 @@
             resources.ApplyResources(this.AvsSubtitleInputTextBox, "AvsSubtitleInputTextBox");
             this.AvsSubtitleInputTextBox.Name = "AvsSubtitleInputTextBox";
             this.AvsSubtitleInputTextBox.ReadOnly = true;
-            this.AvsSubtitleInputTextBox.TextChanged += new System.EventHandler(this.AvsSubtitleInputTextBox_TextChanged);
+            this.AvsSubtitleInputTextBox.TextChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
             // AvsIncludeAudioCheckBox
             // 
