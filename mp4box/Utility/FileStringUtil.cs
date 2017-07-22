@@ -26,6 +26,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
 using System.Threading;
+using mp4box.Extension;
 
 namespace mp4box.Utility
 {
@@ -41,10 +42,11 @@ namespace mp4box.Utility
         /// <returns></returns>
         public static string FormatPath(string path)
         {
-            if (string.IsNullOrEmpty(path)) { return null; }
-            string ret = null;
-            ret = path.Replace("\"", "");
-            if (ret.Contains(" ")) { ret = "\"" + ret + "\""; }
+            if (string.IsNullOrEmpty(path))
+                return null;
+            string ret = path.Replace("\"", "");
+            if (ret.Contains(" "))
+                ret = ret.Quote();
             return ret;
         }
 

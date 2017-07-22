@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mp4box.Extension;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace mp4box.Utility
     {
         // Best way to get the application foldre path (as known as workPath)
         // https://stackoverflow.com/questions/6041332/best-way-to-get-application-folder-path
-        public static string ToolsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"tools");
+        public static string ToolsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tools");
 
         public static List<ToolInfo> ToolList = new List<ToolInfo>(
             new ToolInfo[]
@@ -147,7 +148,11 @@ namespace mp4box.Utility
 
             public string fileName { get; private set; }
             public string description { get; set; }
+
             public string fullPath { get { return Path.Combine(ToolsFolder, fileName); } }
+            public string quotedPath { get { return fullPath.Quote(); } }
+            public string formattedPath { get { return FileStringUtil.FormatPath(fullPath); } }
+
             public bool exists { get { return File.Exists(fullPath); } }
 
             public override string ToString()
