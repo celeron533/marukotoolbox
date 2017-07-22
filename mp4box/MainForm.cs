@@ -88,12 +88,12 @@ namespace mp4box
 
         public string FFMpegMuxCommand(string input1, string input2, string output)
         {
-            return $"\"{ToolsUtil.FFMPEG.fullPath}\" -i \"{input1}\" -i \"{input2}\" -sn -c copy -y \"{output}\"";
+            return $"{ToolsUtil.FFMPEG.quotedPath} -i {input1.Quote()} -i {input2.Quote()} -sn -c copy -y {output.Quote()}";
         }
 
         public string MP4MuxCommand(string input1, string input2, string output)
         {
-            return $"\"{ToolsUtil.MP4BOX.fullPath}\" -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new \"{output}\"";
+            return $"{ToolsUtil.MP4BOX.quotedPath} -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new {output.Quote()}";
         }
 
         public XvSettings GetXvSettings()
@@ -136,7 +136,7 @@ namespace mp4box
                 xvs.V_width = 0;
                 xvs.V_height = 0;
                 sub = string.Empty;
-                sb.Append("\"" + ToolsUtil.AVS4X26X.fullPath + "\"" + " -L ");
+                sb.Append(ToolsUtil.AVS4X26X.quotedPath + " -L ");
             }
             sb.Append("\"" + Path.Combine(ToolsUtil.ToolsFolder, VideoEncoderComboBox.SelectedItem.ToString()) + "\"");
             // 编码模式
@@ -171,12 +171,12 @@ namespace mp4box
             {
                 string x264tmpline = sb.ToString();
                 if (x264tmpline.IndexOf("--vf") == -1)
-                    sb.Append(" --vf subtitles --sub \"" + sub + "\"");
+                    sb.Append(" --vf subtitles --sub " + sub.Quote());
                 else
                 {
                     Regex r = new Regex("--vf\\s\\S*");
                     Match m = r.Match(x264tmpline);
-                    sb.Insert(m.Index + 5, "subtitles/").Append(" --sub \"" + sub + "\"");
+                    sb.Insert(m.Index + 5, "subtitles/").Append(" --sub " + sub.Quote());
                 }
             }
             if (xvs.X26xSeek != 0)
@@ -186,9 +186,9 @@ namespace mp4box
             if (x264mode == 2 && pass == 1)
                 sb.Append(" -o NUL");
             else if (!string.IsNullOrEmpty(output))
-                sb.Append(" -o " + "\"" + output + "\"");
+                sb.Append(" -o " + output.Quote());
             if (!string.IsNullOrEmpty(input))
-                sb.Append(" \"" + input + "\"");
+                sb.Append(" " + input.Quote());
             return sb.ToString();
         }
 
@@ -200,22 +200,22 @@ namespace mp4box
             bool isAvs = Path.GetExtension(input).ToLower().Equals(".avs");
             if (isAvs)
             {
-                sb.Append("\"" + ToolsUtil.AVS4X26X.fullPath + "\"" + " -L ");
+                sb.Append(ToolsUtil.AVS4X26X.quotedPath + " -L ");
             }
             else
             {
-                sb.Append("\"" + ToolsUtil.FFMPEG.fullPath + "\"" + " -i \"" + input + "\"");
+                sb.Append(ToolsUtil.FFMPEG.quotedPath + " -i " + input.Quote());
                 if (xvs.V_height != 0 && xvs.V_height != 0 && !xvs.IsResizeChecked)
                     sb.Append(string.Format(" -vf zscale={0}x{1}:filter=lanczos", xvs.V_width, xvs.V_height));
                 if (!string.IsNullOrEmpty(sub))
                 {
                     string x264tmpline = sb.ToString();
                     if (x264tmpline.IndexOf("-vf") == -1)
-                        sb.Append(" -vf subtitles=\"" + FileStringUtil.GetLibassFormatPath(sub) + "\"");
+                        sb.Append(" -vf subtitles=" + FileStringUtil.GetLibassFormatPath(sub).Quote());
                     else
                     {
                         int index = x264tmpline.IndexOf("lanczos");
-                        sb.Insert(index + 7, ",subtitles=\"" + FileStringUtil.GetLibassFormatPath(sub) + "\"");
+                        sb.Insert(index + 7, ",subtitles=" + FileStringUtil.GetLibassFormatPath(sub).Quote());
                     }
                 }
                 sb.Append(" -strict -1 -f yuv4mpegpipe -an - | ");
@@ -251,11 +251,11 @@ namespace mp4box
             if (x264mode == 2 && pass == 1)
                 sb.Append(" -o NUL");
             else if (!string.IsNullOrEmpty(output))
-                sb.Append(" -o " + "\"" + output + "\"");
+                sb.Append(" -o " +  output.Quote());
             if (!string.IsNullOrEmpty(input))
             {
                 if (isAvs)
-                    sb.Append(" \"" + input + "\"");
+                    sb.Append(" " + input.Quote());
                 else
                     sb.Append(" -");
             }
@@ -276,68 +276,68 @@ namespace mp4box
         {
             int AACbr = 1000 * Convert.ToInt32(AudioBitrateComboBox.Text);
             string br = AACbr.ToString();
-            string ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -i \"" + input + "\" -vn -sn -v 0 -c:a pcm_s16le -f wav pipe:|";
+            string ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -i " + input.Quote() + " -vn -sn -v 0 -c:a pcm_s16le -f wav pipe:|";
             switch (AudioEncoderComboBox.SelectedIndex)
             {
                 case 0:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + ToolsUtil.NEROAACENC.fullPath + "\" -ignorelength -lc -br " + br + " -if - -of \"" + output + "\"";
+                        ffmpeg += ToolsUtil.NEROAACENC.quotedPath + " -ignorelength -lc -br " + br + " -if - -of " + output.Quote();
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + ToolsUtil.NEROAACENC.fullPath + "\" -ignorelength " + AudioCustomParameterTextBox.Text + " -if - -of \"" + output + "\"";
+                        ffmpeg += ToolsUtil.NEROAACENC.quotedPath + " -ignorelength " + AudioCustomParameterTextBox.Text + " -if - -of " + output.Quote();
                     }
                     break;
 
                 case 1:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + ToolsUtil.QAAC.fullPath + "\" -q 2 --ignorelength -c " + AudioBitrateComboBox.Text + " - -o \"" + output + "\"";
+                        ffmpeg += ToolsUtil.QAAC.quotedPath + " -q 2 --ignorelength -c " + AudioBitrateComboBox.Text + " - -o " + output.Quote();
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + ToolsUtil.QAAC.fullPath + "\" --ignorelength " + AudioCustomParameterTextBox.Text + " - -o \"" + output + "\"";
+                        ffmpeg += ToolsUtil.QAAC.quotedPath + " --ignorelength " + AudioCustomParameterTextBox.Text + " - -o " + output.Quote();
                     }
                     break;
 
                 case 2:
                     if (Path.GetExtension(output) == ".aac")
                         output = Path.ChangeExtension(output, ".wav");
-                    ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -y -i \"" + input + "\" -f wav \"" + output + "\"";
+                    ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -y -i " + input.Quote() + " -f wav " + output.Quote();
                     break;
 
                 case 3:
-                    ffmpeg += "\"" + ToolsUtil.REFALAC.fullPath + "\" --ignorelength - -o \"" + output + "\"";
+                    ffmpeg += ToolsUtil.REFALAC.quotedPath + " --ignorelength - -o " + output.Quote();
                     break;
 
                 case 4:
-                    ffmpeg += "\"" + ToolsUtil.FLAC.fullPath + "\" -f --ignore-chunk-sizes -5 - -o \"" + output + "\"";
+                    ffmpeg += ToolsUtil.FLAC.quotedPath + " -f --ignore-chunk-sizes -5 - -o " + output.Quote();
                     break;
 
                 case 5:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + ToolsUtil.FDKAAC.fullPath + "\" --ignorelength -b " + AudioBitrateComboBox.Text + " - -o \"" + output + "\"";
+                        ffmpeg += ToolsUtil.FDKAAC.quotedPath + " --ignorelength -b " + AudioBitrateComboBox.Text + " - -o " + output.Quote();
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + ToolsUtil.FDKAAC.fullPath + "\" --ignorelength " + AudioCustomParameterTextBox.Text + " - -o \"" + output + "\"";
+                        ffmpeg += ToolsUtil.FDKAAC.quotedPath + " --ignorelength " + AudioCustomParameterTextBox.Text + " - -o " + output.Quote();
                     }
                     break;
 
                 case 6:
-                    ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -i \"" + input + "\" -c:a ac3 -b:a " + AudioBitrateComboBox.Text + "k \"" + output + "\"";
+                    ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -i " + input.Quote() + " -c:a ac3 -b:a " + AudioBitrateComboBox.Text + "k " + output.Quote();
                     break;
 
                 case 7:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + ToolsUtil.LAME.fullPath + "\" -q 3 -b " + AudioBitrateComboBox.Text + " - \"" + output + "\"";
+                        ffmpeg += ToolsUtil.LAME.quotedPath + " -q 3 -b " + AudioBitrateComboBox.Text + " - " + output.Quote();
                     }
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
-                        ffmpeg += "\"" + ToolsUtil.LAME.fullPath + "\" " + AudioCustomParameterTextBox.Text + " - \"" + output + "\"";
+                        ffmpeg += ToolsUtil.LAME.quotedPath + " " + AudioCustomParameterTextBox.Text + " - " + output.Quote();
                     }
                     break;
 
@@ -913,7 +913,7 @@ namespace mp4box
                            x265bat(input, tempVideo, 2, sub);
                 else x264 = x265bat(input, tempVideo, 0, sub);
                 if (audioMode == 1 || !hasAudio)
-                    x264 += "\r\n\"" + ToolsUtil.MP4BOX.fullPath + "\"  -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + output + "\" \r\n";
+                    x264 += "\r\n" + ToolsUtil.MP4BOX.quotedPath + "  -add  \"" + tempVideo + "#trackID=1:name=\" -new " + output.Quote() + " \r\n";
             }
             x264 += "\r\n";
 
@@ -929,8 +929,8 @@ namespace mp4box
             else
                 bat += x264 + " \r\n";
 
-            bat += "del \"" + tempAudio + "\"\r\n";
-            bat += "del \"" + tempVideo + "\"\r\n";
+            bat += "del " + tempAudio.Quote() + "\r\n";
+            bat += "del " + tempVideo.Quote() + "\r\n";
             bat += "echo ===== one file is completed! =====\r\n";
             return bat;
         }
@@ -1396,11 +1396,11 @@ namespace mp4box
                 string audio = new MediaInfoWrapper(sourceFilePath).a_format;
                 if (audio.ToLower() != "aac" && MuxConvertFormatComboBox.Text != "mkv")
                 {
-                    mux += "\"" + ToolsUtil.FFMPEG.fullPath + "\" -y -i \"" + sourceFilePath + "\" -c:v copy -c:a " + MuxConvertAacEncoderComboBox.Text + " -strict -2 \"" + targetFilePath + "\" \r\n";
+                    mux +=  ToolsUtil.FFMPEG.quotedPath + " -y -i " + sourceFilePath.Quote() + " -c:v copy -c:a " + MuxConvertAacEncoderComboBox.Text + " -strict -2 " + targetFilePath.Quote() + " \r\n";
                 }
                 else
                 {
-                    mux += "\"" + ToolsUtil.FFMPEG.fullPath + "\" -y -i \"" + sourceFilePath + "\" -c copy \"" + targetFilePath + "\" \r\n";
+                    mux +=  ToolsUtil.FFMPEG.quotedPath + " -y -i " + sourceFilePath.Quote() + " -c copy " + targetFilePath.Quote() + " \r\n";
                 }
             }
             mux += "\r\ncmd";
@@ -1890,8 +1890,8 @@ namespace mp4box
                 else x264 = x265bat(videoInput, tempVideo, 0, videoSubtitle);
                 if (audioMode == 1)
                 {
-                    x264 += "\r\n\"" + ToolsUtil.MP4BOX.fullPath + "\" -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + Path.ChangeExtension(videoOutput, ".mp4") + "\" \r\n";
-                    x264 += "del \"" + tempVideo + "\"";
+                    x264 += "\r\n" + ToolsUtil.MP4BOX.quotedPath + " -add  \"" + tempVideo + "#trackID=1:name=\" -new " + Path.ChangeExtension(videoOutput, ".mp4").Quote() + " \r\n";
+                    x264 += "del " + tempVideo.Quote() ;
                 }
             }
             x264 += "\r\n";
@@ -1909,8 +1909,8 @@ namespace mp4box
                 else
                     mux = FFMpegMuxCommand(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
                 x264 = aextract + x264 + mux + "\r\n"
-                    + "del \"" + tempVideo + "\"\r\n"
-                    + "del \"" + tempAudio + "\"\r\n";
+                    + "del " + tempVideo.Quote() + "\r\n"
+                    + "del " + tempAudio.Quote() + "\r\n";
             }
             x264 += "\r\necho ===== one file is completed! =====\r\n";
 
@@ -2619,8 +2619,8 @@ namespace mp4box
                 else x264 = x265bat(filepath, tempVideo);
                 if (!AvsIncludeAudioCheckBox.Checked || !hasAudio)
                 {
-                    x264 += "\r\n\"" + ToolsUtil.MP4BOX.fullPath + "\"  -add  \"" + tempVideo + "#trackID=1:name=\" -new \"" + avsOutput + "\" \r\n";
-                    x264 += "del \"" + tempVideo + "\"";
+                    x264 += "\r\n" + ToolsUtil.MP4BOX.quotedPath + " -add  \"" + tempVideo + "#trackID=1:name=\" -new " + avsOutput.Quote() + " \r\n";
+                    x264 += "del " + tempVideo.Quote();
                 }
             }
             //mux
@@ -3633,7 +3633,7 @@ namespace mp4box
                 }
                 sb.AppendLine("file '" + AudioBatchItemListBox.Items[i].ToString() + "'");
                 File.WriteAllText("concat.txt", sb.ToString());
-                ffmpeg = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -f concat  -i concat.txt -y -c copy " + finish;
+                ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -f concat  -i concat.txt -y -c copy " + finish;
             }
             ffmpeg += "\r\ncmd";
             string batpath = ToolsUtil.ToolsFolder + "\\concat.bat";

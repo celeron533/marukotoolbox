@@ -621,7 +621,7 @@ namespace mp4box
         /// <returns>Estimated frame count. 1% tolerance added.</returns>
         private int EstimateFrame(string filePath)
         {
-            var processInfo = new ProcessStartInfo(ToolsUtil.FFMPEG.fullPath, "-i \"" + filePath + '"');
+            var processInfo = new ProcessStartInfo(ToolsUtil.FFMPEG.fullPath, "-i " + filePath.Quote());
             processInfo.CreateNoWindow = true;
             processInfo.UseShellExecute = false;
             processInfo.RedirectStandardError = true;
