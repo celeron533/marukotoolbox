@@ -24,11 +24,11 @@ using System.Runtime.InteropServices;
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("Maruko Toolbox")]
-[assembly: AssemblyDescription("A Video-prosessing GUI")]
+[assembly: AssemblyDescription("A Video-processing GUI")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("http://maruko.appinn.me/")]
 [assembly: AssemblyProduct("Maruko Toolbox")]
-[assembly: AssemblyCopyright("Copyright © 2011-2016")]
+[assembly: AssemblyCopyright("Copyright © 2011-2017")]
 [assembly: AssemblyTrademark("Maruko")]
 [assembly: AssemblyCulture("")]
 
