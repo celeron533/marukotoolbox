@@ -13,6 +13,7 @@ namespace mp4box.Utility
         // https://stackoverflow.com/questions/6041332/best-way-to-get-application-folder-path
         public static string ToolsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tools");
 
+        // Based on tool_chain version 2016-10-23
         public static List<ToolInfo> ToolList = new List<ToolInfo>(
             new ToolInfo[]
             {
@@ -32,8 +33,10 @@ namespace mp4box.Utility
                 X264_32_8,
                 X264_64_10,
                 X264_64_8,
-                X265_32,
-                X265_64,
+                X265_8,
+                X265_64_10,
+                X265_64_12,
+                X265_64_8,
                 ////
                 FFPLAY
             }
@@ -121,14 +124,24 @@ namespace mp4box.Utility
             description = "x264_64-8bit"
         };
 
-        public static ToolInfo X265_32 = new ToolInfo("x265_32.exe")
+        public static ToolInfo X265_8 = new ToolInfo("x265-8bit[gcc].exe")
         {
-            description = "x265_32"
+            description = "x265-8bit"
         };
 
-        public static ToolInfo X265_64 = new ToolInfo("x265_64.exe")
+        public static ToolInfo X265_64_8 = new ToolInfo("x265_64-8bit[gcc].exe")
         {
-            description = "x265_64"
+            description = "x265_64-8bit"
+        };
+
+        public static ToolInfo X265_64_10 = new ToolInfo("x265_64-10bit[gcc].exe")
+        {
+            description = "x265_64-10bit"
+        };
+
+        public static ToolInfo X265_64_12 = new ToolInfo("x265_64-12bit[gcc].exe")
+        {
+            description = "x265_64-12bit"
         };
 
         public static ToolInfo FFPLAY = new ToolInfo("ffplay.exe")
