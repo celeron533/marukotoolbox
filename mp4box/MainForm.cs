@@ -248,7 +248,7 @@ namespace mp4box
             if (x264mode == 2 && pass == 1)
                 sb.Append(" -o NUL");
             else if (!string.IsNullOrEmpty(output))
-                sb.Append(" -o " +  output.Quote());
+                sb.Append(" -o " + output.Quote());
             if (!string.IsNullOrEmpty(input))
             {
                 if (isAvs)
@@ -1031,30 +1031,6 @@ namespace mp4box
 
         #endregion VideoBatch
 
-        private void AudioOutputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (File.Exists(AudioOutputTextBox.Text))
-            {
-                Process.Start(AudioOutputTextBox.Text);
-            }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            ChangeProcessPriority();
-        }
-
-        private void VideoPresetComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (VideoEncoderComboBox.Items != null)
-            {
-                string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
-                XElement xel = preset.GetVideoPreset(encType).Elements()
-                                  .Where(x => x.Attribute("Name").Value == VideoPresetComboBox.Text).First();
-                VideoCustomParameterTextBox.Text = xel.Value;
-            }
-        }
-
         #region Mux Tab
 
         #region MuxMkv
@@ -1393,11 +1369,11 @@ namespace mp4box
                 string audio = new MediaInfoWrapper(sourceFilePath).a_format;
                 if (audio.ToLower() != "aac" && MuxConvertFormatComboBox.Text != "mkv")
                 {
-                    mux +=  ToolsUtil.FFMPEG.quotedPath + " -y -i " + sourceFilePath.Quote() + " -c:v copy -c:a " + MuxConvertAacEncoderComboBox.Text + " -strict -2 " + targetFilePath.Quote() + " \r\n";
+                    mux += ToolsUtil.FFMPEG.quotedPath + " -y -i " + sourceFilePath.Quote() + " -c:v copy -c:a " + MuxConvertAacEncoderComboBox.Text + " -strict -2 " + targetFilePath.Quote() + " \r\n";
                 }
                 else
                 {
-                    mux +=  ToolsUtil.FFMPEG.quotedPath + " -y -i " + sourceFilePath.Quote() + " -c copy " + targetFilePath.Quote() + " \r\n";
+                    mux += ToolsUtil.FFMPEG.quotedPath + " -y -i " + sourceFilePath.Quote() + " -c copy " + targetFilePath.Quote() + " \r\n";
                 }
             }
             mux += "\r\ncmd";
@@ -1667,12 +1643,6 @@ namespace mp4box
 
         #endregion Extract Tab
 
-        [Obsolete("Not used")]
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("http://www.sosg.net/read.php?tid=480646");
-        }
-
         #region Help Tab
 
         private void HelpAboutButton_Click(object sender, EventArgs e)
@@ -1708,7 +1678,7 @@ namespace mp4box
 
         #endregion Help Tab
 
-        #region 视频页面
+        #region Video Tab
 
         private void VideoInputButton_Click(object sender, EventArgs e)
         {
@@ -1888,7 +1858,7 @@ namespace mp4box
                 if (audioMode == 1)
                 {
                     x264 += "\r\n" + ToolsUtil.MP4BOX.quotedPath + " -add  \"" + tempVideo + "#trackID=1:name=\" -new " + Path.ChangeExtension(videoOutput, ".mp4").Quote() + " \r\n";
-                    x264 += "del " + tempVideo.Quote() ;
+                    x264 += "del " + tempVideo.Quote();
                 }
             }
             x264 += "\r\n";
@@ -2114,9 +2084,141 @@ namespace mp4box
             }
         }
 
-        #endregion 视频页面
+        private void VideoBatchOutputFolderButton_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowerDialog = new FolderBrowserDialog();
+            if (folderBrowerDialog.ShowDialog() == DialogResult.OK)
+                VideoBatchOutputFolderTextBox.Text = folderBrowerDialog.SelectedPath;
+        }
 
-        #region 音频界面
+        private void VideoMaintainResolutionCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (VideoMaintainResolutionCheckBox.Checked)
+            {
+                VideoWidthNumericUpDown.Value = 0;
+                VideoHeightNumericUpDown.Value = 0;
+                VideoWidthNumericUpDown.Enabled = false;
+                VideoHeightNumericUpDown.Enabled = false;
+            }
+            else
+            {
+                VideoWidthNumericUpDown.Enabled = true;
+                VideoHeightNumericUpDown.Enabled = true;
+            }
+        }
+
+        private void VideoCustomParameterTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBoxSelectAll(sender, e);
+        }
+
+        private void VideoAutoShutdownCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Global.Running.shutdownState = VideoAutoShutdownCheckBox.Checked;
+        }
+
+        private void VideoGoToAudioLabel_Click(object sender, EventArgs e)
+        {
+            MainTabControl.SelectedIndex = 1;
+        }
+
+        private void VideoSubtitleTextBox_DoubleClick(object sender, EventArgs e)
+        {
+            VideoSubtitleTextBox.Clear();
+        }
+
+        private void VideoBatchItemListbox_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0 || e.Index >= 65535)    // question: why 65535?
+                return;
+
+            e.DrawBackground();
+            SolidBrush BlueBrush = new SolidBrush(Color.Blue);
+            SolidBrush BlackBrush = new SolidBrush(Color.Black);
+            Color vColor = Color.Black;
+            string input = VideoBatchItemListbox.Items[e.Index].ToString();
+            string language = VideoBatchSubtitleLanguage.Text == "none" ? "" : VideoBatchSubtitleLanguage.Text;
+            if (!string.IsNullOrEmpty(FileStringUtil.SpeculateSubtitlePath(input, language)))
+            {
+                e.Graphics.DrawString(Convert.ToString(VideoBatchItemListbox.Items[e.Index]), e.Font, BlueBrush, e.Bounds);
+            }
+            else
+            {
+                e.Graphics.DrawString(Convert.ToString(VideoBatchItemListbox.Items[e.Index]), e.Font, BlackBrush, e.Bounds);
+            }
+        }
+
+        private void VideoEncoderComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (VideoEncoderComboBox.SelectedIndex == -1)
+                return;
+
+            if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
+            {
+                if (VideoOutputTextBox.Text.Contains("_x264."))
+                    VideoOutputTextBox.Text = VideoOutputTextBox.Text.Replace("_x264.", "_x265.");
+
+                //x264SubTextBox.Text = string.Empty;
+                //x264SubTextBox.Enabled = false;
+                //x264SubBtn.Enabled = false;
+                //x264BatchSubCheckBox.Enabled = false;
+                //x264BatchSubSpecialLanguage.Enabled = false;
+                VideoDemuxerComboBox.Enabled = false;
+                VideoBatchFormatComboBox.Text = "mp4";
+                VideoBatchFormatComboBox.Enabled = false;
+
+                VideoPresetComboBox.Items.Clear();
+                VideoCustomParameterTextBox.Text = string.Empty;
+                var xVideos = preset.GetVideoPreset("x265");
+                if (xVideos != null)
+                {
+                    foreach (XElement item in xVideos.Elements())
+                    {
+                        VideoPresetComboBox.Items.Add(item.Attribute("Name").Value);
+                        VideoPresetComboBox.SelectedIndex = 0;
+                    }
+                }
+            }
+            else
+            {
+                if (VideoOutputTextBox.Text.Contains("_x265."))
+                    VideoOutputTextBox.Text = VideoOutputTextBox.Text.Replace("_x265.", "_x264.");
+
+                VideoSubtitleTextBox.Enabled = true;
+                VideoSubtitleButton.Enabled = true;
+                VideoBatchSubtitleCheckBox.Enabled = true;
+                VideoBatchSubtitleLanguage.Enabled = true;
+                VideoDemuxerComboBox.Enabled = true;
+                VideoBatchFormatComboBox.Enabled = true;
+
+                VideoPresetComboBox.Items.Clear();
+                VideoCustomParameterTextBox.Text = string.Empty;
+                var xVideos = preset.GetVideoPreset("x264");
+                if (xVideos != null)
+                {
+                    foreach (XElement item in xVideos.Elements())
+                    {
+                        VideoPresetComboBox.Items.Add(item.Attribute("Name").Value);
+                        VideoPresetComboBox.SelectedIndex = 0;
+                    }
+                }
+            }
+        }
+
+        private void VideoPresetComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (VideoEncoderComboBox.Items != null)
+            {
+                string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                XElement xel = preset.GetVideoPreset(encType).Elements()
+                                  .Where(x => x.Attribute("Name").Value == VideoPresetComboBox.Text).First();
+                VideoCustomParameterTextBox.Text = xel.Value;
+            }
+        }
+
+        #endregion Video Tab
+
+        #region Audio Tab
 
         private void AudioEncoderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -2435,7 +2537,111 @@ namespace mp4box
             AudioBatchItemListBox.Items.Clear();
         }
 
-        #endregion 音频界面
+        private void AudioPresetComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            XElement x = preset.GetAudioPreset(AudioEncoderComboBox.Text).Elements()
+                             .Where(_ => _.Attribute("Name").Value == AudioPresetComboBox.Text).First();
+            AudioCustomParameterTextBox.Text = x.Value;
+        }
+
+        private void AudioPresetDeleteButton_Click(object sender, EventArgs e)
+        {
+            if (MessageBoxExt.ShowQuestion("确定要删除这条预设参数？", "提示") == DialogResult.Yes)
+            {
+                try
+                {
+                    var xls = preset.GetAudioPreset(AudioEncoderComboBox.Text).Elements();
+                    foreach (var item in xls)
+                    {
+                        if (item.Attribute("Name").Value == AudioPresetComboBox.Text)
+                        {
+                            item.Remove();
+                            break;
+                        }
+                    }
+                    preset.Save();
+                    LoadAudioPreset();
+                }
+                catch (Exception ex)
+                {
+                    MessageBoxExt.ShowErrorMessage("删除失败! Reason: " + ex.Message);
+                }
+            }
+        }
+
+        private void AudioPresetAddButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string aPresetName = InputBox.Show("请输入这个预设名称", "请为预置配置命名", "新预置名称");
+                if (!string.IsNullOrEmpty(aPresetName))
+                {
+                    var xl = preset.GetAudioPreset(AudioEncoderComboBox.Text);
+                    XElement xelnew = new XElement("Parameter", AudioCustomParameterTextBox.Text,
+                                          new XAttribute("Name", aPresetName));
+                    foreach (var item in xl.Elements())
+                    {
+                        if (item.Attribute("Name").Value == aPresetName)
+                        {
+                            MessageBoxExt.ShowErrorMessage("预设名称已经存在", "预设名称重复");
+                            return;
+                        }
+                    }
+                    xl.Add(xelnew);
+                    preset.Save();
+                    LoadAudioPreset();
+                    AudioPresetComboBox.SelectedIndex = AudioPresetComboBox.FindString(aPresetName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBoxExt.ShowErrorMessage("添加失败! Reason: " + ex.Message);
+            }
+        }
+
+        private void AudioBatchConcatButton_Click(object sender, EventArgs e)
+        {
+            if (AudioBatchItemListBox.Items.Count == 0)
+            {
+                MessageBoxExt.ShowErrorMessage("请输入文件！");
+                return;
+            }
+            else if (AudioOutputTextBox.Text == "")
+            {
+                MessageBoxExt.ShowErrorMessage("请选择输出文件");
+                return;
+            }
+            StringBuilder sb = new StringBuilder();
+            string ffmpeg = "";
+            string ext = Path.GetExtension(AudioBatchItemListBox.Items[0].ToString());
+            string finish = Path.ChangeExtension(AudioOutputTextBox.Text, ext);
+            for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
+            {
+                if (Path.GetExtension(AudioBatchItemListBox.Items[i].ToString()) != ext)
+                {
+                    MessageBoxExt.ShowErrorMessage("只允许合并相同格式文件。");
+                    return;
+                }
+                sb.AppendLine("file '" + AudioBatchItemListBox.Items[i].ToString() + "'");
+                File.WriteAllText("concat.txt", sb.ToString());
+                ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -f concat  -i concat.txt -y -c copy " + finish;
+            }
+            ffmpeg += "\r\ncmd";
+            string batpath = ToolsUtil.ToolsFolder + "\\concat.bat";
+            File.WriteAllText(batpath, ffmpeg, Encoding.Default);
+            logger.Info(ffmpeg);
+            Process.Start(batpath);
+        }
+
+        private void AudioOutputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (File.Exists(AudioOutputTextBox.Text))
+            {
+                Process.Start(AudioOutputTextBox.Text);
+            }
+        }
+
+        #endregion Audio Tab
 
         #region Avs Tab
 
@@ -2740,29 +2946,6 @@ namespace mp4box
         }
 
         #endregion Avs Tab
-
-        private void VideoBatchOutputFolderButton_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog folderBrowerDialog = new FolderBrowserDialog();
-            if (folderBrowerDialog.ShowDialog() == DialogResult.OK)
-                VideoBatchOutputFolderTextBox.Text = folderBrowerDialog.SelectedPath;
-        }
-
-        private void VideoMaintainResolutionCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (VideoMaintainResolutionCheckBox.Checked)
-            {
-                VideoWidthNumericUpDown.Value = 0;
-                VideoHeightNumericUpDown.Value = 0;
-                VideoWidthNumericUpDown.Enabled = false;
-                VideoHeightNumericUpDown.Enabled = false;
-            }
-            else
-            {
-                VideoWidthNumericUpDown.Enabled = true;
-                VideoHeightNumericUpDown.Enabled = true;
-            }
-        }
 
         #region globalization
 
@@ -3263,11 +3446,6 @@ namespace mp4box
 
         #endregion Config Tab
 
-        private void VideoCustomParameterTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            TextBoxSelectAll(sender, e);
-        }
-
         //Ctrl+A 可以全选文本
         private void TextBoxSelectAll(object sender, KeyEventArgs e)
         {
@@ -3293,6 +3471,11 @@ namespace mp4box
             }
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ChangeProcessPriority();
+        }
+
         private void ChangeProcessPriority()
         {
             foreach (Process process in Process.GetProcesses())
@@ -3310,6 +3493,12 @@ namespace mp4box
                     }
                 }
             }
+        }
+
+        [Obsolete("Not used")]
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://www.sosg.net/read.php?tid=480646");
         }
 
         #region MediaInfo Tab
@@ -3412,6 +3601,10 @@ namespace mp4box
 
         public bool CheckUpdate(out DateTime NewDate, out bool isFullUpdate)
         {
+            // init
+            NewDate = DateTime.Parse("1990-03-08");
+            isFullUpdate = false;
+
             WebRequest request = WebRequest.Create("http://maruko.appinn.me/config/version.html");
             WebResponse wrs = request.GetResponse();
             // read the response ...
@@ -3420,12 +3613,12 @@ namespace mp4box
             StreamReader reader = new StreamReader(dataStream);
             // Read the content.
             string responseFromServer = reader.ReadToEnd();
+
             Regex dateReg = new Regex(@"Date20\S+Date");
             Regex VersionReg = new Regex(@"Version\d+Version");
             Match dateMatch = dateReg.Match(responseFromServer);
             Match versionMatch = VersionReg.Match(responseFromServer);
-            NewDate = DateTime.Parse("1990-03-08");
-            isFullUpdate = false;
+
             if (dateMatch.Success)
             {
                 string date = dateMatch.Value.Replace("Date", "");
@@ -3538,50 +3731,6 @@ namespace mp4box
 
         #endregion CheckUpdate
 
-        private void VideoAutoShutdownCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            Global.Running.shutdownState = VideoAutoShutdownCheckBox.Checked;
-        }
-
-        private void VideoGoToAudioLabel_Click(object sender, EventArgs e)
-        {
-            MainTabControl.SelectedIndex = 1;
-        }
-
-        private void AudioBatchConcatButton_Click(object sender, EventArgs e)
-        {
-            if (AudioBatchItemListBox.Items.Count == 0)
-            {
-                MessageBoxExt.ShowErrorMessage("请输入文件！");
-                return;
-            }
-            else if (AudioOutputTextBox.Text == "")
-            {
-                MessageBoxExt.ShowErrorMessage("请选择输出文件");
-                return;
-            }
-            StringBuilder sb = new StringBuilder();
-            string ffmpeg = "";
-            string ext = Path.GetExtension(AudioBatchItemListBox.Items[0].ToString());
-            string finish = Path.ChangeExtension(AudioOutputTextBox.Text, ext);
-            for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
-            {
-                if (Path.GetExtension(AudioBatchItemListBox.Items[i].ToString()) != ext)
-                {
-                    MessageBoxExt.ShowErrorMessage("只允许合并相同格式文件。");
-                    return;
-                }
-                sb.AppendLine("file '" + AudioBatchItemListBox.Items[i].ToString() + "'");
-                File.WriteAllText("concat.txt", sb.ToString());
-                ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -f concat  -i concat.txt -y -c copy " + finish;
-            }
-            ffmpeg += "\r\ncmd";
-            string batpath = ToolsUtil.ToolsFolder + "\\concat.bat";
-            File.WriteAllText(batpath, ffmpeg, Encoding.Default);
-            logger.Info(ffmpeg);
-            Process.Start(batpath);
-        }
-
         #region TabControl
 
         private void MainTabControl_DragOver(object sender, DragEventArgs e)
@@ -3634,150 +3783,5 @@ namespace mp4box
         }
 
         #endregion TabControl
-
-        private void VideoSubtitleTextBox_DoubleClick(object sender, EventArgs e)
-        {
-            VideoSubtitleTextBox.Clear();
-        }
-
-        private void AudioPresetComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            XElement x = preset.GetAudioPreset(AudioEncoderComboBox.Text).Elements()
-                             .Where(_ => _.Attribute("Name").Value == AudioPresetComboBox.Text).First();
-            AudioCustomParameterTextBox.Text = x.Value;
-        }
-
-        private void VideoBatchItemListbox_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            if (e.Index < 0 || e.Index >= 65535)    // question: why 65535?
-                return;
-
-            e.DrawBackground();
-            SolidBrush BlueBrush = new SolidBrush(Color.Blue);
-            SolidBrush BlackBrush = new SolidBrush(Color.Black);
-            Color vColor = Color.Black;
-            string input = VideoBatchItemListbox.Items[e.Index].ToString();
-            string language = VideoBatchSubtitleLanguage.Text == "none" ? "" : VideoBatchSubtitleLanguage.Text;
-            if (!string.IsNullOrEmpty(FileStringUtil.SpeculateSubtitlePath(input, language)))
-            {
-                e.Graphics.DrawString(Convert.ToString(VideoBatchItemListbox.Items[e.Index]), e.Font, BlueBrush, e.Bounds);
-            }
-            else
-            {
-                e.Graphics.DrawString(Convert.ToString(VideoBatchItemListbox.Items[e.Index]), e.Font, BlackBrush, e.Bounds);
-            }
-        }
-
-        private void VideoEncoderComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (VideoEncoderComboBox.SelectedIndex == -1)
-                return;
-
-            if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
-            {
-                if (VideoOutputTextBox.Text.Contains("_x264."))
-                    VideoOutputTextBox.Text = VideoOutputTextBox.Text.Replace("_x264.", "_x265.");
-
-                //x264SubTextBox.Text = string.Empty;
-                //x264SubTextBox.Enabled = false;
-                //x264SubBtn.Enabled = false;
-                //x264BatchSubCheckBox.Enabled = false;
-                //x264BatchSubSpecialLanguage.Enabled = false;
-                VideoDemuxerComboBox.Enabled = false;
-                VideoBatchFormatComboBox.Text = "mp4";
-                VideoBatchFormatComboBox.Enabled = false;
-
-                VideoPresetComboBox.Items.Clear();
-                VideoCustomParameterTextBox.Text = string.Empty;
-                var xVideos = preset.GetVideoPreset("x265");
-                if (xVideos != null)
-                {
-                    foreach (XElement item in xVideos.Elements())
-                    {
-                        VideoPresetComboBox.Items.Add(item.Attribute("Name").Value);
-                        VideoPresetComboBox.SelectedIndex = 0;
-                    }
-                }
-            }
-            else
-            {
-                if (VideoOutputTextBox.Text.Contains("_x265."))
-                    VideoOutputTextBox.Text = VideoOutputTextBox.Text.Replace("_x265.", "_x264.");
-
-                VideoSubtitleTextBox.Enabled = true;
-                VideoSubtitleButton.Enabled = true;
-                VideoBatchSubtitleCheckBox.Enabled = true;
-                VideoBatchSubtitleLanguage.Enabled = true;
-                VideoDemuxerComboBox.Enabled = true;
-                VideoBatchFormatComboBox.Enabled = true;
-
-                VideoPresetComboBox.Items.Clear();
-                VideoCustomParameterTextBox.Text = string.Empty;
-                var xVideos = preset.GetVideoPreset("x264");
-                if (xVideos != null)
-                {
-                    foreach (XElement item in xVideos.Elements())
-                    {
-                        VideoPresetComboBox.Items.Add(item.Attribute("Name").Value);
-                        VideoPresetComboBox.SelectedIndex = 0;
-                    }
-                }
-            }
-        }
-
-        private void AudioPresetDeleteButton_Click(object sender, EventArgs e)
-        {
-            if (MessageBoxExt.ShowQuestion("确定要删除这条预设参数？", "提示") == DialogResult.Yes)
-            {
-                try
-                {
-                    var xls = preset.GetAudioPreset(AudioEncoderComboBox.Text).Elements();
-                    foreach (var item in xls)
-                    {
-                        if (item.Attribute("Name").Value == AudioPresetComboBox.Text)
-                        {
-                            item.Remove();
-                            break;
-                        }
-                    }
-                    preset.Save();
-                    LoadAudioPreset();
-                }
-                catch (Exception ex)
-                {
-                    MessageBoxExt.ShowErrorMessage("删除失败! Reason: " + ex.Message);
-                }
-            }
-        }
-
-        private void AudioPresetAddButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string aPresetName = InputBox.Show("请输入这个预设名称", "请为预置配置命名", "新预置名称");
-                if (!string.IsNullOrEmpty(aPresetName))
-                {
-                    var xl = preset.GetAudioPreset(AudioEncoderComboBox.Text);
-                    XElement xelnew = new XElement("Parameter", AudioCustomParameterTextBox.Text,
-                                          new XAttribute("Name", aPresetName));
-                    foreach (var item in xl.Elements())
-                    {
-                        if (item.Attribute("Name").Value == aPresetName)
-                        {
-                            MessageBoxExt.ShowErrorMessage("预设名称已经存在", "预设名称重复");
-                            return;
-                        }
-                    }
-                    xl.Add(xelnew);
-                    preset.Save();
-                    LoadAudioPreset();
-                    AudioPresetComboBox.SelectedIndex = AudioPresetComboBox.FindString(aPresetName);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBoxExt.ShowErrorMessage("添加失败! Reason: " + ex.Message);
-            }
-        }
     }
 }
