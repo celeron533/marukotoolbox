@@ -514,7 +514,58 @@ namespace mp4box
             return ext;
         }
 
-        private void ExtractAV(string namevideo, string av, int streamIndex)
+        private string ExtractAV(out string ext, string namevideo, MediaType av, int streamIndex = 0)
+        {
+            ext = Path.GetExtension(namevideo);
+            //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 2 \"" + namevideo + "\"";
+            string aextract = "";
+            aextract += FileStringUtil.FormatPath(ToolsUtil.FFMPEG.fullPath);
+            aextract += " -i " + FileStringUtil.FormatPath(namevideo);
+
+            switch (av)
+            {
+                case MediaType.Audio:
+                    aextract += " -vn -sn -c:a copy -y -map 0:a:" + streamIndex + " ";
+
+                    MediaInfoWrapper MIW = new MediaInfoWrapper(namevideo);
+                    string audioFormat = MIW.a_format;
+                    string audioProfile = MIW.a_formatProfile;
+                    if (!string.IsNullOrEmpty(audioFormat))
+                    {
+                        if (audioFormat.Contains("MPEG") && audioProfile == "Layer 3")
+                            ext = ".mp3";
+                        else if (audioFormat.Contains("MPEG") && audioProfile == "Layer 2")
+                            ext = ".mp2";
+                        else if (audioFormat.Contains("PCM")) //flv support(PCM_U8 * PCM_S16BE * PCM_MULAW * PCM_ALAW * ADPCM_SWF)
+                            ext = ".wav";
+                        else if (audioFormat == "AAC")
+                            ext = ".aac";
+                        else if (audioFormat == "AC-3")
+                            ext = ".ac3";
+                        else if (audioFormat == "ALAC")
+                            ext = ".m4a";
+                        else
+                            ext = ".mka";
+                    }
+                    else
+                    {
+                        //MessageBoxExt.ShowInfoMessage("该轨道无音频");
+                        throw new Exception("该轨道无音频");
+                    }
+                    break;
+
+                case MediaType.Video:
+                    aextract += " -an -sn -c:v copy -y -map 0:v:" + streamIndex + " ";
+                    break;
+
+                default:
+                    throw new InvalidEnumArgumentException();
+            }
+
+            return aextract;
+        }
+
+        private void ExecuteExtractAV(string namevideo, MediaType av, int streamIndex = 0)
         {
             if (string.IsNullOrEmpty(namevideo))
             {
@@ -522,57 +573,21 @@ namespace mp4box
                 return;
             }
 
-            string ext = Path.GetExtension(namevideo);
-            //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 2 \"" + namevideo + "\"";
-            string aextract = "";
-            aextract += FileStringUtil.FormatPath(ToolsUtil.FFMPEG.fullPath);
-            aextract += " -i " + FileStringUtil.FormatPath(namevideo);
-            if (av == "a")
-            {
-                aextract += " -vn -sn -c:a copy -y -map 0:a:" + streamIndex + " ";
+            string ext = "";
 
-                MediaInfoWrapper MIW = new MediaInfoWrapper(namevideo);
-                string audioFormat = MIW.a_format;
-                string audioProfile = MIW.a_formatProfile;
-                if (!string.IsNullOrEmpty(audioFormat))
-                {
-                    if (audioFormat.Contains("MPEG") && audioProfile == "Layer 3")
-                        ext = ".mp3";
-                    else if (audioFormat.Contains("MPEG") && audioProfile == "Layer 2")
-                        ext = ".mp2";
-                    else if (audioFormat.Contains("PCM")) //flv support(PCM_U8 * PCM_S16BE * PCM_MULAW * PCM_ALAW * ADPCM_SWF)
-                        ext = ".wav";
-                    else if (audioFormat == "AAC")
-                        ext = ".aac";
-                    else if (audioFormat == "AC-3")
-                        ext = ".ac3";
-                    else if (audioFormat == "ALAC")
-                        ext = ".m4a";
-                    else
-                        ext = ".mka";
-                }
-                else
-                {
-                    MessageBoxExt.ShowInfoMessage("该轨道无音频");
-                    return;
-                }
-            }
-            else if (av == "v")
+            try
             {
-                aextract += " -an -sn -c:v copy -y -map 0:v:" + streamIndex + " ";
+                string aextract = ExtractAV(out ext, namevideo, av, streamIndex);
             }
-            else
+            catch (Exception e)
             {
-                throw new Exception("未知流！");
+                MessageBoxExt.ShowInfoMessage(e.Message);
+                return;
             }
-            string suf = "_audio_";
-            if (av == "v")
-            {
-                suf = "_video_";
-            }
+
+            string suf = av == MediaType.Audio ? "_audio_" : "_video_";
+
             suf += "index" + streamIndex;
-            //string outfile = FileStringUtil.GetDir(namevideo) +
-            //    Path.GetFileNameWithoutExtension(namevideo) + suf + ext;
             string outfile = Path.ChangeExtension(namevideo, suf + ext);
             aextract += FileStringUtil.FormatPath(outfile);
             string batpath = ToolsUtil.ToolsFolder + "\\" + av + "extract.bat";
@@ -587,39 +602,17 @@ namespace mp4box
             {
                 return "";
             }
-            string ext = Path.GetExtension(namevideo);
-            //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 2 \"" + namevideo + "\"";
-            string aextract = "";
-            aextract += FileStringUtil.FormatPath(ToolsUtil.FFMPEG.fullPath);
-            aextract += " -i " + FileStringUtil.FormatPath(namevideo);
-            aextract += " -vn -sn -c:a copy -y -map 0:a:" + streamIndex + " ";
 
-            MediaInfoWrapper MIW = new MediaInfoWrapper(namevideo);
-            string audioFormat = MIW.a_format;
-            string audioProfile = MIW.a_formatProfile;
-            if (!string.IsNullOrEmpty(audioFormat))
+            try
             {
-                if (audioFormat.Contains("MPEG") && audioProfile == "Layer 3")
-                    ext = ".mp3";
-                else if (audioFormat.Contains("MPEG") && audioProfile == "Layer 2")
-                    ext = ".mp2";
-                else if (audioFormat.Contains("PCM")) //flv support(PCM_U8 * PCM_S16BE * PCM_MULAW * PCM_ALAW * ADPCM_SWF)
-                    ext = ".wav";
-                else if (audioFormat == "AAC")
-                    ext = ".aac";
-                else if (audioFormat == "AC-3")
-                    ext = ".ac3";
-                else if (audioFormat == "ALAC")
-                    ext = ".m4a";
-                else
-                    ext = ".mka";
+                string aextract = ExtractAV(out string ext, namevideo, MediaType.Audio, streamIndex);
+                aextract += FileStringUtil.FormatPath(outfile) + "\r\n";
+                return aextract;
             }
-            else
+            catch
             {
                 return "";
             }
-            aextract += FileStringUtil.FormatPath(outfile) + "\r\n";
-            return aextract;
         }
 
         private void ExtractTrack(string namevideo, int streamIndex)
@@ -1473,13 +1466,13 @@ namespace mp4box
         private void ExtractFlvExtractVideoButton_Click(object sender, EventArgs e)
         {
             //FLV vcopy
-            ExtractAV(extractFlvInput, "v", 0);
+            ExecuteExtractAV(extractFlvInput, MediaType.Video, 0);
         }
 
         private void ExtractFlvExtractAudioButton_Click(object sender, EventArgs e)
         {
             //FLV acopy
-            ExtractAV(extractFlvInput, "a", 0);
+            ExecuteExtractAV(extractFlvInput, MediaType.Audio, 0);
         }
 
         private void ExtractFlvInputButton_Click(object sender, EventArgs e)
@@ -1522,25 +1515,25 @@ namespace mp4box
         private void ExtractMp4ExtractAudio1Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频1
-            ExtractAV(extractMp4VideoInput, "a", 0);
+            ExecuteExtractAV(extractMp4VideoInput, MediaType.Audio, 0);
         }
 
         private void ExtractMp4ExtractAudio2Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频2
-            ExtractAV(extractMp4VideoInput, "a", 1);
+            ExecuteExtractAV(extractMp4VideoInput, MediaType.Audio, 1);
         }
 
         private void ExtractMp4ExtractAudio3Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频3
-            ExtractAV(extractMp4VideoInput, "a", 2);
+            ExecuteExtractAV(extractMp4VideoInput, MediaType.Audio, 2);
         }
 
         private void ExtractMp4ExtractVideoButton_Click(object sender, EventArgs e)
         {
-            //MP4抽取视频1
-            ExtractAV(extractMp4VideoInput, "v", 0);
+            //MP4 抽取视频1
+            ExecuteExtractAV(extractMp4VideoInput, MediaType.Video, 0);
         }
 
         #endregion ExtractMp4
