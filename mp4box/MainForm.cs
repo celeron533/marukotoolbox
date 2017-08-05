@@ -83,6 +83,158 @@ namespace mp4box
             InitializeComponent();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            //int processorNumber = Environment.ProcessorCount;
+
+            ConfigX264ThreadsComboBox.Items.Add("auto");
+            for (int i = 1; i <= Environment.ProcessorCount; i++)
+            {
+                ConfigX264ThreadsComboBox.Items.Add(i.ToString());
+            }
+
+            // Tools verification
+            if (!Directory.Exists(ToolsUtil.ToolsFolder))
+            {
+                logger.Error("tools not found.");
+                MessageBox.Show("tools文件夹没有解压喔~ 工具箱里没有工具的话运行不起来的喔~", "（这只丸子）",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
+            }
+
+            //load x264 exe
+            DirectoryInfo folder = new DirectoryInfo(ToolsUtil.ToolsFolder);
+            List<string> x264exe = new List<string>();
+            try
+            {
+                bool usex265 = bool.Parse(ConfigurationManager.AppSettings["x265Enable"].ToString());
+                foreach (FileInfo FileName in folder.GetFiles())
+                {
+                    if ((FileName.Name.ToLower().Contains("x264") || FileName.Name.ToLower().Contains(usex265 ? "x265" : "xxxx")) && Path.GetExtension(FileName.Name) == ".exe")
+                    {
+                        x264exe.Add(FileName.Name);
+                    }
+                }
+                x264exe = x264exe.OrderByDescending(i => i.Substring(7)).ToList();
+                VideoEncoderComboBox.Items.AddRange(x264exe.ToArray());
+            }
+            catch { }
+
+            // avisynth未安装使用本地内置的avs
+            if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
+            {
+                string sourceAviSynthdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\AviSynth.dll");
+                string sourceDevILdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\DevIL.dll");
+                if (File.Exists(sourceAviSynthdll) && File.Exists(sourceDevILdll))
+                {
+                    try
+                    {
+                        File.Copy(sourceAviSynthdll, Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"), true);
+                        File.Copy(sourceDevILdll, Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"), true);
+                        logger.Info("未安装avisynth,使用本地内置avs.");
+                    }
+                    catch (IOException) { }
+                }
+            }
+            else
+            {
+                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"));
+                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"));
+            }
+
+            //load AVS filter
+            DirectoryInfo avspath = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
+            List<string> avsfilters = new List<string>();
+            if (Directory.Exists(ToolsUtil.ToolsFolder + @"\avs\plugins"))
+            {
+                foreach (FileInfo FileName in avspath.GetFiles())
+                {
+                    if (Path.GetExtension(FileName.Name) == ".dll")
+                    {
+                        avsfilters.Add(FileName.Name);
+                    }
+                }
+                AvsFilterComboBox.Items.AddRange(avsfilters.ToArray());
+            }
+
+            //ReleaseDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
+            HelpReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
+
+            // load Help Text
+            if (File.Exists(Global.Running.startPath + "\\help.rtf"))
+            {
+                HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
+            }
+            else
+            {
+                HelpContentRichTextBox.Text = "help.rtf is not found.";
+            }
+
+            LoadSettings();
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Delete Temp Files
+            if (ConfigFunctionDeleteTempFileCheckBox.Checked && Directory.Exists(ToolsUtil.ToolsFolder))
+            {
+                List<string> deleteFileList = new List<string>();
+
+                string systemDisk = Environment.GetFolderPath(Environment.SpecialFolder.System).Substring(0, 3);
+                string systemTempPath = systemDisk + @"windows\temp";
+
+                //Delete all BAT files
+                //DirectoryInfo theFolder = new DirectoryInfo(workPath);
+                //foreach (FileInfo NextFile in theFolder.GetFiles())
+                //{
+                //    if (NextFile.Extension.Equals(".bat"))
+                //        deleteFileList.Add(NextFile.FullName);
+                //}
+                string[] batFiles = Directory.GetFiles(ToolsUtil.ToolsFolder, "*.bat");
+
+                if (Directory.Exists(Global.Running.tempPath))
+                {
+                    foreach (var item in Directory.GetFiles(Global.Running.tempPath))
+                    {
+                        deleteFileList.Add(item);
+                    }
+                }
+
+                string[] deletedfiles = { "concat.txt", Global.Running.tempAvsPath, Global.Running.tempImgPath };
+                deleteFileList.AddRange(deletedfiles);
+                deleteFileList.AddRange(batFiles);
+
+                Process currentpro = Process.GetCurrentProcess();
+                Process[] processes = Process.GetProcessesByName(currentpro.ProcessName);
+                List<Process> listpro = new List<Process>();
+                foreach (Process ps in processes)
+                {
+                    if (System.Reflection.Assembly.GetExecutingAssembly().Location == ps.MainModule.FileName)
+                        listpro.Add(ps);
+                }
+                if (listpro.Count() == 1)
+                {
+                    foreach (string file in deleteFileList)
+                    {
+                        File.Delete(file);
+                    }
+                }
+            }
+
+            SaveSettings();
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Keys.D0 = 48, Keys.D1 = 49, ... , Keys.D9 = 57
+            // The following code uses number key 1 to 9, and 0 is still available for furture use.
+            if (e.Modifiers == Keys.Control && Keys.D1 <= e.KeyCode && e.KeyCode <= Keys.D9)
+            {
+                MainTabControl.SelectedIndex = e.KeyCode - Keys.D1;
+            }
+        }
+
+
         public string FFMpegMuxCommand(string input1, string input2, string output)
         {
             return $"{ToolsUtil.FFMPEG.quotedPath} -i {input1.Quote()} -i {input2.Quote()} -sn -c copy -y {output.Quote()}";
@@ -495,64 +647,6 @@ namespace mp4box
             Process.Start(batpath);
         }
 
-        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            #region Delete Temp Files
-
-            if (ConfigFunctionDeleteTempFileCheckBox.Checked && Directory.Exists(ToolsUtil.ToolsFolder))
-            {
-                List<string> deleteFileList = new List<string>();
-
-                string systemDisk = Environment.GetFolderPath(Environment.SpecialFolder.System).Substring(0, 3);
-                string systemTempPath = systemDisk + @"windows\temp";
-
-                //Delete all BAT files
-                //DirectoryInfo theFolder = new DirectoryInfo(workPath);
-                //foreach (FileInfo NextFile in theFolder.GetFiles())
-                //{
-                //    if (NextFile.Extension.Equals(".bat"))
-                //        deleteFileList.Add(NextFile.FullName);
-                //}
-                string[] batFiles = Directory.GetFiles(ToolsUtil.ToolsFolder, "*.bat");
-
-                if (Directory.Exists(Global.Running.tempPath))
-                {
-                    foreach (var item in Directory.GetFiles(Global.Running.tempPath))
-                    {
-                        deleteFileList.Add(item);
-                    }
-                }
-
-                string[] deletedfiles = { "concat.txt", Global.Running.tempAvsPath, Global.Running.tempImgPath };
-                deleteFileList.AddRange(deletedfiles);
-                deleteFileList.AddRange(batFiles);
-
-                Process currentpro = Process.GetCurrentProcess();
-                Process[] processes = Process.GetProcessesByName(currentpro.ProcessName);
-                List<Process> listpro = new List<Process>();
-                foreach (Process ps in processes)
-                {
-                    if (System.Reflection.Assembly.GetExecutingAssembly().Location == ps.MainModule.FileName)
-                        listpro.Add(ps);
-                }
-                if (listpro.Count() == 1)
-                {
-                    foreach (string file in deleteFileList)
-                    {
-                        File.Delete(file);
-                    }
-                }
-            }
-
-            #endregion Delete Temp Files
-
-            #region Save Settings
-
-            SaveSettings();
-
-            #endregion Save Settings
-        }
-
         #region Settings
 
         /// <summary>
@@ -755,96 +849,6 @@ namespace mp4box
             }
             if (AudioPresetComboBox.Items.Count > 0 && AudioPresetComboBox.SelectedIndex == -1)
                 AudioPresetComboBox.SelectedIndex = 0;
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            //int processorNumber = Environment.ProcessorCount;
-
-            ConfigX264ThreadsComboBox.Items.Add("auto");
-            for (int i = 1; i <= Environment.ProcessorCount; i++)
-            {
-                ConfigX264ThreadsComboBox.Items.Add(i.ToString());
-            }
-
-            // Tools verification
-            if (!Directory.Exists(ToolsUtil.ToolsFolder))
-            {
-                logger.Error("tools not found.");
-                MessageBox.Show("tools文件夹没有解压喔~ 工具箱里没有工具的话运行不起来的喔~", "（这只丸子）",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Environment.Exit(1);
-            }
-
-            //load x264 exe
-            DirectoryInfo folder = new DirectoryInfo(ToolsUtil.ToolsFolder);
-            List<string> x264exe = new List<string>();
-            try
-            {
-                bool usex265 = bool.Parse(ConfigurationManager.AppSettings["x265Enable"].ToString());
-                foreach (FileInfo FileName in folder.GetFiles())
-                {
-                    if ((FileName.Name.ToLower().Contains("x264") || FileName.Name.ToLower().Contains(usex265 ? "x265" : "xxxx")) && Path.GetExtension(FileName.Name) == ".exe")
-                    {
-                        x264exe.Add(FileName.Name);
-                    }
-                }
-                x264exe = x264exe.OrderByDescending(i => i.Substring(7)).ToList();
-                VideoEncoderComboBox.Items.AddRange(x264exe.ToArray());
-            }
-            catch { }
-
-            // avisynth未安装使用本地内置的avs
-            if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
-            {
-                string sourceAviSynthdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\AviSynth.dll");
-                string sourceDevILdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\DevIL.dll");
-                if (File.Exists(sourceAviSynthdll) && File.Exists(sourceDevILdll))
-                {
-                    try
-                    {
-                        File.Copy(sourceAviSynthdll, Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"), true);
-                        File.Copy(sourceDevILdll, Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"), true);
-                        logger.Info("未安装avisynth,使用本地内置avs.");
-                    }
-                    catch (IOException) { }
-                }
-            }
-            else
-            {
-                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"));
-                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"));
-            }
-
-            //load AVS filter
-            DirectoryInfo avspath = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
-            List<string> avsfilters = new List<string>();
-            if (Directory.Exists(ToolsUtil.ToolsFolder + @"\avs\plugins"))
-            {
-                foreach (FileInfo FileName in avspath.GetFiles())
-                {
-                    if (Path.GetExtension(FileName.Name) == ".dll")
-                    {
-                        avsfilters.Add(FileName.Name);
-                    }
-                }
-                AvsFilterComboBox.Items.AddRange(avsfilters.ToArray());
-            }
-
-            //ReleaseDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
-            HelpReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
-
-            // load Help Text
-            if (File.Exists(Global.Running.startPath + "\\help.rtf"))
-            {
-                HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
-            }
-            else
-            {
-                HelpContentRichTextBox.Text = "help.rtf is not found.";
-            }
-
-            LoadSettings();
         }
 
         #region VideoBatch
@@ -1429,7 +1433,7 @@ namespace mp4box
 
         private void ExtractMkvExtractTrack0Button_Click(object sender, EventArgs e)
         {
-            //MKV抽0
+            //MKV 抽0
             ExtractTrack(extractMkvInput, 0);
         }
 
@@ -1470,36 +1474,12 @@ namespace mp4box
         {
             //FLV vcopy
             ExtractAV(extractFlvInput, "v", 0);
-            //if (namevideo8 == "")
-            //{
-            //    MessageBox.Show("请选择视频文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    vextract = "\"" + workPath + "\\FLVExtractCL.exe\" -v \"" + namevideo8 + "\"";
-            //    batpath = workPath + "\\vextract.bat";
-            //    File.WriteAllText(batpath, vextract, Encoding.Default);
-            //    LogRecord(vextract);
-            //    Process.Start(batpath);
-            //}
         }
 
         private void ExtractFlvExtractAudioButton_Click(object sender, EventArgs e)
         {
             //FLV acopy
             ExtractAV(extractFlvInput, "a", 0);
-            //if (namevideo8 == "")
-            //{
-            //    MessageBox.Show("请选择视频文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    aextract = "\"" + workPath + "\\FLVExtractCL.exe\" -a \"" + namevideo8 + "\"";
-            //    batpath = workPath + "\\aextract.bat";
-            //    File.WriteAllText(batpath, aextract, Encoding.Default);
-            //    LogRecord(aextract);
-            //    Process.Start(batpath);
-            //}
         }
 
         private void ExtractFlvInputButton_Click(object sender, EventArgs e)
@@ -1543,100 +1523,24 @@ namespace mp4box
         {
             //MP4 抽取音频1
             ExtractAV(extractMp4VideoInput, "a", 0);
-            //if (namevideo == "")
-            //{
-            //    MessageBox.Show("请选择视频文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 2 \"" + namevideo + "\"";
-            //    aextract = "";
-            //    aextract += Cmd.FormatPath(workPath + "\\ffmpeg.exe");
-            //    aextract += " -i " + Cmd.FormatPath(namevideo);
-            //    aextract += " -vn -sn -c:a:0 copy ";
-            //    string outfile = Cmd.GetDir(namevideo) +
-            //        Path.GetFileNameWithoutExtension(namevideo) + "_抽取音频1" + Path.GetExtension(namevideo);
-            //    aextract += Cmd.FormatPath(outfile);
-            //    batpath = workPath + "\\aextract.bat";
-            //    File.WriteAllText(batpath, aextract, Encoding.Default);
-            //    LogRecord(aextract);
-            //    Process.Start(batpath);
-            //}
         }
 
         private void ExtractMp4ExtractAudio2Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频2
             ExtractAV(extractMp4VideoInput, "a", 1);
-            //if (namevideo == "")
-            //{
-            //    MessageBox.Show("请选择视频文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 3 \"" + namevideo + "\"";
-            //    aextract = "";
-            //    aextract += Cmd.FormatPath(workPath + "\\ffmpeg.exe");
-            //    aextract += " -i " + Cmd.FormatPath(namevideo);
-            //    aextract += " -vn -sn -c:a:1 copy ";
-            //    string outfile = Cmd.GetDir(namevideo) +
-            //        Path.GetFileNameWithoutExtension(namevideo) + "_抽取音频2" + Path.GetExtension(namevideo);
-            //    aextract += Cmd.FormatPath(outfile);
-            //    batpath = workPath + "\\aextract.bat";
-            //    File.WriteAllText(batpath, aextract, Encoding.Default);
-            //    LogRecord(aextract);
-            //    Process.Start(batpath);
-            //}
         }
 
         private void ExtractMp4ExtractAudio3Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频3
             ExtractAV(extractMp4VideoInput, "a", 2);
-            //if (namevideo == "")
-            //{
-            //    MessageBox.Show("请选择视频文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 4 \"" + namevideo + "\"";
-            //    aextract = "";
-            //    aextract += Cmd.FormatPath(workPath + "\\ffmpeg.exe");
-            //    aextract += " -i " + Cmd.FormatPath(namevideo);
-            //    aextract += " -vn -sn -c:a:2 copy ";
-            //    string outfile = Cmd.GetDir(namevideo) +
-            //        Path.GetFileNameWithoutExtension(namevideo) + "_抽取音频3" + Path.GetExtension(namevideo);
-            //    aextract += Cmd.FormatPath(outfile);
-            //    batpath = workPath + "\\aextract.bat";
-            //    File.WriteAllText(batpath, aextract, Encoding.Default);
-            //    LogRecord(aextract);
-            //    Process.Start(batpath);
-            //}
         }
 
         private void ExtractMp4ExtractVideoButton_Click(object sender, EventArgs e)
         {
             //MP4抽取视频1
             ExtractAV(extractMp4VideoInput, "v", 0);
-            //if (namevideo == "")
-            //{
-            //    MessageBox.Show("请选择视频文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    //vextract = "\"" + workPath + "\\mp4box.exe\" -raw 1 \"" + namevideo + "\"";
-            //    vextract = "";
-            //    vextract += Cmd.FormatPath(workPath + "\\ffmpeg.exe");
-            //    vextract += " -i " + Cmd.FormatPath(namevideo);
-            //    vextract += " -an -sn -c:v:0 copy ";
-            //    string outfile = Cmd.GetDir(namevideo) +
-            //        Path.GetFileNameWithoutExtension(namevideo) + "_抽取视频1" + Path.GetExtension(namevideo);
-            //    vextract += Cmd.FormatPath(outfile);
-            //    batpath = workPath + "\\vextract.bat";
-            //    File.WriteAllText(batpath, vextract, Encoding.Default);
-            //    LogRecord(vextract);
-            //    Process.Start(batpath);
-            //}
         }
 
         #endregion ExtractMp4
@@ -3770,16 +3674,6 @@ namespace mp4box
                 }
             }
             return pageIndex;
-        }
-
-        private void MainForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            // Keys.D0 = 48, Keys.D1 = 49, ... , Keys.D9 = 57
-            // The following code uses number key 1 to 9, and 0 is still available for furture use.
-            if (e.Modifiers == Keys.Control && Keys.D1 <= e.KeyCode && e.KeyCode <= Keys.D9)
-            {
-                MainTabControl.SelectedIndex = e.KeyCode - Keys.D1;
-            }
         }
 
         #endregion TabControl
