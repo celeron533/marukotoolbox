@@ -603,9 +603,11 @@ namespace mp4box
                 return "";
             }
 
+            string ext;
+
             try
             {
-                string aextract = ExtractAV(out string ext, namevideo, MediaType.Audio, streamIndex);
+                string aextract = ExtractAV(out ext, namevideo, MediaType.Audio, streamIndex);
                 aextract += FileStringUtil.FormatPath(outfile) + "\r\n";
                 return aextract;
             }
