@@ -82,7 +82,7 @@ namespace mp4box.Procedure
                 Graphics g = Graphics.FromImage(bmp);
                 //g.FillRectangle(Brushes.White, new Rectangle(0, 0, 800, 600));
                 g.Clear(Color.Black);
-                bmp.Save(Global.Running.tempImgPath, ImageFormat.Jpeg);
+                bmp.Save(Global.Running.tempImgFile, ImageFormat.Jpeg);
             }
             else
             {
@@ -96,12 +96,12 @@ namespace mp4box.Procedure
                             new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L)
                         };
                 ImageCodecInfo ImageCoderType = OtherUtil.GetImageCoderInfo("image/jpeg");
-                img.Save(Global.Running.tempImgPath, ImageCoderType, eps);
+                img.Save(Global.Running.tempImgFile, ImageCoderType, eps);
             }
 
 
             //批处理
-            string mux = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -loop 1 -r " + fps + " -t " + blackDuration + " -f image2 -i \"" + Global.Running.tempImgPath + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y black.flv\r\n";
+            string mux = "\"" + ToolsUtil.FFMPEG.fullPath + "\" -loop 1 -r " + fps + " -t " + blackDuration + " -f image2 -i \"" + Global.Running.tempImgFile + "\" -c:v libx264 -crf " + crf.ToString("0.0") + " -y black.flv\r\n";
             mux += string.Format("\"{0}\\flvbind\" \"{1}\"  \"{2}\"  black.flv\r\n", ToolsUtil.ToolsFolder, outputVideoFile, inputVideoFile);
             mux += "del black.flv\r\n";
 

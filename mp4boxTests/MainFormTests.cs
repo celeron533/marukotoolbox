@@ -35,11 +35,5 @@ namespace mp4box.Tests
             Assert.AreEqual(resultBeforeRefactor, result);
         }
 
-        [TestMethod()]
-        public void processorCountTest()
-        {
-            Console.WriteLine($"You have {Environment.ProcessorCount} core(s).");
-        }
-
     }
 }
