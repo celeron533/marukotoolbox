@@ -61,7 +61,6 @@ namespace mp4box
 
         private string audioInput = "";
         private string audioOutput;
-        private string extractMp4VideoInput = "";
         private string videoInput = "";
         private string videoOutput;
         private string videoSubtitle = "";
@@ -1458,41 +1457,33 @@ namespace mp4box
 
         private void ExtractMp4InputButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = DialogFilter.VIDEO_5; //"视频(*.mp4)|*.mp4|所有文件(*.*)|*.*";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                extractMp4VideoInput = openFileDialog1.FileName;
-                ExtractMp4InputTextBox.Text = extractMp4VideoInput;
-            }
-        }
-
-        private void ExtractMp4InputTextBox_TextChanged(object sender, EventArgs e)
-        {
-            extractMp4VideoInput = ExtractMp4InputTextBox.Text;
+            new OpenFileDialog() //"视频(*.mp4)|*.mp4|所有文件(*.*)|*.*"
+                .Prepare(DialogFilter.VIDEO_5, ExtractMp4InputTextBox.Text)
+                .ShowDialogExt(ExtractMp4InputTextBox);
         }
 
         private void ExtractMp4ExtractAudio1Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频1
-            ExecuteExtractAV(extractMp4VideoInput, MediaType.Audio, 0);
+            ExecuteExtractAV(ExtractMp4InputTextBox.Text, MediaType.Audio, 0);
         }
 
         private void ExtractMp4ExtractAudio2Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频2
-            ExecuteExtractAV(extractMp4VideoInput, MediaType.Audio, 1);
+            ExecuteExtractAV(ExtractMp4InputTextBox.Text, MediaType.Audio, 1);
         }
 
         private void ExtractMp4ExtractAudio3Button_Click(object sender, EventArgs e)
         {
             //MP4 抽取音频3
-            ExecuteExtractAV(extractMp4VideoInput, MediaType.Audio, 2);
+            ExecuteExtractAV(ExtractMp4InputTextBox.Text, MediaType.Audio, 2);
         }
 
         private void ExtractMp4ExtractVideoButton_Click(object sender, EventArgs e)
         {
             //MP4 抽取视频1
-            ExecuteExtractAV(extractMp4VideoInput, MediaType.Video, 0);
+            ExecuteExtractAV(ExtractMp4InputTextBox.Text, MediaType.Video, 0);
         }
 
         #endregion ExtractMp4

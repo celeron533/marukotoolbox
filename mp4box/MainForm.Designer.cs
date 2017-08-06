@@ -1219,7 +1219,6 @@
             resources.ApplyResources(this.ExtractMp4InputTextBox, "ExtractMp4InputTextBox");
             this.ExtractMp4InputTextBox.Name = "ExtractMp4InputTextBox";
             this.ExtractMp4InputTextBox.ReadOnly = true;
-            this.ExtractMp4InputTextBox.TextChanged += new System.EventHandler(this.ExtractMp4InputTextBox_TextChanged);
             // 
             // ExtractMp4ExtractAudio3Button
             // 
