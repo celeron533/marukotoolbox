@@ -180,44 +180,22 @@ namespace mp4box
             {
                 List<string> deleteFileList = new List<string>();
 
-                string systemDisk = Environment.GetFolderPath(Environment.SpecialFolder.System).Substring(0, 3);
-                string systemTempPath = systemDisk + @"windows\temp";
-
-                //Delete all BAT files
-                //DirectoryInfo theFolder = new DirectoryInfo(workPath);
-                //foreach (FileInfo NextFile in theFolder.GetFiles())
-                //{
-                //    if (NextFile.Extension.Equals(".bat"))
-                //        deleteFileList.Add(NextFile.FullName);
-                //}
-                string[] batFiles = Directory.GetFiles(ToolsUtil.ToolsFolder, "*.bat");
-
                 if (Directory.Exists(Global.Running.tempPath))
-                {
-                    foreach (var item in Directory.GetFiles(Global.Running.tempPath))
-                    {
-                        deleteFileList.Add(item);
-                    }
-                }
+                    deleteFileList.AddRange(Directory.GetFiles(Global.Running.tempPath));
 
                 string[] deletedfiles = { "concat.txt", Global.Running.tempAvsPath, Global.Running.tempImgPath };
                 deleteFileList.AddRange(deletedfiles);
+
+                string[] batFiles = Directory.GetFiles(ToolsUtil.ToolsFolder, "*.bat");
                 deleteFileList.AddRange(batFiles);
 
-                Process currentpro = Process.GetCurrentProcess();
-                Process[] processes = Process.GetProcessesByName(currentpro.ProcessName);
-                List<Process> listpro = new List<Process>();
-                foreach (Process ps in processes)
+                string fileName = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                Process[] processes = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName);
+
+                // If there is no other running instances, delete files
+                if (processes.Count(p => p.MainModule.FileName == fileName) == 1)
                 {
-                    if (System.Reflection.Assembly.GetExecutingAssembly().Location == ps.MainModule.FileName)
-                        listpro.Add(ps);
-                }
-                if (listpro.Count() == 1)
-                {
-                    foreach (string file in deleteFileList)
-                    {
-                        File.Delete(file);
-                    }
+                    deleteFileList.ForEach(f => File.Delete(f));
                 }
             }
 
