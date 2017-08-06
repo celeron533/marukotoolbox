@@ -62,7 +62,6 @@ namespace mp4box
         private string audioInput = "";
         private string audioOutput;
         private string extractFlvInput = "";
-        private string extractMkvInput = "";
         private string extractMp4VideoInput = "";
         private string videoInput = "";
         private string videoOutput;
@@ -1369,14 +1368,6 @@ namespace mp4box
 
         #region ExtractMkv
 
-        private void ExtractMkvInputTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (File.Exists(ExtractMkvInputTextBox.Text))
-            {
-                extractMkvInput = ExtractMkvInputTextBox.Text;
-            }
-        }
-
         private void ExtractMkvInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (File.Exists(ExtractMkvInputTextBox.Text))
@@ -1396,42 +1387,39 @@ namespace mp4box
 
         private void ExtractMkvInputButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = DialogFilter.VIDEO_2; //"视频(*.mkv)|*.mkv";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                extractMkvInput = openFileDialog1.FileName;
-                ExtractMkvInputTextBox.Text = extractMkvInput;
-            }
+            new OpenFileDialog() //"视频(*.mkv)|*.mkv"
+                .Prepare(DialogFilter.VIDEO_2, ExtractMkvInputTextBox.Text)
+                .ShowDialogExt(ExtractMkvInputTextBox);
         }
 
         private void ExtractMkvExtractTrack0Button_Click(object sender, EventArgs e)
         {
             //MKV 抽0
-            ExtractTrack(extractMkvInput, 0);
+            ExtractTrack(ExtractMkvInputTextBox.Text, 0);
         }
 
         private void ExtractMkvExtractTrack1Button_Click(object sender, EventArgs e)
         {
             //MKV 抽1
-            ExtractTrack(extractMkvInput, 1);
+            ExtractTrack(ExtractMkvInputTextBox.Text, 1);
         }
 
         private void ExtractMkvExtractTrack2Button_Click(object sender, EventArgs e)
         {
             //MKV 抽2
-            ExtractTrack(extractMkvInput, 2);
+            ExtractTrack(ExtractMkvInputTextBox.Text, 2);
         }
 
         private void ExtractMkvExtractTrack3Button_Click(object sender, EventArgs e)
         {
             //MKV 抽3
-            ExtractTrack(extractMkvInput, 3);
+            ExtractTrack(ExtractMkvInputTextBox.Text, 3);
         }
 
         private void ExtractMkvExtractTrack4Button_Click(object sender, EventArgs e)
         {
             //MKV 抽4
-            ExtractTrack(extractMkvInput, 4);
+            ExtractTrack(ExtractMkvInputTextBox.Text, 4);
         }
 
         #endregion ExtractMkv

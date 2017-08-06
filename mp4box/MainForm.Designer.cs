@@ -1154,7 +1154,6 @@
             resources.ApplyResources(this.ExtractMkvInputTextBox, "ExtractMkvInputTextBox");
             this.ExtractMkvInputTextBox.Name = "ExtractMkvInputTextBox";
             this.ExtractMkvInputTextBox.ReadOnly = true;
-            this.ExtractMkvInputTextBox.TextChanged += new System.EventHandler(this.ExtractMkvInputTextBox_TextChanged);
             this.ExtractMkvInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ExtractMkvInputTextBox_MouseDoubleClick);
             // 
             // ExtractFlvGroupBox
