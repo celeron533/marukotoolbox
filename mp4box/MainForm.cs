@@ -61,7 +61,6 @@ namespace mp4box
 
         private string audioInput = "";
         private string audioOutput;
-        private string extractFlvInput = "";
         private string extractMp4VideoInput = "";
         private string videoInput = "";
         private string videoOutput;
@@ -1426,31 +1425,23 @@ namespace mp4box
 
         #region ExtractFlv
 
-        private void ExtractFlvInputTextBox_TextChanged(object sender, EventArgs e)
-        {
-            extractFlvInput = ExtractFlvInputTextBox.Text;
-        }
-
         private void ExtractFlvExtractVideoButton_Click(object sender, EventArgs e)
         {
             //FLV vcopy
-            ExecuteExtractAV(extractFlvInput, MediaType.Video, 0);
+            ExecuteExtractAV(ExtractFlvInputTextBox.Text, MediaType.Video, 0);
         }
 
         private void ExtractFlvExtractAudioButton_Click(object sender, EventArgs e)
         {
             //FLV acopy
-            ExecuteExtractAV(extractFlvInput, MediaType.Audio, 0);
+            ExecuteExtractAV(ExtractFlvInputTextBox.Text, MediaType.Audio, 0);
         }
 
         private void ExtractFlvInputButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = DialogFilter.VIDEO_4; //"视频(*.flv;*.hlv)|*.flv;*.hlv";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                extractFlvInput = openFileDialog1.FileName;
-                ExtractFlvInputTextBox.Text = extractFlvInput;
-            }
+            new OpenFileDialog() //"视频(*.flv;*.hlv)|*.flv;*.hlv"
+                .Prepare(DialogFilter.VIDEO_4, ExtractFlvInputTextBox.Text)
+                .ShowDialogExt(ExtractFlvInputTextBox);
         }
 
         private void ExtractFlvInputTextBox_MouseDoubleClick(object sender, MouseEventArgs e)

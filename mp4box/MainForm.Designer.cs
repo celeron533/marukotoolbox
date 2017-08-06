@@ -1189,7 +1189,6 @@
             resources.ApplyResources(this.ExtractFlvInputTextBox, "ExtractFlvInputTextBox");
             this.ExtractFlvInputTextBox.Name = "ExtractFlvInputTextBox";
             this.ExtractFlvInputTextBox.ReadOnly = true;
-            this.ExtractFlvInputTextBox.TextChanged += new System.EventHandler(this.ExtractFlvInputTextBox_TextChanged);
             this.ExtractFlvInputTextBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ExtractFlvInputTextBox_MouseDoubleClick);
             // 
             // ExtractFlvExtractAudioButton
