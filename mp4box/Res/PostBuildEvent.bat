@@ -1,6 +1,6 @@
 @REM Store args
-set _SolutionDir=%1%
-set _TargetDir=%2%
+set _SolutionDir=%~1%
+set _TargetDir=%~2%
 
 @REM Do works
 if not exist "%_SolutionDir%xiaowan" mkdir "%_SolutionDir%xiaowan" >nul
