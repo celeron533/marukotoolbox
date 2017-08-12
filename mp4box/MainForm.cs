@@ -57,7 +57,7 @@ namespace mp4box
         private int sourceIndex;    // used for ListBox Drag & Drop
         private int targetIndex;    // used for ListBox Drag & Drop
 
-        private int x264mode = 1;
+        private X264Mode x264mode = X264Mode.Crf;
 
         private string audioInput = "";
         private string audioOutput;
@@ -267,19 +267,19 @@ namespace mp4box
             // 编码模式
             switch (x264mode)
             {
-                case 0: // 自定义
+                case X264Mode.Custom: // 自定义
                     sb.Append(" " + xvs.CustomParameter);
                     break;
 
-                case 1: // crf
+                case X264Mode.Crf: // crf
                     sb.Append(" --crf " + xvs.CrfValue);
                     break;
 
-                case 2: // 2pass
+                case X264Mode.TwoPass: // 2pass
                     sb.Append(" --pass " + pass + " --bitrate " + xvs.X26xBitrate + " --stats \"" + Path.Combine(Global.Running.tempFolder, Path.GetFileNameWithoutExtension(output)) + ".stats\"");
                     break;
             }
-            if (x264mode != 0)
+            if (x264mode != X264Mode.Custom)
             {
                 if (xvs.X26xDemuxer != "auto" && xvs.X26xDemuxer != string.Empty)
                     sb.Append(" --demuxer " + xvs.X26xDemuxer);
@@ -308,7 +308,7 @@ namespace mp4box
                 sb.Append(" --seek " + xvs.X26xSeek);
             if (xvs.X26xFrames != 0)
                 sb.Append(" --frames " + xvs.X26xFrames);
-            if (x264mode == 2 && pass == 1)
+            if (x264mode == X264Mode.TwoPass && pass == 1)
                 sb.Append(" -o NUL");
             else if (!string.IsNullOrEmpty(output))
                 sb.Append(" -o " + output.Quote());
@@ -350,19 +350,19 @@ namespace mp4box
             // 编码模式
             switch (x264mode)
             {
-                case 0: // 自定义
+                case X264Mode.Custom: // 自定义
                     sb.Append(" " + xvs.CustomParameter);
                     break;
 
-                case 1: // crf
+                case X264Mode.Crf: // crf
                     sb.Append(" --crf " + xvs.CrfValue);
                     break;
 
-                case 2: // 2pass
+                case X264Mode.TwoPass: // 2pass
                     sb.Append(" --pass " + pass + " --bitrate " + xvs.X26xBitrate + " --stats \"" + Path.Combine(Global.Running.tempFolder, Path.GetFileNameWithoutExtension(output)) + ".stats\"");
                     break;
             }
-            if (x264mode != 0)
+            if (x264mode != X264Mode.Custom)
             {
                 if (xvs.ExtParameter != string.Empty)
                     sb.Append(" " + xvs.ExtParameter);
@@ -373,7 +373,7 @@ namespace mp4box
                 sb.Append(" --seek " + xvs.X26xSeek);
             if (xvs.X26xFrames != 0)
                 sb.Append(" --frames " + xvs.X26xFrames);
-            if (x264mode == 2 && pass == 1)
+            if (x264mode == X264Mode.TwoPass && pass == 1)
                 sb.Append(" -o NUL");
             else if (!string.IsNullOrEmpty(output))
                 sb.Append(" -o " + output.Quote());
@@ -872,7 +872,7 @@ namespace mp4box
 
             if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
             {
-                if (x264mode == 2)
+                if (x264mode == X264Mode.TwoPass)
                     x264 = x264bat(input, tempVideo, 1, sub) + "\r\n" +
                            x264bat(input, tempVideo, 2, sub);
                 else x264 = x264bat(input, tempVideo, 0, sub);
@@ -882,7 +882,7 @@ namespace mp4box
             else if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
             {
                 tempVideo = Path.Combine(Global.Running.tempFolder, inputName + "_vtemp.hevc");
-                if (x264mode == 2)
+                if (x264mode == X264Mode.TwoPass)
                     x264 = x265bat(input, tempVideo, 1, sub) + "\r\n" +
                            x265bat(input, tempVideo, 2, sub);
                 else x264 = x265bat(input, tempVideo, 0, sub);
@@ -1686,7 +1686,7 @@ namespace mp4box
 
             if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
             {
-                if (x264mode == 2)
+                if (x264mode == X264Mode.TwoPass)
                     x264 = x264bat(videoInput, tempVideo, 1, videoSubtitle) + "\r\n" +
                            x264bat(videoInput, tempVideo, 2, videoSubtitle);
                 else x264 = x264bat(videoInput, tempVideo, 0, videoSubtitle);
@@ -1701,7 +1701,7 @@ namespace mp4box
                     MessageBoxExt.ShowErrorMessage("不支持的格式输出,x265当前工具箱仅支持MP4输出");
                     return;
                 }
-                if (x264mode == 2)
+                if (x264mode == X264Mode.TwoPass)
                     x264 = x265bat(videoInput, tempVideo, 1, videoSubtitle) + "\r\n" +
                            x265bat(videoInput, tempVideo, 2, videoSubtitle);
                 else x264 = x265bat(videoInput, tempVideo, 0, videoSubtitle);
@@ -1803,7 +1803,7 @@ namespace mp4box
 
         private void VideoMode2PassRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            x264mode = 2;
+            x264mode = X264Mode.TwoPass;
 
             // Bitrate
             VideoBitrateLabel.Visible =
@@ -1829,7 +1829,7 @@ namespace mp4box
 
         private void VideoModeCustomRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            x264mode = 0;
+            x264mode = X264Mode.Custom;
             // Bitrate
             VideoBitrateLabel.Visible =
             VideoBitrateNumericUpDown.Visible =
@@ -1855,7 +1855,7 @@ namespace mp4box
 
         private void VideoModeCrfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            x264mode = 1;
+            x264mode = X264Mode.Crf;
             // Bitrate
             VideoBitrateLabel.Visible =
             VideoBitrateNumericUpDown.Visible =
@@ -2602,7 +2602,7 @@ namespace mp4box
             //video
             if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
             {
-                if (x264mode == 2)
+                if (x264mode == X264Mode.TwoPass)
                     x264 = x264bat(filepath, tempVideo, 1) + "\r\n" +
                            x264bat(filepath, tempVideo, 2);
                 else x264 = x264bat(filepath, tempVideo);
@@ -2612,7 +2612,7 @@ namespace mp4box
             else if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x265"))
             {
                 tempVideo = Path.Combine(Global.Running.tempFolder, inputName + "_vtemp.hevc");
-                if (x264mode == 2)
+                if (x264mode == X264Mode.TwoPass)
                     x264 = x265bat(filepath, tempVideo, 1) + "\r\n" +
                            x265bat(filepath, tempVideo, 2);
                 else x264 = x265bat(filepath, tempVideo);

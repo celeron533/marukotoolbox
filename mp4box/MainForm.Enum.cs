@@ -12,5 +12,12 @@ namespace mp4box
             Audio,
             Video
         }
+
+        public enum X264Mode
+        {
+            Custom,
+            Crf,
+            TwoPass
+        }
     }
 }
