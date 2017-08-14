@@ -592,6 +592,8 @@
             // 
             // AvsFilterComboBox
             // 
+            this.AvsFilterComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.AvsFilterComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.AvsFilterComboBox.FormattingEnabled = true;
             resources.ApplyResources(this.AvsFilterComboBox, "AvsFilterComboBox");
             this.AvsFilterComboBox.Name = "AvsFilterComboBox";
