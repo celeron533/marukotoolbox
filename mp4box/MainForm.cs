@@ -48,6 +48,7 @@ namespace mp4box
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private string logFileName = ((NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("f")).FileName.Render(null);
+        private readonly DateTime ReleaseDate = AssemblyUtil.GetAssemblyVersionTime();
 
         private Preset preset;
         private Settings settings;
@@ -69,9 +70,7 @@ namespace mp4box
 
         private string x264;
         private string aextract;
-
-        private DateTime ReleaseDate = AssemblyUtil.GetAssemblyVersionTime();
-
+        
         #endregion Private Members Declaration
 
         public MainForm()
@@ -83,21 +82,13 @@ namespace mp4box
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //int processorNumber = Environment.ProcessorCount;
+            ToolsVerification();
 
+            // Detect processor count
             ConfigX264ThreadsComboBox.Items.Add("auto");
             for (int i = 1; i <= Environment.ProcessorCount; i++)
             {
                 ConfigX264ThreadsComboBox.Items.Add(i.ToString());
-            }
-
-            // Tools verification
-            if (!Directory.Exists(ToolsUtil.ToolsFolder))
-            {
-                logger.Error("tools not found.");
-                MessageBox.Show("tools文件夹没有解压喔~ 工具箱里没有工具的话运行不起来的喔~", "（这只丸子）",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Environment.Exit(1);
             }
 
             //load x264 exe
@@ -118,6 +109,43 @@ namespace mp4box
             }
             catch { }
 
+            //ReleaseDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
+            HelpReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
+
+            // load Help Text
+            if (File.Exists(Global.Running.startPath + "\\help.rtf"))
+            {
+                HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
+            }
+            else
+            {
+                HelpContentRichTextBox.Text = "help.rtf is not found.";
+            }
+            CheckAVS();
+            LoadAVS();
+            LoadSettings();
+        }
+
+        private void LoadAVS()
+        {
+            //load AVS filter
+            DirectoryInfo avspath = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
+            List<string> avsfilters = new List<string>();
+            if (Directory.Exists(ToolsUtil.ToolsFolder + @"\avs\plugins"))
+            {
+                foreach (FileInfo FileName in avspath.GetFiles())
+                {
+                    if (Path.GetExtension(FileName.Name) == ".dll")
+                    {
+                        avsfilters.Add(FileName.Name);
+                    }
+                }
+                AvsFilterComboBox.Items.AddRange(avsfilters.ToArray());
+            }
+        }
+
+        private static void CheckAVS()
+        {
             // avisynth未安装使用本地内置的avs
             if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
             {
@@ -139,41 +167,27 @@ namespace mp4box
                 File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"));
                 File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"));
             }
+        }
 
-            //load AVS filter
-            DirectoryInfo avspath = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
-            List<string> avsfilters = new List<string>();
-            if (Directory.Exists(ToolsUtil.ToolsFolder + @"\avs\plugins"))
+        private static void ToolsVerification()
+        {
+            if (!Directory.Exists(ToolsUtil.ToolsFolder))
             {
-                foreach (FileInfo FileName in avspath.GetFiles())
-                {
-                    if (Path.GetExtension(FileName.Name) == ".dll")
-                    {
-                        avsfilters.Add(FileName.Name);
-                    }
-                }
-                AvsFilterComboBox.Items.AddRange(avsfilters.ToArray());
+                logger.Error("tools not found.");
+                MessageBox.Show("tools文件夹没有解压喔~ 工具箱里没有工具的话运行不起来的喔~", "（这只丸子）",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
             }
-
-            //ReleaseDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
-            HelpReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
-
-            // load Help Text
-            if (File.Exists(Global.Running.startPath + "\\help.rtf"))
-            {
-                HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
-            }
-            else
-            {
-                HelpContentRichTextBox.Text = "help.rtf is not found.";
-            }
-
-            LoadSettings();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //Delete Temp Files
+            DeleteTempFiles();
+            SaveSettings();
+        }
+
+        private void DeleteTempFiles()
+        {
             if (ConfigFunctionDeleteTempFileCheckBox.Checked && Directory.Exists(ToolsUtil.ToolsFolder))
             {
                 List<string> deleteFileList = new List<string>();
@@ -196,8 +210,6 @@ namespace mp4box
                     deleteFileList.ForEach(f => File.Delete(f));
                 }
             }
-
-            SaveSettings();
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
@@ -3381,10 +3393,11 @@ namespace mp4box
 
         private void MediaInfoVideoInputButton_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = DialogFilter.VIDEO_6; //"视频(*.mp4;*.flv;*.mkv)|*.mp4;*.flv;*.mkv|所有文件(*.*)|*.*";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog = new OpenFileDialog() //"视频(*.mp4;*.flv;*.mkv)|*.mp4;*.flv;*.mkv|所有文件(*.*)|*.*"
+                .Prepare(DialogFilter.VIDEO_6, mediaInfoFile);
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                mediaInfoFile = openFileDialog1.FileName;
+                mediaInfoFile = openFileDialog.FileName;
                 MediaInfoTextBox.Text = GetMediaInfoString(mediaInfoFile);
             }
         }
