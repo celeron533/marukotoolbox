@@ -210,9 +210,9 @@ namespace mp4box.Utility
         /// <summary>
         /// Detects the AviSynth version/date
         /// </summary>
-        /// <param name="checkInternal">False: check System folder. True: check Maruko tool folder.</param>
+        /// <param name="checkEmbedded">False: check System folder. True: check Maruko tool folder.</param>
         /// <returns>AviSynth.dll file information string.</returns>
-        public static string CheckAviSynth(bool checkInternal = false)
+        public static string CheckAviSynth(bool checkEmbedded = false)
         {
             bool aviSynthFound = false;
             string fileVersion = string.Empty, fileDate = string.Empty, fileProductName = string.Empty;
@@ -222,12 +222,10 @@ namespace mp4box.Utility
             string syswow64path = Environment.GetFolderPath(Environment.SpecialFolder.SystemX86);
             // %windir%\System32 on 32-bit OS
             string system32path = Environment.GetFolderPath(Environment.SpecialFolder.System);
-            // embedded with Maruko Toolbox
-            string toolboxpath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tools");
 
-            if (checkInternal)  // Maruko folder
+            if (checkEmbedded)  // Maruko folder
             {
-                if (GetFileInformation(Path.Combine(toolboxpath, AVISYNTH),
+                if (GetFileInformation(Path.Combine(ToolsUtil.ToolsFolder, AVISYNTH),
                     out fileVersion, out fileDate, out fileProductName))
                 {
                     aviSynthFound = true;
@@ -253,18 +251,9 @@ namespace mp4box.Utility
         }
 
         // 检查内置的avs版本
-        public static string CheckInternalAviSynth()
+        public static string CheckEmbeddedAviSynth()
         {
             return CheckAviSynth(true);
-            //bool bFoundInstalledAviSynth = false;
-            //string fileVersion = string.Empty, fileDate = string.Empty, fileProductName = string.Empty;
-
-            //if (GetFileInformation(Path.Combine(Application.StartupPath, @"tools\AviSynth.dll"), out fileVersion, out fileDate, out fileProductName))
-            //    bFoundInstalledAviSynth = true;
-
-            //if (bFoundInstalledAviSynth)
-            //    return "AviSynth" + (fileProductName.Contains("+") ? "+" : string.Empty) + "版本: " + fileVersion + " (" + fileDate + ")";
-            //else return string.Empty;
         }
 
 

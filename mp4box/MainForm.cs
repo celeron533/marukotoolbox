@@ -70,7 +70,7 @@ namespace mp4box
 
         private string x264;
         private string aextract;
-        
+
         #endregion Private Members Declaration
 
         public MainForm()
@@ -84,31 +84,6 @@ namespace mp4box
         {
             ToolsVerification();
 
-            // Detect processor count
-            ConfigX264ThreadsComboBox.Items.Add("auto");
-            for (int i = 1; i <= Environment.ProcessorCount; i++)
-            {
-                ConfigX264ThreadsComboBox.Items.Add(i.ToString());
-            }
-
-            //load x264 exe
-            DirectoryInfo folder = new DirectoryInfo(ToolsUtil.ToolsFolder);
-            List<string> x264exe = new List<string>();
-            try
-            {
-                bool usex265 = settings.ConfigFunctionEnableX265Check;
-                foreach (FileInfo FileName in folder.GetFiles())
-                {
-                    if ((FileName.Name.ToLower().Contains("x264") || FileName.Name.ToLower().Contains(usex265 ? "x265" : "xxxx")) && Path.GetExtension(FileName.Name) == ".exe")
-                    {
-                        x264exe.Add(FileName.Name);
-                    }
-                }
-                x264exe = x264exe.OrderByDescending(i => i.Substring(7)).ToList();
-                VideoEncoderComboBox.Items.AddRange(x264exe.ToArray());
-            }
-            catch { }
-
             //ReleaseDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
             HelpReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
 
@@ -121,32 +96,45 @@ namespace mp4box
             {
                 HelpContentRichTextBox.Text = "help.rtf is not found.";
             }
-            CheckAVS();
-            LoadAVS();
-            LoadSettings();
-        }
 
-        private void LoadAVS()
-        {
-            //load AVS filter
-            DirectoryInfo avspath = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
-            List<string> avsfilters = new List<string>();
-            if (Directory.Exists(ToolsUtil.ToolsFolder + @"\avs\plugins"))
+            // Detect processor count
+            ConfigX264ThreadsComboBox.Items.Add("auto");
+            for (int i = 1; i <= Environment.ProcessorCount; i++)
             {
-                foreach (FileInfo FileName in avspath.GetFiles())
-                {
-                    if (Path.GetExtension(FileName.Name) == ".dll")
+                ConfigX264ThreadsComboBox.Items.Add(i.ToString());
+            }
+
+            //load x264 exe
+            DirectoryInfo folder = new DirectoryInfo(ToolsUtil.ToolsFolder);
+            try
+            {
+                bool usex265 = settings.ConfigFunctionEnableX265Check;
+                var x264exe = folder.GetFiles("*.exe")
+                    .Where(fileInfo =>
                     {
-                        avsfilters.Add(FileName.Name);
-                    }
-                }
+                        string fileName = fileInfo.Name.ToLower();
+                        return fileName.Contains("x264") || (usex265 && fileName.Contains("x265"));
+                    })
+                    .Select(fileInfo => fileInfo.Name);
+                VideoEncoderComboBox.Items.AddRange(x264exe.ToArray());
+            }
+            catch { }
+
+            CheckAVS();
+
+            DirectoryInfo avspath = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
+            if (Directory.Exists(avspath.FullName))
+            {
+                var avsfilters = avspath.GetFiles("*.dll").Select(fileInfo => fileInfo.Name);
                 AvsFilterComboBox.Items.AddRange(avsfilters.ToArray());
             }
+
+            LoadSettings();
         }
 
         private static void CheckAVS()
         {
-            // avisynth未安装使用本地内置的avs
+            // avisynth未安装，使用小丸内置的avs
             if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
             {
                 string sourceAviSynthdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\AviSynth.dll");
@@ -157,7 +145,7 @@ namespace mp4box
                     {
                         File.Copy(sourceAviSynthdll, Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"), true);
                         File.Copy(sourceDevILdll, Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"), true);
-                        logger.Info("未安装avisynth,使用本地内置avs.");
+                        logger.Info("系统未安装avisynth,使用小丸内置avs.");
                     }
                     catch (IOException) { }
                 }
@@ -1626,7 +1614,7 @@ namespace mp4box
             //如果是AVS复制到C盘根目录
             if (Path.GetExtension(VideoInputTextBox.Text) == ".avs")
             {
-                if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()) && string.IsNullOrEmpty(FileStringUtil.CheckInternalAviSynth()))
+                if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()) && string.IsNullOrEmpty(FileStringUtil.CheckEmbeddedAviSynth()))
                 {
                     if (MessageBoxExt.ShowQuestion("检测到本机未安装avisynth无法继续压制，是否去下载安装", "avisynth未安装") == DialogResult.Yes)
                         Process.Start("http://sourceforge.net/projects/avisynth2/");
@@ -2574,7 +2562,7 @@ namespace mp4box
                 if (dgs == DialogResult.No) return;
             }
 
-            if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()) && string.IsNullOrEmpty(FileStringUtil.CheckInternalAviSynth()))
+            if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()) && string.IsNullOrEmpty(FileStringUtil.CheckEmbeddedAviSynth()))
             {
                 if (MessageBoxExt.ShowQuestion("检测到本机未安装avisynth无法继续压制，是否去下载安装", "avisynth未安装") == DialogResult.Yes)
                     Process.Start("http://sourceforge.net/projects/avisynth2/");

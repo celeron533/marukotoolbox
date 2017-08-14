@@ -121,8 +121,8 @@ namespace mp4box
                 sb.AppendLine(string.Format("Microsoft .NET Framework: {0}", version));
             if (!string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
                 sb.AppendLine(FileStringUtil.CheckAviSynth());
-            else if (!string.IsNullOrEmpty(FileStringUtil.CheckInternalAviSynth()))
-                sb.AppendLine(FileStringUtil.CheckInternalAviSynth() + " (本地内置的绿色版本)");
+            else if (!string.IsNullOrEmpty(FileStringUtil.CheckEmbeddedAviSynth()))
+                sb.AppendLine(FileStringUtil.CheckEmbeddedAviSynth() + " (本地内置的绿色版本)");
             else
                 sb.AppendLine("Avisynth 未安装");
             sb.AppendLine("------------------------------以上信息为自动检测-----------------------------");
