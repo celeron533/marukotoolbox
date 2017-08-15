@@ -473,20 +473,21 @@ namespace mp4box
 
         private string getAudioExt()
         {
-            string ext = ".aac";
-            switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
-            {
-                case AudioEncoder.NeroAAC: ext = ".mp4"; break;
-                case AudioEncoder.QAAC: ext = ".m4a"; break;
-                case AudioEncoder.WAV: ext = ".wav"; break;
-                case AudioEncoder.ALAC: ext = ".m4a"; break;
-                case AudioEncoder.FLAC: ext = ".flac"; break;
-                case AudioEncoder.FDKAAC: ext = ".m4a"; break;
-                case AudioEncoder.AC3: ext = ".ac3"; break;
-                case AudioEncoder.MP3: ext = ".mp3"; break;
-                default: ext = ".aac"; break;
-            }
-            return ext;
+            return GenerateAudioOutputExt(".{1}");
+            //    string ext = ".aac";
+            //    switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
+            //    {
+            //        case AudioEncoder.NeroAAC: ext = ".mp4"; break;
+            //        case AudioEncoder.QAAC: ext = ".m4a"; break;
+            //        case AudioEncoder.WAV: ext = ".wav"; break;
+            //        case AudioEncoder.ALAC: ext = ".m4a"; break;
+            //        case AudioEncoder.FLAC: ext = ".flac"; break;
+            //        case AudioEncoder.FDKAAC: ext = ".m4a"; break;
+            //        case AudioEncoder.AC3: ext = ".ac3"; break;
+            //        case AudioEncoder.MP3: ext = ".mp3"; break;
+            //        default: ext = ".aac"; break;
+            //    }
+            //    return ext;
         }
 
         private string ExtractAV(out string ext, string namevideo, MediaType av, int streamIndex = 0)
