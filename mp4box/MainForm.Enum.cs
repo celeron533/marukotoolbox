@@ -32,5 +32,11 @@ namespace mp4box
             AC3,
             MP3
         }
+
+        public enum AudioMode
+        {
+            Custom,
+            Bitrate
+        }
     }
 }

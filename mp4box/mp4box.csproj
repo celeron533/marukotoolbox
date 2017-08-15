@@ -155,6 +155,7 @@
     <Compile Include="Procedure\MiscProcedure.cs" />
     <Compile Include="Procedure\MuxMkvProcedure.cs" />
     <Compile Include="Procedure\MuxMp4Procedure.cs" />
+    <Compile Include="Procedure\Shared.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="UpdateChecker.cs" />
     <Compile Include="Utility\AssemblyUtil.cs" />

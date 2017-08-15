@@ -396,80 +396,17 @@ namespace mp4box
             return string.IsNullOrEmpty(str);
         }
 
-        public string audiobat(string input, string output)
+        public string AudioBat(string input, string output)
         {
-            int AACbr = 1000 * Convert.ToInt32(AudioBitrateComboBox.Text);
-            string br = AACbr.ToString();
-            string ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -i " + input.Quote() + " -vn -sn -v 0 -c:a pcm_s16le -f wav pipe:|";
-            switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
-            {
-                case AudioEncoder.NeroAAC:
-                    if (AudioAudioModeBitrateRadioButton.Checked)
-                    {
-                        ffmpeg += ToolsUtil.NEROAACENC.quotedPath + " -ignorelength -lc -br " + br + " -if - -of " + output.Quote();
-                    }
-                    if (AudioAudioModeCustomRadioButton.Checked)
-                    {
-                        ffmpeg += ToolsUtil.NEROAACENC.quotedPath + " -ignorelength " + AudioCustomParameterTextBox.Text + " -if - -of " + output.Quote();
-                    }
-                    break;
+            // Use enum instead of bool
+            AudioMode audioMode = AudioAudioModeBitrateRadioButton.Checked ? AudioMode.Bitrate : AudioMode.Custom;
+            AudioEncoder audioEncoder = (AudioEncoder)AudioEncoderComboBox.SelectedIndex;
+            string audioBitrate = AudioBitrateComboBox.Text;
+            string audioCustomParam = AudioCustomParameterTextBox.Text;
 
-                case AudioEncoder.QAAC:
-                    if (AudioAudioModeBitrateRadioButton.Checked)
-                    {
-                        ffmpeg += ToolsUtil.QAAC.quotedPath + " -q 2 --ignorelength -c " + AudioBitrateComboBox.Text + " - -o " + output.Quote();
-                    }
-                    if (AudioAudioModeCustomRadioButton.Checked)
-                    {
-                        ffmpeg += ToolsUtil.QAAC.quotedPath + " --ignorelength " + AudioCustomParameterTextBox.Text + " - -o " + output.Quote();
-                    }
-                    break;
-
-                case AudioEncoder.WAV:
-                    if (Path.GetExtension(output) == ".aac")
-                        output = Path.ChangeExtension(output, ".wav");
-                    ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -y -i " + input.Quote() + " -f wav " + output.Quote();
-                    break;
-
-                case AudioEncoder.ALAC:
-                    ffmpeg += ToolsUtil.REFALAC.quotedPath + " --ignorelength - -o " + output.Quote();
-                    break;
-
-                case AudioEncoder.FLAC:
-                    ffmpeg += ToolsUtil.FLAC.quotedPath + " -f --ignore-chunk-sizes -5 - -o " + output.Quote();
-                    break;
-
-                case AudioEncoder.FDKAAC:
-                    if (AudioAudioModeBitrateRadioButton.Checked)
-                    {
-                        ffmpeg += ToolsUtil.FDKAAC.quotedPath + " --ignorelength -b " + AudioBitrateComboBox.Text + " - -o " + output.Quote();
-                    }
-                    if (AudioAudioModeCustomRadioButton.Checked)
-                    {
-                        ffmpeg += ToolsUtil.FDKAAC.quotedPath + " --ignorelength " + AudioCustomParameterTextBox.Text + " - -o " + output.Quote();
-                    }
-                    break;
-
-                case AudioEncoder.AC3:
-                    ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -i " + input.Quote() + " -c:a ac3 -b:a " + AudioBitrateComboBox.Text + "k " + output.Quote();
-                    break;
-
-                case AudioEncoder.MP3:
-                    if (AudioAudioModeBitrateRadioButton.Checked)
-                    {
-                        ffmpeg += ToolsUtil.LAME.quotedPath + " -q 3 -b " + AudioBitrateComboBox.Text + " - " + output.Quote();
-                    }
-                    if (AudioAudioModeCustomRadioButton.Checked)
-                    {
-                        ffmpeg += ToolsUtil.LAME.quotedPath + " " + AudioCustomParameterTextBox.Text + " - " + output.Quote();
-                    }
-                    break;
-
-                default:
-                    break;
-            }
-            return ffmpeg + "\r\n";
+            return Shared.AudioBat(input, output, audioMode, audioEncoder, audioBitrate, audioCustomParam);
         }
+
 
         private string getAudioExt()
         {
@@ -849,7 +786,7 @@ namespace mp4box
             switch (audioMode)
             {
                 case 0:
-                    aextract = audiobat(input, tempAudio);
+                    aextract = AudioBat(input, tempAudio);
                     break;
 
                 case 1:
@@ -863,7 +800,7 @@ namespace mp4box
                         aextract = ExtractAudio(input, tempAudio);
                     }
                     else
-                        aextract = audiobat(input, tempAudio);
+                        aextract = AudioBat(input, tempAudio);
                     break;
 
                 default:
@@ -1141,7 +1078,7 @@ namespace mp4box
             switch (audioMode)
             {
                 case 0:
-                    aextract = audiobat(videoInput, tempAudio);
+                    aextract = AudioBat(videoInput, tempAudio);
                     break;
 
                 case 1:
@@ -1157,7 +1094,7 @@ namespace mp4box
                     else
                     {
                         MessageBoxExt.ShowInfoMessage("因音频编码非AAC故无法复制音频流，音频将被重编码。");
-                        aextract = audiobat(videoInput, tempAudio);
+                        aextract = AudioBat(videoInput, tempAudio);
                     }
                     break;
 
@@ -1727,7 +1664,7 @@ namespace mp4box
             foreach (var item in AudioBatchItemListBox.Items)
             {
                 finish = Path.ChangeExtension(item.ToString(), audioOutputExt);
-                aac += audiobat(item.ToString(), finish);
+                aac += AudioBat(item.ToString(), finish);
                 aac += "\r\n";
             }
             aac += "\r\ncmd";
@@ -1791,8 +1728,8 @@ namespace mp4box
             else
             {
                 string batpath = ToolsUtil.ToolsFolder + "\\aac.bat";
-                File.WriteAllText(batpath, audiobat(audioInput, audioOutput), Encoding.Default);
-                logger.Info(audiobat(audioInput, audioOutput));
+                File.WriteAllText(batpath, AudioBat(audioInput, audioOutput), Encoding.Default);
+                logger.Info(AudioBat(audioInput, audioOutput));
                 Process.Start(batpath);
             }
         }
@@ -1958,7 +1895,7 @@ namespace mp4box
             string ext = Path.GetExtension(AudioBatchItemListBox.Items[0].ToString());
             string output = Path.ChangeExtension(AudioOutputTextBox.Text, ext);
 
-            foreach(var item in AudioBatchItemListBox.Items)
+            foreach (var item in AudioBatchItemListBox.Items)
             {
                 if (Path.GetExtension(item.ToString()) != ext)
                 {
@@ -2849,7 +2786,7 @@ namespace mp4box
                     MessageBoxExt.ShowErrorMessage("请选择视频文件");
                     return;
                 }
-                aextract = audiobat(avsVideoInput, tempAudio);
+                aextract = AudioBat(avsVideoInput, tempAudio);
             }
             else
                 aextract = string.Empty;
