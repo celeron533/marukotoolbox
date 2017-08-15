@@ -170,34 +170,33 @@ namespace mp4box
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DeleteTempFiles();
+            if (ConfigFunctionDeleteTempFileCheckBox.Checked)
+                DeleteTempFiles();
+
             SaveSettings();
         }
 
         private void DeleteTempFiles()
         {
-            if (ConfigFunctionDeleteTempFileCheckBox.Checked && Directory.Exists(ToolsUtil.ToolsFolder))
-            {
-                List<string> deleteFileList = new List<string>();
+            string fileName = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            Process[] processes = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName);
 
-                if (Directory.Exists(Global.Running.tempFolder))
-                    deleteFileList.AddRange(Directory.GetFiles(Global.Running.tempFolder));
+            // If there are other running instances, abort
+            if (processes.Count(p => p.MainModule.FileName == fileName) > 1)
+                return;
 
-                string[] deletedfiles = { "concat.txt", Global.Running.tempAvsFile, Global.Running.tempImgFile };
-                deleteFileList.AddRange(deletedfiles);
+            List<string> deleteFileList = new List<string>();
 
-                string[] batFiles = Directory.GetFiles(ToolsUtil.ToolsFolder, "*.bat");
-                deleteFileList.AddRange(batFiles);
+            if (Directory.Exists(Global.Running.tempFolder))
+                deleteFileList.AddRange(Directory.GetFiles(Global.Running.tempFolder));
 
-                string fileName = System.Reflection.Assembly.GetExecutingAssembly().Location;
-                Process[] processes = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName);
+            string[] deletedfiles = { "concat.txt", Global.Running.tempAvsFile, Global.Running.tempImgFile };
+            deleteFileList.AddRange(deletedfiles);
 
-                // If there is no other running instances, delete files
-                if (processes.Count(p => p.MainModule.FileName == fileName) == 1)
-                {
-                    deleteFileList.ForEach(f => File.Delete(f));
-                }
-            }
+            string[] batFiles = Directory.GetFiles(ToolsUtil.ToolsFolder, "*.bat");
+            deleteFileList.AddRange(batFiles);
+
+            deleteFileList.ForEach(f => File.Delete(f));
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
