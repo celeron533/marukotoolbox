@@ -1952,21 +1952,22 @@ namespace mp4box
                 MessageBoxExt.ShowErrorMessage("请选择输出文件");
                 return;
             }
-            StringBuilder sb = new StringBuilder();
+            StringBuilder fileNames = new StringBuilder();
             string ffmpeg = "";
             string ext = Path.GetExtension(AudioBatchItemListBox.Items[0].ToString());
-            string finish = Path.ChangeExtension(AudioOutputTextBox.Text, ext);
-            for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
+            string output = Path.ChangeExtension(AudioOutputTextBox.Text, ext);
+
+            foreach(var item in AudioBatchItemListBox.Items)
             {
-                if (Path.GetExtension(AudioBatchItemListBox.Items[i].ToString()) != ext)
+                if (Path.GetExtension(item.ToString()) != ext)
                 {
                     MessageBoxExt.ShowErrorMessage("只允许合并相同格式文件。");
                     return;
                 }
-                sb.AppendLine("file '" + AudioBatchItemListBox.Items[i].ToString() + "'");
+                fileNames.AppendLine($"file '{item.ToString()}'");
             }
-            File.WriteAllText("concat.txt", sb.ToString());
-            ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -f concat -i concat.txt -y -c copy " + finish;
+            File.WriteAllText("concat.txt", fileNames.ToString());
+            ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -f concat -i concat.txt -y -c copy " + output;
             ffmpeg += "\r\ncmd";
             string batpath = ToolsUtil.ToolsFolder + "\\concat.bat";
             File.WriteAllText(batpath, ffmpeg, Encoding.Default);
