@@ -1964,9 +1964,9 @@ namespace mp4box
                     return;
                 }
                 sb.AppendLine("file '" + AudioBatchItemListBox.Items[i].ToString() + "'");
-                File.WriteAllText("concat.txt", sb.ToString());
-                ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -f concat  -i concat.txt -y -c copy " + finish;
             }
+            File.WriteAllText("concat.txt", sb.ToString());
+            ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -f concat -i concat.txt -y -c copy " + finish;
             ffmpeg += "\r\ncmd";
             string batpath = ToolsUtil.ToolsFolder + "\\concat.bat";
             File.WriteAllText(batpath, ffmpeg, Encoding.Default);
