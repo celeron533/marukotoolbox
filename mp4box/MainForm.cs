@@ -401,9 +401,9 @@ namespace mp4box
             int AACbr = 1000 * Convert.ToInt32(AudioBitrateComboBox.Text);
             string br = AACbr.ToString();
             string ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -i " + input.Quote() + " -vn -sn -v 0 -c:a pcm_s16le -f wav pipe:|";
-            switch (AudioEncoderComboBox.SelectedIndex)
+            switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
             {
-                case 0:
+                case AudioEncoder.NeroAAC:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
                         ffmpeg += ToolsUtil.NEROAACENC.quotedPath + " -ignorelength -lc -br " + br + " -if - -of " + output.Quote();
@@ -414,7 +414,7 @@ namespace mp4box
                     }
                     break;
 
-                case 1:
+                case AudioEncoder.QAAC:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
                         ffmpeg += ToolsUtil.QAAC.quotedPath + " -q 2 --ignorelength -c " + AudioBitrateComboBox.Text + " - -o " + output.Quote();
@@ -425,21 +425,21 @@ namespace mp4box
                     }
                     break;
 
-                case 2:
+                case AudioEncoder.WAV:
                     if (Path.GetExtension(output) == ".aac")
                         output = Path.ChangeExtension(output, ".wav");
                     ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -y -i " + input.Quote() + " -f wav " + output.Quote();
                     break;
 
-                case 3:
+                case AudioEncoder.ALAC:
                     ffmpeg += ToolsUtil.REFALAC.quotedPath + " --ignorelength - -o " + output.Quote();
                     break;
 
-                case 4:
+                case AudioEncoder.FLAC:
                     ffmpeg += ToolsUtil.FLAC.quotedPath + " -f --ignore-chunk-sizes -5 - -o " + output.Quote();
                     break;
 
-                case 5:
+                case AudioEncoder.FDKAAC:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
                         ffmpeg += ToolsUtil.FDKAAC.quotedPath + " --ignorelength -b " + AudioBitrateComboBox.Text + " - -o " + output.Quote();
@@ -450,11 +450,11 @@ namespace mp4box
                     }
                     break;
 
-                case 6:
+                case AudioEncoder.AC3:
                     ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -i " + input.Quote() + " -c:a ac3 -b:a " + AudioBitrateComboBox.Text + "k " + output.Quote();
                     break;
 
-                case 7:
+                case AudioEncoder.MP3:
                     if (AudioAudioModeBitrateRadioButton.Checked)
                     {
                         ffmpeg += ToolsUtil.LAME.quotedPath + " -q 3 -b " + AudioBitrateComboBox.Text + " - " + output.Quote();
@@ -474,16 +474,16 @@ namespace mp4box
         private string getAudioExt()
         {
             string ext = ".aac";
-            switch (AudioEncoderComboBox.SelectedIndex)
+            switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
             {
-                case 0: ext = ".mp4"; break;
-                case 1: ext = ".m4a"; break;
-                case 2: ext = ".wav"; break;
-                case 3: ext = ".m4a"; break;
-                case 4: ext = ".flac"; break;
-                case 5: ext = ".m4a"; break;
-                case 6: ext = ".ac3"; break;
-                case 7: ext = ".mp3"; break;
+                case AudioEncoder.NeroAAC: ext = ".mp4"; break;
+                case AudioEncoder.QAAC: ext = ".m4a"; break;
+                case AudioEncoder.WAV: ext = ".wav"; break;
+                case AudioEncoder.ALAC: ext = ".m4a"; break;
+                case AudioEncoder.FLAC: ext = ".flac"; break;
+                case AudioEncoder.FDKAAC: ext = ".m4a"; break;
+                case AudioEncoder.AC3: ext = ".ac3"; break;
+                case AudioEncoder.MP3: ext = ".mp3"; break;
                 default: ext = ".aac"; break;
             }
             return ext;
@@ -977,7 +977,10 @@ namespace mp4box
                 return;
             }
 
-            if (AudioEncoderComboBox.SelectedIndex != 0 && AudioEncoderComboBox.SelectedIndex != 1 && AudioEncoderComboBox.SelectedIndex != 5)
+
+            if (AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.QAAC
+                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.NeroAAC
+                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.FDKAAC)
             {
                 DialogResult r = MessageBoxExt.ShowQuestion("音频页面中的编码器未采用AAC将可能导致压制失败，建议将编码器改为QAAC、NeroAAC或FDKAAC。是否继续压制？", "提示");
                 if (r == DialogResult.No)
@@ -1070,7 +1073,9 @@ namespace mp4box
                 return;
             }
 
-            if (AudioEncoderComboBox.SelectedIndex != 0 && AudioEncoderComboBox.SelectedIndex != 1 && AudioEncoderComboBox.SelectedIndex != 5)
+            if (AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.QAAC
+                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.NeroAAC
+                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.FDKAAC)
             {
                 DialogResult r = MessageBoxExt.ShowQuestion("音频页面中的编码器未采用AAC将可能导致压制失败，建议将编码器改为QAAC、NeroAAC或FDKAAC。是否继续压制？", "提示");
                 if (r == DialogResult.No)
@@ -1551,9 +1556,9 @@ namespace mp4box
 
         private void AudioEncoderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (AudioEncoderComboBox.SelectedIndex)
+            switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
             {
-                case 0: //NeroAAC
+                case AudioEncoder.NeroAAC: //NeroAAC
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.mp4");
                     AudioBitrateComboBox.Enabled = true;
@@ -1566,7 +1571,7 @@ namespace mp4box
                     }
                     break;
 
-                case 1: //  QAAC
+                case AudioEncoder.QAAC: //  QAAC
                     //if (!isAppleAppSupportInstalled())
                     //{
                     //    if (MessageBoxExtension.ShowQuestion("Apple Application Support未安装.\r\n音频编码器QAAC可能无法使用.\r\n\r\n是否前往QuickTime下载页面?", "Apple Application Support未安装") == DialogResult.Yes)
@@ -1584,7 +1589,7 @@ namespace mp4box
                     }
                     break;
 
-                case 2: //WAV
+                case AudioEncoder.WAV: //WAV
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_WAV.wav");
                     AudioBitrateComboBox.Enabled = false;
@@ -1594,7 +1599,7 @@ namespace mp4box
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case 3: //ALAC
+                case AudioEncoder.ALAC: //ALAC
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_ALAC.m4a");
                     AudioBitrateComboBox.Enabled = false;
@@ -1604,7 +1609,7 @@ namespace mp4box
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case 4: //FLAC
+                case AudioEncoder.FLAC: //FLAC
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_FLAC.flac");
                     AudioBitrateComboBox.Enabled = false;
@@ -1614,7 +1619,7 @@ namespace mp4box
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case 5: //FDKAAC
+                case AudioEncoder.FDKAAC: //FDKAAC
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a");
                     AudioBitrateComboBox.Enabled = true;
@@ -1627,7 +1632,7 @@ namespace mp4box
                     }
                     break;
 
-                case 6: //AC3
+                case AudioEncoder.AC3: //AC3
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AC3.ac3");
                     AudioBitrateComboBox.Enabled = true;
@@ -1637,7 +1642,7 @@ namespace mp4box
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case 7: //MP3
+                case AudioEncoder.MP3: //MP3
                     if (File.Exists(AudioInputTextBox.Text))
                         AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_MP3.mp3");
                     AudioBitrateComboBox.Enabled = true;
@@ -1714,25 +1719,14 @@ namespace mp4box
                 return;
             }
 
-            string finish, outputExt, codec;
             string aac = "";
-            switch (AudioEncoderComboBox.SelectedIndex)
+            string finish;
+            string audioOutputExt = GenerateAudioOutputExt();
+
+            foreach (var item in AudioBatchItemListBox.Items)
             {
-                case 0: outputExt = "mp4"; codec = "AAC"; break;
-                case 1: outputExt = "m4a"; codec = "AAC"; break;
-                case 2: outputExt = "wav"; codec = "WAV"; break;
-                case 3: outputExt = "m4a"; codec = "ALAC"; break;
-                case 4: outputExt = "flac"; codec = "FLAC"; break;
-                case 5: outputExt = "m4a"; codec = "AAC"; break;
-                case 6: outputExt = "ac3"; codec = "AC3"; break;
-                case 7: outputExt = "mp3"; codec = "MP3"; break;
-                default: outputExt = "aac"; codec = "AAC"; break;
-            }
-            for (int i = 0; i < this.AudioBatchItemListBox.Items.Count; i++)
-            {
-                string outname = "_" + codec + "." + outputExt;
-                finish = Path.ChangeExtension(AudioBatchItemListBox.Items[i].ToString(), outname);
-                aac += audiobat(AudioBatchItemListBox.Items[i].ToString(), finish);
+                finish = Path.ChangeExtension(item.ToString(), audioOutputExt);
+                aac += audiobat(item.ToString(), finish);
                 aac += "\r\n";
             }
             aac += "\r\ncmd";
@@ -1740,8 +1734,24 @@ namespace mp4box
             File.WriteAllText(batpath, aac, Encoding.Default);
             logger.Info(aac);
             Process.Start(batpath);
+        }
 
-
+        private string GenerateAudioOutputExt(string formatString = "_{0}.{1}")
+        {
+            string outputExt, codec;
+            switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
+            {
+                case AudioEncoder.NeroAAC: outputExt = "mp4"; codec = "AAC"; break;
+                case AudioEncoder.QAAC: outputExt = "m4a"; codec = "AAC"; break;
+                case AudioEncoder.WAV: outputExt = "wav"; codec = "WAV"; break;
+                case AudioEncoder.ALAC: outputExt = "m4a"; codec = "ALAC"; break;
+                case AudioEncoder.FLAC: outputExt = "flac"; codec = "FLAC"; break;
+                case AudioEncoder.FDKAAC: outputExt = "m4a"; codec = "AAC"; break;
+                case AudioEncoder.AC3: outputExt = "ac3"; codec = "AC3"; break;
+                case AudioEncoder.MP3: outputExt = "mp3"; codec = "MP3"; break;
+                default: outputExt = "aac"; codec = "AAC"; break;
+            }
+            return string.Format(formatString, codec, outputExt);
         }
 
         private void AudioInputButton_Click(object sender, EventArgs e)
@@ -1791,18 +1801,20 @@ namespace mp4box
             if (File.Exists(AudioInputTextBox.Text))
             {
                 audioInput = AudioInputTextBox.Text;
-                switch (AudioEncoderComboBox.SelectedIndex)
-                {
-                    case 0: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.mp4"); break;
-                    case 1: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a"); break;
-                    case 2: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_WAV.wav"); break;
-                    case 3: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_ALAC.m4a"); break;
-                    case 4: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_FLAC.flac"); break;
-                    case 5: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a"); break;
-                    case 6: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AC3.ac3"); break;
-                    case 7: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_MP3.mp3"); break;
-                    default: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.aac"); break;
-                }
+                AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, GenerateAudioOutputExt());
+
+                //switch (AudioEncoderComboBox.SelectedIndex)
+                //{
+                //    case 0: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.mp4"); break;
+                //    case 1: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a"); break;
+                //    case 2: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_WAV.wav"); break;
+                //    case 3: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_ALAC.m4a"); break;
+                //    case 4: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_FLAC.flac"); break;
+                //    case 5: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a"); break;
+                //    case 6: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AC3.ac3"); break;
+                //    case 7: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_MP3.mp3"); break;
+                //    default: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.aac"); break;
+                //}
             }
         }
 

@@ -19,5 +19,18 @@ namespace mp4box
             Crf,
             TwoPass
         }
+
+        public enum AudioEncoder
+        {
+            // order sensitive
+            NeroAAC = 0,
+            QAAC,
+            WAV,
+            ALAC,
+            FLAC,
+            FDKAAC,
+            AC3,
+            MP3
+        }
     }
 }
