@@ -159,6 +159,9 @@
     <Compile Include="UpdateChecker.cs" />
     <Compile Include="Utility\AssemblyUtil.cs" />
     <Compile Include="Utility\DialogUtil.cs" />
+    <Compile Include="MainForm.Lang.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Utility\NetworkUtil.cs" />
     <Compile Include="Utility\OSInfoUtil.cs" />
     <Compile Include="Preset.cs" />
