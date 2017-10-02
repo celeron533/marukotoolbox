@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System;
 
 namespace mp4box
 {
@@ -11,7 +10,6 @@ namespace mp4box
         Configuration cfa = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
         #region Members
-        // TODO: Get{} Set{} or [Attribute] could be better
         public int VideoEncoderIndex;
         public string AudioBitrateComboText;    // this is a string
         public int AudioEncoderIndex;
@@ -43,7 +41,7 @@ namespace mp4box
         public decimal VideoHeightValue;
         public decimal VideoWidthValue;
 
-        #endregion Members end
+        #endregion Members End
 
         public Settings()
         {
@@ -120,7 +118,7 @@ namespace mp4box
             cfa.Save();
         }
 
-
+        // Get Set for int
         private void GetValue(out int value, string key, int defaultValue = 0)
         {
             try
@@ -138,7 +136,7 @@ namespace mp4box
             cfa.AppSettings.Settings[key].Value = Convert.ToString(value.ToString());
         }
 
-
+        // Get Set for bool
         private void GetValue(out bool value, string key, bool defaultValue = false)
         {
             try
@@ -156,7 +154,7 @@ namespace mp4box
             cfa.AppSettings.Settings[key].Value = Convert.ToString(value.ToString());
         }
 
-
+        // Get Set for decimal
         private void GetValue(out decimal value, string key, decimal defaultValue = 0)
         {
             try
@@ -174,7 +172,7 @@ namespace mp4box
             cfa.AppSettings.Settings[key].Value = Convert.ToString(value.ToString());
         }
 
-
+        // Get Set for string
         private void GetValue(out string value, string key, string defaultValue = "")
         {
             try

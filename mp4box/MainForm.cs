@@ -161,7 +161,7 @@ namespace mp4box
         {
             if (!Directory.Exists(ToolsUtil.ToolsFolder))
             {
-                logger.Error("tools not found.");
+                logger.Error("Tools folder not found.");
                 MessageBox.Show("tools文件夹没有解压喔~ 工具箱里没有工具的话运行不起来的喔~", "（这只丸子）",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(1);
@@ -237,7 +237,7 @@ namespace mp4box
             return xvs;
         }
 
-        public string x264bat(string input, string output, int pass = 1, string sub = "")
+        public string X264bat(string input, string output, int pass = 1, string sub = "")
         {
             StringBuilder sb = new StringBuilder();
             XvSettings xvs = GetXvSettings();
@@ -316,7 +316,7 @@ namespace mp4box
             return sb.ToString();
         }
 
-        public string x265bat(string input, string output, int pass = 1, string sub = "")
+        public string X265bat(string input, string output, int pass = 1, string sub = "")
         {
             StringBuilder sb = new StringBuilder();
             XvSettings xvs = GetXvSettings();
@@ -387,7 +387,7 @@ namespace mp4box
         }
 
         [Obsolete("Not used")]
-        public static bool stringCheck(string str, string info = "")
+        public static bool StringCheck(string str, string info = "")
         {
             if (string.IsNullOrEmpty(str))
             {
@@ -408,7 +408,7 @@ namespace mp4box
         }
 
 
-        private string getAudioExt()
+        private string GetAudioExt()
         {
             return GenerateAudioOutputExt(".{1}");
             //    string ext = ".aac";
@@ -769,7 +769,7 @@ namespace mp4box
             string bat = "";
             string inputName = Path.GetFileNameWithoutExtension(input);
             string tempVideo = Path.Combine(Global.Running.tempFolder, inputName + "_vtemp.mp4");
-            string tempAudio = Path.Combine(Global.Running.tempFolder, inputName + "_atemp" + getAudioExt());
+            string tempAudio = Path.Combine(Global.Running.tempFolder, inputName + "_atemp" + GetAudioExt());
             // 避免编码失败最后混流使用上次的同名临时文件造成编码成功的假象
             if (File.Exists(tempVideo)) File.Delete(tempVideo);
             if (File.Exists(tempAudio)) File.Delete(tempAudio);
@@ -810,9 +810,9 @@ namespace mp4box
             if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
             {
                 if (x264mode == X264Mode.TwoPass)
-                    x264 = x264bat(input, tempVideo, 1, sub) + "\r\n" +
-                           x264bat(input, tempVideo, 2, sub);
-                else x264 = x264bat(input, tempVideo, 0, sub);
+                    x264 = X264bat(input, tempVideo, 1, sub) + "\r\n" +
+                           X264bat(input, tempVideo, 2, sub);
+                else x264 = X264bat(input, tempVideo, 0, sub);
                 if (audioMode == 1 || !hasAudio)
                     x264 = x264.Replace(tempVideo, output);
             }
@@ -820,9 +820,9 @@ namespace mp4box
             {
                 tempVideo = Path.Combine(Global.Running.tempFolder, inputName + "_vtemp.hevc");
                 if (x264mode == X264Mode.TwoPass)
-                    x264 = x265bat(input, tempVideo, 1, sub) + "\r\n" +
-                           x265bat(input, tempVideo, 2, sub);
-                else x264 = x265bat(input, tempVideo, 0, sub);
+                    x264 = X265bat(input, tempVideo, 1, sub) + "\r\n" +
+                           X265bat(input, tempVideo, 2, sub);
+                else x264 = X265bat(input, tempVideo, 0, sub);
                 if (audioMode == 1 || !hasAudio)
                     x264 += "\r\n" + ToolsUtil.MP4BOX.quotedPath + "  -add  \"" + tempVideo + "#trackID=1:name=\" -new " + output.Quote() + " \r\n";
             }
@@ -925,7 +925,7 @@ namespace mp4box
                     return;
             }
 
-            FileStringUtil.ensureDirectoryExists(Global.Running.tempFolder);
+            FileStringUtil.EnsureDirectoryExists(Global.Running.tempFolder);
             string bat = string.Empty;
             for (int i = 0; i < this.VideoBatchItemListbox.Items.Count; i++)
             {
@@ -1054,8 +1054,8 @@ namespace mp4box
             bool hasAudio = false;
             string inputName = Path.GetFileNameWithoutExtension(videoInput);
             string tempVideo = Path.Combine(Global.Running.tempFolder, inputName + "_vtemp.mp4");
-            string tempAudio = Path.Combine(Global.Running.tempFolder, inputName + "_atemp" + getAudioExt());
-            FileStringUtil.ensureDirectoryExists(Global.Running.tempFolder);
+            string tempAudio = Path.Combine(Global.Running.tempFolder, inputName + "_atemp" + GetAudioExt());
+            FileStringUtil.EnsureDirectoryExists(Global.Running.tempFolder);
             // 避免编码失败最后混流使用上次的同名临时文件造成编码成功的假象
             if (File.Exists(tempVideo)) File.Delete(tempVideo);
             if (File.Exists(tempAudio)) File.Delete(tempAudio);
@@ -1109,9 +1109,9 @@ namespace mp4box
             if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
             {
                 if (x264mode == X264Mode.TwoPass)
-                    x264 = x264bat(videoInput, tempVideo, 1, videoSubtitle) + "\r\n" +
-                           x264bat(videoInput, tempVideo, 2, videoSubtitle);
-                else x264 = x264bat(videoInput, tempVideo, 0, videoSubtitle);
+                    x264 = X264bat(videoInput, tempVideo, 1, videoSubtitle) + "\r\n" +
+                           X264bat(videoInput, tempVideo, 2, videoSubtitle);
+                else x264 = X264bat(videoInput, tempVideo, 0, videoSubtitle);
                 if (audioMode == 1)
                     x264 = x264.Replace(tempVideo, videoOutput);
             }
@@ -1124,9 +1124,9 @@ namespace mp4box
                     return;
                 }
                 if (x264mode == X264Mode.TwoPass)
-                    x264 = x265bat(videoInput, tempVideo, 1, videoSubtitle) + "\r\n" +
-                           x265bat(videoInput, tempVideo, 2, videoSubtitle);
-                else x264 = x265bat(videoInput, tempVideo, 0, videoSubtitle);
+                    x264 = X265bat(videoInput, tempVideo, 1, videoSubtitle) + "\r\n" +
+                           X265bat(videoInput, tempVideo, 2, videoSubtitle);
+                else x264 = X265bat(videoInput, tempVideo, 0, videoSubtitle);
                 if (audioMode == 1)
                 {
                     x264 += "\r\n" + ToolsUtil.MP4BOX.quotedPath + " -add  \"" + tempVideo + "#trackID=1:name=\" -new " + Path.ChangeExtension(videoOutput, ".mp4").Quote() + " \r\n";
@@ -1710,7 +1710,7 @@ namespace mp4box
             DialogResult result = savefile.ShowDialog();
             if (result == DialogResult.OK)
             {
-                audioOutput = savefile.FileName + getAudioExt();
+                audioOutput = savefile.FileName + GetAudioExt();
                 AudioOutputTextBox.Text = audioOutput;
             }
         }
@@ -2763,8 +2763,8 @@ namespace mp4box
             string avsVideoInput = AvsVideoInputTextBox.Text;
             string inputName = Path.GetFileNameWithoutExtension(avsVideoInput);
             string tempVideo = Path.Combine(Global.Running.tempFolder, inputName + "_vtemp.mp4");
-            string tempAudio = Path.Combine(Global.Running.tempFolder, inputName + "_atemp" + getAudioExt());
-            FileStringUtil.ensureDirectoryExists(Global.Running.tempFolder);
+            string tempAudio = Path.Combine(Global.Running.tempFolder, inputName + "_atemp" + GetAudioExt());
+            FileStringUtil.EnsureDirectoryExists(Global.Running.tempFolder);
             // 避免编码失败最后混流使用上次的同名临时文件造成编码成功的假象
             if (File.Exists(tempVideo)) File.Delete(tempVideo);
             if (File.Exists(tempAudio)) File.Delete(tempAudio);
@@ -2795,9 +2795,9 @@ namespace mp4box
             if (VideoEncoderComboBox.SelectedItem.ToString().ToLower().Contains("x264"))
             {
                 if (x264mode == X264Mode.TwoPass)
-                    x264 = x264bat(filepath, tempVideo, 1) + "\r\n" +
-                           x264bat(filepath, tempVideo, 2);
-                else x264 = x264bat(filepath, tempVideo);
+                    x264 = X264bat(filepath, tempVideo, 1) + "\r\n" +
+                           X264bat(filepath, tempVideo, 2);
+                else x264 = X264bat(filepath, tempVideo);
                 if (!AvsIncludeAudioCheckBox.Checked || !hasAudio)
                     x264 = x264.Replace(tempVideo, avsOutput);
             }
@@ -2805,9 +2805,9 @@ namespace mp4box
             {
                 tempVideo = Path.Combine(Global.Running.tempFolder, inputName + "_vtemp.hevc");
                 if (x264mode == X264Mode.TwoPass)
-                    x264 = x265bat(filepath, tempVideo, 1) + "\r\n" +
-                           x265bat(filepath, tempVideo, 2);
-                else x264 = x265bat(filepath, tempVideo);
+                    x264 = X265bat(filepath, tempVideo, 1) + "\r\n" +
+                           X265bat(filepath, tempVideo, 2);
+                else x264 = X265bat(filepath, tempVideo);
                 if (!AvsIncludeAudioCheckBox.Checked || !hasAudio)
                 {
                     x264 += "\r\n" + ToolsUtil.MP4BOX.quotedPath + " -add  \"" + tempVideo + "#trackID=1:name=\" -new " + avsOutput.Quote() + " \r\n";

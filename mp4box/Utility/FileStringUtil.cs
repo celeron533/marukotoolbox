@@ -135,7 +135,7 @@ namespace mp4box.Utility
         /// </summary>
         /// <param name="path">目录路径</param>
         /// <returns></returns>
-        public static DirectoryInfo ensureDirectoryExists(string path)
+        public static DirectoryInfo EnsureDirectoryExists(string path)
         {
             if (Directory.Exists(path))
                 return new DirectoryInfo(path);
