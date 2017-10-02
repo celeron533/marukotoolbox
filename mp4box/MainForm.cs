@@ -122,10 +122,10 @@ namespace mp4box
 
             CheckAVS();
 
-            DirectoryInfo avspath = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
-            if (Directory.Exists(avspath.FullName))
+            DirectoryInfo avsPluginFolder = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
+            if (Directory.Exists(avsPluginFolder.FullName))
             {
-                var avsfilters = avspath.GetFiles("*.dll").Select(fileInfo => fileInfo.Name);
+                var avsfilters = avsPluginFolder.GetFiles("*.dll").Select(fileInfo => fileInfo.Name);
                 AvsFilterComboBox.Items.AddRange(avsfilters.ToArray());
             }
 
