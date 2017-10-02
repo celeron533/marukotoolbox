@@ -683,12 +683,9 @@ namespace mp4box
                 else
                     ConfigUiLanguageComboBox.SelectedIndex = settings.ConfigUiLanguageIndex;
 
-                if (ConfigFunctionAutoCheckUpdateCheckBox.Checked && NetworkUtil.IsConnectInternet())
+                if (ConfigFunctionAutoCheckUpdateCheckBox.Checked) //&& NetworkUtil.IsConnectInternet())
                 {
-                    DateTime d;
-                    bool f;
-                    CheckUpadateDelegate checkUpdateDelegate = CheckUpdate;
-                    checkUpdateDelegate.BeginInvoke(out d, out f, new AsyncCallback(CheckUpdateCallBack), null);
+                    new UpdateCheckerUtil().CheckUpdate(false);
                 }
                 VideoEncoderComboBox_SelectedIndexChanged(null, null);
             }
@@ -3129,6 +3126,11 @@ namespace mp4box
             new SplashForm() { Owner = this }.Show();
         }
 
+        private void HelpCheckUpdateButton_Click(object sender, EventArgs e)
+        {
+            new UpdateCheckerUtil().CheckUpdate();
+        }
+
         #endregion Help Tab
 
         #region globalization
@@ -3195,179 +3197,6 @@ namespace mp4box
             Process.Start("http://www.sosg.net/read.php?tid=480646");
         }
 
-        #region CheckUpdate
-
-        public delegate bool CheckUpadateDelegate(out DateTime newdate, out bool isFullUpdate);
-
-        public void CheckUpdateCallBack(IAsyncResult ar)
-        {
-            DateTime NewDate;
-            bool isFullUpdate;
-            AsyncResult result = (AsyncResult)ar;
-            CheckUpadateDelegate func = (CheckUpadateDelegate)result.AsyncDelegate;
-
-            try
-            {
-                bool needUpdate = func.EndInvoke(out NewDate, out isFullUpdate, ar);
-                if (needUpdate)
-                {
-                    if (isFullUpdate)
-                    {
-                        DialogResult dr = MessageBoxExt.ShowQuestion(string.Format("新版已于{0}发布，是否前往官网下载？", NewDate.ToString("yyyy-M-d")), "喜大普奔");
-                        if (dr == DialogResult.Yes)
-                        {
-                            Process.Start("http://maruko.appinn.me/");
-                        }
-                    }
-                    else
-                    {
-                        DialogResult dr = MessageBoxExt.ShowQuestion(string.Format("新版已于{0}发布，是否自动升级？（文件约1.5MB）", NewDate.ToString("yyyy-M-d")), "喜大普奔");
-                        if (dr == DialogResult.Yes)
-                        {
-                            FormUpdater formUpdater = new FormUpdater(Global.Running.startPath, NewDate.ToString());
-                            formUpdater.ShowDialog(this);
-                        }
-                    }
-                }
-                else
-                {
-                    //MessageBox.Show("已经是最新版了喵！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception) { }
-        }
-
-        public bool CheckUpdate(out DateTime NewDate, out bool isFullUpdate)
-        {
-            // init
-            NewDate = DateTime.Parse("1990-03-08");
-            isFullUpdate = false;
-
-            WebRequest request = WebRequest.Create("http://maruko.appinn.me/config/version.html");
-            WebResponse wrs = request.GetResponse();
-            // read the response ...
-            Stream dataStream = wrs.GetResponseStream();
-            // Open the stream using a StreamReader for easy access.
-            StreamReader reader = new StreamReader(dataStream);
-            // Read the content.
-            string responseFromServer = reader.ReadToEnd();
-
-            Regex dateReg = new Regex(@"Date20\S+Date");
-            Regex VersionReg = new Regex(@"Version\d+Version");
-            Match dateMatch = dateReg.Match(responseFromServer);
-            Match versionMatch = VersionReg.Match(responseFromServer);
-
-            if (dateMatch.Success)
-            {
-                string date = dateMatch.Value.Replace("Date", "");
-                string version = versionMatch.Value.Replace("Version", "");
-                NewDate = DateTime.Parse(date);
-                int NewVersion = int.Parse(version);
-                int s = DateTime.Compare(NewDate, ReleaseDate);
-
-                int currentVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Minor;
-                if (NewVersion > currentVersion)
-                {
-                    isFullUpdate = true;
-                }
-                else
-                {
-                    isFullUpdate = false;
-                }
-                //DateTime CompileDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
-                if (s == 1) //NewDate is later than ReleaseDate
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            return false;
-        }
-
-        private void HelpCheckUpdateButton_Click(object sender, EventArgs e)
-        {
-            if (NetworkUtil.IsConnectInternet())
-            {
-                WebRequest request = WebRequest.Create("http://maruko.appinn.me/config/version.html");
-                request.Credentials = CredentialCache.DefaultCredentials;
-                // Get the response.
-                request.BeginGetResponse(new AsyncCallback(OnResponse), request);
-            }
-            else
-            {
-                MessageBoxExt.ShowErrorMessage("这台电脑似乎没有联网呢~");
-            }
-        }
-
-        protected void OnResponse(IAsyncResult ar)
-        {
-            WebRequest wrq = (WebRequest)ar.AsyncState;
-            WebResponse wrs = wrq.EndGetResponse(ar);
-            // read the response ...
-            Stream dataStream = wrs.GetResponseStream();
-            // Open the stream using a StreamReader for easy access.
-            StreamReader reader = new StreamReader(dataStream);
-            // Read the content.
-            string responseFromServer = reader.ReadToEnd();
-            Regex dateReg = new Regex(@"Date20\S+Date");
-            Regex VersionReg = new Regex(@"Version\d+Version");
-            Match dateMatch = dateReg.Match(responseFromServer);
-            Match versionMatch = VersionReg.Match(responseFromServer);
-            DateTime NewDate = DateTime.Parse("1990-03-08");
-            bool isFullUpdate = false;
-            if (dateMatch.Success)
-            {
-                string date = dateMatch.Value.Replace("Date", "");
-                string version = versionMatch.Value.Replace("Version", "");
-                NewDate = DateTime.Parse(date);
-                int NewVersion = int.Parse(version);
-                int s = DateTime.Compare(NewDate, ReleaseDate);
-
-                int currentVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Minor;
-                if (NewVersion > currentVersion)
-                {
-                    isFullUpdate = true;
-                }
-                else
-                {
-                    isFullUpdate = false;
-                }
-                //DateTime CompileDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
-                if (s == 1) //NewDate is later than ReleaseDate
-                {
-                    if (isFullUpdate)
-                    {
-                        DialogResult dr = MessageBoxExt.ShowQuestion(string.Format("新版已于{0}发布，是否前往官网下载？", NewDate.ToString("yyyy-M-d")), "喜大普奔");
-                        if (dr == DialogResult.Yes)
-                        {
-                            Process.Start("http://maruko.appinn.me/");
-                        }
-                    }
-                    else
-                    {
-                        DialogResult dr = MessageBoxExt.ShowQuestion(string.Format("新版已于{0}发布，是否自动升级？（文件约1.5MB）", NewDate.ToString("yyyy-M-d")), "喜大普奔");
-                        if (dr == DialogResult.Yes)
-                        {
-                            FormUpdater formUpdater = new FormUpdater(Global.Running.startPath, date);
-                            formUpdater.ShowDialog(this);
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBoxExt.ShowInfoMessage("已经是最新版了喵！");
-                }
-            }
-            else
-            {
-                MessageBoxExt.ShowInfoMessage("啊咧~似乎未能获取版本信息，请点击软件主页按钮查看最新版本。");
-            }
-        }
-
-        #endregion CheckUpdate
 
         #region TabControl
 
