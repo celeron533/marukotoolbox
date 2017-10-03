@@ -936,7 +936,7 @@ namespace mp4box
             }
 
             logger.Info(bat);
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
+            //Thread.CurrentThread.CurrentUICulture = GetCultureFromComboBox();
             new WorkingForm(bat, VideoBatchItemListbox.Items.Count) { Owner = this }.Show();
             //batpath = workPath + "\\auto.bat";
             //File.WriteAllText(batpath, bat, Encoding.Default);
@@ -1153,7 +1153,7 @@ namespace mp4box
             #endregion Mux
 
             logger.Info(x264);
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
+            //Thread.CurrentThread.CurrentUICulture = GetCultureFromComboBox();
             new WorkingForm(x264) { Owner = this }.Show();
             //x264 += "\r\ncmd";
             //batpath = workPath + "\\x264.bat";
@@ -2819,7 +2819,7 @@ namespace mp4box
             string auto = aextract + x264 + "\r\n" + mux + " \r\n";
             auto += "\r\necho ===== one file is completed! =====\r\n";
             logger.Info(auto);
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(GetCultureName());
+            //Thread.CurrentThread.CurrentUICulture = GetCultureFromComboBox();
             new WorkingForm(auto) { Owner = this }.Show();
             //auto += "\r\ncmd";
             //batpath = workPath + "\\x264avs.bat";
@@ -3137,7 +3137,7 @@ namespace mp4box
 
         private void ConfigUiLanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SwitchUILanguage();
+            SwitchUILanguage(Thread.CurrentThread);
         }
 
         #endregion globalization
