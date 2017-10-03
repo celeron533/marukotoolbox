@@ -27,6 +27,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Threading;
 using mp4box.Extension;
+using NLog;
 
 namespace mp4box.Utility
 {
@@ -35,6 +36,8 @@ namespace mp4box.Utility
     /// </summary>
     public static class FileStringUtil
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// 自动加引号
         /// </summary>
@@ -207,6 +210,8 @@ namespace mp4box.Utility
             }
         }
 
+        #region AVS
+
         /// <summary>
         /// Detects the AviSynth version/date
         /// </summary>
@@ -256,6 +261,32 @@ namespace mp4box.Utility
             return CheckAviSynth(true);
         }
 
+        public static void CheckAVS()
+        {
+            // avisynth未安装，使用小丸内置的avs
+            if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
+            {
+                string sourceAviSynthdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\AviSynth.dll");
+                string sourceDevILdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\DevIL.dll");
+                if (File.Exists(sourceAviSynthdll) && File.Exists(sourceDevILdll))
+                {
+                    try
+                    {
+                        File.Copy(sourceAviSynthdll, Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"), true);
+                        File.Copy(sourceDevILdll, Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"), true);
+                        logger.Info("系统未安装avisynth,使用小丸内置avs.");
+                    }
+                    catch (IOException) { }
+                }
+            }
+            else
+            {
+                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"));
+                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"));
+            }
+        }
+
+        #endregion AVS End
 
         public static string GetLibassFormatPath(string path)
         {

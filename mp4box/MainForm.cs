@@ -120,7 +120,7 @@ namespace mp4box
             }
             catch { }
 
-            CheckAVS();
+            FileStringUtil.CheckAVS();
 
             DirectoryInfo avsPluginFolder = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
             if (Directory.Exists(avsPluginFolder.FullName))
@@ -130,31 +130,6 @@ namespace mp4box
             }
 
             LoadSettings();
-        }
-
-        private static void CheckAVS()
-        {
-            // avisynth未安装，使用小丸内置的avs
-            if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
-            {
-                string sourceAviSynthdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\AviSynth.dll");
-                string sourceDevILdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\DevIL.dll");
-                if (File.Exists(sourceAviSynthdll) && File.Exists(sourceDevILdll))
-                {
-                    try
-                    {
-                        File.Copy(sourceAviSynthdll, Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"), true);
-                        File.Copy(sourceDevILdll, Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"), true);
-                        logger.Info("系统未安装avisynth,使用小丸内置avs.");
-                    }
-                    catch (IOException) { }
-                }
-            }
-            else
-            {
-                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"));
-                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"));
-            }
         }
 
         private static void ToolsVerification()
@@ -3051,7 +3026,7 @@ namespace mp4box
         }
         private void ConfigX264PriorityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ChangeProcessPriority();
+            ChangeProcessesPriority();
         }
         private void ConfigFunctionViewLogButton_Click(object sender, EventArgs e)
         {
@@ -3169,26 +3144,27 @@ namespace mp4box
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ChangeProcessPriority();
+            ChangeProcessesPriority();
         }
 
-        private void ChangeProcessPriority()
+        private void ChangeProcessesPriority()
         {
-            foreach (Process process in Process.GetProcesses())
+            string encoderProcessName = Path.GetFileNameWithoutExtension(VideoEncoderComboBox.Text);
+            ProcessPriorityClass newPriority;
+
+            switch (ConfigX264PriorityComboBox.SelectedIndex)
             {
-                if (process.ProcessName.Equals(Path.GetFileNameWithoutExtension(VideoEncoderComboBox.Text)))
-                {
-                    switch (ConfigX264PriorityComboBox.SelectedIndex)
-                    {
-                        case 0: process.PriorityClass = ProcessPriorityClass.Idle; break;
-                        case 1: process.PriorityClass = ProcessPriorityClass.BelowNormal; break;
-                        case 2: process.PriorityClass = ProcessPriorityClass.Normal; break;
-                        case 3: process.PriorityClass = ProcessPriorityClass.AboveNormal; break;
-                        case 4: process.PriorityClass = ProcessPriorityClass.High; break;
-                        case 5: process.PriorityClass = ProcessPriorityClass.RealTime; break;
-                    }
-                }
+                case 0: newPriority = ProcessPriorityClass.Idle; break;
+                case 1: newPriority = ProcessPriorityClass.BelowNormal; break;
+                default:
+                case 2: newPriority = ProcessPriorityClass.Normal; break;
+                case 3: newPriority = ProcessPriorityClass.AboveNormal; break;
+                case 4: newPriority = ProcessPriorityClass.High; break;
+                case 5: newPriority = ProcessPriorityClass.RealTime; break;
             }
+
+            Process.GetProcesses().Where(p => p.ProcessName == encoderProcessName)
+                                  .ToList().ForEach(p => p.PriorityClass = newPriority);
         }
 
         [Obsolete("Not used")]
