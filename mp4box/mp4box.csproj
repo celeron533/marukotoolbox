@@ -133,11 +133,11 @@
     <Compile Include="FeedbackForm.Designer.cs">
       <DependentUpon>FeedbackForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUpdater.cs">
+    <Compile Include="UpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUpdater.Designer.cs">
-      <DependentUpon>FormUpdater.cs</DependentUpon>
+    <Compile Include="UpdateForm.Designer.cs">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="InputBox.cs">
@@ -213,8 +213,8 @@
     <EmbeddedResource Include="FeedbackForm.resx">
       <DependentUpon>FeedbackForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUpdater.resx">
-      <DependentUpon>FormUpdater.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateForm.resx">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>

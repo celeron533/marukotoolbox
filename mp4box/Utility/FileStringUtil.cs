@@ -264,7 +264,7 @@ namespace mp4box.Utility
         public static void CheckAVS()
         {
             // avisynth未安装，使用小丸内置的avs
-            if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
+            if (string.IsNullOrEmpty(CheckAviSynth()))
             {
                 string sourceAviSynthdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\AviSynth.dll");
                 string sourceDevILdll = Path.Combine(ToolsUtil.ToolsFolder, @"avs\DevIL.dll");

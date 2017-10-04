@@ -34,7 +34,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -402,15 +401,14 @@ namespace mp4box
             //    return ext;
         }
 
-        private string ExtractAV(out string ext, string namevideo, MediaType av, int streamIndex = 0)
+        private string ExtractAV(out string ext, string namevideo, MediaType mediaType, int streamIndex = 0)
         {
             ext = Path.GetExtension(namevideo);
             //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 2 \"" + namevideo + "\"";
-            string aextract = "";
-            aextract += FileStringUtil.FormatPath(ToolsUtil.FFMPEG.fullPath);
+            string aextract = FileStringUtil.FormatPath(ToolsUtil.FFMPEG.fullPath);
             aextract += " -i " + FileStringUtil.FormatPath(namevideo);
 
-            switch (av)
+            switch (mediaType)
             {
                 case MediaType.Audio:
                     aextract += " -vn -sn -c:a copy -y -map 0:a:" + streamIndex + " ";
@@ -473,7 +471,7 @@ namespace mp4box
                 return;
             }
 
-            string suf = av == MediaType.Audio ? "_audio_" : "_video_";
+            string suf = (av == MediaType.Audio ? "_audio_" : "_video_");
 
             suf += "index" + streamIndex;
             string outfile = Path.ChangeExtension(namevideo, suf + ext);
@@ -535,7 +533,7 @@ namespace mp4box
         /// <summary>
         /// 还原默认参数
         /// </summary>
-        private void ResetParameters()
+        private void ResetUIFieldParameters()
         {
             AudioAudioModeBitrateRadioButton.Checked = true;
             AudioBitrateComboBox.Text = "128";
@@ -587,16 +585,7 @@ namespace mp4box
             try
             {
                 //load settings
-
-                if (settings.VideoEncoderIndex > VideoEncoderComboBox.Items.Count - 1)
-                    VideoEncoderComboBox.SelectedIndex = 0;
-                else
-                    VideoEncoderComboBox.SelectedIndex = settings.VideoEncoderIndex;
-
-                if (VideoEncoderComboBox.SelectedIndex == -1)
-                {
-                    VideoEncoderComboBox.SelectedIndex = VideoEncoderComboBox.Items.IndexOf(ToolsUtil.X264_32_8.fileName);//"x264_32-8bit"
-                }
+                settings.Load();
 
                 AudioBitrateComboBox.Text = settings.AudioBitrateComboText;
                 AudioEncoderComboBox.SelectedIndex = settings.AudioEncoderIndex;
@@ -626,6 +615,20 @@ namespace mp4box
                 VideoDemuxerComboBox.SelectedIndex = settings.VideoDemuxerIndex;
                 VideoHeightNumericUpDown.Value = settings.VideoHeightValue;
                 VideoWidthNumericUpDown.Value = settings.VideoWidthValue;
+
+                if (settings.VideoEncoderIndex > VideoEncoderComboBox.Items.Count - 1)
+                {
+                    VideoEncoderComboBox.SelectedIndex = 0;
+                }
+                else
+                {
+                    VideoEncoderComboBox.SelectedIndex = settings.VideoEncoderIndex;
+                }
+                if (VideoEncoderComboBox.SelectedIndex == -1)  //First Startup
+                {
+                    VideoEncoderComboBox.SelectedIndex = VideoEncoderComboBox.Items.IndexOf(ToolsUtil.X264_32_8.fileName);//"x264_32-8bit"
+                }
+                VideoEncoderComboBox_SelectedIndexChanged(null, null);
 
                 if (settings.ConfigUiLanguageIndex == -1)  //First Startup
                 {
@@ -662,7 +665,6 @@ namespace mp4box
                 {
                     new UpdateCheckerUtil().CheckUpdate(false);
                 }
-                VideoEncoderComboBox_SelectedIndexChanged(null, null);
             }
             catch (Exception)
             {
@@ -899,15 +901,15 @@ namespace mp4box
 
             FileStringUtil.EnsureDirectoryExists(Global.Running.tempFolder);
             string bat = string.Empty;
-            for (int i = 0; i < this.VideoBatchItemListbox.Items.Count; i++)
+            foreach (var item in VideoBatchItemListbox.Items)
             {
-                string input = VideoBatchItemListbox.Items[i].ToString();
+                string input = item.ToString();
                 string output;
                 if (Directory.Exists(VideoBatchOutputFolderTextBox.Text))
                     output = VideoBatchOutputFolderTextBox.Text + "\\" + Path.GetFileNameWithoutExtension(input) + "_batch." + VideoBatchFormatComboBox.Text;
                 else
                     output = Path.ChangeExtension(input, "_batch." + VideoBatchFormatComboBox.Text);
-                bat += VideoBatch(VideoBatchItemListbox.Items[i].ToString(), output);
+                bat += VideoBatch(input, output);
             }
 
             logger.Info(bat);
@@ -3050,7 +3052,7 @@ namespace mp4box
             DialogResult result = MessageBoxExt.ShowQuestion("是否将所有界面参数恢复到默认设置？", "提示");
             if (result == DialogResult.Yes)
             {
-                ResetParameters();
+                ResetUIFieldParameters();
                 MessageBoxExt.ShowInfoMessage("已恢复默认设置！");
             }
         }

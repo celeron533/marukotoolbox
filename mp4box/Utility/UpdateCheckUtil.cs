@@ -87,7 +87,7 @@ namespace mp4box.Utility
                         if (DialogResult.Yes ==
                             MessageBoxExt.ShowQuestion($"新版已于{newDate.ToString("yyyy-MM-dd")}发布，是否自动升级？（文件约1.5MB）", "喜大普奔"))
                         {
-                            FormUpdater formUpdater = new FormUpdater(Global.Running.startPath, date);
+                            UpdateForm formUpdater = new UpdateForm(Global.Running.startPath, date);
                             formUpdater.ShowDialog();
                         }
                     }

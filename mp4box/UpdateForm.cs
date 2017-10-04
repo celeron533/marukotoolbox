@@ -23,13 +23,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace mp4box
 {
-    public partial class FormUpdater : Form
+    public partial class UpdateForm : Form
     {
         /// <summary>
         /// Path of new (and temporary) assembly.
@@ -55,22 +56,26 @@ namespace mp4box
         /// Construnctor, initiate an update at targeted directory.
         /// </summary>
         /// <param name="startpath">The directory containing xiaowan.exe.</param>
-        /// <param name="date">The new release date.</param>
-        public FormUpdater(string startpath, string date)
+        /// <param name="newReleaseDate">The new release date.</param>
+        public UpdateForm(string startpath, string newReleaseDate)
         {
             InitializeComponent();
-            newPath = System.IO.Path.Combine(startpath, "xiaowan.exe.new");
-            exePath = System.IO.Path.Combine(startpath, "xiaowan.exe");
-            backupPath = System.IO.Path.Combine(startpath, "xiaowan.exe.bak");
-            labelDate.Text = date;
+            newPath = Path.Combine(startpath, "xiaowan.exe.new");
+            exePath = Path.Combine(startpath, "xiaowan.exe");
+            backupPath = Path.Combine(startpath, "xiaowan.exe.bak");
+            labelDate.Text = newReleaseDate;
         }
 
-        #region UI Methods
         private void FormUpdater_Load(object sender, EventArgs e)
         {
+            StartDownload();
+        }
+
+        private void StartDownload()
+        {
             client = new System.Net.WebClient();
-            client.DownloadFileCompleted += client_DownloadFileCompleted;
             client.DownloadProgressChanged += client_DownloadProgressChanged;
+            client.DownloadFileCompleted += client_DownloadFileCompleted;
             client.DownloadFileAsync(new Uri("http://maruko.appinn.me/config/xiaowan.exe"), newPath);
         }
 
@@ -78,7 +83,6 @@ namespace mp4box
         {
             client.CancelAsync();
         }
-        #endregion
 
         /// <summary>
         /// Update ProgressBar as requested.
@@ -95,16 +99,16 @@ namespace mp4box
         {
             if (e.Cancelled)
             {
-                if (System.IO.File.Exists(newPath))
-                    System.IO.File.Delete(newPath);
+                if (File.Exists(newPath))
+                    File.Delete(newPath);
                 this.Close();
             }
             else
             {
-                if (System.IO.File.Exists(backupPath))
-                    System.IO.File.Delete(backupPath);
-                System.IO.File.Move(exePath, backupPath);
-                System.IO.File.Move(newPath, exePath);
+                if (File.Exists(backupPath))
+                    File.Delete(backupPath);
+                File.Move(exePath, backupPath);
+                File.Move(newPath, exePath);
                 Application.Restart();
             }
         }
