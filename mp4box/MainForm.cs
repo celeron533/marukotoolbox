@@ -1457,13 +1457,15 @@ namespace mp4box
 
         private void AudioEncoderComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (File.Exists(AudioInputTextBox.Text))
+                AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text,
+                    GenerateAudioOutputExt((AudioEncoder)AudioEncoderComboBox.SelectedIndex));
+
             switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
             {
                 case AudioEncoder.NeroAAC: //NeroAAC
-                    if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.mp4");
                     AudioBitrateComboBox.Enabled = true;
-                    AudioAudioModeBitrateRadioButton.Enabled = true;
+                    AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = true;
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
@@ -1472,16 +1474,14 @@ namespace mp4box
                     }
                     break;
 
-                case AudioEncoder.QAAC: //  QAAC
+                case AudioEncoder.QAAC:
                     //if (!isAppleAppSupportInstalled())
                     //{
                     //    if (MessageBoxExtension.ShowQuestion("Apple Application Support未安装.\r\n音频编码器QAAC可能无法使用.\r\n\r\n是否前往QuickTime下载页面?", "Apple Application Support未安装") == DialogResult.Yes)
                     //        Process.Start("http://www.apple.com/cn/quicktime/download");
                     //}
-                    if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a");
-                    AudioBitrateComboBox.Enabled = true;
-                    AudioAudioModeBitrateRadioButton.Enabled = true;
+                    AudioBitrateComboBox.Enabled =
+                    AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = true;
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
@@ -1490,41 +1490,33 @@ namespace mp4box
                     }
                     break;
 
-                case AudioEncoder.WAV: //WAV
-                    if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_WAV.wav");
-                    AudioBitrateComboBox.Enabled = false;
-                    AudioAudioModeBitrateRadioButton.Enabled = false;
+                case AudioEncoder.WAV:
+                    AudioBitrateComboBox.Enabled =
+                    AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = false;
                     AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case AudioEncoder.ALAC: //ALAC
-                    if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_ALAC.m4a");
-                    AudioBitrateComboBox.Enabled = false;
-                    AudioAudioModeBitrateRadioButton.Enabled = false;
+                case AudioEncoder.ALAC:
+                    AudioBitrateComboBox.Enabled =
+                    AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = false;
                     AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case AudioEncoder.FLAC: //FLAC
-                    if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_FLAC.flac");
-                    AudioBitrateComboBox.Enabled = false;
-                    AudioAudioModeBitrateRadioButton.Enabled = false;
+                case AudioEncoder.FLAC:
+                    AudioBitrateComboBox.Enabled =
+                    AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = false;
                     AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case AudioEncoder.FDKAAC: //FDKAAC
-                    if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a");
-                    AudioBitrateComboBox.Enabled = true;
-                    AudioAudioModeBitrateRadioButton.Enabled = true;
+                case AudioEncoder.FDKAAC:
+                    AudioBitrateComboBox.Enabled =
+                    AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = true;
                     if (AudioAudioModeCustomRadioButton.Checked)
                     {
@@ -1533,21 +1525,17 @@ namespace mp4box
                     }
                     break;
 
-                case AudioEncoder.AC3: //AC3
-                    if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AC3.ac3");
-                    AudioBitrateComboBox.Enabled = true;
-                    AudioAudioModeBitrateRadioButton.Enabled = true;
-                    AudioAudioModeCustomRadioButton.Enabled = false;
+                case AudioEncoder.AC3:
+                    AudioBitrateComboBox.Enabled = true; // Why?
+                    AudioAudioModeBitrateRadioButton.Enabled = true; // Why?
+                    AudioAudioModeCustomRadioButton.Enabled = false; // Why just enable 1 radio button?
                     AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case AudioEncoder.MP3: //MP3
-                    if (File.Exists(AudioInputTextBox.Text))
-                        AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_MP3.mp3");
-                    AudioBitrateComboBox.Enabled = true;
-                    AudioAudioModeBitrateRadioButton.Enabled = true;
+                case AudioEncoder.MP3:
+                    AudioBitrateComboBox.Enabled =
+                    AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = true;
                     AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
