@@ -1613,13 +1613,13 @@ namespace mp4box
             }
 
             string aac = "";
-            string finish;
             string audioOutputExt = GenerateAudioOutputExt((AudioEncoder)AudioEncoderComboBox.SelectedIndex);
 
             foreach (var item in AudioBatchItemListBox.Items)
             {
-                finish = Path.ChangeExtension(item.ToString(), audioOutputExt);
-                aac += AudioBat(item.ToString(), finish);
+                string input = item.ToString();
+                string output = Path.ChangeExtension(input, audioOutputExt);
+                aac += AudioBat(input, output);
                 aac += "\r\n";
             }
             aac += "\r\ncmd";
