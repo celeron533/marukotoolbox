@@ -1188,79 +1188,86 @@ namespace mp4box
 
         private void VideoMode2PassRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            x264mode = X264Mode.TwoPass;
-
-            // Bitrate
-            VideoBitrateLabel.Visible =
-            VideoBitrateNumericUpDown.Visible =
-            VideoBitrateKbpsLabel.Visible = true;
-            // Crf
-            VideoCrfLabel.Visible =
-            VideoCrfNumericUpDown.Visible = false;
-            // Custom parameter
-            VideoCustomParameterTextBox.Visible = false;
-            // Resolution
-            VideoHeightLabel.Visible =
-            VideoHeightNumericUpDown.Visible =
-            VideoWidthLabel.Visible =
-            VideoWidthNumericUpDown.Visible =
-            VideoMaintainResolutionCheckBox.Visible = true;
-            // Preset
-            VideoAddPresetButton.Visible =
-            VideoDeletePresetButton.Visible =
-            VideoPresetComboBox.Visible =
-            VideoPresetLabel.Visible = false;
+            if (((RadioButton)sender).Checked)
+            {
+                x264mode = X264Mode.TwoPass;
+                // Bitrate
+                VideoBitrateLabel.Visible =
+                VideoBitrateNumericUpDown.Visible =
+                VideoBitrateKbpsLabel.Visible = true;
+                // Crf
+                VideoCrfLabel.Visible =
+                VideoCrfNumericUpDown.Visible = false;
+                // Custom parameter
+                VideoCustomParameterTextBox.Visible = false;
+                // Resolution
+                VideoHeightLabel.Visible =
+                VideoHeightNumericUpDown.Visible =
+                VideoWidthLabel.Visible =
+                VideoWidthNumericUpDown.Visible =
+                VideoMaintainResolutionCheckBox.Visible = true;
+                // Preset
+                VideoAddPresetButton.Visible =
+                VideoDeletePresetButton.Visible =
+                VideoPresetComboBox.Visible =
+                VideoPresetLabel.Visible = false;
+            }
         }
 
         private void VideoModeCustomRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            x264mode = X264Mode.Custom;
-            // Bitrate
-            VideoBitrateLabel.Visible =
-            VideoBitrateNumericUpDown.Visible =
-            VideoBitrateKbpsLabel.Visible = false;
-            // Crf
-            VideoCrfLabel.Visible =
-            VideoCrfNumericUpDown.Visible = false;
-            // Custom parameter
-            VideoCustomParameterTextBox.Visible = true;
-            // Resolution
-            VideoHeightLabel.Visible =
-            VideoHeightNumericUpDown.Visible =
-            VideoWidthLabel.Visible =
-            VideoWidthNumericUpDown.Visible =
-            VideoMaintainResolutionCheckBox.Visible = false;
-            // Preset
-            VideoAddPresetButton.Visible =
-            VideoDeletePresetButton.Visible =
-            VideoPresetComboBox.Visible =
-            VideoPresetLabel.Visible = true;
-
+            if (((RadioButton)sender).Checked)
+            {
+                x264mode = X264Mode.Custom;
+                // Bitrate
+                VideoBitrateLabel.Visible =
+                VideoBitrateNumericUpDown.Visible =
+                VideoBitrateKbpsLabel.Visible = false;
+                // Crf
+                VideoCrfLabel.Visible =
+                VideoCrfNumericUpDown.Visible = false;
+                // Custom parameter
+                VideoCustomParameterTextBox.Visible = true;
+                // Resolution
+                VideoHeightLabel.Visible =
+                VideoHeightNumericUpDown.Visible =
+                VideoWidthLabel.Visible =
+                VideoWidthNumericUpDown.Visible =
+                VideoMaintainResolutionCheckBox.Visible = false;
+                // Preset
+                VideoAddPresetButton.Visible =
+                VideoDeletePresetButton.Visible =
+                VideoPresetComboBox.Visible =
+                VideoPresetLabel.Visible = true;
+            }
         }
 
         private void VideoModeCrfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            x264mode = X264Mode.Crf;
-            // Bitrate
-            VideoBitrateLabel.Visible =
-            VideoBitrateNumericUpDown.Visible =
-            VideoBitrateKbpsLabel.Visible = false;
-            // Crf
-            VideoCrfLabel.Visible =
-            VideoCrfNumericUpDown.Visible = true;
-            // Custom parameter
-            VideoCustomParameterTextBox.Visible = false;
-            // Resolution
-            VideoHeightLabel.Visible =
-            VideoHeightNumericUpDown.Visible =
-            VideoWidthLabel.Visible =
-            VideoWidthNumericUpDown.Visible =
-            VideoMaintainResolutionCheckBox.Visible = true;
-            // Preset
-            VideoAddPresetButton.Visible =
-            VideoDeletePresetButton.Visible =
-            VideoPresetComboBox.Visible =
-            VideoPresetLabel.Visible = false;
+            if (((RadioButton)sender).Checked)
+            {
+                x264mode = X264Mode.Crf;
+                // Bitrate
+                VideoBitrateLabel.Visible =
+                VideoBitrateNumericUpDown.Visible =
+                VideoBitrateKbpsLabel.Visible = false;
+                // Crf
+                VideoCrfLabel.Visible =
+                VideoCrfNumericUpDown.Visible = true;
+                // Custom parameter
+                VideoCustomParameterTextBox.Visible = false;
+                // Resolution
+                VideoHeightLabel.Visible =
+                VideoHeightNumericUpDown.Visible =
+                VideoWidthLabel.Visible =
+                VideoWidthNumericUpDown.Visible =
+                VideoMaintainResolutionCheckBox.Visible = true;
+                // Preset
+                VideoAddPresetButton.Visible =
+                VideoDeletePresetButton.Visible =
+                VideoPresetComboBox.Visible =
+                VideoPresetLabel.Visible = false;
+            }
         }
 
         #endregion VideoMode RadioButtonGroup
@@ -1519,6 +1526,42 @@ namespace mp4box
             }
         }
 
+        #region AudioAudioMode RadioButton
+
+        private void AudioAudioModeCustomRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((RadioButton)sender).Checked)
+            {
+                AudioBitrateLabel.Visible =
+                AudioKbpsLabel.Visible =
+                AudioBitrateComboBox.Visible = false;
+
+                AudioCustomParameterTextBox.Visible =
+                AudioPresetLabel.Visible =
+                AudioPresetComboBox.Visible =
+                AudioPresetDeleteButton.Visible =
+                AudioPresetAddButton.Visible = true;
+            }
+        }
+
+        private void AudioAudioModeBitrateRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((RadioButton)sender).Checked)
+            {
+                AudioBitrateLabel.Visible =
+                AudioKbpsLabel.Visible =
+                AudioBitrateComboBox.Visible = true;
+
+                AudioCustomParameterTextBox.Visible =
+                AudioPresetLabel.Visible =
+                AudioPresetComboBox.Visible =
+                AudioPresetDeleteButton.Visible =
+                AudioPresetAddButton.Visible = false;
+            }
+        }
+
+        #endregion AudioAudioMode RadioButton
+
         private void AudioBatchItemListBox_DragDrop(object sender, DragEventArgs e)
         {
             ListBox listbox = (ListBox)sender;
@@ -1674,36 +1717,6 @@ namespace mp4box
                 Process.Start(AudioInputTextBox.Text);
             }
         }
-
-        #region AudioAudioMode RadioButton
-
-        private void AudioAudioModeCustomRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            AudioBitrateLabel.Visible =
-            AudioKbpsLabel.Visible =
-            AudioBitrateComboBox.Visible = false;
-
-            AudioCustomParameterTextBox.Visible =
-            AudioPresetLabel.Visible =
-            AudioPresetComboBox.Visible =
-            AudioPresetDeleteButton.Visible =
-            AudioPresetAddButton.Visible = true;
-        }
-
-        private void AudioAudioModeBitrateRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            AudioBitrateLabel.Visible =
-            AudioKbpsLabel.Visible =
-            AudioBitrateComboBox.Visible = true;
-
-            AudioCustomParameterTextBox.Visible =
-            AudioPresetLabel.Visible =
-            AudioPresetComboBox.Visible =
-            AudioPresetDeleteButton.Visible =
-            AudioPresetAddButton.Visible = false;
-        }
-
-        #endregion AudioAudioMode RadioButton
 
         private void AudioBatchAddButton_Click(object sender, EventArgs e)
         {
