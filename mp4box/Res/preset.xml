@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<root>
+  <Video>
+    <VideoEncoder>
+      <x264>
+        <Parameter Name="default">--crf 24 --preset 8 -r 6 -b 6 -i 1 --scenecut 60 -f 1:1 --qcomp 0.5 --psy-rd 0.3:0 --aq-mode 2 --aq-strength 0.8 --vf resize:960,540,,,,lanczos</Parameter>
+        <Parameter Name="DVDRIP不切边,16:9">-p1 --crf 20 --aq-mode 2 --sar 32:27 --vf yadif:, --stat "TEMP.stat" --slow-firstpass --ref 8 --preset 8 --subme 10</Parameter>
+        <Parameter Name="DVDRIP不切边,sar40:33">-p1 --crf 20 --aq-mode 2 --sar 40:33 --vf yadif:, --stat "TEMP.stat" --slow-firstpass --ref 8 --preset 8 --subme 10</Parameter>
+        <Parameter Name="DVDRIP切边,sar40:33">-p1 --crf 20 --aq-mode 2 --sar 40:33 --vf yadif:,/crop:8,0,8,0 --stat "TEMP.stat" --slow-firstpass --ref 8 --preset 8 --subme 10</Parameter>
+        <Parameter Name="iOS">--profile high --level 3.1 --level-force  --device iphone</Parameter>
+        <Parameter Name="MAD">--crf 25 --preset placebo --subme 10 --ref 7 --bframes 7 --qcomp 0.75 --psy-rd 0:0 --keyint infinite --min-keyint 1</Parameter>
+        <Parameter Name="PSP">--profile main --level 3.0 --ref 3 --b-pyramid none --weightp 1 --vbv-maxrate 10000 --vbv-bufsize 10000   --vf resize:480,272,,,,lanczos  --device psp</Parameter>
+      </x264>
+      <x265>
+        <Parameter Name="x265default"></Parameter>
+      </x265>
+    </VideoEncoder>
+  </Video>
+  <Audio>
+    <AudioEncoder>
+      <NeroAAC>
+        <Parameter Name="NeroAAC_HE-32Kbps">-he -br 32000</Parameter>
+        <Parameter Name="NeroAAC_HE-48Kbps">-he -br 48000</Parameter>
+        <Parameter Name="NeroAAC_HE-64Kbps">-he -br 64000</Parameter>
+        <Parameter Name="NeroAAC_LC-128Kbps">-lc -br 128000</Parameter>
+        <Parameter Name="NeroAAC_LC-192Kbps">-lc -br 192000</Parameter>
+        <Parameter Name="NeroAAC_LC-256Kbps">-lc -br 256000</Parameter>
+        <Parameter Name="NeroAAC_LC-Q1">-q 1 -lc</Parameter>
+      </NeroAAC>
+      <FDKAAC>
+        <Parameter Name="FDKAAC_VBR1">-m 1</Parameter>
+        <Parameter Name="FDKAAC_VBR2">-m 2</Parameter>
+        <Parameter Name="FDKAAC_VBR3">-m 3</Parameter>
+        <Parameter Name="FDKAAC_VBR4">-m 4</Parameter>
+        <Parameter Name="FDKAAC_VBR5">-m 5</Parameter>
+        <Parameter Name="FDKAAC_HE-_CBR64Kbps">-p 5 -b 64</Parameter>
+        <Parameter Name="FDKAAC_LC-_CBR128Kbps">-b 128</Parameter>
+        <Parameter Name="FDKAAC_LC-_CBR192Kbps">-b 192</Parameter>
+        <Parameter Name="FDKAAC_LC-_CBR256Kbps">-b 256</Parameter>
+      </FDKAAC>
+      <QAAC>
+        <Parameter Name="QAAC_HE-CBR64Kbps">--he -c 64 -q 2 --no-optimize</Parameter>
+        <Parameter Name="QAAC_HE-CVBR64Kbps">--he -v 64 -q 2 --no-optimize</Parameter>
+        <Parameter Name="QAAC_LC-CBR128Kbps">-c 128 -q 2 --no-optimize</Parameter>
+        <Parameter Name="QAAC_LC-CVBR128Kbps">-v 128 -q 2 --no-optimize</Parameter>
+        <Parameter Name="QAAC_LC-CBR256Kbps">-c 256 -q 2 --no-optimize</Parameter>
+        <Parameter Name="QAAC_LC-CVBR256Kbps">-v 256 -q 2 --no-optimize</Parameter>
+        <Parameter Name="QAAC_TVBR_V90">-V 90 -q 2 --no-optimize</Parameter>
+        <Parameter Name="QAAC_TVBR_V127">-V 127 -q 2 --no-optimize</Parameter>
+      </QAAC>
+      <MP3>
+        <Parameter Name="extreme">--alt-preset extreme</Parameter>
+        <Parameter Name="insane">--preset insane</Parameter>
+        <Parameter Name="standard">--preset standard</Parameter>
+        <Parameter Name="medium">--preset medium </Parameter>
+      </MP3>
+    </AudioEncoder>
+  </Audio>
+</root>

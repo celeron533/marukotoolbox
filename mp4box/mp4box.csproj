@@ -290,6 +290,7 @@
     <None Include="Service References\ServiceReference\webservice.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Res\preset.xml" />
     <Content Include="Res\tomoka.ico" />
     <Content Include="Res\tsukiko.gif" />
     <Content Include="Res\wan.ico" />

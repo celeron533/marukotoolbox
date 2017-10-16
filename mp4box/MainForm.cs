@@ -49,7 +49,7 @@ namespace mp4box
         private string logFileName = ((NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("f")).FileName.Render(null);
         private readonly DateTime ReleaseDate = AssemblyUtil.GetAssemblyVersionTime();
 
-        private Preset preset;
+        private Preset.Preset preset;
         private Settings settings;
 
         #region Private Members Declaration
@@ -74,7 +74,7 @@ namespace mp4box
 
         public MainForm()
         {
-            preset = new Preset();
+            preset = Preset.Preset.Load();
             settings = new Settings();
             InitializeComponent();
         }
@@ -390,19 +390,19 @@ namespace mp4box
             return GenerateAudioOutputExt((AudioEncoder)AudioEncoderComboBox.SelectedIndex, ".{1}");
         }
 
-        private string ExtractAV(out string ext, string namevideo, MediaType mediaType, int streamIndex = 0)
+        private string ExtractAV(out string ext, string input, MediaType mediaType, int streamIndex = 0)
         {
-            ext = Path.GetExtension(namevideo);
+            ext = Path.GetExtension(input);
             //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 2 \"" + namevideo + "\"";
             string aextract = FileStringUtil.FormatPath(ToolsUtil.FFMPEG.fullPath);
-            aextract += " -i " + FileStringUtil.FormatPath(namevideo);
+            aextract += " -i " + FileStringUtil.FormatPath(input);
 
             switch (mediaType)
             {
                 case MediaType.Audio:
                     aextract += " -vn -sn -c:a copy -y -map 0:a:" + streamIndex + " ";
 
-                    MediaInfoWrapper MIW = new MediaInfoWrapper(namevideo);
+                    MediaInfoWrapper MIW = new MediaInfoWrapper(input);
                     string audioFormat = MIW.a_format;
                     string audioProfile = MIW.a_formatProfile;
                     if (!string.IsNullOrEmpty(audioFormat))
@@ -702,11 +702,15 @@ namespace mp4box
         private void LoadVideoPreset()
         {
             VideoPresetComboBox.Items.Clear();
-            string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
-            var xlsv = preset.GetVideoPreset(encType).Elements();
-            foreach (var item in xlsv)
+            //string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+            List<Preset.Parameter> parameters = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ?
+                        preset.video.videoEncoder.x265 :
+                        preset.video.videoEncoder.x264;
+
+            //preset.GetVideoPreset(encType).Elements();
+            foreach (var item in parameters)
             {
-                VideoPresetComboBox.Items.Add(item.Attribute("Name").Value);
+                VideoPresetComboBox.Items.Add(item.value);
             }
             if (VideoPresetComboBox.Items.Count > 0 && VideoPresetComboBox.SelectedIndex == -1)
                 VideoPresetComboBox.SelectedIndex = 0;
@@ -715,10 +719,29 @@ namespace mp4box
         private void LoadAudioPreset()
         {
             AudioPresetComboBox.Items.Clear();
-            var xlsa = preset.GetAudioPreset(AudioEncoderComboBox.Text).Elements();
-            foreach (var item in xlsa)
+            List<Preset.Parameter> parameters;
+            switch (AudioEncoderComboBox.Text)
             {
-                AudioPresetComboBox.Items.Add(item.Attribute("Name").Value);
+                case "NeroAAC":
+                    parameters = preset.audio.audioEncoder.NeroAAC;
+                    break;
+                case "FDKAAC":
+                    parameters = preset.audio.audioEncoder.FDKAAC;
+                    break;
+                case "QAAC":
+                    parameters = preset.audio.audioEncoder.QAAC;
+                    break;
+                case "MP3":
+                    parameters = preset.audio.audioEncoder.MP3;
+                    break;
+                default:
+                    parameters = new List<Preset.Parameter>();
+                    break;
+            }
+            //preset.GetAudioPreset(AudioEncoderComboBox.Text).Elements();
+            foreach (var item in parameters)
+            {
+                AudioPresetComboBox.Items.Add(item.value);
             }
             if (AudioPresetComboBox.Items.Count > 0 && AudioPresetComboBox.SelectedIndex == -1)
                 AudioPresetComboBox.SelectedIndex = 0;
@@ -1134,20 +1157,19 @@ namespace mp4box
                 string vPresetName = InputBox.Show("请输入这个预设名称", "请为预置配置命名", "新预置名称");
                 if (!string.IsNullOrEmpty(vPresetName))
                 {
-                    string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
-                    var xl = preset.GetVideoPreset(encType);
-                    XElement xelnew = new XElement("Parameter", VideoCustomParameterTextBox.Text,
-                                          new XAttribute("Name", vPresetName));
-                    foreach (var item in xl.Elements())
+                    var parameters = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ?
+                        preset.video.videoEncoder.x265 :
+                        preset.video.videoEncoder.x264;
+                    //var xl = preset.GetVideoPreset(encType);
+                    if (parameters.Exists(p => p.name == vPresetName))
                     {
-                        if (item.Attribute("Name").Value == vPresetName)
-                        {
-                            MessageBoxExt.ShowErrorMessage("预设名称已经存在", "预设名称重复");
-                            return;
-                        }
+                        MessageBoxExt.ShowErrorMessage("预设名称已经存在", "预设名称重复");
+                        return;
                     }
-                    xl.Add(xelnew);
-                    preset.Save();
+
+                    parameters.Add(new Preset.Parameter() { name = vPresetName, value = VideoCustomParameterTextBox.Text });
+
+                    Preset.Preset.Save(preset);
                     LoadVideoPreset();
                     VideoPresetComboBox.SelectedIndex = VideoPresetComboBox.FindString(vPresetName);
                 }
@@ -1162,25 +1184,35 @@ namespace mp4box
         {
             if (MessageBoxExt.ShowQuestion("确定要删除这条预设参数？", "提示") == DialogResult.Yes)
             {
-                try
+                var parameters = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ?
+                        preset.video.videoEncoder.x265 :
+                        preset.video.videoEncoder.x264;
+                var target = parameters.Find(p => p.name == VideoPresetComboBox.Text);
+                if (target != null)
                 {
-                    string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
-                    var xls = preset.GetVideoPreset(encType).Elements();
-                    foreach (var item in xls)
-                    {
-                        if (item.Attribute("Name").Value == VideoPresetComboBox.Text)
-                        {
-                            item.Remove();
-                            break;
-                        }
-                    }
-                    preset.Save();
+                    parameters.Remove(target);
+                    Preset.Preset.Save(preset);
                     LoadVideoPreset();
                 }
-                catch (Exception ex)
-                {
-                    MessageBoxExt.ShowErrorMessage("删除失败! Reason: " + ex.Message);
-                }
+                //try
+                //{
+                //    string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
+                //    var xls = preset.GetVideoPreset(encType).Elements();
+                //    foreach (var item in xls)
+                //    {
+                //        if (item.Attribute("Name").Value == VideoPresetComboBox.Text)
+                //        {
+                //            item.Remove();
+                //            break;
+                //        }
+                //    }
+                //    preset.Save();
+                //    LoadVideoPreset();
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBoxExt.ShowErrorMessage("删除失败! Reason: " + ex.Message);
+                //}
             }
         }
 
