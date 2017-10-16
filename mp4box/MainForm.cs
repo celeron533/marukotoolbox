@@ -381,24 +381,13 @@ namespace mp4box
             return Shared.AudioBat(input, output, audioMode, audioEncoder, audioBitrate, audioCustomParam);
         }
 
-
+        /// <summary>
+        /// Get the new extension of audio file based on selected audio encoder.
+        /// </summary>
+        /// <returns></returns>
         private string GetAudioExt()
         {
-            return GenerateAudioOutputExt(".{1}");
-            //    string ext = ".aac";
-            //    switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
-            //    {
-            //        case AudioEncoder.NeroAAC: ext = ".mp4"; break;
-            //        case AudioEncoder.QAAC: ext = ".m4a"; break;
-            //        case AudioEncoder.WAV: ext = ".wav"; break;
-            //        case AudioEncoder.ALAC: ext = ".m4a"; break;
-            //        case AudioEncoder.FLAC: ext = ".flac"; break;
-            //        case AudioEncoder.FDKAAC: ext = ".m4a"; break;
-            //        case AudioEncoder.AC3: ext = ".ac3"; break;
-            //        case AudioEncoder.MP3: ext = ".mp3"; break;
-            //        default: ext = ".aac"; break;
-            //    }
-            //    return ext;
+            return GenerateAudioOutputExt((AudioEncoder)AudioEncoderComboBox.SelectedIndex, ".{1}");
         }
 
         private string ExtractAV(out string ext, string namevideo, MediaType mediaType, int streamIndex = 0)
@@ -1633,7 +1622,7 @@ namespace mp4box
 
             string aac = "";
             string finish;
-            string audioOutputExt = GenerateAudioOutputExt();
+            string audioOutputExt = GenerateAudioOutputExt((AudioEncoder)AudioEncoderComboBox.SelectedIndex);
 
             foreach (var item in AudioBatchItemListBox.Items)
             {
@@ -1648,20 +1637,26 @@ namespace mp4box
             Process.Start(batpath);
         }
 
-        private string GenerateAudioOutputExt(string formatString = "_{0}.{1}")
+        /// <summary>
+        /// Create file name's postfix and/or extension based on the audio encoder type
+        /// </summary>
+        /// <param name="audioEncoder">AudioEncoder</param>
+        /// <param name="formatString">Format String of the new file name. Default is "_AAC.aac"</param>
+        /// <returns>New postfix and/or extension</returns>
+        private string GenerateAudioOutputExt(AudioEncoder audioEncoder, string formatString = "_{0}.{1}")
         {
-            string outputExt, codec;
-            switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
+            string codec, outputExt;
+            switch (audioEncoder)
             {
-                case AudioEncoder.NeroAAC: outputExt = "mp4"; codec = "AAC"; break;
-                case AudioEncoder.QAAC: outputExt = "m4a"; codec = "AAC"; break;
-                case AudioEncoder.WAV: outputExt = "wav"; codec = "WAV"; break;
-                case AudioEncoder.ALAC: outputExt = "m4a"; codec = "ALAC"; break;
-                case AudioEncoder.FLAC: outputExt = "flac"; codec = "FLAC"; break;
-                case AudioEncoder.FDKAAC: outputExt = "m4a"; codec = "AAC"; break;
-                case AudioEncoder.AC3: outputExt = "ac3"; codec = "AC3"; break;
-                case AudioEncoder.MP3: outputExt = "mp3"; codec = "MP3"; break;
-                default: outputExt = "aac"; codec = "AAC"; break;
+                case AudioEncoder.NeroAAC: codec = "AAC"; outputExt = "mp4"; break;
+                case AudioEncoder.QAAC: codec = "AAC"; outputExt = "m4a"; break;
+                case AudioEncoder.WAV: codec = "WAV"; outputExt = "wav"; break;
+                case AudioEncoder.ALAC: codec = "ALAC"; outputExt = "m4a"; break;
+                case AudioEncoder.FLAC: codec = "FLAC"; outputExt = "flac"; break;
+                case AudioEncoder.FDKAAC: codec = "AAC"; outputExt = "m4a"; break;
+                case AudioEncoder.AC3: codec = "AC3"; outputExt = "ac3"; break;
+                case AudioEncoder.MP3: codec = "MP3"; outputExt = "mp3"; break;
+                default: codec = "AAC"; outputExt = "aac"; break;
             }
             return string.Format(formatString, codec, outputExt);
         }
@@ -1713,20 +1708,8 @@ namespace mp4box
             if (File.Exists(AudioInputTextBox.Text))
             {
                 audioInput = AudioInputTextBox.Text;
-                AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, GenerateAudioOutputExt());
-
-                //switch (AudioEncoderComboBox.SelectedIndex)
-                //{
-                //    case 0: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.mp4"); break;
-                //    case 1: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a"); break;
-                //    case 2: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_WAV.wav"); break;
-                //    case 3: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_ALAC.m4a"); break;
-                //    case 4: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_FLAC.flac"); break;
-                //    case 5: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.m4a"); break;
-                //    case 6: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AC3.ac3"); break;
-                //    case 7: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_MP3.mp3"); break;
-                //    default: AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text, "_AAC.aac"); break;
-                //}
+                AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text,
+                    GenerateAudioOutputExt((AudioEncoder)AudioEncoderComboBox.SelectedIndex));
             }
         }
 
@@ -1742,6 +1725,8 @@ namespace mp4box
                 Process.Start(AudioInputTextBox.Text);
             }
         }
+
+        #region AudioAudioMode RadioButton
 
         private void AudioAudioModeCustomRadioButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -1768,6 +1753,8 @@ namespace mp4box
             AudioPresetDeleteButton.Visible =
             AudioPresetAddButton.Visible = false;
         }
+
+        #endregion AudioAudioMode RadioButton
 
         private void AudioBatchAddButton_Click(object sender, EventArgs e)
         {
