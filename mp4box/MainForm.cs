@@ -1463,23 +1463,9 @@ namespace mp4box
 
             switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
             {
-                case AudioEncoder.NeroAAC: //NeroAAC
-                    AudioBitrateComboBox.Enabled = true;
-                    AudioAudioModeBitrateRadioButton.Enabled =
-                    AudioAudioModeCustomRadioButton.Enabled = true;
-                    if (AudioAudioModeCustomRadioButton.Checked)
-                    {
-                        AudioPresetDeleteButton.Visible =
-                        AudioPresetAddButton.Visible = true;
-                    }
-                    break;
-
+                case AudioEncoder.NeroAAC:
                 case AudioEncoder.QAAC:
-                    //if (!isAppleAppSupportInstalled())
-                    //{
-                    //    if (MessageBoxExtension.ShowQuestion("Apple Application Support未安装.\r\n音频编码器QAAC可能无法使用.\r\n\r\n是否前往QuickTime下载页面?", "Apple Application Support未安装") == DialogResult.Yes)
-                    //        Process.Start("http://www.apple.com/cn/quicktime/download");
-                    //}
+                case AudioEncoder.FDKAAC:
                     AudioBitrateComboBox.Enabled =
                     AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = true;
@@ -1491,38 +1477,13 @@ namespace mp4box
                     break;
 
                 case AudioEncoder.WAV:
-                    AudioBitrateComboBox.Enabled =
-                    AudioAudioModeBitrateRadioButton.Enabled =
-                    AudioAudioModeCustomRadioButton.Enabled = false;
-                    AudioPresetDeleteButton.Visible =
-                    AudioPresetAddButton.Visible = false;
-                    break;
-
                 case AudioEncoder.ALAC:
-                    AudioBitrateComboBox.Enabled =
-                    AudioAudioModeBitrateRadioButton.Enabled =
-                    AudioAudioModeCustomRadioButton.Enabled = false;
-                    AudioPresetDeleteButton.Visible =
-                    AudioPresetAddButton.Visible = false;
-                    break;
-
                 case AudioEncoder.FLAC:
                     AudioBitrateComboBox.Enabled =
                     AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = false;
                     AudioPresetDeleteButton.Visible =
                     AudioPresetAddButton.Visible = false;
-                    break;
-
-                case AudioEncoder.FDKAAC:
-                    AudioBitrateComboBox.Enabled =
-                    AudioAudioModeBitrateRadioButton.Enabled =
-                    AudioAudioModeCustomRadioButton.Enabled = true;
-                    if (AudioAudioModeCustomRadioButton.Checked)
-                    {
-                        AudioPresetDeleteButton.Visible =
-                        AudioPresetAddButton.Visible = true;
-                    }
                     break;
 
                 case AudioEncoder.AC3:
