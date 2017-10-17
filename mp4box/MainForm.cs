@@ -701,13 +701,21 @@ namespace mp4box
 
         private void LoadVideoPreset()
         {
-            VideoPresetComboBox.Items.Clear();
-            //string encType = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ? "x265" : "x264";
-            List<Preset.Parameter> parameters = VideoEncoderComboBox.SelectedItem.ToString().Contains("x265") ?
-                        preset.video.videoEncoder.x265 :
-                        preset.video.videoEncoder.x264;
+            List<Preset.Parameter> parameters;
+            switch (GetVideoEncoderEnum())
+            {
+                case VideoEncoder.X264:
+                    parameters = preset.video.videoEncoder.x264;
+                    break;
+                case VideoEncoder.X265:
+                    parameters = preset.video.videoEncoder.x265;
+                    break;
+                default:
+                    parameters = new List<Preset.Parameter>();
+                    break;
+            }
 
-            //preset.GetVideoPreset(encType).Elements();
+            VideoPresetComboBox.Items.Clear();
             foreach (var item in parameters)
             {
                 VideoPresetComboBox.Items.Add(item.value);
@@ -716,35 +724,50 @@ namespace mp4box
                 VideoPresetComboBox.SelectedIndex = 0;
         }
 
+        public VideoEncoder GetVideoEncoderEnum()
+        {
+            string keyword = VideoEncoderComboBox.SelectedItem.ToString();
+            if (keyword.Contains("x265"))
+                return VideoEncoder.X265;
+            else if (keyword.Contains("x264"))
+                return VideoEncoder.X265;
+            else
+                return VideoEncoder.NA;
+        }
+
         private void LoadAudioPreset()
         {
-            AudioPresetComboBox.Items.Clear();
             List<Preset.Parameter> parameters;
-            switch (AudioEncoderComboBox.Text)
+            switch (GetAudioEncoderEnum())
             {
-                case "NeroAAC":
+                case AudioEncoder.NeroAAC:
                     parameters = preset.audio.audioEncoder.NeroAAC;
                     break;
-                case "FDKAAC":
+                case AudioEncoder.FDKAAC:
                     parameters = preset.audio.audioEncoder.FDKAAC;
                     break;
-                case "QAAC":
+                case AudioEncoder.QAAC:
                     parameters = preset.audio.audioEncoder.QAAC;
                     break;
-                case "MP3":
+                case AudioEncoder.MP3:
                     parameters = preset.audio.audioEncoder.MP3;
                     break;
                 default:
                     parameters = new List<Preset.Parameter>();
                     break;
             }
-            //preset.GetAudioPreset(AudioEncoderComboBox.Text).Elements();
+            AudioPresetComboBox.Items.Clear();
             foreach (var item in parameters)
             {
                 AudioPresetComboBox.Items.Add(item.value);
             }
             if (AudioPresetComboBox.Items.Count > 0 && AudioPresetComboBox.SelectedIndex == -1)
                 AudioPresetComboBox.SelectedIndex = 0;
+        }
+
+        public AudioEncoder GetAudioEncoderEnum()
+        {
+            return (AudioEncoder)AudioEncoderComboBox.SelectedIndex;
         }
 
         #region VideoBatch

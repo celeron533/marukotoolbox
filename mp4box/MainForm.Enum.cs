@@ -23,6 +23,7 @@ namespace mp4box
         public enum AudioEncoder
         {
             // order sensitive
+            NA = -1,
             NeroAAC = 0,
             QAAC,
             WAV,
@@ -37,6 +38,13 @@ namespace mp4box
         {
             Custom,
             Bitrate
+        }
+
+        public enum VideoEncoder
+        {
+            NA = -1,
+            X264 = 0,
+            X265
         }
     }
 }
