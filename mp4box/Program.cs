@@ -34,20 +34,15 @@ namespace mp4box
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
-        private class NativeMethods
+        private static void SetUnmanagedDllDirectory()
         {
-            [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-            public static extern bool SetDllDirectory(string path);
-
-            public static void SetUnmanagedDllDirectory()
-            {
-                string path = Path.Combine(Application.StartupPath, "tools");
-                if (IntPtr.Size == 8)
-                    path = Path.Combine(path, "x64");
-                if (!SetDllDirectory(path))
-                    throw new System.ComponentModel.Win32Exception();
-            }
+            string path = Path.Combine(Application.StartupPath, "tools");
+            if (IntPtr.Size == 8)
+                path = Path.Combine(path, "x64");
+            if (!NativeMethods.SetDllDirectory(path))
+                throw new System.ComponentModel.Win32Exception();
         }
+
 
         /// <summary>
         /// 应用程序的主入口点。
@@ -91,7 +86,7 @@ namespace mp4box
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            NativeMethods.SetUnmanagedDllDirectory();
+            SetUnmanagedDllDirectory();
 
             // var modulename = Process.GetCurrentProcess().MainModule.ModuleName;
             // var procesname = Path.GetFileNameWithoutExtension(modulename);
