@@ -21,7 +21,6 @@
 
 using mp4box.Extension;
 using mp4box.Utility;
-using mp4box.Win32API;
 using NLog;
 using System;
 using System.Collections.Generic;

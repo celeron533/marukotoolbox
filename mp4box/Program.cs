@@ -100,7 +100,7 @@ namespace mp4box
 
             if (ConfigurationManager.AppSettings["SplashScreen"] == "True")
             {
-                Application.Run(new mycontext());
+                Application.Run(new SplashScreen(new SplashForm(), new MainForm(), 2000));
             }
             else
             {
