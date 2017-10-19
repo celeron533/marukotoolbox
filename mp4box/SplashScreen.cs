@@ -18,81 +18,47 @@
 // -------------------------------------------------------------------
 //
 
+using mp4box.Extension;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace mp4box
 {
-    //启动画面会停留一段时间，该时间是设定的时间和主窗体构造所需时间两个的最大值 
-    public class SplashScreen : ApplicationContext
+    public class SplashAppContext : ApplicationContext
     {
-        private Form splashScreenForm;
-        private Form primaryForm;
-        private System.Timers.Timer splashScreenTimer;
-        private int splashScreenTimerInterval; 
-        private bool isSplashScreenClosed = false;
-        private delegate void DisposeDelegate();//关闭委托，下面需要使用控件的Invoke方法，该方法需要这个委托 
+        Form primaryForm = null;
 
-        public SplashScreen(Form splashScreenForm, Form primaryForm, int delay = 5000)
+        // Show the splash form and then auto close it
+        public SplashAppContext(Form primaryForm, Form splashForm) : base(splashForm)
         {
-            this.splashScreenForm = splashScreenForm;
             this.primaryForm = primaryForm;
-            splashScreenTimerInterval = (delay > 0 ? delay : 5000); // give default value
-
-            //TODO: use Task to refactor
-            ShowSplashScreen();
-            LoadMainForm();
-        }
-
-        private void ShowSplashScreen()
-        {
-            splashScreenTimer = new System.Timers.Timer(splashScreenTimerInterval)
+            new Task(() =>
             {
-                AutoReset = false
-            };
-
-            splashScreenTimer.Elapsed += SplashScreenTimer_Elapsed;
-
-            Thread DisplaySpashScreenThread = new Thread(new ThreadStart(DisplaySplashScreen));
-            DisplaySpashScreenThread.Start();
+                Thread.Sleep(2000);
+                splashForm.InvokeIfRequired(() =>
+                {
+                    splashForm.Dispose();
+                });
+            }).Start();
         }
 
-        private void SplashScreenTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        protected override void OnMainFormClosed(object sender, EventArgs e)
         {
-            splashScreenTimer.Dispose();
-            splashScreenTimer = null;
-            isSplashScreenClosed = true;
-        }
-
-        private void DisplaySplashScreen()
-        {
-            splashScreenTimer.Enabled = true;
-            Application.Run(this.splashScreenForm);
-        }
-
-
-
-        private void LoadMainForm()
-        {
-            while (!isSplashScreenClosed)
+            // Hand-over MainForm to the real MainForm
+            if (sender is SplashForm)
             {
-                Application.DoEvents();
+                base.MainForm = this.primaryForm;
+                base.MainForm.Show();
             }
-            DisposeDelegate SplashScreenFormDisposeDelegate = new DisposeDelegate(splashScreenForm.Dispose);
-            splashScreenForm.Invoke(SplashScreenFormDisposeDelegate);
-            splashScreenForm = null;
-            //必须先显示，再激活，否则主窗体不能在启动窗体消失后出现 
-            primaryForm.Show();
-            primaryForm.Activate();
-            this.primaryForm.Closed += PrimaryForm_Closed;
-        }
-
-        private void PrimaryForm_Closed(object sender, EventArgs e)
-        {
-            base.ExitThread();
+            // Exit App
+            else if (sender is MainForm)
+            {
+                base.OnMainFormClosed(sender, e);
+            }
         }
     }
 }
