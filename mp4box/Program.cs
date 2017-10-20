@@ -98,7 +98,7 @@ namespace mp4box
             // return;
             // }
 
-            if (new Settings().ConfigUiSplashScreenCheck)
+            if (Global.Running.settings.ConfigUiSplashScreenCheck)
             {
                 Application.Run(new SplashAppContext(new MainForm(), new SplashForm()));
             }

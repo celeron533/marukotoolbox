@@ -50,7 +50,7 @@ namespace mp4box
         private readonly DateTime ReleaseDate = AssemblyUtil.GetAssemblyVersionTime();
 
         private Preset.Preset preset;
-        private Settings settings;
+        Settings settings = Global.Running.settings;
 
         #region Private Members Declaration
 
