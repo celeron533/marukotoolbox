@@ -188,15 +188,7 @@ namespace mp4box
         }
 
 
-        public string FFMpegMuxCommand(string input1, string input2, string output)
-        {
-            return $"{ToolsUtil.FFMPEG.quotedPath} -i {input1.Quote()} -i {input2.Quote()} -sn -c copy -y {output.Quote()}";
-        }
 
-        public string MP4MuxCommand(string input1, string input2, string output)
-        {
-            return $"{ToolsUtil.MP4BOX.quotedPath} -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new {output.Quote()}";
-        }
 
         public XvSettings GetXvSettings()
         {
@@ -900,9 +892,9 @@ namespace mp4box
             //封装
             string mux = string.Empty;
             if (VideoBatchFormatComboBox.Text == "mp4")
-                mux = MP4MuxCommand(tempVideo, tempAudio, output);
+                mux = Shared.MP4MuxCommand(tempVideo, tempAudio, output);
             else
-                mux = FFMpegMuxCommand(tempVideo, tempAudio, output);
+                mux = Shared.FFMpegMuxCommand(tempVideo, tempAudio, output);
 
             if (audioMode != 1 && hasAudio) //如果压制音频
                 bat += aextract + x264 + mux + " \r\n";
@@ -1213,9 +1205,9 @@ namespace mp4box
             {
                 string mux = string.Empty;
                 if (targetExt == ".mp4")
-                    mux = MP4MuxCommand(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
+                    mux = Shared.MP4MuxCommand(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
                 else
-                    mux = FFMpegMuxCommand(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
+                    mux = Shared.FFMpegMuxCommand(tempVideo, tempAudio, Path.ChangeExtension(videoOutput, targetExt));
                 x264 = aextract + x264 + mux + "\r\n"
                     + "del " + tempVideo.Quote() + "\r\n"
                     + "del " + tempAudio.Quote() + "\r\n";
@@ -2773,7 +2765,7 @@ namespace mp4box
             //mux
             string mux = string.Empty;
             if (AvsIncludeAudioCheckBox.Checked && hasAudio) //如果包含音频
-                mux = MP4MuxCommand(tempVideo, tempAudio, avsOutput);
+                mux = Shared.MP4MuxCommand(tempVideo, tempAudio, avsOutput);
 
             string auto = aextract + x264 + "\r\n" + mux + " \r\n";
             auto += "\r\necho ===== one file is completed! =====\r\n";

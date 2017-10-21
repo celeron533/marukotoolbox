@@ -11,6 +11,30 @@ namespace mp4box.Procedure
 {
     public class Shared
     {
+        /// <summary>
+        /// Generate the command to mux two input media file into one by using FFMpeg
+        /// </summary>
+        /// <param name="input1"></param>
+        /// <param name="input2"></param>
+        /// <param name="output"></param>
+        /// <returns>FFMpeg command</returns>
+        public static string FFMpegMuxCommand(string input1, string input2, string output)
+        {
+            return $"{ToolsUtil.FFMPEG.quotedPath} -i {input1.Quote()} -i {input2.Quote()} -sn -c copy -y {output.Quote()}";
+        }
+
+        /// <summary>
+        /// Generate the command to mux two input media file into one by using MP4Box
+        /// </summary>
+        /// <param name="input1"></param>
+        /// <param name="input2"></param>
+        /// <param name="output"></param>
+        /// <returns>MP4Box command</returns>
+        public static string MP4MuxCommand(string input1, string input2, string output)
+        {
+            return $"{ToolsUtil.MP4BOX.quotedPath} -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new {output.Quote()}";
+        }
+
         public static string AudioBat(string input, string output, AudioMode audioMode, AudioEncoder audioEncoder, string audioBitrate, string audioCustomParam)
         {
             string ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -i " + input.Quote() + " -vn -sn -v 0 -c:a pcm_s16le -f wav pipe:|";
