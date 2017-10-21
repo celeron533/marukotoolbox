@@ -147,9 +147,7 @@
     <Compile Include="InputBox.Designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.Enum.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Enums.cs" />
     <Compile Include="MediaInfo\MediaInfoWrapper.cs" />
     <Compile Include="Procedure\BlackProcedure.cs" />
     <Compile Include="Procedure\MiscProcedure.cs" />
