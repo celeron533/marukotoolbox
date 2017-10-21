@@ -123,6 +123,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions.cs" />
     <Compile Include="Extension\InvokerExt.cs" />
     <Compile Include="Extension\MessageBoxExt.cs" />
     <Compile Include="Extension\OpenFileDialogExt.cs" />

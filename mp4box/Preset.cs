@@ -55,19 +55,6 @@ namespace mp4box.Preset
                 serializer.Serialize(writer, preset);
             }
         }
-
-        
-
-
-        //public XElement GetVideoPreset(string encType)
-        //{
-        //    return xdoc.Element("root").Element("Video").Element("VideoEncoder").Element(encType);
-        //}
-
-        //public XElement GetAudioPreset(string encType)
-        //{
-        //    return xdoc.Element("root").Element("Audio").Element("AudioEncoder").Element(encType);
-        //}
     }
 
 

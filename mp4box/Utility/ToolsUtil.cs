@@ -12,6 +12,8 @@ namespace mp4box.Utility
         // Best way to get the application foldre path (as known as workPath)
         // https://stackoverflow.com/questions/6041332/best-way-to-get-application-folder-path
         public static string ToolsFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tools");
+        public static string AvsFolder = Path.Combine(ToolsFolder, "avs");
+        public static string AvsPluginFolder = Path.Combine(AvsFolder, "plugins");
 
         // Based on tool_chain version 2016-10-23
         public static List<ToolInfo> ToolList = new List<ToolInfo>(

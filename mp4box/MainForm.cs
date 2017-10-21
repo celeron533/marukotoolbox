@@ -81,9 +81,49 @@ namespace mp4box
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ToolsVerification();
+            try
+            {
+                DirectoryInfo toolsFolder = new DirectoryInfo(ToolsUtil.ToolsFolder);
+                if (!toolsFolder.Exists)
+                {
+                    throw new ToolsDirectoryNotFoundException();
+                }
 
-            //ReleaseDate = System.IO.File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
+                // load x264, x265 list
+                bool useX265 = settings.ConfigFunctionEnableX265Check;
+                IEnumerable<FileInfo> x264exe = toolsFolder.GetFiles("*.exe")
+                    .Where(fileInfo =>
+                    {
+                        string fileName = fileInfo.Name.ToLower();
+                        return fileName.Contains("x264") || (useX265 && fileName.Contains("x265"));
+                    });
+                VideoEncoderComboBox.Items.AddRange(x264exe.Select(file => file.Name).ToArray());
+
+                // Manipulate AviSynth.dll and DevIL.dll file
+                FileStringUtil.CheckAVS();
+
+                // Load avs plugin list
+                DirectoryInfo avsPluginFolder = new DirectoryInfo(ToolsUtil.AvsPluginFolder);
+                if (avsPluginFolder.Exists)
+                {
+                    IEnumerable<FileInfo> avsfilters = avsPluginFolder.GetFiles("*.dll");
+                    AvsFilterComboBox.Items.AddRange(avsfilters.Select(fileInfo => fileInfo.Name).ToArray());
+                }                
+            }
+            catch (ToolsDirectoryNotFoundException)
+            {
+                logger.Error("Tools folder not found.");
+                MessageBox.Show("tools文件夹没有解压喔~ 工具箱里没有工具的话运行不起来的喔~", "（这只丸子）",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex);
+                MessageBoxExt.ShowWarningMessage(ex.Message);
+            }
+
+
             HelpReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
 
             // load Help Text
@@ -103,43 +143,7 @@ namespace mp4box
                 ConfigX264ThreadsComboBox.Items.Add(i.ToString());
             }
 
-            //load x264 exe
-            DirectoryInfo folder = new DirectoryInfo(ToolsUtil.ToolsFolder);
-            try
-            {
-                bool usex265 = settings.ConfigFunctionEnableX265Check;
-                var x264exe = folder.GetFiles("*.exe")
-                    .Where(fileInfo =>
-                    {
-                        string fileName = fileInfo.Name.ToLower();
-                        return fileName.Contains("x264") || (usex265 && fileName.Contains("x265"));
-                    })
-                    .Select(fileInfo => fileInfo.Name);
-                VideoEncoderComboBox.Items.AddRange(x264exe.ToArray());
-            }
-            catch { }
-
-            FileStringUtil.CheckAVS();
-
-            DirectoryInfo avsPluginFolder = new DirectoryInfo(ToolsUtil.ToolsFolder + @"\avs\plugins");
-            if (Directory.Exists(avsPluginFolder.FullName))
-            {
-                var avsfilters = avsPluginFolder.GetFiles("*.dll").Select(fileInfo => fileInfo.Name);
-                AvsFilterComboBox.Items.AddRange(avsfilters.ToArray());
-            }
-
             LoadSettings();
-        }
-
-        private static void ToolsVerification()
-        {
-            if (!Directory.Exists(ToolsUtil.ToolsFolder))
-            {
-                logger.Error("Tools folder not found.");
-                MessageBox.Show("tools文件夹没有解压喔~ 工具箱里没有工具的话运行不起来的喔~", "（这只丸子）",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Environment.Exit(1);
-            }
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -571,94 +575,88 @@ namespace mp4box
 
         private void LoadSettings()
         {
-            try
+            //load settings
+            settings.Load();
+
+            AudioBitrateComboBox.Text = settings.AudioBitrateComboText;
+            AudioEncoderComboBox.SelectedIndex = settings.AudioEncoderIndex;
+            AvsScriptTextBox.Text = settings.AvsScriptText;
+            ConfigFunctionAutoCheckUpdateCheckBox.Checked = settings.ConfigFunctionAutoCheckUpdateCheck;
+            ConfigFunctionDeleteTempFileCheckBox.Checked = settings.ConfigFunctionDeleteTempFileCheck;
+            ConfigFunctionEnableX265CheckBox.Checked = settings.ConfigFunctionEnableX265Check;
+            ConfigFunctionVideoPlayerTextBox.Text = settings.ConfigFunctionVideoPlayerText;
+            ConfigUiSplashScreenCheckBox.Checked = settings.ConfigUiSplashScreenCheck;
+            ConfigUiTrayModeCheckBox.Checked = settings.ConfigUiTrayModeCheck;
+            ConfigX264ExtraParameterTextBox.Text = settings.ConfigX264ExtraParameterText;
+            ConfigX264PriorityComboBox.SelectedIndex = settings.ConfigX264PriorityIndex;
+            ConfigX264ThreadsComboBox.SelectedIndex = settings.ConfigX264Threads;
+            MiscBlackBitrateNumericUpDown.Value = settings.MiscBlackBitrateValue;
+            MiscBlackCrfNumericUpDown.Value = settings.MiscBlackCrfValue;
+            MiscBlackFpsNumericUpDown.Value = settings.MiscBlackFpsValue;
+            MiscOnePicBitrateNumericUpDown.Value = settings.MiscOnePicBitrateValue;
+            MiscOnePicCrfNumericUpDown.Value = settings.MiscOnePicCrfValue;
+            MiscOnePicFpsNumericUpDown.Value = settings.MiscOnePicFpsValue;
+            MuxConvertFormatComboBox.SelectedIndex = settings.MuxConvertFormatIndex;
+            VideoAudioModeComboBox.SelectedIndex = settings.VideoAudioModeIndex;
+            VideoAudioParameterTextBox.Text = settings.VideoAudioParameterText;
+            VideoBatchSubtitleLanguage.DataSource = settings.VideoBatchSubtitleLanguage.Split(',');
+            VideoBitrateNumericUpDown.Value = settings.VideoBitrateValue;
+            VideoCrfNumericUpDown.Value = settings.VideoCrfValue;
+            VideoCustomParameterTextBox.Text = settings.VideoCustomParameterText;
+            VideoDemuxerComboBox.SelectedIndex = settings.VideoDemuxerIndex;
+            VideoHeightNumericUpDown.Value = settings.VideoHeightValue;
+            VideoWidthNumericUpDown.Value = settings.VideoWidthValue;
+
+            if (settings.VideoEncoderIndex > VideoEncoderComboBox.Items.Count - 1)
             {
-                //load settings
-                settings.Load();
+                VideoEncoderComboBox.SelectedIndex = 0;
+            }
+            else
+            {
+                VideoEncoderComboBox.SelectedIndex = settings.VideoEncoderIndex;
+            }
+            if (VideoEncoderComboBox.SelectedIndex == -1)  //First Startup
+            {
+                VideoEncoderComboBox.SelectedIndex = VideoEncoderComboBox.Items.IndexOf(ToolsUtil.X264_32_8.fileName);//"x264_32-8bit"
+            }
+            VideoEncoderComboBox_SelectedIndexChanged(null, null);
 
-                AudioBitrateComboBox.Text = settings.AudioBitrateComboText;
-                AudioEncoderComboBox.SelectedIndex = settings.AudioEncoderIndex;
-                AvsScriptTextBox.Text = settings.AvsScriptText;
-                ConfigFunctionAutoCheckUpdateCheckBox.Checked = settings.ConfigFunctionAutoCheckUpdateCheck;
-                ConfigFunctionDeleteTempFileCheckBox.Checked = settings.ConfigFunctionDeleteTempFileCheck;
-                ConfigFunctionEnableX265CheckBox.Checked = settings.ConfigFunctionEnableX265Check;
-                ConfigFunctionVideoPlayerTextBox.Text = settings.ConfigFunctionVideoPlayerText;
-                ConfigUiSplashScreenCheckBox.Checked = settings.ConfigUiSplashScreenCheck;
-                ConfigUiTrayModeCheckBox.Checked = settings.ConfigUiTrayModeCheck;
-                ConfigX264ExtraParameterTextBox.Text = settings.ConfigX264ExtraParameterText;
-                ConfigX264PriorityComboBox.SelectedIndex = settings.ConfigX264PriorityIndex;
-                ConfigX264ThreadsComboBox.SelectedIndex = settings.ConfigX264Threads;
-                MiscBlackBitrateNumericUpDown.Value = settings.MiscBlackBitrateValue;
-                MiscBlackCrfNumericUpDown.Value = settings.MiscBlackCrfValue;
-                MiscBlackFpsNumericUpDown.Value = settings.MiscBlackFpsValue;
-                MiscOnePicBitrateNumericUpDown.Value = settings.MiscOnePicBitrateValue;
-                MiscOnePicCrfNumericUpDown.Value = settings.MiscOnePicCrfValue;
-                MiscOnePicFpsNumericUpDown.Value = settings.MiscOnePicFpsValue;
-                MuxConvertFormatComboBox.SelectedIndex = settings.MuxConvertFormatIndex;
-                VideoAudioModeComboBox.SelectedIndex = settings.VideoAudioModeIndex;
-                VideoAudioParameterTextBox.Text = settings.VideoAudioParameterText;
-                VideoBatchSubtitleLanguage.DataSource = settings.VideoBatchSubtitleLanguage.Split(',');
-                VideoBitrateNumericUpDown.Value = settings.VideoBitrateValue;
-                VideoCrfNumericUpDown.Value = settings.VideoCrfValue;
-                VideoCustomParameterTextBox.Text = settings.VideoCustomParameterText;
-                VideoDemuxerComboBox.SelectedIndex = settings.VideoDemuxerIndex;
-                VideoHeightNumericUpDown.Value = settings.VideoHeightValue;
-                VideoWidthNumericUpDown.Value = settings.VideoWidthValue;
-
-                if (settings.VideoEncoderIndex > VideoEncoderComboBox.Items.Count - 1)
+            if (settings.ConfigUiLanguageIndex == -1)  //First Startup
+            {
+                string culture = Thread.CurrentThread.CurrentCulture.Name;
+                switch (culture)
                 {
-                    VideoEncoderComboBox.SelectedIndex = 0;
-                }
-                else
-                {
-                    VideoEncoderComboBox.SelectedIndex = settings.VideoEncoderIndex;
-                }
-                if (VideoEncoderComboBox.SelectedIndex == -1)  //First Startup
-                {
-                    VideoEncoderComboBox.SelectedIndex = VideoEncoderComboBox.Items.IndexOf(ToolsUtil.X264_32_8.fileName);//"x264_32-8bit"
-                }
-                VideoEncoderComboBox_SelectedIndexChanged(null, null);
+                    case "zh-CN":
+                    case "zh-SG":
+                        ConfigUiLanguageComboBox.SelectedIndex = 0;
+                        break;
 
-                if (settings.ConfigUiLanguageIndex == -1)  //First Startup
-                {
-                    string culture = Thread.CurrentThread.CurrentCulture.Name;
-                    switch (culture)
-                    {
-                        case "zh-CN":
-                        case "zh-SG":
-                            ConfigUiLanguageComboBox.SelectedIndex = 0;
-                            break;
+                    case "zh-TW":
+                    case "zh-HK":
+                    case "zh-MO":
+                        ConfigUiLanguageComboBox.SelectedIndex = 1;
+                        break;
 
-                        case "zh-TW":
-                        case "zh-HK":
-                        case "zh-MO":
-                            ConfigUiLanguageComboBox.SelectedIndex = 1;
-                            break;
+                    case "en-US":
+                        ConfigUiLanguageComboBox.SelectedIndex = 2;
+                        break;
 
-                        case "en-US":
-                            ConfigUiLanguageComboBox.SelectedIndex = 2;
-                            break;
+                    case "ja-JP":
+                        ConfigUiLanguageComboBox.SelectedIndex = 3;
+                        break;
 
-                        case "ja-JP":
-                            ConfigUiLanguageComboBox.SelectedIndex = 3;
-                            break;
-
-                        default:
-                            break;
-                    }
-                }
-                else
-                    ConfigUiLanguageComboBox.SelectedIndex = settings.ConfigUiLanguageIndex;
-
-                if (ConfigFunctionAutoCheckUpdateCheckBox.Checked) //&& NetworkUtil.IsConnectInternet())
-                {
-                    new UpdateCheckerUtil().CheckUpdate(false);
+                    default:
+                        break;
                 }
             }
-            catch (Exception)
+            else
+                ConfigUiLanguageComboBox.SelectedIndex = settings.ConfigUiLanguageIndex;
+
+            if (ConfigFunctionAutoCheckUpdateCheckBox.Checked) //&& NetworkUtil.IsConnectInternet())
             {
-                throw;
+                new UpdateCheckerUtil().CheckUpdate(false);
             }
+
         }
 
         private void SaveSettings()
@@ -2870,7 +2868,7 @@ namespace mp4box
 
         private void AvsAddFilterButton_Click(object sender, EventArgs e)
         {
-            string vsfilterDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\" + AvsFilterComboBox.Text);
+            string vsfilterDLLPath = Path.Combine(ToolsUtil.AvsPluginFolder, AvsFilterComboBox.Text);
             string text = "LoadPlugin(\"" + vsfilterDLLPath + "\")" + "\r\n";
             AvsScriptTextBox.Text = text + AvsScriptTextBox.Text;
         }
@@ -2886,10 +2884,10 @@ namespace mp4box
             string avsVideoInput = AvsVideoInputTextBox.Text;
             StringBuilder avsBuilder = new StringBuilder(1000);
 
-            string vsfilterDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\VSFilter.DLL");
-            string SupTitleDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\SupTitle.dll");
-            string LSMASHSourceDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\LSMASHSource.DLL");
-            string undotDLLPath = Path.Combine(ToolsUtil.ToolsFolder, @"avs\plugins\UnDot.DLL");
+            string vsfilterDLLPath = Path.Combine(ToolsUtil.AvsPluginFolder, "VSFilter.DLL");
+            string SupTitleDLLPath = Path.Combine(ToolsUtil.AvsPluginFolder, "SupTitle.dll");
+            string LSMASHSourceDLLPath = Path.Combine(ToolsUtil.AvsPluginFolder, "LSMASHSource.DLL");
+            string undotDLLPath = Path.Combine(ToolsUtil.AvsPluginFolder, "UnDot.DLL");
 
             avsBuilder.AppendLine($"LoadPlugin(\"{LSMASHSourceDLLPath}\")");
             if (Path.GetExtension(avsSubtitleInput).ToLower() == ".sup")
