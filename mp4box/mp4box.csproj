@@ -155,6 +155,7 @@
     <Compile Include="Procedure\MuxMp4Procedure.cs" />
     <Compile Include="Procedure\Shared.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="Utility\AvsUtil.cs" />
     <Compile Include="Utility\UpdateCheckUtil.cs" />
     <Compile Include="Utility\AssemblyUtil.cs" />
     <Compile Include="Utility\DialogUtil.cs" />

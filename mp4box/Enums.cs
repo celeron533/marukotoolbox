@@ -18,7 +18,7 @@ namespace mp4box
         TwoPass
     }
 
-    public enum AudioEncoder
+    public enum AudioEncoderType
     {
         // order sensitive
         NA = -1,
@@ -38,10 +38,17 @@ namespace mp4box
         Bitrate
     }
 
-    public enum VideoEncoder
+    public enum VideoEncoderType
     {
         NA = -1,
         X264 = 0,
         X265
+    }
+
+    public enum AvsLocationType
+    {
+        Embedded,
+        System32,
+        SysWOW64
     }
 }

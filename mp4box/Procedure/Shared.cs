@@ -35,12 +35,12 @@ namespace mp4box.Procedure
             return $"{ToolsUtil.MP4BOX.quotedPath} -add \"{input1}#trackID=1:name=\" -add \"{input2}#trackID=1:name=\" -new {output.Quote()}";
         }
 
-        public static string AudioBat(string input, string output, AudioMode audioMode, AudioEncoder audioEncoder, string audioBitrate, string audioCustomParam)
+        public static string AudioBat(string input, string output, AudioMode audioMode, AudioEncoderType audioEncoder, string audioBitrate, string audioCustomParam)
         {
             string ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -i " + input.Quote() + " -vn -sn -v 0 -c:a pcm_s16le -f wav pipe:|";
             switch (audioEncoder)
             {
-                case AudioEncoder.NeroAAC:
+                case AudioEncoderType.NeroAAC:
                     switch (audioMode)
                     {
                         case AudioMode.Bitrate:
@@ -53,7 +53,7 @@ namespace mp4box.Procedure
                     }
                     break;
 
-                case AudioEncoder.QAAC:
+                case AudioEncoderType.QAAC:
                     switch (audioMode)
                     {
                         case AudioMode.Bitrate:
@@ -65,22 +65,22 @@ namespace mp4box.Procedure
                     }
                     break;
 
-                case AudioEncoder.WAV:
+                case AudioEncoderType.WAV:
                     if (Path.GetExtension(output) == ".aac")
                         output = Path.ChangeExtension(output, ".wav");
                     // overwrite the ffmpeg
                     ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -y -i " + input.Quote() + " -f wav " + output.Quote();
                     break;
 
-                case AudioEncoder.ALAC:
+                case AudioEncoderType.ALAC:
                     ffmpeg += ToolsUtil.REFALAC.quotedPath + " --ignorelength - -o " + output.Quote();
                     break;
 
-                case AudioEncoder.FLAC:
+                case AudioEncoderType.FLAC:
                     ffmpeg += ToolsUtil.FLAC.quotedPath + " -f --ignore-chunk-sizes -5 - -o " + output.Quote();
                     break;
 
-                case AudioEncoder.FDKAAC:
+                case AudioEncoderType.FDKAAC:
                     switch (audioMode)
                     {
                         case AudioMode.Bitrate:
@@ -92,11 +92,11 @@ namespace mp4box.Procedure
                     }
                     break;
 
-                case AudioEncoder.AC3:
+                case AudioEncoderType.AC3:
                     ffmpeg = ToolsUtil.FFMPEG.quotedPath + " -i " + input.Quote() + " -c:a ac3 -b:a " + audioBitrate + "k " + output.Quote();
                     break;
 
-                case AudioEncoder.MP3:
+                case AudioEncoderType.MP3:
                     switch (audioMode)
                     {
                         case AudioMode.Bitrate:

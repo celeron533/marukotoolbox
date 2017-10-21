@@ -148,30 +148,6 @@ namespace mp4box.Utility
             return Directory.CreateDirectory(path);
         }
 
-
-        /// <summary>
-        /// Gets the file version/date
-        /// </summary>
-        /// <param name="fileName">the file to check</param>
-        /// <param name="fileVersion">the file version</param>
-        /// <param name="fileDate">the file date</param>
-        /// <param name="fileProductName">the file product name</param>
-        /// <returns>true if file can be found, false if file cannot be found</returns>
-        public static bool GetFileInformation(string fileName, out string fileVersion, out string fileDate, out string fileProductName)
-        {
-            fileVersion = fileDate = fileProductName = string.Empty;
-            if (!File.Exists(fileName))
-                return false;
-
-            FileVersionInfo FileProperties = FileVersionInfo.GetVersionInfo(fileName);
-            fileVersion = FileProperties.FileVersion;
-            if (!String.IsNullOrEmpty(fileVersion))
-                fileVersion = fileVersion.Replace(", ", ".");
-            fileDate = File.GetLastWriteTimeUtc(fileName).ToString("dd-MM-yyyy");
-            fileProductName = FileProperties.ProductName;
-            return true;
-        }
-
         /// <summary>
         /// 检查目录是否可写入
         /// </summary>
@@ -209,84 +185,6 @@ namespace mp4box.Utility
                 return false;
             }
         }
-
-        #region AVS
-
-        /// <summary>
-        /// Detects the AviSynth version/date
-        /// </summary>
-        /// <param name="checkEmbedded">False: check System folder. True: check Maruko tool folder.</param>
-        /// <returns>AviSynth.dll file information string.</returns>
-        public static string CheckAviSynth(bool checkEmbedded = false)
-        {
-            bool aviSynthFound = false;
-            string fileVersion = string.Empty, fileDate = string.Empty, fileProductName = string.Empty;
-
-            const string AVISYNTH = "AviSynth.dll";
-            // 32-bit %windir%\SysWOW64 on 64-bit OS
-            string syswow64path = Environment.GetFolderPath(Environment.SpecialFolder.SystemX86);
-            // %windir%\System32 on 32-bit OS
-            string system32path = Environment.GetFolderPath(Environment.SpecialFolder.System);
-
-            if (checkEmbedded)  // Maruko folder
-            {
-                if (GetFileInformation(Path.Combine(ToolsUtil.ToolsFolder, AVISYNTH),
-                    out fileVersion, out fileDate, out fileProductName))
-                {
-                    aviSynthFound = true;
-                }
-            }
-            else   // System folder
-            {
-                if (GetFileInformation(Path.Combine(system32path, AVISYNTH),
-                    out fileVersion, out fileDate, out fileProductName))
-                {
-                    aviSynthFound = true;
-                }
-                else if (GetFileInformation(Path.Combine(syswow64path, AVISYNTH),
-                    out fileVersion, out fileDate, out fileProductName))
-                {
-                    aviSynthFound = true;
-                }
-            }
-
-            if (aviSynthFound)
-                return "AviSynth" + (fileProductName.Contains("+") ? "+" : string.Empty) + "版本: " + fileVersion + " (" + fileDate + ")";
-            else return string.Empty;
-        }
-
-        // 检查内置的avs版本
-        public static string CheckEmbeddedAviSynth()
-        {
-            return CheckAviSynth(true);
-        }
-
-        public static void CheckAVS()
-        {
-            // avisynth未安装，使用小丸内置的avs
-            if (string.IsNullOrEmpty(CheckAviSynth()))
-            {
-                string sourceAviSynthdll = Path.Combine(ToolsUtil.AvsFolder, @"AviSynth.dll");
-                string sourceDevILdll = Path.Combine(ToolsUtil.AvsFolder, @"DevIL.dll");
-                if (File.Exists(sourceAviSynthdll) && File.Exists(sourceDevILdll))
-                {
-                    try
-                    {
-                        File.Copy(sourceAviSynthdll, Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"), true);
-                        File.Copy(sourceDevILdll, Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"), true);
-                        logger.Info("系统未安装avisynth,使用小丸内置avs.");
-                    }
-                    catch (IOException) { }
-                }
-            }
-            else
-            {
-                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "AviSynth.dll"));
-                File.Delete(Path.Combine(ToolsUtil.ToolsFolder, "DevIL.dll"));
-            }
-        }
-
-        #endregion AVS End
 
         public static string GetLibassFormatPath(string path)
         {

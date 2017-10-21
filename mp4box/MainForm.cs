@@ -100,7 +100,8 @@ namespace mp4box
                 VideoEncoderComboBox.Items.AddRange(x264exe.Select(file => file.Name).ToArray());
 
                 // Manipulate AviSynth.dll and DevIL.dll file
-                FileStringUtil.CheckAVS();
+                // TODO: is it necessary?
+                AvsUtil.ManipulateAVSFiles();
 
                 // Load avs plugin list
                 DirectoryInfo avsPluginFolder = new DirectoryInfo(ToolsUtil.AvsPluginFolder);
@@ -108,7 +109,7 @@ namespace mp4box
                 {
                     IEnumerable<FileInfo> avsfilters = avsPluginFolder.GetFiles("*.dll");
                     AvsFilterComboBox.Items.AddRange(avsfilters.Select(fileInfo => fileInfo.Name).ToArray());
-                }                
+                }
             }
             catch (ToolsDirectoryNotFoundException)
             {
@@ -370,7 +371,7 @@ namespace mp4box
         {
             // Use enum instead of bool
             AudioMode audioMode = AudioAudioModeBitrateRadioButton.Checked ? AudioMode.Bitrate : AudioMode.Custom;
-            AudioEncoder audioEncoder = (AudioEncoder)AudioEncoderComboBox.SelectedIndex;
+            AudioEncoderType audioEncoder = (AudioEncoderType)AudioEncoderComboBox.SelectedIndex;
             string audioBitrate = AudioBitrateComboBox.Text;
             string audioCustomParam = AudioCustomParameterTextBox.Text;
 
@@ -383,7 +384,7 @@ namespace mp4box
         /// <returns></returns>
         private string GetAudioExt()
         {
-            return GenerateAudioOutputExt((AudioEncoder)AudioEncoderComboBox.SelectedIndex, ".{1}");
+            return GenerateAudioOutputExt((AudioEncoderType)AudioEncoderComboBox.SelectedIndex, ".{1}");
         }
 
         private string ExtractAV(out string ext, string input, MediaType mediaType, int streamIndex = 0)
@@ -692,7 +693,7 @@ namespace mp4box
 
         #region Preset
 
-        private void LoadVideoPreset(VideoEncoder videoEncoder, bool resetIndex = false)
+        private void LoadVideoPreset(VideoEncoderType videoEncoder, bool resetIndex = false)
         {
             VideoPresetComboBox.Items.Clear();
             foreach (var item in GetVideoEncoderParameters(videoEncoder))
@@ -706,7 +707,7 @@ namespace mp4box
             }
         }
 
-        private void AddVideoPreset(VideoEncoder videoEncoder, Preset.Parameter newParameter)
+        private void AddVideoPreset(VideoEncoderType videoEncoder, Preset.Parameter newParameter)
         {
             List<Preset.Parameter> parameters = GetVideoEncoderParameters(videoEncoder);
             if (parameters.Exists(p => p.name == newParameter.name))
@@ -716,37 +717,37 @@ namespace mp4box
             parameters.Add(newParameter);
         }
 
-        private void DeleteVideoPreset(VideoEncoder videoEncoder, string name)
+        private void DeleteVideoPreset(VideoEncoderType videoEncoder, string name)
         {
             List<Preset.Parameter> parameters = GetVideoEncoderParameters(videoEncoder);
             parameters.RemoveAll(p => p.name == name);
         }
 
-        private Preset.Parameter LoadVideoPresetParameter(VideoEncoder videoEncoder, string name)
+        private Preset.Parameter LoadVideoPresetParameter(VideoEncoderType videoEncoder, string name)
         {
             return GetVideoEncoderParameters(videoEncoder).Find(p => p.name == name);
         }
 
-        private VideoEncoder GetVideoEncoderEnum()
+        private VideoEncoderType GetVideoEncoderEnum()
         {
             string keyword = VideoEncoderComboBox.SelectedItem.ToString();
             if (keyword.Contains("x264"))
-                return VideoEncoder.X264;
+                return VideoEncoderType.X264;
             else if (keyword.Contains("x265"))
-                return VideoEncoder.X265;
+                return VideoEncoderType.X265;
             else
-                return VideoEncoder.NA;
+                return VideoEncoderType.NA;
         }
 
-        private List<Preset.Parameter> GetVideoEncoderParameters(VideoEncoder videoEncoder)
+        private List<Preset.Parameter> GetVideoEncoderParameters(VideoEncoderType videoEncoder)
         {
             List<Preset.Parameter> parameters;
             switch (videoEncoder)
             {
-                case VideoEncoder.X264:
+                case VideoEncoderType.X264:
                     parameters = preset.video.videoEncoder.x264;
                     break;
-                case VideoEncoder.X265:
+                case VideoEncoderType.X265:
                     parameters = preset.video.videoEncoder.x265;
                     break;
                 default:
@@ -756,7 +757,7 @@ namespace mp4box
             return parameters;
         }
 
-        private void LoadAudioPreset(AudioEncoder audioEncoder, bool resetIndex = false)
+        private void LoadAudioPreset(AudioEncoderType audioEncoder, bool resetIndex = false)
         {
             AudioPresetComboBox.Items.Clear();
             foreach (var item in GetAudioEncoderParameters(audioEncoder))
@@ -770,7 +771,7 @@ namespace mp4box
             }
         }
 
-        private void AddAudioPreset(AudioEncoder audioEncoder, Preset.Parameter newParameter)
+        private void AddAudioPreset(AudioEncoderType audioEncoder, Preset.Parameter newParameter)
         {
             List<Preset.Parameter> parameters = GetAudioEncoderParameters(audioEncoder);
             if (parameters.Exists(p => p.name == newParameter.name))
@@ -780,37 +781,37 @@ namespace mp4box
             parameters.Add(newParameter);
         }
 
-        private void DeleteAudioPreset(AudioEncoder audioEncoder, string name)
+        private void DeleteAudioPreset(AudioEncoderType audioEncoder, string name)
         {
             List<Preset.Parameter> parameters = GetAudioEncoderParameters(audioEncoder);
             parameters.RemoveAll(p => p.name == name);
         }
 
-        private Preset.Parameter LoadAudioPresetParameter(AudioEncoder audioEncoder, string name)
+        private Preset.Parameter LoadAudioPresetParameter(AudioEncoderType audioEncoder, string name)
         {
             return GetAudioEncoderParameters(audioEncoder).Find(p => p.name == name);
         }
 
-        private AudioEncoder GetAudioEncoderEnum()
+        private AudioEncoderType GetAudioEncoderEnum()
         {
-            return (AudioEncoder)AudioEncoderComboBox.SelectedIndex;
+            return (AudioEncoderType)AudioEncoderComboBox.SelectedIndex;
         }
 
-        private List<Preset.Parameter> GetAudioEncoderParameters(AudioEncoder audioEncoder)
+        private List<Preset.Parameter> GetAudioEncoderParameters(AudioEncoderType audioEncoder)
         {
             List<Preset.Parameter> parameters;
             switch (audioEncoder)
             {
-                case AudioEncoder.NeroAAC:
+                case AudioEncoderType.NeroAAC:
                     parameters = preset.audio.audioEncoder.NeroAAC;
                     break;
-                case AudioEncoder.FDKAAC:
+                case AudioEncoderType.FDKAAC:
                     parameters = preset.audio.audioEncoder.FDKAAC;
                     break;
-                case AudioEncoder.QAAC:
+                case AudioEncoderType.QAAC:
                     parameters = preset.audio.audioEncoder.QAAC;
                     break;
-                case AudioEncoder.MP3:
+                case AudioEncoderType.MP3:
                     parameters = preset.audio.audioEncoder.MP3;
                     break;
                 default:
@@ -977,9 +978,9 @@ namespace mp4box
             }
 
 
-            if (AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.QAAC
-                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.NeroAAC
-                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.FDKAAC)
+            if (AudioEncoderComboBox.SelectedIndex != (int)AudioEncoderType.QAAC
+                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoderType.NeroAAC
+                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoderType.FDKAAC)
             {
                 DialogResult r = MessageBoxExt.ShowQuestion("音频页面中的编码器未采用AAC将可能导致压制失败，建议将编码器改为QAAC、NeroAAC或FDKAAC。是否继续压制？", "提示");
                 if (r == DialogResult.No)
@@ -1072,9 +1073,9 @@ namespace mp4box
                 return;
             }
 
-            if (AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.QAAC
-                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.NeroAAC
-                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoder.FDKAAC)
+            if (AudioEncoderComboBox.SelectedIndex != (int)AudioEncoderType.QAAC
+                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoderType.NeroAAC
+                && AudioEncoderComboBox.SelectedIndex != (int)AudioEncoderType.FDKAAC)
             {
                 DialogResult r = MessageBoxExt.ShowQuestion("音频页面中的编码器未采用AAC将可能导致压制失败，建议将编码器改为QAAC、NeroAAC或FDKAAC。是否继续压制？", "提示");
                 if (r == DialogResult.No)
@@ -1097,7 +1098,7 @@ namespace mp4box
             //如果是AVS复制到C盘根目录
             if (Path.GetExtension(VideoInputTextBox.Text) == ".avs")
             {
-                if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()) && string.IsNullOrEmpty(FileStringUtil.CheckEmbeddedAviSynth()))
+                if (!(AvsUtil.IsEmbeddedAvsInstalled() || AvsUtil.IsSystemAvsInstalled()))
                 {
                     if (MessageBoxExt.ShowQuestion("检测到本机未安装avisynth无法继续压制，是否去下载安装", "avisynth未安装") == DialogResult.Yes)
                         Process.Start("http://sourceforge.net/projects/avisynth2/");
@@ -1232,7 +1233,7 @@ namespace mp4box
                 string vPresetName = InputBox.Show("请输入这个预设名称", "请为预置配置命名", "新预置名称");
                 if (!string.IsNullOrEmpty(vPresetName))
                 {
-                    VideoEncoder videoEncoder = GetVideoEncoderEnum();
+                    VideoEncoderType videoEncoder = GetVideoEncoderEnum();
                     var newParameter = new Preset.Parameter
                     { name = vPresetName, value = VideoCustomParameterTextBox.Text };
                     AddVideoPreset(videoEncoder, newParameter);
@@ -1251,7 +1252,7 @@ namespace mp4box
         {
             if (MessageBoxExt.ShowQuestion("确定要删除这条预设参数？", "提示") == DialogResult.Yes)
             {
-                VideoEncoder videoEncoder = GetVideoEncoderEnum();
+                VideoEncoderType videoEncoder = GetVideoEncoderEnum();
                 DeleteVideoPreset(videoEncoder, VideoPresetComboBox.Text);
                 Preset.Preset.Save(preset);
                 LoadVideoPreset(videoEncoder);
@@ -1469,10 +1470,10 @@ namespace mp4box
             if (VideoEncoderComboBox.SelectedIndex == -1)
                 return;
 
-            VideoEncoder videoEncoder = GetVideoEncoderEnum();
+            VideoEncoderType videoEncoder = GetVideoEncoderEnum();
             switch (videoEncoder)
             {
-                case VideoEncoder.X265:
+                case VideoEncoderType.X265:
                     VideoOutputTextBox.Text = VideoOutputTextBox.Text.Replace("_x264.", "_x265.");
 
                     //VideoSubtitleTextBox.Text = string.Empty;
@@ -1487,7 +1488,7 @@ namespace mp4box
                     VideoCustomParameterTextBox.Text = string.Empty;
                     LoadVideoPreset(videoEncoder, true);
                     break;
-                case VideoEncoder.X264:
+                case VideoEncoderType.X264:
                     VideoOutputTextBox.Text = VideoOutputTextBox.Text.Replace("_x265.", "_x264.");
 
                     VideoSubtitleTextBox.Enabled = true;
@@ -1522,13 +1523,13 @@ namespace mp4box
         {
             if (File.Exists(AudioInputTextBox.Text))
                 AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text,
-                    GenerateAudioOutputExt((AudioEncoder)AudioEncoderComboBox.SelectedIndex));
+                    GenerateAudioOutputExt((AudioEncoderType)AudioEncoderComboBox.SelectedIndex));
 
-            switch ((AudioEncoder)AudioEncoderComboBox.SelectedIndex)
+            switch ((AudioEncoderType)AudioEncoderComboBox.SelectedIndex)
             {
-                case AudioEncoder.NeroAAC:
-                case AudioEncoder.QAAC:
-                case AudioEncoder.FDKAAC:
+                case AudioEncoderType.NeroAAC:
+                case AudioEncoderType.QAAC:
+                case AudioEncoderType.FDKAAC:
                     AudioBitrateComboBox.Enabled =
                     AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = true;
@@ -1539,9 +1540,9 @@ namespace mp4box
                     }
                     break;
 
-                case AudioEncoder.WAV:
-                case AudioEncoder.ALAC:
-                case AudioEncoder.FLAC:
+                case AudioEncoderType.WAV:
+                case AudioEncoderType.ALAC:
+                case AudioEncoderType.FLAC:
                     AudioBitrateComboBox.Enabled =
                     AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = false;
@@ -1549,7 +1550,7 @@ namespace mp4box
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case AudioEncoder.AC3:
+                case AudioEncoderType.AC3:
                     AudioBitrateComboBox.Enabled = true; // Why?
                     AudioAudioModeBitrateRadioButton.Enabled = true; // Why?
                     AudioAudioModeCustomRadioButton.Enabled = false; // Why just enable 1 radio button?
@@ -1557,7 +1558,7 @@ namespace mp4box
                     AudioPresetAddButton.Visible = false;
                     break;
 
-                case AudioEncoder.MP3:
+                case AudioEncoderType.MP3:
                     AudioBitrateComboBox.Enabled =
                     AudioAudioModeBitrateRadioButton.Enabled =
                     AudioAudioModeCustomRadioButton.Enabled = true;
@@ -1662,7 +1663,7 @@ namespace mp4box
             }
 
             string aac = "";
-            string audioOutputExt = GenerateAudioOutputExt((AudioEncoder)AudioEncoderComboBox.SelectedIndex);
+            string audioOutputExt = GenerateAudioOutputExt((AudioEncoderType)AudioEncoderComboBox.SelectedIndex);
 
             foreach (var item in AudioBatchItemListBox.Items)
             {
@@ -1684,19 +1685,19 @@ namespace mp4box
         /// <param name="audioEncoder">AudioEncoder</param>
         /// <param name="formatString">Format String of the new file name. Default is "_AAC.aac"</param>
         /// <returns>New postfix and/or extension</returns>
-        private string GenerateAudioOutputExt(AudioEncoder audioEncoder, string formatString = "_{0}.{1}")
+        private string GenerateAudioOutputExt(AudioEncoderType audioEncoder, string formatString = "_{0}.{1}")
         {
             string codec, outputExt;
             switch (audioEncoder)
             {
-                case AudioEncoder.NeroAAC: codec = "AAC"; outputExt = "mp4"; break;
-                case AudioEncoder.QAAC: codec = "AAC"; outputExt = "m4a"; break;
-                case AudioEncoder.WAV: codec = "WAV"; outputExt = "wav"; break;
-                case AudioEncoder.ALAC: codec = "ALAC"; outputExt = "m4a"; break;
-                case AudioEncoder.FLAC: codec = "FLAC"; outputExt = "flac"; break;
-                case AudioEncoder.FDKAAC: codec = "AAC"; outputExt = "m4a"; break;
-                case AudioEncoder.AC3: codec = "AC3"; outputExt = "ac3"; break;
-                case AudioEncoder.MP3: codec = "MP3"; outputExt = "mp3"; break;
+                case AudioEncoderType.NeroAAC: codec = "AAC"; outputExt = "mp4"; break;
+                case AudioEncoderType.QAAC: codec = "AAC"; outputExt = "m4a"; break;
+                case AudioEncoderType.WAV: codec = "WAV"; outputExt = "wav"; break;
+                case AudioEncoderType.ALAC: codec = "ALAC"; outputExt = "m4a"; break;
+                case AudioEncoderType.FLAC: codec = "FLAC"; outputExt = "flac"; break;
+                case AudioEncoderType.FDKAAC: codec = "AAC"; outputExt = "m4a"; break;
+                case AudioEncoderType.AC3: codec = "AC3"; outputExt = "ac3"; break;
+                case AudioEncoderType.MP3: codec = "MP3"; outputExt = "mp3"; break;
                 default: codec = "AAC"; outputExt = "aac"; break;
             }
             return string.Format(formatString, codec, outputExt);
@@ -1750,7 +1751,7 @@ namespace mp4box
             {
                 audioInput = AudioInputTextBox.Text;
                 AudioOutputTextBox.Text = Path.ChangeExtension(AudioInputTextBox.Text,
-                    GenerateAudioOutputExt((AudioEncoder)AudioEncoderComboBox.SelectedIndex));
+                    GenerateAudioOutputExt((AudioEncoderType)AudioEncoderComboBox.SelectedIndex));
             }
         }
 
@@ -1800,7 +1801,7 @@ namespace mp4box
                 string aPresetName = InputBox.Show("请输入这个预设名称", "请为预置配置命名", "新预置名称");
                 if (!string.IsNullOrEmpty(aPresetName))
                 {
-                    AudioEncoder audioEncoder = GetAudioEncoderEnum();
+                    AudioEncoderType audioEncoder = GetAudioEncoderEnum();
                     var newParameter = new Preset.Parameter
                     { name = aPresetName, value = AudioCustomParameterTextBox.Text };
                     AddAudioPreset(audioEncoder, newParameter);
@@ -1819,7 +1820,7 @@ namespace mp4box
         {
             if (MessageBoxExt.ShowQuestion("确定要删除这条预设参数？", "提示") == DialogResult.Yes)
             {
-                AudioEncoder audioEncoder = GetAudioEncoderEnum();
+                AudioEncoderType audioEncoder = GetAudioEncoderEnum();
                 DeleteAudioPreset(audioEncoder, AudioPresetComboBox.Text);
                 Preset.Preset.Save(preset);
                 LoadAudioPreset(audioEncoder);
@@ -2702,7 +2703,7 @@ namespace mp4box
                 if (dgs == DialogResult.No) return;
             }
 
-            if (string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()) && string.IsNullOrEmpty(FileStringUtil.CheckEmbeddedAviSynth()))
+            if (!(AvsUtil.IsEmbeddedAvsInstalled() || AvsUtil.IsSystemAvsInstalled()))
             {
                 if (MessageBoxExt.ShowQuestion("检测到本机未安装avisynth无法继续压制，是否去下载安装", "avisynth未安装") == DialogResult.Yes)
                     Process.Start("http://sourceforge.net/projects/avisynth2/");

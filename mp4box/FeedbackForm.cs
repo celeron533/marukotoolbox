@@ -119,12 +119,20 @@ namespace mp4box
                 sb.AppendLine(string.Format("Microsoft .NET Framework: {0}", version4));
             if (!string.IsNullOrEmpty(version) && !version4.Equals(version))
                 sb.AppendLine(string.Format("Microsoft .NET Framework: {0}", version));
-            if (!string.IsNullOrEmpty(FileStringUtil.CheckAviSynth()))
-                sb.AppendLine(FileStringUtil.CheckAviSynth());
-            else if (!string.IsNullOrEmpty(FileStringUtil.CheckEmbeddedAviSynth()))
-                sb.AppendLine(FileStringUtil.CheckEmbeddedAviSynth() + " (本地内置的绿色版本)");
+
+            sb.AppendLine("Detected AVS installations:");
+            var avsLocations = AvsUtil.GetAvsLocations();
+            if (avsLocations.Count == 0)
+            {
+                sb.AppendLine("Avisynth not installed.");
+            }
             else
-                sb.AppendLine("Avisynth 未安装");
+            {
+                foreach (var avsLocation in avsLocations)
+                {
+                    sb.AppendLine("  " + avsLocation.ToString());
+                }
+            }
             sb.AppendLine("------------------------------以上信息为自动检测-----------------------------");
             sb.AppendLine().AppendLine();
             return sb.ToString();
