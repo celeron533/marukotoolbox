@@ -155,14 +155,18 @@ namespace mp4box
             SaveSettings();
         }
 
-        private void DeleteTempFiles()
+        /// <summary>
+        /// Delete temporary and intermediate files 
+        /// </summary>
+        /// <returns>False: do not need to delete files now.</returns>
+        private bool DeleteTempFiles()
         {
             string fileName = System.Reflection.Assembly.GetExecutingAssembly().Location;
             Process[] processes = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName);
 
             // If there are other running instances, abort
             if (processes.Count(p => p.MainModule.FileName == fileName) > 1)
-                return;
+                return false;
 
             List<string> deleteFileList = new List<string>();
 
@@ -176,6 +180,7 @@ namespace mp4box
             deleteFileList.AddRange(batFiles);
 
             deleteFileList.ForEach(f => File.Delete(f));
+            return true;
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
