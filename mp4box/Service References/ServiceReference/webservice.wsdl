@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
       <s:element name="HelloWorld">
@@ -31,6 +31,36 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="StuioMasterLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StuioMasterLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StuioMasterLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WechatLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WechatLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WechatLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="string" nillable="true" type="s:string" />
       <s:element name="boolean" type="s:boolean" />
     </s:schema>
@@ -47,6 +77,18 @@
   <wsdl:message name="PostFeedbackSoapOut">
     <wsdl:part name="parameters" element="tns:PostFeedbackResponse" />
   </wsdl:message>
+  <wsdl:message name="StuioMasterLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:StuioMasterLogin" />
+  </wsdl:message>
+  <wsdl:message name="StuioMasterLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:StuioMasterLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="WechatLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:WechatLogin" />
+  </wsdl:message>
+  <wsdl:message name="WechatLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:WechatLoginResponse" />
+  </wsdl:message>
   <wsdl:message name="HelloWorldHttpGetIn" />
   <wsdl:message name="HelloWorldHttpGetOut">
     <wsdl:part name="Body" element="tns:string" />
@@ -60,6 +102,20 @@
     <wsdl:part name="log" type="s:string" />
   </wsdl:message>
   <wsdl:message name="PostFeedbackHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="StuioMasterLoginHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="StuioMasterLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="WechatLoginHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WechatLoginHttpGetOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
   <wsdl:message name="HelloWorldHttpPostIn" />
@@ -77,6 +133,20 @@
   <wsdl:message name="PostFeedbackHttpPostOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
+  <wsdl:message name="StuioMasterLoginHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="StuioMasterLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="WechatLoginHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WechatLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
   <wsdl:portType name="WebServiceSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -85,6 +155,14 @@
     <wsdl:operation name="PostFeedback">
       <wsdl:input message="tns:PostFeedbackSoapIn" />
       <wsdl:output message="tns:PostFeedbackSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StuioMasterLogin">
+      <wsdl:input message="tns:StuioMasterLoginSoapIn" />
+      <wsdl:output message="tns:StuioMasterLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WechatLogin">
+      <wsdl:input message="tns:WechatLoginSoapIn" />
+      <wsdl:output message="tns:WechatLoginSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="WebServiceHttpGet">
@@ -96,6 +174,14 @@
       <wsdl:input message="tns:PostFeedbackHttpGetIn" />
       <wsdl:output message="tns:PostFeedbackHttpGetOut" />
     </wsdl:operation>
+    <wsdl:operation name="StuioMasterLogin">
+      <wsdl:input message="tns:StuioMasterLoginHttpGetIn" />
+      <wsdl:output message="tns:StuioMasterLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WechatLogin">
+      <wsdl:input message="tns:WechatLoginHttpGetIn" />
+      <wsdl:output message="tns:WechatLoginHttpGetOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="WebServiceHttpPost">
     <wsdl:operation name="HelloWorld">
@@ -105,6 +191,14 @@
     <wsdl:operation name="PostFeedback">
       <wsdl:input message="tns:PostFeedbackHttpPostIn" />
       <wsdl:output message="tns:PostFeedbackHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StuioMasterLogin">
+      <wsdl:input message="tns:StuioMasterLoginHttpPostIn" />
+      <wsdl:output message="tns:StuioMasterLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WechatLogin">
+      <wsdl:input message="tns:WechatLoginHttpPostIn" />
+      <wsdl:output message="tns:WechatLoginHttpPostOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
@@ -120,6 +214,24 @@
     </wsdl:operation>
     <wsdl:operation name="PostFeedback">
       <soap:operation soapAction="http://tempuri.org/PostFeedback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StuioMasterLogin">
+      <soap:operation soapAction="http://tempuri.org/StuioMasterLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WechatLogin">
+      <soap:operation soapAction="http://tempuri.org/WechatLogin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -148,6 +260,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="StuioMasterLogin">
+      <soap12:operation soapAction="http://tempuri.org/StuioMasterLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WechatLogin">
+      <soap12:operation soapAction="http://tempuri.org/WechatLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebServiceHttpGet" type="tns:WebServiceHttpGet">
     <http:binding verb="GET" />
@@ -169,6 +299,24 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="StuioMasterLogin">
+      <http:operation location="/StuioMasterLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WechatLogin">
+      <http:operation location="/WechatLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebServiceHttpPost" type="tns:WebServiceHttpPost">
     <http:binding verb="POST" />
@@ -183,6 +331,24 @@
     </wsdl:operation>
     <wsdl:operation name="PostFeedback">
       <http:operation location="/PostFeedback" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StuioMasterLogin">
+      <http:operation location="/StuioMasterLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WechatLogin">
+      <http:operation location="/WechatLogin" />
       <wsdl:input>
         <mime:content type="application/x-www-form-urlencoded" />
       </wsdl:input>
