@@ -21,16 +21,15 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Windows.Forms;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using mp4box.Utility;
 using System.Diagnostics;
+
 
 namespace mp4box
 {
-    public static class FormatExtractor
+    public static class FormatExtractUtil
     {
         /// <summary>
         /// Regex pattern. ffmpeg -i sample output:

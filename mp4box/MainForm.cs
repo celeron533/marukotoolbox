@@ -511,7 +511,7 @@ namespace mp4box
             //    Path.GetFileNameWithoutExtension(namevideo) + suf + '.' +
             //    FormatExtractor.Extract(workPath, namevideo)[streamIndex].Format;
             string outfile = Path.ChangeExtension(namevideo, suf + '.' +
-                             FormatExtractor.Extract(namevideo)[streamIndex].Format);
+                             FormatExtractUtil.Extract(namevideo)[streamIndex].Format);
             aextract += FileStringUtil.FormatPath(outfile);
             string batpath = ToolsUtil.ToolsFolder + "\\mkvextract.bat";
             File.WriteAllText(batpath, aextract, Encoding.Default);

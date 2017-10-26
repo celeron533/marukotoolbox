@@ -176,7 +176,7 @@
     <Compile Include="Extension\StringBuilderExt.cs" />
     <Compile Include="Utility\FileStringUtil.cs" />
     <Compile Include="SplashScreen.cs" />
-    <Compile Include="FormatExtractor.cs" />
+    <Compile Include="Utility\FormatExtractUtil.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
