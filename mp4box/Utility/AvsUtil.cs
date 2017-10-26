@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace mp4box.Utility
+namespace mp4box
 {
     /// <summary>
     /// Operations relate to AVS

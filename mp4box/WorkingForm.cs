@@ -20,7 +20,6 @@
 //
 
 using mp4box.Extension;
-using mp4box.Utility;
 using NLog;
 using System;
 using System.Collections.Generic;

@@ -10,7 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace mp4box.Utility
+namespace mp4box
 {
     public class UpdateCheckerUtil
     {

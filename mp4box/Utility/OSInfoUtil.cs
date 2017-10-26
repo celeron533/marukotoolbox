@@ -23,7 +23,7 @@ using System.Management;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace mp4box.Utility
+namespace mp4box
 {
     public static class OSInfoUtil
     {

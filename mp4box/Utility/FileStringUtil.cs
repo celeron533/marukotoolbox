@@ -29,7 +29,7 @@ using System.Threading;
 using mp4box.Extension;
 using NLog;
 
-namespace mp4box.Utility
+namespace mp4box
 {
     /// <summary>
     /// File, folder and file name related operations.

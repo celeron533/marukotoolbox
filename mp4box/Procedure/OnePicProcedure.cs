@@ -1,5 +1,4 @@
-﻿using mp4box.Utility;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;

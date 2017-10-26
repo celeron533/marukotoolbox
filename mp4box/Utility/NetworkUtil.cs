@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace mp4box.Utility
+namespace mp4box
 {
     public static class NetworkUtil
     {

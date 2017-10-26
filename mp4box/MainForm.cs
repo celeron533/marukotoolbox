@@ -24,7 +24,6 @@ using ControlExs;
 using MediaInfoLib;
 using mp4box.Extension;
 using mp4box.Procedure;
-using mp4box.Utility;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -39,7 +38,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using static mp4box.Utility.DialogUtil;
+using static mp4box.DialogUtil;
 
 namespace mp4box
 {

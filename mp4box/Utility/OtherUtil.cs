@@ -4,7 +4,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 
-namespace mp4box.Utility
+namespace mp4box
 {
     public static class OtherUtil
     {
