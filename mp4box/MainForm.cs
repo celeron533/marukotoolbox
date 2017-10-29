@@ -3047,6 +3047,11 @@ namespace mp4box
                 Application.Restart();
         }
 
+        private void ConfigUiLanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SwitchUILanguage(Thread.CurrentThread);
+        }
+
         #endregion Config Tab
 
         #region Help Tab
@@ -3088,15 +3093,6 @@ namespace mp4box
         }
 
         #endregion Help Tab
-
-        #region globalization
-
-        private void ConfigUiLanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SwitchUILanguage(Thread.CurrentThread);
-        }
-
-        #endregion globalization
 
         //Ctrl+A 可以全选文本
         private void TextBoxSelectAll(object sender, KeyEventArgs e)
