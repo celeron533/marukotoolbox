@@ -3007,7 +3007,7 @@ namespace mp4box
         }
         private void ConfigX264PriorityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ChangeProcessesPriority();
+            ChangeEncoderProcessPriority();
         }
         private void ConfigFunctionViewLogButton_Click(object sender, EventArgs e)
         {
@@ -3121,27 +3121,13 @@ namespace mp4box
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ChangeProcessesPriority();
+            ChangeEncoderProcessPriority();
         }
 
-        private void ChangeProcessesPriority()
+        private void ChangeEncoderProcessPriority()
         {
             string encoderProcessName = Path.GetFileNameWithoutExtension(VideoEncoderComboBox.Text);
-            ProcessPriorityClass newPriority;
-
-            switch (ConfigX264PriorityComboBox.SelectedIndex)
-            {
-                case 0: newPriority = ProcessPriorityClass.Idle; break;
-                case 1: newPriority = ProcessPriorityClass.BelowNormal; break;
-                default:
-                case 2: newPriority = ProcessPriorityClass.Normal; break;
-                case 3: newPriority = ProcessPriorityClass.AboveNormal; break;
-                case 4: newPriority = ProcessPriorityClass.High; break;
-                case 5: newPriority = ProcessPriorityClass.RealTime; break;
-            }
-
-            Process.GetProcesses().Where(p => p.ProcessName == encoderProcessName)
-                                  .ToList().ForEach(p => p.PriorityClass = newPriority);
+            OtherUtil.ChangeProcessesPriorityByName(encoderProcessName, (ProcessPriority)ConfigX264PriorityComboBox.SelectedIndex);
         }
 
         [Obsolete("Not used")]

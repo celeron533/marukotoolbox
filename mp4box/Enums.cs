@@ -51,4 +51,16 @@ namespace mp4box
         System32,
         SysWOW64
     }
+    
+    public enum ProcessPriority
+    {
+        //todo: remove or merge it to standard ProcessPriorityClass
+        //Sequence is mapping from ConfigX264PriorityComboBox.SelectedIndex
+        Idle=0,
+        BelowNormal,
+        Normal,
+        AboveNormal,
+        High,
+        RealTime,
+    }
 }

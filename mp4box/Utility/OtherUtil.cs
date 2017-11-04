@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
@@ -58,5 +59,31 @@ namespace mp4box
             }
         }
 
+        /// <summary>
+        /// Change the process priority by process name
+        /// </summary>
+        /// <param name="processName"></param>
+        /// <param name="priority"></param>
+        /// <returns>Count of affected processes.</returns>
+        public static int ChangeProcessesPriorityByName(string processName, ProcessPriority priority)
+        {
+
+            ProcessPriorityClass newPriority;
+
+            switch (priority)
+            {
+                case ProcessPriority.Idle: newPriority = ProcessPriorityClass.Idle; break;
+                case ProcessPriority.BelowNormal: newPriority = ProcessPriorityClass.BelowNormal; break;
+                default:
+                case ProcessPriority.Normal: newPriority = ProcessPriorityClass.Normal; break;
+                case ProcessPriority.AboveNormal: newPriority = ProcessPriorityClass.AboveNormal; break;
+                case ProcessPriority.High: newPriority = ProcessPriorityClass.High; break;
+                case ProcessPriority.RealTime: newPriority = ProcessPriorityClass.RealTime; break;
+            }
+
+            var processes = Process.GetProcesses().Where(p => p.ProcessName == processName);
+            processes.ToList().ForEach(p => p.PriorityClass = newPriority);
+            return processes.Count();
+        }
     }
 }
