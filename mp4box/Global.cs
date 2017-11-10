@@ -8,6 +8,8 @@ namespace mp4box
 {
     public static class Global
     {
+        public static readonly DateTime ReleaseDate = AssemblyUtil.GetAssemblyVersionTime();
+
         public static class Running
         {
             public static readonly string startPath = AppDomain.CurrentDomain.BaseDirectory;

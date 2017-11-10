@@ -6744,206 +6744,26 @@
   <data name="&gt;&gt;VideoTab.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="HelpFeedbackButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+  <data name="helpUserControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="HelpFeedbackButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="helpUserControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 582</value>
   </data>
-  <data name="HelpFeedbackButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 559</value>
-  </data>
-  <data name="HelpFeedbackButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 23</value>
-  </data>
-  <data name="HelpFeedbackButton.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="HelpFeedbackButton.Text" xml:space="preserve">
-    <value>反馈问题</value>
-  </data>
-  <data name="&gt;&gt;HelpFeedbackButton.Name" xml:space="preserve">
-    <value>HelpFeedbackButton</value>
-  </data>
-  <data name="&gt;&gt;HelpFeedbackButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;HelpFeedbackButton.Parent" xml:space="preserve">
-    <value>HelpTab</value>
-  </data>
-  <data name="&gt;&gt;HelpFeedbackButton.ZOrder" xml:space="preserve">
+  <data name="helpUserControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="HelpContentRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 6</value>
+  <data name="&gt;&gt;helpUserControl1.Name" xml:space="preserve">
+    <value>helpUserControl1</value>
   </data>
-  <data name="HelpContentRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>548, 547</value>
+  <data name="&gt;&gt;helpUserControl1.Type" xml:space="preserve">
+    <value>mp4box.UserCtrl.HelpUserControl, xiaowan, Version=1.0.6523.36618, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="HelpContentRichTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="HelpContentRichTextBox.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;HelpContentRichTextBox.Name" xml:space="preserve">
-    <value>HelpContentRichTextBox</value>
-  </data>
-  <data name="&gt;&gt;HelpContentRichTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HelpContentRichTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;helpUserControl1.Parent" xml:space="preserve">
     <value>HelpTab</value>
   </data>
-  <data name="&gt;&gt;HelpContentRichTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="HelpReleaseDateLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="HelpReleaseDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HelpReleaseDateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 565</value>
-  </data>
-  <data name="HelpReleaseDateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 12</value>
-  </data>
-  <data name="HelpReleaseDateLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;HelpReleaseDateLabel.Name" xml:space="preserve">
-    <value>HelpReleaseDateLabel</value>
-  </data>
-  <data name="&gt;&gt;HelpReleaseDateLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HelpReleaseDateLabel.Parent" xml:space="preserve">
-    <value>HelpTab</value>
-  </data>
-  <data name="&gt;&gt;HelpReleaseDateLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="HelpReleaseDateInfoLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="HelpReleaseDateInfoLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HelpReleaseDateInfoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 565</value>
-  </data>
-  <data name="HelpReleaseDateInfoLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
-  </data>
-  <data name="HelpReleaseDateInfoLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="HelpReleaseDateInfoLabel.Text" xml:space="preserve">
-    <value>发布日期</value>
-  </data>
-  <data name="&gt;&gt;HelpReleaseDateInfoLabel.Name" xml:space="preserve">
-    <value>HelpReleaseDateInfoLabel</value>
-  </data>
-  <data name="&gt;&gt;HelpReleaseDateInfoLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HelpReleaseDateInfoLabel.Parent" xml:space="preserve">
-    <value>HelpTab</value>
-  </data>
-  <data name="&gt;&gt;HelpReleaseDateInfoLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="HelpCheckUpdateButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
-  </data>
-  <data name="HelpCheckUpdateButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HelpCheckUpdateButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>301, 559</value>
-  </data>
-  <data name="HelpCheckUpdateButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 23</value>
-  </data>
-  <data name="HelpCheckUpdateButton.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="HelpCheckUpdateButton.Text" xml:space="preserve">
-    <value>检查更新</value>
-  </data>
-  <data name="&gt;&gt;HelpCheckUpdateButton.Name" xml:space="preserve">
-    <value>HelpCheckUpdateButton</value>
-  </data>
-  <data name="&gt;&gt;HelpCheckUpdateButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;HelpCheckUpdateButton.Parent" xml:space="preserve">
-    <value>HelpTab</value>
-  </data>
-  <data name="&gt;&gt;HelpCheckUpdateButton.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="HelpHomepageButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
-  </data>
-  <data name="HelpHomepageButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HelpHomepageButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 559</value>
-  </data>
-  <data name="HelpHomepageButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 23</value>
-  </data>
-  <data name="HelpHomepageButton.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="HelpHomepageButton.Text" xml:space="preserve">
-    <value>软件主页</value>
-  </data>
-  <data name="&gt;&gt;HelpHomepageButton.Name" xml:space="preserve">
-    <value>HelpHomepageButton</value>
-  </data>
-  <data name="&gt;&gt;HelpHomepageButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;HelpHomepageButton.Parent" xml:space="preserve">
-    <value>HelpTab</value>
-  </data>
-  <data name="&gt;&gt;HelpHomepageButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="HelpAboutButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
-  </data>
-  <data name="HelpAboutButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="HelpAboutButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>496, 559</value>
-  </data>
-  <data name="HelpAboutButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 23</value>
-  </data>
-  <data name="HelpAboutButton.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="HelpAboutButton.Text" xml:space="preserve">
-    <value>关于</value>
-  </data>
-  <data name="&gt;&gt;HelpAboutButton.Name" xml:space="preserve">
-    <value>HelpAboutButton</value>
-  </data>
-  <data name="&gt;&gt;HelpAboutButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;HelpAboutButton.Parent" xml:space="preserve">
-    <value>HelpTab</value>
-  </data>
-  <data name="&gt;&gt;HelpAboutButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;helpUserControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="HelpTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

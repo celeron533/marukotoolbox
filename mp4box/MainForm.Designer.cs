@@ -262,13 +262,6 @@
             this.VideoPresetLabel = new System.Windows.Forms.Label();
             this.VideoBitrateNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.HelpTab = new System.Windows.Forms.TabPage();
-            this.HelpFeedbackButton = new ControlExs.QQButton();
-            this.HelpContentRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.HelpReleaseDateLabel = new System.Windows.Forms.Label();
-            this.HelpReleaseDateInfoLabel = new System.Windows.Forms.Label();
-            this.HelpCheckUpdateButton = new ControlExs.QQButton();
-            this.HelpHomepageButton = new ControlExs.QQButton();
-            this.HelpAboutButton = new ControlExs.QQButton();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.MiscTab = new System.Windows.Forms.TabPage();
             this.MiscBlackGroupBox = new System.Windows.Forms.GroupBox();
@@ -313,6 +306,7 @@
             this.ConfigFunctionAllLogButton = new ControlExs.QQButton();
             this.ConfigFunctionRestoreDefaultButton = new ControlExs.QQButton();
             this.ConfigFunctionViewLogButton = new ControlExs.QQButton();
+            this.helpUserControl = new mp4box.UserCtrl.HelpUserControl();
             this.MiscMiscGroupBox.SuspendLayout();
             this.MediaInfoTab.SuspendLayout();
             this.AvsTab.SuspendLayout();
@@ -2518,62 +2512,10 @@
             // 
             // HelpTab
             // 
-            this.HelpTab.Controls.Add(this.HelpFeedbackButton);
-            this.HelpTab.Controls.Add(this.HelpContentRichTextBox);
-            this.HelpTab.Controls.Add(this.HelpReleaseDateLabel);
-            this.HelpTab.Controls.Add(this.HelpReleaseDateInfoLabel);
-            this.HelpTab.Controls.Add(this.HelpCheckUpdateButton);
-            this.HelpTab.Controls.Add(this.HelpHomepageButton);
-            this.HelpTab.Controls.Add(this.HelpAboutButton);
+            this.HelpTab.Controls.Add(this.helpUserControl);
             resources.ApplyResources(this.HelpTab, "HelpTab");
             this.HelpTab.Name = "HelpTab";
             this.HelpTab.UseVisualStyleBackColor = true;
-            // 
-            // HelpFeedbackButton
-            // 
-            resources.ApplyResources(this.HelpFeedbackButton, "HelpFeedbackButton");
-            this.HelpFeedbackButton.Name = "HelpFeedbackButton";
-            this.HelpFeedbackButton.UseVisualStyleBackColor = true;
-            this.HelpFeedbackButton.Click += new System.EventHandler(this.HelpFeedbackButton_Click);
-            // 
-            // HelpContentRichTextBox
-            // 
-            resources.ApplyResources(this.HelpContentRichTextBox, "HelpContentRichTextBox");
-            this.HelpContentRichTextBox.Name = "HelpContentRichTextBox";
-            this.HelpContentRichTextBox.ReadOnly = true;
-            this.HelpContentRichTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.HelpContentRichTextBox_LinkClicked);
-            // 
-            // HelpReleaseDateLabel
-            // 
-            resources.ApplyResources(this.HelpReleaseDateLabel, "HelpReleaseDateLabel");
-            this.HelpReleaseDateLabel.Name = "HelpReleaseDateLabel";
-            this.HelpReleaseDateLabel.DoubleClick += new System.EventHandler(this.HelpReleaseDateLabel_DoubleClick);
-            // 
-            // HelpReleaseDateInfoLabel
-            // 
-            resources.ApplyResources(this.HelpReleaseDateInfoLabel, "HelpReleaseDateInfoLabel");
-            this.HelpReleaseDateInfoLabel.Name = "HelpReleaseDateInfoLabel";
-            // 
-            // HelpCheckUpdateButton
-            // 
-            resources.ApplyResources(this.HelpCheckUpdateButton, "HelpCheckUpdateButton");
-            this.HelpCheckUpdateButton.Name = "HelpCheckUpdateButton";
-            this.HelpCheckUpdateButton.UseVisualStyleBackColor = true;
-            this.HelpCheckUpdateButton.Click += new System.EventHandler(this.HelpCheckUpdateButton_Click);
-            // 
-            // HelpHomepageButton
-            // 
-            resources.ApplyResources(this.HelpHomepageButton, "HelpHomepageButton");
-            this.HelpHomepageButton.Name = "HelpHomepageButton";
-            this.HelpHomepageButton.UseVisualStyleBackColor = true;
-            this.HelpHomepageButton.Click += new System.EventHandler(this.HelpHomepageButton_Click);
-            // 
-            // HelpAboutButton
-            // 
-            resources.ApplyResources(this.HelpAboutButton, "HelpAboutButton");
-            this.HelpAboutButton.Name = "HelpAboutButton";
-            this.HelpAboutButton.UseVisualStyleBackColor = true;
-            this.HelpAboutButton.Click += new System.EventHandler(this.HelpAboutButton_Click);
             // 
             // MainTabControl
             // 
@@ -2995,6 +2937,11 @@
             this.ConfigFunctionViewLogButton.UseVisualStyleBackColor = true;
             this.ConfigFunctionViewLogButton.Click += new System.EventHandler(this.ConfigFunctionViewLogButton_Click);
             // 
+            // helpUserControl
+            // 
+            resources.ApplyResources(this.helpUserControl, "helpUserControl");
+            this.helpUserControl.Name = "helpUserControl";
+            // 
             // MainForm
             // 
             this.AllowDrop = true;
@@ -3066,7 +3013,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.VideoCrfNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VideoBitrateNumericUpDown)).EndInit();
             this.HelpTab.ResumeLayout(false);
-            this.HelpTab.PerformLayout();
             this.MainTabControl.ResumeLayout(false);
             this.MiscTab.ResumeLayout(false);
             this.MiscBlackGroupBox.ResumeLayout(false);
@@ -3215,8 +3161,6 @@
         private System.Windows.Forms.NumericUpDown VideoCrfNumericUpDown;
         private System.Windows.Forms.Label VideoBitrateLabel;
         private System.Windows.Forms.TabPage HelpTab;
-        private ControlExs.QQButton HelpHomepageButton;
-        private ControlExs.QQButton HelpAboutButton;
         private System.Windows.Forms.TabControl MainTabControl;
         private ControlExs.QQRadioButton AudioAudioModeBitrateRadioButton;
         private ControlExs.QQRadioButton AudioAudioModeCustomRadioButton;
@@ -3325,14 +3269,10 @@
         private System.Windows.Forms.NumericUpDown MiscBlackBitrateNumericUpDown;
         private ControlExs.QQCheckBox ConfigFunctionDeleteTempFileCheckBox;
         private System.Windows.Forms.ComboBox AudioBitrateComboBox;
-        private ControlExs.QQButton HelpCheckUpdateButton;
-        private System.Windows.Forms.Label HelpReleaseDateInfoLabel;
-        private System.Windows.Forms.Label HelpReleaseDateLabel;
         private ControlExs.QQCheckBox ConfigUiTrayModeCheckBox;
         private ControlExs.QQCheckBox ConfigUiSplashScreenCheckBox;
         private System.Windows.Forms.Label ConfigX264ThreadsLabel;
         private System.Windows.Forms.ComboBox ConfigX264ThreadsComboBox;
-        private System.Windows.Forms.RichTextBox HelpContentRichTextBox;
         private ControlExs.QQCheckBox AvsIncludeAudioCheckBox;
         private ControlExs.QQTextBox ConfigFunctionVideoPlayerTextBox;
         private ControlExs.QQButton ConfigFunctionVideoPlayerButton;
@@ -3348,7 +3288,6 @@
         private System.Windows.Forms.Label MuxMp4ParLabel;
         private ControlExs.QQButton ExtractMkvExtractByExternalButton;
         private ControlExs.QQButton MuxMp4ReplaceAudioButton;
-        private ControlExs.QQButton HelpFeedbackButton;
         private ControlExs.QQCheckBox ConfigFunctionAutoCheckUpdateCheckBox;
         private System.Windows.Forms.ComboBox MiscMiscTransposeComboBox;
         private ControlExs.QQButton MiscMiscStartRotateButton;
@@ -3370,6 +3309,7 @@
         private System.Windows.Forms.Label MiscOnePicDurationSecondsLabel;
         private System.Windows.Forms.TextBox MiscOnePicDurationSecondsTextBox;
         private System.Windows.Forms.Label MiscOnePicDurationLabel;
+        private UserCtrl.HelpUserControl helpUserControl;
     }
 }
 

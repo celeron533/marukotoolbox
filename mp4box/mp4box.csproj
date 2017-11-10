@@ -155,6 +155,12 @@
     <Compile Include="Procedure\MuxMp4Procedure.cs" />
     <Compile Include="Procedure\Shared.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="UserCtrl\HelpUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\HelpUserControl.Designer.cs">
+      <DependentUpon>HelpUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility\AvsUtil.cs" />
     <Compile Include="Utility\UpdateCheckUtil.cs" />
     <Compile Include="Utility\AssemblyUtil.cs" />
@@ -250,6 +256,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserCtrl\HelpUserControl.resx">
+      <DependentUpon>HelpUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WorkingForm.en.resx">
       <DependentUpon>WorkingForm.cs</DependentUpon>
     </EmbeddedResource>

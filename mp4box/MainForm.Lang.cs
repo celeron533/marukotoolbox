@@ -102,11 +102,11 @@ namespace mp4box
                     ExtractMp4InputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
                     ExtractFlvInputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
                     ExtractMkvInputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
-                    //load Help Text
-                    if (File.Exists(Global.Running.startPath + "\\help.rtf"))
-                    {
-                        HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
-                    }
+                    ////load Help Text
+                    //if (File.Exists(Global.Running.startPath + "\\help.rtf"))
+                    //{
+                    //    HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
+                    //}
                     break;
 
                 case "zh-TW":
@@ -132,10 +132,10 @@ namespace mp4box
                     ExtractFlvInputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
                     ExtractMkvInputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
                     //load Help Text
-                    if (File.Exists(Global.Running.startPath + "\\help_zh_tw.rtf"))
-                    {
-                        HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help_zh_tw.rtf");
-                    }
+                    //if (File.Exists(Global.Running.startPath + "\\help_zh_tw.rtf"))
+                    //{
+                    //    HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help_zh_tw.rtf");
+                    //}
                     break;
 
                 case "en-US":
@@ -161,10 +161,10 @@ namespace mp4box
                     ExtractFlvInputTextBox.EmptyTextTip = "New file will be created in the original folder";
                     ExtractMkvInputTextBox.EmptyTextTip = "New file will be created in the original folder";
                     //load Help Text
-                    if (File.Exists(Global.Running.startPath + "\\help.rtf"))
-                    {
-                        HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
-                    }
+                    //if (File.Exists(Global.Running.startPath + "\\help.rtf"))
+                    //{
+                    //    HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
+                    //}
                     break;
 
                 case "ja-JP":
@@ -189,10 +189,10 @@ namespace mp4box
                     ExtractMp4InputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
                     ExtractFlvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
                     ExtractMkvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
-                    if (File.Exists(Global.Running.startPath + "\\help.rtf"))
-                    {
-                        HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
-                    }
+                    //if (File.Exists(Global.Running.startPath + "\\help.rtf"))
+                    //{
+                    //    HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
+                    //}
                     break;
             }
         }

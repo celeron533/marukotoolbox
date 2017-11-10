@@ -46,7 +46,6 @@ namespace mp4box
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private string logFileName = ((NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("f")).FileName.Render(null);
-        private readonly DateTime ReleaseDate = AssemblyUtil.GetAssemblyVersionTime();
 
         private Preset.Preset preset;
         Settings settings = Global.Running.settings;
@@ -121,19 +120,6 @@ namespace mp4box
             {
                 logger.Error(ex);
                 MessageBoxExt.ShowWarningMessage(ex.Message);
-            }
-
-
-            HelpReleaseDateLabel.Text = ReleaseDate.ToString("yyyy-M-d");
-
-            // load Help Text
-            if (File.Exists(Global.Running.startPath + "\\help.rtf"))
-            {
-                HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");
-            }
-            else
-            {
-                HelpContentRichTextBox.Text = "help.rtf is not found.";
             }
 
             // Detect processor count
@@ -3053,46 +3039,6 @@ namespace mp4box
         }
 
         #endregion Config Tab
-
-        #region Help Tab
-
-        private void HelpAboutButton_Click(object sender, EventArgs e)
-        {
-            DateTime CompileDate = File.GetLastWriteTime(this.GetType().Assembly.Location); //获得程序编译时间
-            QQMessageBox.Show(
-                this,
-                "主页：http://maruko.appinn.me/ \r\n编译日期：" + ReleaseDate.ToString() + "\r\n作者：小七、月儿、小丸",
-                "关于",
-                QQMessageBoxIcon.Information,
-                QQMessageBoxButtons.OK);
-        }
-
-        private void HelpHomepageButton_Click(object sender, EventArgs e)
-        {
-            Process.Start("http://maruko.appinn.me/");
-        }
-
-        private void HelpContentRichTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
-        {
-            Process.Start(e.LinkText);
-        }
-
-        private void HelpFeedbackButton_Click(object sender, EventArgs e)
-        {
-            new FeedbackForm().ShowDialog();
-        }
-
-        private void HelpReleaseDateLabel_DoubleClick(object sender, EventArgs e)
-        {
-            new SplashForm() { Owner = this }.Show();
-        }
-
-        private void HelpCheckUpdateButton_Click(object sender, EventArgs e)
-        {
-            new UpdateCheckerUtil().CheckUpdate();
-        }
-
-        #endregion Help Tab
 
         //Ctrl+A 可以全选文本
         private void TextBoxSelectAll(object sender, KeyEventArgs e)
