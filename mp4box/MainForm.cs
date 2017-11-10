@@ -44,8 +44,8 @@ namespace mp4box
 {
     public partial class MainForm : Form
     {
-        private static Logger logger = LogManager.GetCurrentClassLogger();
-        private string logFileName = ((NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("f")).FileName.Render(null);
+        static Logger logger = LogManager.GetCurrentClassLogger();
+        public string logFileName = ((NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("f")).FileName.Render(null);
 
         private Preset.Preset preset;
         Settings settings = Global.Running.settings;
@@ -509,7 +509,7 @@ namespace mp4box
         /// <summary>
         /// 还原默认参数
         /// </summary>
-        private void ResetUIFieldParameters()
+        public void ResetUIFieldParameters()
         {
             AudioAudioModeBitrateRadioButton.Checked = true;
             AudioBitrateComboBox.Text = "128";
@@ -2985,60 +2985,6 @@ namespace mp4box
 
         #endregion MediaInfo Tab
 
-        #region Config Tab
-
-        private void ConfigUiTrayModeCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            Global.Running.trayMode = ConfigUiTrayModeCheckBox.Checked;
-        }
-        private void ConfigX264PriorityComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ChangeEncoderProcessPriority();
-        }
-        private void ConfigFunctionViewLogButton_Click(object sender, EventArgs e)
-        {
-            if (File.Exists(logFileName))
-            {
-                Process.Start(logFileName);
-            }
-            else MessageBoxExt.ShowInfoMessage("没有找到日志文件。");
-        }
-        private void ConfigFunctionAllLogButton_Click(object sender, EventArgs e)
-        {
-            string logPath = Path.GetDirectoryName(logFileName);
-            if (Directory.Exists(logPath))
-            {
-                Process.Start(logPath);
-            }
-            else MessageBoxExt.ShowInfoMessage("没有找到日志文件夹。");
-        }
-        private void ConfigFunctionRestoreDefaultButton_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBoxExt.ShowQuestion("是否将所有界面参数恢复到默认设置？", "提示");
-            if (result == DialogResult.Yes)
-            {
-                ResetUIFieldParameters();
-                MessageBoxExt.ShowInfoMessage("已恢复默认设置！");
-            }
-        }
-        private void ConfigFunctionVideoPlayerButton_Click(object sender, EventArgs e)
-        {
-            new OpenFileDialog()    //"程序(*.exe)|*.exe|所有文件(*.*)|*.*";
-                .Prepare(DialogFilter.PROGRAM, ConfigFunctionVideoPlayerTextBox.Text)
-                .ShowDialogExt(ConfigFunctionVideoPlayerTextBox);
-        }
-        private void ConfigFunctionEnableX265CheckBox_Click(object sender, EventArgs e)
-        {
-            if (MessageBoxExt.ShowQuestion("你必须重新启动小丸工具箱才能使设置的生效 是否现在重新启动？", "需要重新启动") == DialogResult.Yes)
-                Application.Restart();
-        }
-
-        private void ConfigUiLanguageComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SwitchUILanguage(Thread.CurrentThread);
-        }
-
-        #endregion Config Tab
 
         //Ctrl+A 可以全选文本
         private void TextBoxSelectAll(object sender, KeyEventArgs e)
@@ -3070,7 +3016,7 @@ namespace mp4box
             ChangeEncoderProcessPriority();
         }
 
-        private void ChangeEncoderProcessPriority()
+        public void ChangeEncoderProcessPriority()
         {
             string encoderProcessName = Path.GetFileNameWithoutExtension(VideoEncoderComboBox.Text);
             OtherUtil.ChangeProcessesPriorityByName(encoderProcessName, (ProcessPriority)ConfigX264PriorityComboBox.SelectedIndex);

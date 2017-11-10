@@ -43,32 +43,9 @@ namespace mp4box
             }
         }
 
-        private CultureInfo GetCultureFromComboBox()
-        {
-            CultureInfo cultureInfo;
-            switch (ConfigUiLanguageComboBox.SelectedIndex)
-            {
-                default:
-                case 0:
-                    cultureInfo = new CultureInfo("zh-CN");
-                    break;
-                case 1:
-                    cultureInfo = new CultureInfo("zh-TW");
-                    break;
-                case 2:
-                    cultureInfo = new CultureInfo("en-US");
-                    break;
-                case 3:
-                    cultureInfo = new CultureInfo("ja-JP");
-                    break;
-            }
-            return cultureInfo;
-        }
-
-
         private void SwitchUILanguage(Thread UIThread)
         {
-            CultureInfo cultureInfo = GetCultureFromComboBox();
+            CultureInfo cultureInfo = configUserControl.GetCultureFromComboBox();
             UIThread.CurrentUICulture = cultureInfo;
             SetLang(cultureInfo, this, typeof(MainForm));
 
@@ -83,9 +60,9 @@ namespace mp4box
                     //SetLang("zh-CN", this, typeof(MainForm));
                     //this.Text = string.Format("小丸工具箱 {0}", Assembly.GetExecutingAssembly().GetName().Version.Build);
                     this.Text = string.Format("小丸工具箱 {0}", AssemblyUtil.GetAssemblyFileVersion());
-                    ConfigX264PriorityComboBox.Items.Clear();
-                    ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "低于标准", "普通", "高于标准", "高", "实时" });
-                    ConfigX264PriorityComboBox.SelectedIndex = 2;
+                    //ConfigX264PriorityComboBox.Items.Clear();
+                    //ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "低于标准", "普通", "高于标准", "高", "实时" });
+                    //ConfigX264PriorityComboBox.SelectedIndex = 2;
 
                     VideoAudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
                     VideoAudioModeComboBox.Items.Clear();
@@ -112,9 +89,9 @@ namespace mp4box
                 case "zh-TW":
                     //SetLang("zh-TW", this, typeof(MainForm));
                     this.Text = string.Format("小丸工具箱 {0}", AssemblyUtil.GetAssemblyFileVersion());
-                    ConfigX264PriorityComboBox.Items.Clear();
-                    ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "在標準以下", "標準", "在標準以上", "高", "即時" });
-                    ConfigX264PriorityComboBox.SelectedIndex = 2;
+                    //ConfigX264PriorityComboBox.Items.Clear();
+                    //ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "在標準以下", "標準", "在標準以上", "高", "即時" });
+                    //ConfigX264PriorityComboBox.SelectedIndex = 2;
 
                     VideoAudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
                     VideoAudioModeComboBox.Items.Clear();
@@ -141,9 +118,9 @@ namespace mp4box
                 case "en-US":
                     //SetLang("en-US", this, typeof(MainForm));
                     this.Text = string.Format("Maruko Toolbox {0}", AssemblyUtil.GetAssemblyFileVersion());
-                    ConfigX264PriorityComboBox.Items.Clear();
-                    ConfigX264PriorityComboBox.Items.AddRange(new string[] { "Idle", "BelowNormal", "Normal", "AboveNormal", "High", "RealTime" });
-                    ConfigX264PriorityComboBox.SelectedIndex = 2;
+                    //ConfigX264PriorityComboBox.Items.Clear();
+                    //ConfigX264PriorityComboBox.Items.AddRange(new string[] { "Idle", "BelowNormal", "Normal", "AboveNormal", "High", "RealTime" });
+                    //ConfigX264PriorityComboBox.SelectedIndex = 2;
 
                     VideoAudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
                     VideoAudioModeComboBox.Items.Clear();
@@ -170,9 +147,9 @@ namespace mp4box
                 case "ja-JP":
                     //SetLang("ja-JP", this, typeof(MainForm));
                     this.Text = string.Format("小丸道具箱 {0}", AssemblyUtil.GetAssemblyFileVersion());
-                    ConfigX264PriorityComboBox.Items.Clear();
-                    ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "通常以下", "通常", "通常以上", "高", "リアルタイム" });
-                    ConfigX264PriorityComboBox.SelectedIndex = 2;
+                    //ConfigX264PriorityComboBox.Items.Clear();
+                    //ConfigX264PriorityComboBox.Items.AddRange(new string[] { "低", "通常以下", "通常", "通常以上", "高", "リアルタイム" });
+                    //ConfigX264PriorityComboBox.SelectedIndex = 2;
 
                     VideoAudioModeComboBoxIndex = VideoAudioModeComboBox.SelectedIndex;
                     VideoAudioModeComboBox.Items.Clear();

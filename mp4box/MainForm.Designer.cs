@@ -262,6 +262,7 @@
             this.VideoPresetLabel = new System.Windows.Forms.Label();
             this.VideoBitrateNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.HelpTab = new System.Windows.Forms.TabPage();
+            this.helpUserControl = new mp4box.UserCtrl.HelpUserControl();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.MiscTab = new System.Windows.Forms.TabPage();
             this.MiscBlackGroupBox = new System.Windows.Forms.GroupBox();
@@ -284,29 +285,7 @@
             this.MiscBlackOutputTextBox = new ControlExs.QQTextBox();
             this.MiscBlackVideoInputTextBox = new ControlExs.QQTextBox();
             this.ConfigTabPage = new System.Windows.Forms.TabPage();
-            this.ConfigFunctionGroupBox = new System.Windows.Forms.GroupBox();
-            this.ConfigFunctionEnableX265CheckBox = new ControlExs.QQCheckBox();
-            this.ConfigFunctionVideoPlayerLabel = new System.Windows.Forms.Label();
-            this.ConfigFunctionVideoPlayerTextBox = new ControlExs.QQTextBox();
-            this.ConfigFunctionVideoPlayerButton = new ControlExs.QQButton();
-            this.ConfigFunctionDeleteTempFileCheckBox = new ControlExs.QQCheckBox();
-            this.ConfigFunctionAutoCheckUpdateCheckBox = new ControlExs.QQCheckBox();
-            this.ConfigUiGroupBox = new System.Windows.Forms.GroupBox();
-            this.ConfigUiSplashScreenCheckBox = new ControlExs.QQCheckBox();
-            this.ConfigUiTrayModeCheckBox = new ControlExs.QQCheckBox();
-            this.ConfigUiLanguageLabel = new System.Windows.Forms.Label();
-            this.ConfigUiLanguageComboBox = new System.Windows.Forms.ComboBox();
-            this.ConfigX264GroupBox = new System.Windows.Forms.GroupBox();
-            this.ConfigX264ExtraParameterTextBox = new ControlExs.QQTextBox();
-            this.ConfigX264ExtraParameterLabel = new System.Windows.Forms.Label();
-            this.ConfigX264PriorityComboBox = new System.Windows.Forms.ComboBox();
-            this.ConfigX264ThreadsComboBox = new System.Windows.Forms.ComboBox();
-            this.ConfigX264ThreadsLabel = new System.Windows.Forms.Label();
-            this.ConfigX264PriorityLabel = new System.Windows.Forms.Label();
-            this.ConfigFunctionAllLogButton = new ControlExs.QQButton();
-            this.ConfigFunctionRestoreDefaultButton = new ControlExs.QQButton();
-            this.ConfigFunctionViewLogButton = new ControlExs.QQButton();
-            this.helpUserControl = new mp4box.UserCtrl.HelpUserControl();
+            this.configUserControl = new mp4box.UserCtrl.ConfigUserControl();
             this.MiscMiscGroupBox.SuspendLayout();
             this.MediaInfoTab.SuspendLayout();
             this.AvsTab.SuspendLayout();
@@ -357,9 +336,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.MiscBlackCrfNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscBlackFpsNumericUpDown)).BeginInit();
             this.ConfigTabPage.SuspendLayout();
-            this.ConfigFunctionGroupBox.SuspendLayout();
-            this.ConfigUiGroupBox.SuspendLayout();
-            this.ConfigX264GroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -2517,6 +2493,11 @@
             this.HelpTab.Name = "HelpTab";
             this.HelpTab.UseVisualStyleBackColor = true;
             // 
+            // helpUserControl
+            // 
+            resources.ApplyResources(this.helpUserControl, "helpUserControl");
+            this.helpUserControl.Name = "helpUserControl";
+            // 
             // MainTabControl
             // 
             this.MainTabControl.AllowDrop = true;
@@ -2742,205 +2723,15 @@
             // 
             // ConfigTabPage
             // 
-            this.ConfigTabPage.Controls.Add(this.ConfigFunctionGroupBox);
-            this.ConfigTabPage.Controls.Add(this.ConfigUiGroupBox);
-            this.ConfigTabPage.Controls.Add(this.ConfigX264GroupBox);
-            this.ConfigTabPage.Controls.Add(this.ConfigFunctionAllLogButton);
-            this.ConfigTabPage.Controls.Add(this.ConfigFunctionRestoreDefaultButton);
-            this.ConfigTabPage.Controls.Add(this.ConfigFunctionViewLogButton);
+            this.ConfigTabPage.Controls.Add(this.configUserControl);
             resources.ApplyResources(this.ConfigTabPage, "ConfigTabPage");
             this.ConfigTabPage.Name = "ConfigTabPage";
             this.ConfigTabPage.UseVisualStyleBackColor = true;
             // 
-            // ConfigFunctionGroupBox
+            // configUserControl
             // 
-            this.ConfigFunctionGroupBox.Controls.Add(this.ConfigFunctionEnableX265CheckBox);
-            this.ConfigFunctionGroupBox.Controls.Add(this.ConfigFunctionVideoPlayerLabel);
-            this.ConfigFunctionGroupBox.Controls.Add(this.ConfigFunctionVideoPlayerTextBox);
-            this.ConfigFunctionGroupBox.Controls.Add(this.ConfigFunctionVideoPlayerButton);
-            this.ConfigFunctionGroupBox.Controls.Add(this.ConfigFunctionDeleteTempFileCheckBox);
-            this.ConfigFunctionGroupBox.Controls.Add(this.ConfigFunctionAutoCheckUpdateCheckBox);
-            resources.ApplyResources(this.ConfigFunctionGroupBox, "ConfigFunctionGroupBox");
-            this.ConfigFunctionGroupBox.Name = "ConfigFunctionGroupBox";
-            this.ConfigFunctionGroupBox.TabStop = false;
-            // 
-            // ConfigFunctionEnableX265CheckBox
-            // 
-            resources.ApplyResources(this.ConfigFunctionEnableX265CheckBox, "ConfigFunctionEnableX265CheckBox");
-            this.ConfigFunctionEnableX265CheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.ConfigFunctionEnableX265CheckBox.Checked = true;
-            this.ConfigFunctionEnableX265CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ConfigFunctionEnableX265CheckBox.Name = "ConfigFunctionEnableX265CheckBox";
-            this.ConfigFunctionEnableX265CheckBox.UseVisualStyleBackColor = false;
-            this.ConfigFunctionEnableX265CheckBox.Click += new System.EventHandler(this.ConfigFunctionEnableX265CheckBox_Click);
-            // 
-            // ConfigFunctionVideoPlayerLabel
-            // 
-            resources.ApplyResources(this.ConfigFunctionVideoPlayerLabel, "ConfigFunctionVideoPlayerLabel");
-            this.ConfigFunctionVideoPlayerLabel.Name = "ConfigFunctionVideoPlayerLabel";
-            // 
-            // ConfigFunctionVideoPlayerTextBox
-            // 
-            this.ConfigFunctionVideoPlayerTextBox.AllowDrop = true;
-            this.ConfigFunctionVideoPlayerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ConfigFunctionVideoPlayerTextBox.EmptyTextTip = null;
-            this.ConfigFunctionVideoPlayerTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.ConfigFunctionVideoPlayerTextBox, "ConfigFunctionVideoPlayerTextBox");
-            this.ConfigFunctionVideoPlayerTextBox.Name = "ConfigFunctionVideoPlayerTextBox";
-            // 
-            // ConfigFunctionVideoPlayerButton
-            // 
-            resources.ApplyResources(this.ConfigFunctionVideoPlayerButton, "ConfigFunctionVideoPlayerButton");
-            this.ConfigFunctionVideoPlayerButton.Name = "ConfigFunctionVideoPlayerButton";
-            this.ConfigFunctionVideoPlayerButton.UseVisualStyleBackColor = true;
-            this.ConfigFunctionVideoPlayerButton.Click += new System.EventHandler(this.ConfigFunctionVideoPlayerButton_Click);
-            // 
-            // ConfigFunctionDeleteTempFileCheckBox
-            // 
-            resources.ApplyResources(this.ConfigFunctionDeleteTempFileCheckBox, "ConfigFunctionDeleteTempFileCheckBox");
-            this.ConfigFunctionDeleteTempFileCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.ConfigFunctionDeleteTempFileCheckBox.Checked = true;
-            this.ConfigFunctionDeleteTempFileCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ConfigFunctionDeleteTempFileCheckBox.Name = "ConfigFunctionDeleteTempFileCheckBox";
-            this.ConfigFunctionDeleteTempFileCheckBox.UseVisualStyleBackColor = false;
-            // 
-            // ConfigFunctionAutoCheckUpdateCheckBox
-            // 
-            resources.ApplyResources(this.ConfigFunctionAutoCheckUpdateCheckBox, "ConfigFunctionAutoCheckUpdateCheckBox");
-            this.ConfigFunctionAutoCheckUpdateCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.ConfigFunctionAutoCheckUpdateCheckBox.Checked = true;
-            this.ConfigFunctionAutoCheckUpdateCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ConfigFunctionAutoCheckUpdateCheckBox.Name = "ConfigFunctionAutoCheckUpdateCheckBox";
-            this.ConfigFunctionAutoCheckUpdateCheckBox.UseVisualStyleBackColor = false;
-            // 
-            // ConfigUiGroupBox
-            // 
-            this.ConfigUiGroupBox.Controls.Add(this.ConfigUiSplashScreenCheckBox);
-            this.ConfigUiGroupBox.Controls.Add(this.ConfigUiTrayModeCheckBox);
-            this.ConfigUiGroupBox.Controls.Add(this.ConfigUiLanguageLabel);
-            this.ConfigUiGroupBox.Controls.Add(this.ConfigUiLanguageComboBox);
-            resources.ApplyResources(this.ConfigUiGroupBox, "ConfigUiGroupBox");
-            this.ConfigUiGroupBox.Name = "ConfigUiGroupBox";
-            this.ConfigUiGroupBox.TabStop = false;
-            // 
-            // ConfigUiSplashScreenCheckBox
-            // 
-            resources.ApplyResources(this.ConfigUiSplashScreenCheckBox, "ConfigUiSplashScreenCheckBox");
-            this.ConfigUiSplashScreenCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.ConfigUiSplashScreenCheckBox.Checked = true;
-            this.ConfigUiSplashScreenCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ConfigUiSplashScreenCheckBox.Name = "ConfigUiSplashScreenCheckBox";
-            this.ConfigUiSplashScreenCheckBox.UseVisualStyleBackColor = false;
-            // 
-            // ConfigUiTrayModeCheckBox
-            // 
-            resources.ApplyResources(this.ConfigUiTrayModeCheckBox, "ConfigUiTrayModeCheckBox");
-            this.ConfigUiTrayModeCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.ConfigUiTrayModeCheckBox.Name = "ConfigUiTrayModeCheckBox";
-            this.ConfigUiTrayModeCheckBox.UseVisualStyleBackColor = false;
-            this.ConfigUiTrayModeCheckBox.CheckedChanged += new System.EventHandler(this.ConfigUiTrayModeCheckBox_CheckedChanged);
-            // 
-            // ConfigUiLanguageLabel
-            // 
-            resources.ApplyResources(this.ConfigUiLanguageLabel, "ConfigUiLanguageLabel");
-            this.ConfigUiLanguageLabel.Name = "ConfigUiLanguageLabel";
-            // 
-            // ConfigUiLanguageComboBox
-            // 
-            this.ConfigUiLanguageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ConfigUiLanguageComboBox.FormattingEnabled = true;
-            this.ConfigUiLanguageComboBox.Items.AddRange(new object[] {
-            resources.GetString("ConfigUiLanguageComboBox.Items"),
-            resources.GetString("ConfigUiLanguageComboBox.Items1"),
-            resources.GetString("ConfigUiLanguageComboBox.Items2"),
-            resources.GetString("ConfigUiLanguageComboBox.Items3")});
-            resources.ApplyResources(this.ConfigUiLanguageComboBox, "ConfigUiLanguageComboBox");
-            this.ConfigUiLanguageComboBox.Name = "ConfigUiLanguageComboBox";
-            this.ConfigUiLanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.ConfigUiLanguageComboBox_SelectedIndexChanged);
-            // 
-            // ConfigX264GroupBox
-            // 
-            this.ConfigX264GroupBox.Controls.Add(this.ConfigX264ExtraParameterTextBox);
-            this.ConfigX264GroupBox.Controls.Add(this.ConfigX264ExtraParameterLabel);
-            this.ConfigX264GroupBox.Controls.Add(this.ConfigX264PriorityComboBox);
-            this.ConfigX264GroupBox.Controls.Add(this.ConfigX264ThreadsComboBox);
-            this.ConfigX264GroupBox.Controls.Add(this.ConfigX264ThreadsLabel);
-            this.ConfigX264GroupBox.Controls.Add(this.ConfigX264PriorityLabel);
-            resources.ApplyResources(this.ConfigX264GroupBox, "ConfigX264GroupBox");
-            this.ConfigX264GroupBox.Name = "ConfigX264GroupBox";
-            this.ConfigX264GroupBox.TabStop = false;
-            // 
-            // ConfigX264ExtraParameterTextBox
-            // 
-            this.ConfigX264ExtraParameterTextBox.AllowDrop = true;
-            this.ConfigX264ExtraParameterTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ConfigX264ExtraParameterTextBox.EmptyTextTip = null;
-            this.ConfigX264ExtraParameterTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.ConfigX264ExtraParameterTextBox, "ConfigX264ExtraParameterTextBox");
-            this.ConfigX264ExtraParameterTextBox.Name = "ConfigX264ExtraParameterTextBox";
-            // 
-            // ConfigX264ExtraParameterLabel
-            // 
-            resources.ApplyResources(this.ConfigX264ExtraParameterLabel, "ConfigX264ExtraParameterLabel");
-            this.ConfigX264ExtraParameterLabel.Name = "ConfigX264ExtraParameterLabel";
-            // 
-            // ConfigX264PriorityComboBox
-            // 
-            this.ConfigX264PriorityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ConfigX264PriorityComboBox.FormattingEnabled = true;
-            this.ConfigX264PriorityComboBox.Items.AddRange(new object[] {
-            resources.GetString("ConfigX264PriorityComboBox.Items"),
-            resources.GetString("ConfigX264PriorityComboBox.Items1"),
-            resources.GetString("ConfigX264PriorityComboBox.Items2"),
-            resources.GetString("ConfigX264PriorityComboBox.Items3"),
-            resources.GetString("ConfigX264PriorityComboBox.Items4"),
-            resources.GetString("ConfigX264PriorityComboBox.Items5")});
-            resources.ApplyResources(this.ConfigX264PriorityComboBox, "ConfigX264PriorityComboBox");
-            this.ConfigX264PriorityComboBox.Name = "ConfigX264PriorityComboBox";
-            this.ConfigX264PriorityComboBox.SelectedIndexChanged += new System.EventHandler(this.ConfigX264PriorityComboBox_SelectedIndexChanged);
-            // 
-            // ConfigX264ThreadsComboBox
-            // 
-            this.ConfigX264ThreadsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ConfigX264ThreadsComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.ConfigX264ThreadsComboBox, "ConfigX264ThreadsComboBox");
-            this.ConfigX264ThreadsComboBox.Name = "ConfigX264ThreadsComboBox";
-            // 
-            // ConfigX264ThreadsLabel
-            // 
-            resources.ApplyResources(this.ConfigX264ThreadsLabel, "ConfigX264ThreadsLabel");
-            this.ConfigX264ThreadsLabel.Name = "ConfigX264ThreadsLabel";
-            // 
-            // ConfigX264PriorityLabel
-            // 
-            resources.ApplyResources(this.ConfigX264PriorityLabel, "ConfigX264PriorityLabel");
-            this.ConfigX264PriorityLabel.Name = "ConfigX264PriorityLabel";
-            // 
-            // ConfigFunctionAllLogButton
-            // 
-            resources.ApplyResources(this.ConfigFunctionAllLogButton, "ConfigFunctionAllLogButton");
-            this.ConfigFunctionAllLogButton.Name = "ConfigFunctionAllLogButton";
-            this.ConfigFunctionAllLogButton.UseVisualStyleBackColor = true;
-            this.ConfigFunctionAllLogButton.Click += new System.EventHandler(this.ConfigFunctionAllLogButton_Click);
-            // 
-            // ConfigFunctionRestoreDefaultButton
-            // 
-            resources.ApplyResources(this.ConfigFunctionRestoreDefaultButton, "ConfigFunctionRestoreDefaultButton");
-            this.ConfigFunctionRestoreDefaultButton.Name = "ConfigFunctionRestoreDefaultButton";
-            this.ConfigFunctionRestoreDefaultButton.UseVisualStyleBackColor = true;
-            this.ConfigFunctionRestoreDefaultButton.Click += new System.EventHandler(this.ConfigFunctionRestoreDefaultButton_Click);
-            // 
-            // ConfigFunctionViewLogButton
-            // 
-            resources.ApplyResources(this.ConfigFunctionViewLogButton, "ConfigFunctionViewLogButton");
-            this.ConfigFunctionViewLogButton.Name = "ConfigFunctionViewLogButton";
-            this.ConfigFunctionViewLogButton.UseVisualStyleBackColor = true;
-            this.ConfigFunctionViewLogButton.Click += new System.EventHandler(this.ConfigFunctionViewLogButton_Click);
-            // 
-            // helpUserControl
-            // 
-            resources.ApplyResources(this.helpUserControl, "helpUserControl");
-            this.helpUserControl.Name = "helpUserControl";
+            resources.ApplyResources(this.configUserControl, "configUserControl");
+            this.configUserControl.Name = "configUserControl";
             // 
             // MainForm
             // 
@@ -3021,12 +2812,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.MiscBlackCrfNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscBlackFpsNumericUpDown)).EndInit();
             this.ConfigTabPage.ResumeLayout(false);
-            this.ConfigFunctionGroupBox.ResumeLayout(false);
-            this.ConfigFunctionGroupBox.PerformLayout();
-            this.ConfigUiGroupBox.ResumeLayout(false);
-            this.ConfigUiGroupBox.PerformLayout();
-            this.ConfigX264GroupBox.ResumeLayout(false);
-            this.ConfigX264GroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3208,24 +2993,17 @@
         private System.Windows.Forms.NumericUpDown AvsTrimEndNumericUpDown;
         private System.Windows.Forms.NumericUpDown AvsTrimStartNumericUpDown;
         private System.Windows.Forms.ComboBox VideoDemuxerComboBox;
-        private ControlExs.QQButton ConfigFunctionAllLogButton;
-        private ControlExs.QQButton ConfigFunctionViewLogButton;
         private ControlExs.QQButton VideoBatchOutputFolderButton;
         private ControlExs.QQTextBox VideoBatchOutputFolderTextBox;
         private System.Windows.Forms.GroupBox AudioGroupBox;
         private System.Windows.Forms.Label AudioEncoderLabel;
         private System.Windows.Forms.ComboBox AudioEncoderComboBox;
         private System.Windows.Forms.TabPage ConfigTabPage;
-        private ControlExs.QQButton ConfigFunctionRestoreDefaultButton;
-        private System.Windows.Forms.ComboBox ConfigUiLanguageComboBox;
-        private System.Windows.Forms.Label ConfigUiLanguageLabel;
         private ControlExs.QQButton AvsSaveButton;
         private System.Windows.Forms.Label VideoFramesLabel;
         private System.Windows.Forms.Label VideoSeekLabel;
         private System.Windows.Forms.NumericUpDown VideoFramesNumericUpDown;
         private System.Windows.Forms.NumericUpDown VideoSeekNumericUpDown;
-        private System.Windows.Forms.ComboBox ConfigX264PriorityComboBox;
-        private System.Windows.Forms.Label ConfigX264PriorityLabel;
         private ControlExs.QQCheckBox VideoMaintainResolutionCheckBox;
         private ControlExs.QQButton ExtractMkvExtractTrack4Button;
         private ControlExs.QQButton ExtractMkvExtractTrack3Button;
@@ -3267,16 +3045,8 @@
         private System.Windows.Forms.Label MiscBlackKbpsLabel;
         private System.Windows.Forms.Label MiscBlackBitrateLabel;
         private System.Windows.Forms.NumericUpDown MiscBlackBitrateNumericUpDown;
-        private ControlExs.QQCheckBox ConfigFunctionDeleteTempFileCheckBox;
         private System.Windows.Forms.ComboBox AudioBitrateComboBox;
-        private ControlExs.QQCheckBox ConfigUiTrayModeCheckBox;
-        private ControlExs.QQCheckBox ConfigUiSplashScreenCheckBox;
-        private System.Windows.Forms.Label ConfigX264ThreadsLabel;
-        private System.Windows.Forms.ComboBox ConfigX264ThreadsComboBox;
         private ControlExs.QQCheckBox AvsIncludeAudioCheckBox;
-        private ControlExs.QQTextBox ConfigFunctionVideoPlayerTextBox;
-        private ControlExs.QQButton ConfigFunctionVideoPlayerButton;
-        private System.Windows.Forms.Label ConfigFunctionVideoPlayerLabel;
         private System.Windows.Forms.ComboBox AvsFilterComboBox;
         private ControlExs.QQButton AvsAddFilterButton;
         private System.Windows.Forms.Label AvsFilterLabel;
@@ -3288,7 +3058,6 @@
         private System.Windows.Forms.Label MuxMp4ParLabel;
         private ControlExs.QQButton ExtractMkvExtractByExternalButton;
         private ControlExs.QQButton MuxMp4ReplaceAudioButton;
-        private ControlExs.QQCheckBox ConfigFunctionAutoCheckUpdateCheckBox;
         private System.Windows.Forms.ComboBox MiscMiscTransposeComboBox;
         private ControlExs.QQButton MiscMiscStartRotateButton;
         private System.Windows.Forms.Label MiscMiscTransposeLabel;
@@ -3296,20 +3065,15 @@
         private System.Windows.Forms.ComboBox VideoBatchFormatComboBox;
         private System.Windows.Forms.ComboBox AudioPresetComboBox;
         private System.Windows.Forms.Label AudioPresetLabel;
-        private System.Windows.Forms.GroupBox ConfigX264GroupBox;
-        private System.Windows.Forms.Label ConfigX264ExtraParameterLabel;
-        private ControlExs.QQTextBox ConfigX264ExtraParameterTextBox;
-        private System.Windows.Forms.GroupBox ConfigFunctionGroupBox;
-        private System.Windows.Forms.GroupBox ConfigUiGroupBox;
         private System.Windows.Forms.Label MuxConvertAacEncoderLabel;
         private System.Windows.Forms.ComboBox MuxConvertAacEncoderComboBox;
-        private ControlExs.QQCheckBox ConfigFunctionEnableX265CheckBox;
         private ControlExs.QQButton AudioPresetDeleteButton;
         private ControlExs.QQButton AudioPresetAddButton;
         private System.Windows.Forms.Label MiscOnePicDurationSecondsLabel;
         private System.Windows.Forms.TextBox MiscOnePicDurationSecondsTextBox;
         private System.Windows.Forms.Label MiscOnePicDurationLabel;
         private UserCtrl.HelpUserControl helpUserControl;
+        private UserCtrl.ConfigUserControl configUserControl;
     }
 }
 
