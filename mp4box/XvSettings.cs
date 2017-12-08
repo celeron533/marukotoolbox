@@ -18,7 +18,7 @@
 
         public string X26xDemuxer { get; set; }
 
-        public string X26xThreads { get; set; }
+        public int X26xThreads { get; set; }
 
         public string ExtParameter { get; set; }
 

@@ -22,7 +22,7 @@ namespace mp4box
         public bool ConfigUiTrayModeCheck;
         public int ConfigUiLanguageIndex;
         public string ConfigX264ExtraParameterText;
-        public int ConfigX264PriorityIndex;
+        public int ConfigX264Priority;  //Cast as ProcessPriorityClass
         public int ConfigX264Threads;
         public decimal MiscBlackBitrateValue;
         public decimal MiscBlackCrfValue;
@@ -61,7 +61,7 @@ namespace mp4box
             GetValue(out ConfigUiSplashScreenCheck, "SplashScreen");
             GetValue(out ConfigUiTrayModeCheck, "TrayMode");
             GetValue(out ConfigX264ExtraParameterText, "x264ExtraParameter");
-            GetValue(out ConfigX264PriorityIndex, "x264Priority");
+            GetValue(out ConfigX264Priority, "x264Priority");
             GetValue(out ConfigX264Threads, "x264Threads");
             GetValue(out MiscBlackBitrateValue, "BlackBitrate");
             GetValue(out MiscBlackCrfValue, "BlackCRF");
@@ -109,7 +109,7 @@ namespace mp4box
             SetValue("x264Exe", VideoEncoderIndex);
             SetValue("x264ExtraParameter", ConfigX264ExtraParameterText);
             SetValue("x264Height", VideoHeightValue);
-            SetValue("x264Priority", ConfigX264PriorityIndex);
+            SetValue("x264Priority", ConfigX264Priority);
             SetValue("x264Threads", ConfigX264Threads);
             SetValue("x264Width", VideoWidthValue);
             SetValue("x265Enable", ConfigFunctionEnableX265Check);

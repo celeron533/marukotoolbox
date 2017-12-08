@@ -45,7 +45,6 @@ namespace mp4box
     public partial class MainForm : Form
     {
         static Logger logger = LogManager.GetCurrentClassLogger();
-        public string logFileName = ((NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("f")).FileName.Render(null);
 
         private Preset.Preset preset;
         Settings settings = Global.Running.settings;
@@ -72,8 +71,9 @@ namespace mp4box
 
         public MainForm()
         {
+            Global.Running.logFileName = ((NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("f")).FileName.Render(null);
             preset = Preset.Preset.Load();
-            settings = new Settings();
+            //settings = new Settings();
             InitializeComponent();
         }
 
@@ -122,19 +122,12 @@ namespace mp4box
                 MessageBoxExt.ShowWarningMessage(ex.Message);
             }
 
-            // Detect processor count
-            ConfigX264ThreadsComboBox.Items.Add("auto");
-            for (int i = 1; i <= Environment.ProcessorCount; i++)
-            {
-                ConfigX264ThreadsComboBox.Items.Add(i.ToString());
-            }
-
             LoadSettings();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (ConfigFunctionDeleteTempFileCheckBox.Checked)
+            if (settings.ConfigFunctionDeleteTempFileCheck)
                 DeleteTempFiles();
 
             SaveSettings();
@@ -185,11 +178,11 @@ namespace mp4box
         {
             var xvs = new XvSettings();
             xvs.CrfValue = VideoCrfNumericUpDown.Value;
-            xvs.ExtParameter = ConfigX264ExtraParameterTextBox.Text;
+            xvs.ExtParameter = settings.ConfigX264ExtraParameterText;
             xvs.CustomParameter = VideoCustomParameterTextBox.Text;
             xvs.V_width = (int)VideoWidthNumericUpDown.Value;
             xvs.V_height = (int)VideoHeightNumericUpDown.Value;
-            xvs.X26xThreads = ConfigX264ThreadsComboBox.SelectedItem.ToString();
+            xvs.X26xThreads = settings.ConfigX264Threads;
             xvs.X26xDemuxer = VideoDemuxerComboBox.Text;
             xvs.X26xBitrate = (int)VideoBitrateNumericUpDown.Value;
             xvs.X26xSeek = (int)VideoSeekNumericUpDown.Value;
@@ -243,7 +236,7 @@ namespace mp4box
             {
                 if (xvs.X26xDemuxer != "auto" && xvs.X26xDemuxer != string.Empty)
                     sb.Append(" --demuxer " + xvs.X26xDemuxer);
-                if (xvs.X26xThreads != "auto" && xvs.X26xThreads != string.Empty)
+                if (xvs.X26xThreads != 0)
                     sb.Append(" --threads " + xvs.X26xThreads);
                 if (xvs.ExtParameter != string.Empty)
                     sb.Append(" " + xvs.ExtParameter);
@@ -518,14 +511,14 @@ namespace mp4box
 
             AvsIncludeAudioCheckBox.Checked = false;
 
-            ConfigFunctionAutoCheckUpdateCheckBox.Checked = true;
-            ConfigFunctionDeleteTempFileCheckBox.Checked = true;
-            ConfigFunctionEnableX265CheckBox.Checked = false;
-            ConfigUiSplashScreenCheckBox.Checked = true;
-            ConfigUiTrayModeCheckBox.Checked = false;
-            ConfigX264PriorityComboBox.SelectedIndex = 2;
-            ConfigX264PriorityComboBox.SelectedIndex = 2;
-            ConfigX264ThreadsComboBox.SelectedIndex = 0;
+            //ConfigFunctionAutoCheckUpdateCheckBox.Checked = true;
+            //ConfigFunctionDeleteTempFileCheckBox.Checked = true;
+            //ConfigFunctionEnableX265CheckBox.Checked = false;
+            //ConfigUiSplashScreenCheckBox.Checked = true;
+            //ConfigUiTrayModeCheckBox.Checked = false;
+            //ConfigX264PriorityComboBox.SelectedIndex = 2;
+            //ConfigX264PriorityComboBox.SelectedIndex = 2;
+            //ConfigX264ThreadsComboBox.SelectedIndex = 0;
 
             MiscBlackBitrateNumericUpDown.Value = 900;
             MiscBlackCrfNumericUpDown.Value = 51;
@@ -564,15 +557,15 @@ namespace mp4box
             AudioBitrateComboBox.Text = settings.AudioBitrateComboText;
             AudioEncoderComboBox.SelectedIndex = settings.AudioEncoderIndex;
             AvsScriptTextBox.Text = settings.AvsScriptText;
-            ConfigFunctionAutoCheckUpdateCheckBox.Checked = settings.ConfigFunctionAutoCheckUpdateCheck;
-            ConfigFunctionDeleteTempFileCheckBox.Checked = settings.ConfigFunctionDeleteTempFileCheck;
-            ConfigFunctionEnableX265CheckBox.Checked = settings.ConfigFunctionEnableX265Check;
-            ConfigFunctionVideoPlayerTextBox.Text = settings.ConfigFunctionVideoPlayerText;
-            ConfigUiSplashScreenCheckBox.Checked = settings.ConfigUiSplashScreenCheck;
-            ConfigUiTrayModeCheckBox.Checked = settings.ConfigUiTrayModeCheck;
-            ConfigX264ExtraParameterTextBox.Text = settings.ConfigX264ExtraParameterText;
-            ConfigX264PriorityComboBox.SelectedIndex = settings.ConfigX264PriorityIndex;
-            ConfigX264ThreadsComboBox.SelectedIndex = settings.ConfigX264Threads;
+            //ConfigFunctionAutoCheckUpdateCheckBox.Checked = settings.ConfigFunctionAutoCheckUpdateCheck;
+            //ConfigFunctionDeleteTempFileCheckBox.Checked = settings.ConfigFunctionDeleteTempFileCheck;
+            //ConfigFunctionEnableX265CheckBox.Checked = settings.ConfigFunctionEnableX265Check;
+            //ConfigFunctionVideoPlayerTextBox.Text = settings.ConfigFunctionVideoPlayerText;
+            //ConfigUiSplashScreenCheckBox.Checked = settings.ConfigUiSplashScreenCheck;
+            //ConfigUiTrayModeCheckBox.Checked = settings.ConfigUiTrayModeCheck;
+            //ConfigX264ExtraParameterTextBox.Text = settings.ConfigX264ExtraParameterText;
+            //ConfigX264PriorityComboBox.SelectedIndex = settings.ConfigX264PriorityIndex;
+            //ConfigX264ThreadsComboBox.SelectedIndex = settings.ConfigX264Threads;
             MiscBlackBitrateNumericUpDown.Value = settings.MiscBlackBitrateValue;
             MiscBlackCrfNumericUpDown.Value = settings.MiscBlackCrfValue;
             MiscBlackFpsNumericUpDown.Value = settings.MiscBlackFpsValue;
@@ -604,38 +597,38 @@ namespace mp4box
             }
             VideoEncoderComboBox_SelectedIndexChanged(null, null);
 
-            if (settings.ConfigUiLanguageIndex == -1)  //First Startup
-            {
-                string culture = Thread.CurrentThread.CurrentCulture.Name;
-                switch (culture)
-                {
-                    case "zh-CN":
-                    case "zh-SG":
-                        ConfigUiLanguageComboBox.SelectedIndex = 0;
-                        break;
+            //if (settings.ConfigUiLanguageIndex == -1)  //First Startup
+            //{
+            //    string culture = Thread.CurrentThread.CurrentCulture.Name;
+            //    switch (culture)
+            //    {
+            //        case "zh-CN":
+            //        case "zh-SG":
+            //            ConfigUiLanguageComboBox.SelectedIndex = 0;
+            //            break;
 
-                    case "zh-TW":
-                    case "zh-HK":
-                    case "zh-MO":
-                        ConfigUiLanguageComboBox.SelectedIndex = 1;
-                        break;
+            //        case "zh-TW":
+            //        case "zh-HK":
+            //        case "zh-MO":
+            //            ConfigUiLanguageComboBox.SelectedIndex = 1;
+            //            break;
 
-                    case "en-US":
-                        ConfigUiLanguageComboBox.SelectedIndex = 2;
-                        break;
+            //        case "en-US":
+            //            ConfigUiLanguageComboBox.SelectedIndex = 2;
+            //            break;
 
-                    case "ja-JP":
-                        ConfigUiLanguageComboBox.SelectedIndex = 3;
-                        break;
+            //        case "ja-JP":
+            //            ConfigUiLanguageComboBox.SelectedIndex = 3;
+            //            break;
 
-                    default:
-                        break;
-                }
-            }
-            else
-                ConfigUiLanguageComboBox.SelectedIndex = settings.ConfigUiLanguageIndex;
+            //        default:
+            //            break;
+            //    }
+            //}
+            //else
+            //    ConfigUiLanguageComboBox.SelectedIndex = settings.ConfigUiLanguageIndex;
 
-            if (ConfigFunctionAutoCheckUpdateCheckBox.Checked) //&& NetworkUtil.IsConnectInternet())
+            if (settings.ConfigFunctionAutoCheckUpdateCheck) //&& NetworkUtil.IsConnectInternet())
             {
                 new UpdateCheckerUtil().CheckUpdate(false);
             }
@@ -653,8 +646,8 @@ namespace mp4box
             settings.VideoWidthValue = VideoWidthNumericUpDown.Value;
             settings.VideoHeightValue = VideoHeightNumericUpDown.Value;
             settings.VideoCustomParameterText = VideoCustomParameterTextBox.Text;
-            settings.ConfigX264PriorityIndex = ConfigX264PriorityComboBox.SelectedIndex;
-            settings.ConfigX264ExtraParameterText = ConfigX264ExtraParameterTextBox.Text;
+            //settings.ConfigX264PriorityIndex = ConfigX264PriorityComboBox.SelectedIndex;
+            //settings.ConfigX264ExtraParameterText = ConfigX264ExtraParameterTextBox.Text;
             settings.AvsScriptText = AvsScriptTextBox.Text;
             settings.AudioEncoderIndex = AudioEncoderComboBox.SelectedIndex;
             settings.AudioBitrateComboText = AudioBitrateComboBox.Text;
@@ -664,14 +657,14 @@ namespace mp4box
             settings.MiscBlackFpsValue = MiscBlackFpsNumericUpDown.Value;
             settings.MiscBlackCrfValue = MiscBlackCrfNumericUpDown.Value;
             settings.MiscBlackBitrateValue = MiscBlackBitrateNumericUpDown.Value;
-            settings.ConfigFunctionDeleteTempFileCheck = ConfigFunctionDeleteTempFileCheckBox.Checked;
-            settings.ConfigFunctionAutoCheckUpdateCheck = ConfigFunctionAutoCheckUpdateCheckBox.Checked;
-            settings.ConfigUiTrayModeCheck = ConfigUiTrayModeCheckBox.Checked;
-            settings.ConfigUiLanguageIndex = ConfigUiLanguageComboBox.SelectedIndex;
-            settings.ConfigUiSplashScreenCheck = ConfigUiSplashScreenCheckBox.Checked;
-            settings.ConfigX264Threads = ConfigX264ThreadsComboBox.SelectedIndex;
-            settings.ConfigFunctionEnableX265Check = ConfigFunctionEnableX265CheckBox.Checked;
-            settings.ConfigFunctionVideoPlayerText = ConfigFunctionVideoPlayerTextBox.Text;
+            //settings.ConfigFunctionDeleteTempFileCheck = ConfigFunctionDeleteTempFileCheckBox.Checked;
+            //settings.ConfigFunctionAutoCheckUpdateCheck = ConfigFunctionAutoCheckUpdateCheckBox.Checked;
+            //settings.ConfigUiTrayModeCheck = ConfigUiTrayModeCheckBox.Checked;
+            //settings.ConfigUiLanguageIndex = ConfigUiLanguageComboBox.SelectedIndex;
+            //settings.ConfigUiSplashScreenCheck = ConfigUiSplashScreenCheckBox.Checked;
+            //settings.ConfigX264Threads = ConfigX264ThreadsComboBox.SelectedIndex;
+            //settings.ConfigFunctionEnableX265Check = ConfigFunctionEnableX265CheckBox.Checked;
+            //settings.ConfigFunctionVideoPlayerText = ConfigFunctionVideoPlayerTextBox.Text;
             settings.MuxConvertFormatIndex = MuxConvertFormatComboBox.SelectedIndex;
             settings.VideoBatchSubtitleLanguage = "none,sc,tc,chs,cht,en,jp";
 
@@ -1070,12 +1063,6 @@ namespace mp4box
                 DialogResult r = MessageBoxExt.ShowQuestion("音频页面中的编码器未采用AAC将可能导致压制失败，建议将编码器改为QAAC、NeroAAC或FDKAAC。是否继续压制？", "提示");
                 if (r == DialogResult.No)
                     return;
-            }
-
-            //防止未选择 x264 thread
-            if (ConfigX264ThreadsComboBox.SelectedIndex == -1)
-            {
-                ConfigX264ThreadsComboBox.SelectedIndex = 0;
             }
 
             //目标文件已经存在提示是否覆盖
@@ -2632,9 +2619,9 @@ namespace mp4box
             {
                 string filepath = ToolsUtil.ToolsFolder + "\\temp.avs";
                 File.WriteAllText(filepath, AvsScriptTextBox.Text, Encoding.Default);
-                if (File.Exists(ConfigFunctionVideoPlayerTextBox.Text))
+                if (File.Exists(settings.ConfigFunctionVideoPlayerText))
                 {
-                    Process.Start(ConfigFunctionVideoPlayerTextBox.Text, filepath);
+                    Process.Start(settings.ConfigFunctionVideoPlayerText, filepath);
                 }
                 else
                 {
@@ -3019,7 +3006,7 @@ namespace mp4box
         public void ChangeEncoderProcessPriority()
         {
             string encoderProcessName = Path.GetFileNameWithoutExtension(VideoEncoderComboBox.Text);
-            OtherUtil.ChangeProcessesPriorityByName(encoderProcessName, (ProcessPriority)ConfigX264PriorityComboBox.SelectedIndex);
+            OtherUtil.ChangeProcessesPriorityByName(encoderProcessName, (ProcessPriorityClass)settings.ConfigX264Priority);
         }
 
         [Obsolete("Not used")]

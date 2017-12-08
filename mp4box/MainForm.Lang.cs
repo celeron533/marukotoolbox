@@ -45,7 +45,7 @@ namespace mp4box
 
         private void SwitchUILanguage(Thread UIThread)
         {
-            CultureInfo cultureInfo = configUserControl.GetCultureFromComboBox();
+            CultureInfo cultureInfo = configUserControl.UiLanguage;
             UIThread.CurrentUICulture = cultureInfo;
             SetLang(cultureInfo, this, typeof(MainForm));
 

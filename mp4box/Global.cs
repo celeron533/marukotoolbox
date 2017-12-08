@@ -13,6 +13,7 @@ namespace mp4box
         public static class Running
         {
             public static readonly string startPath = AppDomain.CurrentDomain.BaseDirectory;
+            public static string logFileName = "";
             public static bool shutdownState = false;
             public static bool trayMode = false;
 
