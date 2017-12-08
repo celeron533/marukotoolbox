@@ -7,6 +7,12 @@ namespace mp4box.Extension
 {
     public static class StringBuilderExt
     {
+        /// <summary>
+        /// Append parameters, separated with space
+        /// </summary>
+        /// <param name="sb">StringBuilder</param>
+        /// <param name="parameters">Array of parameters</param>
+        /// <returns>StringBuilder</returns>
         public static StringBuilder AppendParameters(this StringBuilder sb, params object[] parameters)
         {
             // Insert a leading space when necessary

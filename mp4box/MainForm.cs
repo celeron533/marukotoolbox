@@ -37,7 +37,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using static mp4box.DialogUtil;
 
 namespace mp4box
@@ -370,56 +369,6 @@ namespace mp4box
             return GenerateAudioOutputExt((AudioEncoderType)AudioEncoderComboBox.SelectedIndex, ".{1}");
         }
 
-        private string ExtractAV(out string ext, string input, MediaType mediaType, int streamIndex = 0)
-        {
-            ext = Path.GetExtension(input);
-            //aextract = "\"" + workPath + "\\mp4box.exe\" -raw 2 \"" + namevideo + "\"";
-            string aextract = FileStringUtil.FormatPath(ToolsUtil.FFMPEG.fullPath);
-            aextract += " -i " + FileStringUtil.FormatPath(input);
-
-            switch (mediaType)
-            {
-                case MediaType.Audio:
-                    aextract += " -vn -sn -c:a copy -y -map 0:a:" + streamIndex + " ";
-
-                    MediaInfoWrapper MIW = new MediaInfoWrapper(input);
-                    string audioFormat = MIW.a_format;
-                    string audioProfile = MIW.a_formatProfile;
-                    if (!string.IsNullOrEmpty(audioFormat))
-                    {
-                        if (audioFormat.Contains("MPEG") && audioProfile == "Layer 3")
-                            ext = ".mp3";
-                        else if (audioFormat.Contains("MPEG") && audioProfile == "Layer 2")
-                            ext = ".mp2";
-                        else if (audioFormat.Contains("PCM")) //flv support(PCM_U8 * PCM_S16BE * PCM_MULAW * PCM_ALAW * ADPCM_SWF)
-                            ext = ".wav";
-                        else if (audioFormat == "AAC")
-                            ext = ".aac";
-                        else if (audioFormat == "AC-3")
-                            ext = ".ac3";
-                        else if (audioFormat == "ALAC")
-                            ext = ".m4a";
-                        else
-                            ext = ".mka";
-                    }
-                    else
-                    {
-                        //MessageBoxExt.ShowInfoMessage("该轨道无音频");
-                        throw new Exception("该轨道无音频");
-                    }
-                    break;
-
-                case MediaType.Video:
-                    aextract += " -an -sn -c:v copy -y -map 0:v:" + streamIndex + " ";
-                    break;
-
-                default:
-                    throw new InvalidEnumArgumentException();
-            }
-
-            return aextract;
-        }
-
         private void ExecuteExtractAV(string namevideo, MediaType av, int streamIndex = 0)
         {
             if (string.IsNullOrEmpty(namevideo))
@@ -432,7 +381,7 @@ namespace mp4box
 
             try
             {
-                string aextract = ExtractAV(out ext, namevideo, av, streamIndex);
+                string aextract = Shared.ExtractAV(out ext, namevideo, av, streamIndex);
             }
             catch (Exception e)
             {
@@ -462,7 +411,7 @@ namespace mp4box
 
             try
             {
-                string aextract = ExtractAV(out ext, namevideo, MediaType.Audio, streamIndex);
+                string aextract = Shared.ExtractAV(out ext, namevideo, MediaType.Audio, streamIndex);
                 aextract += FileStringUtil.FormatPath(outfile) + "\r\n";
                 return aextract;
             }
