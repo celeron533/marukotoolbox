@@ -25,7 +25,7 @@ namespace mp4box.UserCtrl
             }
             set
             {
-                ConfigUiLanguageComboBox.SelectedItem = UiLanguageBindingList.Single(item => item.Value == value);
+                ConfigUiLanguageComboBox.SelectedItem = UiLanguageBindingList.Single(item => item.Value.LCID == value.LCID);
             }
         }
 
