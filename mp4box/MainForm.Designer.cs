@@ -46,10 +46,6 @@
             this.MiscMiscEndTimeLabel = new System.Windows.Forms.Label();
             this.MiscMiscBeginTimeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.MediaInfoTab = new System.Windows.Forms.TabPage();
-            this.MediaInfoVideoInputButton = new ControlExs.QQButton();
-            this.MediaInfoPlayVideoButton = new ControlExs.QQButton();
-            this.MediaInfoCopyButton = new ControlExs.QQButton();
-            this.MediaInfoTextBox = new System.Windows.Forms.TextBox();
             this.AvsTab = new System.Windows.Forms.TabPage();
             this.AvsAddFilterButton = new ControlExs.QQButton();
             this.AvsFilterLabel = new System.Windows.Forms.Label();
@@ -286,6 +282,7 @@
             this.MiscBlackVideoInputTextBox = new ControlExs.QQTextBox();
             this.ConfigTabPage = new System.Windows.Forms.TabPage();
             this.configUserControl = new mp4box.UserCtrl.ConfigUserControl();
+            this.mediaInfoUserControl1 = new mp4box.UserCtrl.MediaInfoUserControl();
             this.MiscMiscGroupBox.SuspendLayout();
             this.MediaInfoTab.SuspendLayout();
             this.AvsTab.SuspendLayout();
@@ -451,44 +448,10 @@
             // 
             // MediaInfoTab
             // 
-            this.MediaInfoTab.Controls.Add(this.MediaInfoVideoInputButton);
-            this.MediaInfoTab.Controls.Add(this.MediaInfoPlayVideoButton);
-            this.MediaInfoTab.Controls.Add(this.MediaInfoCopyButton);
-            this.MediaInfoTab.Controls.Add(this.MediaInfoTextBox);
+            this.MediaInfoTab.Controls.Add(this.mediaInfoUserControl1);
             resources.ApplyResources(this.MediaInfoTab, "MediaInfoTab");
             this.MediaInfoTab.Name = "MediaInfoTab";
             this.MediaInfoTab.UseVisualStyleBackColor = true;
-            // 
-            // MediaInfoVideoInputButton
-            // 
-            resources.ApplyResources(this.MediaInfoVideoInputButton, "MediaInfoVideoInputButton");
-            this.MediaInfoVideoInputButton.Name = "MediaInfoVideoInputButton";
-            this.MediaInfoVideoInputButton.UseVisualStyleBackColor = true;
-            this.MediaInfoVideoInputButton.Click += new System.EventHandler(this.MediaInfoVideoInputButton_Click);
-            // 
-            // MediaInfoPlayVideoButton
-            // 
-            resources.ApplyResources(this.MediaInfoPlayVideoButton, "MediaInfoPlayVideoButton");
-            this.MediaInfoPlayVideoButton.Name = "MediaInfoPlayVideoButton";
-            this.MediaInfoPlayVideoButton.UseVisualStyleBackColor = true;
-            this.MediaInfoPlayVideoButton.Click += new System.EventHandler(this.MediaInfoPlayVideoButton_Click);
-            // 
-            // MediaInfoCopyButton
-            // 
-            resources.ApplyResources(this.MediaInfoCopyButton, "MediaInfoCopyButton");
-            this.MediaInfoCopyButton.Name = "MediaInfoCopyButton";
-            this.MediaInfoCopyButton.UseVisualStyleBackColor = true;
-            this.MediaInfoCopyButton.Click += new System.EventHandler(this.MediaInfoCopyButton_Click);
-            // 
-            // MediaInfoTextBox
-            // 
-            this.MediaInfoTextBox.AllowDrop = true;
-            this.MediaInfoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.MediaInfoTextBox, "MediaInfoTextBox");
-            this.MediaInfoTextBox.Name = "MediaInfoTextBox";
-            this.MediaInfoTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.MediaInfoTextBox_DragDrop);
-            this.MediaInfoTextBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.MediaInfoTextBox_DragEnter);
-            this.MediaInfoTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MediaInfoTextBox_KeyDown);
             // 
             // AvsTab
             // 
@@ -2730,8 +2693,16 @@
             // 
             // configUserControl
             // 
+            this.configUserControl.CheckUpdates = true;
+            this.configUserControl.CleanupTempFiles = true;
+            this.configUserControl.EnableX265 = true;
             resources.ApplyResources(this.configUserControl, "configUserControl");
             this.configUserControl.Name = "configUserControl";
+            // 
+            // mediaInfoUserControl1
+            // 
+            resources.ApplyResources(this.mediaInfoUserControl1, "mediaInfoUserControl1");
+            this.mediaInfoUserControl1.Name = "mediaInfoUserControl1";
             // 
             // MainForm
             // 
@@ -2749,7 +2720,6 @@
             this.MiscMiscGroupBox.ResumeLayout(false);
             this.MiscMiscGroupBox.PerformLayout();
             this.MediaInfoTab.ResumeLayout(false);
-            this.MediaInfoTab.PerformLayout();
             this.AvsTab.ResumeLayout(false);
             this.AvsTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvsTrimEndNumericUpDown)).EndInit();
@@ -2830,10 +2800,6 @@
         private ControlExs.QQButton MiscMiscVideoOutputButton;
         private ControlExs.QQButton MiscMiscVideoInputButton;
         private System.Windows.Forms.TabPage MediaInfoTab;
-        private ControlExs.QQButton MediaInfoVideoInputButton;
-        private ControlExs.QQButton MediaInfoPlayVideoButton;
-        private ControlExs.QQButton MediaInfoCopyButton;
-        private System.Windows.Forms.TextBox MediaInfoTextBox;
         private System.Windows.Forms.TabPage AvsTab;
         private ControlExs.QQButton AvsClearButton;
         private ControlExs.QQButton AvsGenerateButton;
@@ -3074,6 +3040,7 @@
         private System.Windows.Forms.Label MiscOnePicDurationLabel;
         private UserCtrl.HelpUserControl helpUserControl;
         private UserCtrl.ConfigUserControl configUserControl;
+        private UserCtrl.MediaInfoUserControl mediaInfoUserControl1;
     }
 }
 

@@ -24,6 +24,7 @@ using ControlExs;
 using MediaInfoLib;
 using mp4box.Extension;
 using mp4box.Procedure;
+using mp4box.Utility;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -60,8 +61,6 @@ namespace mp4box
         private string videoInput = "";
         private string videoOutput;
         private string videoSubtitle = "";
-
-        private string mediaInfoFile;
 
         private string x264;
         private string aextract;
@@ -1352,7 +1351,7 @@ namespace mp4box
 
         private void VideoCustomParameterTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            TextBoxSelectAll(sender, e);
+            UIUtil.TextBoxSelectAll(sender, e);
         }
 
         private void VideoAutoShutdownCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -2794,7 +2793,7 @@ namespace mp4box
 
         private void AvsScriptTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            TextBoxSelectAll(sender, e);
+            UIUtil.TextBoxSelectAll(sender, e);
         }
 
         private void GenerateAVS()
@@ -2866,68 +2865,9 @@ namespace mp4box
 
         #region MediaInfo Tab
 
-        public string GetMediaInfoString(string mediaFileName)
-        {
-            try
-            {
-                return new MediaInfoWrapper(mediaFileName).ToString();
-            }
-            catch (FileNotFoundException)
-            {
-                return "文件不存在、非有效文件或者文件夹 无视频信息";
-            }
-        }
 
-        private void MediaInfoTextBox_DragEnter(object sender, DragEventArgs e)
-        {
-            // Only allows file drop as link
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-                e.Effect = DragDropEffects.Link;
-            else e.Effect = DragDropEffects.None;
-        }
-
-        private void MediaInfoTextBox_DragDrop(object sender, DragEventArgs e)
-        {
-            mediaInfoFile = ((System.Array)e.Data.GetData(DataFormats.FileDrop)).GetValue(0).ToString();
-            MediaInfoTextBox.Text = GetMediaInfoString(mediaInfoFile);
-        }
-
-        private void MediaInfoVideoInputButton_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog() //"视频(*.mp4;*.flv;*.mkv)|*.mp4;*.flv;*.mkv|所有文件(*.*)|*.*"
-                .Prepare(DialogFilter.VIDEO_6, mediaInfoFile);
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                mediaInfoFile = openFileDialog.FileName;
-                MediaInfoTextBox.Text = GetMediaInfoString(mediaInfoFile);
-            }
-        }
-
-        private void MediaInfoPlayVideoButton_Click(object sender, EventArgs e)
-        {
-            if (File.Exists(mediaInfoFile))
-                Process.Start(mediaInfoFile);
-        }
-
-        private void MediaInfoTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            TextBoxSelectAll(sender, e);
-        }
-
-        private void MediaInfoCopyButton_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(MediaInfoTextBox.Text);
-        }
 
         #endregion MediaInfo Tab
-
-
-        //Ctrl+A 可以全选文本
-        private void TextBoxSelectAll(object sender, KeyEventArgs e)
-        {
-            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.A)
-                ((TextBoxBase)sender).SelectAll();  // using TextBoxBase to include TextBox, RichTextBox and MaskedTextBox
-        }
 
         private void RemoveSelectedItemFromListBox(ListBox listBox)
         {

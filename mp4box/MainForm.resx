@@ -304,7 +304,7 @@
     <value>92, 108</value>
   </data>
   <data name="MiscMiscTransposeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 12</value>
+    <value>57, 13</value>
   </data>
   <data name="MiscMiscTransposeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -340,7 +340,7 @@
     <value>185, 105</value>
   </data>
   <data name="MiscMiscTransposeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 20</value>
+    <value>233, 21</value>
   </data>
   <data name="MiscMiscTransposeComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -532,7 +532,7 @@
     <value>90:00:00</value>
   </data>
   <data name="MiscMiscEndTimeMaskedTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 21</value>
+    <value>70, 20</value>
   </data>
   <data name="MiscMiscEndTimeMaskedTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -565,7 +565,7 @@
     <value>92, 80</value>
   </data>
   <data name="MiscMiscBeginTimeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
+    <value>55, 13</value>
   </data>
   <data name="MiscMiscBeginTimeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -595,7 +595,7 @@
     <value>320, 79</value>
   </data>
   <data name="MiscMiscEndTimeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
+    <value>55, 13</value>
   </data>
   <data name="MiscMiscEndTimeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -622,7 +622,7 @@
     <value>90:00:00</value>
   </data>
   <data name="MiscMiscBeginTimeMaskedTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 21</value>
+    <value>70, 20</value>
   </data>
   <data name="MiscMiscBeginTimeMaskedTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -645,53 +645,26 @@
   <data name="&gt;&gt;MiscMiscBeginTimeMaskedTextBox.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;MediaInfoVideoInputButton.Name" xml:space="preserve">
-    <value>MediaInfoVideoInputButton</value>
+  <data name="mediaInfoUserControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="&gt;&gt;MediaInfoVideoInputButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="mediaInfoUserControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>561, 588</value>
   </data>
-  <data name="&gt;&gt;MediaInfoVideoInputButton.Parent" xml:space="preserve">
-    <value>MediaInfoTab</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoVideoInputButton.ZOrder" xml:space="preserve">
+  <data name="mediaInfoUserControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;MediaInfoPlayVideoButton.Name" xml:space="preserve">
-    <value>MediaInfoPlayVideoButton</value>
+  <data name="&gt;&gt;mediaInfoUserControl1.Name" xml:space="preserve">
+    <value>mediaInfoUserControl1</value>
   </data>
-  <data name="&gt;&gt;MediaInfoPlayVideoButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;mediaInfoUserControl1.Type" xml:space="preserve">
+    <value>mp4box.UserCtrl.MediaInfoUserControl, xiaowan, Version=1.0.6552.26801, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;MediaInfoPlayVideoButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;mediaInfoUserControl1.Parent" xml:space="preserve">
     <value>MediaInfoTab</value>
   </data>
-  <data name="&gt;&gt;MediaInfoPlayVideoButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoCopyButton.Name" xml:space="preserve">
-    <value>MediaInfoCopyButton</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoCopyButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoCopyButton.Parent" xml:space="preserve">
-    <value>MediaInfoTab</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoCopyButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoTextBox.Name" xml:space="preserve">
-    <value>MediaInfoTextBox</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoTextBox.Parent" xml:space="preserve">
-    <value>MediaInfoTab</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;mediaInfoUserControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="MediaInfoTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -700,7 +673,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="MediaInfoTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 74</value>
+    <value>572, 587</value>
   </data>
   <data name="MediaInfoTab.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -719,780 +692,6 @@
   </data>
   <data name="&gt;&gt;MediaInfoTab.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="MediaInfoVideoInputButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
-  </data>
-  <data name="MediaInfoVideoInputButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="MediaInfoVideoInputButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>483, 561</value>
-  </data>
-  <data name="MediaInfoVideoInputButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="MediaInfoVideoInputButton.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="MediaInfoVideoInputButton.Text" xml:space="preserve">
-    <value>选择视频</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoVideoInputButton.Name" xml:space="preserve">
-    <value>MediaInfoVideoInputButton</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoVideoInputButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoVideoInputButton.Parent" xml:space="preserve">
-    <value>MediaInfoTab</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoVideoInputButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="MediaInfoPlayVideoButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
-  </data>
-  <data name="MediaInfoPlayVideoButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="MediaInfoPlayVideoButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 561</value>
-  </data>
-  <data name="MediaInfoPlayVideoButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="MediaInfoPlayVideoButton.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="MediaInfoPlayVideoButton.Text" xml:space="preserve">
-    <value>播放视频</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoPlayVideoButton.Name" xml:space="preserve">
-    <value>MediaInfoPlayVideoButton</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoPlayVideoButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoPlayVideoButton.Parent" xml:space="preserve">
-    <value>MediaInfoTab</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoPlayVideoButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="MediaInfoCopyButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
-  </data>
-  <data name="MediaInfoCopyButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="MediaInfoCopyButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 561</value>
-  </data>
-  <data name="MediaInfoCopyButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="MediaInfoCopyButton.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="MediaInfoCopyButton.Text" xml:space="preserve">
-    <value>复制信息</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoCopyButton.Name" xml:space="preserve">
-    <value>MediaInfoCopyButton</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoCopyButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoCopyButton.Parent" xml:space="preserve">
-    <value>MediaInfoTab</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoCopyButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="MediaInfoTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun-ExtB, 9.75pt</value>
-  </data>
-  <data name="MediaInfoTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 6</value>
-  </data>
-  <data name="MediaInfoTextBox.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MediaInfoTextBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="MediaInfoTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>550, 549</value>
-  </data>
-  <data name="MediaInfoTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="MediaInfoTextBox.Text" xml:space="preserve">
-    <value>请把多媒体文件拖到这里</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoTextBox.Name" xml:space="preserve">
-    <value>MediaInfoTextBox</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoTextBox.Parent" xml:space="preserve">
-    <value>MediaInfoTab</value>
-  </data>
-  <data name="&gt;&gt;MediaInfoTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;AvsAddFilterButton.Name" xml:space="preserve">
-    <value>AvsAddFilterButton</value>
-  </data>
-  <data name="&gt;&gt;AvsAddFilterButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsAddFilterButton.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsAddFilterButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;AvsFilterLabel.Name" xml:space="preserve">
-    <value>AvsFilterLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsFilterLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsFilterLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsFilterLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;AvsFilterComboBox.Name" xml:space="preserve">
-    <value>AvsFilterComboBox</value>
-  </data>
-  <data name="&gt;&gt;AvsFilterComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsFilterComboBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsFilterComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;AvsCropIntroductionLabel.Name" xml:space="preserve">
-    <value>AvsCropIntroductionLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsCropIntroductionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsCropIntroductionLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsCropIntroductionLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;AvsCropTextBox.Name" xml:space="preserve">
-    <value>AvsCropTextBox</value>
-  </data>
-  <data name="&gt;&gt;AvsCropTextBox.Type" xml:space="preserve">
-    <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsCropTextBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsCropTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimEndLabel.Name" xml:space="preserve">
-    <value>AvsTrimEndLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimEndLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimEndLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimEndLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimStartLabel.Name" xml:space="preserve">
-    <value>AvsTrimStartLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimStartLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimStartLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimStartLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimEndNumericUpDown.Name" xml:space="preserve">
-    <value>AvsTrimEndNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimEndNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimEndNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimEndNumericUpDown.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimStartNumericUpDown.Name" xml:space="preserve">
-    <value>AvsTrimStartNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimStartNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimStartNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimStartNumericUpDown.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;AvsLevelsNumericUpDown.Name" xml:space="preserve">
-    <value>AvsLevelsNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsLevelsNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsLevelsNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsLevelsNumericUpDown.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersTopLabel.Name" xml:space="preserve">
-    <value>AvsAddBordersTopLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersTopLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersTopLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersTopLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersRightLabel.Name" xml:space="preserve">
-    <value>AvsAddBordersRightLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersRightLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersRightLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersRightLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersBottomLabel.Name" xml:space="preserve">
-    <value>AvsAddBordersBottomLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersBottomLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersBottomLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersBottomLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersLeftLabel.Name" xml:space="preserve">
-    <value>AvsAddBordersLeftLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersLeftLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersLeftLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersLeftLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersBottomNumericUpDown.Name" xml:space="preserve">
-    <value>AvsAddBordersBottomNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersBottomNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersBottomNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersBottomNumericUpDown.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersRightNumericUpDown.Name" xml:space="preserve">
-    <value>AvsAddBordersRightNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersRightNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersRightNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersRightNumericUpDown.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersTopNumericUpDown.Name" xml:space="preserve">
-    <value>AvsAddBordersTopNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersTopNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersTopNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersTopNumericUpDown.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;AvsSharpenNumericUpDown.Name" xml:space="preserve">
-    <value>AvsSharpenNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsSharpenNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsSharpenNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsSharpenNumericUpDown.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersLeftNumericUpDown.Name" xml:space="preserve">
-    <value>AvsAddBordersLeftNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersLeftNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersLeftNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersLeftNumericUpDown.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeHeightLabel.Name" xml:space="preserve">
-    <value>AvsLanczosResizeHeightLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeHeightLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeHeightLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeHeightLabel.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeWidthLabel.Name" xml:space="preserve">
-    <value>AvsLanczosResizeWidthLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeWidthLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeWidthLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeWidthLabel.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeHeightNumericUpDown.Name" xml:space="preserve">
-    <value>AvsLanczosResizeHeightNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeHeightNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeHeightNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeHeightNumericUpDown.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeWidthNumericUpDown.Name" xml:space="preserve">
-    <value>AvsLanczosResizeWidthNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeWidthNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeWidthNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeWidthNumericUpDown.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakContrastLabel.Name" xml:space="preserve">
-    <value>AvsTweakContrastLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakContrastLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakContrastLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakContrastLabel.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakBrightnessLabel.Name" xml:space="preserve">
-    <value>AvsTweakBrightnessLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakBrightnessLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakBrightnessLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakBrightnessLabel.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakSaturationLabel.Name" xml:space="preserve">
-    <value>AvsTweakSaturationLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakSaturationLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakSaturationLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakSaturationLabel.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakChromaLabel.Name" xml:space="preserve">
-    <value>AvsTweakChromaLabel</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakChromaLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakChromaLabel.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakChromaLabel.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakContrastNumericUpDown.Name" xml:space="preserve">
-    <value>AvsTweakContrastNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakContrastNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakContrastNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakContrastNumericUpDown.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakBrightnessNumericUpDown.Name" xml:space="preserve">
-    <value>AvsTweakBrightnessNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakBrightnessNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakBrightnessNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakBrightnessNumericUpDown.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakSaturationNumericUpDown.Name" xml:space="preserve">
-    <value>AvsTweakSaturationNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakSaturationNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakSaturationNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakSaturationNumericUpDown.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakChromaNumericUpDown.Name" xml:space="preserve">
-    <value>AvsTweakChromaNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakChromaNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakChromaNumericUpDown.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakChromaNumericUpDown.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;AvsScriptTextBox.Name" xml:space="preserve">
-    <value>AvsScriptTextBox</value>
-  </data>
-  <data name="&gt;&gt;AvsScriptTextBox.Type" xml:space="preserve">
-    <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsScriptTextBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsScriptTextBox.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;AvsVideoInputTextBox.Name" xml:space="preserve">
-    <value>AvsVideoInputTextBox</value>
-  </data>
-  <data name="&gt;&gt;AvsVideoInputTextBox.Type" xml:space="preserve">
-    <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsVideoInputTextBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsVideoInputTextBox.ZOrder" xml:space="preserve">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;AvsOutputTextBox.Name" xml:space="preserve">
-    <value>AvsOutputTextBox</value>
-  </data>
-  <data name="&gt;&gt;AvsOutputTextBox.Type" xml:space="preserve">
-    <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsOutputTextBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsOutputTextBox.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;AvsSubtitleInputTextBox.Name" xml:space="preserve">
-    <value>AvsSubtitleInputTextBox</value>
-  </data>
-  <data name="&gt;&gt;AvsSubtitleInputTextBox.Type" xml:space="preserve">
-    <value>ControlExs.QQTextBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsSubtitleInputTextBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsSubtitleInputTextBox.ZOrder" xml:space="preserve">
-    <value>34</value>
-  </data>
-  <data name="&gt;&gt;AvsIncludeAudioCheckBox.Name" xml:space="preserve">
-    <value>AvsIncludeAudioCheckBox</value>
-  </data>
-  <data name="&gt;&gt;AvsIncludeAudioCheckBox.Type" xml:space="preserve">
-    <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsIncludeAudioCheckBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsIncludeAudioCheckBox.ZOrder" xml:space="preserve">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;AvsSaveButton.Name" xml:space="preserve">
-    <value>AvsSaveButton</value>
-  </data>
-  <data name="&gt;&gt;AvsSaveButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsSaveButton.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsSaveButton.ZOrder" xml:space="preserve">
-    <value>36</value>
-  </data>
-  <data name="&gt;&gt;AvsLevelsCheckBox.Name" xml:space="preserve">
-    <value>AvsLevelsCheckBox</value>
-  </data>
-  <data name="&gt;&gt;AvsLevelsCheckBox.Type" xml:space="preserve">
-    <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsLevelsCheckBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsLevelsCheckBox.ZOrder" xml:space="preserve">
-    <value>37</value>
-  </data>
-  <data name="&gt;&gt;AvsCropCheckBox.Name" xml:space="preserve">
-    <value>AvsCropCheckBox</value>
-  </data>
-  <data name="&gt;&gt;AvsCropCheckBox.Type" xml:space="preserve">
-    <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsCropCheckBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsCropCheckBox.ZOrder" xml:space="preserve">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimCheckBox.Name" xml:space="preserve">
-    <value>AvsTrimCheckBox</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimCheckBox.Type" xml:space="preserve">
-    <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimCheckBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTrimCheckBox.ZOrder" xml:space="preserve">
-    <value>39</value>
-  </data>
-  <data name="&gt;&gt;AvsSharpenCheckBox.Name" xml:space="preserve">
-    <value>AvsSharpenCheckBox</value>
-  </data>
-  <data name="&gt;&gt;AvsSharpenCheckBox.Type" xml:space="preserve">
-    <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsSharpenCheckBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsSharpenCheckBox.ZOrder" xml:space="preserve">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersCheckBox.Name" xml:space="preserve">
-    <value>AvsAddBordersCheckBox</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersCheckBox.Type" xml:space="preserve">
-    <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersCheckBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsAddBordersCheckBox.ZOrder" xml:space="preserve">
-    <value>41</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeCheckBox.Name" xml:space="preserve">
-    <value>AvsLanczosResizeCheckBox</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeCheckBox.Type" xml:space="preserve">
-    <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeCheckBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsLanczosResizeCheckBox.ZOrder" xml:space="preserve">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakCheckBox.Name" xml:space="preserve">
-    <value>AvsTweakCheckBox</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakCheckBox.Type" xml:space="preserve">
-    <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakCheckBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTweakCheckBox.ZOrder" xml:space="preserve">
-    <value>43</value>
-  </data>
-  <data name="&gt;&gt;AvsUndotCheckBox.Name" xml:space="preserve">
-    <value>AvsUndotCheckBox</value>
-  </data>
-  <data name="&gt;&gt;AvsUndotCheckBox.Type" xml:space="preserve">
-    <value>ControlExs.QQCheckBox, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsUndotCheckBox.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsUndotCheckBox.ZOrder" xml:space="preserve">
-    <value>44</value>
-  </data>
-  <data name="&gt;&gt;AvsClearButton.Name" xml:space="preserve">
-    <value>AvsClearButton</value>
-  </data>
-  <data name="&gt;&gt;AvsClearButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsClearButton.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsClearButton.ZOrder" xml:space="preserve">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;AvsGenerateButton.Name" xml:space="preserve">
-    <value>AvsGenerateButton</value>
-  </data>
-  <data name="&gt;&gt;AvsGenerateButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsGenerateButton.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsGenerateButton.ZOrder" xml:space="preserve">
-    <value>46</value>
-  </data>
-  <data name="&gt;&gt;AvsPreviewButton.Name" xml:space="preserve">
-    <value>AvsPreviewButton</value>
-  </data>
-  <data name="&gt;&gt;AvsPreviewButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsPreviewButton.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsPreviewButton.ZOrder" xml:space="preserve">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;AvsStartButton.Name" xml:space="preserve">
-    <value>AvsStartButton</value>
-  </data>
-  <data name="&gt;&gt;AvsStartButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsStartButton.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsStartButton.ZOrder" xml:space="preserve">
-    <value>48</value>
-  </data>
-  <data name="&gt;&gt;AvsVideoInputButton.Name" xml:space="preserve">
-    <value>AvsVideoInputButton</value>
-  </data>
-  <data name="&gt;&gt;AvsVideoInputButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsVideoInputButton.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsVideoInputButton.ZOrder" xml:space="preserve">
-    <value>49</value>
-  </data>
-  <data name="&gt;&gt;AvsOutputButton.Name" xml:space="preserve">
-    <value>AvsOutputButton</value>
-  </data>
-  <data name="&gt;&gt;AvsOutputButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsOutputButton.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsOutputButton.ZOrder" xml:space="preserve">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;AvsSubtitleInputButton.Name" xml:space="preserve">
-    <value>AvsSubtitleInputButton</value>
-  </data>
-  <data name="&gt;&gt;AvsSubtitleInputButton.Type" xml:space="preserve">
-    <value>ControlExs.QQButton, ControlExs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AvsSubtitleInputButton.Parent" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsSubtitleInputButton.ZOrder" xml:space="preserve">
-    <value>51</value>
-  </data>
-  <data name="AvsTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="AvsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="AvsTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 74</value>
-  </data>
-  <data name="AvsTab.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="AvsTab.Text" xml:space="preserve">
-    <value>AVS</value>
-  </data>
-  <data name="&gt;&gt;AvsTab.Name" xml:space="preserve">
-    <value>AvsTab</value>
-  </data>
-  <data name="&gt;&gt;AvsTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AvsTab.Parent" xml:space="preserve">
-    <value>MainTabControl</value>
-  </data>
-  <data name="&gt;&gt;AvsTab.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="AvsAddFilterButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>
@@ -1534,7 +733,7 @@
     <value>29, 309</value>
   </data>
   <data name="AvsFilterLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
+    <value>55, 13</value>
   </data>
   <data name="AvsFilterLabel.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -1558,7 +757,7 @@
     <value>94, 306</value>
   </data>
   <data name="AvsFilterComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 20</value>
+    <value>295, 21</value>
   </data>
   <data name="AvsFilterComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
@@ -1585,7 +784,7 @@
     <value>156, 176</value>
   </data>
   <data name="AvsCropIntroductionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 12</value>
+    <value>163, 13</value>
   </data>
   <data name="AvsCropIntroductionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1642,7 +841,7 @@
     <value>313, 204</value>
   </data>
   <data name="AvsTrimEndLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 12</value>
+    <value>43, 13</value>
   </data>
   <data name="AvsTrimEndLabel.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -1672,7 +871,7 @@
     <value>156, 204</value>
   </data>
   <data name="AvsTrimStartLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 12</value>
+    <value>43, 13</value>
   </data>
   <data name="AvsTrimStartLabel.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -1696,7 +895,7 @@
     <value>360, 200</value>
   </data>
   <data name="AvsTrimEndNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 21</value>
+    <value>88, 20</value>
   </data>
   <data name="AvsTrimEndNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -1720,7 +919,7 @@
     <value>203, 200</value>
   </data>
   <data name="AvsTrimStartNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 21</value>
+    <value>88, 20</value>
   </data>
   <data name="AvsTrimStartNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -1744,7 +943,7 @@
     <value>203, 227</value>
   </data>
   <data name="AvsLevelsNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 21</value>
+    <value>57, 20</value>
   </data>
   <data name="AvsLevelsNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -1771,7 +970,7 @@
     <value>252, 150</value>
   </data>
   <data name="AvsAddBordersTopLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
+    <value>19, 13</value>
   </data>
   <data name="AvsAddBordersTopLabel.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -1801,7 +1000,7 @@
     <value>337, 150</value>
   </data>
   <data name="AvsAddBordersRightLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
+    <value>19, 13</value>
   </data>
   <data name="AvsAddBordersRightLabel.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -1831,7 +1030,7 @@
     <value>421, 150</value>
   </data>
   <data name="AvsAddBordersBottomLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
+    <value>19, 13</value>
   </data>
   <data name="AvsAddBordersBottomLabel.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -1861,7 +1060,7 @@
     <value>168, 150</value>
   </data>
   <data name="AvsAddBordersLeftLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
+    <value>19, 13</value>
   </data>
   <data name="AvsAddBordersLeftLabel.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -1885,7 +1084,7 @@
     <value>444, 148</value>
   </data>
   <data name="AvsAddBordersBottomNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 21</value>
+    <value>55, 20</value>
   </data>
   <data name="AvsAddBordersBottomNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -1906,7 +1105,7 @@
     <value>360, 148</value>
   </data>
   <data name="AvsAddBordersRightNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 21</value>
+    <value>55, 20</value>
   </data>
   <data name="AvsAddBordersRightNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -1927,7 +1126,7 @@
     <value>276, 148</value>
   </data>
   <data name="AvsAddBordersTopNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 21</value>
+    <value>55, 20</value>
   </data>
   <data name="AvsAddBordersTopNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -1948,7 +1147,7 @@
     <value>203, 254</value>
   </data>
   <data name="AvsSharpenNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 21</value>
+    <value>55, 20</value>
   </data>
   <data name="AvsSharpenNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -1969,7 +1168,7 @@
     <value>191, 148</value>
   </data>
   <data name="AvsAddBordersLeftNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 21</value>
+    <value>55, 20</value>
   </data>
   <data name="AvsAddBordersLeftNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -1996,7 +1195,7 @@
     <value>325, 123</value>
   </data>
   <data name="AvsLanczosResizeHeightLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="AvsLanczosResizeHeightLabel.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -2026,7 +1225,7 @@
     <value>156, 123</value>
   </data>
   <data name="AvsLanczosResizeWidthLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="AvsLanczosResizeWidthLabel.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -2050,7 +1249,7 @@
     <value>360, 121</value>
   </data>
   <data name="AvsLanczosResizeHeightNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 21</value>
+    <value>88, 20</value>
   </data>
   <data name="AvsLanczosResizeHeightNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -2074,7 +1273,7 @@
     <value>193, 121</value>
   </data>
   <data name="AvsLanczosResizeWidthNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 21</value>
+    <value>88, 20</value>
   </data>
   <data name="AvsLanczosResizeWidthNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -2104,7 +1303,7 @@
     <value>456, 96</value>
   </data>
   <data name="AvsTweakContrastLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 12</value>
+    <value>43, 13</value>
   </data>
   <data name="AvsTweakContrastLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -2134,7 +1333,7 @@
     <value>360, 96</value>
   </data>
   <data name="AvsTweakBrightnessLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="AvsTweakBrightnessLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -2164,7 +1363,7 @@
     <value>252, 96</value>
   </data>
   <data name="AvsTweakSaturationLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 12</value>
+    <value>43, 13</value>
   </data>
   <data name="AvsTweakSaturationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -2194,7 +1393,7 @@
     <value>156, 96</value>
   </data>
   <data name="AvsTweakChromaLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="AvsTweakChromaLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -2218,7 +1417,7 @@
     <value>503, 92</value>
   </data>
   <data name="AvsTweakContrastNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 21</value>
+    <value>55, 20</value>
   </data>
   <data name="AvsTweakContrastNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -2239,7 +1438,7 @@
     <value>395, 92</value>
   </data>
   <data name="AvsTweakBrightnessNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 21</value>
+    <value>55, 20</value>
   </data>
   <data name="AvsTweakBrightnessNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -2260,7 +1459,7 @@
     <value>299, 92</value>
   </data>
   <data name="AvsTweakSaturationNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 21</value>
+    <value>55, 20</value>
   </data>
   <data name="AvsTweakSaturationNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -2281,7 +1480,7 @@
     <value>191, 92</value>
   </data>
   <data name="AvsTweakChromaNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 21</value>
+    <value>55, 20</value>
   </data>
   <data name="AvsTweakChromaNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -2942,6 +2141,33 @@
   </data>
   <data name="&gt;&gt;AvsSubtitleInputButton.ZOrder" xml:space="preserve">
     <value>51</value>
+  </data>
+  <data name="AvsTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="AvsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="AvsTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>572, 587</value>
+  </data>
+  <data name="AvsTab.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="AvsTab.Text" xml:space="preserve">
+    <value>AVS</value>
+  </data>
+  <data name="&gt;&gt;AvsTab.Name" xml:space="preserve">
+    <value>AvsTab</value>
+  </data>
+  <data name="&gt;&gt;AvsTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AvsTab.Parent" xml:space="preserve">
+    <value>MainTabControl</value>
+  </data>
+  <data name="&gt;&gt;AvsTab.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;ExtractMkvGroupBox.Name" xml:space="preserve">
     <value>ExtractMkvGroupBox</value>
@@ -4033,7 +3259,7 @@
     <value>8, 246</value>
   </data>
   <data name="MuxConvertAacEncoderLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 12</value>
+    <value>64, 13</value>
   </data>
   <data name="MuxConvertAacEncoderLabel.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -4063,7 +3289,7 @@
     <value>91, 241</value>
   </data>
   <data name="MuxConvertAacEncoderComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 20</value>
+    <value>98, 21</value>
   </data>
   <data name="MuxConvertAacEncoderComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -4093,7 +3319,7 @@
     <value>204, 246</value>
   </data>
   <data name="MuxConvertFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
+    <value>55, 13</value>
   </data>
   <data name="MuxConvertFormatLabel.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -4135,7 +3361,7 @@
     <value>269, 241</value>
   </data>
   <data name="MuxConvertFormatComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
+    <value>49, 21</value>
   </data>
   <data name="MuxConvertFormatComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -4155,14 +3381,11 @@
   <data name="MuxConvertItemListBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MuxConvertItemListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
   <data name="MuxConvertItemListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 19</value>
   </data>
   <data name="MuxConvertItemListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>471, 220</value>
+    <value>471, 212</value>
   </data>
   <data name="MuxConvertItemListBox.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -4249,7 +3472,7 @@
     <value>357, 246</value>
   </data>
   <data name="MuxConvertOutputNotificationLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 12</value>
+    <value>103, 13</value>
   </data>
   <data name="MuxConvertOutputNotificationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -4528,7 +3751,7 @@
     <value>195, 107</value>
   </data>
   <data name="MuxMp4ParComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 20</value>
+    <value>89, 21</value>
   </data>
   <data name="MuxMp4ParComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -4558,7 +3781,7 @@
     <value>166, 111</value>
   </data>
   <data name="MuxMp4ParLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 12</value>
+    <value>29, 13</value>
   </data>
   <data name="MuxMp4ParLabel.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -4723,7 +3946,7 @@
     <value>37, 107</value>
   </data>
   <data name="MuxMp4FpsComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 20</value>
+    <value>89, 21</value>
   </data>
   <data name="MuxMp4FpsComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -4837,7 +4060,7 @@
     <value>8, 111</value>
   </data>
   <data name="MuxMp4FpsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 12</value>
+    <value>27, 13</value>
   </data>
   <data name="MuxMp4FpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -5596,7 +4819,7 @@
     <value>103, 104</value>
   </data>
   <data name="AudioPresetComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 20</value>
+    <value>122, 21</value>
   </data>
   <data name="AudioPresetComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -5626,7 +4849,7 @@
     <value>18, 108</value>
   </data>
   <data name="AudioPresetLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="AudioPresetLabel.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -5674,7 +4897,7 @@
     <value>103, 104</value>
   </data>
   <data name="AudioBitrateComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 20</value>
+    <value>122, 21</value>
   </data>
   <data name="AudioBitrateComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -5704,7 +4927,7 @@
     <value>18, 81</value>
   </data>
   <data name="AudioEncoderLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 12</value>
+    <value>43, 13</value>
   </data>
   <data name="AudioEncoderLabel.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -5752,7 +4975,7 @@
     <value>103, 78</value>
   </data>
   <data name="AudioEncoderComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 20</value>
+    <value>122, 21</value>
   </data>
   <data name="AudioEncoderComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -5962,7 +5185,7 @@
     <value>251, 110</value>
   </data>
   <data name="AudioKbpsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="AudioKbpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -6022,7 +5245,7 @@
     <value>18, 108</value>
   </data>
   <data name="AudioBitrateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="AudioBitrateLabel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -6250,7 +5473,7 @@
     <value>8, 323</value>
   </data>
   <data name="AudioBatchOutputNotificationLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 12</value>
+    <value>139, 13</value>
   </data>
   <data name="AudioBatchOutputNotificationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -6303,14 +5526,11 @@
   <data name="AudioBatchItemListBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="AudioBatchItemListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
   <data name="AudioBatchItemListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 20</value>
   </data>
   <data name="AudioBatchItemListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>551, 292</value>
+    <value>551, 290</value>
   </data>
   <data name="AudioBatchItemListBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -6667,7 +5887,7 @@
     <value>226, 137</value>
   </data>
   <data name="MiscOnePicDurationSecondsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
+    <value>19, 13</value>
   </data>
   <data name="MiscOnePicDurationSecondsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -6691,7 +5911,7 @@
     <value>158, 134</value>
   </data>
   <data name="MiscOnePicDurationSecondsTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 21</value>
+    <value>62, 20</value>
   </data>
   <data name="MiscOnePicDurationSecondsTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -6721,7 +5941,7 @@
     <value>105, 137</value>
   </data>
   <data name="MiscOnePicDurationLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="MiscOnePicDurationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -6745,7 +5965,7 @@
     <value>391, 107</value>
   </data>
   <data name="MiscOnePicCrfNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 21</value>
+    <value>88, 20</value>
   </data>
   <data name="MiscOnePicCrfNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -6775,7 +5995,7 @@
     <value>362, 109</value>
   </data>
   <data name="MiscOnePicCrfLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 12</value>
+    <value>28, 13</value>
   </data>
   <data name="MiscOnePicCrfLabel.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -6838,7 +6058,7 @@
     <value>275, 109</value>
   </data>
   <data name="MiscOnePicFpsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 12</value>
+    <value>27, 13</value>
   </data>
   <data name="MiscOnePicFpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -6862,7 +6082,7 @@
     <value>307, 107</value>
   </data>
   <data name="MiscOnePicFpsNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 21</value>
+    <value>48, 20</value>
   </data>
   <data name="MiscOnePicFpsNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -6892,7 +6112,7 @@
     <value>226, 109</value>
   </data>
   <data name="MiscOnePicKbpsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="MiscOnePicKbpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -6922,7 +6142,7 @@
     <value>12, 109</value>
   </data>
   <data name="MiscOnePicBitrateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
+    <value>55, 13</value>
   </data>
   <data name="MiscOnePicBitrateLabel.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -6946,7 +6166,7 @@
     <value>158, 107</value>
   </data>
   <data name="MiscOnePicBitrateNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 21</value>
+    <value>62, 20</value>
   </data>
   <data name="MiscOnePicBitrateNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -7663,7 +6883,7 @@
     <value>238, 147</value>
   </data>
   <data name="VideoFramesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
+    <value>55, 13</value>
   </data>
   <data name="VideoFramesLabel.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -7693,7 +6913,7 @@
     <value>11, 147</value>
   </data>
   <data name="VideoSeekLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 12</value>
+    <value>43, 13</value>
   </data>
   <data name="VideoSeekLabel.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -7717,7 +6937,7 @@
     <value>377, 145</value>
   </data>
   <data name="VideoFramesNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 21</value>
+    <value>100, 20</value>
   </data>
   <data name="VideoFramesNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -7738,7 +6958,7 @@
     <value>117, 145</value>
   </data>
   <data name="VideoSeekNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 21</value>
+    <value>110, 20</value>
   </data>
   <data name="VideoSeekNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -7810,7 +7030,7 @@
     <value>377, 120</value>
   </data>
   <data name="VideoDemuxerComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>100, 21</value>
   </data>
   <data name="VideoDemuxerComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -7993,7 +7213,7 @@
     <value>483, 187</value>
   </data>
   <data name="VideoBatchFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="VideoBatchFormatLabel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -8035,7 +7255,7 @@
     <value>485, 202</value>
   </data>
   <data name="VideoBatchFormatComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 20</value>
+    <value>72, 21</value>
   </data>
   <data name="VideoBatchFormatComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -8059,7 +7279,7 @@
     <value>483, 158</value>
   </data>
   <data name="VideoBatchSubtitleLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
+    <value>75, 21</value>
   </data>
   <data name="VideoBatchSubtitleLanguage.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -8608,7 +7828,7 @@
     <value>324, 123</value>
   </data>
   <data name="VideoDemuxerLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 12</value>
+    <value>43, 13</value>
   </data>
   <data name="VideoDemuxerLabel.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -8824,7 +8044,7 @@
     <value>11, 123</value>
   </data>
   <data name="VideoEncoderLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 12</value>
+    <value>43, 13</value>
   </data>
   <data name="VideoEncoderLabel.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -8848,7 +8068,7 @@
     <value>66, 120</value>
   </data>
   <data name="VideoEncoderComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 20</value>
+    <value>239, 21</value>
   </data>
   <data name="VideoEncoderComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -8896,7 +8116,7 @@
     <value>66, 248</value>
   </data>
   <data name="VideoFpsComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 20</value>
+    <value>88, 21</value>
   </data>
   <data name="VideoFpsComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -8929,7 +8149,7 @@
     <value>19, 250</value>
   </data>
   <data name="VideoFpsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 12</value>
+    <value>27, 13</value>
   </data>
   <data name="VideoFpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -8965,7 +8185,7 @@
     <value>377, 93</value>
   </data>
   <data name="VideoAudioModeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+    <value>100, 21</value>
   </data>
   <data name="VideoAudioModeComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -8986,7 +8206,7 @@
     <value>66, 196</value>
   </data>
   <data name="VideoPresetComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 20</value>
+    <value>123, 21</value>
   </data>
   <data name="VideoPresetComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -9016,7 +8236,7 @@
     <value>312, 98</value>
   </data>
   <data name="VideoAudioModeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
+    <value>55, 13</value>
   </data>
   <data name="VideoAudioModeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -9046,7 +8266,7 @@
     <value>64, 96</value>
   </data>
   <data name="VideoGoToAudioLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 12</value>
+    <value>103, 13</value>
   </data>
   <data name="VideoGoToAudioLabel.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -9076,7 +8296,7 @@
     <value>163, 223</value>
   </data>
   <data name="VideoBitrateKbpsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="VideoBitrateKbpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -9109,7 +8329,7 @@
     <value>19, 223</value>
   </data>
   <data name="VideoCrfLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 12</value>
+    <value>28, 13</value>
   </data>
   <data name="VideoCrfLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -9139,7 +8359,7 @@
     <value>233, 250</value>
   </data>
   <data name="VideoHeightLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="VideoHeightLabel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -9169,7 +8389,7 @@
     <value>233, 223</value>
   </data>
   <data name="VideoWidthLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="VideoWidthLabel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -9196,7 +8416,7 @@
     <value>277, 248</value>
   </data>
   <data name="VideoHeightNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 21</value>
+    <value>88, 20</value>
   </data>
   <data name="VideoHeightNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -9223,7 +8443,7 @@
     <value>277, 221</value>
   </data>
   <data name="VideoWidthNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 21</value>
+    <value>88, 20</value>
   </data>
   <data name="VideoWidthNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -9247,7 +8467,7 @@
     <value>66, 221</value>
   </data>
   <data name="VideoCrfNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 21</value>
+    <value>88, 20</value>
   </data>
   <data name="VideoCrfNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -9277,7 +8497,7 @@
     <value>19, 223</value>
   </data>
   <data name="VideoBitrateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="VideoBitrateLabel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -9346,7 +8566,7 @@
     <value>23, 200</value>
   </data>
   <data name="VideoPresetLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="VideoPresetLabel.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -9373,7 +8593,7 @@
     <value>66, 221</value>
   </data>
   <data name="VideoBitrateNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 21</value>
+    <value>88, 20</value>
   </data>
   <data name="VideoBitrateNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -9400,7 +8620,7 @@
     <value>helpUserControl</value>
   </data>
   <data name="&gt;&gt;helpUserControl.Type" xml:space="preserve">
-    <value>mp4box.UserCtrl.HelpUserControl, xiaowan, Version=1.0.6523.37997, Culture=neutral, PublicKeyToken=null</value>
+    <value>mp4box.UserCtrl.HelpUserControl, xiaowan, Version=1.0.6552.26801, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;helpUserControl.Parent" xml:space="preserve">
     <value>HelpTab</value>
@@ -9448,7 +8668,7 @@
     <value>helpUserControl</value>
   </data>
   <data name="&gt;&gt;helpUserControl.Type" xml:space="preserve">
-    <value>mp4box.UserCtrl.HelpUserControl, xiaowan, Version=1.0.6523.37997, Culture=neutral, PublicKeyToken=null</value>
+    <value>mp4box.UserCtrl.HelpUserControl, xiaowan, Version=1.0.6552.26801, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;helpUserControl.Parent" xml:space="preserve">
     <value>HelpTab</value>
@@ -9495,20 +8715,11 @@
   <data name="&gt;&gt;MiscTab.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="configUserControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
-  </data>
-  <data name="configUserControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>559, 420</value>
-  </data>
-  <data name="configUserControl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;configUserControl.Name" xml:space="preserve">
     <value>configUserControl</value>
   </data>
   <data name="&gt;&gt;configUserControl.Type" xml:space="preserve">
-    <value>mp4box.UserCtrl.ConfigUserControl, xiaowan, Version=1.0.6523.37997, Culture=neutral, PublicKeyToken=null</value>
+    <value>mp4box.UserCtrl.ConfigUserControl, xiaowan, Version=1.0.6552.26801, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;configUserControl.Parent" xml:space="preserve">
     <value>ConfigTabPage</value>
@@ -9523,7 +8734,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="ConfigTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>572, 587</value>
+    <value>192, 74</value>
   </data>
   <data name="ConfigTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -9820,7 +9031,7 @@
     <value>211, 140</value>
   </data>
   <data name="MiscBlackKbpsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
+    <value>31, 13</value>
   </data>
   <data name="MiscBlackKbpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -9850,7 +9061,7 @@
     <value>12, 140</value>
   </data>
   <data name="MiscBlackBitrateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
+    <value>55, 13</value>
   </data>
   <data name="MiscBlackBitrateLabel.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -9874,7 +9085,7 @@
     <value>106, 138</value>
   </data>
   <data name="MiscBlackBitrateNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 21</value>
+    <value>96, 20</value>
   </data>
   <data name="MiscBlackBitrateNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -9904,7 +9115,7 @@
     <value>211, 109</value>
   </data>
   <data name="MiscBlackDurationSecondsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
+    <value>19, 13</value>
   </data>
   <data name="MiscBlackDurationSecondsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -9943,7 +9154,7 @@
     <value>107, 108</value>
   </data>
   <data name="MiscBlackDurationSecondsComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 20</value>
+    <value>96, 21</value>
   </data>
   <data name="MiscBlackDurationSecondsComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -9973,7 +9184,7 @@
     <value>12, 109</value>
   </data>
   <data name="MiscBlackDurationLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
+    <value>55, 13</value>
   </data>
   <data name="MiscBlackDurationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -9997,7 +9208,7 @@
     <value>390, 107</value>
   </data>
   <data name="MiscBlackCrfNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 21</value>
+    <value>88, 20</value>
   </data>
   <data name="MiscBlackCrfNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -10027,7 +9238,7 @@
     <value>361, 109</value>
   </data>
   <data name="MiscBlackCrfLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 12</value>
+    <value>28, 13</value>
   </data>
   <data name="MiscBlackCrfLabel.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -10090,7 +9301,7 @@
     <value>259, 109</value>
   </data>
   <data name="MiscBlackFpsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 12</value>
+    <value>27, 13</value>
   </data>
   <data name="MiscBlackFpsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -10114,7 +9325,7 @@
     <value>288, 107</value>
   </data>
   <data name="MiscBlackFpsNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 21</value>
+    <value>48, 20</value>
   </data>
   <data name="MiscBlackFpsNumericUpDown.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -10331,6 +9542,27 @@
   </data>
   <data name="&gt;&gt;MiscBlackVideoInputTextBox.ZOrder" xml:space="preserve">
     <value>17</value>
+  </data>
+  <data name="configUserControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="configUserControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>559, 420</value>
+  </data>
+  <data name="configUserControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;configUserControl.Name" xml:space="preserve">
+    <value>configUserControl</value>
+  </data>
+  <data name="&gt;&gt;configUserControl.Type" xml:space="preserve">
+    <value>mp4box.UserCtrl.ConfigUserControl, xiaowan, Version=1.0.6552.26801, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;configUserControl.Parent" xml:space="preserve">
+    <value>ConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;configUserControl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

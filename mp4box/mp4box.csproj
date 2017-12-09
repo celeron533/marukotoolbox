@@ -168,7 +168,14 @@
     <Compile Include="UserCtrl\HelpUserControl.Designer.cs">
       <DependentUpon>HelpUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserCtrl\MediaInfoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\MediaInfoUserControl.Designer.cs">
+      <DependentUpon>MediaInfoUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility\AvsUtil.cs" />
+    <Compile Include="Utility\UIUtil.cs" />
     <Compile Include="Utility\UpdateCheckUtil.cs" />
     <Compile Include="Utility\AssemblyUtil.cs" />
     <Compile Include="Utility\DialogUtil.cs" />
@@ -268,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserCtrl\HelpUserControl.resx">
       <DependentUpon>HelpUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\MediaInfoUserControl.resx">
+      <DependentUpon>MediaInfoUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkingForm.en.resx">
       <DependentUpon>WorkingForm.cs</DependentUpon>
