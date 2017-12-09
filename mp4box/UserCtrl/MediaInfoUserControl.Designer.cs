@@ -78,6 +78,7 @@
             this.MediaInfoTextBox.Location = new System.Drawing.Point(3, 3);
             this.MediaInfoTextBox.Multiline = true;
             this.MediaInfoTextBox.Name = "MediaInfoTextBox";
+            this.MediaInfoTextBox.ReadOnly = true;
             this.MediaInfoTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.MediaInfoTextBox.Size = new System.Drawing.Size(550, 549);
             this.MediaInfoTextBox.TabIndex = 19;
