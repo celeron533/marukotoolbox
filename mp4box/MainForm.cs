@@ -468,9 +468,6 @@ namespace mp4box
             //ConfigX264PriorityComboBox.SelectedIndex = 2;
             //ConfigX264ThreadsComboBox.SelectedIndex = 0;
 
-            MiscBlackBitrateNumericUpDown.Value = 900;
-            MiscBlackCrfNumericUpDown.Value = 51;
-            MiscBlackFpsNumericUpDown.Value = 1;
             MiscMiscBeginTimeMaskedTextBox.Text = "000000";
             MiscMiscEndTimeMaskedTextBox.Text = "000020";
             MiscMiscTransposeComboBox.SelectedIndex = 1;
@@ -514,9 +511,6 @@ namespace mp4box
             //ConfigX264ExtraParameterTextBox.Text = settings.ConfigX264ExtraParameterText;
             //ConfigX264PriorityComboBox.SelectedIndex = settings.ConfigX264PriorityIndex;
             //ConfigX264ThreadsComboBox.SelectedIndex = settings.ConfigX264Threads;
-            MiscBlackBitrateNumericUpDown.Value = settings.MiscBlackBitrateValue;
-            MiscBlackCrfNumericUpDown.Value = settings.MiscBlackCrfValue;
-            MiscBlackFpsNumericUpDown.Value = settings.MiscBlackFpsValue;
             MiscOnePicBitrateNumericUpDown.Value = settings.MiscOnePicBitrateValue;
             MiscOnePicCrfNumericUpDown.Value = settings.MiscOnePicCrfValue;
             MiscOnePicFpsNumericUpDown.Value = settings.MiscOnePicFpsValue;
@@ -602,9 +596,6 @@ namespace mp4box
             settings.MiscOnePicBitrateValue = MiscOnePicBitrateNumericUpDown.Value;
             settings.MiscOnePicFpsValue = MiscOnePicFpsNumericUpDown.Value;
             settings.MiscOnePicCrfValue = MiscOnePicCrfNumericUpDown.Value;
-            settings.MiscBlackFpsValue = MiscBlackFpsNumericUpDown.Value;
-            settings.MiscBlackCrfValue = MiscBlackCrfNumericUpDown.Value;
-            settings.MiscBlackBitrateValue = MiscBlackBitrateNumericUpDown.Value;
             //settings.ConfigFunctionDeleteTempFileCheck = ConfigFunctionDeleteTempFileCheckBox.Checked;
             //settings.ConfigFunctionAutoCheckUpdateCheck = ConfigFunctionAutoCheckUpdateCheckBox.Checked;
             //settings.ConfigUiTrayModeCheck = ConfigUiTrayModeCheckBox.Checked;
@@ -1972,105 +1963,6 @@ namespace mp4box
 
         #endregion MiscMisc
 
-        #region MiscBlack
-
-        private void MiscBlackVideoInputButton_Click(object sender, EventArgs e)
-        {
-            new OpenFileDialog() //"FLV视频(*.flv)|*.flv"
-                .Prepare(DialogFilter.VIDEO_D_1, MiscBlackVideoInputTextBox.Text)
-                .ShowDialogExt(MiscBlackVideoInputTextBox);
-        }
-
-        private void MiscBlackOutputButton_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = DialogFilter.VIDEO_D_1; //"FLV视频(*.flv)|*.flv";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                MiscBlackOutputTextBox.Text = saveFileDialog.FileName;
-            }
-        }
-
-        private void MiscBlackPicInputButton_Click(object sender, EventArgs e)
-        {
-            new OpenFileDialog() //"图片(*.jpg;*.jpeg;*.png;*.bmp;*.gif)|*.jpg;*.jpeg;*.png;*.bmp;*.gif|所有文件(*.*)|*.*"
-                .Prepare(DialogFilter.IMAGE, MiscBlackPicInputTextBox.Text)
-                .ShowDialogExt(MiscBlackPicInputTextBox);
-        }
-
-        private void MiscBlackNoPicCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            MiscBlackPicInputTextBox.Enabled = !MiscBlackNoPicCheckBox.Checked;
-            MiscBlackPicInputButton.Enabled = !MiscBlackNoPicCheckBox.Checked;
-        }
-
-        private void MiscBlackDurationSecondsComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (MiscBlackDurationSecondsComboBox.Text != "auto")
-            {
-                MiscBlackBitrateNumericUpDown.Enabled = false;
-            }
-            else
-            {
-                MiscBlackBitrateNumericUpDown.Enabled = true;
-            }
-        }
-
-        private void MiscBlackStartButton_Click(object sender, EventArgs e)
-        {
-            //验证
-            if (!File.Exists(MiscBlackVideoInputTextBox.Text) || Path.GetExtension(MiscBlackVideoInputTextBox.Text) != ".flv")
-            {
-                MessageBoxExt.ShowErrorMessage("请选择FLV视频文件");
-                return;
-            }
-            if (!File.Exists(MiscBlackPicInputTextBox.Text) && MiscBlackNoPicCheckBox.Checked == false)
-            {
-                MessageBoxExt.ShowErrorMessage("请选择图片文件或勾选使用黑屏");
-                return;
-            }
-            if (MiscBlackOutputTextBox.Text == "")
-            {
-                MessageBoxExt.ShowErrorMessage("请选择输出文件");
-                return;
-            }
-            if (MiscBlackBitrateNumericUpDown.Value <= 1)
-            {
-                MessageBoxExt.ShowErrorMessage("请填写目标码率");
-                return;
-            }
-
-            BlackProcedure blackProcedure = new BlackProcedure();
-            blackProcedure.GetDataFromUI(p =>
-            {
-                p.inputVideoFile = MiscBlackVideoInputTextBox.Text;
-                p.inputImageFile = MiscBlackPicInputTextBox.Text;
-                p.outputVideoFile = MiscBlackOutputTextBox.Text;
-                p.targetBitrate = (int)MiscBlackBitrateNumericUpDown.Value;
-                p.fps = (int)MiscBlackFpsNumericUpDown.Value;
-                p.crf = (float)MiscBlackCrfNumericUpDown.Value;
-                p.doNotUseImg = MiscBlackNoPicCheckBox.Checked;
-            });
-
-            blackProcedure.Execute();
-
-            blackProcedure.SetDataToUI(p =>
-            {
-                MiscBlackDurationSecondsComboBox.Text = p.durationStr;
-            }
-            );
-        }
-
-        private void MiscBlackVideoInputTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string path = MiscBlackVideoInputTextBox.Text;
-            if (File.Exists(path))
-            {
-                MiscBlackOutputTextBox.Text = Path.ChangeExtension(path, "_black.flv");
-            }
-        }
-
-        #endregion MiscBlack
 
         #endregion Misc Tab
 

@@ -24,9 +24,6 @@ namespace mp4box
         public string ConfigX264ExtraParameterText;
         public int ConfigX264Priority;  //Cast as ProcessPriorityClass
         public int ConfigX264Threads;
-        public decimal MiscBlackBitrateValue;
-        public decimal MiscBlackCrfValue;
-        public decimal MiscBlackFpsValue;
         public decimal MiscOnePicBitrateValue;
         public decimal MiscOnePicCrfValue;
         public decimal MiscOnePicFpsValue;
@@ -63,9 +60,6 @@ namespace mp4box
             GetValue(out ConfigX264ExtraParameterText, "x264ExtraParameter");
             GetValue(out ConfigX264Priority, "x264Priority");
             GetValue(out ConfigX264Threads, "x264Threads");
-            GetValue(out MiscBlackBitrateValue, "BlackBitrate");
-            GetValue(out MiscBlackCrfValue, "BlackCRF");
-            GetValue(out MiscBlackFpsValue, "BlackFPS");
             GetValue(out MiscOnePicBitrateValue, "OnePicAudioBitrate");
             GetValue(out MiscOnePicCrfValue, "OnePicCRF");
             GetValue(out MiscOnePicFpsValue, "OnePicFPS");
@@ -87,9 +81,6 @@ namespace mp4box
             SetValue("AudioBitrate", AudioBitrateComboText);
             SetValue("AudioEncoder", AudioEncoderIndex);
             SetValue("AVSScript", AvsScriptText);
-            SetValue("BlackBitrate", MiscBlackBitrateValue);
-            SetValue("BlackCRF", MiscBlackCrfValue);
-            SetValue("BlackFPS", MiscBlackFpsValue);
             SetValue("CheckUpdate", ConfigFunctionAutoCheckUpdateCheck);
             SetValue("LanguageIndex", ConfigUiLanguageIndex);
             SetValue("MuxFormat", MuxConvertFormatIndex);

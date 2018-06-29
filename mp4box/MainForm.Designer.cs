@@ -262,25 +262,6 @@
             this.helpUserControl = new mp4box.UserCtrl.HelpUserControl();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.MiscTab = new System.Windows.Forms.TabPage();
-            this.MiscBlackGroupBox = new System.Windows.Forms.GroupBox();
-            this.MiscBlackKbpsLabel = new System.Windows.Forms.Label();
-            this.MiscBlackBitrateLabel = new System.Windows.Forms.Label();
-            this.MiscBlackBitrateNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.MiscBlackDurationSecondsLabel = new System.Windows.Forms.Label();
-            this.MiscBlackDurationSecondsComboBox = new System.Windows.Forms.ComboBox();
-            this.MiscBlackDurationLabel = new System.Windows.Forms.Label();
-            this.MiscBlackCrfNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.MiscBlackCrfLabel = new System.Windows.Forms.Label();
-            this.MiscBlackNoPicCheckBox = new ControlExs.QQCheckBox();
-            this.MiscBlackFpsLabel = new System.Windows.Forms.Label();
-            this.MiscBlackFpsNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.MiscBlackPicInputButton = new ControlExs.QQButton();
-            this.MiscBlackPicInputTextBox = new ControlExs.QQTextBox();
-            this.MiscBlackStartButton = new ControlExs.QQButton();
-            this.MiscBlackOutputButton = new ControlExs.QQButton();
-            this.MiscBlackVideoInputButton = new ControlExs.QQButton();
-            this.MiscBlackOutputTextBox = new ControlExs.QQTextBox();
-            this.MiscBlackVideoInputTextBox = new ControlExs.QQTextBox();
             this.ConfigTabPage = new System.Windows.Forms.TabPage();
             this.configUserControl = new mp4box.UserCtrl.ConfigUserControl();
             this.MiscMiscGroupBox.SuspendLayout();
@@ -328,10 +309,6 @@
             this.HelpTab.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.MiscTab.SuspendLayout();
-            this.MiscBlackGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackBitrateNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackCrfNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackFpsNumericUpDown)).BeginInit();
             this.ConfigTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -368,7 +345,7 @@
             this.MiscMiscTransposeLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MiscMiscTransposeLabel.Location = new System.Drawing.Point(92, 108);
             this.MiscMiscTransposeLabel.Name = "MiscMiscTransposeLabel";
-            this.MiscMiscTransposeLabel.Size = new System.Drawing.Size(57, 13);
+            this.MiscMiscTransposeLabel.Size = new System.Drawing.Size(59, 12);
             this.MiscMiscTransposeLabel.TabIndex = 39;
             this.MiscMiscTransposeLabel.Text = "Transpose";
             // 
@@ -383,7 +360,7 @@
             "3: 顺时针旋转90°然后水平翻转"});
             this.MiscMiscTransposeComboBox.Location = new System.Drawing.Point(185, 105);
             this.MiscMiscTransposeComboBox.Name = "MiscMiscTransposeComboBox";
-            this.MiscMiscTransposeComboBox.Size = new System.Drawing.Size(233, 21);
+            this.MiscMiscTransposeComboBox.Size = new System.Drawing.Size(233, 20);
             this.MiscMiscTransposeComboBox.TabIndex = 38;
             // 
             // MiscMiscStartRotateButton
@@ -467,7 +444,7 @@
             this.MiscMiscEndTimeMaskedTextBox.Location = new System.Drawing.Point(407, 76);
             this.MiscMiscEndTimeMaskedTextBox.Mask = "90:00:00";
             this.MiscMiscEndTimeMaskedTextBox.Name = "MiscMiscEndTimeMaskedTextBox";
-            this.MiscMiscEndTimeMaskedTextBox.Size = new System.Drawing.Size(70, 20);
+            this.MiscMiscEndTimeMaskedTextBox.Size = new System.Drawing.Size(70, 21);
             this.MiscMiscEndTimeMaskedTextBox.TabIndex = 19;
             this.MiscMiscEndTimeMaskedTextBox.Text = "000020";
             this.MiscMiscEndTimeMaskedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -478,7 +455,7 @@
             this.MiscMiscBeginTimeLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MiscMiscBeginTimeLabel.Location = new System.Drawing.Point(92, 80);
             this.MiscMiscBeginTimeLabel.Name = "MiscMiscBeginTimeLabel";
-            this.MiscMiscBeginTimeLabel.Size = new System.Drawing.Size(55, 13);
+            this.MiscMiscBeginTimeLabel.Size = new System.Drawing.Size(53, 12);
             this.MiscMiscBeginTimeLabel.TabIndex = 18;
             this.MiscMiscBeginTimeLabel.Text = "起始时刻";
             // 
@@ -488,7 +465,7 @@
             this.MiscMiscEndTimeLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MiscMiscEndTimeLabel.Location = new System.Drawing.Point(320, 79);
             this.MiscMiscEndTimeLabel.Name = "MiscMiscEndTimeLabel";
-            this.MiscMiscEndTimeLabel.Size = new System.Drawing.Size(55, 13);
+            this.MiscMiscEndTimeLabel.Size = new System.Drawing.Size(53, 12);
             this.MiscMiscEndTimeLabel.TabIndex = 18;
             this.MiscMiscEndTimeLabel.Text = "结束时刻";
             // 
@@ -497,7 +474,7 @@
             this.MiscMiscBeginTimeMaskedTextBox.Location = new System.Drawing.Point(185, 76);
             this.MiscMiscBeginTimeMaskedTextBox.Mask = "90:00:00";
             this.MiscMiscBeginTimeMaskedTextBox.Name = "MiscMiscBeginTimeMaskedTextBox";
-            this.MiscMiscBeginTimeMaskedTextBox.Size = new System.Drawing.Size(70, 20);
+            this.MiscMiscBeginTimeMaskedTextBox.Size = new System.Drawing.Size(70, 21);
             this.MiscMiscBeginTimeMaskedTextBox.TabIndex = 19;
             this.MiscMiscBeginTimeMaskedTextBox.Text = "000000";
             this.MiscMiscBeginTimeMaskedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -508,7 +485,7 @@
             this.MediaInfoTab.Location = new System.Drawing.Point(4, 22);
             this.MediaInfoTab.Name = "MediaInfoTab";
             this.MediaInfoTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MediaInfoTab.Size = new System.Drawing.Size(572, 587);
+            this.MediaInfoTab.Size = new System.Drawing.Size(192, 74);
             this.MediaInfoTab.TabIndex = 9;
             this.MediaInfoTab.Text = "MediaInfo";
             this.MediaInfoTab.UseVisualStyleBackColor = true;
@@ -600,7 +577,7 @@
             this.AvsFilterLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsFilterLabel.Location = new System.Drawing.Point(29, 309);
             this.AvsFilterLabel.Name = "AvsFilterLabel";
-            this.AvsFilterLabel.Size = new System.Drawing.Size(55, 13);
+            this.AvsFilterLabel.Size = new System.Drawing.Size(53, 12);
             this.AvsFilterLabel.TabIndex = 65;
             this.AvsFilterLabel.Text = "外置滤镜";
             // 
@@ -611,7 +588,7 @@
             this.AvsFilterComboBox.FormattingEnabled = true;
             this.AvsFilterComboBox.Location = new System.Drawing.Point(94, 306);
             this.AvsFilterComboBox.Name = "AvsFilterComboBox";
-            this.AvsFilterComboBox.Size = new System.Drawing.Size(295, 21);
+            this.AvsFilterComboBox.Size = new System.Drawing.Size(295, 20);
             this.AvsFilterComboBox.TabIndex = 64;
             // 
             // AvsCropIntroductionLabel
@@ -620,7 +597,7 @@
             this.AvsCropIntroductionLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsCropIntroductionLabel.Location = new System.Drawing.Point(156, 176);
             this.AvsCropIntroductionLabel.Name = "AvsCropIntroductionLabel";
-            this.AvsCropIntroductionLabel.Size = new System.Drawing.Size(163, 13);
+            this.AvsCropIntroductionLabel.Size = new System.Drawing.Size(185, 12);
             this.AvsCropIntroductionLabel.TabIndex = 62;
             this.AvsCropIntroductionLabel.Text = "左,上,-右,-下（或左,上,宽,高）";
             // 
@@ -644,7 +621,7 @@
             this.AvsTrimEndLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsTrimEndLabel.Location = new System.Drawing.Point(313, 204);
             this.AvsTrimEndLabel.Name = "AvsTrimEndLabel";
-            this.AvsTrimEndLabel.Size = new System.Drawing.Size(43, 13);
+            this.AvsTrimEndLabel.Size = new System.Drawing.Size(41, 12);
             this.AvsTrimEndLabel.TabIndex = 60;
             this.AvsTrimEndLabel.Text = "结束帧";
             // 
@@ -654,7 +631,7 @@
             this.AvsTrimStartLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsTrimStartLabel.Location = new System.Drawing.Point(156, 204);
             this.AvsTrimStartLabel.Name = "AvsTrimStartLabel";
-            this.AvsTrimStartLabel.Size = new System.Drawing.Size(43, 13);
+            this.AvsTrimStartLabel.Size = new System.Drawing.Size(41, 12);
             this.AvsTrimStartLabel.TabIndex = 59;
             this.AvsTrimStartLabel.Text = "起始帧";
             // 
@@ -667,7 +644,7 @@
             0,
             0});
             this.AvsTrimEndNumericUpDown.Name = "AvsTrimEndNumericUpDown";
-            this.AvsTrimEndNumericUpDown.Size = new System.Drawing.Size(88, 20);
+            this.AvsTrimEndNumericUpDown.Size = new System.Drawing.Size(88, 21);
             this.AvsTrimEndNumericUpDown.TabIndex = 58;
             this.AvsTrimEndNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.AvsTrimEndNumericUpDown.Value = new decimal(new int[] {
@@ -686,7 +663,7 @@
             0,
             0});
             this.AvsTrimStartNumericUpDown.Name = "AvsTrimStartNumericUpDown";
-            this.AvsTrimStartNumericUpDown.Size = new System.Drawing.Size(88, 20);
+            this.AvsTrimStartNumericUpDown.Size = new System.Drawing.Size(88, 21);
             this.AvsTrimStartNumericUpDown.TabIndex = 57;
             this.AvsTrimStartNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.AvsTrimStartNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
@@ -706,7 +683,7 @@
             0,
             0});
             this.AvsLevelsNumericUpDown.Name = "AvsLevelsNumericUpDown";
-            this.AvsLevelsNumericUpDown.Size = new System.Drawing.Size(57, 20);
+            this.AvsLevelsNumericUpDown.Size = new System.Drawing.Size(57, 21);
             this.AvsLevelsNumericUpDown.TabIndex = 56;
             this.AvsLevelsNumericUpDown.Value = new decimal(new int[] {
             12,
@@ -721,7 +698,7 @@
             this.AvsAddBordersTopLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsAddBordersTopLabel.Location = new System.Drawing.Point(252, 150);
             this.AvsAddBordersTopLabel.Name = "AvsAddBordersTopLabel";
-            this.AvsAddBordersTopLabel.Size = new System.Drawing.Size(19, 13);
+            this.AvsAddBordersTopLabel.Size = new System.Drawing.Size(17, 12);
             this.AvsAddBordersTopLabel.TabIndex = 47;
             this.AvsAddBordersTopLabel.Text = "上";
             // 
@@ -731,7 +708,7 @@
             this.AvsAddBordersRightLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsAddBordersRightLabel.Location = new System.Drawing.Point(337, 150);
             this.AvsAddBordersRightLabel.Name = "AvsAddBordersRightLabel";
-            this.AvsAddBordersRightLabel.Size = new System.Drawing.Size(19, 13);
+            this.AvsAddBordersRightLabel.Size = new System.Drawing.Size(17, 12);
             this.AvsAddBordersRightLabel.TabIndex = 46;
             this.AvsAddBordersRightLabel.Text = "右";
             // 
@@ -741,7 +718,7 @@
             this.AvsAddBordersBottomLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsAddBordersBottomLabel.Location = new System.Drawing.Point(421, 150);
             this.AvsAddBordersBottomLabel.Name = "AvsAddBordersBottomLabel";
-            this.AvsAddBordersBottomLabel.Size = new System.Drawing.Size(19, 13);
+            this.AvsAddBordersBottomLabel.Size = new System.Drawing.Size(17, 12);
             this.AvsAddBordersBottomLabel.TabIndex = 45;
             this.AvsAddBordersBottomLabel.Text = "下";
             // 
@@ -751,7 +728,7 @@
             this.AvsAddBordersLeftLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsAddBordersLeftLabel.Location = new System.Drawing.Point(168, 150);
             this.AvsAddBordersLeftLabel.Name = "AvsAddBordersLeftLabel";
-            this.AvsAddBordersLeftLabel.Size = new System.Drawing.Size(19, 13);
+            this.AvsAddBordersLeftLabel.Size = new System.Drawing.Size(17, 12);
             this.AvsAddBordersLeftLabel.TabIndex = 44;
             this.AvsAddBordersLeftLabel.Text = "左";
             // 
@@ -764,7 +741,7 @@
             0,
             0});
             this.AvsAddBordersBottomNumericUpDown.Name = "AvsAddBordersBottomNumericUpDown";
-            this.AvsAddBordersBottomNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.AvsAddBordersBottomNumericUpDown.Size = new System.Drawing.Size(55, 21);
             this.AvsAddBordersBottomNumericUpDown.TabIndex = 43;
             this.AvsAddBordersBottomNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
@@ -777,7 +754,7 @@
             0,
             0});
             this.AvsAddBordersRightNumericUpDown.Name = "AvsAddBordersRightNumericUpDown";
-            this.AvsAddBordersRightNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.AvsAddBordersRightNumericUpDown.Size = new System.Drawing.Size(55, 21);
             this.AvsAddBordersRightNumericUpDown.TabIndex = 42;
             this.AvsAddBordersRightNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
@@ -790,7 +767,7 @@
             0,
             0});
             this.AvsAddBordersTopNumericUpDown.Name = "AvsAddBordersTopNumericUpDown";
-            this.AvsAddBordersTopNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.AvsAddBordersTopNumericUpDown.Size = new System.Drawing.Size(55, 21);
             this.AvsAddBordersTopNumericUpDown.TabIndex = 41;
             this.AvsAddBordersTopNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
@@ -809,7 +786,7 @@
             0,
             0});
             this.AvsSharpenNumericUpDown.Name = "AvsSharpenNumericUpDown";
-            this.AvsSharpenNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.AvsSharpenNumericUpDown.Size = new System.Drawing.Size(55, 21);
             this.AvsSharpenNumericUpDown.TabIndex = 40;
             this.AvsSharpenNumericUpDown.Value = new decimal(new int[] {
             2,
@@ -827,7 +804,7 @@
             0,
             0});
             this.AvsAddBordersLeftNumericUpDown.Name = "AvsAddBordersLeftNumericUpDown";
-            this.AvsAddBordersLeftNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.AvsAddBordersLeftNumericUpDown.Size = new System.Drawing.Size(55, 21);
             this.AvsAddBordersLeftNumericUpDown.TabIndex = 36;
             this.AvsAddBordersLeftNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
@@ -837,7 +814,7 @@
             this.AvsLanczosResizeHeightLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsLanczosResizeHeightLabel.Location = new System.Drawing.Point(325, 123);
             this.AvsLanczosResizeHeightLabel.Name = "AvsLanczosResizeHeightLabel";
-            this.AvsLanczosResizeHeightLabel.Size = new System.Drawing.Size(31, 13);
+            this.AvsLanczosResizeHeightLabel.Size = new System.Drawing.Size(29, 12);
             this.AvsLanczosResizeHeightLabel.TabIndex = 35;
             this.AvsLanczosResizeHeightLabel.Text = "高度";
             // 
@@ -847,7 +824,7 @@
             this.AvsLanczosResizeWidthLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsLanczosResizeWidthLabel.Location = new System.Drawing.Point(156, 123);
             this.AvsLanczosResizeWidthLabel.Name = "AvsLanczosResizeWidthLabel";
-            this.AvsLanczosResizeWidthLabel.Size = new System.Drawing.Size(31, 13);
+            this.AvsLanczosResizeWidthLabel.Size = new System.Drawing.Size(29, 12);
             this.AvsLanczosResizeWidthLabel.TabIndex = 34;
             this.AvsLanczosResizeWidthLabel.Text = "宽度";
             // 
@@ -860,7 +837,7 @@
             0,
             0});
             this.AvsLanczosResizeHeightNumericUpDown.Name = "AvsLanczosResizeHeightNumericUpDown";
-            this.AvsLanczosResizeHeightNumericUpDown.Size = new System.Drawing.Size(88, 20);
+            this.AvsLanczosResizeHeightNumericUpDown.Size = new System.Drawing.Size(88, 21);
             this.AvsLanczosResizeHeightNumericUpDown.TabIndex = 33;
             this.AvsLanczosResizeHeightNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.AvsLanczosResizeHeightNumericUpDown.Value = new decimal(new int[] {
@@ -879,7 +856,7 @@
             0,
             0});
             this.AvsLanczosResizeWidthNumericUpDown.Name = "AvsLanczosResizeWidthNumericUpDown";
-            this.AvsLanczosResizeWidthNumericUpDown.Size = new System.Drawing.Size(88, 20);
+            this.AvsLanczosResizeWidthNumericUpDown.Size = new System.Drawing.Size(88, 21);
             this.AvsLanczosResizeWidthNumericUpDown.TabIndex = 32;
             this.AvsLanczosResizeWidthNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.AvsLanczosResizeWidthNumericUpDown.Value = new decimal(new int[] {
@@ -895,7 +872,7 @@
             this.AvsTweakContrastLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsTweakContrastLabel.Location = new System.Drawing.Point(456, 96);
             this.AvsTweakContrastLabel.Name = "AvsTweakContrastLabel";
-            this.AvsTweakContrastLabel.Size = new System.Drawing.Size(43, 13);
+            this.AvsTweakContrastLabel.Size = new System.Drawing.Size(41, 12);
             this.AvsTweakContrastLabel.TabIndex = 31;
             this.AvsTweakContrastLabel.Text = "对比度";
             // 
@@ -905,7 +882,7 @@
             this.AvsTweakBrightnessLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsTweakBrightnessLabel.Location = new System.Drawing.Point(360, 96);
             this.AvsTweakBrightnessLabel.Name = "AvsTweakBrightnessLabel";
-            this.AvsTweakBrightnessLabel.Size = new System.Drawing.Size(31, 13);
+            this.AvsTweakBrightnessLabel.Size = new System.Drawing.Size(29, 12);
             this.AvsTweakBrightnessLabel.TabIndex = 31;
             this.AvsTweakBrightnessLabel.Text = "亮度";
             // 
@@ -915,7 +892,7 @@
             this.AvsTweakSaturationLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsTweakSaturationLabel.Location = new System.Drawing.Point(252, 96);
             this.AvsTweakSaturationLabel.Name = "AvsTweakSaturationLabel";
-            this.AvsTweakSaturationLabel.Size = new System.Drawing.Size(43, 13);
+            this.AvsTweakSaturationLabel.Size = new System.Drawing.Size(41, 12);
             this.AvsTweakSaturationLabel.TabIndex = 31;
             this.AvsTweakSaturationLabel.Text = "饱和度";
             // 
@@ -925,7 +902,7 @@
             this.AvsTweakChromaLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AvsTweakChromaLabel.Location = new System.Drawing.Point(156, 96);
             this.AvsTweakChromaLabel.Name = "AvsTweakChromaLabel";
-            this.AvsTweakChromaLabel.Size = new System.Drawing.Size(31, 13);
+            this.AvsTweakChromaLabel.Size = new System.Drawing.Size(29, 12);
             this.AvsTweakChromaLabel.TabIndex = 31;
             this.AvsTweakChromaLabel.Text = "色度";
             // 
@@ -944,7 +921,7 @@
             0,
             0});
             this.AvsTweakContrastNumericUpDown.Name = "AvsTweakContrastNumericUpDown";
-            this.AvsTweakContrastNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.AvsTweakContrastNumericUpDown.Size = new System.Drawing.Size(55, 21);
             this.AvsTweakContrastNumericUpDown.TabIndex = 30;
             this.AvsTweakContrastNumericUpDown.Value = new decimal(new int[] {
             1,
@@ -968,7 +945,7 @@
             0,
             -2147483648});
             this.AvsTweakBrightnessNumericUpDown.Name = "AvsTweakBrightnessNumericUpDown";
-            this.AvsTweakBrightnessNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.AvsTweakBrightnessNumericUpDown.Size = new System.Drawing.Size(55, 21);
             this.AvsTweakBrightnessNumericUpDown.TabIndex = 29;
             this.AvsTweakBrightnessNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
@@ -987,7 +964,7 @@
             0,
             0});
             this.AvsTweakSaturationNumericUpDown.Name = "AvsTweakSaturationNumericUpDown";
-            this.AvsTweakSaturationNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.AvsTweakSaturationNumericUpDown.Size = new System.Drawing.Size(55, 21);
             this.AvsTweakSaturationNumericUpDown.TabIndex = 28;
             this.AvsTweakSaturationNumericUpDown.Value = new decimal(new int[] {
             1,
@@ -1016,7 +993,7 @@
             0,
             -2147483648});
             this.AvsTweakChromaNumericUpDown.Name = "AvsTweakChromaNumericUpDown";
-            this.AvsTweakChromaNumericUpDown.Size = new System.Drawing.Size(55, 20);
+            this.AvsTweakChromaNumericUpDown.Size = new System.Drawing.Size(55, 21);
             this.AvsTweakChromaNumericUpDown.TabIndex = 27;
             this.AvsTweakChromaNumericUpDown.ValueChanged += new System.EventHandler(this.GenerateAVSHandler);
             // 
@@ -1619,7 +1596,7 @@
             this.MuxConvertAacEncoderLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MuxConvertAacEncoderLabel.Location = new System.Drawing.Point(8, 246);
             this.MuxConvertAacEncoderLabel.Name = "MuxConvertAacEncoderLabel";
-            this.MuxConvertAacEncoderLabel.Size = new System.Drawing.Size(64, 13);
+            this.MuxConvertAacEncoderLabel.Size = new System.Drawing.Size(59, 12);
             this.MuxConvertAacEncoderLabel.TabIndex = 22;
             this.MuxConvertAacEncoderLabel.Text = "AAC编码器";
             // 
@@ -1631,7 +1608,7 @@
             "libfdk_aac"});
             this.MuxConvertAacEncoderComboBox.Location = new System.Drawing.Point(91, 241);
             this.MuxConvertAacEncoderComboBox.Name = "MuxConvertAacEncoderComboBox";
-            this.MuxConvertAacEncoderComboBox.Size = new System.Drawing.Size(98, 21);
+            this.MuxConvertAacEncoderComboBox.Size = new System.Drawing.Size(98, 20);
             this.MuxConvertAacEncoderComboBox.TabIndex = 21;
             this.MuxConvertAacEncoderComboBox.Text = "aac";
             // 
@@ -1641,7 +1618,7 @@
             this.MuxConvertFormatLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MuxConvertFormatLabel.Location = new System.Drawing.Point(204, 246);
             this.MuxConvertFormatLabel.Name = "MuxConvertFormatLabel";
-            this.MuxConvertFormatLabel.Size = new System.Drawing.Size(55, 13);
+            this.MuxConvertFormatLabel.Size = new System.Drawing.Size(53, 12);
             this.MuxConvertFormatLabel.TabIndex = 20;
             this.MuxConvertFormatLabel.Text = "输出格式";
             // 
@@ -1657,7 +1634,7 @@
             "f4v"});
             this.MuxConvertFormatComboBox.Location = new System.Drawing.Point(269, 241);
             this.MuxConvertFormatComboBox.Name = "MuxConvertFormatComboBox";
-            this.MuxConvertFormatComboBox.Size = new System.Drawing.Size(49, 21);
+            this.MuxConvertFormatComboBox.Size = new System.Drawing.Size(49, 20);
             this.MuxConvertFormatComboBox.TabIndex = 19;
             // 
             // MuxConvertItemListBox
@@ -1665,9 +1642,10 @@
             this.MuxConvertItemListBox.AllowDrop = true;
             this.MuxConvertItemListBox.FormattingEnabled = true;
             this.MuxConvertItemListBox.HorizontalScrollbar = true;
+            this.MuxConvertItemListBox.ItemHeight = 12;
             this.MuxConvertItemListBox.Location = new System.Drawing.Point(6, 19);
             this.MuxConvertItemListBox.Name = "MuxConvertItemListBox";
-            this.MuxConvertItemListBox.Size = new System.Drawing.Size(471, 212);
+            this.MuxConvertItemListBox.Size = new System.Drawing.Size(471, 208);
             this.MuxConvertItemListBox.TabIndex = 12;
             this.MuxConvertItemListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.MuxConvertItemListBox_DragDrop);
             this.MuxConvertItemListBox.DragOver += new System.Windows.Forms.DragEventHandler(this.MuxConvertItemListBox_DragOver);
@@ -1703,7 +1681,7 @@
             this.MuxConvertOutputNotificationLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MuxConvertOutputNotificationLabel.Location = new System.Drawing.Point(357, 246);
             this.MuxConvertOutputNotificationLabel.Name = "MuxConvertOutputNotificationLabel";
-            this.MuxConvertOutputNotificationLabel.Size = new System.Drawing.Size(103, 13);
+            this.MuxConvertOutputNotificationLabel.Size = new System.Drawing.Size(101, 12);
             this.MuxConvertOutputNotificationLabel.TabIndex = 18;
             this.MuxConvertOutputNotificationLabel.Text = "输出到源文件目录";
             // 
@@ -1767,7 +1745,7 @@
             "64:45"});
             this.MuxMp4ParComboBox.Location = new System.Drawing.Point(195, 107);
             this.MuxMp4ParComboBox.Name = "MuxMp4ParComboBox";
-            this.MuxMp4ParComboBox.Size = new System.Drawing.Size(89, 21);
+            this.MuxMp4ParComboBox.Size = new System.Drawing.Size(89, 20);
             this.MuxMp4ParComboBox.TabIndex = 18;
             this.MuxMp4ParComboBox.Text = "1:1";
             // 
@@ -1777,7 +1755,7 @@
             this.MuxMp4ParLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MuxMp4ParLabel.Location = new System.Drawing.Point(166, 111);
             this.MuxMp4ParLabel.Name = "MuxMp4ParLabel";
-            this.MuxMp4ParLabel.Size = new System.Drawing.Size(29, 13);
+            this.MuxMp4ParLabel.Size = new System.Drawing.Size(23, 12);
             this.MuxMp4ParLabel.TabIndex = 19;
             this.MuxMp4ParLabel.Text = "PAR";
             // 
@@ -1847,7 +1825,7 @@
             "60"});
             this.MuxMp4FpsComboBox.Location = new System.Drawing.Point(37, 107);
             this.MuxMp4FpsComboBox.Name = "MuxMp4FpsComboBox";
-            this.MuxMp4FpsComboBox.Size = new System.Drawing.Size(89, 21);
+            this.MuxMp4FpsComboBox.Size = new System.Drawing.Size(89, 20);
             this.MuxMp4FpsComboBox.TabIndex = 14;
             this.MuxMp4FpsComboBox.Text = "auto";
             this.MuxMp4FpsComboBox.SelectedIndexChanged += new System.EventHandler(this.MuxMp4FpsComboBox_SelectedIndexChanged);
@@ -1895,7 +1873,7 @@
             this.MuxMp4FpsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MuxMp4FpsLabel.Location = new System.Drawing.Point(8, 111);
             this.MuxMp4FpsLabel.Name = "MuxMp4FpsLabel";
-            this.MuxMp4FpsLabel.Size = new System.Drawing.Size(27, 13);
+            this.MuxMp4FpsLabel.Size = new System.Drawing.Size(23, 12);
             this.MuxMp4FpsLabel.TabIndex = 16;
             this.MuxMp4FpsLabel.Text = "FPS";
             // 
@@ -2115,7 +2093,7 @@
             this.AudioPresetComboBox.FormattingEnabled = true;
             this.AudioPresetComboBox.Location = new System.Drawing.Point(103, 104);
             this.AudioPresetComboBox.Name = "AudioPresetComboBox";
-            this.AudioPresetComboBox.Size = new System.Drawing.Size(122, 21);
+            this.AudioPresetComboBox.Size = new System.Drawing.Size(122, 20);
             this.AudioPresetComboBox.TabIndex = 29;
             this.AudioPresetComboBox.Visible = false;
             this.AudioPresetComboBox.SelectedIndexChanged += new System.EventHandler(this.AudioPresetComboBox_SelectedIndexChanged);
@@ -2126,7 +2104,7 @@
             this.AudioPresetLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AudioPresetLabel.Location = new System.Drawing.Point(18, 108);
             this.AudioPresetLabel.Name = "AudioPresetLabel";
-            this.AudioPresetLabel.Size = new System.Drawing.Size(31, 13);
+            this.AudioPresetLabel.Size = new System.Drawing.Size(29, 12);
             this.AudioPresetLabel.TabIndex = 30;
             this.AudioPresetLabel.Text = "预设";
             this.AudioPresetLabel.Visible = false;
@@ -2144,7 +2122,7 @@
             "320"});
             this.AudioBitrateComboBox.Location = new System.Drawing.Point(103, 104);
             this.AudioBitrateComboBox.Name = "AudioBitrateComboBox";
-            this.AudioBitrateComboBox.Size = new System.Drawing.Size(122, 21);
+            this.AudioBitrateComboBox.Size = new System.Drawing.Size(122, 20);
             this.AudioBitrateComboBox.TabIndex = 20;
             this.AudioBitrateComboBox.Text = "128";
             // 
@@ -2154,7 +2132,7 @@
             this.AudioEncoderLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AudioEncoderLabel.Location = new System.Drawing.Point(18, 81);
             this.AudioEncoderLabel.Name = "AudioEncoderLabel";
-            this.AudioEncoderLabel.Size = new System.Drawing.Size(43, 13);
+            this.AudioEncoderLabel.Size = new System.Drawing.Size(41, 12);
             this.AudioEncoderLabel.TabIndex = 19;
             this.AudioEncoderLabel.Text = "编码器";
             // 
@@ -2173,7 +2151,7 @@
             "MP3"});
             this.AudioEncoderComboBox.Location = new System.Drawing.Point(103, 78);
             this.AudioEncoderComboBox.Name = "AudioEncoderComboBox";
-            this.AudioEncoderComboBox.Size = new System.Drawing.Size(122, 21);
+            this.AudioEncoderComboBox.Size = new System.Drawing.Size(122, 20);
             this.AudioEncoderComboBox.TabIndex = 18;
             this.AudioEncoderComboBox.SelectedIndexChanged += new System.EventHandler(this.AudioEncoderComboBox_SelectedIndexChanged);
             // 
@@ -2261,7 +2239,7 @@
             this.AudioKbpsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AudioKbpsLabel.Location = new System.Drawing.Point(251, 110);
             this.AudioKbpsLabel.Name = "AudioKbpsLabel";
-            this.AudioKbpsLabel.Size = new System.Drawing.Size(31, 13);
+            this.AudioKbpsLabel.Size = new System.Drawing.Size(29, 12);
             this.AudioKbpsLabel.TabIndex = 7;
             this.AudioKbpsLabel.Text = "Kbps";
             // 
@@ -2283,7 +2261,7 @@
             this.AudioBitrateLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AudioBitrateLabel.Location = new System.Drawing.Point(18, 108);
             this.AudioBitrateLabel.Name = "AudioBitrateLabel";
-            this.AudioBitrateLabel.Size = new System.Drawing.Size(31, 13);
+            this.AudioBitrateLabel.Size = new System.Drawing.Size(29, 12);
             this.AudioBitrateLabel.TabIndex = 7;
             this.AudioBitrateLabel.Text = "码率";
             // 
@@ -2347,7 +2325,7 @@
             this.AudioBatchOutputNotificationLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.AudioBatchOutputNotificationLabel.Location = new System.Drawing.Point(8, 323);
             this.AudioBatchOutputNotificationLabel.Name = "AudioBatchOutputNotificationLabel";
-            this.AudioBatchOutputNotificationLabel.Size = new System.Drawing.Size(139, 13);
+            this.AudioBatchOutputNotificationLabel.Size = new System.Drawing.Size(137, 12);
             this.AudioBatchOutputNotificationLabel.TabIndex = 19;
             this.AudioBatchOutputNotificationLabel.Text = "新文件生成在源文件目录";
             // 
@@ -2368,9 +2346,10 @@
             this.AudioBatchItemListBox.AllowDrop = true;
             this.AudioBatchItemListBox.FormattingEnabled = true;
             this.AudioBatchItemListBox.HorizontalScrollbar = true;
+            this.AudioBatchItemListBox.ItemHeight = 12;
             this.AudioBatchItemListBox.Location = new System.Drawing.Point(9, 20);
             this.AudioBatchItemListBox.Name = "AudioBatchItemListBox";
-            this.AudioBatchItemListBox.Size = new System.Drawing.Size(551, 290);
+            this.AudioBatchItemListBox.Size = new System.Drawing.Size(551, 280);
             this.AudioBatchItemListBox.TabIndex = 18;
             this.AudioBatchItemListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.AudioBatchItemListBox_DragDrop);
             this.AudioBatchItemListBox.DragOver += new System.Windows.Forms.DragEventHandler(this.AudioBatchItemListBox_DragOver);
@@ -2445,7 +2424,7 @@
             this.MiscOnePicDurationSecondsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MiscOnePicDurationSecondsLabel.Location = new System.Drawing.Point(226, 137);
             this.MiscOnePicDurationSecondsLabel.Name = "MiscOnePicDurationSecondsLabel";
-            this.MiscOnePicDurationSecondsLabel.Size = new System.Drawing.Size(19, 13);
+            this.MiscOnePicDurationSecondsLabel.Size = new System.Drawing.Size(17, 12);
             this.MiscOnePicDurationSecondsLabel.TabIndex = 40;
             this.MiscOnePicDurationSecondsLabel.Text = "秒";
             // 
@@ -2453,7 +2432,7 @@
             // 
             this.MiscOnePicDurationSecondsTextBox.Location = new System.Drawing.Point(158, 134);
             this.MiscOnePicDurationSecondsTextBox.Name = "MiscOnePicDurationSecondsTextBox";
-            this.MiscOnePicDurationSecondsTextBox.Size = new System.Drawing.Size(62, 20);
+            this.MiscOnePicDurationSecondsTextBox.Size = new System.Drawing.Size(62, 21);
             this.MiscOnePicDurationSecondsTextBox.TabIndex = 39;
             this.MiscOnePicDurationSecondsTextBox.Text = "120";
             // 
@@ -2463,7 +2442,7 @@
             this.MiscOnePicDurationLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MiscOnePicDurationLabel.Location = new System.Drawing.Point(105, 137);
             this.MiscOnePicDurationLabel.Name = "MiscOnePicDurationLabel";
-            this.MiscOnePicDurationLabel.Size = new System.Drawing.Size(31, 13);
+            this.MiscOnePicDurationLabel.Size = new System.Drawing.Size(29, 12);
             this.MiscOnePicDurationLabel.TabIndex = 38;
             this.MiscOnePicDurationLabel.Text = "时间";
             // 
@@ -2487,7 +2466,7 @@
             0,
             0});
             this.MiscOnePicCrfNumericUpDown.Name = "MiscOnePicCrfNumericUpDown";
-            this.MiscOnePicCrfNumericUpDown.Size = new System.Drawing.Size(88, 20);
+            this.MiscOnePicCrfNumericUpDown.Size = new System.Drawing.Size(88, 21);
             this.MiscOnePicCrfNumericUpDown.TabIndex = 37;
             this.MiscOnePicCrfNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.MiscOnePicCrfNumericUpDown.Value = new decimal(new int[] {
@@ -2502,7 +2481,7 @@
             this.MiscOnePicCrfLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MiscOnePicCrfLabel.Location = new System.Drawing.Point(362, 109);
             this.MiscOnePicCrfLabel.Name = "MiscOnePicCrfLabel";
-            this.MiscOnePicCrfLabel.Size = new System.Drawing.Size(28, 13);
+            this.MiscOnePicCrfLabel.Size = new System.Drawing.Size(23, 12);
             this.MiscOnePicCrfLabel.TabIndex = 36;
             this.MiscOnePicCrfLabel.Text = "CRF";
             // 
@@ -2526,7 +2505,7 @@
             this.MiscOnePicFpsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MiscOnePicFpsLabel.Location = new System.Drawing.Point(275, 109);
             this.MiscOnePicFpsLabel.Name = "MiscOnePicFpsLabel";
-            this.MiscOnePicFpsLabel.Size = new System.Drawing.Size(27, 13);
+            this.MiscOnePicFpsLabel.Size = new System.Drawing.Size(23, 12);
             this.MiscOnePicFpsLabel.TabIndex = 23;
             this.MiscOnePicFpsLabel.Text = "FPS";
             // 
@@ -2544,7 +2523,7 @@
             0,
             0});
             this.MiscOnePicFpsNumericUpDown.Name = "MiscOnePicFpsNumericUpDown";
-            this.MiscOnePicFpsNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.MiscOnePicFpsNumericUpDown.Size = new System.Drawing.Size(48, 21);
             this.MiscOnePicFpsNumericUpDown.TabIndex = 11;
             this.MiscOnePicFpsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.MiscOnePicFpsNumericUpDown.Value = new decimal(new int[] {
@@ -2559,7 +2538,7 @@
             this.MiscOnePicKbpsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MiscOnePicKbpsLabel.Location = new System.Drawing.Point(226, 109);
             this.MiscOnePicKbpsLabel.Name = "MiscOnePicKbpsLabel";
-            this.MiscOnePicKbpsLabel.Size = new System.Drawing.Size(31, 13);
+            this.MiscOnePicKbpsLabel.Size = new System.Drawing.Size(29, 12);
             this.MiscOnePicKbpsLabel.TabIndex = 9;
             this.MiscOnePicKbpsLabel.Text = "Kbps";
             // 
@@ -2569,7 +2548,7 @@
             this.MiscOnePicBitrateLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MiscOnePicBitrateLabel.Location = new System.Drawing.Point(12, 109);
             this.MiscOnePicBitrateLabel.Name = "MiscOnePicBitrateLabel";
-            this.MiscOnePicBitrateLabel.Size = new System.Drawing.Size(55, 13);
+            this.MiscOnePicBitrateLabel.Size = new System.Drawing.Size(53, 12);
             this.MiscOnePicBitrateLabel.TabIndex = 10;
             this.MiscOnePicBitrateLabel.Text = "音频码率";
             // 
@@ -2582,7 +2561,7 @@
             0,
             0});
             this.MiscOnePicBitrateNumericUpDown.Name = "MiscOnePicBitrateNumericUpDown";
-            this.MiscOnePicBitrateNumericUpDown.Size = new System.Drawing.Size(62, 20);
+            this.MiscOnePicBitrateNumericUpDown.Size = new System.Drawing.Size(62, 21);
             this.MiscOnePicBitrateNumericUpDown.TabIndex = 8;
             this.MiscOnePicBitrateNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.MiscOnePicBitrateNumericUpDown.Value = new decimal(new int[] {
@@ -2734,7 +2713,7 @@
             this.VideoFramesLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoFramesLabel.Location = new System.Drawing.Point(238, 147);
             this.VideoFramesLabel.Name = "VideoFramesLabel";
-            this.VideoFramesLabel.Size = new System.Drawing.Size(55, 13);
+            this.VideoFramesLabel.Size = new System.Drawing.Size(53, 12);
             this.VideoFramesLabel.TabIndex = 46;
             this.VideoFramesLabel.Text = "编码帧数";
             // 
@@ -2744,7 +2723,7 @@
             this.VideoSeekLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoSeekLabel.Location = new System.Drawing.Point(11, 147);
             this.VideoSeekLabel.Name = "VideoSeekLabel";
-            this.VideoSeekLabel.Size = new System.Drawing.Size(43, 13);
+            this.VideoSeekLabel.Size = new System.Drawing.Size(41, 12);
             this.VideoSeekLabel.TabIndex = 46;
             this.VideoSeekLabel.Text = "起始帧";
             // 
@@ -2757,7 +2736,7 @@
             0,
             0});
             this.VideoFramesNumericUpDown.Name = "VideoFramesNumericUpDown";
-            this.VideoFramesNumericUpDown.Size = new System.Drawing.Size(100, 20);
+            this.VideoFramesNumericUpDown.Size = new System.Drawing.Size(100, 21);
             this.VideoFramesNumericUpDown.TabIndex = 45;
             // 
             // VideoSeekNumericUpDown
@@ -2769,7 +2748,7 @@
             0,
             0});
             this.VideoSeekNumericUpDown.Name = "VideoSeekNumericUpDown";
-            this.VideoSeekNumericUpDown.Size = new System.Drawing.Size(110, 20);
+            this.VideoSeekNumericUpDown.Size = new System.Drawing.Size(110, 21);
             this.VideoSeekNumericUpDown.TabIndex = 44;
             // 
             // VideoMaintainResolutionCheckBox
@@ -2801,7 +2780,7 @@
             "y4m"});
             this.VideoDemuxerComboBox.Location = new System.Drawing.Point(377, 120);
             this.VideoDemuxerComboBox.Name = "VideoDemuxerComboBox";
-            this.VideoDemuxerComboBox.Size = new System.Drawing.Size(100, 21);
+            this.VideoDemuxerComboBox.Size = new System.Drawing.Size(100, 20);
             this.VideoDemuxerComboBox.TabIndex = 42;
             // 
             // VideoBatchGroupBox
@@ -2830,7 +2809,7 @@
             this.VideoBatchFormatLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoBatchFormatLabel.Location = new System.Drawing.Point(483, 187);
             this.VideoBatchFormatLabel.Name = "VideoBatchFormatLabel";
-            this.VideoBatchFormatLabel.Size = new System.Drawing.Size(31, 13);
+            this.VideoBatchFormatLabel.Size = new System.Drawing.Size(29, 12);
             this.VideoBatchFormatLabel.TabIndex = 31;
             this.VideoBatchFormatLabel.Text = "格式";
             // 
@@ -2846,7 +2825,7 @@
             "f4v"});
             this.VideoBatchFormatComboBox.Location = new System.Drawing.Point(485, 202);
             this.VideoBatchFormatComboBox.Name = "VideoBatchFormatComboBox";
-            this.VideoBatchFormatComboBox.Size = new System.Drawing.Size(72, 21);
+            this.VideoBatchFormatComboBox.Size = new System.Drawing.Size(72, 20);
             this.VideoBatchFormatComboBox.TabIndex = 30;
             this.VideoBatchFormatComboBox.Text = "mp4";
             // 
@@ -2855,7 +2834,7 @@
             this.VideoBatchSubtitleLanguage.FormattingEnabled = true;
             this.VideoBatchSubtitleLanguage.Location = new System.Drawing.Point(483, 158);
             this.VideoBatchSubtitleLanguage.Name = "VideoBatchSubtitleLanguage";
-            this.VideoBatchSubtitleLanguage.Size = new System.Drawing.Size(75, 21);
+            this.VideoBatchSubtitleLanguage.Size = new System.Drawing.Size(75, 20);
             this.VideoBatchSubtitleLanguage.TabIndex = 29;
             // 
             // VideoBatchOutputFolderButton
@@ -3089,7 +3068,7 @@
             this.VideoDemuxerLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoDemuxerLabel.Location = new System.Drawing.Point(324, 123);
             this.VideoDemuxerLabel.Name = "VideoDemuxerLabel";
-            this.VideoDemuxerLabel.Size = new System.Drawing.Size(43, 13);
+            this.VideoDemuxerLabel.Size = new System.Drawing.Size(41, 12);
             this.VideoDemuxerLabel.TabIndex = 11;
             this.VideoDemuxerLabel.Text = "分离器";
             // 
@@ -3173,7 +3152,7 @@
             this.VideoEncoderLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoEncoderLabel.Location = new System.Drawing.Point(11, 123);
             this.VideoEncoderLabel.Name = "VideoEncoderLabel";
-            this.VideoEncoderLabel.Size = new System.Drawing.Size(43, 13);
+            this.VideoEncoderLabel.Size = new System.Drawing.Size(41, 12);
             this.VideoEncoderLabel.TabIndex = 29;
             this.VideoEncoderLabel.Text = "编码器";
             // 
@@ -3183,7 +3162,7 @@
             this.VideoEncoderComboBox.FormattingEnabled = true;
             this.VideoEncoderComboBox.Location = new System.Drawing.Point(66, 120);
             this.VideoEncoderComboBox.Name = "VideoEncoderComboBox";
-            this.VideoEncoderComboBox.Size = new System.Drawing.Size(239, 21);
+            this.VideoEncoderComboBox.Size = new System.Drawing.Size(239, 20);
             this.VideoEncoderComboBox.TabIndex = 27;
             this.VideoEncoderComboBox.SelectedIndexChanged += new System.EventHandler(this.VideoEncoderComboBox_SelectedIndexChanged);
             // 
@@ -3202,7 +3181,7 @@
             "60"});
             this.VideoFpsComboBox.Location = new System.Drawing.Point(66, 248);
             this.VideoFpsComboBox.Name = "VideoFpsComboBox";
-            this.VideoFpsComboBox.Size = new System.Drawing.Size(88, 21);
+            this.VideoFpsComboBox.Size = new System.Drawing.Size(88, 20);
             this.VideoFpsComboBox.TabIndex = 23;
             this.VideoFpsComboBox.Text = "auto";
             this.VideoFpsComboBox.Visible = false;
@@ -3213,7 +3192,7 @@
             this.VideoFpsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoFpsLabel.Location = new System.Drawing.Point(19, 250);
             this.VideoFpsLabel.Name = "VideoFpsLabel";
-            this.VideoFpsLabel.Size = new System.Drawing.Size(27, 13);
+            this.VideoFpsLabel.Size = new System.Drawing.Size(23, 12);
             this.VideoFpsLabel.TabIndex = 22;
             this.VideoFpsLabel.Text = "FPS";
             this.VideoFpsLabel.Visible = false;
@@ -3228,7 +3207,7 @@
             "复制音频流"});
             this.VideoAudioModeComboBox.Location = new System.Drawing.Point(377, 93);
             this.VideoAudioModeComboBox.Name = "VideoAudioModeComboBox";
-            this.VideoAudioModeComboBox.Size = new System.Drawing.Size(100, 21);
+            this.VideoAudioModeComboBox.Size = new System.Drawing.Size(100, 20);
             this.VideoAudioModeComboBox.TabIndex = 20;
             // 
             // VideoPresetComboBox
@@ -3237,7 +3216,7 @@
             this.VideoPresetComboBox.FormattingEnabled = true;
             this.VideoPresetComboBox.Location = new System.Drawing.Point(66, 196);
             this.VideoPresetComboBox.Name = "VideoPresetComboBox";
-            this.VideoPresetComboBox.Size = new System.Drawing.Size(123, 21);
+            this.VideoPresetComboBox.Size = new System.Drawing.Size(123, 20);
             this.VideoPresetComboBox.TabIndex = 18;
             this.VideoPresetComboBox.Visible = false;
             this.VideoPresetComboBox.SelectedIndexChanged += new System.EventHandler(this.VideoPresetComboBox_SelectedIndexChanged);
@@ -3248,7 +3227,7 @@
             this.VideoAudioModeLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoAudioModeLabel.Location = new System.Drawing.Point(312, 98);
             this.VideoAudioModeLabel.Name = "VideoAudioModeLabel";
-            this.VideoAudioModeLabel.Size = new System.Drawing.Size(55, 13);
+            this.VideoAudioModeLabel.Size = new System.Drawing.Size(53, 12);
             this.VideoAudioModeLabel.TabIndex = 16;
             this.VideoAudioModeLabel.Text = "音频模式";
             // 
@@ -3259,7 +3238,7 @@
             this.VideoGoToAudioLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoGoToAudioLabel.Location = new System.Drawing.Point(64, 96);
             this.VideoGoToAudioLabel.Name = "VideoGoToAudioLabel";
-            this.VideoGoToAudioLabel.Size = new System.Drawing.Size(103, 13);
+            this.VideoGoToAudioLabel.Size = new System.Drawing.Size(101, 12);
             this.VideoGoToAudioLabel.TabIndex = 16;
             this.VideoGoToAudioLabel.Text = "点我设置音频参数";
             this.VideoGoToAudioLabel.Click += new System.EventHandler(this.VideoGoToAudioLabel_Click);
@@ -3270,7 +3249,7 @@
             this.VideoBitrateKbpsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoBitrateKbpsLabel.Location = new System.Drawing.Point(163, 223);
             this.VideoBitrateKbpsLabel.Name = "VideoBitrateKbpsLabel";
-            this.VideoBitrateKbpsLabel.Size = new System.Drawing.Size(31, 13);
+            this.VideoBitrateKbpsLabel.Size = new System.Drawing.Size(29, 12);
             this.VideoBitrateKbpsLabel.TabIndex = 14;
             this.VideoBitrateKbpsLabel.Text = "Kbps";
             this.VideoBitrateKbpsLabel.Visible = false;
@@ -3281,7 +3260,7 @@
             this.VideoCrfLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoCrfLabel.Location = new System.Drawing.Point(19, 223);
             this.VideoCrfLabel.Name = "VideoCrfLabel";
-            this.VideoCrfLabel.Size = new System.Drawing.Size(28, 13);
+            this.VideoCrfLabel.Size = new System.Drawing.Size(23, 12);
             this.VideoCrfLabel.TabIndex = 9;
             this.VideoCrfLabel.Text = "CRF";
             // 
@@ -3291,7 +3270,7 @@
             this.VideoHeightLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoHeightLabel.Location = new System.Drawing.Point(233, 250);
             this.VideoHeightLabel.Name = "VideoHeightLabel";
-            this.VideoHeightLabel.Size = new System.Drawing.Size(31, 13);
+            this.VideoHeightLabel.Size = new System.Drawing.Size(29, 12);
             this.VideoHeightLabel.TabIndex = 8;
             this.VideoHeightLabel.Text = "高度";
             // 
@@ -3301,7 +3280,7 @@
             this.VideoWidthLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoWidthLabel.Location = new System.Drawing.Point(233, 223);
             this.VideoWidthLabel.Name = "VideoWidthLabel";
-            this.VideoWidthLabel.Size = new System.Drawing.Size(31, 13);
+            this.VideoWidthLabel.Size = new System.Drawing.Size(29, 12);
             this.VideoWidthLabel.TabIndex = 7;
             this.VideoWidthLabel.Text = "宽度";
             // 
@@ -3315,7 +3294,7 @@
             0,
             0});
             this.VideoHeightNumericUpDown.Name = "VideoHeightNumericUpDown";
-            this.VideoHeightNumericUpDown.Size = new System.Drawing.Size(88, 20);
+            this.VideoHeightNumericUpDown.Size = new System.Drawing.Size(88, 21);
             this.VideoHeightNumericUpDown.TabIndex = 6;
             this.VideoHeightNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -3329,7 +3308,7 @@
             0,
             0});
             this.VideoWidthNumericUpDown.Name = "VideoWidthNumericUpDown";
-            this.VideoWidthNumericUpDown.Size = new System.Drawing.Size(88, 20);
+            this.VideoWidthNumericUpDown.Size = new System.Drawing.Size(88, 21);
             this.VideoWidthNumericUpDown.TabIndex = 5;
             this.VideoWidthNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -3353,7 +3332,7 @@
             0,
             -2147483648});
             this.VideoCrfNumericUpDown.Name = "VideoCrfNumericUpDown";
-            this.VideoCrfNumericUpDown.Size = new System.Drawing.Size(88, 20);
+            this.VideoCrfNumericUpDown.Size = new System.Drawing.Size(88, 21);
             this.VideoCrfNumericUpDown.TabIndex = 4;
             this.VideoCrfNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.VideoCrfNumericUpDown.Value = new decimal(new int[] {
@@ -3368,7 +3347,7 @@
             this.VideoBitrateLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoBitrateLabel.Location = new System.Drawing.Point(19, 223);
             this.VideoBitrateLabel.Name = "VideoBitrateLabel";
-            this.VideoBitrateLabel.Size = new System.Drawing.Size(31, 13);
+            this.VideoBitrateLabel.Size = new System.Drawing.Size(29, 12);
             this.VideoBitrateLabel.TabIndex = 14;
             this.VideoBitrateLabel.Text = "码率";
             this.VideoBitrateLabel.Visible = false;
@@ -3398,7 +3377,7 @@
             this.VideoPresetLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.VideoPresetLabel.Location = new System.Drawing.Point(23, 200);
             this.VideoPresetLabel.Name = "VideoPresetLabel";
-            this.VideoPresetLabel.Size = new System.Drawing.Size(31, 13);
+            this.VideoPresetLabel.Size = new System.Drawing.Size(29, 12);
             this.VideoPresetLabel.TabIndex = 28;
             this.VideoPresetLabel.Text = "预设";
             this.VideoPresetLabel.Visible = false;
@@ -3417,7 +3396,7 @@
             0,
             0});
             this.VideoBitrateNumericUpDown.Name = "VideoBitrateNumericUpDown";
-            this.VideoBitrateNumericUpDown.Size = new System.Drawing.Size(88, 20);
+            this.VideoBitrateNumericUpDown.Size = new System.Drawing.Size(88, 21);
             this.VideoBitrateNumericUpDown.TabIndex = 4;
             this.VideoBitrateNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.VideoBitrateNumericUpDown.Value = new decimal(new int[] {
@@ -3433,7 +3412,7 @@
             this.HelpTab.Location = new System.Drawing.Point(4, 22);
             this.HelpTab.Name = "HelpTab";
             this.HelpTab.Padding = new System.Windows.Forms.Padding(3);
-            this.HelpTab.Size = new System.Drawing.Size(572, 587);
+            this.HelpTab.Size = new System.Drawing.Size(192, 74);
             this.HelpTab.TabIndex = 10;
             this.HelpTab.Text = "帮助";
             this.HelpTab.UseVisualStyleBackColor = true;
@@ -3469,294 +3448,15 @@
             // 
             // MiscTab
             // 
-            this.MiscTab.Controls.Add(this.MiscBlackGroupBox);
             this.MiscTab.Controls.Add(this.MiscMiscGroupBox);
             this.MiscTab.Controls.Add(this.MiscOnePicGroupBox);
             this.MiscTab.Location = new System.Drawing.Point(4, 22);
             this.MiscTab.Name = "MiscTab";
             this.MiscTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MiscTab.Size = new System.Drawing.Size(192, 74);
+            this.MiscTab.Size = new System.Drawing.Size(572, 587);
             this.MiscTab.TabIndex = 12;
             this.MiscTab.Text = "常用";
             this.MiscTab.UseVisualStyleBackColor = true;
-            // 
-            // MiscBlackGroupBox
-            // 
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackKbpsLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackBitrateLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackBitrateNumericUpDown);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationSecondsLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationSecondsComboBox);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackDurationLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackCrfNumericUpDown);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackCrfLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackNoPicCheckBox);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsLabel);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackFpsNumericUpDown);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackPicInputButton);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackPicInputTextBox);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackStartButton);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackOutputButton);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackVideoInputButton);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackOutputTextBox);
-            this.MiscBlackGroupBox.Controls.Add(this.MiscBlackVideoInputTextBox);
-            this.MiscBlackGroupBox.Location = new System.Drawing.Point(0, 417);
-            this.MiscBlackGroupBox.Name = "MiscBlackGroupBox";
-            this.MiscBlackGroupBox.Size = new System.Drawing.Size(566, 164);
-            this.MiscBlackGroupBox.TabIndex = 22;
-            this.MiscBlackGroupBox.TabStop = false;
-            this.MiscBlackGroupBox.Text = "后黑";
-            this.MiscBlackGroupBox.Visible = false;
-            // 
-            // MiscBlackKbpsLabel
-            // 
-            this.MiscBlackKbpsLabel.AutoSize = true;
-            this.MiscBlackKbpsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackKbpsLabel.Location = new System.Drawing.Point(211, 140);
-            this.MiscBlackKbpsLabel.Name = "MiscBlackKbpsLabel";
-            this.MiscBlackKbpsLabel.Size = new System.Drawing.Size(31, 13);
-            this.MiscBlackKbpsLabel.TabIndex = 41;
-            this.MiscBlackKbpsLabel.Text = "Kbps";
-            // 
-            // MiscBlackBitrateLabel
-            // 
-            this.MiscBlackBitrateLabel.AutoSize = true;
-            this.MiscBlackBitrateLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackBitrateLabel.Location = new System.Drawing.Point(12, 140);
-            this.MiscBlackBitrateLabel.Name = "MiscBlackBitrateLabel";
-            this.MiscBlackBitrateLabel.Size = new System.Drawing.Size(55, 13);
-            this.MiscBlackBitrateLabel.TabIndex = 40;
-            this.MiscBlackBitrateLabel.Text = "目标码率";
-            // 
-            // MiscBlackBitrateNumericUpDown
-            // 
-            this.MiscBlackBitrateNumericUpDown.Location = new System.Drawing.Point(106, 138);
-            this.MiscBlackBitrateNumericUpDown.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.MiscBlackBitrateNumericUpDown.Name = "MiscBlackBitrateNumericUpDown";
-            this.MiscBlackBitrateNumericUpDown.Size = new System.Drawing.Size(96, 20);
-            this.MiscBlackBitrateNumericUpDown.TabIndex = 39;
-            this.MiscBlackBitrateNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MiscBlackBitrateNumericUpDown.Value = new decimal(new int[] {
-            900,
-            0,
-            0,
-            0});
-            // 
-            // MiscBlackDurationSecondsLabel
-            // 
-            this.MiscBlackDurationSecondsLabel.AutoSize = true;
-            this.MiscBlackDurationSecondsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackDurationSecondsLabel.Location = new System.Drawing.Point(211, 109);
-            this.MiscBlackDurationSecondsLabel.Name = "MiscBlackDurationSecondsLabel";
-            this.MiscBlackDurationSecondsLabel.Size = new System.Drawing.Size(19, 13);
-            this.MiscBlackDurationSecondsLabel.TabIndex = 38;
-            this.MiscBlackDurationSecondsLabel.Text = "秒";
-            // 
-            // MiscBlackDurationSecondsComboBox
-            // 
-            this.MiscBlackDurationSecondsComboBox.FormattingEnabled = true;
-            this.MiscBlackDurationSecondsComboBox.Items.AddRange(new object[] {
-            "auto",
-            "60",
-            "300",
-            "900",
-            "3600"});
-            this.MiscBlackDurationSecondsComboBox.Location = new System.Drawing.Point(107, 108);
-            this.MiscBlackDurationSecondsComboBox.Name = "MiscBlackDurationSecondsComboBox";
-            this.MiscBlackDurationSecondsComboBox.Size = new System.Drawing.Size(96, 21);
-            this.MiscBlackDurationSecondsComboBox.TabIndex = 37;
-            this.MiscBlackDurationSecondsComboBox.Text = "auto";
-            this.MiscBlackDurationSecondsComboBox.SelectedIndexChanged += new System.EventHandler(this.MiscBlackDurationSecondsComboBox_SelectedIndexChanged);
-            // 
-            // MiscBlackDurationLabel
-            // 
-            this.MiscBlackDurationLabel.AutoSize = true;
-            this.MiscBlackDurationLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackDurationLabel.Location = new System.Drawing.Point(12, 109);
-            this.MiscBlackDurationLabel.Name = "MiscBlackDurationLabel";
-            this.MiscBlackDurationLabel.Size = new System.Drawing.Size(55, 13);
-            this.MiscBlackDurationLabel.TabIndex = 36;
-            this.MiscBlackDurationLabel.Text = "后黑时长";
-            // 
-            // MiscBlackCrfNumericUpDown
-            // 
-            this.MiscBlackCrfNumericUpDown.DecimalPlaces = 1;
-            this.MiscBlackCrfNumericUpDown.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.MiscBlackCrfNumericUpDown.Location = new System.Drawing.Point(390, 107);
-            this.MiscBlackCrfNumericUpDown.Maximum = new decimal(new int[] {
-            63,
-            0,
-            0,
-            0});
-            this.MiscBlackCrfNumericUpDown.Minimum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            -2147483648});
-            this.MiscBlackCrfNumericUpDown.Name = "MiscBlackCrfNumericUpDown";
-            this.MiscBlackCrfNumericUpDown.Size = new System.Drawing.Size(88, 20);
-            this.MiscBlackCrfNumericUpDown.TabIndex = 35;
-            this.MiscBlackCrfNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MiscBlackCrfNumericUpDown.Value = new decimal(new int[] {
-            51,
-            0,
-            0,
-            0});
-            // 
-            // MiscBlackCrfLabel
-            // 
-            this.MiscBlackCrfLabel.AutoSize = true;
-            this.MiscBlackCrfLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackCrfLabel.Location = new System.Drawing.Point(361, 109);
-            this.MiscBlackCrfLabel.Name = "MiscBlackCrfLabel";
-            this.MiscBlackCrfLabel.Size = new System.Drawing.Size(28, 13);
-            this.MiscBlackCrfLabel.TabIndex = 33;
-            this.MiscBlackCrfLabel.Text = "CRF";
-            // 
-            // MiscBlackNoPicCheckBox
-            // 
-            this.MiscBlackNoPicCheckBox.AutoSize = true;
-            this.MiscBlackNoPicCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.MiscBlackNoPicCheckBox.Checked = true;
-            this.MiscBlackNoPicCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.MiscBlackNoPicCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.MiscBlackNoPicCheckBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackNoPicCheckBox.Location = new System.Drawing.Point(390, 136);
-            this.MiscBlackNoPicCheckBox.Name = "MiscBlackNoPicCheckBox";
-            this.MiscBlackNoPicCheckBox.Size = new System.Drawing.Size(74, 19);
-            this.MiscBlackNoPicCheckBox.TabIndex = 31;
-            this.MiscBlackNoPicCheckBox.Text = "使用黑屏";
-            this.MiscBlackNoPicCheckBox.UseVisualStyleBackColor = false;
-            this.MiscBlackNoPicCheckBox.CheckedChanged += new System.EventHandler(this.MiscBlackNoPicCheckBox_CheckedChanged);
-            // 
-            // MiscBlackFpsLabel
-            // 
-            this.MiscBlackFpsLabel.AutoSize = true;
-            this.MiscBlackFpsLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackFpsLabel.Location = new System.Drawing.Point(259, 109);
-            this.MiscBlackFpsLabel.Name = "MiscBlackFpsLabel";
-            this.MiscBlackFpsLabel.Size = new System.Drawing.Size(27, 13);
-            this.MiscBlackFpsLabel.TabIndex = 30;
-            this.MiscBlackFpsLabel.Text = "FPS";
-            // 
-            // MiscBlackFpsNumericUpDown
-            // 
-            this.MiscBlackFpsNumericUpDown.Location = new System.Drawing.Point(288, 107);
-            this.MiscBlackFpsNumericUpDown.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.MiscBlackFpsNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.MiscBlackFpsNumericUpDown.Name = "MiscBlackFpsNumericUpDown";
-            this.MiscBlackFpsNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.MiscBlackFpsNumericUpDown.TabIndex = 29;
-            this.MiscBlackFpsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MiscBlackFpsNumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // MiscBlackPicInputButton
-            // 
-            this.MiscBlackPicInputButton.Enabled = false;
-            this.MiscBlackPicInputButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.MiscBlackPicInputButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackPicInputButton.Location = new System.Drawing.Point(484, 78);
-            this.MiscBlackPicInputButton.Name = "MiscBlackPicInputButton";
-            this.MiscBlackPicInputButton.Size = new System.Drawing.Size(75, 23);
-            this.MiscBlackPicInputButton.TabIndex = 27;
-            this.MiscBlackPicInputButton.Text = "图片";
-            this.MiscBlackPicInputButton.UseVisualStyleBackColor = true;
-            this.MiscBlackPicInputButton.Click += new System.EventHandler(this.MiscBlackPicInputButton_Click);
-            // 
-            // MiscBlackPicInputTextBox
-            // 
-            this.MiscBlackPicInputTextBox.AllowDrop = true;
-            this.MiscBlackPicInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MiscBlackPicInputTextBox.EmptyTextTip = null;
-            this.MiscBlackPicInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            this.MiscBlackPicInputTextBox.Enabled = false;
-            this.MiscBlackPicInputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.MiscBlackPicInputTextBox.Location = new System.Drawing.Point(9, 78);
-            this.MiscBlackPicInputTextBox.Name = "MiscBlackPicInputTextBox";
-            this.MiscBlackPicInputTextBox.Size = new System.Drawing.Size(469, 21);
-            this.MiscBlackPicInputTextBox.TabIndex = 26;
-            // 
-            // MiscBlackStartButton
-            // 
-            this.MiscBlackStartButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.MiscBlackStartButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackStartButton.Location = new System.Drawing.Point(484, 107);
-            this.MiscBlackStartButton.Name = "MiscBlackStartButton";
-            this.MiscBlackStartButton.Size = new System.Drawing.Size(75, 23);
-            this.MiscBlackStartButton.TabIndex = 25;
-            this.MiscBlackStartButton.Text = "后黑";
-            this.MiscBlackStartButton.UseVisualStyleBackColor = true;
-            this.MiscBlackStartButton.Click += new System.EventHandler(this.MiscBlackStartButton_Click);
-            // 
-            // MiscBlackOutputButton
-            // 
-            this.MiscBlackOutputButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.MiscBlackOutputButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackOutputButton.Location = new System.Drawing.Point(484, 49);
-            this.MiscBlackOutputButton.Name = "MiscBlackOutputButton";
-            this.MiscBlackOutputButton.Size = new System.Drawing.Size(75, 23);
-            this.MiscBlackOutputButton.TabIndex = 25;
-            this.MiscBlackOutputButton.Text = "输出";
-            this.MiscBlackOutputButton.UseVisualStyleBackColor = true;
-            this.MiscBlackOutputButton.Click += new System.EventHandler(this.MiscBlackOutputButton_Click);
-            // 
-            // MiscBlackVideoInputButton
-            // 
-            this.MiscBlackVideoInputButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.MiscBlackVideoInputButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MiscBlackVideoInputButton.Location = new System.Drawing.Point(484, 20);
-            this.MiscBlackVideoInputButton.Name = "MiscBlackVideoInputButton";
-            this.MiscBlackVideoInputButton.Size = new System.Drawing.Size(75, 23);
-            this.MiscBlackVideoInputButton.TabIndex = 25;
-            this.MiscBlackVideoInputButton.Text = "视频";
-            this.MiscBlackVideoInputButton.UseVisualStyleBackColor = true;
-            this.MiscBlackVideoInputButton.Click += new System.EventHandler(this.MiscBlackVideoInputButton_Click);
-            // 
-            // MiscBlackOutputTextBox
-            // 
-            this.MiscBlackOutputTextBox.AllowDrop = true;
-            this.MiscBlackOutputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MiscBlackOutputTextBox.EmptyTextTip = null;
-            this.MiscBlackOutputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            this.MiscBlackOutputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.MiscBlackOutputTextBox.Location = new System.Drawing.Point(9, 49);
-            this.MiscBlackOutputTextBox.Name = "MiscBlackOutputTextBox";
-            this.MiscBlackOutputTextBox.Size = new System.Drawing.Size(469, 21);
-            this.MiscBlackOutputTextBox.TabIndex = 24;
-            // 
-            // MiscBlackVideoInputTextBox
-            // 
-            this.MiscBlackVideoInputTextBox.AllowDrop = true;
-            this.MiscBlackVideoInputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MiscBlackVideoInputTextBox.EmptyTextTip = null;
-            this.MiscBlackVideoInputTextBox.EmptyTextTipColor = System.Drawing.Color.DarkGray;
-            this.MiscBlackVideoInputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.MiscBlackVideoInputTextBox.Location = new System.Drawing.Point(9, 20);
-            this.MiscBlackVideoInputTextBox.Name = "MiscBlackVideoInputTextBox";
-            this.MiscBlackVideoInputTextBox.ReadOnly = true;
-            this.MiscBlackVideoInputTextBox.Size = new System.Drawing.Size(469, 21);
-            this.MiscBlackVideoInputTextBox.TabIndex = 23;
-            this.MiscBlackVideoInputTextBox.TextChanged += new System.EventHandler(this.MiscBlackVideoInputTextBox_TextChanged);
             // 
             // ConfigTabPage
             // 
@@ -3764,7 +3464,7 @@
             this.ConfigTabPage.Location = new System.Drawing.Point(4, 22);
             this.ConfigTabPage.Name = "ConfigTabPage";
             this.ConfigTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ConfigTabPage.Size = new System.Drawing.Size(572, 587);
+            this.ConfigTabPage.Size = new System.Drawing.Size(192, 74);
             this.ConfigTabPage.TabIndex = 11;
             this.ConfigTabPage.Text = "设置";
             this.ConfigTabPage.UseVisualStyleBackColor = true;
@@ -3860,11 +3560,6 @@
             this.HelpTab.ResumeLayout(false);
             this.MainTabControl.ResumeLayout(false);
             this.MiscTab.ResumeLayout(false);
-            this.MiscBlackGroupBox.ResumeLayout(false);
-            this.MiscBlackGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackBitrateNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackCrfNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscBlackFpsNumericUpDown)).EndInit();
             this.ConfigTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -4074,27 +3769,8 @@
         private System.Windows.Forms.NumericUpDown MiscOnePicFpsNumericUpDown;
         private ControlExs.QQCheckBox MiscOnePicCopyAudioCheckBox;
         private System.Windows.Forms.TabPage MiscTab;
-        private System.Windows.Forms.GroupBox MiscBlackGroupBox;
-        private ControlExs.QQButton MiscBlackStartButton;
-        private ControlExs.QQButton MiscBlackOutputButton;
-        private ControlExs.QQButton MiscBlackVideoInputButton;
-        private ControlExs.QQTextBox MiscBlackOutputTextBox;
-        private ControlExs.QQTextBox MiscBlackVideoInputTextBox;
-        private ControlExs.QQButton MiscBlackPicInputButton;
-        private ControlExs.QQTextBox MiscBlackPicInputTextBox;
         private System.Windows.Forms.NumericUpDown MiscOnePicCrfNumericUpDown;
         private System.Windows.Forms.Label MiscOnePicCrfLabel;
-        private System.Windows.Forms.NumericUpDown MiscBlackCrfNumericUpDown;
-        private System.Windows.Forms.Label MiscBlackCrfLabel;
-        private ControlExs.QQCheckBox MiscBlackNoPicCheckBox;
-        private System.Windows.Forms.Label MiscBlackFpsLabel;
-        private System.Windows.Forms.NumericUpDown MiscBlackFpsNumericUpDown;
-        private System.Windows.Forms.ComboBox MiscBlackDurationSecondsComboBox;
-        private System.Windows.Forms.Label MiscBlackDurationLabel;
-        private System.Windows.Forms.Label MiscBlackDurationSecondsLabel;
-        private System.Windows.Forms.Label MiscBlackKbpsLabel;
-        private System.Windows.Forms.Label MiscBlackBitrateLabel;
-        private System.Windows.Forms.NumericUpDown MiscBlackBitrateNumericUpDown;
         private System.Windows.Forms.ComboBox AudioBitrateComboBox;
         private ControlExs.QQCheckBox AvsIncludeAudioCheckBox;
         private System.Windows.Forms.ComboBox AvsFilterComboBox;
