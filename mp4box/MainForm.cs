@@ -338,15 +338,6 @@ namespace mp4box
             return sb.ToString();
         }
 
-        [Obsolete("Not used")]
-        public static bool StringCheck(string str, string info = "")
-        {
-            if (string.IsNullOrEmpty(str))
-            {
-                MessageBox.Show("发现空或者无效的字符串 " + info);
-            }
-            return string.IsNullOrEmpty(str);
-        }
 
         public string AudioBat(string input, string output)
         {
@@ -1790,14 +1781,7 @@ namespace mp4box
 
         #region Misc Tab
 
-        private void GetMiscDataFromUI(MiscProcedure p)
-        {
-            p.inputVideoFilePath = MiscMiscVideoInputTextBox.Text;
-            p.outputVideoFilePath = MiscMiscVideoOutputTextBox.Text;
-            p.beginTimeStr = MiscMiscBeginTimeMaskedTextBox.Text;
-            p.endTimeStr = MiscMiscEndTimeMaskedTextBox.Text;
-            p.transposeIndex = MiscMiscTransposeComboBox.SelectedIndex;
-        }
+
 
         #region MiscOnePic
 
@@ -1907,6 +1891,15 @@ namespace mp4box
             {
                 MiscMiscVideoOutputTextBox.Text = saveFileDialog.FileName;
             }
+        }
+
+        private void GetMiscDataFromUI(MiscProcedure p)
+        {
+            p.inputVideoFilePath = MiscMiscVideoInputTextBox.Text;
+            p.outputVideoFilePath = MiscMiscVideoOutputTextBox.Text;
+            p.beginTimeStr = MiscMiscBeginTimeMaskedTextBox.Text;
+            p.endTimeStr = MiscMiscEndTimeMaskedTextBox.Text;
+            p.transposeIndex = MiscMiscTransposeComboBox.SelectedIndex;
         }
 
         private void MiscMiscStartClipButton_Click(object sender, EventArgs e)
@@ -2755,11 +2748,6 @@ namespace mp4box
 
         #endregion Avs Tab
 
-        #region MediaInfo Tab
-
-
-
-        #endregion MediaInfo Tab
 
         private void RemoveSelectedItemFromListBox(ListBox listBox)
         {
