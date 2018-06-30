@@ -179,6 +179,12 @@
     <Compile Include="UserCtrl\MiscUserControl.Designer.cs">
       <DependentUpon>MiscUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserCtrl\MuxUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\MuxUserControl.Designer.cs">
+      <DependentUpon>MuxUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility\AvsUtil.cs" />
     <Compile Include="Utility\UIUtil.cs" />
     <Compile Include="Utility\UpdateCheckUtil.cs" />
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserCtrl\MiscUserControl.resx">
       <DependentUpon>MiscUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\MuxUserControl.resx">
+      <DependentUpon>MuxUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkingForm.en.resx">
       <DependentUpon>WorkingForm.cs</DependentUpon>
