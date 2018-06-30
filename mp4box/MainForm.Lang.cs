@@ -76,9 +76,9 @@ namespace mp4box
                     //x264OutTextBox.EmptyTextTip = "宽度和高度全为0即不改变分辨率";
                     VideoBatchOutputFolderTextBox.EmptyTextTip = "字幕文件和视频文件在同一目录下且同名，不同名仅有语言后缀时请在右方选择或输入";
                     //txtvideo3.EmptyTextTip = "音频参数在音频选项卡设定";
-                    ExtractMp4InputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
-                    ExtractFlvInputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
-                    ExtractMkvInputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
+                    //ExtractMp4InputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
+                    //ExtractFlvInputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
+                    //ExtractMkvInputTextBox.EmptyTextTip = "抽取的视频或音频在原视频目录下";
                     ////load Help Text
                     //if (File.Exists(Global.Running.startPath + "\\help.rtf"))
                     //{
@@ -105,9 +105,9 @@ namespace mp4box
                     //x264OutTextBox.EmptyTextTip = "寬度和高度全為0即不改變解析度";
                     VideoBatchOutputFolderTextBox.EmptyTextTip = "字幕和視頻在同一資料夾下且同名，不同名僅有語言後綴時請在右方選擇或輸入";
                     //txtvideo3.EmptyTextTip = "音頻參數需在音頻選項卡设定";
-                    ExtractMp4InputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
-                    ExtractFlvInputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
-                    ExtractMkvInputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
+                    //ExtractMp4InputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
+                    //ExtractFlvInputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
+                    //ExtractMkvInputTextBox.EmptyTextTip = "新檔案生成在原資料夾";
                     //load Help Text
                     //if (File.Exists(Global.Running.startPath + "\\help_zh_tw.rtf"))
                     //{
@@ -134,9 +134,9 @@ namespace mp4box
                     //x264OutTextBox.EmptyTextTip = "Both the width and height equal zero means using original resolution";
                     VideoBatchOutputFolderTextBox.EmptyTextTip = "Subtitle and Video must be of the same name and in the same folder";
                     //txtvideo3.EmptyTextTip = "It is necessary to set audio parameter in the Audio tab";
-                    ExtractMp4InputTextBox.EmptyTextTip = "New file will be created in the original folder";
-                    ExtractFlvInputTextBox.EmptyTextTip = "New file will be created in the original folder";
-                    ExtractMkvInputTextBox.EmptyTextTip = "New file will be created in the original folder";
+                    //ExtractMp4InputTextBox.EmptyTextTip = "New file will be created in the original folder";
+                    //ExtractFlvInputTextBox.EmptyTextTip = "New file will be created in the original folder";
+                    //ExtractMkvInputTextBox.EmptyTextTip = "New file will be created in the original folder";
                     //load Help Text
                     //if (File.Exists(Global.Running.startPath + "\\help.rtf"))
                     //{
@@ -163,9 +163,9 @@ namespace mp4box
                     //x264OutTextBox.EmptyTextTip = "Both the width and height equal zero means using original resolution";
                     VideoBatchOutputFolderTextBox.EmptyTextTip = "字幕とビデオは同じ名前と同じフォルダにある必要があります";
                     //txtvideo3.EmptyTextTip = "It is necessary to set audio parameter in the Audio tab";
-                    ExtractMp4InputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
-                    ExtractFlvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
-                    ExtractMkvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
+                    //ExtractMp4InputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
+                    //ExtractFlvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
+                    //ExtractMkvInputTextBox.EmptyTextTip = "新しいファイルはビデオファイルのあるディレクトリに生成する";
                     //if (File.Exists(Global.Running.startPath + "\\help.rtf"))
                     //{
                     //    HelpContentRichTextBox.LoadFile(Global.Running.startPath + "\\help.rtf");

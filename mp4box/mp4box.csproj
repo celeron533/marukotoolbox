@@ -161,6 +161,12 @@
     <Compile Include="UserCtrl\ConfigUserControl.Designer.cs">
       <DependentUpon>ConfigUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserCtrl\ExtractUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\ExtractUserControl.Designer.cs">
+      <DependentUpon>ExtractUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserCtrl\HelpUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     </Compile>
     <EmbeddedResource Include="UserCtrl\ConfigUserControl.resx">
       <DependentUpon>ConfigUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\ExtractUserControl.resx">
+      <DependentUpon>ExtractUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserCtrl\HelpUserControl.resx">
       <DependentUpon>HelpUserControl.cs</DependentUpon>
