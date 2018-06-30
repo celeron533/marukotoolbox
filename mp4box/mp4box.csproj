@@ -173,6 +173,12 @@
     <Compile Include="UserCtrl\MediaInfoUserControl.Designer.cs">
       <DependentUpon>MediaInfoUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserCtrl\MiscUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\MiscUserControl.Designer.cs">
+      <DependentUpon>MiscUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility\AvsUtil.cs" />
     <Compile Include="Utility\UIUtil.cs" />
     <Compile Include="Utility\UpdateCheckUtil.cs" />
@@ -266,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserCtrl\MediaInfoUserControl.resx">
       <DependentUpon>MediaInfoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\MiscUserControl.resx">
+      <DependentUpon>MiscUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkingForm.en.resx">
       <DependentUpon>WorkingForm.cs</DependentUpon>
